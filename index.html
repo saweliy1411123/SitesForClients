@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Савелий — лендинги для бизнеса в Перми | за 2 дня</title>
+<meta name="description" content="Лендинг для вашего бизнеса за 2 дня. Услуги, цены и онлайн-запись в одном месте — клиенты находят вас в Яндексе. Демо бесплатно.">
+<meta property="og:title" content="Сайт для вашего бизнеса за 2 дня">
+<meta property="og:description" content="Лендинг с вашими услугами и ценами, который приводит клиентов из поиска. Демо — бесплатно, без обязательств.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#8b5cf6">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%238b5cf6'/><text y='.9em' x='50' text-anchor='middle' font-size='60' fill='white'>С</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0a0f;
+    --bg2:#0d0e15;
+    --glass:rgba(255,255,255,.045);
+    --glass-strong:rgba(255,255,255,.07);
+    --border:rgba(255,255,255,.09);
+    --text:#f2f3f8;
+    --muted:#9aa3b6;
+    --violet:#8b5cf6;
+    --blue:#4cc9f0;
+    --grad:linear-gradient(135deg,#8b5cf6 0%,#4cc9f0 100%);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Manrope','Segoe UI',system-ui,sans-serif;
+    background:var(--bg);color:var(--text);
+    font-size:16px;line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  ::selection{background:rgba(139,92,246,.45)}
+
+  /* ================= кастомный скроллбар ================= */
+  ::-webkit-scrollbar{width:9px}
+  ::-webkit-scrollbar-track{background:var(--bg)}
+  ::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#8b5cf6,#4cc9f0);border-radius:100px;border:2px solid var(--bg)}
+  ::-webkit-scrollbar-thumb:hover{background:linear-gradient(180deg,#a78bfa,#67e8f9)}
+  html{scrollbar-width:thin;scrollbar-color:#8b5cf6 var(--bg)}
+
+  h1,h2,h3{font-weight:600;letter-spacing:-.03em;line-height:1.08}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+  section{padding:110px 0}
+  a{color:inherit;text-decoration:none}
+  .grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+  /* ================= прогресс скролла ================= */
+  #progress{position:fixed;top:0;left:0;height:2px;width:0;z-index:100;background:var(--grad);box-shadow:0 0 14px rgba(139,92,246,.9)}
+
+  /* ================= cursor glow ================= */
+  #glow{
+    position:fixed;width:480px;height:480px;border-radius:50%;pointer-events:none;z-index:1;
+    background:radial-gradient(circle,rgba(139,92,246,.08),transparent 65%);
+    transform:translate(-50%,-50%);left:50%;top:30%;opacity:0;transition:opacity .4s;
+  }
+  @media(hover:hover) and (min-width:721px){#glow.on{opacity:1}}
+
+  /* ================= nav ================= */
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    background:rgba(10,10,15,0);backdrop-filter:blur(0px);
+    border-bottom:1px solid transparent;
+    transition:background .3s,border-color .3s,backdrop-filter .3s;
+  }
+  nav.scrolled{
+    background:rgba(10,10,15,.72);backdrop-filter:blur(18px);
+    border-bottom:1px solid var(--border);
+  }
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .logo{font-weight:700;font-size:15.5px;display:flex;align-items:center;gap:9px;color:#e8eaf2}
+  .logo .dot{width:8px;height:8px;border-radius:50%;background:var(--grad);animation:dotpulse 2.4s ease-in-out infinite}
+  @keyframes dotpulse{0%,100%{box-shadow:0 0 0 0 rgba(139,92,246,.5)}50%{box-shadow:0 0 0 7px rgba(139,92,246,0)}}
+  .nav-links{display:flex;gap:28px;font-size:14px;color:var(--muted);font-weight:500}
+  .nav-links a{position:relative;padding:4px 0;transition:color .2s}
+  .nav-links a::after{content:'';position:absolute;left:0;bottom:0;height:1.5px;width:0;border-radius:2px;background:var(--grad);transition:width .25s}
+  .nav-links a:hover,.nav-links a.active{color:var(--text)}
+  .nav-links a.active::after,.nav-links a:hover::after{width:100%}
+  .nav-cta{
+    background:#fff;color:#0a0a0f;font-weight:700;font-size:14px;
+    padding:9px 20px;border-radius:100px;min-height:42px;display:inline-flex;align-items:center;
+    transition:transform .2s,box-shadow .2s;
+  }
+  .nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(255,255,255,.2)}
+  @media(max-width:720px){.nav-links{display:none}}
+
+  /* ================= HERO ================= */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:130px 0 100px;overflow:hidden}
+  .blobs{position:absolute;inset:0;z-index:0;filter:blur(90px);opacity:.55}
+  .blob{position:absolute;border-radius:50%;will-change:transform}
+  .blob.b1{width:560px;height:560px;background:radial-gradient(circle,rgba(139,92,246,.5),transparent 65%);top:-140px;left:-120px;animation:blob1 22s ease-in-out infinite alternate}
+  .blob.b2{width:480px;height:480px;background:radial-gradient(circle,rgba(76,201,240,.35),transparent 65%);top:10%;right:-140px;animation:blob2 26s ease-in-out infinite alternate}
+  .blob.b3{width:420px;height:420px;background:radial-gradient(circle,rgba(217,70,239,.28),transparent 65%);bottom:-160px;left:34%;animation:blob3 30s ease-in-out infinite alternate}
+  @keyframes blob1{to{transform:translate(90px,70px) scale(1.15)}}
+  @keyframes blob2{to{transform:translate(-80px,90px) scale(1.2)}}
+  @keyframes blob3{to{transform:translate(70px,-60px) scale(1.1)}}
+  .hero-veil{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(10,10,15,.4) 0%,transparent 40%,var(--bg) 100%)}
+  #particles{position:absolute;inset:0;z-index:2;pointer-events:none}
+  .hero .wrap{position:relative;z-index:3}
+  .badge{
+    display:inline-flex;align-items:center;gap:9px;
+    background:var(--glass);border:1px solid var(--border);
+    color:#c9c2ff;font-size:13px;font-weight:600;letter-spacing:.02em;
+    padding:7px 16px;border-radius:100px;margin-bottom:30px;
+    backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  }
+  .badge .pulse{width:7px;height:7px;border-radius:50%;background:var(--blue);animation:livepulse 1.8s ease-in-out infinite}
+  @keyframes livepulse{0%,100%{box-shadow:0 0 0 3px rgba(76,201,240,.25)}50%{box-shadow:0 0 0 8px rgba(76,201,240,0)}}
+  h1{font-size:clamp(40px,6.4vw,76px);font-weight:700;letter-spacing:-.035em;max-width:840px;line-height:1.04}
+  h1 .grad-text{
+    background:linear-gradient(90deg,#a78bfa,#67e8f9,#e879f9,#a78bfa);
+    background-size:280% 100%;
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    animation:shimmer 7s linear infinite;
+  }
+  @keyframes shimmer{to{background-position:280% 0}}
+  .hero p.sub{color:#c3cad9;font-size:clamp(16.5px,2vw,20px);max-width:560px;margin:28px 0 38px}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .btn-primary{
+    background:var(--grad);color:#fff;font-weight:700;font-size:16.5px;
+    padding:18px 34px;border-radius:100px;min-height:56px;display:inline-flex;align-items:center;gap:10px;
+    transition:transform .18s ease, box-shadow .18s ease;will-change:transform;position:relative;
+  }
+  .btn-primary:hover{
+    box-shadow:0 0 0 1px rgba(255,255,255,.15) inset,0 10px 40px rgba(139,92,246,.65),0 0 60px rgba(76,201,240,.35);
+  }
+  .btn-primary .arr{transition:transform .2s}
+  .btn-primary:hover .arr{transform:translateX(4px)}
+  .btn-ghost{
+    border:1px solid rgba(255,255,255,.18);color:var(--text);font-weight:600;font-size:16px;
+    padding:18px 30px;border-radius:100px;min-height:56px;display:inline-flex;align-items:center;
+    background:var(--glass);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    transition:border-color .2s,background .2s;
+  }
+  .btn-ghost:hover{border-color:rgba(255,255,255,.42);background:var(--glass-strong)}
+  .hero-note{margin-top:18px;font-size:13.5px;color:var(--muted)}
+  .hero-note b{color:var(--blue);font-weight:600}
+  /* ================= reveal-анимации ================= */
+  .reveal{opacity:0;transform:translateY(44px);transition:opacity .9s cubic-bezier(.2,.65,.3,1),transform .9s cubic-bezier(.2,.65,.3,1);transition-delay:var(--d,0s)}
+  .reveal.fly{transform:translateY(90px) perspective(900px) rotateX(14deg) scale(.95)}
+  .reveal.zoom{transform:scale(.9)}
+  .reveal.visible{opacity:1;transform:none}
+
+  .word-reveal .w{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.12em;margin-bottom:-.12em}
+  .word-reveal .w > span{display:inline-block;transform:translateY(112%);transition:transform .8s cubic-bezier(.2,.65,.3,1);transition-delay:var(--wd,0s)}
+  .word-reveal.visible .w > span{transform:translateY(0)}
+
+  /* ================= proof ================= */
+  .proof{padding:48px 0}
+  .proof-in{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px}
+  .proof-item{flex:1;min-width:150px;padding:0 12px;position:relative}
+  .proof-item + .proof-item::before{
+    content:'';position:absolute;left:-12px;top:14%;height:72%;width:1px;
+    background:linear-gradient(180deg,transparent,rgba(255,255,255,.16),transparent);
+  }
+  .proof-item .num{font-weight:700;font-size:clamp(30px,4vw,46px);letter-spacing:-.035em;line-height:1.05}
+  .proof-item .num em{font-style:normal}
+  .proof-item .lbl{font-size:13.5px;color:var(--muted);margin-top:6px}
+
+  /* ================= kicker / заголовки секций ================= */
+  .kicker{
+    font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--blue);margin-bottom:22px;display:flex;align-items:center;gap:12px;
+  }
+  .kicker::before{content:'';width:32px;height:1px;background:var(--blue);display:inline-block}
+  .kicker.center{justify-content:center}
+  h2{font-size:clamp(30px,4.4vw,52px);font-weight:700;margin-bottom:20px}
+  .lead{color:var(--muted);max-width:600px;font-size:17.5px}
+
+  /* ================= 3D STICKY STACK (проблемы) ================= */
+  .stack{display:flex;flex-direction:column;gap:5vh;margin-top:60px;padding-bottom:6vh;perspective:1400px}
+  .stack-card{
+    position:sticky;top:calc(96px + var(--i)*18px);
+    background:linear-gradient(160deg,rgba(255,255,255,.055) 0%,rgba(255,255,255,.02) 100%);
+    border:1px solid var(--border);border-radius:28px;
+    padding:56px;min-height:330px;
+    display:flex;flex-direction:column;justify-content:flex-end;gap:22px;
+    will-change:transform,filter;
+    backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+    box-shadow:0 40px 90px rgba(0,0,0,.5);
+    transform-origin:center top;
+  }
+  .stack-card .glowline{position:absolute;top:0;left:8%;right:8%;height:1px;background:linear-gradient(90deg,transparent,rgba(139,92,246,.6),rgba(76,201,240,.6),transparent)}
+  .stack-card .idx{font-size:13px;font-weight:700;color:var(--blue);letter-spacing:.2em;text-transform:uppercase}
+  .stack-card h3{font-size:clamp(26px,3.4vw,40px);font-weight:700;max-width:600px}
+  .stack-card p{color:var(--muted);font-size:16.5px;max-width:560px}
+  .stack-card .big-idx{
+    position:absolute;right:40px;top:28px;font-size:clamp(64px,9vw,120px);font-weight:700;
+    letter-spacing:-.04em;line-height:1;color:transparent;
+    -webkit-text-stroke:1px rgba(255,255,255,.12);pointer-events:none;user-select:none;
+  }
+  @media(max-width:720px){.stack-card{padding:36px 28px;min-height:270px}}
+
+  /* ================= BENTO BOX (преимущества) ================= */
+  .solution{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+  .solution::before{
+    content:'';position:absolute;width:600px;height:600px;border-radius:50%;
+    background:radial-gradient(circle,rgba(139,92,246,.1),transparent 65%);
+    top:-220px;right:-180px;pointer-events:none;
+  }
+  .bento{
+    display:grid;gap:14px;margin-top:64px;
+    grid-template-columns:repeat(3,1fr);
+    grid-template-areas:
+      "a a b"
+      "a a c"
+      "d d e"
+      "f g e";
+  }
+  .b-a{grid-area:a}.b-b{grid-area:b}.b-c{grid-area:c}.b-d{grid-area:d}.b-e{grid-area:e}.b-f{grid-area:f}.b-g{grid-area:g}
+  @media(max-width:860px){
+    .bento{
+      grid-template-columns:1fr 1fr;
+      grid-template-areas:
+        "a a" "b c" "d d" "e f" "g f";
+    }
+  }
+  @media(max-width:540px){
+    .bento{grid-template-columns:1fr;grid-template-areas:"a" "b" "c" "d" "e" "f" "g"}
+  }
+  .b-cell{
+    background:var(--glass);border:1px solid var(--border);border-radius:24px;padding:32px;
+    backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+    position:relative;overflow:hidden;
+    transition:border-color .3s,transform .3s,background .3s;
+  }
+  .b-cell:hover{border-color:rgba(139,92,246,.5);background:var(--glass-strong);transform:translateY(-4px)}
+  .b-cell .bicon{
+    width:44px;height:44px;border-radius:13px;
+    background:linear-gradient(135deg,rgba(139,92,246,.22),rgba(76,201,240,.16));
+    border:1px solid rgba(139,92,246,.3);
+    display:flex;align-items:center;justify-content:center;margin-bottom:20px;color:#c9c2ff;
+  }
+  .b-cell .bicon svg{width:21px;height:21px}
+  .b-cell h3{font-size:19px;font-weight:700;margin-bottom:8px}
+  .b-cell p{font-size:14.5px;color:var(--muted)}
+  .b-cell .bignum{font-size:clamp(52px,6vw,76px);font-weight:700;letter-spacing:-.045em;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:8px}
+  .b-a{display:flex;flex-direction:column;justify-content:space-between;gap:34px;min-height:320px}
+  .b-a .visual{
+    flex:1;min-height:150px;border-radius:16px;position:relative;overflow:hidden;
+    background:linear-gradient(135deg,rgba(139,92,246,.25),rgba(76,201,240,.15));
+    border:1px solid rgba(139,92,246,.3);
+  }
+  .b-a .visual::before{
+    content:'Записаться онлайн';position:absolute;left:22px;bottom:22px;
+    font-size:14px;font-weight:700;color:#fff;cursor:pointer;
+    background:rgba(10,10,15,.65);backdrop-filter:blur(8px);
+    border:1px solid rgba(255,255,255,.2);
+    padding:11px 22px;border-radius:100px;
+    transition:background .2s;
+  }
+  .b-a .visual::after{
+    content:'';position:absolute;right:-30px;top:-30px;width:140px;height:140px;border-radius:50%;
+    background:radial-gradient(circle,rgba(255,255,255,.35),transparent 70%);
+  }
+
+  /* ================= steps ================= */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:48px;margin-top:70px}
+  .step{position:relative}
+  .step .snum{
+    font-size:clamp(58px,7vw,88px);font-weight:700;letter-spacing:-.05em;line-height:1;
+    color:transparent;-webkit-text-stroke:1.5px rgba(139,92,246,.6);
+    margin-bottom:18px;transition:color .35s,-webkit-text-stroke-color .35s;
+  }
+  .step:hover .snum{color:var(--violet);-webkit-text-stroke-color:transparent}
+  .step h3{font-size:19px;font-weight:700;margin-bottom:10px}
+  .step p{font-size:15px;color:var(--muted)}
+
+  /* ================= works ================= */
+  .works{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px;margin-top:70px;perspective:1400px}
+  .work{
+    background:var(--glass);border:1px solid var(--border);border-radius:26px;overflow:hidden;
+    transition:border-color .3s,box-shadow .3s;display:block;position:relative;
+    transform-style:preserve-3d;will-change:transform;
+    backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  }
+  .work:hover{border-color:rgba(139,92,246,.55);box-shadow:0 30px 90px rgba(0,0,0,.55),0 0 40px rgba(139,92,246,.12)}
+  .work .shine{
+    position:absolute;inset:0;z-index:3;pointer-events:none;opacity:0;transition:opacity .3s;
+    background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.14) 48%,transparent 62%);
+    transform:translateX(-120%);
+  }
+  .work:hover .shine{opacity:1;animation:shine .9s ease}
+  @keyframes shine{to{transform:translateX(120%)}}
+  .work .cover{height:210px;position:relative;display:flex;flex-direction:column;justify-content:space-between;padding:22px;overflow:hidden}
+  .work .cover::before{
+    content:'';position:absolute;inset:0;
+    background:radial-gradient(280px 120px at 85% 12%,rgba(255,255,255,.32),transparent 60%),linear-gradient(180deg,transparent 35%,rgba(0,0,0,.55));
+    transition:transform .6s cubic-bezier(.2,.65,.3,1);
+  }
+  .work:hover .cover::before{transform:scale(1.09)}
+  .work .wnum{
+    position:relative;z-index:1;font-size:12px;font-weight:700;color:rgba(255,255,255,.9);
+    letter-spacing:.18em;align-self:flex-start;
+    background:rgba(0,0,0,.3);backdrop-filter:blur(8px);
+    padding:5px 13px;border-radius:100px;
+  }
+  .work .cname{position:relative;z-index:1;font-weight:700;font-size:21px;color:#fff;transform:translateZ(30px)}
+  .work .body{padding:24px}
+  .work .body p{font-size:14.5px;color:var(--muted)}
+  .work .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+  .work .tag{font-size:12px;color:var(--muted);border:1px solid var(--border);padding:4px 12px;border-radius:100px;transition:color .25s,border-color .25s}
+  .work:hover .tag{color:#c9c2ff;border-color:rgba(139,92,246,.45)}
+  .work .open{margin-top:18px;font-size:14px;font-weight:700;color:var(--blue);display:inline-flex;align-items:center;gap:7px}
+  .work .open .arr{transition:transform .25s}
+  .work:hover .open .arr{transform:translateX(6px)}
+  .work-placeholder{
+    font-size:clamp(18px,2.4vw,26px);font-weight:700;text-align:center;
+    color:rgba(255,255,255,.25);letter-spacing:-.02em;line-height:1.3;
+    margin-top:20px;
+  }
+  .cv-mirax{background:linear-gradient(135deg,#0ea5a4,#3b82f6)}
+  .cv-prime{background:linear-gradient(135deg,#f59e0b,#ef7d5c)}
+  .cv-inside{background:linear-gradient(135deg,#1f2937,#4b5563)}
+  .cv-marafet{background:linear-gradient(135deg,#db2777,#a21caf)}
+  .cv-lanza{background:linear-gradient(135deg,#f43f5e,#d946ef)}
+  .cv-anna{background:linear-gradient(135deg,#84cc16,#10b981)}
+  .works-note{margin-top:26px;font-size:15px;color:var(--muted)}
+  .works-note a{color:var(--blue);font-weight:600}
+  .works-note a:hover{text-decoration:underline}
+
+  /* ================= pricing ================= */
+  .pricing{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+  .pricing::before{
+    content:'';position:absolute;width:660px;height:660px;border-radius:50%;
+    background:radial-gradient(circle,rgba(139,92,246,.14),transparent 65%);
+    top:-220px;left:50%;transform:translateX(-50%);pointer-events:none;
+  }
+  .price-card{
+    max-width:480px;margin:60px auto 0;
+    background:var(--glass);border:1px solid rgba(139,92,246,.55);border-radius:30px;padding:44px;text-align:center;
+    backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+    box-shadow:0 24px 80px rgba(139,92,246,.18);position:relative;
+    transition:transform .3s,box-shadow .3s;
+  }
+  .price-card:hover{transform:translateY(-6px);box-shadow:0 34px 100px rgba(139,92,246,.3)}
+  .price-card .flag{
+    position:absolute;top:-15px;right:30px;
+    background:var(--grad);font-size:12px;font-weight:700;padding:7px 16px;border-radius:100px;color:#fff;
+    box-shadow:0 8px 24px rgba(139,92,246,.55);animation:flagfloat 3s ease-in-out infinite;
+  }
+  @keyframes flagfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+  .price-card h3{font-size:21px;font-weight:700}
+  .price-card .price{font-weight:700;font-size:58px;margin:18px 0 6px;letter-spacing:-.04em}
+  .price-card .per{color:var(--muted);font-size:14px;margin-bottom:30px}
+  .price-card ul{list-style:none;text-align:left;margin:0 auto 32px;max-width:360px}
+  .price-card li{padding:11px 0;font-size:15px;display:flex;gap:12px;align-items:flex-start;border-bottom:1px dashed var(--border)}
+  .price-card li:last-child{border-bottom:none}
+  .price-card li::before{content:'—';color:var(--blue);font-weight:700;flex-shrink:0}
+  .price-card .btn-primary{width:100%;justify-content:center}
+  .price-fine{margin-top:18px;font-size:13px;color:var(--muted)}
+
+  /* ================= faq ================= */
+  .faq{max-width:700px;margin:60px auto 0}
+  details{
+    background:var(--glass);border:1px solid var(--border);border-radius:20px;margin-bottom:12px;
+    overflow:hidden;transition:border-color .25s;
+    backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  }
+  details:hover{border-color:rgba(255,255,255,.22)}
+  details[open]{border-color:rgba(139,92,246,.5)}
+  details summary{
+    cursor:pointer;font-weight:600;font-size:16px;list-style:none;
+    display:flex;justify-content:space-between;align-items:center;gap:14px;
+    padding:21px 24px;user-select:none;
+  }
+  details summary::-webkit-details-marker{display:none}
+  details summary .plus{width:28px;height:28px;border-radius:50%;border:1px solid rgba(255,255,255,.22);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:transform .35s,border-color .35s}
+  details summary .plus::before{content:'+';font-size:15px;color:#c9c2ff;font-weight:600}
+  details[open] summary .plus{transform:rotate(45deg);border-color:var(--violet)}
+  details .ans{padding:0 24px;max-height:0;overflow:hidden;transition:max-height .45s ease,padding .45s ease}
+  details[open] .ans{max-height:240px;padding:0 24px 22px}
+  details .ans p{font-size:14.5px;color:var(--muted)}
+
+  /* ================= final ================= */
+  .final{text-align:center;position:relative;overflow:hidden;padding:150px 0}
+  .final-bg{position:absolute;inset:0;opacity:.2;background:radial-gradient(circle at 30% 50%,rgba(139,92,246,.15),transparent 60%),radial-gradient(circle at 70% 50%,rgba(76,201,240,.1),transparent 60%)}
+  .final-veil{position:absolute;inset:0;background:linear-gradient(180deg,var(--bg),rgba(10,10,15,.5),var(--bg))}
+  .final .wrap{position:relative;z-index:2}
+  .final h2{margin:0 auto 20px;max-width:780px;font-size:clamp(34px,5vw,58px)}
+  .final h2 .grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .final .lead{margin:0 auto 38px}
+  .final .cta-row{justify-content:center}
+  .final .hero-note{margin-top:20px;text-align:center}
+  .final .hero-note b{color:var(--blue)}
+
+  /* ================= footer ================= */
+  footer{border-top:1px solid var(--border);padding:40px 0;color:var(--muted);font-size:14px;position:relative;z-index:2;background:var(--bg)}
+  .foot-in{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+  .foot-links{display:flex;gap:22px}
+  .foot-links a{transition:color .2s}
+  .foot-links a:hover{color:var(--text)}
+  .social-icons{display:flex;gap:12px;align-items:center}
+  .social-icons a{
+    width:38px;height:38px;border-radius:50%;
+    background:var(--glass);border:1px solid var(--border);
+    display:flex;align-items:center;justify-content:center;
+    transition:border-color .25s,background .25s,transform .25s;
+  }
+  .social-icons a:hover{border-color:rgba(139,92,246,.6);background:var(--glass-strong);transform:translateY(-2px)}
+  .social-icons a svg{width:18px;height:18px;fill:var(--muted);transition:fill .25s}
+  .social-icons a:hover svg{fill:var(--text)}
+
+  /* ================= sticky mobile cta ================= */
+  .sticky-cta{display:none}
+  @media(max-width:720px){
+    section{padding:72px 0}
+    .sticky-cta{
+      display:block;position:fixed;bottom:0;left:0;right:0;z-index:60;
+      background:rgba(10,10,15,.9);backdrop-filter:blur(18px);
+      border-top:1px solid var(--border);padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+    }
+    .sticky-cta .btn-primary{width:100%;justify-content:center;font-size:16px;padding:15px;min-height:52px}
+    body{padding-bottom:80px}
+    .stack-card{top:calc(84px + var(--i)*12px)}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important}
+    .reveal,.word-reveal .w > span{opacity:1;transform:none}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+<div id="glow"></div>
+
+<nav id="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#top"><span class="dot"></span>Савелий — веб-разработчик</a>
+    <div class="nav-links">
+      <a href="#works">Работы</a>
+      <a href="#how">Как работаем</a>
+      <a href="#price">Цена</a>
+      <a href="#faq">Вопросы</a>
+    </div>
+    <a class="nav-cta" href="#contact">Написать</a>
+  </div>
+</nav>
+
+<!-- ============ HERO: градиентный заголовок + живые blobs ============ -->
+<header class="hero" id="top">
+  <div class="blobs">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+  </div>
+  <div class="hero-veil"></div>
+  <canvas id="particles"></canvas>
+  <div class="wrap">
+    <span class="badge reveal"><span class="pulse"></span>Свободен для 1 заказа на этой неделе</span>
+    <h1 class="reveal" style="--d:.1s">Сайт для вашего бизнеса <span class="grad-text">за 2 дня</span> — клиенты находят вас в&nbsp;Яндексе</h1>
+    <p class="sub reveal" style="--d:.22s">Соберу лендинг с вашими услугами, ценами и работами. Вашу онлайн-запись не трогаю — сайт просто приводит на неё новых клиентов из поиска.</p>
+    <div class="cta-row reveal" style="--d:.34s">
+      <a class="btn-primary magnetic" href="#contact">Написать в Telegram — демо бесплатно <span class="arr">→</span></a>
+      <a class="btn-ghost magnetic" href="#works">Посмотреть работы</a>
+    </div>
+    <p class="hero-note reveal" style="--d:.46s">Бесплатно сделаю <b>демо-макет с вашими услугами и ценами</b> — посмотрите, как будет выглядеть ваш сайт, и только потом решайте.</p>
+  </div>
+</header>
+
+<!-- ============ PROOF ============ -->
+<div class="proof">
+  <div class="wrap proof-in">
+    <div class="proof-item reveal"><div class="num"><em data-count="6">0</em></div><div class="lbl">готовых демо-концептов</div></div>
+    <div class="proof-item reveal" style="--d:.1s"><div class="num"><em data-count="2">0</em> дня</div><div class="lbl">срок готового лендинга</div></div>
+    <div class="proof-item reveal" style="--d:.2s"><div class="num"><em data-count="0">0</em> ₽</div><div class="lbl">демо под ваш проект</div></div>
+    <div class="proof-item reveal" style="--d:.3s"><div class="num">Вы&nbsp;— первый</div><div class="lbl">стартую с&nbsp;вами</div></div>
+  </div>
+</div>
+
+<!-- ============ 3D SCROLL CARDS: sticky stack ============ -->
+<section id="problem" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="kicker reveal">Знакомо?</div>
+    <h2 class="reveal" style="--d:.08s">Запись есть — клиентов<br>из&nbsp;поиска нет</h2>
+    <p class="lead reveal" style="--d:.16s">Онлайн-запись удобна тем, кто уже знает о вас. А новые клиенты ищут «окрашивание Пермь» в Яндексе — и находят конкурентов. Ниже — три причины, почему так происходит.</p>
+    <div class="stack" id="stack">
+      <div class="stack-card" style="--i:0">
+        <span class="glowline"></span>
+        <span class="big-idx">01</span>
+        <span class="idx">Проблема 01</span>
+        <h3>Вас не находят в поиске</h3>
+        <p>У Яндекса и Google нечего показать: страница онлайн-записи не ранжируется в поиске и ничего не продаёт. Клиент вводит «окрашивание Пермь» — и видит конкурентов, у которых есть сайт.</p>
+      </div>
+      <div class="stack-card" style="--i:1">
+        <span class="glowline"></span>
+        <span class="big-idx">02</span>
+        <span class="idx">Проблема 02</span>
+        <h3>ВК — это не сайт</h3>
+        <p>Сообщество тонет в постах, репостах и рекламе. Услуги, цены, отзывы и адрес разбросаны по разным местам. Новому клиенту нужно 10 минут, чтобы всё собрать — обычно он просто уходит.</p>
+      </div>
+      <div class="stack-card" style="--i:2">
+        <span class="glowline"></span>
+        <span class="big-idx">03</span>
+        <span class="idx">Проблема 03</span>
+        <h3>Премиум-услуги выглядят дёшево</h3>
+        <p>Окрашивание за 12 000 ₽ и системы замещения волос за 50 000 ₽ продаются через скриншоты прайса. Клиент судит о качестве услуги по тому, как она подана — и делает выводы.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BENTO BOX ============ -->
+<section class="solution" id="solution">
+  <div class="wrap">
+    <div class="kicker reveal">Решение</div>
+    <h2 class="reveal" style="--d:.08s">Лендинг, который приводит<br>на&nbsp;вашу запись</h2>
+    <p class="lead reveal" style="--d:.16s">Не заменяет ваши инструменты — дополняет их. Всё, что вы получаете, — в одной сетке.</p>
+    <div class="bento">
+      <div class="b-cell b-a reveal fly">
+        <div>
+          <div class="bicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18M9 16l2 2 4-4"/></svg></div>
+          <h3>Запись не трогаем</h3>
+          <p>Кнопка «Записаться» ведёт на ваш yclients, DIKIDI или ВК. Ничего менять и переучиваться не нужно — сайт просто приводит на неё людей из поиска.</p>
+        </div>
+        <div class="visual" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"></div>
+      </div>
+      <div class="b-cell b-b reveal fly" style="--d:.1s">
+        <div class="bignum">2</div>
+        <h3>Дня на запуск</h3>
+        <p>От первого сообщения до рабочего сайта с вашим доменом.</p>
+      </div>
+      <div class="b-cell b-c reveal fly" style="--d:.18s">
+        <div class="bicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+        <h3>Видно в Яндексе</h3>
+        <p>SEO-основы: заголовки, описание, скорость. Задел для продвижения.</p>
+      </div>
+      <div class="b-cell b-d reveal fly" style="--d:.1s">
+        <div class="bicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg></div>
+        <h3>Идеально с телефона</h3>
+        <p>Большинство клиентов заходит с мобильного — поэтому сайт спроектирован сначала под телефон, потом под экран побольше. Кнопка записи всегда под большим пальцем.</p>
+      </div>
+      <div class="b-cell b-e reveal fly" style="--d:.18s">
+        <div class="bicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H12L11 22l8.5-11.5H12z"/></svg></div>
+        <h3>Быстро грузится</h3>
+        <p>Лёгкая страница без лишнего — открывается мгновенно.</p>
+      </div>
+      <div class="b-cell b-f reveal fly" style="--d:.24s">
+        <div class="bicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div>
+        <h3>Правки — неделю</h3>
+        <p>Цены, акции, фото — меняю бесплатно после сдачи.</p>
+      </div>
+      <div class="b-cell b-g reveal fly" style="--d:.3s">
+        <div class="bicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 15 8.5 22 9.3l-5 4.9 1.2 7L12 17.8 5.8 21.2 7 14.2 2 9.3 9 8.5z"/></svg></div>
+        <h3>Отзывы и работы</h3>
+        <p>Рейтинг и портфолио — на видном месте.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW ============ -->
+<section id="how">
+  <div class="wrap">
+    <div class="kicker reveal">Как это работает</div>
+    <h2 class="reveal" style="--d:.08s">Три шага — от&nbsp;идеи<br>до&nbsp;сайта в&nbsp;интернете</h2>
+    <div class="steps">
+      <div class="step reveal fly" style="--d:.1s">
+        <div class="snum">01</div>
+        <h3>Смотрите демо</h3>
+        <p>Я собираю демо-лендинг с вашими услугами и ценами. Бесплатно и без каких-либо обязательств.</p>
+      </div>
+      <div class="step reveal fly" style="--d:.24s">
+        <div class="snum">02</div>
+        <h3>Вносим правки</h3>
+        <p>Обсуждаем стиль, фото, тексты. Меняем всё, что не нравится — пока не зайдёт полностью.</p>
+      </div>
+      <div class="step reveal fly" style="--d:.38s">
+        <div class="snum">03</div>
+        <h3>Сайт в интернете</h3>
+        <p>Публикую, подключаю домен и привязываю кнопку записи. Вы получаете ссылку — и клиентов.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORKS ============ -->
+<section id="works" style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker reveal">Работы</div>
+    <h2 class="reveal" style="--d:.08s">Демо-концепты<br>под реальные проекты</h2>
+    <p class="lead reveal" style="--d:.16s">Каждое демо сделано под конкретный бизнес и его услуги — разные стили под разное позиционирование. Открывайте, смотрите вживую.</p>
+    <div class="works">
+      <div class="work tilt reveal fly">
+        <span class="shine"></span>
+        <div class="cover cv-mirax"><span class="wnum">01</span><span class="cname">Ваш сайт</span></div>
+        <div class="body">
+          <p class="work-placeholder">Здесь будет ваш сайт</p>
+        </div>
+      </div>
+      <div class="work tilt reveal fly" style="--d:.1s">
+        <span class="shine"></span>
+        <div class="cover cv-prime"><span class="wnum">02</span><span class="cname">Ваш сайт</span></div>
+        <div class="body">
+          <p class="work-placeholder">Здесь будет ваш сайт</p>
+        </div>
+      </div>
+      <div class="work tilt reveal fly" style="--d:.2s">
+        <span class="shine"></span>
+        <div class="cover cv-inside"><span class="wnum">03</span><span class="cname">Ваш сайт</span></div>
+        <div class="body">
+          <p class="work-placeholder">Здесь будет ваш сайт</p>
+        </div>
+      </div>
+      <div class="work tilt reveal fly">
+        <span class="shine"></span>
+        <div class="cover cv-marafet"><span class="wnum">04</span><span class="cname">Ваш сайт</span></div>
+        <div class="body">
+          <p class="work-placeholder">Здесь будет ваш сайт</p>
+        </div>
+      </div>
+      <div class="work tilt reveal fly" style="--d:.1s">
+        <span class="shine"></span>
+        <div class="cover cv-lanza"><span class="wnum">05</span><span class="cname">Ваш сайт</span></div>
+        <div class="body">
+          <p class="work-placeholder">Здесь будет ваш сайт</p>
+        </div>
+      </div>
+      <div class="work tilt reveal fly" style="--d:.2s">
+        <span class="shine"></span>
+        <div class="cover cv-anna"><span class="wnum">06</span><span class="cname">Ваш сайт</span></div>
+        <div class="body">
+          <p class="work-placeholder">Здесь будет ваш сайт</p>
+        </div>
+      </div>
+    </div>
+    <p class="works-note reveal">Хотите так же, но под свой сайт? <a href="#contact">Напишите</a> — демо под вас сделаю бесплатно.</p>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="pricing" id="price">
+  <div class="wrap">
+    <div class="kicker center reveal">Цена</div>
+    <h2 class="reveal word-reveal" style="text-align:center;--d:.08s">Одна понятная цена, без&nbsp;сюрпризов</h2>
+    <div class="price-card reveal zoom" style="--d:.18s">
+      <span class="flag">Стартовое предложение</span>
+      <h3>Лендинг под ключ</h3>
+      <div class="price"><span style="text-decoration:line-through;opacity:0.5;margin-right:12px;font-size:28px;">50 000 ₽</span><span class="grad-text" style="font-size:58px;">30 000 ₽</span></div>
+      <div class="per">готово за 2 дня · оплата после того, как увидите результат</div>
+      <ul>
+        <li>Дизайн под ваш сайт — не шаблон</li>
+        <li>Все услуги, цены и фото</li>
+        <li>Кнопка записи на вашу систему</li>
+        <li>Адаптив под телефон</li>
+        <li>Публикация в интернете + помощь с доменом</li>
+        <li>Правки в течение недели после сдачи</li>
+      </ul>
+      <a class="btn-primary magnetic" href="#contact">Получить бесплатное демо <span class="arr">→</span></a>
+      <p class="price-fine">Демо делаю бесплатно и до предоплаты — рискуете только своим временем.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="kicker center reveal">Вопросы</div>
+    <h2 class="reveal" style="text-align:center;--d:.08s">Что обычно спрашивают</h2>
+    <div class="faq">
+      <details class="reveal fly">
+        <summary>У нас уже есть онлайн-запись. Сайт не помешает?<span class="plus"></span></summary>
+        <div class="ans"><p>Нет — наоборот. Запись остаётся как есть, а сайт приводит на неё новых людей из поиска. Это дополнение, а не замена.</p></div>
+      </details>
+      <details class="reveal fly" style="--d:.08s">
+        <summary>Почему демо бесплатно? В чём подвох?<span class="plus"></span></summary>
+        <div class="ans"><p>Подвоха нет. Мне проще показать результат, чем описывать его словами. Если демо не зайдёт — просто спасибо за просмотр, никаких обязательств.</p></div>
+      </details>
+      <details class="reveal fly" style="--d:.16s">
+        <summary>Как происходит оплата?<span class="plus"></span></summary>
+        <div class="ans"><p>После того как вы посмотрели готовый сайт и он вас устраивает. Никаких предоплат за демо и правки концепта.</p></div>
+      </details>
+      <details class="reveal fly" style="--d:.24s">
+        <summary>А если у нас нет фото и текстов?<span class="plus"></span></summary>
+        <div class="ans"><p>Тексты напишу сам под ваш сайт. Фото можно взять из вашего ВК / 2ГИС или подобрать качественные стоковые на первое время.</p></div>
+      </details>
+      <details class="reveal fly" style="--d:.32s">
+        <summary>Вы из Перми? А если мы в другом городе?<span class="plus"></span></summary>
+        <div class="ans"><p>Я в Перми, но работаю удалённо со всей Россией — всё решается в переписке, выезжать никуда не нужно.</p></div>
+      </details>
+      <details class="reveal fly" style="--d:.4s">
+        <summary>Сможем потом менять цены и услуги сами?<span class="plus"></span></summary>
+        <div class="ans"><p>Да, мелкие правки (цены, телефоны, акции) могу вносить по запросу. Также передам все файлы — сайт ваш полностью.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final" id="contact">
+  <div class="final-bg"></div>
+  <div class="final-veil"></div>
+  <div class="wrap">
+    <h2 class="word-reveal">Сделаю демо под ваш сайт — <span class="grad-text">бесплатно</span></h2>
+    <p class="lead reveal" style="--d:.12s">Напишите название сайта и город — через день пришлю готовое демо с вашими услугами. Без обязательств.</p>
+    <div class="cta-row reveal" style="--d:.24s">
+      <a class="btn-primary magnetic" href="https://t.me/TrainersDontPlays" target="_blank">Написать в Telegram <span class="arr">→</span></a>
+    </div>
+    <p class="hero-note reveal" style="--d:.36s">Или пишите в ВК: <b><a href="https://vk.ru/trainersdontplays" target="_blank">@trainersdontplays</a></b> · отвечаю обычно в течение часа</p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="reveal">
+  <div class="wrap foot-in">
+    <span>© 2026 Савелий · сайты для сайтов красоты</span>
+    <div class="foot-links">
+      <a href="#works">Работы</a>
+      <a href="#price">Цена</a>
+      <a href="#contact">Контакты</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://t.me/TrainersDontPlays" target="_blank" title="Telegram">
+        <svg viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+      </a>
+      <a href="https://vk.ru/trainersdontplays" target="_blank" title="ВКонтакте">
+        <svg viewBox="0 0 24 24"><path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.391 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.864-.525-2.05-1.727-1.033-1-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.118-5.335-3.202C4.624 10.857 4.03 8.57 4.03 8.096c0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.678.863 2.49 2.303 4.675 2.896 4.675.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.204.17-.407.44-.407h2.744c.373 0 .508.203.508.643v3.473c0 .372.17.508.271.508.22 0 .407-.136.813-.542 1.253-1.406 2.151-3.574 2.151-3.574.119-.254.322-.491.763-.491h1.744c.525 0 .644.27.525.643-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.779 1.203 1.253.745.847 1.32 1.558 1.473 2.05.17.49-.085.744-.576.744z"/></svg>
+      </a>
+      <a href="mailto:saweliy1411@gmail.com" title="Email">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      </a>
+    </div>
+    <span>Пермь · работаю удалённо по всей России · <a href="mailto:saweliy1411@gmail.com">saweliy1411@gmail.com</a></span>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a class="btn-primary" href="#contact">Получить демо бесплатно</a>
+</div>
+
+<script>
+(function(){
+  'use strict';
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- scroll: прогресс + nav + sticky stack (3D) ---------- */
+  var progress = document.getElementById('progress');
+  var nav = document.getElementById('nav');
+  var stackCards = Array.prototype.slice.call(document.querySelectorAll('.stack-card'));
+  var ticking = false;
+  function onScroll(){
+    if(ticking) return;
+    ticking = true;
+    requestAnimationFrame(function(){
+      var h = document.documentElement;
+      var sc = h.scrollTop || document.body.scrollTop;
+      var max = h.scrollHeight - h.clientHeight;
+      progress.style.width = (max > 0 ? sc/max*100 : 0) + '%';
+      if(sc > 30) nav.classList.add('scrolled'); else nav.classList.remove('scrolled');
+
+      /* 3D-эффект стека: следующая карта наезжает, предыдущая наклоняется,
+         уменьшается и тускнеет (perspective + rotateX + scale + brightness) */
+      if(!reduceMotion && stackCards.length > 1){
+        var vh = window.innerHeight;
+        for(var i=0;i<stackCards.length-1;i++){
+          var next = stackCards[i+1].getBoundingClientRect();
+          var t = Math.max(0, Math.min(1, 1 - (next.top - 110) / (vh*0.75)));
+          if(t > 0){
+            stackCards[i].style.transform =
+              'perspective(1200px) rotateX(' + (t*5).toFixed(2) + 'deg) scale(' + (1 - t*0.05).toFixed(4) + ') translateY(' + (-t*14).toFixed(1) + 'px)';
+            stackCards[i].style.filter = 'brightness(' + (1 - t*0.38).toFixed(3) + ')';
+          } else {
+            stackCards[i].style.transform = '';
+            stackCards[i].style.filter = '';
+          }
+        }
+      }
+      ticking = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* ---------- cursor glow ---------- */
+  var glow = document.getElementById('glow');
+  if(window.matchMedia('(hover:hover)').matches && window.innerWidth > 720 && !reduceMotion){
+    glow.classList.add('on');
+    var gx=0, gy=0, cx=0, cy=0, gRun=false;
+    window.addEventListener('mousemove', function(e){
+      gx=e.clientX; gy=e.clientY;
+      if(!gRun){ gRun=true; requestAnimationFrame(gLoop); }
+    });
+    function gLoop(){
+      cx += (gx-cx)*0.12; cy += (gy-cy)*0.12;
+      glow.style.left = cx+'px'; glow.style.top = cy+'px';
+      if(Math.abs(gx-cx)>0.5 || Math.abs(gy-cy)>0.5) requestAnimationFrame(gLoop); else gRun=false;
+    }
+  }
+
+  /* ---------- word-by-word reveal ---------- */
+  document.querySelectorAll('.word-reveal').forEach(function(el){
+    var gradEl = el.querySelector('.grad-text');
+    var gradWords = gradEl ? gradEl.textContent.trim().replace(/\s+/g,' ').split(' ') : [];
+    var fullText = el.textContent.trim().replace(/\s+/g,' ');
+    el.innerHTML = '';
+    fullText.split(' ').forEach(function(w, i){
+      var outer = document.createElement('span'); outer.className='w';
+      var inner = document.createElement('span');
+      inner.textContent = w;
+      if(gradWords.indexOf(w.replace(/[.,—!?«»]/g,'')) !== -1) inner.className='grad-text';
+      inner.style.setProperty('--wd', (i*0.07)+'s');
+      outer.appendChild(inner);
+      el.appendChild(outer);
+      el.appendChild(document.createTextNode(' '));
+    });
+  });
+  var wio = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      en.target.classList.toggle('visible', en.isIntersecting);
+    });
+  }, {threshold:.3});
+  document.querySelectorAll('.word-reveal').forEach(function(el){ wio.observe(el); });
+
+  /* ---------- reveal при скролле (проигрывается заново в обе стороны) ---------- */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      en.target.classList.toggle('visible', en.isIntersecting);
+    });
+  }, {threshold:.12, rootMargin:'0px 0px -50px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  /* ---------- счётчики (обнуляются и заново набегают при возврате) ---------- */
+  var cio = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      var el = en.target;
+      var target = parseInt(el.dataset.count,10)||0;
+      if(en.isIntersecting){
+        if(el._raf) cancelAnimationFrame(el._raf);
+        if(reduceMotion){ el.textContent = target; return; }
+        var t0=null, dur=1200;
+        function tick(ts){
+          if(!t0) t0=ts;
+          var p = Math.min((ts-t0)/dur, 1);
+          el.textContent = Math.round(target*(1-Math.pow(1-p,3)));
+          if(p<1) el._raf = requestAnimationFrame(tick);
+        }
+        el._raf = requestAnimationFrame(tick);
+      } else {
+        if(el._raf) cancelAnimationFrame(el._raf);
+        el.textContent = 0;
+      }
+    });
+  }, {threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(function(el){ cio.observe(el); });
+
+  /* ---------- 3D tilt карточек работ ---------- */
+  if(!reduceMotion && window.matchMedia('(hover:hover)').matches){
+    document.querySelectorAll('.tilt').forEach(function(card){
+      var raf=null;
+      card.addEventListener('mousemove', function(e){
+        if(raf) return;
+        raf = requestAnimationFrame(function(){
+          var r = card.getBoundingClientRect();
+          var px = (e.clientX-r.left)/r.width, py = (e.clientY-r.top)/r.height;
+          card.style.transform = 'perspective(1000px) rotateX('+((py-.5)*-8).toFixed(2)+'deg) rotateY('+((px-.5)*10).toFixed(2)+'deg) translateY(-4px)';
+          raf=null;
+        });
+      });
+      card.addEventListener('mouseleave', function(){ card.style.transform=''; });
+    });
+    /* магнитные кнопки */
+    document.querySelectorAll('.magnetic').forEach(function(btn){
+      btn.addEventListener('mousemove', function(e){
+        var r = btn.getBoundingClientRect();
+        btn.style.transform = 'translate('+((e.clientX-r.left-r.width/2)*0.16)+'px,'+((e.clientY-r.top-r.height/2)*0.26)+'px)';
+      });
+      btn.addEventListener('mouseleave', function(){ btn.style.transform=''; });
+    });
+  }
+
+  /* ---------- scroll spy ---------- */
+  var spyLinks = document.querySelectorAll('.nav-links a');
+  var spySections = [];
+  spyLinks.forEach(function(a){
+    var sec = document.querySelector(a.getAttribute('href'));
+    if(sec) spySections.push({a:a, sec:sec});
+  });
+  var spyIo = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){
+        spyLinks.forEach(function(l){ l.classList.remove('active'); });
+        spySections.forEach(function(s){ if(s.sec===en.target) s.a.classList.add('active'); });
+      }
+    });
+  }, {rootMargin:'-40% 0px -55% 0px'});
+  spySections.forEach(function(s){ spyIo.observe(s.sec); });
+
+  /* ---------- hero particles ---------- */
+  var canvas = document.getElementById('particles');
+  if(canvas && !reduceMotion){
+    var ctx = canvas.getContext('2d');
+    var pts=[], P = window.innerWidth<720 ? 26 : 54, W, H, anim;
+    function resize(){ W = canvas.width = canvas.offsetWidth; H = canvas.height = canvas.offsetHeight; }
+    function init(){
+      pts=[];
+      for(var i=0;i<P;i++) pts.push({x:Math.random()*W, y:Math.random()*H, vx:(Math.random()-.5)*.35, vy:(Math.random()-.5)*.35, r:Math.random()*1.5+.6});
+    }
+    function draw(){
+      ctx.clearRect(0,0,W,H);
+      for(var i=0;i<pts.length;i++){
+        var p=pts[i];
+        p.x+=p.vx; p.y+=p.vy;
+        if(p.x<0||p.x>W) p.vx*=-1;
+        if(p.y<0||p.y>H) p.vy*=-1;
+        ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+        ctx.fillStyle='rgba(167,139,250,.5)'; ctx.fill();
+        for(var j=i+1;j<pts.length;j++){
+          var q=pts[j], dx=p.x-q.x, dy=p.y-q.y, d=Math.sqrt(dx*dx+dy*dy);
+          if(d<120){
+            ctx.beginPath(); ctx.moveTo(p.x,p.y); ctx.lineTo(q.x,q.y);
+            ctx.strokeStyle='rgba(139,92,246,'+(0.13*(1-d/120)).toFixed(3)+')';
+            ctx.lineWidth=1; ctx.stroke();
+          }
+        }
+      }
+      anim = requestAnimationFrame(draw);
+    }
+    resize(); init(); draw();
+    window.addEventListener('resize', function(){ resize(); init(); });
+    document.addEventListener('visibilitychange', function(){
+      if(document.hidden) cancelAnimationFrame(anim); else draw();
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
