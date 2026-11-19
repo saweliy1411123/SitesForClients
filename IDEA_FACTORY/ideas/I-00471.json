@@ -1,0 +1,26 @@
+{
+ "id": "I-00471",
+ "round": 70,
+ "time": "2026-11-17 05:04:59",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — Parallax Scroll‑Zoom Background",
+ "knob": "METHOD: SKILL\n**Name:** parallax-scroll-zoom\n**When to apply:** На секциях с крупным фон‑изображением (например, `.hero`) где нужен лёгкий глубинный эффект без внешних библиотек.\n**Steps:**\n1. Добавить к секции атрибут `data-bg=\"url(...)\"` (заменить текущий `background-image`).\n2. В `<style>` задать начальное состояние `background-size: 100%; background-position: center;`.\n3. Подключить небольшой безопасный JS‑скрипт, использующий `IntersectionObserver` и `requestAnimationFrame` для изменения `background-size` от `100%` до `115%` по мере прокрутки.\nSAFE CSS:\n```css\n.parallax-zoom{background-image:var(--bg);background-size:100%;background-position:center;transition:background-size .3s ease-out}\n```\nSAFE JS:\n```js\ndocument.querySelectorAll('.parallax-zoom').forEach(el=>{\nconst img=el.dataset.bg;el.style.setProperty('--bg',`url(${img})`);\nconst onScroll=()=>{const rect=el.getBoundingClientRect();const perc=1-Math.min(Math.max(rect.top/window.innerHeight,0),1);\nel.style.backgroundSize=100+15*perc+'%'}\nwindow.addEventListener('scroll',()=>requestAnimationFrame(onScroll));\n});\n```",
+ "skill": "parallax-scroll-zoom",
+ "effect": "Создаёт ощущение глубины и «живости» при скролле, усиливает премиальный визуальный стиль и удерживает внимание пользователя.",
+ "risk": "При очень медленных устройствах небольшая нагрузка от `requestAnimationFrame`; ограничено только несколькими секциями, риск минимален.",
+ "rollback": "Удалить файл `skills/parallax-scroll-zoom.md` и убрать импорт из `index.improved.html`.",
+ "verify": "Открыть страницу, пролистать вниз – фон секции `.hero` должен плавно увеличиваться от 100% до 115% по мере прокрутки; проверить отсутствие «jank» в DevTools Performance.",
+ "priority_claim": "2 – повышает визуальную «дороговизну», но требует небольшого JS‑кода; стоит после базовых типографических улучшений.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "METHOD: SKILL\n**Name:** parallax-scroll-zoom\n**When to apply:** На секциях с крупным фон‑изображением (например, `.hero`) где нужен лёгкий глубинный эффект без внешних библиотек.\n**Steps:**\n1. Добавить к секции атрибут `data-bg=\"url(...)\"` (заменить текущий `background-image`).\n2. В `<style>` задать начальное состояние `background-size: 100%; background-position: center;`.\n3. Подключить небольшой безопасный JS‑скрипт, использующий `IntersectionObserver` и `requestAnimationFrame` для изменения `background-size` от `100%` до `115%` по мере прокрутки.\nSAFE CSS:\n```css\n.parallax-zoom{background-image:var(--bg);background-size:100%;background-position:center;transition:background-size .3s ease-out}\n```\nSAFE JS:\n```js\ndocument.querySelectorAll('.parallax-zoom').forEach(el=>{\nconst img=el.dataset.bg;el.style.setProperty('--bg',`url(${img})`);\nconst onScroll=()=>{const rect=el.getBoundingClientRect();const perc=1-Math.min(Math.max(rect.top/window.innerHeight,0),1);\nel.style.backgroundSize=100+15*perc+'%'}\nwindow.addEventListener('scroll',()=>requestAnimationFrame(onScroll));\n});\n```"
+ ],
+ "flags": []
+}

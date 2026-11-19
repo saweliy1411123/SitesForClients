@@ -1,0 +1,26 @@
+{
+ "id": "I-00980",
+ "round": 164,
+ "time": "2026-11-17 09:35:23",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "I-01002 [JSON‑LD FAQPage для раздела FAQ]",
+ "knob": "В `<head>` перед закрывающим `</head>` вставить `<script type=\"application/ld+json\">` со структурой FAQPage, где вопросы и ответы берутся из HTML‑разметки секции `#faq` (пример см. Google FAQ‑schema).",
+ "skill": "",
+ "effect": "Улучшит видимость в поиске (расширенные сниппеты FAQ), повысит CTR и подтвердит экспертность тематики для пользователей и поисковых ботов.",
+ "risk": "Требует аккуратного соответствия текста в HTML и JSON‑LD (иначе получится разночтение и возможные санкции от поисковиков).",
+ "rollback": "Удалить вставленный `<script>` или откатить файл через `git checkout HEAD~1 -- index.html`.",
+ "verify": "В Chrome в консоли выполнить `JSON.parse(document.querySelector('script[type=\"application/ld+json\"]').textContent)` и сравнить вопросы с текстом в HTML; затем проверить Rich Results Test от Google.",
+ "priority_claim": "2 – низкая стоимость внедрения и высокий SEO‑эффект для раздела FAQ.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<head>` перед закрывающим `</head>` вставить `<script type=\"application/ld+json\">` со структурой FAQPage, где вопросы и ответы берутся из HTML‑разметки секции `#faq` (пример см. Google FAQ‑schema)."
+ ],
+ "flags": []
+}

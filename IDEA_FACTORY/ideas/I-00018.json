@@ -1,0 +1,26 @@
+{
+ "id": "I-00018",
+ "round": 2,
+ "time": "2026-11-17 01:46:23",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Local Lighthouse performance snapshot",
+ "knob": "METHOD: Запустить локальный Lighthouse (CLI или Chrome DevTools) на текущем `index.html` → сохранить отчет (JSON/HTML); затем внести небольшое изменение (например, добавить `rel=\"preload\"` к Google‑Fonts) и повторить запуск, сравнив метрики — First Contentful Paint, LCP, Total Blocking Time.",
+ "skill": "",
+ "effect": "Быстро покажет, насколько предложенные оптимизации ускоряют загрузку, что повышает SEO и конверсию.",
+ "risk": "Требуется установленный Node / Lighthouse; отсутствие может потребовать установки, но это не меняет сайт.",
+ "rollback": "`git checkout -- index.html` (откат изменений, если они не понравятся).",
+ "verify": "1) `npx lighthouse file://$(pwd)/index.html --output=json --output-path=report1.json`; 2) Внести изменение; 3) Повторить команду → `report2.json`; 4) Сравнить два JSON‑файла через `jq` или открыть HTML‑отчёт. Весь процесс ≤ 10 мин.",
+ "priority_claim": "2 – даёт количественные данные о скорости, важные для SEO, но требует небольших подготовительных шагов.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: Запустить локальный Lighthouse (CLI или Chrome DevTools) на текущем `index.html` → сохранить отчет (JSON/HTML); затем внести небольшое изменение (например, добавить `rel=\"preload\"` к Google‑Fonts) и повторить запуск, сравнив метрики — First Contentful Paint, LCP, Total Blocking Time."
+ ],
+ "flags": []
+}

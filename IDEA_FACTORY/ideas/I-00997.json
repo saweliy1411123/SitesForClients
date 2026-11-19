@@ -1,0 +1,26 @@
+{
+ "id": "I-00997",
+ "round": 170,
+ "time": "2026-11-17 17:11:03",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Keyword Presence & Density Quick Scan (SEO)",
+ "knob": "METHOD: Paste the following snippet into the console – it extracts visible text, normalises it, counts occurrences of a set of target keywords (`[\"лендинг\",\"Пермь\",\"за 2 дня\",\"сайт\"]`) and prints the raw count and percentage of total words.\n```js\n(()=>{const txt=document.body.innerText.toLowerCase();\nconst words=txt.match(/\\b\\w+\\b/g)||[];\nconst total=words.length;\nconst kw=[\"лендинг\",\"пермь\",\"за 2 дня\",\"сайт\"];\nkw.forEach(k=>{const cnt=words.filter(w=>w===k).length;\nconsole.log(`${k}: ${cnt} (${((cnt/total)*100).toFixed(2)}%)`);\n});\nconsole.log('Total words:',total);\n})();\n```",
+ "skill": "",
+ "effect": "Gives an instant, quantitative view of how well the page’s copy aligns with the primary search terms, allowing rapid copy tweaks before a full SEO audit.",
+ "risk": "None – read‑only script, no side effects.",
+ "rollback": "Refresh the page.",
+ "verify": "Run the script, confirm that each keyword appears at least once and that the density is within a natural range (≈1‑3%).",
+ "priority_claim": "2 – Improves relevance for target queries, boosting organic click‑through without code changes.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: Paste the following snippet into the console – it extracts visible text, normalises it, counts occurrences of a set of target keywords (`[\"лендинг\",\"Пермь\",\"за 2 дня\",\"сайт\"]`) and prints the raw count and percentage of total words.\n```js\n(()=>{const txt=document.body.innerText.toLowerCase();\nconst words=txt.match(/\\b\\w+\\b/g)||[];\nconst total=words.length;\nconst kw=[\"лендинг\",\"пермь\",\"за 2 дня\",\"сайт\"];\nkw.forEach(k=>{const cnt=words.filter(w=>w===k).length;\nconsole.log(`${k}: ${cnt} (${((cnt/total)*100).toFixed(2)}%)`);\n});\nconsole.log('Total words:',total);\n})();\n```"
+ ],
+ "flags": []
+}

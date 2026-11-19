@@ -1,0 +1,26 @@
+{
+ "id": "I-00885",
+ "round": 135,
+ "time": "2026-11-17 08:14:54",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Метод «проверка читаемости на низком разрешении»",
+ "knob": "METHOD: (1) Открыть index.html, F12 → Toggle device toolbar (375px). (2) В консоли выполнить: `document.body.style.filter = 'blur(2px)'; document.body.style.transform = 'scale(0.5)';`",
+ "skill": "",
+ "effect": "Оценить читаемость контента на низком разрешении",
+ "risk": "Нет рисков",
+ "rollback": "Отменить изменения в консоли",
+ "verify": "Проверить читаемость текста на низком разрешении",
+ "priority_claim": "2, так как проверка читаемости является важным аспектом юзабилити и доступности",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: (1) Открыть index.html, F12 → Toggle device toolbar (375px). (2) В консоли выполнить: `document.body.style.filter = 'blur(2px)'; document.body.style.transform = 'scale(0.5)';`"
+ ],
+ "flags": []
+}

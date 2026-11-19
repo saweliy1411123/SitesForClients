@@ -1,0 +1,26 @@
+{
+ "id": "I-00331",
+ "round": 50,
+ "time": "2026-11-17 04:04:35",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить кнопку «Позвонить» с tel:‑ссылкой в hero‑секцию",
+ "knob": "В блоке hero рядом с текущей CTA‑кнопкой (`.btn-primary`) добавить `<a href=\"tel:+7XXXXXXXXXX\" class=\"btn-primary phone-cta\" aria-label=\"Позвонить сейчас\">📞 Позвонить</a>`. В CSS для `.phone-cta` задать `min-height:48px; min-width:48px;` и обеспечить достаточный контраст (color / background) согласно WCAG AA.",
+ "skill": "",
+ "effect": "Предоставляет мгновенный канал связи на мобильных устройствах, повышая вероятность конверсии для пользователей, предпочитающих звонок.",
+ "risk": "Неправильный номер может оттолкнуть клиентов; на десктопе tel:‑ссылка может открыть нежелательное приложение.",
+ "rollback": "Удалить только добавленный `<a>`‑элемент и связанные CSS‑правила.",
+ "verify": "На мобильном устройстве кликнуть по кнопке – должна открыться телефонная панель; в DevTools проверить контрастность кнопки.",
+ "priority_claim": "1 – быстрый и простой способ увеличить конверсию, особенно в мобильном сегменте.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В блоке hero рядом с текущей CTA‑кнопкой (`.btn-primary`) добавить `<a href=\"tel:+7XXXXXXXXXX\" class=\"btn-primary phone-cta\" aria-label=\"Позвонить сейчас\">📞 Позвонить</a>`. В CSS для `.phone-cta` задать `min-height:48px; min-width:48px;` и обеспечить достаточный контраст (color / background) согласно WCAG AA."
+ ],
+ "flags": []
+}

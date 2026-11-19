@@ -1,0 +1,26 @@
+{
+ "id": "I-00102",
+ "round": 15,
+ "time": "2026-11-17 02:23:45",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "I-00102 — JSON‑LD разметка «Review» для реальных отзывов (структурированные данные)",
+ "knob": "В конец `<body>` вставить `<script type=\"application/ld+json\">{\n\"@context\": \"https://schema.org\",\n\"@type\": \"Product\",\n\"name\": \"Лендинг за 2 дня\",\n\"review\": [\n{\n\"@type\": \"Review\",\n\"author\": { \"@type\": \"Person\", \"name\": \"Иван Иванов\" },\n\"datePublished\": \"2024-10-12\",\n\"reviewBody\": \"Сайт готов за 2 дня, приток клиентов сразу вырос в 2 раза.\",\n\"reviewRating\": { \"@type\": \"Rating\", \"ratingValue\": \"5\", \"bestRating\": \"5\" }\n},\n{\n\"@type\": \"Review\",\n\"author\": { \"@type\": \"Person\", \"name\": \"Ольга Петрова\" },\n\"datePublished\": \"2024-11-02\",\n\"reviewBody\": \"Отличный сервис, всё сделали быстро и без лишних правок.\",\n\"reviewRating\": { \"@type\": \"Rating\", \"ratingValue\": \"5\", \"bestRating\": \"5\" }\n}\n]\n}</script>` (заменить примеры реальными отзывами).",
+ "skill": "",
+ "effect": "Позволяет поисковикам выводить rich‑snippets с отзывами, повышая CTR в поиске и усиливая социальное доказательство.",
+ "risk": "Неправильные или вымышленные отзывы могут нарушить правила Google — требует подтверждённые клиентские отзывы.",
+ "rollback": "Удалить `<script type=\"application/ld+json\">…</script>` (или `git checkout`).",
+ "verify": "Прогнать страницу через Google Rich Results Test; убедиться, что блок “Reviews” обнаружен без ошибок.",
+ "priority_claim": "2 — долгосрочный SEO‑эффект, но требует реальных отзывов, поэтому внедряется после их получения.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В конец `<body>` вставить `<script type=\"application/ld+json\">{\n\"@context\": \"https://schema.org\",\n\"@type\": \"Product\",\n\"name\": \"Лендинг за 2 дня\",\n\"review\": [\n{\n\"@type\": \"Review\",\n\"author\": { \"@type\": \"Person\", \"name\": \"Иван Иванов\" },\n\"datePublished\": \"2024-10-12\",\n\"reviewBody\": \"Сайт готов за 2 дня, приток клиентов сразу вырос в 2 раза.\",\n\"reviewRating\": { \"@type\": \"Rating\", \"ratingValue\": \"5\", \"bestRating\": \"5\" }\n},\n{\n\"@type\": \"Review\",\n\"author\": { \"@type\": \"Person\", \"name\": \"Ольга Петрова\" },\n\"datePublished\": \"2024-11-02\",\n\"reviewBody\": \"Отличный сервис, всё сделали быстро и без лишних правок.\",\n\"reviewRating\": { \"@type\": \"Rating\", \"ratingValue\": \"5\", \"bestRating\": \"5\" }\n}\n]\n}</script>` (заменить примеры реальными отзывами)."
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00738",
+ "round": 114,
+ "time": "2026-11-17 07:14:39",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "URL‑Param CSS Theme Switcher для визуального A/B‑теста",
+ "knob": "METHOD: В конец `<body>` добавить (через консоль) небольшую строку :\n```js\n(() => {\nconst params = new URLSearchParams(location.search);\nconst theme = params.get('theme');\nif (theme) document.documentElement.dataset.theme = theme;\n})();\n```\nи в CSS добавить правило (одноразово в `<style>` через консоль):\n```css\n:root[data-theme=\"dark\"] { --bg:#111; --text:#eee; --grad:#ff00ff; }\n```\nТогда `index.html?theme=dark` покажет альтернативную цветовую схему без правки файлов.",
+ "skill": "",
+ "effect": "Мгновенно сравнить визуальное восприятие разных цветовых вариантов (например, более контрастный vs. пастельный) и оценить их влияние на восприятие доверия/привлекательности.",
+ "risk": "Требует согласования с владельцем, если тема меняет бренд‑цвета; может вводить конфликт с уже существующими переменными.",
+ "rollback": "Удалить добавленные строки из `<style>` и `<script>` или просто перезагрузить страницу без параметра.",
+ "verify": "Открыть `index.html?theme=dark` в браузере, убедиться, что фон и текст изменились согласно правилам; сравнить визуально с обычным вариантом.",
+ "priority_claim": "2 – позволяет быстро протестировать несколько визуальных концепций без развертывания, полезно перед принятием решения о ",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: В конец `<body>` добавить (через консоль) небольшую строку :\n```js\n(() => {\nconst params = new URLSearchParams(location.search);\nconst theme = params.get('theme');\nif (theme) document.documentElement.dataset.theme = theme;\n})();\n```\nи в CSS добавить правило (одноразово в `<style>` через консоль):\n```css\n:root[data-theme=\"dark\"] { --bg:#111; --text:#eee; --grad:#ff00ff; }\n```\nТогда `index.html?theme=dark` покажет альтернативную цветовую схему без правки файлов."
+ ],
+ "flags": []
+}

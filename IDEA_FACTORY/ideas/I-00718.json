@@ -1,0 +1,28 @@
+{
+ "id": "I-00718",
+ "round": 111,
+ "time": "2026-11-17 07:07:10",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 3,
+ "status": "NEW",
+ "title": "SKILL — sticky-cta-reveal с честным появлением после hero (для уже существующего .sticky-cta)",
+ "knob": "SKILL — `sticky-cta-reveal`\n**Name:** `sticky-cta-reveal`\n**When to apply:** На любом одностраничном лендинге, где главный CTA — якорная ссылка и на мобильных пользователь после скролла теряет доступ к кнопке. На этом сайте `.sticky-cta` уже есть в разметке (L735) и в CSS (L410–418), но по умолчанию `display:none` — скилл «оживляет» её без изменения разметки.\n**Steps:**\n1. Найти существующий блок `.sticky-cta` в разметке (он уже есть внизу страницы).\n2. Добавить CSS: панель скрыта за нижним краем экрана, показывается только когда пользователь проскроллил первый экран (IntersectionObserver на hero-секции — без таймеров и fetch).\n3. Не показывать панель, когда в зоне видимости финальный CTA-блок (иначе дублирование кнопки).\n4. Проверить, что панель не перекрывает контент: добавить `padding-bottom` на `body` при показе.\n5. Уважать `prefers-reduced-motion` — без анимации, мгновенный показ.\n**SAFE CSS:**\n```css\n.sticky-cta{\ndisplay:none;\n}\n@media (max-width:720px){\n.sticky-cta{\ndisplay:block;\nposition:fixed;\nleft:0;right:0;bottom:0;\nz-index:50;\npadding:10px 14px calc(10px + env(safe-area-inset-bottom));\nbackground:rgba(15,15,22,.92);\nbackdrop-filter:blur(12px);\nborder-top:1px solid rgba(139,92,246,.25);\ntransform:translateY(110%);\ntransition:transform .3s ease;\n}\n.sticky-cta.is-visible{transform:translateY(0)}\nbody.has-sticky-cta{padding-bottom:78px}\n@media (prefers-reduced-motion:reduce){\n.sticky-cta{transition:none}\n}\n}\n```\n**SAFE JS:**\n```js\n(function(){\nvar hero=document.querySelector('.hero');\nvar bar=document.querySelector('.sticky-cta');\nvar final=document.querySelector('.final');\nif(!hero||!bar) return;\nvar io=new IntersectionObserver(function(entries){\nentries.forEach(function(e){\nvar heroGone=!e.isIntersecting;\nvar finalVisible=false;\nif(final){\nvar r=final.getBoundingClientRect();\nfinalVisible=r.top<window.innerHeight&&r.bottom>0;\n}\nvar show=heroGone&&!finalVisible;\nbar.classList.toggle('is-visible',show);\ndocument.body.classList.toggle('has-sticky-cta',show);\n});\n},{threshold:0});\nio.observe(hero);\nif(final) io.observe(final);\n})();\n```",
+ "skill": "",
+ "effect": "на мобильных CTA всегда под рукой после первого экрана — больше переходов к демо/цене без прокрутки назад; существующая разметка используется, ничего не добавляется в HTML.",
+ "risk": "панель может перекрыть нижний контент на коротких экранах — компенсируется `padding-bottom` на body; при ошибке селектора `.final` кнопка дублируется с финальным CTA.",
+ "rollback": "`git checkout -- index.improved.html` (изменения идут только в копию index.improved.html).",
+ "verify": "(1) Открыть index.improved.html в DevTools → режим iPhone. (2) Прокрутить ниже hero — панель въезжает снизу за 0.3 с. (3) Доскроллить до финального CTA — панель уезжает. (4) Tab-навигация: панель получает фокус, `padding-bottom` не обрезает футер. (5) Lighthouse → нет CLS-скачка при появлении.",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "SKILL — `sticky-cta-reveal`\n**Name:** `sticky-cta-reveal`\n**When to apply:** На любом одностраничном лендинге, где главный CTA — якорная ссылка и на мобильных пользователь после скролла теряет доступ к кнопке. На этом сайте `.sticky-cta` уже есть в разметке (L735) и в CSS (L410–418), но по умолчанию `display:none` — скилл «оживляет» её без изменения разметки.\n**Steps:**\n1. Найти существующий блок `.sticky-cta` в разметке (он уже есть внизу страницы).\n2. Добавить CSS: панель скрыта за нижним краем экрана, показывается только когда пользователь проскроллил первый экран (IntersectionObserver на hero-секции — без таймеров и fetch).\n3. Не показывать панель, когда в зоне видимости финальный CTA-блок (иначе дублирование кнопки).\n4. Проверить, что панель не перекрывает контент: добавить `padding-bottom` на `body` при показе.\n5. Уважать `prefers-reduced-motion` — без анимации, мгновенный показ.\n**SAFE CSS:**\n```css\n.sticky-cta{\ndisplay:none;\n}\n@media (max-width:720px){\n.sticky-cta{\ndisplay:block;\nposition:fixed;\nleft:0;right:0;bottom:0;\nz-index:50;\npadding:10px 14px calc(10px + env(safe-area-inset-bottom));\nbackground:rgba(15,15,22,.92);\nbackdrop-filter:blur(12px);\nborder-top:1px solid rgba(139,92,246,.25);\ntransform:translateY(110%);\ntransition:transform .3s ease;\n}\n.sticky-cta.is-visible{transform:translateY(0)}\nbody.has-sticky-cta{padding-bottom:78px}\n@media (prefers-reduced-motion:reduce){\n.sticky-cta{transition:none}\n}\n}\n```\n**SAFE JS:**\n```js\n(function(){\nvar hero=document.querySelector('.hero');\nvar bar=document.querySelector('.sticky-cta');\nvar final=document.querySelector('.final');\nif(!hero||!bar) return;\nvar io=new IntersectionObserver(function(entries){\nentries.forEach(function(e){\nvar heroGone=!e.isIntersecting;\nvar finalVisible=false;\nif(final){\nvar r=final.getBoundingClientRect();\nfinalVisible=r.top<window.innerHeight&&r.bottom>0;\n}\nvar show=heroGone&&!finalVisible;\nbar.classList.toggle('is-visible',show);\ndocument.body.classList.toggle('has-sticky-cta',show);\n});\n},{threshold:0});\nio.observe(hero);\nif(final) io.observe(final);\n})();\n```"
+ ],
+ "flags": []
+}

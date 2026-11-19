@@ -1,0 +1,26 @@
+{
+ "id": "I-00766",
+ "round": 117,
+ "time": "2026-11-17 07:23:14",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить атрибут `title` ко всем внешним ссылкам (Telegram) для лучшего контекстного подсказа",
+ "knob": "Для `<a href=\"https://t.me/...\">` добавить `title=\"Открыть в Telegram – бесплатное демо\"` (можно через поиск‑замену).",
+ "skill": "",
+ "effect": "Повышает доступность (tooltip для скрин‑ридеров) и CTR, особенно в мобильных браузерах.",
+ "risk": "Небольшой рост HTML‑размера.",
+ "rollback": "Удалить атрибут `title` (git checkout -- index.html).",
+ "verify": "Навести курсор на ссылки, увидеть подсказку; в Lighthouse Accessibility проверить отсутствие «link missing descriptive text».",
+ "priority_claim": "3 – мелкое улучшение, но быстро реализуемое.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Для `<a href=\"https://t.me/...\">` добавить `title=\"Открыть в Telegram – бесплатное демо\"` (можно через поиск‑замену)."
+ ],
+ "flags": []
+}

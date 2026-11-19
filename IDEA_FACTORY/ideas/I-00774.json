@@ -1,0 +1,26 @@
+{
+ "id": "I-00774",
+ "round": 118,
+ "time": "2026-11-17 07:26:24",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — svg-accessibility-enhancer",
+ "knob": "**Name:** svg-accessibility-enhancer\n**When to apply:** На любой странице, где используются инлайн‑SVG‑иконки (как в текущем `index.html`). Делает SVG‑элементы доступными для скрин‑ридеров без изменения визуального вида.\n**Steps:**\n1. С помощью скрипта найти все `<svg>` в документе.\n2. Если у SVG уже есть `<title>` / `<desc>` – добавить `role=\"img\"` и `aria-labelledby=\"titleId descId\"` (при отсутствии `id`‑ов – сгенерировать уникальные).\n3. Если SVG используется только как декоративный (например, в фоне блока) – добавить `aria-hidden=\"true\"` и `focusable=\"false\"`.\n4. При необходимости добавить атрибут `role=\"presentation\"` для полностью декоративных элементов.\n**SAFE CSS:** *(не требуется, стили уже заданы)*\n**SAFE JS:**\n```js\n(() => {\nconst svgs = document.querySelectorAll('svg:not([role])');\nsvgs.forEach((svg, i) => {\nconst hasDesc = svg.querySelector('title,desc');\nif (hasDesc) {\nconst title = svg.querySelector('title');\nconst desc = svg.querySelector('desc');\nconst titleId = title?.id || `svgTitle${i}`;\nconst descId = desc?.id || `svgDesc${i}`;\nif (title && !title.id) title.id = titleId;\nif (desc && !desc.id) desc.id = descId;\nsvg.setAttribute('role', 'img');\nsvg.setAttribute('aria-labelledby', `${titleId} ${descId}`.trim());\n} else {\nsvg.setAttribute('aria-hidden', 'true');\nsvg.setAttribute('focusable', 'false');\n}\n});\n})();\n```",
+ "skill": "",
+ "effect": "Скрин‑ридеры объявляют смысловые иконки, улучшая WCAG AA/AAA‑соответствие и потенциально повышая SEO (структурированные данные учитывают доступный контент).",
+ "risk": "При ошибочном определении декоративных SVG может появиться лишний шум в озвучке; требуется проверка вручную для критически важных иконок.",
+ "rollback": "Удалить добавленный `<script>`‑блок и, при необходимости, откатить изменения в файле через `git checkout index.html`.",
+ "verify": "Открыть DevTools → Accessibility, выбрать любой SVG‑элемент – в “Accessibility Tree” должно отображаться “img” с соответствующим именем или “ignored” для декоративных; также проверить, что нет предупреждений axe (категория “ARIA”).",
+ "priority_claim": "1 – критическая доступность, небольшие изменения, мгновенный выигрыш в SEO и пользовательском опыте.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** svg-accessibility-enhancer\n**When to apply:** На любой странице, где используются инлайн‑SVG‑иконки (как в текущем `index.html`). Делает SVG‑элементы доступными для скрин‑ридеров без изменения визуального вида.\n**Steps:**\n1. С помощью скрипта найти все `<svg>` в документе.\n2. Если у SVG уже есть `<title>` / `<desc>` – добавить `role=\"img\"` и `aria-labelledby=\"titleId descId\"` (при отсутствии `id`‑ов – сгенерировать уникальные).\n3. Если SVG используется только как декоративный (например, в фоне блока) – добавить `aria-hidden=\"true\"` и `focusable=\"false\"`.\n4. При необходимости добавить атрибут `role=\"presentation\"` для полностью декоративных элементов.\n**SAFE CSS:** *(не требуется, стили уже заданы)*\n**SAFE JS:**\n```js\n(() => {\nconst svgs = document.querySelectorAll('svg:not([role])');\nsvgs.forEach((svg, i) => {\nconst hasDesc = svg.querySelector('title,desc');\nif (hasDesc) {\nconst title = svg.querySelector('title');\nconst desc = svg.querySelector('desc');\nconst titleId = title?.id || `svgTitle${i}`;\nconst descId = desc?.id || `svgDesc${i}`;\nif (title && !title.id) title.id = titleId;\nif (desc && !desc.id) desc.id = descId;\nsvg.setAttribute('role', 'img');\nsvg.setAttribute('aria-labelledby', `${titleId} ${descId}`.trim());\n} else {\nsvg.setAttribute('aria-hidden', 'true');\nsvg.setAttribute('focusable', 'false');\n}\n});\n})();\n```"
+ ],
+ "flags": []
+}

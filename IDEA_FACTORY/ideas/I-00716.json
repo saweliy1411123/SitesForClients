@@ -1,0 +1,31 @@
+{
+ "id": "I-00716",
+ "round": 110,
+ "time": "2026-11-17 07:03:50",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime",
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 5,
+ "status": "NEW",
+ "title": "`scroll-margin-top` для якорных секций под фиксированным хедером",
+ "knob": "В `<style>` добавить `section[id], #top { scroll-margin-top: 90px; }` (значение = высота фиксированной nav + запас).",
+ "skill": "",
+ "effect": "При клике по «Цена»/«Вопросы» заголовок секции не прячется под фиксированным меню — пользователь видит контекст, меньше «потерянных» переходов.",
+ "risk": "При неверном значении останется зазор или частичное перекрытие — подобрать под реальную высоту хедера.",
+ "rollback": "Удалить одно CSS-правило / `git checkout -- index.improved.html`.",
+ "verify": "Открыть страницу, кликнуть каждую nav-ссылку (L441–L443, L717) и убедиться, что h2 секции полностью виден ниже хедера.",
+ "priority_claim": "2 — заметный UX-фикс, но не блокирует конверсию.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<style>` добавить `section[id], #top { scroll-margin-top: 90px; }` (значение = высота фиксированной nav + запас).",
+  "В CSS добавить:\n```css\nsection[id] { scroll-margin-top: 100px; } /* высота хедера + небольшой отступ */\n```"
+ ],
+ "flags": []
+}

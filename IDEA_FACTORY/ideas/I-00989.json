@@ -1,0 +1,26 @@
+{
+ "id": "I-00989",
+ "round": 167,
+ "time": "2026-11-17 09:43:19",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — shimmer-placeholder",
+ "knob": "**Name:** `shimmer-placeholder`\n**When to apply:** На страницах с изображениями, которые загружаются лениво (`loading=\"lazy\"`), особенно при медленном соединении, чтобы уменьшить визуальное «мигание» контента.\n**Steps:**\n1. Обернуть каждое `<img>` в контейнер `<div class=\"shimmer-wrapper\"><img …></div>`.\n2. Добавить атрибут `loading=\"lazy\"` к `<img>` (если его нет).\n3. В CSS задать анимированный градиент‑шимер для `.shimmer-wrapper` и скрыть изображение до полной загрузки (`opacity:0`).\n4. Добавить небольшую JS‑функцию, которая после события `load` у изображения удаляет класс `shimmer-active` у родителя, делая изображение видимым.\n**SAFE CSS:**\n```css\n.shimmer-wrapper{\nposition:relative;\noverflow:hidden;\nbackground:#f0f0f0;\n}\n.shimmer-wrapper::before{\ncontent:\"\";\nposition:absolute;\ninset:0;\nbackground:linear-gradient(90deg,\n#f0f0f0 0%,\n#e0e0e0 40%,\n#f0f0f0 80%);\nbackground-size:200% 100%;\nanimation:shimmer 1.5s infinite;\n}\n.shimmer-wrapper img{\ndisplay:block;\nwidth:100%;\nheight:auto;\nopacity:0;\ntransition:opacity .3s ease-in;\n}\n.shimmer-wrapper.loaded img{\nopacity:1;\n}\n@keyframes shimmer{\n0%{background-position: -200% 0;}\n100%{background-position: 200% 0;}\n}\n```\n**SAFE JS:**\n```js\ndocument.querySelectorAll('.shimmer-wrapper img').forEach(img=>{\nimg.addEventListener('load',()=> {\nimg.parentElement.classList.add('loaded');\n});\n});\n```",
+ "skill": "shimmer-placeholder",
+ "effect": "Пользователь видит плавный шимер‑заполнитель вместо пустого места, улучшая восприятие скорости загрузки и снижая показатель отказов.",
+ "risk": "Требует небольшого изменения HTML‑структуры; если на странице уже есть CSS‑правила, конфликт возможен, однако стили используют уникальные селекторы.",
+ "rollback": "Удалить обёртки `shimmer-wrapper` и связанные CSS/JS‑фрагменты; либо выполнить `git checkout -- index.html`.",
+ "verify": "Открыть страницу в медленном режиме (DevTools → Network → Throttling → Slow 3G), убедиться, что до полной загрузки изображения показывается анимированный шимер, после загрузки изображение появляется без мерцаний.",
+ "priority_claim": "3 – более сложная интеграция, но значительно повышает perceived performance, особенно если в будущем планируется добавит",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `shimmer-placeholder`\n**When to apply:** На страницах с изображениями, которые загружаются лениво (`loading=\"lazy\"`), особенно при медленном соединении, чтобы уменьшить визуальное «мигание» контента.\n**Steps:**\n1. Обернуть каждое `<img>` в контейнер `<div class=\"shimmer-wrapper\"><img …></div>`.\n2. Добавить атрибут `loading=\"lazy\"` к `<img>` (если его нет).\n3. В CSS задать анимированный градиент‑шимер для `.shimmer-wrapper` и скрыть изображение до полной загрузки (`opacity:0`).\n4. Добавить небольшую JS‑функцию, которая после события `load` у изображения удаляет класс `shimmer-active` у родителя, делая изображение видимым.\n**SAFE CSS:**\n```css\n.shimmer-wrapper{\nposition:relative;\noverflow:hidden;\nbackground:#f0f0f0;\n}\n.shimmer-wrapper::before{\ncontent:\"\";\nposition:absolute;\ninset:0;\nbackground:linear-gradient(90deg,\n#f0f0f0 0%,\n#e0e0e0 40%,\n#f0f0f0 80%);\nbackground-size:200% 100%;\nanimation:shimmer 1.5s infinite;\n}\n.shimmer-wrapper img{\ndisplay:block;\nwidth:100%;\nheight:auto;\nopacity:0;\ntransition:opacity .3s ease-in;\n}\n.shimmer-wrapper.loaded img{\nopacity:1;\n}\n@keyframes shimmer{\n0%{background-position: -200% 0;}\n100%{background-position: 200% 0;}\n}\n```\n**SAFE JS:**\n```js\ndocument.querySelectorAll('.shimmer-wrapper img').forEach(img=>{\nimg.addEventListener('load',()=> {\nimg.parentElement.classList.add('loaded');\n});\n});\n```"
+ ],
+ "flags": []
+}

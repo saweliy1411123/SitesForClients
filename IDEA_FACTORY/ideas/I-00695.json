@@ -1,0 +1,26 @@
+{
+ "id": "I-00695",
+ "round": 107,
+ "time": "2026-11-17 06:55:02",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Performance‑Timing Snapshot (TTFB / DOMContentLoaded / Load)",
+ "knob": "METHOD: в консоли выполнить скрипт, который читает `performance.timing` и выводит ключевые метрики: `const t = performance.timing; console.table({TTFB: t.responseStart‑t.requestStart, DOMContentLoaded: t.domContentLoadedEventEnd‑t.navigationStart, Load: t.loadEventEnd‑t.navigationStart});`",
+ "skill": "",
+ "effect": "даёт мгновенный базовый профиль скорости загрузки (время до первого байта, готовность DOM, полная загрузка), позволяя сравнить влияние изменений (например, предзагрузка шрифтов) без повторных билдов.",
+ "risk": "нет (только чтение API).",
+ "rollback": "не требуется — скрипт не меняет страницу.",
+ "verify": "после выполнения скрипта увидеть таблицу с цифрами; повторить после внесения гипотетических изменений (например, добавить `<link rel=\"preload\">` в DevTools → Sources) и сравнить значения.",
+ "priority_claim": "3 — полезно для оценки скорости, но менее критично, чем SEO и CTA‑тест; проверка занимает ≤ 2 минуты.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: в консоли выполнить скрипт, который читает `performance.timing` и выводит ключевые метрики: `const t = performance.timing; console.table({TTFB: t.responseStart‑t.requestStart, DOMContentLoaded: t.domContentLoadedEventEnd‑t.navigationStart, Load: t.loadEventEnd‑t.navigationStart});`"
+ ],
+ "flags": []
+}

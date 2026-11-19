@@ -1,0 +1,26 @@
+{
+ "id": "I-00669",
+ "round": 102,
+ "time": "2026-11-17 06:41:01",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "PRICE‑TOOLTIP‑BREAKDOWN",
+ "knob": "В `.price-card .price` добавить атрибут `data-tip=\"Включает разработку, хостинг на 1 год, базовую SEO‑оптимизацию\"`; в CSS добавить `.price[data-tip]{position:relative; cursor:pointer;}` и `::after{content:attr(data-tip); position:absolute; bottom:120%; left:50%; transform:translateX(-50%); background:#222; color:#fff; padding:6px 10px; border-radius:4px; font-size:12px; white-space:nowrap; opacity:0; transition:opacity .2s; pointer-events:none;}` + `:hover::after{opacity:1;}`.",
+ "skill": "",
+ "effect": "Пользователь мгновенно видит, за что платит, снижает фрустрацию и повышает доверие к цене.",
+ "risk": "Текст тултипа может быть слишком длинным на мобильных экранах – будет обрезаться.",
+ "rollback": "`git checkout HEAD -- index.html`.",
+ "verify": "Навести курсор на цену – появится подсказка, проверить в мобильном режиме (DevTools → Toggle device toolbar).",
+ "priority_claim": "2 – небольшие правки, но повышают прозрачность оффера.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `.price-card .price` добавить атрибут `data-tip=\"Включает разработку, хостинг на 1 год, базовую SEO‑оптимизацию\"`; в CSS добавить `.price[data-tip]{position:relative; cursor:pointer;}` и `::after{content:attr(data-tip); position:absolute; bottom:120%; left:50%; transform:translateX(-50%); background:#222; color:#fff; padding:6px 10px; border-radius:4px; font-size:12px; white-space:nowrap; opacity:0; transition:opacity .2s; pointer-events:none;}` + `:hover::after{opacity:1;}`."
+ ],
+ "flags": []
+}

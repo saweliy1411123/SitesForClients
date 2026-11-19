@@ -1,0 +1,26 @@
+{
+ "id": "I-00680",
+ "round": 104,
+ "time": "2026-11-17 06:47:04",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — prefers-reduced-motion-disable",
+ "knob": "**Name:** prefers-reduced-motion-disable\n**When to apply:** На любом статическом лендинге, где присутствуют CSS‑анимации (переходы, keyframes, scroll‑reveal).\n**Steps:**\n1. Добавить в корневой `:root` переменную `--anim-duration` со значением `1s`.\n2. Везде, где используется `animation-duration` или `transition-duration`, заменить фиксированные значения на `var(--anim-duration)`.\n3. Добавить медиазапрос `@media (prefers-reduced-motion: reduce)` — устанавливающий `--anim-duration: 0s;` и `animation-name: none;`.\n4. (Опционально) добавить класс `.no-anim` для элементов, где анимация критична, и переопределять её вручную.\n**SAFE CSS:**\n```css\n:root{--anim-duration:1s}\n*{transition-duration:var(--anim-duration)!important;\nanimation-duration:var(--anim-duration)!important}\n@media (prefers-reduced-motion:reduce){\n:root{--anim-duration:0s}\n*{animation:none!important;\ntransition:none!important}\n}\n```\n**SAFE JS:** (не требуется)",
+ "skill": "prefers-reduced-motion-disable",
+ "effect": "Пользователи, включившие «prefers‑reduced‑motion», не увидят анимаций → повышается доступность и соответствие WCAG 2.1 AA/AAA.",
+ "risk": "При полном отключении анимаций некоторые визуальные подсказки могут исчезнуть, но это безопасно для большинства элементов.",
+ "rollback": "`git checkout -- index.html` или удалить добавленные строки CSS из файла.",
+ "verify": "В Chrome DevTools включить имитацию «prefers‑reduced‑motion» (Settings → Rendering → Emulate CSS media) и убедиться, что все анимации и переходы прекращаются без ошибок.",
+ "priority_claim": "1 – критически важно для доступности и SEO‑рейтингов (Google учитывает доступность).",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** prefers-reduced-motion-disable\n**When to apply:** На любом статическом лендинге, где присутствуют CSS‑анимации (переходы, keyframes, scroll‑reveal).\n**Steps:**\n1. Добавить в корневой `:root` переменную `--anim-duration` со значением `1s`.\n2. Везде, где используется `animation-duration` или `transition-duration`, заменить фиксированные значения на `var(--anim-duration)`.\n3. Добавить медиазапрос `@media (prefers-reduced-motion: reduce)` — устанавливающий `--anim-duration: 0s;` и `animation-name: none;`.\n4. (Опционально) добавить класс `.no-anim` для элементов, где анимация критична, и переопределять её вручную.\n**SAFE CSS:**\n```css\n:root{--anim-duration:1s}\n*{transition-duration:var(--anim-duration)!important;\nanimation-duration:var(--anim-duration)!important}\n@media (prefers-reduced-motion:reduce){\n:root{--anim-duration:0s}\n*{animation:none!important;\ntransition:none!important}\n}\n```\n**SAFE JS:** (не требуется)"
+ ],
+ "flags": []
+}

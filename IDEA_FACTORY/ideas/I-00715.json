@@ -1,0 +1,29 @@
+{
+ "id": "I-00715",
+ "round": 110,
+ "time": "2026-11-17 07:03:50",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "Минимальный размер тап-таргетов на мобильных (nav, FAQ, CTA)",
+ "knob": "В `@media(max-width:720px)` добавить правила: `.nav-links a, .faq summary, .btn-primary, .sticky-cta a { min-height:48px; padding:12px 16px; }` — довести все кликабельные элементы до ≥48×48px (WCAG 2.5.8 / Google Mobile-Friendly).",
+ "skill": "",
+ "effect": "Меньше промахов пальцем на телефоне → больше переходов по CTA и FAQ, прохождение мобильного аудита Google.",
+ "risk": "Увеличенные паддинги могут сдвинуть плотную сетку на узких экранах (<360px).",
+ "rollback": "`git checkout -- index.improved.html` (правки только в копии) или удаление добавленного media-блока.",
+ "verify": "DevTools → Toggle device toolbar (375px) → инспектором проверить высоту каждой ссылки nav и summary: `[...document.querySelectorAll('a,summary')].filter(e=>e.getBoundingClientRect().height<44)`.",
+ "priority_claim": "1 — прямой мобильный UX/конверсия, нулевой риск контента.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `@media(max-width:720px)` добавить правила: `.nav-links a, .faq summary, .btn-primary, .sticky-cta a { min-height:48px; padding:12px 16px; }` — довести все кликабельные элементы до ≥48×48px (WCAG 2.5.8 / Google Mobile-Friendly)."
+ ],
+ "flags": []
+}

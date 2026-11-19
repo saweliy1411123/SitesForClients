@@ -1,0 +1,26 @@
+{
+ "id": "I-00294",
+ "round": 44,
+ "time": "2026-11-17 03:46:53",
+ "source": "localhost:8080/zhipu/glm-4.7-flash",
+ "sources": [
+  "localhost:8080/zhipu/glm-4.7-flash"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Метод «Dead Link Detector» (поиск битых якорей)",
+ "knob": "METHOD: В консоли DevTools выполнить: `[...document.querySelectorAll('a[href]')].filter(a => !a.getAttribute('href').startsWith('#') || !document.querySelector(a.getAttribute('href'))).forEach(a => console.log('Broken:', a.href))`. Проверить вывод.",
+ "skill": "",
+ "effect": "Находит ссылки, ведущие на несуществующие разделы (например, `#contact` без секции с `id=\"contact\"`), что вызывает раздражение при клике.",
+ "risk": "Низкий.",
+ "rollback": "Закрыть консоль.",
+ "verify": "2 минуты.",
+ "priority_claim": "1 (UX)",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: В консоли DevTools выполнить: `[...document.querySelectorAll('a[href]')].filter(a => !a.getAttribute('href').startsWith('#') || !document.querySelector(a.getAttribute('href'))).forEach(a => console.log('Broken:', a.href))`. Проверить вывод."
+ ],
+ "flags": []
+}

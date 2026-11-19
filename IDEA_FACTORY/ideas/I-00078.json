@@ -1,0 +1,30 @@
+{
+ "id": "I-00078",
+ "round": 12,
+ "time": "2026-11-17 02:15:44",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить `rel=\"noopener noreferrer\"` к внешним ссылкам (Telegram, VK)",
+ "knob": "Для всех `<a href=\"https://t.me/...\" target=\"_blank\">` добавить `rel=\"noopener noreferrer\"`",
+ "skill": "",
+ "effect": "Повышение безопасности (защита от reverse‑tabnabbing) и небольшое улучшение SEO‑оценки по рекомендациям Google",
+ "risk": "Нет, изменение безопасно",
+ "rollback": "Удалить атрибут `rel` (git checkout index.html)",
+ "verify": "Проверить в DevTools → Elements, атрибут присутствует; выполнить клик, убедиться, что открывается новое окно без доступа к `window.opener`",
+ "priority_claim": "2 — безопасность и небольшое SEO‑повышение",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Для всех `<a href=\"https://t.me/...\" target=\"_blank\">` добавить `rel=\"noopener noreferrer\"`",
+  "Во всех `<a>` с `target=\"_blank\"` добавить `rel=\"noopener noreferrer\"` (например: `<a href=\"https://t.me/...\" target=\"_blank\" rel=\"noopener noreferrer\">`)",
+  "для всех `<a>` с `target=\"_blank\"` (Telegram, VK) добавить `rel=\"noopener noreferrer\"`",
+  "В файле заменить каждую внешнюю ссылку (`target=\"_blank\"`) добавить атрибуты `rel=\"noopener noreferrer\"` (например, ссылка в секции «Написать в Telegram»).",
+  "Во всех `<a href=\"https://…\">` добавить `target=\"_blank\" rel=\"noopener noreferrer\"`."
+ ],
+ "flags": []
+}

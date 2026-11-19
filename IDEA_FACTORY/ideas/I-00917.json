@@ -1,0 +1,26 @@
+{
+ "id": "I-00917",
+ "round": 144,
+ "time": "2026-11-17 08:39:20",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Визуальная тайм‑лайн‑линия между шагами «Три шага»",
+ "knob": "Перед `<div class=\"steps\">` вставить `<div class=\"steps‑line\"></div>`; в CSS добавить `.steps‑line{position:absolute;top:calc(50% - 2px);left:5%;right:5%;height:2px;background:var(--border);z-index:0;}` и для каждого `.step` задать `position:relative;z-index:1;` + `::before{content:'';position:absolute;top:-12px;left:50%;transform:translateX(-50%);width:24px;height:24px;background:var(--grad);border-radius:50%;}`",
+ "skill": "",
+ "effect": "Создаёт ощущение прогресса и последовательности, повышает запоминание процесса, улучшает визуальный интерес → потенциальный рост конверсии на ≈ 5 %",
+ "risk": "Добавление абсолютных элементов может вызвать наложение в некоторых браузерах; нужно протестировать кросс‑браузерно",
+ "rollback": "Удалить вставленный `<div class=\"steps‑line\">` и связанные CSS‑правила",
+ "verify": "Открыть страницу, переключиться в режим 1024 px, убедиться, что линия проходит между шагами и не перекрывает текст; проверить в Chrome DevTools → Elements → Layout",
+ "priority_claim": "2 – визуальное усиление ключевого блока «Три шага»",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Перед `<div class=\"steps\">` вставить `<div class=\"steps‑line\"></div>`; в CSS добавить `.steps‑line{position:absolute;top:calc(50% - 2px);left:5%;right:5%;height:2px;background:var(--border);z-index:0;}` и для каждого `.step` задать `position:relative;z-index:1;` + `::before{content:'';position:absolute;top:-12px;left:50%;transform:translateX(-50%);width:24px;height:24px;background:var(--grad);border-radius:50%;}`"
+ ],
+ "flags": []
+}

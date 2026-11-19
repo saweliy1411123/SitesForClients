@@ -1,0 +1,27 @@
+{
+ "id": "I-00462",
+ "round": 68,
+ "time": "2026-11-17 05:00:31",
+ "source": "lareper/glm-5.2-fast-preview",
+ "sources": [
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.2"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Мобильная фиксация sticky-CTA с safe-area и скрытием при достижении финального CTA",
+ "knob": "В `.sticky-cta` (L410–418, разметка L735) добавить CSS `padding-bottom: env(safe-area-inset-bottom)` и JS-класс `.is-hidden`, когда `#contact` (финальный CTA, L697+) попадает в viewport через IntersectionObserver — чтобы кнопка не перекрывала финальный блок и не уезжала под «шторку» iPhone.",
+ "skill": "",
+ "effect": "На мобильных CTA всегда под рукой (рост конверсии), без визуального конфликта с финальной секцией и без обрезки на устройствах с вырезами.",
+ "risk": "Двойной CTA (sticky + финальный) может дублировать смысл; JS-ошибка сломает скрытие — оставить класс только добавляемым, не удаляющим кнопку из потока.",
+ "rollback": "`git checkout -- index.html` (правки только в index.improved.html, оригинал не трогается).",
+ "verify": "(2 мин) DevTools → iPhone SE 375px: проскроллить до финального CTA — sticky-кнопка исчезает; включить эмуляцию «safe area» или проверить на реальном iPhone — кнопка не обрезана.",
+ "priority_claim": "1 — прямой мобильный конверсионный рычаг при минимальном коде.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `.sticky-cta` (L410–418, разметка L735) добавить CSS `padding-bottom: env(safe-area-inset-bottom)` и JS-класс `.is-hidden`, когда `#contact` (финальный CTA, L697+) попадает в viewport через IntersectionObserver — чтобы кнопка не перекрывала финальный блок и не уезжала под «шторку» iPhone."
+ ],
+ "flags": []
+}

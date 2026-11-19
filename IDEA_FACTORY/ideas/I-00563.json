@@ -1,0 +1,26 @@
+{
+ "id": "I-00563",
+ "round": 85,
+ "time": "2026-11-17 05:48:25",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Trust‑badge «Yandex Business Partner» рядом с главным CTA",
+ "knob": "После кнопки‑ссылки в блоке `.hero` вставить `<div class=\"trust-badge\" itemscope itemtype=\"https://schema.org/Award\"><img src=\"yandex-partner.svg\" alt=\"Yandex Business Partner\" itemprop=\"image\"></div>`; добавить CSS `.trust-badge{margin-top:12px;display:flex;justify-content:center}` и `img{height:32px}`.",
+ "skill": "",
+ "effect": "Повышает доверие посетителей, стимулирует клики по CTA за счёт подтверждения официального статуса.",
+ "risk": "Требуется реальный сертификат‑логотип; использование недостоверного изображения может вызвать недоверие и юридические претензии.",
+ "rollback": "`git checkout index.html` или удалить блок `<div class=\"trust-badge\">…</div>` и связанные стили.",
+ "verify": "Открыть страницу, убедиться в появлении бейджа, проверить `alt`‑текст и `itemtype` в DevTools → Elements; запустить Lighthouse → Best Practices → Trust Signals.",
+ "priority_claim": "1 – высокий ROI при минимальном объёме работы.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "После кнопки‑ссылки в блоке `.hero` вставить `<div class=\"trust-badge\" itemscope itemtype=\"https://schema.org/Award\"><img src=\"yandex-partner.svg\" alt=\"Yandex Business Partner\" itemprop=\"image\"></div>`; добавить CSS `.trust-badge{margin-top:12px;display:flex;justify-content:center}` и `img{height:32px}`."
+ ],
+ "flags": []
+}

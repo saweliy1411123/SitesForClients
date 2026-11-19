@@ -1,0 +1,26 @@
+{
+ "id": "I-00582",
+ "round": 88,
+ "time": "2026-11-17 05:58:38",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "I-00601 Add Open Graph image meta tag for richer social sharing",
+ "knob": "В `<head>` добавить\n```html\n<meta property=\"og:image\" content=\"https://example.com/assets/og-image.jpg\">\n<meta property=\"og:image:width\" content=\"1200\">\n<meta property=\"og:image:height\" content=\"630\">\n```",
+ "skill": "",
+ "effect": "При публикации ссылки в соцсетях будет отображаться привлекательный превью‑картинка → рост CTR из соцсетей.",
+ "risk": "Требуется разместить реальное изображение — если путь неверный, будет битый превью.",
+ "rollback": "`git checkout HEAD -- index.html` или удалить добавленные три строки.",
+ "verify": "Открыть страницу, открыть DevTools → Network → проверить запрос `og:image`; либо воспользоваться Facebook Sharing Debugger, убедиться, что картинка отображается.",
+ "priority_claim": "2 – низкая сложность, средний SEO‑эффект.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<head>` добавить\n```html\n<meta property=\"og:image\" content=\"https://example.com/assets/og-image.jpg\">\n<meta property=\"og:image:width\" content=\"1200\">\n<meta property=\"og:image:height\" content=\"630\">\n```"
+ ],
+ "flags": []
+}

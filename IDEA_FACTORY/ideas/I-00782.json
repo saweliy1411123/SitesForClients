@@ -1,0 +1,26 @@
+{
+ "id": "I-00782",
+ "round": 119,
+ "time": "2026-11-17 07:29:29",
+ "source": "localhost:8080/zhipu/glm-4.7-flash",
+ "sources": [
+  "localhost:8080/zhipu/glm-4.7-flash"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Staggered Text Reveal Animation",
+ "knob": "Add `animation: textReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; transform: translateY(20px);` to existing `.reveal` elements with `animation-delay` based on `style=\"--d\"`; add `@keyframes textReveal` in CSS.",
+ "skill": "",
+ "effect": "Premium editorial entrance, controls eye flow, reduces visual noise.",
+ "risk": "Over-complicating the existing CSS structure.",
+ "rollback": "Remove `@keyframes` and delays from `.reveal`.",
+ "verify": "Scroll page, check animation performance in DevTools.",
+ "priority_claim": "2",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Add `animation: textReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; transform: translateY(20px);` to existing `.reveal` elements with `animation-delay` based on `style=\"--d\"`; add `@keyframes textReveal` in CSS."
+ ],
+ "flags": []
+}

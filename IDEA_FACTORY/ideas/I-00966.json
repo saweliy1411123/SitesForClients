@@ -1,0 +1,26 @@
+{
+ "id": "I-00966",
+ "round": 160,
+ "time": "2026-11-17 09:24:26",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — Counter‑Up Animate",
+ "knob": "**Name:** `counter-up-animate`\n**When to apply:** На любой статический лендинг, где есть цифры‑статистики (например, «100+ проектов», «+30 % рост»), которые должны привлечь внимание при появлении в зоне видимости.\n**Steps:**\n1. В HTML‑разметке обернуть каждое число в элемент `<span class=\"counter\" data-target=\"1234\">0</span>`.\n2. Добавить файл `skills/counter-up-animate.css` и подключить его в `<head>` (или инлайн‑вставить в `index.improved.html`).\n3. Добавить файл `skills/counter-up-animate.js` и подключить его в конце `<body>` (defer).\n4. Скрипт создаёт `IntersectionObserver`, который при вхождении элемента в viewport запускает анимацию плавного увеличения от 0 до `data-target` за 1.5 с.\n**SAFE CSS:**\n```css\n.counter {\ndisplay: inline-block;\nfont-variant-numeric: tabular-nums;\nfont-weight: 600;\ncolor: var(--blue);\ntransition: color .3s;\n}\n.counter[data-target]::after {\ncontent: '+';\nmargin-left: .1em;\nopacity: .6;\n}\n```\n**SAFE JS:**\n```js\ndocument.addEventListener('DOMContentLoaded', () => {\nconst counters = document.querySelectorAll('.counter[data-target]');\nconst options = {threshold: 0.6};\nconst animate = el => {\nconst target = +el.dataset.target;\nconst duration = 1500;\nconst start = performance.now();\nconst step = now => {\nconst elapsed = now - start;\nconst progress = Math.min(elapsed / duration, 1);\nel.textContent = Math.floor(progress * target);\nif (progress < 1) requestAnimationFrame(step);\n};\nrequestAnimationFrame(step);\n};\nconst observer = new IntersectionObserver((entries, obs) => {\nentries.forEach(entry => {\nif (entry.isIntersecting) {\nanimate(entry.target);\nobs.unobserve(entry.target);\n}\n});\n}, options);\ncounters.forEach(c => observer.observe(c));\n});\n```",
+ "skill": "",
+ "effect": "",
+ "risk": "Требует небольшого JavaScript‑кода; в случае отключения JS цифры останутся «0», но смысл блока не критичен.",
+ "rollback": "`git checkout -- skills/counter-up-animate.css skills/counter-up-animate.js index.improved.html` (или удалить добавленные файлы).",
+ "verify": "Открыть страницу в браузере, прокрутить до блока со счётчиком, убедиться, что число плавно растёт от 0 до указанного значения; в консоли проверить отсутствие ошибок.",
+ "priority_claim": "1 — визуальный «wow‑эффект», усиливающий восприятие цифр и повышающий конверсию без изменения контента.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `counter-up-animate`\n**When to apply:** На любой статический лендинг, где есть цифры‑статистики (например, «100+ проектов», «+30 % рост»), которые должны привлечь внимание при появлении в зоне видимости.\n**Steps:**\n1. В HTML‑разметке обернуть каждое число в элемент `<span class=\"counter\" data-target=\"1234\">0</span>`.\n2. Добавить файл `skills/counter-up-animate.css` и подключить его в `<head>` (или инлайн‑вставить в `index.improved.html`).\n3. Добавить файл `skills/counter-up-animate.js` и подключить его в конце `<body>` (defer).\n4. Скрипт создаёт `IntersectionObserver`, который при вхождении элемента в viewport запускает анимацию плавного увеличения от 0 до `data-target` за 1.5 с.\n**SAFE CSS:**\n```css\n.counter {\ndisplay: inline-block;\nfont-variant-numeric: tabular-nums;\nfont-weight: 600;\ncolor: var(--blue);\ntransition: color .3s;\n}\n.counter[data-target]::after {\ncontent: '+';\nmargin-left: .1em;\nopacity: .6;\n}\n```\n**SAFE JS:**\n```js\ndocument.addEventListener('DOMContentLoaded', () => {\nconst counters = document.querySelectorAll('.counter[data-target]');\nconst options = {threshold: 0.6};\nconst animate = el => {\nconst target = +el.dataset.target;\nconst duration = 1500;\nconst start = performance.now();\nconst step = now => {\nconst elapsed = now - start;\nconst progress = Math.min(elapsed / duration, 1);\nel.textContent = Math.floor(progress * target);\nif (progress < 1) requestAnimationFrame(step);\n};\nrequestAnimationFrame(step);\n};\nconst observer = new IntersectionObserver((entries, obs) => {\nentries.forEach(entry => {\nif (entry.isIntersecting) {\nanimate(entry.target);\nobs.unobserve(entry.target);\n}\n});\n}, options);\ncounters.forEach(c => observer.observe(c));\n});\n```"
+ ],
+ "flags": []
+}

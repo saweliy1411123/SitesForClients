@@ -1,0 +1,26 @@
+{
+ "id": "I-00907",
+ "round": 142,
+ "time": "2026-11-17 08:33:35",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Quick Variant Toggle Visual A/B Test",
+ "knob": "METHOD: inject script that reads `location.search` for `?v=`; if present adds class `.variant-a` or `.variant-b` to `<body>`; CSS for each variant defined inline or in `<style>`; toggle via `history.replaceState` and log current variant.",
+ "skill": "",
+ "effect": "Enables instant visual comparison of two design variants without rebuilding or redeploying, supporting rapid hypothesis validation.",
+ "risk": "Requires manual creation of variant CSS; if selectors overlap existing styles may produce unexpected layout glitches.",
+ "rollback": "Remove the injected script and any `<style>` blocks; delete added classes from `<body>` (git checkout -- index.html).",
+ "verify": "Open DevTools console, run the script, confirm `<body>` receives the correct class, observe changed styles, and capture a screenshot within 2 minutes.",
+ "priority_claim": "1 – fastest, lowest‑risk way to test visual changes directly on the landing page.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: inject script that reads `location.search` for `?v=`; if present adds class `.variant-a` or `.variant-b` to `<body>`; CSS for each variant defined inline or in `<style>`; toggle via `history.replaceState` and log current variant."
+ ],
+ "flags": []
+}

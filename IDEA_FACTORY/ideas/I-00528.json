@@ -1,0 +1,29 @@
+{
+ "id": "I-00528",
+ "round": 79,
+ "time": "2026-11-17 05:31:29",
+ "source": "lareper/glm-5.2-fast-preview",
+ "sources": [
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime",
+  "lareper/glm-5.2"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "Метод «block-запроса шрифтов» — рендер без Google Fonts",
+ "knob": "METHOD: (1) Открыть index.html локально, F12 → Network → правый клик по запросу fonts.googleapis.com → Block request domain (или DevTools → Ctrl+Shift+P → «Show Network conditions» → block). (2) Перезагрузить страницу с throttling «Fast 3G». (3) Сравнить с обычной загрузкой: есть ли скачок текста (CLS), сколько времени текст рендерится системным шрифтом, не «прыгают» ли CTA. (4) Зафиксировать разницу — это превью эффекта идеи I-00430/I-00460 до её внедрения.",
+ "skill": "",
+ "effect": "За 3 минуты показывает реальную цену зависимости от Google Fonts (мигание/сдвиг) и обосновывает self-host шрифтов без единой правки файла.",
+ "risk": "Локальный файл кэшируется — нужно отключить кэш (Network → Disable cache), иначе картина искажена.",
+ "rollback": "Снять блокировку домена в DevTools — файл не менялся.",
+ "verify": "Сам метод — 3–5 минут, скриншоты «до/после» как артефакт.",
+ "priority_claim": "2 — подтверждает уже предложенный фикс шрифтов фактами, а не догадкой.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: (1) Открыть index.html локально, F12 → Network → правый клик по запросу fonts.googleapis.com → Block request domain (или DevTools → Ctrl+Shift+P → «Show Network conditions» → block). (2) Перезагрузить страницу с throttling «Fast 3G». (3) Сравнить с обычной загрузкой: есть ли скачок текста (CLS), сколько времени текст рендерится системным шрифтом, не «прыгают» ли CTA. (4) Зафиксировать разницу — это превью эффекта идеи I-00430/I-00460 до её внедрения."
+ ],
+ "flags": []
+}

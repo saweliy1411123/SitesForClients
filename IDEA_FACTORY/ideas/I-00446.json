@@ -1,0 +1,26 @@
+{
+ "id": "I-00446",
+ "round": 67,
+ "time": "2026-11-17 04:56:40",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Hero‑badge «2‑дня до запуска» с пульс‑анимацией",
+ "knob": "В блоке `.hero` добавить `<span class=\"hero-badge\">2 дня до запуска</span>`; CSS `.hero-badge{position:absolute;top:1rem;right:1rem;background:#8b5cf6;color:#fff;padding:0.3em 0.6em;border-radius:0.5rem;animation:badge-pulse 2s infinite ease-in-out}` и `@keyframes badge-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}`",
+ "skill": "",
+ "effect": "мгновенно подчёркивает ключевой конкурентный плюс, повышает визуальное внимание к офферу → рост CTR на CTA ≈ 5 %",
+ "risk": "небольшое увеличение CSS‑объёма (≈ 0.5 KB) и потенциальный конфликт с уже существующими позициями `.hero` если они используют `position:relative`",
+ "rollback": "`git checkout -- index.html` (или удалить добавленные строки и стили)",
+ "verify": "открыть страницу в Chrome, включить DevTools → Elements, убедиться, что badge отображается и анимируется; измерить количество кликов по CTA до/после в Google Analytics (или быстрый локальный A/B с двумя копиями)",
+ "priority_claim": "1 – быстрый визуальный апгрейд, минимум кода, высокий ROI",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В блоке `.hero` добавить `<span class=\"hero-badge\">2 дня до запуска</span>`; CSS `.hero-badge{position:absolute;top:1rem;right:1rem;background:#8b5cf6;color:#fff;padding:0.3em 0.6em;border-radius:0.5rem;animation:badge-pulse 2s infinite ease-in-out}` и `@keyframes badge-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}`"
+ ],
+ "flags": []
+}

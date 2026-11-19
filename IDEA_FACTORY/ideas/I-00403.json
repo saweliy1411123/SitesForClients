@@ -1,0 +1,32 @@
+{
+ "id": "I-00403",
+ "round": 60,
+ "time": "2026-11-17 04:35:26",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b",
+  "localhost:8081/big_only"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Обогатить навигационные ссылки ARIA‑метками",
+ "knob": "Во все ссылки навигации (`<nav>` → `<a>`) добавить `aria-label=\"Перейти к секции …\"` с названием секции; текущей секции добавить `aria-current=\"page\"`",
+ "skill": "",
+ "effect": "Пользователи скрин‑ридеров получают ясные подсказки, повышается восприятие структуры страницы",
+ "risk": "Требует точного совпадения названий секций; возможен человеческий опечаточный риск",
+ "rollback": "Удалить добавленные атрибуты или откатить файл",
+ "verify": "В консоли выполнить `document.querySelectorAll('nav a').forEach(a=>console.assert(a.hasAttribute('aria-label')))` и проверить `aria-current` у текущего пункта",
+ "priority_claim": "3 – полезно, но менее критично, чем предыдущие",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Во все ссылки навигации (`<nav>` → `<a>`) добавить `aria-label=\"Перейти к секции …\"` с названием секции; текущей секции добавить `aria-current=\"page\"`",
+  "в `<header class=\"hero\">` добавить `role=\"banner\"`; в `<footer>` добавить `role=\"contentinfo\"`; в `<nav>` добавить `aria-label=\"Основная навигация\"`",
+  "В `<nav>` добавить атрибуты `role=\"navigation\"` и `aria-label=\"Главное меню\"`; каждому пункту меню добавить `aria-current=\"page\"` для активного якоря.",
+  "Найти `<nav class=\"nav\">` (или аналог) и изменить на `<nav class=\"nav\" role=\"navigation\" aria-label=\"Главное меню\">`",
+  "Обернуть каждый пункт боли (h3 + текст) в `<li class=\"pain-item\">` внутри `<ul class=\"pain-list\" role=\"list\">`. Добавить перед заголовком каждой боли `<svg class=\"icon\" aria-hidden=\"true\" width=\"24\" height=\"24\"><use href=\"#icon-alert\"/></svg>` (SVG‑символ уже присутствует в favicon‑sprite).",
+  "В `<body>` добавить `role=\"main\"` к главному контейнеру (например, `<main id=\"main\">`), `role=\"contentinfo\"` к футеру (если есть), `tabindex=\"-1\"` ко всем `<section id=\"...\">` для возможности фокусировать их при переходах по якорям; также добавить `aria-label` к навигационным ссылкам, где текст не ясен."
+ ],
+ "flags": []
+}

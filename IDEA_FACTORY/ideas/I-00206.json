@@ -1,0 +1,26 @@
+{
+ "id": "I-00206",
+ "round": 32,
+ "time": "2026-11-17 03:12:43",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Шаги — Scroll‑triggered progress bar над секцией «Три шага»",
+ "knob": "Над `<section class=\"steps\">` добавить `<div class=\"steps-progress\" aria-hidden=\"true\"><div class=\"progress-bar\"></div></div>`; в CSS:\n```css\n.steps-progress{position:relative;height:4px;background:#2d2d3a;margin-bottom:1rem}\n.progress-bar{width:0;height:100%;background:#8b5cf6;transition:width .3s ease}\n```\nи в JS (в конце `<body>`):\n```js\nconst bar=document.querySelector('.progress-bar')\nconst steps=document.querySelector('.steps')\nwindow.addEventListener('scroll',()=>{\nconst rect=steps.getBoundingClientRect()\nconst total=window.innerHeight+rect.height\nconst scrolled=Math.min(Math.max(window.innerHeight-rect.top,0),total)\nbar.style.width=`${(scrolled/total)*100}%`\n})\n```",
+ "skill": "",
+ "effect": "Пользователь визуально видит, как продвигается к «Трём шагам», усиливая вовлечённость и удержание.",
+ "risk": "Требует небольшого JS; может конфликтовать с другими скролл‑слушателями (проверить).",
+ "rollback": "Удалить добавленные HTML‑ и CSS‑блоки и скрипт.",
+ "verify": "Прокрутить страницу, наблюдать плавный рост полосы от 0 % до 100 % при достижении конца секции.",
+ "priority_claim": "2 — модернизирует UI, но требует теста совместимости.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Над `<section class=\"steps\">` добавить `<div class=\"steps-progress\" aria-hidden=\"true\"><div class=\"progress-bar\"></div></div>`; в CSS:\n```css\n.steps-progress{position:relative;height:4px;background:#2d2d3a;margin-bottom:1rem}\n.progress-bar{width:0;height:100%;background:#8b5cf6;transition:width .3s ease}\n```\nи в JS (в конце `<body>`):\n```js\nconst bar=document.querySelector('.progress-bar')\nconst steps=document.querySelector('.steps')\nwindow.addEventListener('scroll',()=>{\nconst rect=steps.getBoundingClientRect()\nconst total=window.innerHeight+rect.height\nconst scrolled=Math.min(Math.max(window.innerHeight-rect.top,0),total)\nbar.style.width=`${(scrolled/total)*100}%`\n})\n```"
+ ],
+ "flags": []
+}

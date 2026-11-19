@@ -1,0 +1,26 @@
+{
+ "id": "I-00351",
+ "round": 53,
+ "time": "2026-11-17 04:13:29",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Индикатор прогресса прокрутки страницы",
+ "knob": "В конец `<body>` добавить `<div class=\"scroll-progress\"><div class=\"progress-bar\"></div></div>`; CSS: `.scroll-progress{position:fixed;top:0;left:0;width:100%;height:4px;background:rgba(0,0,0,0.1);z-index:9999;} .progress-bar{height:100%;background:#8b5cf6;width:0%;transition:width .2s;}`; JS‑скрипт (inline) отслеживает `window.scrollY` и задаёт ширину в `%` относительно `document.body.scrollHeight - innerHeight`",
+ "skill": "",
+ "effect": "Пользователи видят визуальный индикатор, повышая восприятие длины контента и мотивируя досмотреть страницу → потенциальный рост конверсий",
+ "risk": "Добавит 1 KB JS и небольшую CSS‑нагрузку; может конфликтовать с фиксированными элементами (проверить)",
+ "rollback": "Удалить добавленные элементы и скрипт (git checkout index.html)",
+ "verify": "Открыть страницу, прокрутить – полоска должна заполняться; проверить в Chrome DevTools → Performance → убедиться в <5 ms JS‑исполнения; проверить в мобильных эмуляторах, что индикатор не перекрывает контент",
+ "priority_claim": "3 – приятный UX‑апдейт, но менее критичен, чем SEO/доступность",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В конец `<body>` добавить `<div class=\"scroll-progress\"><div class=\"progress-bar\"></div></div>`; CSS: `.scroll-progress{position:fixed;top:0;left:0;width:100%;height:4px;background:rgba(0,0,0,0.1);z-index:9999;} .progress-bar{height:100%;background:#8b5cf6;width:0%;transition:width .2s;}`; JS‑скрипт (inline) отслеживает `window.scrollY` и задаёт ширину в `%` относительно `document.body.scrollHeight - innerHeight`"
+ ],
+ "flags": []
+}

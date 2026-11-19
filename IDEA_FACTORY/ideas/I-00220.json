@@ -1,0 +1,28 @@
+{
+ "id": "I-00220",
+ "round": 33,
+ "time": "2026-11-17 03:16:33",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3",
+  "lareper/glm-5.2",
+  "lareper/glm-5.2-fast-preview"
+ ],
+ "mentions": 3,
+ "status": "NEW",
+ "title": "og:image + og:image:alt для шаринга в мессенджерах",
+ "knob": "в `<head>` добавить `<meta property=\"og:image\" content=\"https://<домен>/og-cover.png\">` (1200×630, тёмный фон, h1-текст, бренд-цвет #8b5cf6) и `<meta property=\"og:image:alt\" content=\"Савелий — лендинги для бизнеса в Перми за 2 дня\">`; домен подставить реальный (требует решения владельца — картинку нужно создать и захостить)",
+ "skill": "",
+ "effect": "при отправке ссылки в Telegram/WhatsApp/ВК появляется карточка с картинкой → выше CTR на ссылку",
+ "risk": "без реального домена и файла мета-тег будет вести на несуществующий URL — добавить только после размещения",
+ "rollback": "`git checkout -- index.html`",
+ "verify": "вставить URL в https://developers.facebook.com/tools/debug/ или просто",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "в `<head>` добавить `<meta property=\"og:image\" content=\"https://<домен>/og-cover.png\">` (1200×630, тёмный фон, h1-текст, бренд-цвет #8b5cf6) и `<meta property=\"og:image:alt\" content=\"Савелий — лендинги для бизнеса в Перми за 2 дня\">`; домен подставить реальный (требует решения владельца — картинку нужно создать и захостить)"
+ ],
+ "flags": []
+}

@@ -1,0 +1,28 @@
+{
+ "id": "I-00225",
+ "round": 34,
+ "time": "2026-11-17 03:18:35",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only",
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "SKILL — lazy-bg-image",
+ "knob": "\nname: lazy-bg-image\nwhen: при наличии тяжёлых фоновых изображений, задаваемых через CSS `background-image` в секциях ниже первого экрана (например, демонстрационные блоки)\nsteps:\n- В HTML заменить `style=\"background-image:url(...)\"` на `data-bg=\"url(...)\"` без применения `background-image` сразу.\n- Добавить в CSS базовый фон‑цвет/градиент для placeholder.\n- Вставить скрипт, который с помощью `IntersectionObserver` подменяет `data-bg` на `background-image` при появлении элемента в зоне видимости.\nSAFE CSS:\n.lazy-bg{background-color:#111;background-size:cover;background-position:center;transition:background-image .4s ease}\nSAFE JS:\n(()=>{if(!('IntersectionObserver' in window))return;const obs=new IntersectionObserver((entries,ob)=>{entries.forEach(e=>{if(e.isIntersecting){const el=e.target;const url=el.dataset.bg;el.style.backgroundImage=`url(${url})`;ob.unobserve(el)}})});document.querySelectorAll('[data-bg]').forEach(el=>obs.observe(el));})();",
+ "skill": "",
+ "effect": "ускоряется первоначальная загрузка страницы, уменьшается количество блокирующего загрузку трафика, улучшая LCP и показатель Core Web Vitals.",
+ "risk": "в браузерах без поддержки `IntersectionObserver` фон может не загрузиться (падение визуального качества); небольшое количество JS.",
+ "rollback": "удалить атрибуты `data-bg`, вернуть прежний `background-image` в CSS/HTML, убрать скрипт.",
+ "verify": "открыть страницу в Chrome DevTools → Network, убедиться, что фоновые изображения загружаются только после скролла к соответствующим секциям; проверить, что в старых браузерах (режим «Disable JavaScript») фон всё‑равно отображается (можно добавить fallback в CSS).",
+ "priority_claim": "2 – значительное улучшение скорости и Core Web Vitals при низком риске и простом откате.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "\nname: lazy-bg-image\nwhen: при наличии тяжёлых фоновых изображений, задаваемых через CSS `background-image` в секциях ниже первого экрана (например, демонстрационные блоки)\nsteps:\n- В HTML заменить `style=\"background-image:url(...)\"` на `data-bg=\"url(...)\"` без применения `background-image` сразу.\n- Добавить в CSS базовый фон‑цвет/градиент для placeholder.\n- Вставить скрипт, который с помощью `IntersectionObserver` подменяет `data-bg` на `background-image` при появлении элемента в зоне видимости.\nSAFE CSS:\n.lazy-bg{background-color:#111;background-size:cover;background-position:center;transition:background-image .4s ease}\nSAFE JS:\n(()=>{if(!('IntersectionObserver' in window))return;const obs=new IntersectionObserver((entries,ob)=>{entries.forEach(e=>{if(e.isIntersecting){const el=e.target;const url=el.dataset.bg;el.style.backgroundImage=`url(${url})`;ob.unobserve(el)}})});document.querySelectorAll('[data-bg]').forEach(el=>obs.observe(el));})();",
+  "**Name:** lazy-bg-image\n**When to apply:** На лендингах, где крупные фоновые изображения задаются через `background-image` (например, hero‑секция, демо‑карты).\n**Steps:**\n1. В HTML добавить класс `lazy-bg` к элементам с отложенной загрузкой и атрибут `data-bg=\"url(...)\"`.\n2. В CSS задать базовый цвет/градиент‑заполнитель и `background-size: cover; background-position: center;`.\n3. В JS создать `IntersectionObserver`, который при появлении элемента в зоне видимости задаёт `element.style.backgroundImage = 'url(' + element.dataset.bg + ')'`.\n4. Добавить полифилл для старых браузеров (optional).\n**SAFE CSS:**\n```css\n.lazy-bg{\nbackground-color:#f3f4f6;/*fallback*/\nbackground-size:cover;\nbackground-position:center;\ntransition:background-image .3s ease-in-out;\n}\n```\n**SAFE JS:**\n```js\ndocument.addEventListener('DOMContentLoaded',()=>{\nconst lazyEls=document.querySelectorAll('.lazy-bg[data-bg]');\nif('IntersectionObserver' in window){\nconst obs=new IntersectionObserver((entries,ob)=>{entries.forEach(e=>{\nif(e.isIntersecting){\nconst el=e.target;\nel.style.backgroundImage=`url(${el.dataset.bg})`;\nob.unobserve(el);\n}\n});});\nlazyEls.forEach(el=>obs.observe(el));\n}else{\n// fallback: load immediately\nlazyEls.forEach(el=>el.style.backgroundImage=`url(${el.dataset.bg})`);\n}\n});\n```"
+ ],
+ "flags": []
+}

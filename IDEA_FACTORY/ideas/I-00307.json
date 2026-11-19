@@ -1,0 +1,30 @@
+{
+ "id": "I-00307",
+ "round": 46,
+ "time": "2026-11-17 03:52:28",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime",
+  "lareper/glm-5.2"
+ ],
+ "mentions": 3,
+ "status": "NEW",
+ "title": "Демо — дисклеймер «концепт, ваш сайт — в вашей стилист",
+ "knob": "",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  ""
+ ],
+ "flags": [
+  "NO_KNOB"
+ ]
+}

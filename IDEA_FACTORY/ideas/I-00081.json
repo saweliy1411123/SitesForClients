@@ -1,0 +1,26 @@
+{
+ "id": "I-00081",
+ "round": 12,
+ "time": "2026-11-17 02:15:44",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить JSON‑LD `ContactPoint` для Telegram‑контакта (LocalBusiness)",
+ "knob": "В конец `<body>` вставить `<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"LocalBusiness\",\"name\":\"Савелий\",\"areaServed\":\"Пермь\",\"contactPoint\":[{\"@type\":\"ContactPoint\",\"contactType\":\"customer service\",\"telephone\":\"+7XXXXXXXXXX\",\"availableLanguage\":[\"Russian\"],\"url\":\"https://t.me/TrainersDontPlays\"}]}</script>`",
+ "skill": "",
+ "effect": "Поисковые системы получают точную информацию о способе связи → улучшение локального SEO и появление в результатах “Связаться”",
+ "risk": "Требует актуального номера телефона; если номер изменится, разметка будет устаревать → требуется поддержка владельцем",
+ "rollback": "Удалить скрипт (git checkout index.html)",
+ "verify": "Прогнать страницу в Google Rich Results Test; увидеть успешно распознанный ContactPoint без ошибок",
+ "priority_claim": "1 — прямой SEO‑бонус для локального поиска",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В конец `<body>` вставить `<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"LocalBusiness\",\"name\":\"Савелий\",\"areaServed\":\"Пермь\",\"contactPoint\":[{\"@type\":\"ContactPoint\",\"contactType\":\"customer service\",\"telephone\":\"+7XXXXXXXXXX\",\"availableLanguage\":[\"Russian\"],\"url\":\"https://t.me/TrainersDontPlays\"}]}</script>`"
+ ],
+ "flags": []
+}

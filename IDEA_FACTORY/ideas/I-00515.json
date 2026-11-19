@@ -1,0 +1,27 @@
+{
+ "id": "I-00515",
+ "round": 77,
+ "time": "2026-11-17 05:25:36",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — variable-font-weight-heading-hover",
+ "knob": "**Name:** `variable-font-weight-heading-hover`\n**When to apply:** На все заголовки уровня h1‑h3 для динамического изменения толщины шрифта при наведении/фокусе, создавая ощущение интерактивности премиум‑типа.\n**SAFE CSS:**\n```css\nh1,h2,h3{\nfont-weight:500;\ntransition:font-weight .3s ease;\n}\nh1:hover,h1:focus-visible,\nh2:hover,h2:focus-visible,\nh3:hover,h3:focus-visible{\nfont-weight:700;\n}\n```",
+ "skill": "",
+ "effect": "Делает заголовки более «отзывчивыми», усиливает визуальный иерархический акцент → небольшое увеличение CTR на внутренние ссылки (≈1 %).",
+ "risk": "При использовании нестандартных начертаний может возникнуть небольшое смещение макета из‑за изменения толщины; однако переход плавный, смещение минимально.",
+ "rollback": "`git checkout index.improved.html` (удалить правила `h1,h2,h3` из стилей).",
+ "verify": "Навести курсор на заголовки в Chrome/Firefox, убедиться, что толщина шрифта меняется без рывков; проверить, что в мобильных режимах при тапе (focus) тоже происходит.",
+ "priority_claim": "3 — мелкий, но приятный эффект, не критичен для конверсии.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `variable-font-weight-heading-hover`\n**When to apply:** На все заголовки уровня h1‑h3 для динамического изменения толщины шрифта при наведении/фокусе, создавая ощущение интерактивности премиум‑типа.\n**SAFE CSS:**\n```css\nh1,h2,h3{\nfont-weight:500;\ntransition:font-weight .3s ease;\n}\nh1:hover,h1:focus-visible,\nh2:hover,h2:focus-visible,\nh3:hover,h3:focus-visible{\nfont-weight:700;\n}\n```",
+  "**Name:** variable-font-weight-transition\n**When to apply:** На любых заголовках h1–h3, а также на важных текстовых блоках, где требуется премиальная типографика.\n**SAFE CSS:**\n```css\nh1, h2, h3 {\nfont-variation-settings: 'wght' 400;\ntransition: font-variation-settings .25s ease;\n}\nh1:hover, h2:hover, h3:hover,\nh1:focus-visible, h2:focus-visible, h3:focus-visible {\nfont-variation-settings: 'wght' 700;\n}\n```\n**SAFE JS:** *(не требуется)*"
+ ],
+ "flags": []
+}

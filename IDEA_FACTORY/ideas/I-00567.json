@@ -1,0 +1,26 @@
+{
+ "id": "I-00567",
+ "round": 86,
+ "time": "2026-11-17 05:51:45",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "CSS‑custom‑property‑toggle для визуального A/B без JS",
+ "knob": "METHOD: добавить в `<head>` блок `<style>:root{--variant:0;}</style>` и в консоли менять `document.documentElement.style.setProperty('--variant','1')`; в CSS определить правила вида `h1{content:var(--v1-h1,attr(data-default));}` и задать альтернативные тексты через `data-v1` атрибуты на элементах. При переключении `--variant` меняются только стили/тексты, без перезагрузки.",
+ "skill": "",
+ "effect": "позволяет быстро переключать визуальные варианты (цвета, отступы, копию) и наблюдать их влияние на восприятие и кликабельность в реальном времени.",
+ "risk": "ограничено только тем, что можно менять через CSS — не подходит для сложных изменений DOM; требует предварительной разметки `data-` атрибутов.",
+ "rollback": "`document.documentElement.style.removeProperty('--variant');` (возврат к базовым значениям).",
+ "verify": "1) добавить `data-v1=\"Сайт за 2 дня — клиенты в Яндексе\"` к `<h1>`; 2) выполнить `document.documentElement.style.setProperty('--variant','1')`; 3) убедиться, что текст в h1 изменился; 4) переключить обратно и проверить возврат.",
+ "priority_claim": "2 – низкая стоимость внедрения, полезно для быстрых визуальных A/B, но менее мощно, чем полный копирайт.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: добавить в `<head>` блок `<style>:root{--variant:0;}</style>` и в консоли менять `document.documentElement.style.setProperty('--variant','1')`; в CSS определить правила вида `h1{content:var(--v1-h1,attr(data-default));}` и задать альтернативные тексты через `data-v1` атрибуты на элементах. При переключении `--variant` меняются только стили/тексты, без перезагрузки."
+ ],
+ "flags": []
+}

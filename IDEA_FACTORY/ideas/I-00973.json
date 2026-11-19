@@ -1,0 +1,26 @@
+{
+ "id": "I-00973",
+ "round": 162,
+ "time": "2026-11-17 09:29:29",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить секцию «Кейсы клиентов» с карточками‑примерами и микроданными Schema.org CreativeWork",
+ "knob": "После секции цены (`</section>` с id=\"price\") вставить новую секцию `<section id=\"cases\" class=\"cases\"><h2 class=\"reveal\">Кейсы наших клиентов</h2><div class=\"case-grid\">…</div></section>`; каждая карточка: `<article class=\"case-card\" itemscope itemtype=\"https://schema.org/CreativeWork\"><h3 itemprop=\"name\">Сайт для ресторана «Вкусно»</h3><p itemprop=\"description\">Увеличили заявки на 30 % за месяц</p><a href=\"#\" class=\"btn-primary\" itemprop=\"url\">Посмотреть демо</a></article>`; добавить базовый CSS `.cases{padding:80px 0;background:#f9fafb}.case-grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}.case-card{background:#fff;padding:24px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.05)}`",
+ "skill": "",
+ "effect": "Предоставит социальное доказательство через реальные проекты, улучшит SEO через структурированные данные и повысит доверие потенциальных клиентов",
+ "risk": "Нужно подготовить реальные кейсы и ссылки; без них карточки могут выглядеть пустыми — риск потери доверия",
+ "rollback": "`git checkout -- index.html` (удалить секцию и CSS‑правила)",
+ "verify": "Открыть страницу, убедиться, что секция «Кейсы» появляется после цены, карточки отображаются в сетке, ссылки кликабельны, и в консоли `view source` присутствуют микроданные `itemscope`/`itemtype`",
+ "priority_claim": "3 — высокий потенциал доверия, но требует контент‑подготовки и тестирования.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "После секции цены (`</section>` с id=\"price\") вставить новую секцию `<section id=\"cases\" class=\"cases\"><h2 class=\"reveal\">Кейсы наших клиентов</h2><div class=\"case-grid\">…</div></section>`; каждая карточка: `<article class=\"case-card\" itemscope itemtype=\"https://schema.org/CreativeWork\"><h3 itemprop=\"name\">Сайт для ресторана «Вкусно»</h3><p itemprop=\"description\">Увеличили заявки на 30 % за месяц</p><a href=\"#\" class=\"btn-primary\" itemprop=\"url\">Посмотреть демо</a></article>`; добавить базовый CSS `.cases{padding:80px 0;background:#f9fafb}.case-grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}.case-card{background:#fff;padding:24px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.05)}`"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00241",
+ "round": 37,
+ "time": "2026-11-17 03:26:42",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Data‑variant copy swap for instant A/B testing (CSS‑only toggle)",
+ "knob": "Add two sibling elements for any copy you want to test, e.g.:\n```html\n<h2 data-variant=\"a\" class=\"hero-sub\">Сайт за 2 дня – клиенты в Яндексе</h2>\n<h2 data-variant=\"b\" class=\"hero-sub hidden\">Получите готовый сайт за 48 ч – первые заявки уже сегодня</h2>\n```\nAdd CSS:\n```css\n[data-variant] {display:none}\n[data-variant].show {display:block}\n```\nAdd a 2‑line script at the end of `<body>`:\n```js\nconst v = location.hash.replace('#','')||'a';\ndocument.querySelectorAll('[data-variant]').forEach(el=>el.classList.toggle('show',el.dataset.variant===v));\n```",
+ "skill": "",
+ "effect": "Changing the URL hash to `#a` or `#b` instantly swaps copy without rebuilding or redeploying, enabling rapid A/B of headlines, sub‑headings, benefit lists, etc.",
+ "risk": "Requires adding temporary markup; if left unchecked it may affect SEO (duplicate visible text).",
+ "rollback": "Delete the added `[data-variant]` elements, CSS block, and script (single git revert or file edit).",
+ "verify": "Open page, append `#a` or `#b` in address bar, observe which variant is visible; confirm only one is shown.",
+ "priority_claim": "2 – low‑cost way to test messaging variations before committing to design.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Add two sibling elements for any copy you want to test, e.g.:\n```html\n<h2 data-variant=\"a\" class=\"hero-sub\">Сайт за 2 дня – клиенты в Яндексе</h2>\n<h2 data-variant=\"b\" class=\"hero-sub hidden\">Получите готовый сайт за 48 ч – первые заявки уже сегодня</h2>\n```\nAdd CSS:\n```css\n[data-variant] {display:none}\n[data-variant].show {display:block}\n```\nAdd a 2‑line script at the end of `<body>`:\n```js\nconst v = location.hash.replace('#','')||'a';\ndocument.querySelectorAll('[data-variant]').forEach(el=>el.classList.toggle('show',el.dataset.variant===v));\n```"
+ ],
+ "flags": []
+}

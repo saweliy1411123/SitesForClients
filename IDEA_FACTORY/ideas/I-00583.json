@@ -1,0 +1,29 @@
+{
+ "id": "I-00583",
+ "round": 88,
+ "time": "2026-11-17 05:58:38",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "I-00602 Добавить ARIA‑метки role=\"button\" и aria‑label ко всем CTA‑ссылкам",
+ "knob": "Для каждой `<a class=\"btn-primary …\">` добавить атрибуты `role=\"button\"` и уникальный `aria-label` (например, `aria-label=\"Получить демо бесплатно\"`).",
+ "skill": "",
+ "effect": "Улучшит доступность для скрин‑ридеров, повысит соответствие WCAG 2.1 AA.",
+ "risk": "Нужно править несколько мест; риск забыть один из CTA.",
+ "rollback": "`git checkout HEAD -- index.html` или удалить атрибуты.",
+ "verify": "Запустить axe‑core (или Chrome Lighthouse → Accessibility) и убедиться, что у всех CTA есть `role=\"button\"` и `aria-label`.",
+ "priority_claim": "1 – критичный пункт доступности.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Для каждой `<a class=\"btn-primary …\">` добавить атрибуты `role=\"button\"` и уникальный `aria-label` (например, `aria-label=\"Получить демо бесплатно\"`).",
+  "Для всех ссылок‑кнопок (класс `.btn-primary` и `.cta-row a`) добавить атрибуты `role=\"button\"` и `aria-label=\"Получить бесплатное демо\"` (или соответствующий текст).",
+  "Для всех `<a>`‑элементов, стилизованных как кнопки (класс `.btn-primary`), добавить атрибуты `role=\"button\"` и, если текст не описывает действие явно, `aria-label=\"Получить бесплатное демо\"` (пример в финальном CTA)",
+  "Во всех `<a>`‑элементах, стилизованных как кнопки (класс `.btn-primary` и `.cta-row a`), добавить атрибуты `role=\"button\"` и `aria-label=\"Получить демо\"` (или уточняющий текст, если уже есть смысловой контент)."
+ ],
+ "flags": []
+}

@@ -1,0 +1,28 @@
+{
+ "id": "I-00593",
+ "round": 89,
+ "time": "2026-11-17 06:01:47",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.2-fast-preview"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "`content-visibility: auto` для секций ниже фолда",
+ "knob": "В `<style>` добавить `section{content-visibility:auto;contain-intrinsic-size:auto 600px;}` и исключить первую секцию hero селектором `section:first-of-type{content-visibility:visible;}`.",
+ "skill": "",
+ "effect": "Браузер не рендерит невидимые секции (цена, FAQ, final) до скролла — быстрее первичная отрисовка и меньше работы при ресайзе на телефонах.",
+ "risk": "Внутри секций с якорями (#price, #contact) возможен скачок скролла при переходе по хэшу до инициализации секции.",
+ "rollback": "`git checkout index.html`",
+ "verify": "Открыть локально, DevTools → Rendering → включить Frame Rendering Stats, проскроллить все 7 секций — проверить отсутствие «прыжков» и что переход по `#contact` из nav попадает точно в секцию.",
+ "priority_claim": "2 — дешёвая скорость-победа для страницы на 937 строк без сборки.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<style>` добавить `section{content-visibility:auto;contain-intrinsic-size:auto 600px;}` и исключить первую секцию hero селектором `section:first-of-type{content-visibility:visible;}`.",
+  "в `<style>` добавить `@media (min-width:1px){ section:not(.hero){content-visibility:auto; contain-intrinsic-size:auto 800px;} }` — применить ко всем секциям кроме hero"
+ ],
+ "flags": []
+}

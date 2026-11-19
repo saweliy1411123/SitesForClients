@@ -1,0 +1,26 @@
+{
+ "id": "I-00297",
+ "round": 45,
+ "time": "2026-11-17 03:49:16",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Inline Critical CSS + async non‑critical CSS**",
+ "knob": "Выделить стили, необходимые для первого экрана (hero, навигация, CTA) в отдельный блок `<style>` в `<head>`; остальные стили перенести в файл `styles.css` и подключить `<link rel=\"preload\" href=\"styles.css\" as=\"style\" onload=\"this.rel='stylesheet'\">` с `noscript`‑fallback.",
+ "skill": "",
+ "effect": "Сократит время до первого рендеринга (First Contentful Paint) и улучшит показатель CLS, что положительно скажется на SEO и пользовательском опыте, особенно на мобильных устройствах с медленным соединением.",
+ "risk": "Ошибки при переносе стилей могут привести к «миганию» контента (FOUC) или потерям визуального оформления, если критические стили не полностью охвачены.",
+ "rollback": "Восстановить оригинальный `<link rel=\"stylesheet\" href=\"style.css\">` (git checkout index.html) или удалить инлайн‑блок и добавить прежний `<link>`.",
+ "verify": "Замерить FCP и LCP в Chrome DevTools → Performance до и после (сравнить показатели в пределах 5 секунд); убедиться, что визуальная часть первой секции появляется без задержки (2‑5 минут).",
+ "priority_claim": "2 – требует небольших правок, но даёт ощутимый прирост скорости, что критично для конверсии.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Выделить стили, необходимые для первого экрана (hero, навигация, CTA) в отдельный блок `<style>` в `<head>`; остальные стили перенести в файл `styles.css` и подключить `<link rel=\"preload\" href=\"styles.css\" as=\"style\" onload=\"this.rel='stylesheet'\">` с `noscript`‑fallback."
+ ],
+ "flags": []
+}

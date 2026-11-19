@@ -1,0 +1,28 @@
+{
+ "id": "I-00613",
+ "round": 92,
+ "time": "2026-11-17 06:09:54",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Разметка LocalBusiness (JSON‑LD) для повышения локального SEO и доверия",
+ "knob": "В `<head>` перед закрывающим `</head>` добавить скрипт‑блок:\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"LocalBusiness\",\n\"name\":\"Савелий — лендинги для бизнеса в Перми\",\n\"url\":\"https://saveliy-perm.ru/\",\n\"logo\":\"https://saveliy-perm.ru/logo.svg\",\n\"image\":\"https://saveliy-perm.ru/og-image.jpg\",\n\"telephone\":\"+7 999 123‑45‑67\",\n\"address\":{\n\"@type\":\"PostalAddress\",\n\"addressLocality\":\"Пермь\",\n\"addressRegion\":\"Пермский край\",\n\"addressCountry\":\"RU\"\n},\n\"sameAs\":[\n\"https://t.me/TrainersDontPlays\",\n\"https://vk.com/saveliy\"\n]\n}\n</script>\n```",
+ "skill": "",
+ "effect": "Увеличит видимость в Яндекс и Google «карточка компании», повысит доверие пользователей и потенциально улучшит позиции в локальном поиске",
+ "risk": "Требует актуализации контактов; если данные устарят, может вызвать недоверие поисковых систем",
+ "rollback": "`git checkout -- index.html` (удалить добавленный скрипт)",
+ "verify": "В Chrome DevTools → «Application» → «Structured Data», убедиться в отсутствии ошибок; воспользоваться Google Rich Results Test по URL — проверить, что блок распознан как LocalBusiness",
+ "priority_claim": "1 — семантическая разметка даёт SEO‑выгоду без влияния на UX и нагрузку",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<head>` перед закрывающим `</head>` добавить скрипт‑блок:\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"LocalBusiness\",\n\"name\":\"Савелий — лендинги для бизнеса в Перми\",\n\"url\":\"https://saveliy-perm.ru/\",\n\"logo\":\"https://saveliy-perm.ru/logo.svg\",\n\"image\":\"https://saveliy-perm.ru/og-image.jpg\",\n\"telephone\":\"+7 999 123‑45‑67\",\n\"address\":{\n\"@type\":\"PostalAddress\",\n\"addressLocality\":\"Пермь\",\n\"addressRegion\":\"Пермский край\",\n\"addressCountry\":\"RU\"\n},\n\"sameAs\":[\n\"https://t.me/TrainersDontPlays\",\n\"https://vk.com/saveliy\"\n]\n}\n</script>\n```",
+  "В `<head>` перед закрывающим `</head>` вставить\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"LocalBusiness\",\n\"name\":\"Савелий — лендинги для бизнеса\",\n\"url\":\"https://example.com/\",\n\"logo\":\"https://example.com/logo.svg\",\n\"image\":\"https://example.com/hero.jpg\",\n\"telephone\":\"+7 (3412) 345‑678\",\n\"address\":{\n\"@type\":\"PostalAddress\",\n\"streetAddress\":\"ул. Пермская, 1\",\n\"addressLocality\":\"Пермь\",\n\"postalCode\":\"614000\",\n\"addressCountry\":\"RU\"\n},\n\"priceRange\":\"₽12 000‑30 000\",\n\"areaServed\":\"Пермь и область\",\n\"sameAs\":[\n\"https://t.me/TrainersDontPlays\"\n]\n}\n</script>\n```",
+  "Вставить в `<head>` перед закрывающим `</head>` блок `<script type=\"application/ld+json\">` с JSON‑LD:\n```json\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"LocalBusiness\",\n\"name\":\"Савелий — лендинги для бизнеса в Перми\",\n\"url\":\"https://example.com/\",\n\"telephone\":\"+7 (342) 123‑45‑67\",\n\"address\":{\n\"@type\":\"PostalAddress\",\n\"addressLocality\":\"Пермь\",\n\"addressRegion\":\"Пермский край\",\n\"addressCountry\":\"RU\"\n},\n\"openingHours\":\"Mo-Fr 09:00-18:00\",\n\"sameAs\":[\n\"https://vk.com/trainersdontplays\",\n\"https://t.me/TrainersDontPlays\"\n]\n}\n```"
+ ],
+ "flags": []
+}

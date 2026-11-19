@@ -1,0 +1,26 @@
+{
+ "id": "I-00884",
+ "round": 135,
+ "time": "2026-11-17 08:14:20",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "METHOD — Layout‑Shift (CLS) audit для hero‑раздела",
+ "knob": "METHOD: В консоли DevTools выполнить скрипт, который слушает `layout-shift` и выводит только те события, где `entry.value>0` и `entry.sources.some(s=>s.node && s.node.closest('.hero'))`.\n```js\nnew PerformanceObserver(obs=>{\nobs.getEntries()\n.filter(e=>e.value>0 && e.sources.some(s=>s.node?.closest('.hero')))\n.forEach(e=>console.log('CLS hero shift:', e.value.toFixed(4)));\n}).observe({type:'layout-shift',buffered:true});\n```",
+ "skill": "",
+ "effect": "Позволит мгновенно увидеть, вызывают ли анимации/blobs в hero‑секции визуальные сдвиги, которые ухудшают Core Web Vitals, и сравнить варианты (например, отключив анимацию).",
+ "risk": "Нет (только наблюдатель).",
+ "rollback": "Закрыть консоль / перезагрузить страницу.",
+ "verify": "Открыть страницу, посмотреть в консоли сообщения `CLS hero shift: …`. При отсутствии вывода — сдвигов нет; при появлении — нужно оптимизировать.",
+ "priority_claim": "1 — CLS напрямую влияет на ранжирование и пользовательский опыт; быстрый способ выявить проблемные анимации.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: В консоли DevTools выполнить скрипт, который слушает `layout-shift` и выводит только те события, где `entry.value>0` и `entry.sources.some(s=>s.node && s.node.closest('.hero'))`.\n```js\nnew PerformanceObserver(obs=>{\nobs.getEntries()\n.filter(e=>e.value>0 && e.sources.some(s=>s.node?.closest('.hero')))\n.forEach(e=>console.log('CLS hero shift:', e.value.toFixed(4)));\n}).observe({type:'layout-shift',buffered:true});\n```"
+ ],
+ "flags": []
+}

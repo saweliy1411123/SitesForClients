@@ -1,0 +1,26 @@
+{
+ "id": "I-01004",
+ "round": 1,
+ "time": "2026-11-17 17:15:52",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Блок клиентских логотипов + Schema Organization для доверия",
+ "knob": "После секции цены (`</section>` с id=\"price\") вставить `<section class=\"clients\" aria-labelledby=\"clients-heading\"><h2 id=\"clients-heading\">Клиенты доверяют нам</h2><div class=\"client-logos\"><img src=\"logo1.svg\" alt=\"Компания 1\"><img src=\"logo2.svg\" alt=\"Компания 2\"><img src=\"logo3.svg\" alt=\"Компания 3\"></div></section>` и добавить в `<head>` JSON‑LD `<script type=\"application/ld+json\">{ \"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"Савелий — лендинги для бизнеса в Перми\",\"url\":\"https://example.com\",\"logo\":\"https://example.com/logo.svg\",\"sameAs\":[\"https://vk.com/...\",\"https://instagram.com/...\"] }</script>`.",
+ "skill": "",
+ "effect": "Визуальные подтверждения (логотипы) и структурированные данные повышают доверие и улучшают SEO‑видимость.",
+ "risk": "Нужно иметь права на использование логотипов; отсутствие изображений приведёт к пустому блоку.",
+ "rollback": "Удалить секцию `.clients` и `<script type=\"application/ld+json\">` (git checkout index.html).",
+ "verify": "В браузере увидеть ряд логотипов, проверить в поисковой консоли наличие `Organization`‑разметки через Rich Results Test.",
+ "priority_claim": "3 – добавляет социальное доказательство, но менее критично, чем оффер и форма захвата.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "После секции цены (`</section>` с id=\"price\") вставить `<section class=\"clients\" aria-labelledby=\"clients-heading\"><h2 id=\"clients-heading\">Клиенты доверяют нам</h2><div class=\"client-logos\"><img src=\"logo1.svg\" alt=\"Компания 1\"><img src=\"logo2.svg\" alt=\"Компания 2\"><img src=\"logo3.svg\" alt=\"Компания 3\"></div></section>` и добавить в `<head>` JSON‑LD `<script type=\"application/ld+json\">{ \"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"Савелий — лендинги для бизнеса в Перми\",\"url\":\"https://example.com\",\"logo\":\"https://example.com/logo.svg\",\"sameAs\":[\"https://vk.com/...\",\"https://instagram.com/...\"] }</script>`."
+ ],
+ "flags": []
+}

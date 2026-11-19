@@ -1,0 +1,26 @@
+{
+ "id": "I-00658",
+ "round": 100,
+ "time": "2026-11-17 06:34:55",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Scroll‑depth delta after скрытия/показа блока",
+ "knob": "Через консоль добавить/удалить `display:none` у целевого блока (например, `.trust-badge` или `.hero-note`) и выполнить однострочный скрипт, который записывает максимальный процент прокрутки:\n```js\nlet max=0;window.addEventListener('scroll',()=>{max=Math.max(max,window.scrollY/(document.body.scrollHeight-window.innerHeight)*100)});setTimeout(()=>console.log('Scroll depth:',max.toFixed(1)+'%'),5000);\n```",
+ "skill": "",
+ "effect": "показывает, насколько удаление/добавление элемента влияет на глубину скролла — косвенный индикатор вовлечённости и интереса к контенту.",
+ "risk": "скрипт измеряет только текущую сессию; результаты могут варьировать из‑за разных пользовательских паттернов.",
+ "rollback": "обновить страницу — исходный DOM восстановится.",
+ "verify": "1) Открыть страницу, выполнить скрипт — запомнить значение. 2) Скрыть элемент (`document.querySelector('.trust-badge').style.display='none'`). 3) Снова выполнить скрипт. 4) Сравнить проценты в консоли.",
+ "priority_claim": "2 — полезно для быстрой проверки, насколько «доверительные» блоки удерживают внимание.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Через консоль добавить/удалить `display:none` у целевого блока (например, `.trust-badge` или `.hero-note`) и выполнить однострочный скрипт, который записывает максимальный процент прокрутки:\n```js\nlet max=0;window.addEventListener('scroll',()=>{max=Math.max(max,window.scrollY/(document.body.scrollHeight-window.innerHeight)*100)});setTimeout(()=>console.log('Scroll depth:',max.toFixed(1)+'%'),5000);\n```"
+ ],
+ "flags": []
+}

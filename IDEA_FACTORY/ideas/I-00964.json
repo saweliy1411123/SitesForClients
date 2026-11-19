@@ -1,0 +1,26 @@
+{
+ "id": "I-00964",
+ "round": 160,
+ "time": "2026-11-17 09:24:17",
+ "source": "localhost:8080/zhipu/glm-4.7-flash",
+ "sources": [
+  "localhost:8080/zhipu/glm-4.7-flash"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Микро-взаимодействие для ссылок-кнопок (Link-Button Press)",
+ "knob": "Добавить состояния `:hover` и `:active` к селектору `.btn-primary` (это ссылки-кнопки) для имитации нажатия физической кнопки. В CSS добавить `transform: scale` и `box-shadow`.",
+ "skill": "micro-cta-link-press\nSAFE CSS:\n```css\n.btn-primary:hover {\ntransform: scale(1.02);\nbox-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);\n}\n.btn-primary:active {\ntransform: scale(0.98);\nbox-shadow: 0 2px 8px",
+ "effect": "Создает тактильный отклик при взаимодействии, повышает ощущение \"кликабельности\" CTA.",
+ "risk": "Нет.",
+ "rollback": "Удалить добавленные строки CSS.",
+ "verify": "Навести курсор и кликнуть по кнопке в Hero и финале.",
+ "priority_claim": "2",
+ "source_hint": "",
+ "site_request": "hero",
+ "category": "lever",
+ "variants": [
+  "Добавить состояния `:hover` и `:active` к селектору `.btn-primary` (это ссылки-кнопки) для имитации нажатия физической кнопки. В CSS добавить `transform: scale` и `box-shadow`."
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00364",
+ "round": 54,
+ "time": "2026-11-17 04:16:58",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить `role=\"region\"` + `aria-label` к каждому `<section>` для скрин‑ридеров",
+ "knob": "В каждый `<section>` добавить атрибуты, напр. `<section id=\"price\" role=\"region\" aria-label=\"Ценовое предложение\">` (подобрать метку по смыслу)",
+ "skill": "",
+ "effect": "Улучшает навигацию для пользователей‑слепых, повышает оценку доступности (Accessibility) и может положительно сказаться на SEO‑рейтинге за счёт лучшей семантики",
+ "risk": "Неправильные метки могут ввести в заблуждение, но риск минимален",
+ "rollback": "`git checkout -- index.html` (удалить добавленные атрибуты)",
+ "verify": "Открыть страницу, включить Chrome Accessibility Tree (DevTools → Elements → Accessibility) – каждый `<section>` должен отображаться как «region» с указанным `label`",
+ "priority_claim": "2 – быстро реализуемо, повышает доступность без изменения визуального вида",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В каждый `<section>` добавить атрибуты, напр. `<section id=\"price\" role=\"region\" aria-label=\"Ценовое предложение\">` (подобрать метку по смыслу)"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00372",
+ "round": 56,
+ "time": "2026-11-17 04:23:22",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — theme-toggle (light/dark premium)",
+ "knob": "METHOD: SKILL\n**Name:** `theme-toggle`\n**When to apply:** На любой статический лендинг, где требуется премиальная визуальная гибкость и пользователь может захотеть переключить светлую/тёмную схему без перезагрузки.\n**SAFE CSS:**\n```css\n:root{\n--bg:#ffffff;\n--text:#111111;\n--primary:#8b5cf6;\n--muted:#6b7280;\n--gradient:linear-gradient(135deg,var(--primary),#4ec9f0);\n}\n[data-theme=\"dark\"]{\n--bg:#111111;\n--text:#f5f5f5;\n--primary:#c084fc;\n--muted:#9ca3af;\n--gradient:linear-gradient(135deg,var(--primary),#4ec9f0);\n}\nbody{\nbackground:var(--bg);\ncolor:var(--text);\ntransition:background .3s,color .3s;\n}\n.theme-toggle{\ncursor:pointer;\ndisplay:inline-flex;\nalign-items:center;\ngap:.5rem;\nfont-weight:600;\ncolor:var(--primary);\n}\n.theme-toggle::after{\ncontent:\"🌙\";\n}\n[data-theme=\"dark\"] .theme-toggle::after{\ncontent:\"☀️\";\n}\n```\n**SAFE JS:**\n```js\n(() => {\nconst btn = document.querySelector('.theme-toggle');\nif (!btn) return;\nconst setTheme = t => {\ndocument.documentElement.dataset.theme = t;\nlocalStorage.setItem('theme',t);\n};\nconst stored = localStorage.getItem('theme');\nif (stored) setTheme(stored);\nbtn.addEventListener('click',()=> {\nconst newT = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';\nsetTheme(newT);\n});\n})();\n```",
+ "skill": "",
+ "effect": "Позволяет пользователям быстро переключать цветовую схему, повышая восприятие премиальности и улучшая доступность в тёмных условиях.",
+ "risk": "Требует небольшого JS‑кода; если пользователь отключит localStorage, состояние не сохранится.",
+ "rollback": "`git checkout index.html` (удалить добавленные строки и файлы).",
+ "verify": "Открыть страницу, кликнуть кнопку «theme‑toggle», убедиться в смене цветов и в сохранении выбора после перезагрузки.",
+ "priority_claim": "1 – высокое влияние на UX и SEO (повышение времени на странице, снижение bounce rate).",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "METHOD: SKILL\n**Name:** `theme-toggle`\n**When to apply:** На любой статический лендинг, где требуется премиальная визуальная гибкость и пользователь может захотеть переключить светлую/тёмную схему без перезагрузки.\n**SAFE CSS:**\n```css\n:root{\n--bg:#ffffff;\n--text:#111111;\n--primary:#8b5cf6;\n--muted:#6b7280;\n--gradient:linear-gradient(135deg,var(--primary),#4ec9f0);\n}\n[data-theme=\"dark\"]{\n--bg:#111111;\n--text:#f5f5f5;\n--primary:#c084fc;\n--muted:#9ca3af;\n--gradient:linear-gradient(135deg,var(--primary),#4ec9f0);\n}\nbody{\nbackground:var(--bg);\ncolor:var(--text);\ntransition:background .3s,color .3s;\n}\n.theme-toggle{\ncursor:pointer;\ndisplay:inline-flex;\nalign-items:center;\ngap:.5rem;\nfont-weight:600;\ncolor:var(--primary);\n}\n.theme-toggle::after{\ncontent:\"🌙\";\n}\n[data-theme=\"dark\"] .theme-toggle::after{\ncontent:\"☀️\";\n}\n```\n**SAFE JS:**\n```js\n(() => {\nconst btn = document.querySelector('.theme-toggle');\nif (!btn) return;\nconst setTheme = t => {\ndocument.documentElement.dataset.theme = t;\nlocalStorage.setItem('theme',t);\n};\nconst stored = localStorage.getItem('theme');\nif (stored) setTheme(stored);\nbtn.addEventListener('click',()=> {\nconst newT = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';\nsetTheme(newT);\n});\n})();\n```"
+ ],
+ "flags": []
+}

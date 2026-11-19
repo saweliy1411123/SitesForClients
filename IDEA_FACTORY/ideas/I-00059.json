@@ -1,0 +1,26 @@
+{
+ "id": "I-00059",
+ "round": 9,
+ "time": "2026-11-17 02:06:34",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "I-00059 — «CSS‑checkbox‑toggle для мгновенного A/B‑теста копии hero‑секции»",
+ "knob": "В начале `<body>` добавить скрытый `<input type=\"checkbox\" id=\"hero-ab-toggle\" hidden>` и `<label for=\"hero-ab-toggle\" class=\"sr-only\">Переключить вариант</label>`. Дублировать текущий блок hero: `.hero‑a` (оригинальный) и `.hero‑b` (копия с изменённым h1 и/или CTA‑текстом). В CSS добавить правила:\n```css\n.hero-b {display:none;}\n#hero-ab-toggle:checked ~ .hero-a {display:none;}\n#hero-ab-toggle:checked ~ .hero-b {display:block;}\n```",
+ "skill": "",
+ "effect": "Позволяет в локальном браузере за секунды переключать два визуальных варианта без JavaScript и без изменения URL, получая «до/после» для оценки привлекательности заголовка, подзаголовка или цвета CTA.",
+ "risk": "Небольшой риск нарушения текущей вёрстки, если оба блока используют одинаковые классы — может возникнуть конфликт стилей.",
+ "rollback": "`git checkout -- index.html` или удалить добавленные строки (input, label, второй hero‑блок, CSS‑правила).",
+ "verify": "Открыть `index.html`, нажать клавишу Space на скрытом чекбоксе (или кликнуть по метке в DevTools), убедиться, что виден только один из вариантов hero‑секций и копия отображается корректно.",
+ "priority_claim": "1 — быстрый способ проверить гипотезу о более сильном заголовке/CTA, потенциально повышающем конверсию.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В начале `<body>` добавить скрытый `<input type=\"checkbox\" id=\"hero-ab-toggle\" hidden>` и `<label for=\"hero-ab-toggle\" class=\"sr-only\">Переключить вариант</label>`. Дублировать текущий блок hero: `.hero‑a` (оригинальный) и `.hero‑b` (копия с изменённым h1 и/или CTA‑текстом). В CSS добавить правила:\n```css\n.hero-b {display:none;}\n#hero-ab-toggle:checked ~ .hero-a {display:none;}\n#hero-ab-toggle:checked ~ .hero-b {display:block;}\n```"
+ ],
+ "flags": []
+}

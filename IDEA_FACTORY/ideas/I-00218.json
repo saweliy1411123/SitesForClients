@@ -1,0 +1,28 @@
+{
+ "id": "I-00218",
+ "round": 33,
+ "time": "2026-11-17 03:16:33",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3",
+  "lareper/glm-5.2",
+  "lareper/glm-5.2-fast-preview"
+ ],
+ "mentions": 3,
+ "status": "NEW",
+ "title": "Клавиатурный доступ для интерактивного div с onclick",
+ "knob": "L524 `<div class=\"visual\" onclick=\"...scrollIntoView...\">` — заменить на `<a href=\"#contact\" class=\"visual\" aria-label=\"Перейти к форме контакта\">` (или добавить `tabindex=\"0\" role=\"button\"` + обработчик keydown Enter), чтобы элемент был доступен с клавиатуры и читался скрин-ридером",
+ "skill": "",
+ "effect": "доступность (WCAG 2.1.1), кликабельная зона работает по Tab+Enter, меньше отказов мобильных/клавиатурных пользователей",
+ "risk": "стили `.visual` рассчитаны на div — может потребоваться `display:block` и сброс текстового подчёркивания ссылки",
+ "rollback": "`git checkout -- index.html`",
+ "verify": "открыть страницу, нажать Tab — элемент должен получать фокус и срабатывать по Enter; проверить в DevTools Accessibility tree",
+ "priority_claim": "1 — прямое нарушение доступности интерактивного элемента, правка на одну строку",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "L524 `<div class=\"visual\" onclick=\"...scrollIntoView...\">` — заменить на `<a href=\"#contact\" class=\"visual\" aria-label=\"Перейти к форме контакта\">` (или добавить `tabindex=\"0\" role=\"button\"` + обработчик keydown Enter), чтобы элемент был доступен с клавиатуры и читался скрин-ридером"
+ ],
+ "flags": []
+}

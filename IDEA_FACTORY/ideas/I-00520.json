@@ -1,0 +1,26 @@
+{
+ "id": "I-00520",
+ "round": 78,
+ "time": "2026-11-17 05:28:06",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Google Site Verification meta‑тег для SEO‑доверия",
+ "knob": "В `<head>` добавить `<meta name=\"google-site-verification\" content=\"YOUR_VERIFICATION_CODE\">` (заменить YOUR_VERIFICATION_CODE на реальный код из Google Search Console).",
+ "skill": "",
+ "effect": "Позволяет подтвердить владение сайтом в Google, улучшая индексирование и повышая доверие поисковых систем.",
+ "risk": "Требует наличия действующего кода подтверждения; без него тег бесполезен.",
+ "rollback": "Удалить строку из `<head>` (`git checkout index.html` или вручную).",
+ "verify": "После публикации открыть Google Search Console → Проверка статуса подтверждения сайта; метка должна стать «Подтверждено».",
+ "priority_claim": "3 — низкий, но полезный для SEO‑здоровья и доверия поисковика.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<head>` добавить `<meta name=\"google-site-verification\" content=\"YOUR_VERIFICATION_CODE\">` (заменить YOUR_VERIFICATION_CODE на реальный код из Google Search Console)."
+ ],
+ "flags": []
+}

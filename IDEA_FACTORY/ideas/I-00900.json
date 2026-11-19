@@ -1,0 +1,27 @@
+{
+ "id": "I-00900",
+ "round": 141,
+ "time": "2026-11-17 08:30:54",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+  "localhost:8081/big_only"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Улучшение читаемости текста на мобильных устройствах",
+ "knob": "Добавить в CSS-медиа запрос для мобильных устройств правило `font-size: 18px` для текста в секциях",
+ "skill": "",
+ "effect": "Повышение читаемости текста на мобильных устройствах",
+ "risk": "Нет",
+ "rollback": "Удалить добавленное правило",
+ "verify": "Проверить читаемость текста на мобильном устройстве",
+ "priority_claim": "2",
+ "source_hint": "",
+ "site_request": "мобильная версия",
+ "category": "lever",
+ "variants": [
+  "Добавить в CSS-медиа запрос для мобильных устройств правило `font-size: 18px` для текста в секциях"
+ ],
+ "flags": []
+}

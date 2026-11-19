@@ -1,0 +1,26 @@
+{
+ "id": "I-00193",
+ "round": 30,
+ "time": "2026-11-17 03:06:40",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Instant headline‑swap A/B test via URL hash",
+ "knob": "METHOD: Insert a <script> at the end of <body> that reads `location.hash`. If the hash equals `#v2`, replace the text of the sole `<h1>` (`.hero h1`) with an alternative copy (e.g., “Ваш бизнес в топ‑поиске Яндекса за 2 дня”). Keep the original text in a variable for fallback.",
+ "skill": "",
+ "effect": "Allows product‑owner to compare conversion of two headline versions by simply adding `#v2` to the URL, without any redeploy or git commit. Fast feedback on the most compelling phrasing.",
+ "risk": "Minor risk of JavaScript error if the selector changes; does not affect SEO because search engines see the original markup.",
+ "rollback": "`git checkout index.html` or delete the temporary script block.",
+ "verify": "Open `index.html` in Chrome, add `#v2` to the URL, confirm the headline text changes; remove hash and verify original returns.",
+ "priority_claim": "1 – headline clarity is the primary driver of first‑screen conversion; this test is trivial to set up and yields high‑im",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: Insert a <script> at the end of <body> that reads `location.hash`. If the hash equals `#v2`, replace the text of the sole `<h1>` (`.hero h1`) with an alternative copy (e.g., “Ваш бизнес в топ‑поиске Яндекса за 2 дня”). Keep the original text in a variable for fallback."
+ ],
+ "flags": []
+}

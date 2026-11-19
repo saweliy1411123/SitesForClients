@@ -1,0 +1,29 @@
+{
+ "id": "I-00660",
+ "round": 100,
+ "time": "2026-11-17 06:35:04",
+ "source": "lareper/glm-5.2-fast-preview",
+ "sources": [
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3-prime",
+  "lareper/glm-5.3",
+  "lareper/glm-5.2"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "Метод «замер LCP и CLS до/после правок без деплоя» через Performance API",
+ "knob": "METHOD: (1) Открыть index.html в Chrome, F12 → Console. (2) Выполнить: `new PerformanceObserver(l=>l.getEntries().forEach(e=>console.log(e.entryType, e.element?.tagName, Math.round(e.startTime)+'ms'))).observe({type:'largest-contentful-paint',buffered:true}); new PerformanceObserver(l=>l.getEntries().forEach(e=>console.log('CLS', e.value))).observe({type:'layout-shift',buffered:true})`. (3) Записать LCP и CLS оригинала. (4) Открыть index.improved.html, повторить, сравнить числа. Отличие от I-00620 (Lighthouse): замер на реальной машине пользователя с учётом его сети, а не лабораторная оценка; работает и в file://.",
+ "skill": "",
+ "effect": "Объективные числа вместо ощущений: видно, ускорили ли preload шрифта и критический CSS реальную отрисовку hero.",
+ "risk": "file:// может давать искажённые тайминги кэша — для чистоты сравнивать в режиме инкогнито с отключённым кэшем (DevTools → Network → Disable cache).",
+ "rollback": "Файлы не изменяются; сброс — закрыть вкладку.",
+ "verify": "Два прогона на оригинале должны давать близкие значения (±15%) — иначе метод недостоверный для этой машины.",
+ "priority_claim": "2 — нужен перед принятием идей I-00536/I-00614, чтобы подтвердить их пользу числом.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: (1) Открыть index.html в Chrome, F12 → Console. (2) Выполнить: `new PerformanceObserver(l=>l.getEntries().forEach(e=>console.log(e.entryType, e.element?.tagName, Math.round(e.startTime)+'ms'))).observe({type:'largest-contentful-paint',buffered:true}); new PerformanceObserver(l=>l.getEntries().forEach(e=>console.log('CLS', e.value))).observe({type:'layout-shift',buffered:true})`. (3) Записать LCP и CLS оригинала. (4) Открыть index.improved.html, повторить, сравнить числа. Отличие от I-00620 (Lighthouse): замер на реальной машине пользователя с учётом его сети, а не лабораторная оценка; работает и в file://."
+ ],
+ "flags": []
+}

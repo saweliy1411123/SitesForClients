@@ -1,0 +1,26 @@
+{
+ "id": "I-00321",
+ "round": 48,
+ "time": "2026-11-17 03:57:39",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — Mobile VH Fix",
+ "knob": "**Name:** mobile-vh-fix\n**When to apply:** На одностраничных лендингах с полноэкранными секциями (например, `.hero`), где высота `100vh` приводит к обрезке контента на мобильных браузерах с динамической адресной строкой.\n**Steps:**\n1. В `<head>` добавить небольшой скрипт, который вычисляет реальную высоту окна и сохраняет её в CSS‑переменную `--vh`.\n2. Заменить все `height: 100vh` и `min-height: 100vh` на `height: calc(var(--vh, 1vh) * 100)` и аналогично для `min-height`.\n3. При изменении ориентации/размера окна пересчитывать переменную (`resize` и `orientationchange`).\n4. Проверить визуально на Android / iOS‑эмуляторах, убедиться, что первый экран полностью виден без прокрутки.\n**SAFE CSS:**\n```css\n/* mobile‑vh‑fix – использование CSS‑переменной для корректной высоты */\n.hero {\nmin-height: calc(var(--vh, 1vh) * 100);\n}\nsection.fullscreen {\nheight: calc(var(--vh, 1vh) * 100);\n}\n```\n**SAFE JS:**\n```js\n/* mobile‑vh‑fix – вычисление реального vh */\n(function () {\nconst setVH = () => {\nconst vh = window.innerHeight * 0.01;\ndocument.documentElement.style.setProperty('--vh', `${vh}px`);\n};\nsetVH();\nwindow.addEventListener('resize', setVH);\nwindow.addEventListener('orientationchange', setVH);\n})();\n```",
+ "skill": "",
+ "effect": "Устраняет «потерянный» контент на мобильных устройствах, улучшая пользовательский опыт и показатель CLS → потенциальный рост конверсий.",
+ "risk": "Требует небольшого JS‑фрагмента; если пользователь отключит JS, высота вернётся к обычному `100vh` (не критично).",
+ "rollback": "Удалить `<script>` и CSS‑правила, либо выполнить `git checkout HEAD -- index.html`.",
+ "verify": "Открыть страницу на мобильном эмуляторе (Chrome DevTools → Device Toolbar), убедиться, что верхний и нижний край секций полностью видим без скролла; сравнить с версией без скрипта.",
+ "priority_claim": "2 — значительное улучшение мобильного UX, но требует небольшого кода; стоит реализовать после базовых SEO‑улучшений.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** mobile-vh-fix\n**When to apply:** На одностраничных лендингах с полноэкранными секциями (например, `.hero`), где высота `100vh` приводит к обрезке контента на мобильных браузерах с динамической адресной строкой.\n**Steps:**\n1. В `<head>` добавить небольшой скрипт, который вычисляет реальную высоту окна и сохраняет её в CSS‑переменную `--vh`.\n2. Заменить все `height: 100vh` и `min-height: 100vh` на `height: calc(var(--vh, 1vh) * 100)` и аналогично для `min-height`.\n3. При изменении ориентации/размера окна пересчитывать переменную (`resize` и `orientationchange`).\n4. Проверить визуально на Android / iOS‑эмуляторах, убедиться, что первый экран полностью виден без прокрутки.\n**SAFE CSS:**\n```css\n/* mobile‑vh‑fix – использование CSS‑переменной для корректной высоты */\n.hero {\nmin-height: calc(var(--vh, 1vh) * 100);\n}\nsection.fullscreen {\nheight: calc(var(--vh, 1vh) * 100);\n}\n```\n**SAFE JS:**\n```js\n/* mobile‑vh‑fix – вычисление реального vh */\n(function () {\nconst setVH = () => {\nconst vh = window.innerHeight * 0.01;\ndocument.documentElement.style.setProperty('--vh', `${vh}px`);\n};\nsetVH();\nwindow.addEventListener('resize', setVH);\nwindow.addEventListener('orientationchange', setVH);\n})();\n```"
+ ],
+ "flags": []
+}

@@ -1,0 +1,30 @@
+{
+ "id": "I-00633",
+ "round": 96,
+ "time": "2026-11-17 06:21:58",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "FAQPage JSON-LD разметка по реальным вопросам FAQ",
+ "knob": "В `<head>` перед `</head>` добавить `<script type=\"application/ld+json\">` с `@type: FAQPage`, где вопросы/ответы дословно скопированы из секции FAQ (L663–705) — без выдуманных новых вопросов.",
+ "skill": "",
+ "effect": "Яндекс/Google могут показать расширенный сниппет с вопросами в выдаче — выше CTR по запросам «лендинг Пермь», «сайт за 2 дня».",
+ "risk": "Если разметка не совпадёт с видимым текстом FAQ — риск ручных санкций поисковиков.",
+ "rollback": "`git checkout index.html`",
+ "verify": "Вставить JSON-LD в копию, открыть https://validator.schema.org — 0 ошибок; сверить тексты вопросов с L663–705.",
+ "priority_claim": "1 — дешёвая правка head, прямой SEO-эффект для локального оффера.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<head>` перед `</head>` добавить `<script type=\"application/ld+json\">` с `@type: FAQPage`, где вопросы/ответы дословно скопированы из секции FAQ (L663–705) — без выдуманных новых вопросов.",
+  "METHOD: (1) SITE_REQUEST «faq» — получить фактическую разметку FAQ-секции и тексты вопросов/ответов. (2) В `<head>` добавить `<script type=\"application/ld+json\">` с @type FAQPage, где mainEntity — точные тексты вопросов и ответов, уже существующие на странице (без выдуманных). (3) Проверить в console: `JSON.parse(document.querySelector('script[type=\"application/ld+json\"]').textContent)` — валидность. (4) Прогнать через Google Rich Results Test (или Яндекс.Вебмастер валидатор микроразметки) на локальной копии."
+ ],
+ "flags": []
+}

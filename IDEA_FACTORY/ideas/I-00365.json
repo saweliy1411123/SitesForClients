@@ -1,0 +1,26 @@
+{
+ "id": "I-00365",
+ "round": 54,
+ "time": "2026-11-17 04:16:58",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Предзагрузка (preload) фонового изображения hero‑секции",
+ "knob": "В `<head>` добавить `<link rel=\"preload\" as=\"image\" href=\"path/to/hero-bg.jpg\">` (заменить на реальный путь к фоновой картинке, если используется CSS‑background‑image) и в CSS добавить `background-image: url('path/to/hero-bg.jpg');` если ещё нет",
+ "skill": "",
+ "effect": "Уменьшает время до первого отображения hero‑фона, улучшает показатель Largest Contentful Paint (LCP) → ускоряет загрузку, повышает Core Web Vitals",
+ "risk": "Если путь к изображению неверный, браузер будет пытаться загрузить несуществующий ресурс, что замедлит загрузку; также увеличит количество запросов, если изображение уже кэшировано",
+ "rollback": "`git checkout -- index.html` (удалить строку `<link rel=\"preload\">`)",
+ "verify": "В Chrome Network tab включить «Disable cache», перезагрузить страницу, убедиться, что запрос к изображению имеет статус 200 и помечен как preload; проверить LCP в Lighthouse (Performance) – должно снизиться",
+ "priority_claim": "3 – полезно для скорости, но зависит от наличия реального фонового изображения; если фон задаётся CSS‑gradient, идея не ",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<head>` добавить `<link rel=\"preload\" as=\"image\" href=\"path/to/hero-bg.jpg\">` (заменить на реальный путь к фоновой картинке, если используется CSS‑background‑image) и в CSS добавить `background-image: url('path/to/hero-bg.jpg');` если ещё нет"
+ ],
+ "flags": []
+}

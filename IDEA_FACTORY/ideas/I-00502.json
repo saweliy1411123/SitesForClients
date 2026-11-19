@@ -1,0 +1,27 @@
+{
+ "id": "I-00502",
+ "round": 76,
+ "time": "2026-11-17 05:22:29",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — scroll-progress-bar",
+ "knob": "**Name:** `scroll-progress-bar`\n**When to apply:** На одностраничных лендингах, где пользователь прокручивает контент от начала до конца; индикатор прогресса повышает ориентацию и мотивирует дочитывать страницу.\n**Steps:**\n1. В начале `<body>` добавить пустой элемент‑контейнер:\n```html\n<div class=\"scroll-progress\" aria-hidden=\"true\"></div>\n```\n2. В CSS задать фиксированную высоту, ширину 0 % и стили оформления.\n3. В безопасном JS‑скрипте отследить событие `scroll`, вычислить процент прокрутки (`(scrollY / (document.body.scrollHeight - innerHeight)) * 100`) и установить `style.width` у `.scroll-progress`.\n**SAFE CSS:**\n```css\n.scroll-progress{\nposition:fixed;\ntop:0; left:0;\nheight:4px;\nwidth:0%;\nbackground:linear-gradient(90deg,var(--c-primary),#a78bfa);\nz-index:9999;\ntransition:width .1s ease-out;\n}\n```\n**SAFE JS:**\n```js\n(() => {\nconst bar = document.querySelector('.scroll-progress');\nconst update = () => {\nconst scroll = window.scrollY;\nconst height = document.body.scrollHeight - innerHeight;\nconst perc = height ? (scroll / height) * 100 : 0;\nbar.style.width = perc + '%';\n};\nwindow.addEventListener('scroll', update);\nwindow.addEventListener('resize', update);\nupdate();\n})();\n```",
+ "skill": "",
+ "effect": "Пользователь видит визуальный индикатор, сколько контента осталось, что повышает вовлечённость и может улучшить конверсию (меньше «потери» на середине страницы).",
+ "risk": "На очень коротких страницах индикатор будет почти сразу заполнен; небольшое увеличение JS‑веса (~1 KB).",
+ "rollback": "Удалить строку `<div class=\"scroll-progress\">`, CSS‑блок и JS‑скрипт; либо выполнить `git checkout index.improved.html`.",
+ "verify": "Прокрутить страницу – индикатор должен плавно заполняться от 0 % до 100 %; проверить, что он остаётся вверху при скролле и не перекрывает важные элементы.",
+ "priority_claim": "1 – быстрый, заметный UX‑улучшение без изменения контента; положительно влияет на метрики поведения (scroll depth) и мож",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `scroll-progress-bar`\n**When to apply:** На одностраничных лендингах, где пользователь прокручивает контент от начала до конца; индикатор прогресса повышает ориентацию и мотивирует дочитывать страницу.\n**Steps:**\n1. В начале `<body>` добавить пустой элемент‑контейнер:\n```html\n<div class=\"scroll-progress\" aria-hidden=\"true\"></div>\n```\n2. В CSS задать фиксированную высоту, ширину 0 % и стили оформления.\n3. В безопасном JS‑скрипте отследить событие `scroll`, вычислить процент прокрутки (`(scrollY / (document.body.scrollHeight - innerHeight)) * 100`) и установить `style.width` у `.scroll-progress`.\n**SAFE CSS:**\n```css\n.scroll-progress{\nposition:fixed;\ntop:0; left:0;\nheight:4px;\nwidth:0%;\nbackground:linear-gradient(90deg,var(--c-primary),#a78bfa);\nz-index:9999;\ntransition:width .1s ease-out;\n}\n```\n**SAFE JS:**\n```js\n(() => {\nconst bar = document.querySelector('.scroll-progress');\nconst update = () => {\nconst scroll = window.scrollY;\nconst height = document.body.scrollHeight - innerHeight;\nconst perc = height ? (scroll / height) * 100 : 0;\nbar.style.width = perc + '%';\n};\nwindow.addEventListener('scroll', update);\nwindow.addEventListener('resize', update);\nupdate();\n})();\n```",
+  "**Name:** `scroll-progress-bar`\n**When to apply:** На любом одностраничном лендинге, где важна визуальная индикация прогресса чтения и удержания внимания пользователя.\n**Steps:**\n1. В конец `<body>` добавить элемент `<div class=\"scroll-progress\"><div class=\"scroll-progress__fill\"></div></div>`.\n2. В `index.improved.html` подключить файл `scroll-progress.css` (inline‑вставка в `<style>`).\n3. Добавить безопасный скрипт `scroll-progress.js`, который слушает событие `scroll` и задаёт ширину `.scroll-progress__fill` в % от прокрутки.\n4. При необходимости задать `z-index` выше шапки, чтобы индикатор всегда был виден.\n**SAFE CSS:**\n```css\n/* scroll-progress-bar */\n.scroll-progress{\nposition:fixed;\ntop:0;\nleft:0;\nwidth:100%;\nheight:4px;\nbackground:rgba(0,0,0,0.1);\nz-index:9999;\n}\n.scroll-progress__fill{\nwidth:0%;\nheight:100%;\nbackground:var(--blue);\ntransition:width .2s ease-out;\n}\n```\n**SAFE JS:**\n```js\n/* scroll-progress-bar */\ndocument.addEventListener('scroll',function(){\nconst docHeight = document.documentElement.scrollHeight - window.innerHeight;\nconst scrolled = (window.scrollY / docHeight) * 100;\ndocument.querySelector('.scroll-progress__fill').style.width = `${scrolled}%`;\n});\n```"
+ ],
+ "flags": []
+}

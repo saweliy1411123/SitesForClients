@@ -1,0 +1,26 @@
+{
+ "id": "I-00470",
+ "round": 70,
+ "time": "2026-11-17 05:04:59",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — Variable Font‑Weight Hover",
+ "knob": "METHOD: SKILL\n**Name:** variable-font-weight-hover\n**When to apply:** На всех заголовках h1‑h3 на премиальных лендингах, где нужен интерактивный типографический акцент без JavaScript.\n**Steps:**\n1. В `:root` объявить CSS‑переменную `--h-weight` со значением `500`.\n2. Добавить к заголовкам правило `font-weight: var(--h-weight); transition: font-weight 0.25s ease;`.\n3. В `:hover, :focus-visible` установить `--h-weight: 700;`.\n4. При отсутствии поддержки `transition` для `font-weight` (IE) будет обычный переход без анимации – приемлемо.\nSAFE CSS:\n```css\n:root{--h-weight:500}\nh1,h2,h3{font-weight:var(--h-weight);transition:font-weight .25s ease}\nh1:hover,h1:focus-visible,\nh2:hover,h2:focus-visible,\nh3:hover,h3:focus-visible{--h-weight:700}\n```\nSAFE JS: *(не требуется)*",
+ "skill": "variable-font-weight-hover",
+ "effect": "Делает заголовки более «живыми», усиливает восприятие премиального бренда и повышает CTR на CTA, расположенные рядом.",
+ "risk": "На старых браузерах (IE 11) переход `font-weight` не анимируется – будет мгновенное изменение, но визуально не ухудшит.",
+ "rollback": "`git checkout -- index.improved.html` или удалить файл `skills/variable-font-weight-hover.md` и соответствующий импорт из `index.improved.html`.",
+ "verify": "Открыть страницу в Chrome/Firefox, навести курсор на любой h1‑h3 – вес шрифта должен плавно перейти 500 → 700 за ≈ 0.25 с; проверить отсутствие JS‑ошибок в консоли.",
+ "priority_claim": "1 – быстрый, лёгкий апдейт, заметный визуальный эффект, без риска для SEO.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "METHOD: SKILL\n**Name:** variable-font-weight-hover\n**When to apply:** На всех заголовках h1‑h3 на премиальных лендингах, где нужен интерактивный типографический акцент без JavaScript.\n**Steps:**\n1. В `:root` объявить CSS‑переменную `--h-weight` со значением `500`.\n2. Добавить к заголовкам правило `font-weight: var(--h-weight); transition: font-weight 0.25s ease;`.\n3. В `:hover, :focus-visible` установить `--h-weight: 700;`.\n4. При отсутствии поддержки `transition` для `font-weight` (IE) будет обычный переход без анимации – приемлемо.\nSAFE CSS:\n```css\n:root{--h-weight:500}\nh1,h2,h3{font-weight:var(--h-weight);transition:font-weight .25s ease}\nh1:hover,h1:focus-visible,\nh2:hover,h2:focus-visible,\nh3:hover,h3:focus-visible{--h-weight:700}\n```\nSAFE JS: *(не требуется)*"
+ ],
+ "flags": []
+}

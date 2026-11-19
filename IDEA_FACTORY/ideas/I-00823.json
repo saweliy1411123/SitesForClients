@@ -1,0 +1,29 @@
+{
+ "id": "I-00823",
+ "round": 124,
+ "time": "2026-11-17 07:42:41",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "Schema.org LocalBusiness/Service JSON-LD с городом и услугой",
+ "knob": "В `<head>` перед `</head>` добавить `<script type=\"application/ld+json\">` с типом `Service` (provider: Person «Савелий», areaServed: «Пермь», serviceType: «Создание лендингов», offers с ценой из `.price-card`). Не LocalBusiness, т.к. нет адреса/часов — вымысел исключён.",
+ "skill": "",
+ "effect": "Расширенный сниппет в Яндексе/Google, выше шанс попадания в локальную выдачу «лендинг Пермь».",
+ "risk": "Несовпадение данных schema с видимым контентом — поисковая система может игнорировать разметку.",
+ "rollback": "`git checkout index.html` (файл не коммитить до проверки).",
+ "verify": "Вставить JSON в validator.schema.org — 0 ошибок; Rich Results Test на копии файла.",
+ "priority_claim": "1 — SEO-ядро темы, дешёво, без фейков (все данные уже на странице).",
+ "source_hint": "",
+ "site_request": "offers",
+ "category": "lever",
+ "variants": [
+  "В `<head>` перед `</head>` добавить `<script type=\"application/ld+json\">` с типом `Service` (provider: Person «Савелий», areaServed: «Пермь», serviceType: «Создание лендингов», offers с ценой из `.price-card`). Не LocalBusiness, т.к. нет адреса/часов — вымысел исключён."
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00963",
+ "round": 159,
+ "time": "2026-11-17 09:21:32",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Указать роль кнопки и ARIA‑метку для финального CTA‑ссылка",
+ "knob": "В секции `.final` (см. SITE_REQUEST «final») найти CTA‑ссылку `<a …>` и добавить `role=\"button\"` и `aria-label=\"Заказать бесплатное демо\"` (или текст CTA)",
+ "skill": "",
+ "effect": "Делает интерактивный элемент более понятным для скрин‑ридеров и клавиатурных пользователей, повышая доступность и конверсию",
+ "risk": "Нет функциональных конфликтов; единственное – необходимо корректно сформулировать метку",
+ "rollback": "Удалить добавленные атрибуты `role` и `aria-label`",
+ "verify": "Включить Chrome Accessibility tree или протестировать в NVDA/VoiceOver; элемент объявится как «button» с указанной меткой",
+ "priority_claim": "1 — критически важный для a11y, простая правка.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В секции `.final` (см. SITE_REQUEST «final») найти CTA‑ссылку `<a …>` и добавить `role=\"button\"` и `aria-label=\"Заказать бесплатное демо\"` (или текст CTA)"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00388",
+ "round": 58,
+ "time": "2026-11-17 04:29:01",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "First‑Contentful‑Paint & Time‑to‑Interactive Quick KPI",
+ "knob": "METHOD: В Chrome DevTools → Console выполнить:\n```js\n(() => {\nconst [fcp] = performance.getEntriesByName('first-contentful-paint');\nconst tti = performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart;\nconsole.log(`⏱ FCP: ${fcp ? Math.round(fcp.startTime) : 'N/A'} ms`);\nconsole.log(`⏱ Approx. TTI (DOMContentLoaded): ${tti} ms`);\n})();\n```",
+ "skill": "",
+ "effect": "Предоставляет мгновенные метрики — когда пользователь видит первый контент и когда DOM готов к интерактиву, позволяя оценить скорость загрузки без Lighthouse.",
+ "risk": "Нет (чтение API браузера).",
+ "rollback": "Не вносит изменений; просто закрыть консоль.",
+ "verify": "Откройте страницу, обновите (F5) и сразу выполните скрипт; в консоли появятся значения FCP и TTI, сравните их с целевыми (< 1000 ms FCP, < 1500 ms TTI).",
+ "priority_claim": "1 — скорость критична для SEO и удержания пользователей; быстрый KPI помогает решать, нужен ли дальнейший оптимизационны",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: В Chrome DevTools → Console выполнить:\n```js\n(() => {\nconst [fcp] = performance.getEntriesByName('first-contentful-paint');\nconst tti = performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart;\nconsole.log(`⏱ FCP: ${fcp ? Math.round(fcp.startTime) : 'N/A'} ms`);\nconsole.log(`⏱ Approx. TTI (DOMContentLoaded): ${tti} ms`);\n})();\n```"
+ ],
+ "flags": []
+}

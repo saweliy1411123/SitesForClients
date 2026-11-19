@@ -1,0 +1,26 @@
+{
+ "id": "I-00944",
+ "round": 154,
+ "time": "2026-11-17 09:07:29",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — neumorphic‑cta‑button",
+ "knob": "**Name:** `neumorphic-cta-button`\n**When to apply:** На всех ссылках‑кнопках CTA (`.btn-primary`, `.btn-secondary`) для создания мягкого, «поднятого» ощущения, характерного для премиального дизайна.\n**SAFE CSS:**\n```css\n.neumo-cta {\nbackground: var(--bg);\ncolor: var(--text);\nborder-radius: 10px;\npadding: 0.75em 1.5em;\nbox-shadow: 6px 6px 12px rgba(0,0,0,0.18),\n-6px -6px 12px rgba(255,255,255,0.12);\ntransition: box-shadow .18s ease, transform .18s ease;\n}\n.neumo-cta:focus-visible,\n.neumo-cta:hover {\nbox-shadow: 4px 4px 8px rgba(0,0,0,0.12),\n-4px -4px 8px rgba(255,255,255,0.08);\n}\n.neumo-cta:active {\ntransform: translateY(2px);\nbox-shadow: inset 4px 4px 8px rgba(0,0,0,0.2),\ninset -4px -4px 8px rgba(255,255,255,0.1);\n}\n```\n**SAFE JS:** _не требуется_",
+ "skill": "neumorphic-cta-button",
+ "effect": "Придаёт CTA «осязаемость» и повышает конверсию за счёт более заметного, приятного отклика на взаимодействие.",
+ "risk": "На устройствах с низким DPI эффект может выглядеть переэкранным; можно отключить через `@media (prefers-reduced-motion: reduce)`.",
+ "rollback": "`git checkout index.html && rm -rf SKILLS/neumorphic-cta-button.md`.",
+ "verify": "Нажать/навести на любую кнопку‑CTA – должна измениться тень и небольшое смещение; проверить в мобильном режиме (touch) – активный стиль срабатывает.",
+ "priority_claim": "3 — эстетический апгрейд, не критичен, но повышает восприятие качества.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `neumorphic-cta-button`\n**When to apply:** На всех ссылках‑кнопках CTA (`.btn-primary`, `.btn-secondary`) для создания мягкого, «поднятого» ощущения, характерного для премиального дизайна.\n**SAFE CSS:**\n```css\n.neumo-cta {\nbackground: var(--bg);\ncolor: var(--text);\nborder-radius: 10px;\npadding: 0.75em 1.5em;\nbox-shadow: 6px 6px 12px rgba(0,0,0,0.18),\n-6px -6px 12px rgba(255,255,255,0.12);\ntransition: box-shadow .18s ease, transform .18s ease;\n}\n.neumo-cta:focus-visible,\n.neumo-cta:hover {\nbox-shadow: 4px 4px 8px rgba(0,0,0,0.12),\n-4px -4px 8px rgba(255,255,255,0.08);\n}\n.neumo-cta:active {\ntransform: translateY(2px);\nbox-shadow: inset 4px 4px 8px rgba(0,0,0,0.2),\ninset -4px -4px 8px rgba(255,255,255,0.1);\n}\n```\n**SAFE JS:** _не требуется_"
+ ],
+ "flags": []
+}

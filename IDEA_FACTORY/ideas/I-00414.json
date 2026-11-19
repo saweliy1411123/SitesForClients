@@ -1,0 +1,26 @@
+{
+ "id": "I-00414",
+ "round": 61,
+ "time": "2026-11-17 04:38:31",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Связать CTA‑кнопки с пояснительным текстом через `aria-describedby`",
+ "knob": "добавить `id=\"hero-note\"` к `<p class=\"hero-note\">` (если нет) и добавить `aria-describedby=\"hero-note\"` ко всем CTA‑ссылкам `<a class=\"btn-primary …\">`",
+ "skill": "",
+ "effect": "Скрин‑ридеры читают пояснение к кнопке (что бесплатно, демо‑макет), повышая ясность и доступность действий",
+ "risk": "Нет функциональных рисков; может слегка увеличить объём атрибутов",
+ "rollback": "удалить `id` и `aria-describedby` из соответствующих элементов",
+ "verify": "в Chrome DevTools → Accessibility, выбрать CTA‑элемент – в свойствах должно отображаться `aria-describedby=\"hero-note\"`; протестировать в экранном чтеце, убедиться, что после чтения текста кнопки озвучивается описание",
+ "priority_claim": "2 – улучшает доступность без визуального изменения.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "добавить `id=\"hero-note\"` к `<p class=\"hero-note\">` (если нет) и добавить `aria-describedby=\"hero-note\"` ко всем CTA‑ссылкам `<a class=\"btn-primary …\">`"
+ ],
+ "flags": []
+}

@@ -1,0 +1,27 @@
+{
+ "id": "I-00051",
+ "round": 7,
+ "time": "2026-11-17 02:00:07",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавление атрибута lang",
+ "knob": "Добавить атрибут `lang=\"ru\"` к корневому элементу `<html>`",
+ "skill": "",
+ "effect": "Улучшение доступности и понимания языка сайта поисковыми системами",
+ "risk": "Нет рисков",
+ "rollback": "Удалить атрибут `lang` из тега `<html>`",
+ "verify": "Проверить наличие атрибута `lang` в теге `<html>` через DevTools",
+ "priority_claim": "1, потому что это простое и важное улучшение доступности",
+ "source_hint": "",
+ "site_request": "lang",
+ "category": "lever",
+ "variants": [
+  "Добавить атрибут `lang=\"ru\"` к корневому элементу `<html>`",
+  "добавить атрибут `lang=\"ru\"` к корневому элементу `<html>`"
+ ],
+ "flags": []
+}

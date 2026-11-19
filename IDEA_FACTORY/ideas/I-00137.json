@@ -1,0 +1,28 @@
+{
+ "id": "I-00137",
+ "round": 20,
+ "time": "2026-11-17 02:38:55",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime",
+  "lareper/glm-5.2-fast-preview"
+ ],
+ "mentions": 3,
+ "status": "NEW",
+ "title": "SKILL — «Trust-шапка первого экрана» (hero-trust-strip)",
+ "knob": "Название: **hero-trust-strip**. Когда применять: любой статический лендинг, где первый экран содержит h1 + подзаголовок + CTA, но нет компактной строки доказательств между подзаголовком и CTA. Шаги:\n1. Найти в hero элемент подзаголовка (класс `.sub` или аналог).\n2. Сразу после него вставить `<div class=\"trust-strip\" role=\"list\">` с 3 пунктами-фактами (город, срок, формат связи) — только реальные факты, без выдуманных цифр.\n3. Стили добавить через SAFE CSS ниже; JS не требуется.\n4. Проверить на 375px: полоса должна переноситься в колонку без горизонтального скролла.\nSAFE CSS:\n.trust-strip{display:flex;gap:14px;flex-wrap:wrap;margin:18px 0 6px;padding:0}\n.trust-strip span{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:inherit;opacity:.85;padding:8px 14px;border:1px solid rgba(255,255,255,.12);border-radius:999px;background:rgba(255,255,255,.04)}\n.trust-strip span::before{content:\"\";width:7px;height:7px;border-radius:50%;background:#8b5cf6;flex:none}\n@media (max-width:480px){.trust-strip{flex-direction:column;align-items:flex-start}}\n@media (prefers-reduced-motion: reduce){.trust-strip{transition:none}}",
+ "skill": "",
+ "effect": "посетитель за 2 секунды видит три ключевых факта оффера (Пермь · 2 дня · бесплатное демо), растёт доверие и доскролл до CTA.",
+ "risk": "дублирование фактов, уже написанных в .sub — текст пунктов нужно согласовать, чтобы не было повторов слово в слово.",
+ "rollback": "git checkout -- index.improved.html (или удалить вставленный div и блок CSS).",
+ "verify": "открыть копию index.improved.html на 375px и 1440px — полоса читаема, не сдвигает layout (CLS=0), скриншот до/после сравнить бок о бок.",
+ "priority_claim": "2 — заметный конверсионный выигрыш при нулевом риске, но ниже правок CTA/оффера.",
+ "source_hint": "",
+ "site_request": "hero-note",
+ "category": "skill",
+ "variants": [
+  "Название: **hero-trust-strip**. Когда применять: любой статический лендинг, где первый экран содержит h1 + подзаголовок + CTA, но нет компактной строки доказательств между подзаголовком и CTA. Шаги:\n1. Найти в hero элемент подзаголовка (класс `.sub` или аналог).\n2. Сразу после него вставить `<div class=\"trust-strip\" role=\"list\">` с 3 пунктами-фактами (город, срок, формат связи) — только реальные факты, без выдуманных цифр.\n3. Стили добавить через SAFE CSS ниже; JS не требуется.\n4. Проверить на 375px: полоса должна переноситься в колонку без горизонтального скролла.\nSAFE CSS:\n.trust-strip{display:flex;gap:14px;flex-wrap:wrap;margin:18px 0 6px;padding:0}\n.trust-strip span{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:inherit;opacity:.85;padding:8px 14px;border:1px solid rgba(255,255,255,.12);border-radius:999px;background:rgba(255,255,255,.04)}\n.trust-strip span::before{content:\"\";width:7px;height:7px;border-radius:50%;background:#8b5cf6;flex:none}\n@media (max-width:480px){.trust-strip{flex-direction:column;align-items:flex-start}}\n@media (prefers-reduced-motion: reduce){.trust-strip{transition:none}}"
+ ],
+ "flags": []
+}

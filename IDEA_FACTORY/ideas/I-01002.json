@@ -1,0 +1,26 @@
+{
+ "id": "I-01002",
+ "round": 1,
+ "time": "2026-11-17 17:15:52",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Rotating benefit badge — кратко о главном оффере в hero",
+ "knob": "Внутри `<header class=\"hero\">` сразу после `<h1 class=\"reveal\">` добавить `<div class=\"hero-offer\" aria-label=\"Ключевые выгоды\"></div>` и в CSS задать переменную `--offers` со списком преимуществ, анимацию `@keyframes rotateOffer` меняющую `content` через `attr(data-index)` / `counter`.",
+ "skill": "",
+ "effect": "Пользователь мгновенно видит 2‑3 чётких выгоды, повышая восприятие оффера и уменьшая «потерю» в первом экране.",
+ "risk": "Требует небольшого JS‑скрипта для переключения индекса; возможен конфликт с другими скриптами `lareper`.",
+ "rollback": "Удалить вставленный `<div class=\"hero-offer\">` и связанные CSS‑правила (git checkout index.html).",
+ "verify": "Открыть страницу, убедиться, что в hero появляется меняющийся текст каждые 4 сек., без ошибок в консоли.",
+ "priority_claim": "1 – ключевой элемент first‑fold, напрямую влияет на ясность оффера.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Внутри `<header class=\"hero\">` сразу после `<h1 class=\"reveal\">` добавить `<div class=\"hero-offer\" aria-label=\"Ключевые выгоды\"></div>` и в CSS задать переменную `--offers` со списком преимуществ, анимацию `@keyframes rotateOffer` меняющую `content` через `attr(data-index)` / `counter`."
+ ],
+ "flags": []
+}

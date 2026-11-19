@@ -1,0 +1,26 @@
+{
+ "id": "I-00659",
+ "round": 100,
+ "time": "2026-11-17 06:34:55",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Запись последовательности фокус‑элементов (Tab‑order) через консоль",
+ "knob": "Ввести в консоль скрипт, который при каждом событии `focus` сохраняет `document.activeElement` в массив и выводит его после N‑разов:\n```js\nlet order=[];window.addEventListener('focus',e=>order.push(e.target.outerHTML.slice(0,80)+'…'),true);\nwindow.addEventListener('keydown',e=>{if(e.key==='Tab' && order.length>=20){console.table(order);order=[]}});\n```",
+ "skill": "",
+ "effect": "быстро выявляет проблемы навигации клавиатурой — пропущенные ссылки, фокус‑ловушки, неправильный порядок, тем самым повышая доступность и потенциально конверсию пользователей, полагающихся на клавиатуру.",
+ "risk": "работает только в текущей вкладке; если страница динамически меняет DOM после загрузки, скрипт может не захватить новые элементы.",
+ "rollback": "перезагрузить страницу — слушатели исчезнут, массив очистится.",
+ "verify": "1) Открыть страницу, вставить скрипт в консоль. 2) Нажать Tab ~20 раз. 3) В консоли увидеть таблицу с последовательностью элементов; убедиться, что порядок соответствует логической структуре (nav → hero → CTA → контент).",
+ "priority_claim": "3 — чуть более трудоёмко, но критично для a11y и может влиять на конверсию у части аудитории.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Ввести в консоль скрипт, который при каждом событии `focus` сохраняет `document.activeElement` в массив и выводит его после N‑разов:\n```js\nlet order=[];window.addEventListener('focus',e=>order.push(e.target.outerHTML.slice(0,80)+'…'),true);\nwindow.addEventListener('keydown',e=>{if(e.key==='Tab' && order.length>=20){console.table(order);order=[]}});\n```"
+ ],
+ "flags": []
+}

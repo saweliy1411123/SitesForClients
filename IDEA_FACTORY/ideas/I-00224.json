@@ -1,0 +1,26 @@
+{
+ "id": "I-00224",
+ "round": 34,
+ "time": "2026-11-17 03:18:35",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — proof-counter-aria-live",
+ "knob": "\nname: proof-counter-aria-live\nwhen: при наличии анимированных числовых счётчиков в hero‑или секциях «доверие» (элементы `<em data-count=\"…\">`)\nsteps:\n- Обернуть каждый `<em data-count=\"…\">` в `<span class=\"proof-number\" role=\"status\" aria-live=\"polite\" aria-label=\"Количество довольных клиентов\">`.\n- Переместить числовое значение в атрибут `data-count` (оставить `0` в тексте).\n- Добавить CSS‑класс для стилизации счётчика.\n- Включить небольшую безопасную анимацию счётчика (см. SAFE JS).\nSAFE CSS:\n.proof-number{font-weight:600;color:var(--accent);transition:color .3s ease}\nSAFE JS:\n(()=>{const items=document.querySelectorAll('.proof-number[data-count]');items.forEach(el=>{const target=+el.dataset.count;let cur=0;const step=Math.ceil(target/60);const upd=()=>{cur=Math.min(cur+step,target);el.textContent=cur;if(cur<target)requestAnimationFrame(upd)};requestAnimationFrame(upd)});})();",
+ "skill": "",
+ "effect": "скрин‑ридеры озвучивают текущие значения, повышая доступность; анимация сохраняет визуальный эффект без потери семантики.",
+ "risk": "небольшая JS‑логика может не работать в очень старых браузерах (IE ≤ 11); в случае ошибки счётчики могут оставаться «0».",
+ "rollback": "`git checkout index.html` или удалить добавленные `<span>`‑обёртки, CSS‑правила и скрипт.",
+ "verify": "открыть страницу, включить режим «Screen Reader» в DevTools → Accessibility, убедиться, что счётчик объявляется; проверить, что цифры плавно растут до целевого значения.",
+ "priority_claim": "2 – высокий эффект для SEO/доступности при минимальном риске и лёгком откате.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "\nname: proof-counter-aria-live\nwhen: при наличии анимированных числовых счётчиков в hero‑или секциях «доверие» (элементы `<em data-count=\"…\">`)\nsteps:\n- Обернуть каждый `<em data-count=\"…\">` в `<span class=\"proof-number\" role=\"status\" aria-live=\"polite\" aria-label=\"Количество довольных клиентов\">`.\n- Переместить числовое значение в атрибут `data-count` (оставить `0` в тексте).\n- Добавить CSS‑класс для стилизации счётчика.\n- Включить небольшую безопасную анимацию счётчика (см. SAFE JS).\nSAFE CSS:\n.proof-number{font-weight:600;color:var(--accent);transition:color .3s ease}\nSAFE JS:\n(()=>{const items=document.querySelectorAll('.proof-number[data-count]');items.forEach(el=>{const target=+el.dataset.count;let cur=0;const step=Math.ceil(target/60);const upd=()=>{cur=Math.min(cur+step,target);el.textContent=cur;if(cur<target)requestAnimationFrame(upd)};requestAnimationFrame(upd)});})();"
+ ],
+ "flags": []
+}

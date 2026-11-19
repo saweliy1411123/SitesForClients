@@ -1,0 +1,26 @@
+{
+ "id": "I-00454",
+ "round": 68,
+ "time": "2026-11-17 04:59:30",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Предзагрузка DNS для часто используемых внешних доменов",
+ "knob": "в `<head>` добавить\n```html\n<link rel=\"dns-prefetch\" href=\"//vk.ru\">\n<link rel=\"dns-prefetch\" href=\"//t.me\">\n```",
+ "skill": "",
+ "effect": "Сокращает время DNS‑lookup при переходе по внешним ссылкам, ускоряя восприятие скорости сайта.",
+ "risk": "Практически нулевой; браузеры могут игнорировать, но это безопасно.",
+ "rollback": "Удалить две строки из `<head>`.",
+ "verify": "В Chrome DevTools → Network → DNS, перезагрузить страницу и убедиться, что запросы DNS к указанным доменам выполнены заранее (отмечены как “prefetched”).",
+ "priority_claim": "2 – небольшие усилия, ощутимый прирост скорости при кликах.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "в `<head>` добавить\n```html\n<link rel=\"dns-prefetch\" href=\"//vk.ru\">\n<link rel=\"dns-prefetch\" href=\"//t.me\">\n```"
+ ],
+ "flags": []
+}

@@ -1,0 +1,27 @@
+{
+ "id": "I-00621",
+ "round": 93,
+ "time": "2026-11-17 06:14:23",
+ "source": "lareper/deepseek-v4-pro",
+ "sources": [
+  "lareper/deepseek-v4-pro",
+  "lareper/deepseek-v4-pro-0813"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Метод «клик-трекинг по якорям» — проверка реальных путей к заявке",
+ "knob": "METHOD: (1) Открыть index.html в Chrome, F12 → Console. (2) Выполнить скрипт, который вешает слушатель на все клики по `a[href^=\"#\"]` и `a[href*=\"t.me\"]`:\n```js\ndocument.querySelectorAll('a[href^=\"#\"], a[href*=\"t.me\"]').forEach(a => {\na.addEventListener('click', () => {\nconsole.log('CLICK:', a.getAttribute('href'), '| from:', window.location.hash || 'top');\n});\n});\n```\n(3) Вручную пройти по всем CTA (hero, sticky, final, nav) и записать, откуда кликают. (4) Посмотреть в Console, какие якоря реально используются, а какие — нет (например, `#price` не кликают, если нет в nav). (5) Если какой-то путь не используется — это кандидат на удаление/переделку.",
+ "skill": "",
+ "effect": "За 5–10 минут видно, какие CTA работают, а какие — мёртвый груз; можно переставить акценты без деплоя.",
+ "risk": "Не учитывает скролл-поведение (пользователь может кликнуть, но не дойти до цели) — нужно дополнительно смотреть глубину скролла.",
+ "rollback": "Закрыть вкладку — скрипт не сохраняется.",
+ "verify": "До: убедиться, что в Console нет ошибок; после: проверить, что все 5–6 CTA реально кликаются и логируются.",
+ "priority_claim": "2 — полезно для конверсии, но требует ручного прохода.",
+ "source_hint": "",
+ "site_request": "btn-primary",
+ "category": "method",
+ "variants": [
+  "METHOD: (1) Открыть index.html в Chrome, F12 → Console. (2) Выполнить скрипт, который вешает слушатель на все клики по `a[href^=\"#\"]` и `a[href*=\"t.me\"]`:\n```js\ndocument.querySelectorAll('a[href^=\"#\"], a[href*=\"t.me\"]').forEach(a => {\na.addEventListener('click', () => {\nconsole.log('CLICK:', a.getAttribute('href'), '| from:', window.location.hash || 'top');\n});\n});\n```\n(3) Вручную пройти по всем CTA (hero, sticky, final, nav) и записать, откуда кликают. (4) Посмотреть в Console, какие якоря реально используются, а какие — нет (например, `#price` не кликают, если нет в nav). (5) Если какой-то путь не используется — это кандидат на удаление/переделку."
+ ],
+ "flags": []
+}

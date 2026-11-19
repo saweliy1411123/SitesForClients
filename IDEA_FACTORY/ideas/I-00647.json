@@ -1,0 +1,26 @@
+{
+ "id": "I-00647",
+ "round": 98,
+ "time": "2026-11-17 06:27:59",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — parallax‑scroll‑hero‑bg",
+ "knob": "**NAME:** parallax-scroll-hero-bg\n**WHEN TO APPLY:** В секции hero, где уже есть фон‑градиент и «blob»‑элементы, но нужен более глубокий визуальный эффект скролла.\n**STEPS:**\n1. Обернуть фоновые слои hero в контейнер `<div class=\"hero-parallax\">`.\n2. Добавить CSS‑переменную `--scroll-y` через небольший JS‑слушатель (не более 20 мс).\n3. Применить 3‑слойный трансформ: задний слой – медленнее, передний – быстрее.\n**SAFE CSS:**\n```css\n.hero-parallax {\nperspective: 800px;\noverflow: hidden;\n}\n.hero-parallax .bg-layer {\nposition: absolute;\ninset: 0;\nwill-change: transform;\n}\n.hero-parallax .bg-layer.layer-1 { transform: translateZ(-30px) scale(1.2); }\n.hero-parallax .bg-layer.layer-2 { transform: translateZ(-15px) scale(1.1); }\n.hero-parallax .bg-layer.layer-3 { transform: translateZ(0); }\n```\n**SAFE JS:**\n```js\ndocument.addEventListener('scroll', () => {\nconst y = window.scrollY;\ndocument.querySelectorAll('.hero-parallax .bg-layer').forEach((el,i)=>{\nconst speed = (i+1)*0.05;\nel.style.transform = `translateY(${y*speed}px)`;\n});\n});\n```",
+ "skill": "parallax-scroll-hero-bg",
+ "effect": "Создаёт ощущение глубины при прокрутке, усиливает «premium»‑впечатление и удерживает внимание в верхней части страницы → увеличение времени‑на‑странице (dwell time).",
+ "risk": "Небольшой JS‑слушатель может добавить ~0.5 ms нагрузки; на слабых устройствах может слегка дрожать, но эффект отключается в `prefers-reduced-motion`.",
+ "rollback": "Удалить `<style id=\"skill-parallax-hero\">` и `<script id=\"skill-parallax-hero-js\">` либо выполнить `git checkout HEAD -- index.improved.html`.",
+ "verify": "Прокрутить страницу, убедиться в плавном смещении фоновых слоёв; включить/выключить `prefers-reduced-motion` в DevTools → эффект исчезает.",
+ "priority_claim": "2 – повышает визуальный уровень без значительного кода, но требует небольшого JS.",
+ "source_hint": "",
+ "site_request": "hero",
+ "category": "skill",
+ "variants": [
+  "**NAME:** parallax-scroll-hero-bg\n**WHEN TO APPLY:** В секции hero, где уже есть фон‑градиент и «blob»‑элементы, но нужен более глубокий визуальный эффект скролла.\n**STEPS:**\n1. Обернуть фоновые слои hero в контейнер `<div class=\"hero-parallax\">`.\n2. Добавить CSS‑переменную `--scroll-y` через небольший JS‑слушатель (не более 20 мс).\n3. Применить 3‑слойный трансформ: задний слой – медленнее, передний – быстрее.\n**SAFE CSS:**\n```css\n.hero-parallax {\nperspective: 800px;\noverflow: hidden;\n}\n.hero-parallax .bg-layer {\nposition: absolute;\ninset: 0;\nwill-change: transform;\n}\n.hero-parallax .bg-layer.layer-1 { transform: translateZ(-30px) scale(1.2); }\n.hero-parallax .bg-layer.layer-2 { transform: translateZ(-15px) scale(1.1); }\n.hero-parallax .bg-layer.layer-3 { transform: translateZ(0); }\n```\n**SAFE JS:**\n```js\ndocument.addEventListener('scroll', () => {\nconst y = window.scrollY;\ndocument.querySelectorAll('.hero-parallax .bg-layer').forEach((el,i)=>{\nconst speed = (i+1)*0.05;\nel.style.transform = `translateY(${y*speed}px)`;\n});\n});\n```"
+ ],
+ "flags": []
+}

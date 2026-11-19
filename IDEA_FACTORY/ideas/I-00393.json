@@ -1,0 +1,26 @@
+{
+ "id": "I-00393",
+ "round": 59,
+ "time": "2026-11-17 04:32:05",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Критика текущей кучи идей",
+ "knob": "Обзор всех предложений I‑00273…I‑00392; выявить дубли (например, hero‑clarity‑boost, hero‑clarity‑fix, hero‑clarity‑boost), избыточные методы без измеримых KPI (exit‑intent, carousel, парраллкс‑анимации), предложения, требующие бекенда (click‑heatmap, exit‑intent, соц‑счётчики) и идеи, уже покрытые базовыми практиками (preconnect‑fonts, skip‑to‑content).",
+ "skill": "",
+ "effect": "Уменьшит шум в бэклоге, сосредоточит внимание на реально ценных улучшениях, ускорит процесс принятия решений.",
+ "risk": "Возможна пропущенная уникальная идея; требуется внимательность при удалении.",
+ "rollback": "Восстановить удалённые строки из git (`git checkout HEAD~1 -- index.html`).",
+ "verify": "Сгенерировать список уникальных идей (скриптом) и сравнить с оригиналом; убедиться, что оставшиеся покрывают все категории (SEO, A11y, Speed, Conversion).",
+ "priority_claim": "1 – критично для планирования дальнейших работ.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Обзор всех предложений I‑00273…I‑00392; выявить дубли (например, hero‑clarity‑boost, hero‑clarity‑fix, hero‑clarity‑boost), избыточные методы без измеримых KPI (exit‑intent, carousel, парраллкс‑анимации), предложения, требующие бекенда (click‑heatmap, exit‑intent, соц‑счётчики) и идеи, уже покрытые базовыми практиками (preconnect‑fonts, skip‑to‑content)."
+ ],
+ "flags": []
+}

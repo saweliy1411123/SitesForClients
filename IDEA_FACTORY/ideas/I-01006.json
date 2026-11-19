@@ -1,0 +1,26 @@
+{
+ "id": "I-01006",
+ "round": 1,
+ "time": "2026-11-17 17:16:45",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Карусель логотипов клиентов для доверия",
+ "knob": "Перед секцией `#faq` добавить `<section class=\"client-logos\"><div class=\"logo-track\"><img src=\"logo1.svg\" alt=\"Клиент 1\"><img src=\"logo2.svg\" alt=\"Клиент 2\">…</div></section>` и CSS `.client-logos{overflow:hidden;padding:2rem 0;background:#fafafa}.logo-track{display:flex;gap:2rem;animation:scroll 20s linear infinite}@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}} .client-logos img{height:40px;object-fit:contain}`.",
+ "skill": "",
+ "effect": "Показ реальных клиентов усиливает социальное доказательство, повышает доверие и конверсию.",
+ "risk": "Требуется собрать/оптимизировать логотипы; анимация может увеличить потребление CPU на слабых устройствах.",
+ "rollback": "Удалить HTML‑блок и CSS‑правила (git checkout HEAD -- path/to/file).",
+ "verify": "Проверить в браузере, что логотипы плавно скроллятся, не вызывают «jank», и что время загрузки не превышает 3 сек.",
+ "priority_claim": "2 – средний эффект, но требует подготовки графики.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Перед секцией `#faq` добавить `<section class=\"client-logos\"><div class=\"logo-track\"><img src=\"logo1.svg\" alt=\"Клиент 1\"><img src=\"logo2.svg\" alt=\"Клиент 2\">…</div></section>` и CSS `.client-logos{overflow:hidden;padding:2rem 0;background:#fafafa}.logo-track{display:flex;gap:2rem;animation:scroll 20s linear infinite}@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}} .client-logos img{height:40px;object-fit:contain}`."
+ ],
+ "flags": []
+}

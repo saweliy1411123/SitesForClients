@@ -1,0 +1,28 @@
+{
+ "id": "I-00895",
+ "round": 139,
+ "time": "2026-11-17 08:26:35",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — gradient-text-shimmer",
+ "knob": "\n**Name:** gradient-text-shimmer\n**When to apply:** На любом лендинге, где заголовок h1 содержит градиентный текст.\n**SAFE CSS:**\n```css\n.grad-text {\nbackground: linear-gradient(90deg, #8b5cf6, #34d399);\n-webkit-background-clip: text;\nbackground-clip: text;\ncolor: transparent;\nanimation: shimmer 5s infinite;\n}\n@keyframes shimmer {\n0% {\nbackground-position: 0 0;\n}\n100% {\nbackground-position: 100% 0;\n}\n}\n```\n**SAFE JS:** Нет",
+ "skill": "",
+ "effect": "Добавляет анимированный градиентный блеск к тексту заголовка h1, делая его более привлекательным и заметным.",
+ "risk": "Нет значительных рисков, но может потребоваться корректировка цвета градиента и анимации для соответствия дизайну сайта.",
+ "rollback": "Удалить добавленный CSS-код.",
+ "verify": "Проверить визуально, что градиентный блеск появился на заголовке h1 и анимация работает корректно.",
+ "priority_claim": "2, поскольку это улучшение визуального дизайна, но не критично для функциональности сайта.",
+ "source_hint": "",
+ "site_request": "hero",
+ "category": "skill",
+ "variants": [
+  "\n**Name:** gradient-text-shimmer\n**When to apply:** На любом лендинге, где заголовок h1 содержит градиентный текст.\n**SAFE CSS:**\n```css\n.grad-text {\nbackground: linear-gradient(90deg, #8b5cf6, #34d399);\n-webkit-background-clip: text;\nbackground-clip: text;\ncolor: transparent;\nanimation: shimmer 5s infinite;\n}\n@keyframes shimmer {\n0% {\nbackground-position: 0 0;\n}\n100% {\nbackground-position: 100% 0;\n}\n}\n```\n**SAFE JS:** Нет",
+  "\n**Name:** gradient-text-shimmer\n**When to apply:** На любом лендинге, где заголовок h1 содержит градиентный текст.\n**SAFE CSS:**\n```css\n.hero h1 {\nbackground: linear-gradient(90deg, #ff69b4, #ffe68a);\nbackground-clip: text;\n-webkit-background-clip: text;\n-webkit-text-fill-color: transparent;\n}\n```\n**SAFE JS:** (отсутствует)",
+  "\n**Name:** gradient-text-shimmer\n**When to apply:** На любом лендинге, где заголовок h1 содержит график или другие декоративные элементы.\n**SAFE CSS:**\n```css\n.hero h1 {\nbackground: linear-gradient(90deg, #fff, #fff);\nbackground-clip: text;\ncolor: transparent;\nanimation: shimmer 5s infinite;\n}\n@keyframes shimmer {\n0% {\nbackground-position: 0;\n}\n100% {\nbackground-position: 100%;\n}\n}\n```"
+ ],
+ "flags": []
+}

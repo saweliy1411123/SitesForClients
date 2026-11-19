@@ -1,0 +1,27 @@
+{
+ "id": "I-00771",
+ "round": 117,
+ "time": "2026-11-17 07:24:27",
+ "source": "lareper/glm-5.2-fast-preview",
+ "sources": [
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.2"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Локальный fallback-шрифт с font-display и метрически близким стеком против FOIT",
+ "knob": "В `<style>` к `body`/заголовкам добавить `font-family:'Manrope',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;` (если ещё нет) и убедиться, что Google Fonts URL содержит `display=swap` (снимок показывает, что содержит — тогда только стек fallback)",
+ "skill": "",
+ "effect": "Текст виден мгновенно системным шрифтом до загрузки Manrope — меньше «пустого» текста, лучше LCP и воспринимаемая скорость",
+ "risk": "Кратковременная подмена шрифта (FOUT) заметна как «мигание» — приемлемо против невидимого текста",
+ "rollback": "git checkout -- index.improved.html",
+ "verify": "DevTools → Network → throttling Slow 3G, перезагрузка: текст читаем сразу, не ждёт шрифта",
+ "priority_claim": "2 — дешёвая страховка скорости на слабой сети",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<style>` к `body`/заголовкам добавить `font-family:'Manrope',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;` (если ещё нет) и убедиться, что Google Fonts URL содержит `display=swap` (снимок показывает, что содержит — тогда только стек fallback)"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00394",
+ "round": 59,
+ "time": "2026-11-17 04:32:05",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Замена I‑0045 «Accessible CTA Buttons instead of anchor‑links» на более безопасный и семантичный вариант",
+ "knob": "Заменить все ссылки‑CTA `<a class=\"btn-primary …\" href=\"#contact\">…</a>` на `<button type=\"button\" class=\"btn-primary\" data-scroll-target=\"#contact\">…</button>` и добавить небольшую JS‑обёртку, которая при клике скроллит к target (`document.querySelector(target).scrollIntoView({behavior:'smooth'});`).",
+ "skill": "",
+ "effect": "Улучшит доступность (кнопка воспринимается скрин‑ридером как действие), устранит потенциальные проблемы с SEO‑индексацией (поисковые боты не воспринимают кнопку как ссылку), повысит консистентность UI.",
+ "risk": "Требует небольшого JS‑скрипта (≈30 Б) и может конфликтовать с существующим `onclick` в hero‑visual; необходимо убедиться, что стили `.btn-primary` работают с `<button>`.",
+ "rollback": "`git checkout -- index.html && git apply revert-cta.patch` (или просто откатить изменения в файле).",
+ "verify": "Открыть страницу, проверить, что Tab‑перемещение попадает на кнопку, скролл работает, а в DevTools → Accessibility кнопка имеет роль `button`.",
+ "priority_claim": "2 – высокое влияние на A11y и небольшие затраты.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Заменить все ссылки‑CTA `<a class=\"btn-primary …\" href=\"#contact\">…</a>` на `<button type=\"button\" class=\"btn-primary\" data-scroll-target=\"#contact\">…</button>` и добавить небольшую JS‑обёртку, которая при клике скроллит к target (`document.querySelector(target).scrollIntoView({behavior:'smooth'});`)."
+ ],
+ "flags": []
+}

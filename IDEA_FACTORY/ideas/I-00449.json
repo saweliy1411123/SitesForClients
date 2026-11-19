@@ -1,0 +1,26 @@
+{
+ "id": "I-00449",
+ "round": 67,
+ "time": "2026-11-17 04:56:40",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Демо‑карточки — CSS‑only carousel с автоплей и pause‑on‑hover",
+ "knob": "Обернуть текущие демо‑блоки в `<div class=\"demo-carousel\">`; добавить CSS‑правила: `.demo-carousel{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth}.demo-card{flex:0 0 80%;margin-right:1rem;scroll-snap-align:start;transition:transform .3s}.demo-carousel:hover{animation-play-state:paused}`; добавить небольшую keyframes‑анимацию `@keyframes carousel-scroll{0%{transform:translateX(0)}100%{transform:translateX(-calc(100% * N))}}` где N – кол‑во карточек, и применить её к контейнеру с `animation:carousel-scroll 20s linear infinite`.",
+ "skill": "",
+ "effect": "демонстрирует несколько концептов без прокрутки пользователем, повышает вовлечённость → увеличение среднего времени на странице ≈ 6 %",
+ "risk": "если количество карточек изменится, анимация потребует пересчёта N; небольшое увеличение CSS‑объёма (~1 KB)",
+ "rollback": "удалить контейнер `.demo-carousel` и связанные стили/анимацию; вернуть оригинальную разметку",
+ "verify": "открыть страницу, убедиться, что карточки скользят автоматически, останавливаются при наведении, работают на мобильных (touch‑scroll)",
+ "priority_claim": "2 – улучшает демонстрацию продукта, но требует точной настройки количества карточек",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Обернуть текущие демо‑блоки в `<div class=\"demo-carousel\">`; добавить CSS‑правила: `.demo-carousel{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth}.demo-card{flex:0 0 80%;margin-right:1rem;scroll-snap-align:start;transition:transform .3s}.demo-carousel:hover{animation-play-state:paused}`; добавить небольшую keyframes‑анимацию `@keyframes carousel-scroll{0%{transform:translateX(0)}100%{transform:translateX(-calc(100% * N))}}` где N – кол‑во карточек, и применить её к контейнеру с `animation:carousel-scroll 20s linear infinite`."
+ ],
+ "flags": []
+}

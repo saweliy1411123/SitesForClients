@@ -1,0 +1,29 @@
+{
+ "id": "I-00561",
+ "round": 84,
+ "time": "2026-11-17 05:45:57",
+ "source": "lareper/glm-5.3-prime",
+ "sources": [
+  "lareper/glm-5.3-prime",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3",
+  "lareper/glm-5.2"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "SKILL — 3D tilt-glass на карточках цены (perspective + rotateY + translateZ + блик)",
+ "knob": "SKILL — tilt-glass-price-card\nНазвание: tilt-glass-price-card\nКогда применять: на любом лендинге с карточками цены/оффера, где нужен «дорогой» вид без библиотек; работает на десктопе, отключается на тач и при prefers-reduced-motion.\nШаги:\n1. Найти контейнер карточек (здесь `.price-card`, L334).\n2. Вставить SAFE CSS в `<style>`.\n3. Вставить SAFE JS перед закрывающим `</body>` (без fetch/eval/innerHTML).\n4. Проверить hover мышью: карточка наклоняется к курсору, блик следует за ним; на тач — просто hover-подъём.\nSAFE CSS:\n```css\n.price-tilt-wrap{perspective:900px}\n.price-card{transform-style:preserve-3d;transition:transform .25s ease,box-shadow .25s ease;will-change:transform}\n.price-card:hover,.price-card:focus-within{box-shadow:0 34px 100px rgba(139,92,246,.35)}\n.price-card::after{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;\nbackground:radial-gradient(300px circle at var(--mx,50%) var(--my,0%),rgba(255,255,255,.12),transparent 60%);\nopacity:0;transition:opacity .25s ease}\n.price-card:hover::after,.price-card:focus-within::after{opacity:1}\n.price-card .flag,.price-card h3{transform:translateZ(24px)}\n.price-card .price{transform:translateZ(38px)}\n@media (max-width:768px){.price-card{transform:none!important}}\n@media (prefers-reduced-motion: reduce){.price-card{transition:none;transform:none!important}.price-card::after{display:none}}\n```\nSAFE JS:\n```js\ndocument.querySelectorAll('.price-card').forEach(function(card){\ncard.addEventListener('pointermove',function(e){\nif(e.pointerType!=='mouse')return;\nvar r=card.getBoundingClientRect();\nvar x=(e.clientX-r.left)/r.width, y=(e.clientY-r.top)/r.height;\ncard.style.setProperty('--mx',(x*100)+'%');\ncard.style.setProperty('--my',(y*100)+'%');\ncard.style.transform='rotateY('+((x-.5)*8)+'deg) rotateX('+((.5-y)*8)+'deg)';\n});\ncard.addEventListener('pointerleave',function(){card.style.transform='';});\n});\n```",
+ "skill": "tilt-glass-price-card",
+ "effect": "карточка цены воспринимается как премиальный интерактивный объект; глубина и блик усиливают внимание к офферу и CTA, повышая вовлечённость без внешних библиотек.",
+ "risk": "наклон может дёргаться при быстром курсоре и мешать чтению мелкого текста — амплитуда ограничена 8°, на тач и reduced-motion отключено.",
+ "rollback": "git checkout -- index.html (или удалить добавленные блоки CSS/JS из index.improved.html).",
+ "verify": "(1) Открыть index.improved.html, навести мышь на .price-card — плавный наклон ≤8° и блик за курсором. (2) Tab-навигация: focus-within даёт тот же эффект без движения мыши. (3) DevTools → iPhone 375px — transform:none, нет дрожания. (4) Emulate prefers-reduced-motion — анимации выключены. (5) Console — нет ошибок.",
+ "priority_claim": "2 — чисто премиальный визуал, влияет на восприятие, но не на смысл оффера; безопасно и дёшево.",
+ "source_hint": "",
+ "site_request": "price-card",
+ "category": "skill",
+ "variants": [
+  "SKILL — tilt-glass-price-card\nНазвание: tilt-glass-price-card\nКогда применять: на любом лендинге с карточками цены/оффера, где нужен «дорогой» вид без библиотек; работает на десктопе, отключается на тач и при prefers-reduced-motion.\nШаги:\n1. Найти контейнер карточек (здесь `.price-card`, L334).\n2. Вставить SAFE CSS в `<style>`.\n3. Вставить SAFE JS перед закрывающим `</body>` (без fetch/eval/innerHTML).\n4. Проверить hover мышью: карточка наклоняется к курсору, блик следует за ним; на тач — просто hover-подъём.\nSAFE CSS:\n```css\n.price-tilt-wrap{perspective:900px}\n.price-card{transform-style:preserve-3d;transition:transform .25s ease,box-shadow .25s ease;will-change:transform}\n.price-card:hover,.price-card:focus-within{box-shadow:0 34px 100px rgba(139,92,246,.35)}\n.price-card::after{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;\nbackground:radial-gradient(300px circle at var(--mx,50%) var(--my,0%),rgba(255,255,255,.12),transparent 60%);\nopacity:0;transition:opacity .25s ease}\n.price-card:hover::after,.price-card:focus-within::after{opacity:1}\n.price-card .flag,.price-card h3{transform:translateZ(24px)}\n.price-card .price{transform:translateZ(38px)}\n@media (max-width:768px){.price-card{transform:none!important}}\n@media (prefers-reduced-motion: reduce){.price-card{transition:none;transform:none!important}.price-card::after{display:none}}\n```\nSAFE JS:\n```js\ndocument.querySelectorAll('.price-card').forEach(function(card){\ncard.addEventListener('pointermove',function(e){\nif(e.pointerType!=='mouse')return;\nvar r=card.getBoundingClientRect();\nvar x=(e.clientX-r.left)/r.width, y=(e.clientY-r.top)/r.height;\ncard.style.setProperty('--mx',(x*100)+'%');\ncard.style.setProperty('--my',(y*100)+'%');\ncard.style.transform='rotateY('+((x-.5)*8)+'deg) rotateX('+((.5-y)*8)+'deg)';\n});\ncard.addEventListener('pointerleave',function(){card.style.transform='';});\n});\n```"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00584",
+ "round": 88,
+ "time": "2026-11-17 05:58:38",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "I-00603 Визуализировать «стоимость бездействия» в блоке боли через простой счётчик",
+ "knob": "После третьего `<h3>` в секции боли вставить\n```html\n<div class=\"cost-counter\" aria-live=\"polite\">\n<strong>Каждый день без сайта — ≈ <span id=\"lost-clients\">3</span> потенциальных клиента</strong>\n</div>\n<script>\n(function(){\nconst el=document.getElementById('lost-clients');\nlet n=3;\nsetInterval(()=>{ n+=1; el.textContent=n; },5000);\n})();\n</script>\n```",
+ "skill": "",
+ "effect": "Явная цифра усиливает чувство срочности → рост конверсии в CTA.",
+ "risk": "Добавление небольшого JS может слегка увеличить LCP; нужно убедиться, что скрипт лёгкий.",
+ "rollback": "Удалить блок `<div class=\"cost-counter\">…</div>` и `<script>`‑блок.",
+ "verify": "Открыть страницу, убедиться, что цифра увеличивается каждые 5 сек., проверить, что в DevTools → Performance → LCP не растёт более 100 мс.",
+ "priority_claim": "2 – умеренный UX‑эффект, лёгкая реализация.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "После третьего `<h3>` в секции боли вставить\n```html\n<div class=\"cost-counter\" aria-live=\"polite\">\n<strong>Каждый день без сайта — ≈ <span id=\"lost-clients\">3</span> потенциальных клиента</strong>\n</div>\n<script>\n(function(){\nconst el=document.getElementById('lost-clients');\nlet n=3;\nsetInterval(()=>{ n+=1; el.textContent=n; },5000);\n})();\n</script>\n```"
+ ],
+ "flags": []
+}

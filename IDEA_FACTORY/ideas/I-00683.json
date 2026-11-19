@@ -1,0 +1,26 @@
+{
+ "id": "I-00683",
+ "round": 105,
+ "time": "2026-11-17 06:49:15",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — glassy-nav-bar",
+ "knob": "**Name:** `glassy-nav-bar`\n**When to apply:** На любой лендинг с фиксированным верхним меню, где нужен премиальный «стеклянный» вид.\n**SAFE CSS:**\n```css\n/* glassy-nav-bar */\nnav.glassy {\nposition: sticky;\ntop: 0;\nz-index: 1000;\nbackdrop-filter: blur(12px) saturate(180%);\n-webkit-backdrop-filter: blur(12px) saturate(180%);\nbackground: rgba(255,255,255,0.12);\nborder-bottom: 1px solid rgba(255,255,255,0.18);\npadding: 0.5rem 1rem;\ndisplay: flex;\njustify-content: space-between;\nalign-items: center;\n}\nnav.glassy a {\ncolor: var(--blue);\ntext-decoration: none;\nfont-weight:600;\n}\nnav.glassy a:hover,\nnav.glassy a:focus-visible {\ncolor: var(--purple);\n}\n```\n**SAFE JS:** (не требуется)",
+ "skill": "",
+ "effect": "Повышает восприятие бренда как «премиального», улучшает визуальную иерархию и делает навигацию всегда доступной без дополнительного кода.",
+ "risk": "На старых браузерах (IE) backdrop‑filter не поддерживается → будет обычный полупрозрачный фон.",
+ "rollback": "`git checkout -- index.html` (удалить добавленные строки в `<nav>` и CSS)",
+ "verify": "Открыть страницу, прокрутить вниз – меню должно «прилипнуть» к верхней части и выглядеть полупрозрачным со стеклянным блёром; проверить в Chrome DevTools → Computed Styles → `backdrop-filter`.",
+ "priority_claim": "1 – Высокий визуальный и брендовый эффект при минимальном изменении кода, быстро проверяется.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `glassy-nav-bar`\n**When to apply:** На любой лендинг с фиксированным верхним меню, где нужен премиальный «стеклянный» вид.\n**SAFE CSS:**\n```css\n/* glassy-nav-bar */\nnav.glassy {\nposition: sticky;\ntop: 0;\nz-index: 1000;\nbackdrop-filter: blur(12px) saturate(180%);\n-webkit-backdrop-filter: blur(12px) saturate(180%);\nbackground: rgba(255,255,255,0.12);\nborder-bottom: 1px solid rgba(255,255,255,0.18);\npadding: 0.5rem 1rem;\ndisplay: flex;\njustify-content: space-between;\nalign-items: center;\n}\nnav.glassy a {\ncolor: var(--blue);\ntext-decoration: none;\nfont-weight:600;\n}\nnav.glassy a:hover,\nnav.glassy a:focus-visible {\ncolor: var(--purple);\n}\n```\n**SAFE JS:** (не требуется)"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00265",
+ "round": 40,
+ "time": "2026-11-17 03:35:14",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "FAQPage details",
+ "knob": "Секция FAQ (~L660–705): каждый вопрос оформить как `<details><summary>Вопрос</summary><p>Ответ</p></details>`",
+ "skill": "",
+ "effect": "Улучшение юзабилити и доступности секции FAQ",
+ "risk": "Риск изменения структуры секции FAQ",
+ "rollback": "git checkout HEAD -- index.html",
+ "verify": "Проверить корректность отображения и работы секции FAQ",
+ "priority_claim": "2",
+ "source_hint": "",
+ "site_request": "details",
+ "category": "lever",
+ "variants": [
+  "Секция FAQ (~L660–705): каждый вопрос оформить как `<details><summary>Вопрос</summary><p>Ответ</p></details>`"
+ ],
+ "flags": []
+}

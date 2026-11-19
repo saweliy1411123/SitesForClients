@@ -1,0 +1,29 @@
+{
+ "id": "I-00182",
+ "round": 28,
+ "time": "2026-11-17 03:01:18",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.3-prime",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "SKILL — Cursor Spotlight Glow (мягкое пятно света за курсором на hero)",
+ "knob": "SKILL — cursor-spotlight\n### Название\ncursor-spotlight\n### Когда применять\nЛюбой тёмный лендинг с hero-секцией; добавляет «дорогую» глубину без частиц и тяжёлых скриптов. Только desktop (pointer:fine).\n### Шаги\n1. Добавить CSS и JS ниже.\n2. JS вешает один listener на hero, обновляет CSS-переменные — без таймеров и fetch.\nSAFE CSS:\n.spotlight-host{position:relative}\n.spotlight-host::before{content:\"\";position:absolute;inset:0;pointer-events:none;z-index:1;background:radial-gradient(320px circle at var(--sx,50%) var(--sy,40%),rgba(139,92,246,.10),transparent 65%);opacity:0;transition:opacity .4s}\n.spotlight-host:hover::before{opacity:1}\n@media (prefers-reduced-motion:reduce){.spotlight-host::before{display:none}}\nSAFE JS:\nvar h=document.querySelector('.spotlight-host');\nif(h&&window.matchMedia('(pointer:fine)').matches){h.addEventListener('mousemove',function(e){var r=h.getBoundingClientRect();h.style.setProperty('--sx',(e.clientX-r.left)+'px');h.style.setProperty('--sy',(e.clientY-r.top)+'px');});}",
+ "skill": "",
+ "effect": "hero выглядит живым",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "SKILL — cursor-spotlight\n### Название\ncursor-spotlight\n### Когда применять\nЛюбой тёмный лендинг с hero-секцией; добавляет «дорогую» глубину без частиц и тяжёлых скриптов. Только desktop (pointer:fine).\n### Шаги\n1. Добавить CSS и JS ниже.\n2. JS вешает один listener на hero, обновляет CSS-переменные — без таймеров и fetch.\nSAFE CSS:\n.spotlight-host{position:relative}\n.spotlight-host::before{content:\"\";position:absolute;inset:0;pointer-events:none;z-index:1;background:radial-gradient(320px circle at var(--sx,50%) var(--sy,40%),rgba(139,92,246,.10),transparent 65%);opacity:0;transition:opacity .4s}\n.spotlight-host:hover::before{opacity:1}\n@media (prefers-reduced-motion:reduce){.spotlight-host::before{display:none}}\nSAFE JS:\nvar h=document.querySelector('.spotlight-host');\nif(h&&window.matchMedia('(pointer:fine)').matches){h.addEventListener('mousemove',function(e){var r=h.getBoundingClientRect();h.style.setProperty('--sx',(e.clientX-r.left)+'px');h.style.setProperty('--sy',(e.clientY-r.top)+'px');});}"
+ ],
+ "flags": []
+}

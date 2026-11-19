@@ -1,0 +1,26 @@
+{
+ "id": "I-00790",
+ "round": 120,
+ "time": "2026-11-17 07:32:26",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Offer‑summary badge — быстрый «2 дня / сайт / лиды» микроскопический блок в hero",
+ "knob": "Внутри `<header class=\"hero\">` сразу после `<h1>` добавить `<div class=\"offer-summary\"><span class=\"icon\">⏱️</span>2 дня&nbsp;&nbsp;<span class=\"icon\">🖥️</span>1 сайт&nbsp;&nbsp;<span class=\"icon\">📈</span>10 лидов</div>`; в CSS `.offer-summary{display:flex;gap:12px;font-size:clamp(14px,3vw,18px);color:#fff;margin-top:12px;align-items:center}` + небольшие стили для `.icon{font-size:1.2em}`.",
+ "skill": "",
+ "effect": "Мгновенно фиксирует выгоду, повышает ясность оффера → рост CTR на первой странице до 3 %",
+ "risk": "Добавление нового DOM‑элемента может слегка увеличить LCP (≈5 KB)",
+ "rollback": "`git checkout -- index.html` (или удалить добавленные строки вручную)",
+ "verify": "Открыть страницу, измерить LCP в Chrome DevTools → проверить, что блок виден и не перекрывает CTA; кликнуть по нему – ничего не происходит (чистый визуал)",
+ "priority_claim": "1 — прямо усиливает ключевое сообщение оффера, минимальные затраты",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Внутри `<header class=\"hero\">` сразу после `<h1>` добавить `<div class=\"offer-summary\"><span class=\"icon\">⏱️</span>2 дня&nbsp;&nbsp;<span class=\"icon\">🖥️</span>1 сайт&nbsp;&nbsp;<span class=\"icon\">📈</span>10 лидов</div>`; в CSS `.offer-summary{display:flex;gap:12px;font-size:clamp(14px,3vw,18px);color:#fff;margin-top:12px;align-items:center}` + небольшие стили для `.icon{font-size:1.2em}`."
+ ],
+ "flags": []
+}

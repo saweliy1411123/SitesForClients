@@ -1,0 +1,29 @@
+{
+ "id": "I-00084",
+ "round": 12,
+ "time": "2026-11-17 02:16:25",
+ "source": "lareper/glm-5.3-prime",
+ "sources": [
+  "lareper/glm-5.3-prime",
+  "lareper/glm-5.2",
+  "lareper/glm-5.3",
+  "lareper/glm-5.2-fast-preview"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "Секция FAQ — aria-связь summary/answer и закрытие открытых details при открытии нового",
+ "knob": "В секции FAQ (~L660–690) у каждого `<details>` добавить `name=\"faq\"` (HTML-атрибут exclusive accordion) и на `<summary>` добавить `aria-expanded` через 3 строки JS: `document.querySelectorAll('details[name=faq]').forEach(d=>d.addEventListener('toggle',()=>{d.querySelector('summary').setAttribute('aria-expanded',d.open)}))`. Дополнительно `summary{cursor:pointer}` и `summary::-webkit-details-marker{display:none}` только если уже стилизовано классом `.plus`.",
+ "skill": "",
+ "effect": "Скринридеры корректно объявляют состояние вопроса (открыт/закрыт); одновременное открытие всех ответов не «размывает» страницу — пользователь быстрее находит нужный ответ, меньше прокрутки на мобильном.",
+ "risk": "Атрибут `name` на `<details>` не поддерживается в старых Safari — деградация до обычного поведения, ничего не ломается.",
+ "rollback": "git checkout -- index.html (или восстановить блок FAQ из копии index.improved.html.bak).",
+ "verify": "Открыть FAQ, Tab до первого summary, Enter — проверить открытие; открыть второй вопрос — первый должен закрыться; в DevTools → Accessibility tree проверить role=button и aria-expanded.",
+ "priority_claim": "2 — нулевой риск, заметно для a11y и мобильного UX, но не двигает конверсию напрямую.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В секции FAQ (~L660–690) у каждого `<details>` добавить `name=\"faq\"` (HTML-атрибут exclusive accordion) и на `<summary>` добавить `aria-expanded` через 3 строки JS: `document.querySelectorAll('details[name=faq]').forEach(d=>d.addEventListener('toggle',()=>{d.querySelector('summary').setAttribute('aria-expanded',d.open)}))`. Дополнительно `summary{cursor:pointer}` и `summary::-webkit-details-marker{display:none}` только если уже стилизовано классом `.plus`."
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00395",
+ "round": 59,
+ "time": "2026-11-17 04:32:05",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Замена I‑0044 «Preconnect + font-display swap for Google Fonts» на полную оптимизацию шрифтов через `font-display: optio",
+ "knob": "1) В `<head>` заменить текущие `<link href=\"https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">` на `<link rel=\"preload\" href=\"fonts/Manrope-400.woff2\" as=\"font\" type=\"font/woff2\" crossorigin>` (и аналогично для остальных весов) + `<style>@font-face{font-family:'Manrope';src:url('fonts/Manrope-400.woff2') format('woff2');font-weight:400;font-display:optional;}</style>`.\n2) Добавить `rel=\"preconnect\"` к `https://fonts.gstatic.com` и `https://fonts.googleapis.com`.",
+ "skill": "",
+ "effect": "Уменьшит количество запросов к Google, ускорит First Contentful Paint (FCP) за счёт предзагрузки шрифтов, уменьшит блокирующее рендеринг время, улучшит метрику LCP.",
+ "risk": "Требует загрузки файлов шрифтов в проект (≈150 KB) и корректного пути; если файлы не найдены, текст будет отображаться системным шрифтом.",
+ "rollback": "Удалить добавленные `<link rel=\"preload\">` и `<style>`‑блок; восстановить оригинальный `<link href=\"https://fonts.googleapis.com/...\">`.",
+ "verify": "В Chrome DevTools → Network проверить, что шрифты загружаются как `preload` (status 200) и нет блокирующего CSS; измерить FCP до/после через Lighthouse.",
+ "priority_claim": "1 – значительное ускорение загрузки без изменения контента, быстрый ROI.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "1) В `<head>` заменить текущие `<link href=\"https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">` на `<link rel=\"preload\" href=\"fonts/Manrope-400.woff2\" as=\"font\" type=\"font/woff2\" crossorigin>` (и аналогично для остальных весов) + `<style>@font-face{font-family:'Manrope';src:url('fonts/Manrope-400.woff2') format('woff2');font-weight:400;font-display:optional;}</style>`.\n2) Добавить `rel=\"preconnect\"` к `https://fonts.gstatic.com` и `https://fonts.googleapis.com`."
+ ],
+ "flags": []
+}

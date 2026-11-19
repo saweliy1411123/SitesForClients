@@ -1,0 +1,27 @@
+{
+ "id": "I-00020",
+ "round": 4,
+ "time": "2026-11-17 01:50:26",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить JSON‑LD разметку FAQPage для секции FAQ",
+ "knob": "В конец `<body>` вставить `<script type=\"application/ld+json\">…</script>` со списком вопросов и ответов, взятых из текущих `<h3>`/`<p>` в секции FAQ.",
+ "skill": "",
+ "effect": "Улучшит видимость в поиске (Google покажет расширенный сниппет), повысит CTR и подтверждает экспертизу.",
+ "risk": "Если вопросы/ответы не совпадают с разметкой, может возникнуть предупреждение в Search Console.",
+ "rollback": "Удалить только добавленный `<script>`‑блок (git checkout -- index.html).",
+ "verify": "Открыть https://search.google.com/structured-data/testing-tool/u/0/ и проверить отсутствие ошибок; убедиться, что в результатах появляется блок FAQ.",
+ "priority_claim": "1 — высокий SEO‑выигрыш без изменений контента.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В конец `<body>` вставить `<script type=\"application/ld+json\">…</script>` со списком вопросов и ответов, взятых из текущих `<h3>`/`<p>` в секции FAQ.",
+  "В `<head>` сразу после остальных `<script type=\"application/ld+json\">` добавить блок:\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"FAQPage\",\n\"mainEntity\":[\n{\"@type\":\"Question\",\"name\":\"Как быстро будет готов сайт?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"За 2 дня после согласования ТЗ.\"}},\n{\"@type\":\"Question\",\"name\":\"Какая стоимость?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Одна фиксированная цена — 30 000 ₽, без скрытых платежей.\"}}\n/* добавить остальные вопросы из HTML‑разметки */\n]\n}\n</script>\n```"
+ ],
+ "flags": []
+}

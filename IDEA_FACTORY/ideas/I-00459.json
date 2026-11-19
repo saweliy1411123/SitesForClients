@@ -1,0 +1,26 @@
+{
+ "id": "I-00459",
+ "round": 68,
+ "time": "2026-11-17 05:00:24",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "rel=\"noopener noreferrer\" на всех внешних ссылках target=\"_blank\"",
+ "knob": "Ссылки на `https://t.me/TrainersDontPlays` (L705) и `https://vk.ru/trainersdontplays` (L707) — добавить `rel=\"noopener noreferrer\"` к каждому `<a target=\"_blank\">`.",
+ "skill": "",
+ "effect": "Устраняет утечку window.opener (безопасность) и убирает передачу реферера; плюс к аудиту Lighthouse Best Practices — выше доверие и балл.",
+ "risk": "Практически нулевой; потеря реферера в статистике мессенджеров.",
+ "rollback": "`git checkout -- index.html` (или удалить добавленный атрибут в копии).",
+ "verify": "Консоль: `[...document.querySelectorAll('a[target=\"_blank\"]')].filter(a=>!a.rel.includes('noopener'))` — до правки вывести список, после — пусто.",
+ "priority_claim": "1 — тривиальная правка, прямой пункт Lighthouse.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Ссылки на `https://t.me/TrainersDontPlays` (L705) и `https://vk.ru/trainersdontplays` (L707) — добавить `rel=\"noopener noreferrer\"` к каждому `<a target=\"_blank\">`."
+ ],
+ "flags": []
+}

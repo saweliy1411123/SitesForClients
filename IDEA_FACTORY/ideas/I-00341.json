@@ -1,0 +1,28 @@
+{
+ "id": "I-00341",
+ "round": 51,
+ "time": "2026-11-17 04:08:22",
+ "source": "localhost:8081/agent",
+ "sources": [
+  "localhost:8081/agent",
+  "localhost:8081/fast",
+  "localhost:8081/big_only"
+ ],
+ "mentions": 3,
+ "status": "NEW",
+ "title": "Проверка читаемости текста на фоне blob-градиентов через CSS-фильтр",
+ "knob": "METHOD: (1) Открыть index.html, DevTools → Console. (2) Выполнить: `document.body.insertAdjacentHTML('afterbegin','<style>.hero{filter:grayscale(1) contrast(1.2)}</style>')`. (3) Оценить контраст текста h1/p.sub без цветовых отвлекающих факторов. (4) Убрать фильтр, сравнить.",
+ "skill": "",
+ "effect": "Выявление проблем контраста, скрытых цветными градиентами, за 2 минуты",
+ "risk": "Искусственное обесцвечивание может показать ложные проблемы",
+ "rollback": "Обновить страницу (Ctrl+R)",
+ "verify": "2–3 минуты: визуальная проверка читаемости h1 и подзаголовка",
+ "priority_claim": "3 — полезно, но не критично; контраст уже проверен ранее",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: (1) Открыть index.html, DevTools → Console. (2) Выполнить: `document.body.insertAdjacentHTML('afterbegin','<style>.hero{filter:grayscale(1) contrast(1.2)}</style>')`. (3) Оценить контраст текста h1/p.sub без цветовых отвлекающих факторов. (4) Убрать фильтр, сравнить."
+ ],
+ "flags": []
+}

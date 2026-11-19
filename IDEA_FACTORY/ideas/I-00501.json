@@ -1,0 +1,28 @@
+{
+ "id": "I-00501",
+ "round": 75,
+ "time": "2026-11-17 05:21:00",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only",
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "SKILL — focus-ring-soft-glow (мягкое светящееся кольцо фокуса для всех интерактивных элементов)",
+ "knob": "Полное тело скилла:\n**Name:** `focus-ring-soft-glow`\n**When to apply:** На любом статическом лендинге с тёмным фоном и интерактивными элементами (ссылки, CTA, навигация), где стандартный outline плохо виден или выглядит резко.\n**Steps:**\n1. Найти все интерактивные элементы: `a`, `.btn-primary`, `.nav-links a`, элементы с `tabindex`.\n2. Добавить CSS-правила для `:focus-visible`, создающие мягкое свечение вместо стандартного outline.\n3. Использовать `box-shadow` с полупрозрачным цветом акцента (взять `--blue` или `#8b5cf6`), чтобы кольцо было заметно, но не агрессивно.\n4. Убедиться, что свечение не обрезается соседними элементами (проверить `overflow` у родительских контейнеров).\n5. Сохранить видимость фокуса для клавиатурной навигации, но скрыть для мыши (`:focus:not(:focus-visible)`).\nSAFE CSS:\n```css\na:focus-visible,\n.btn-primary:focus-visible,\n.nav-links a:focus-visible,\n[tabindex]:focus-visible {\noutline: none;\nbox-shadow: 0 0 0 3px rgba(139, 92, 246, 0.4), 0 0 20px rgba(139, 92, 246, 0.3);\nborder-radius: 8px;\n}\na:focus:not(:focus-visible),\n.btn-primary:focus:not(:focus-visible) {\noutline: none;\nbox-shadow: none;\n}\n```\nSAFE JS: (нет)",
+ "skill": "focus-ring-soft-glow",
+ "effect": "Улучшенная доступность для пользователей с клавиатуры — фокус виден, но не режет глаз; премиальный вид на тёмном фоне; соответствует WCAG 2.4.7 (Focus Visible).",
+ "risk": "Может конфликтовать с уже заданными стилями фокуса; нужно проверить, что свечение не перекрывает текст кнопки.",
+ "rollback": "Удалить добавленные CSS-правила из `index.improved.html`.",
+ "verify": "Открыть страницу, нажать Tab — увидеть мягкое фиолетовое свечение вокруг CTA и ссылок; кликнуть мышью — свечение не появляется.",
+ "priority_claim": "2 — важное улучшение доступности, но не критично для конверсии.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "Полное тело скилла:\n**Name:** `focus-ring-soft-glow`\n**When to apply:** На любом статическом лендинге с тёмным фоном и интерактивными элементами (ссылки, CTA, навигация), где стандартный outline плохо виден или выглядит резко.\n**Steps:**\n1. Найти все интерактивные элементы: `a`, `.btn-primary`, `.nav-links a`, элементы с `tabindex`.\n2. Добавить CSS-правила для `:focus-visible`, создающие мягкое свечение вместо стандартного outline.\n3. Использовать `box-shadow` с полупрозрачным цветом акцента (взять `--blue` или `#8b5cf6`), чтобы кольцо было заметно, но не агрессивно.\n4. Убедиться, что свечение не обрезается соседними элементами (проверить `overflow` у родительских контейнеров).\n5. Сохранить видимость фокуса для клавиатурной навигации, но скрыть для мыши (`:focus:not(:focus-visible)`).\nSAFE CSS:\n```css\na:focus-visible,\n.btn-primary:focus-visible,\n.nav-links a:focus-visible,\n[tabindex]:focus-visible {\noutline: none;\nbox-shadow: 0 0 0 3px rgba(139, 92, 246, 0.4), 0 0 20px rgba(139, 92, 246, 0.3);\nborder-radius: 8px;\n}\na:focus:not(:focus-visible),\n.btn-primary:focus:not(:focus-visible) {\noutline: none;\nbox-shadow: none;\n}\n```\nSAFE JS: (нет)",
+  "\n**Name:** `focus-ring-soft-glow`\n**When to apply:** На любом статическом лендинге, где есть интерактивные элементы.\n**SAFE CSS:**\n```css\n*:focus {\noutline: 2px solid #fff;\noutline-offset: 2px;\nbox-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);\ntransition: box-shadow 0.2s ease;\n}\n```\n**SAFE JS:** (нет)"
+ ],
+ "flags": []
+}

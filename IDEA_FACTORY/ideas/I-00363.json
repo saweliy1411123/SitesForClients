@@ -1,0 +1,26 @@
+{
+ "id": "I-00363",
+ "round": 54,
+ "time": "2026-11-17 04:16:58",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "JSON‑LD WebSite с SearchAction для Яндекса",
+ "knob": "В конец `<head>` добавить `<script type=\"application/ld+json\">` с объектом:\n```json\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"WebSite\",\n\"url\":\"https://saveliy.ru/\",\n\"potentialAction\":{\n\"@type\":\"SearchAction\",\n\"target\":\"https://yandex.ru/search/?text={search_term_string}\",\n\"query-input\":\"required name=search_term_string\"\n}\n}\n```",
+ "skill": "",
+ "effect": "Позволяет поисковикам понять, что сайт предлагает услугу «лендинги», улучшает отображение в результатах поиска (Rich Snippet)",
+ "risk": "Ошибочный JSON‑LD может вызвать предупреждения в валидаторе Rich Results",
+ "rollback": "`git checkout -- index.html` (удалить блок `<script type=\"application/ld+json\">`)",
+ "verify": "В консоли DevTools выполнить `JSON.parse(document.querySelector('script[type=\"application/ld+json\"]').textContent)` – должно вернуть объект без ошибок; в Google Rich Results Test (или Яндекс Веб‑мастер) убедиться в отсутствии ошибок",
+ "priority_claim": "2 – значительное SEO‑повышение, но менее критично, чем канонический URL",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В конец `<head>` добавить `<script type=\"application/ld+json\">` с объектом:\n```json\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"WebSite\",\n\"url\":\"https://saveliy.ru/\",\n\"potentialAction\":{\n\"@type\":\"SearchAction\",\n\"target\":\"https://yandex.ru/search/?text={search_term_string}\",\n\"query-input\":\"required name=search_term_string\"\n}\n}\n```"
+ ],
+ "flags": []
+}

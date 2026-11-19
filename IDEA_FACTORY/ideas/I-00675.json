@@ -1,0 +1,27 @@
+{
+ "id": "I-00675",
+ "round": 103,
+ "time": "2026-11-17 06:44:08",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить мета‑теги Twitter Card для соцсетей",
+ "knob": "В `<head>` добавить:\n```html\n<meta name=\"twitter:card\" content=\"summary_large_image\">\n<meta name=\"twitter:title\" content=\"Савелий — лендинги для бизнеса в Перми | за 2 дня\">\n<meta name=\"twitter:description\" content=\"Создаю быстрые лендинги, которые находят в Яндексе. Бесплатный демо‑макет.\">\n<meta name=\"twitter:image\" content=\"https://example.com/assets/og-image.jpg\">\n```",
+ "skill": "",
+ "effect": "При публикации ссылки в Twitter будет отображаться крупный превью‑картинка, повышая кликабельность",
+ "risk": "Нужно обеспечить доступность указанного изображения; отсутствие файла приведёт к пустому превью",
+ "rollback": "Удалить четыре `<meta>`‑тега (git checkout HEAD -- index.html)",
+ "verify": "Ввести URL в https://cards-dev.twitter.com/validator и убедиться в корректном отображении карточки",
+ "priority_claim": "2 – мало усилий, улучшает соц‑трафик",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<head>` добавить:\n```html\n<meta name=\"twitter:card\" content=\"summary_large_image\">\n<meta name=\"twitter:title\" content=\"Савелий — лендинги для бизнеса в Перми | за 2 дня\">\n<meta name=\"twitter:description\" content=\"Создаю быстрые лендинги, которые находят в Яндексе. Бесплатный демо‑макет.\">\n<meta name=\"twitter:image\" content=\"https://example.com/assets/og-image.jpg\">\n```",
+  "В <head> добавить:\n```html\n<meta name=\"twitter:card\" content=\"summary_large_image\">\n<meta name=\"twitter:title\" content=\"Сайт для вашего бизнеса за 2 дня — клиенты находят вас в Яндексе\">\n<meta name=\"twitter:description\" content=\"Быстрый лендинг за 2 дня, привлекающий клиентов из поиска.\">\n<meta name=\"twitter:image\" content=\"https://example.com/assets/og-image.jpg\">\n```"
+ ],
+ "flags": []
+}

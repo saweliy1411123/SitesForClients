@@ -1,0 +1,30 @@
+{
+ "id": "I-00548",
+ "round": 82,
+ "time": "2026-11-17 05:39:26",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.3-prime",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "Canonical + meta robots «index, follow» от явных дублей",
+ "knob": "В `<head>` (после og-тегов, ~L7–L13) добавить `<link rel=\"canonical\" href=\"https://<домен>/\">` и `<meta name=\"robots\" content=\"index, follow, max-image-preview:large\">`.",
+ "skill": "",
+ "effect": "Защита от дублей (www/без www, http/https, хостинг-превью-URL), склейка сигналов на один канонический адрес — чище выдача по запросу «лендинг Пермь за 2 дня».",
+ "risk": "Неверный canonical (опечатка в домене) может исключить страницу из индекса — требует решения владельца (подтвердить домен).",
+ "rollback": "Удалить две добавленные строки из `<head>`; либо `git checkout -- index.html`.",
+ "verify": "За 2 минуты: Ctrl+U → найти canonical; затем DevTools → Console → `document.querySelector('link[rel=canonical]')` не null и href начинается с https.",
+ "priority_claim": "2 — важно при публикации на хостинге с превью-URL, сейчас (локальный файл) эффект нулевой.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<head>` (после og-тегов, ~L7–L13) добавить `<link rel=\"canonical\" href=\"https://<домен>/\">` и `<meta name=\"robots\" content=\"index, follow, max-image-preview:large\">`.",
+  "в `<head>` (после og-тегов) добавить `<link rel=\"canonical\" href=\"https://<домен>/\">` и `<meta name=\"robots\" content=\"index, follow, max-image-preview:large\">`"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00434",
+ "round": 65,
+ "time": "2026-11-17 04:49:47",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Keyboard‑navigation flow audit (tab order & focus visibility)",
+ "knob": "METHOD: (1) Открыть страницу в Chrome → DevTools → Console; (2) Выполнить скрипт, который последовательно вызывает `element.focus()` для всех интерактивных элементов (`a`, `button`, `[role=\"button\"]`, `input`, `select`, `textarea`) и выводит в консоль их `tag`, `textContent` и `offsetTop`. (3) После выполнения проверить, что каждый элемент получает визуальный `focus-visible`‑outline (см. CSS‑правило `.focus-visible{outline:2px solid var(--blue)}`) и что фокус не «перепрыгивает» через секции.",
+ "skill": "",
+ "effect": "Быстрая проверка доступности навигации клавиатурой → улучшение UX для пользователей без мыши и повышение SEO‑оценки доступности.",
+ "risk": "Если на странице есть скрипты, меняющие фокус, они могут конфликтовать с тестовым скриптом (но только в локальном режиме).",
+ "rollback": "Удалить/закомментировать вставленный в консоль скрипт — изменения не сохраняются в файлах.",
+ "verify": "После запуска скрипта убедиться, что в консоли выведены все интерактивные элементы без пропусков и визуально наблюдать появление `focus-visible`‑outline на каждом элементе при табуляции.",
+ "priority_claim": "1 – доступность критична для конверсии и часто проверяется поисковыми системами.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: (1) Открыть страницу в Chrome → DevTools → Console; (2) Выполнить скрипт, который последовательно вызывает `element.focus()` для всех интерактивных элементов (`a`, `button`, `[role=\"button\"]`, `input`, `select`, `textarea`) и выводит в консоль их `tag`, `textContent` и `offsetTop`. (3) После выполнения проверить, что каждый элемент получает визуальный `focus-visible`‑outline (см. CSS‑правило `.focus-visible{outline:2px solid var(--blue)}`) и что фокус не «перепрыгивает» через секции."
+ ],
+ "flags": []
+}

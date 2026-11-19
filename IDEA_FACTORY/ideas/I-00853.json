@@ -1,0 +1,26 @@
+{
+ "id": "I-00853",
+ "round": 128,
+ "time": "2026-11-17 07:54:46",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Аудит тап-таргетов — все ли ссылки/CTA ≥44×44px на мобильном",
+ "knob": "METHOD: (1) Открыть index.html, F12 → Toggle device toolbar (375px). (2) В консоли выполнить: `[...document.querySelectorAll('a[href],summary')].filter(e=>{const r=e.getBoundingClientRect();return r.height<44||r.width<44}).forEach(e=>console.log(e.textContent.trim().slice(0,40), Math.round(e.getBoundingClientRect().width)+'x'+Math.round(e.getBoundingClientRect().height)))`. (3) Список элементов меньше 44px — кандидаты на увеличение padding. Особое внимание: nav-links (на мобильных скрыты — проверить десктоп), финальный CTA, ссылки в футере.",
+ "skill": "",
+ "effect": "Владелец видит, какие цели тапа пользователи промахиваются на телефоне (а большинство трафика — мобильный, L539), и чинит точечно.",
+ "risk": "Метод только измеряет — ложных срабатываний у декоративных ссылок-иконок без текста.",
+ "rollback": "Изменений в файле нет; закрыть вкладку с консолью.",
+ "verify": "Сам метод и есть проверка; занимает ~2 минуты.",
+ "priority_claim": "1 — мобильный трафик заявлен как основной, а тап-таргеты никогда не измерялись.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: (1) Открыть index.html, F12 → Toggle device toolbar (375px). (2) В консоли выполнить: `[...document.querySelectorAll('a[href],summary')].filter(e=>{const r=e.getBoundingClientRect();return r.height<44||r.width<44}).forEach(e=>console.log(e.textContent.trim().slice(0,40), Math.round(e.getBoundingClientRect().width)+'x'+Math.round(e.getBoundingClientRect().height)))`. (3) Список элементов меньше 44px — кандидаты на увеличение padding. Особое внимание: nav-links (на мобильных скрыты — проверить десктоп), финальный CTA, ссылки в футере."
+ ],
+ "flags": []
+}

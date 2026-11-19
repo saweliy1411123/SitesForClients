@@ -1,0 +1,26 @@
+{
+ "id": "I-00510",
+ "round": 77,
+ "time": "2026-11-17 05:25:12",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Premium gradient sweep on hero heading",
+ "knob": "**SKILL — premium-hero-gradient-sweep**\n**Name:** `premium-hero-gradient-sweep`\n**When to apply:** На главном hero‑заголовке, где нужен премиальный визуальный акцент.\n**SAFE CSS:**\n```css\n.hero h1 {\nposition: relative;\noverflow: hidden;\ncolor: transparent;\n-webkit-background-clip: text;\nbackground-clip: text;\nbackground-image: linear-gradient(120deg, var(--blue) 30%, var(--purple) 70%);\nbackground-size: 200% 100%;\nanimation: gradient-sweep 4s ease-in-out infinite;\n}\n@keyframes gradient-sweep {\n0%   { background-position: 200% 0; }\n50%  { background-position: 0 0; }\n100% { background-position: 200% 0; }\n}\n```\n**SAFE JS:** *(не требуется)*",
+ "skill": "premium-hero-gradient-sweep",
+ "effect": "Привлекает внимание к главному офферу, усиливает ощущение премиальности и повышает время‑взгляда (dwell time).",
+ "risk": "Может конфликтовать с пользовательскими темными/светлыми темами, если переменные `--blue`/`--purple` переопределены.",
+ "rollback": "`git checkout HEAD -- index.html` (или откатить изменения в файле стилей).",
+ "verify": "Открыть страницу, убедиться, что заголовок анимирован плавным градиентом, измерить время до полной отрисовки в Chrome DevTools → Performance (не должно превышать 100 ms).",
+ "priority_claim": "1 – высокий визуальный ROI при минимальном коде.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**SKILL — premium-hero-gradient-sweep**\n**Name:** `premium-hero-gradient-sweep`\n**When to apply:** На главном hero‑заголовке, где нужен премиальный визуальный акцент.\n**SAFE CSS:**\n```css\n.hero h1 {\nposition: relative;\noverflow: hidden;\ncolor: transparent;\n-webkit-background-clip: text;\nbackground-clip: text;\nbackground-image: linear-gradient(120deg, var(--blue) 30%, var(--purple) 70%);\nbackground-size: 200% 100%;\nanimation: gradient-sweep 4s ease-in-out infinite;\n}\n@keyframes gradient-sweep {\n0%   { background-position: 200% 0; }\n50%  { background-position: 0 0; }\n100% { background-position: 200% 0; }\n}\n```\n**SAFE JS:** *(не требуется)*"
+ ],
+ "flags": []
+}

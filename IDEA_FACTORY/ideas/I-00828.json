@@ -1,0 +1,27 @@
+{
+ "id": "I-00828",
+ "round": 125,
+ "time": "2026-11-17 07:45:25",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — scroll-progress-indicator",
+ "knob": "**Name:** `scroll-progress-indicator`\n**When to apply:** На любой одностраничной статической посадочной странице, где важно визуально подсказать пользователю, сколько контента осталось, повысить вовлечённость и удержание.\n**Steps:**\n1. В начало `<body>` добавить элемент `<div class=\"scroll-progress\"></div>`.\n2. В CSS‑файл (или в `<style>`) вставить правила из `SAFE CSS` ниже.\n3. В конец `<body>` добавить скрипт из `SAFE JS` ниже (можно разместить в отдельном файле `scroll-progress.js`).\n4. Проверить, что переменная `--grad` уже объявлена (используется в проекте). При её отсутствии добавить `--grad: #8b5cf6;`.\n**SAFE CSS:**\n```css\n.scroll-progress{\nposition:fixed;\ntop:0;\nleft:0;\nheight:4px;\nwidth:0;\nbackground:var(--grad);\nz-index:9999;\ntransition:width .1s linear;\n}\n```\n**SAFE JS:**\n```js\n(() => {\nconst bar = document.querySelector('.scroll-progress');\nif (!bar) return;\nconst doc = document.documentElement;\nconst set = () => {\nconst scroll = doc.scrollTop || document.body.scrollTop;\nconst height = doc.scrollHeight - doc.clientHeight;\nconst perc = (scroll / height) * 100;\nbar.style.width = perc + '%';\n};\nlet ticking = false;\nwindow.addEventListener('scroll', () => {\nif (!ticking) {\nwindow.requestAnimationFrame(() => {\nset();\nticking = false;\n});\nticking = true;\n}\n});\nset(); // init on load\n})();\n```",
+ "skill": "",
+ "effect": "Пользователь сразу видит прогресс чтения, что повышает восприятие «продуманного» сайта и может увеличить время на странице → рост конверсии на CTA.",
+ "risk": "Минимальный; небольшое увеличение количества запросов к JavaScript (меньше 1 KB).",
+ "rollback": "`git checkout -- index.html` (или удалить добавленный `<div>` и строки CSS/JS).",
+ "verify": "Открыть страницу в браузере, прокрутить вниз – индикатор должен плавно заполняться от 0 % до 100 %; проверить отсутствие ошибок в консоли.",
+ "priority_claim": "1 – быстрый, безопасный апдейт, сразу даёт визуальный сигнал пользователю и улучшает метрики вовлечённости.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `scroll-progress-indicator`\n**When to apply:** На любой одностраничной статической посадочной странице, где важно визуально подсказать пользователю, сколько контента осталось, повысить вовлечённость и удержание.\n**Steps:**\n1. В начало `<body>` добавить элемент `<div class=\"scroll-progress\"></div>`.\n2. В CSS‑файл (или в `<style>`) вставить правила из `SAFE CSS` ниже.\n3. В конец `<body>` добавить скрипт из `SAFE JS` ниже (можно разместить в отдельном файле `scroll-progress.js`).\n4. Проверить, что переменная `--grad` уже объявлена (используется в проекте). При её отсутствии добавить `--grad: #8b5cf6;`.\n**SAFE CSS:**\n```css\n.scroll-progress{\nposition:fixed;\ntop:0;\nleft:0;\nheight:4px;\nwidth:0;\nbackground:var(--grad);\nz-index:9999;\ntransition:width .1s linear;\n}\n```\n**SAFE JS:**\n```js\n(() => {\nconst bar = document.querySelector('.scroll-progress');\nif (!bar) return;\nconst doc = document.documentElement;\nconst set = () => {\nconst scroll = doc.scrollTop || document.body.scrollTop;\nconst height = doc.scrollHeight - doc.clientHeight;\nconst perc = (scroll / height) * 100;\nbar.style.width = perc + '%';\n};\nlet ticking = false;\nwindow.addEventListener('scroll', () => {\nif (!ticking) {\nwindow.requestAnimationFrame(() => {\nset();\nticking = false;\n});\nticking = true;\n}\n});\nset(); // init on load\n})();\n```",
+  "**Name:** `scroll-progress-indicator`\n**When to apply:** На любой одностраничный лендинг с вертикальной прокруткой, где пользователь проходит более 2‑х экранов контента.\n**Steps:**\n1. В `<body>` сразу после открывающего тега добавить `<div class=\"scroll-progress\" aria-hidden=\"true\"></div>`.\n2. В конец `<body>` добавить скрипт, который слушает событие `scroll`, вычисляет процент прокрутки (`(window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100`) и задаёт ширину `.scroll-progress` в % через `style.width`.\n3. При необходимости добавить атрибут `role=\"progressbar\"` и `aria-valuemin=\"0\" aria-valuemax=\"100\"` для доступности.\n**SAFE CSS:**\n```css\n.scroll-progress{\nposition:fixed;\ntop:0;\nleft:0;\nheight:4px;\nwidth:0;\nbackground:var(--blue);\nz-index:9999;\ntransition:width .2s ease-out;\n}\n```\n**SAFE JS:**\n```js\n(function(){\nconst bar=document.querySelector('.scroll-progress');\nif(!bar) return;\nconst update=()=>{\nconst scroll=window.scrollY+window.innerHeight;\nconst height=document.documentElement.scrollHeight;\nconst pct=Math.min(100,Math.round(scroll/height*100));\nbar.style.width=pct+'%';\nbar.setAttribute('aria-valuenow',pct);\n};\nwindow.addEventListener('scroll',update);\nupdate();\n})();\n```"
+ ],
+ "flags": []
+}

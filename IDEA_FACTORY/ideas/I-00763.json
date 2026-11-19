@@ -1,0 +1,29 @@
+{
+ "id": "I-00763",
+ "round": 117,
+ "time": "2026-11-17 07:23:13",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b",
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Добавить структурированные данные FAQ‑schema.org (FAQPage) в <head>",
+ "knob": "Вставить <script type=\"application/ld+json\"> с массивом вопросов‑ответов, взятых из секции FAQ (h2/h3). Убедиться, что каждый вопрос‑ответ уникален и соответствует visible тексту.",
+ "skill": "",
+ "effect": "Повышает видимость в поиске (расширенные сниппеты), улучшает SEO и доверие пользователей.",
+ "risk": "Требует точного соответствия контенту; если FAQ изменится, данные могут стать неактуальными.",
+ "rollback": "Удалить вставленный <script> (git checkout -- index.html) или закомментировать его.",
+ "verify": "Открыть Chrome DevTools → Console → `JSON.parse(document.querySelector('script[type=\"application/ld+json\"]').innerHTML)` и убедиться, что структура валидна; затем выполнить https://search.google.com/structured-data/testing-tool/ на локальном файле.",
+ "priority_claim": "1 – быстрый, без кода бэкенда, сразу улучшает CTR в SERP.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Вставить <script type=\"application/ld+json\"> с массивом вопросов‑ответов, взятых из секции FAQ (h2/h3). Убедиться, что каждый вопрос‑ответ уникален и соответствует visible тексту.",
+  "Вставить в `<head>` `<script type=\"application/ld+json\">` с массивом вопросов-ответов, взятых из секции FAQ (h2/h3).",
+  "В `<head>` добавить `<script type=\"application/ld+json\">` со структурой данных для FAQPage"
+ ],
+ "flags": []
+}

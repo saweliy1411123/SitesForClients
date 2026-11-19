@@ -1,0 +1,26 @@
+{
+ "id": "I-00391",
+ "round": 58,
+ "time": "2026-11-17 04:30:25",
+ "source": "lareper/glm-5.2-fast-preview",
+ "sources": [
+  "lareper/glm-5.2-fast-preview"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Метод «CSS-переключатель гипотез через :has/класс на html» (без JS, без URL)",
+ "knob": "METHOD: (1) В копии index.improved.html временно добавить в `<style>` блок: `html.hyp-a .hero-note{display:none} html.hyp-b .hero-note{font-size:15px}` — и переключать вариант, добавляя класс к `<html>` в DevTools: `document.documentElement.className='hyp-a'` / `'hyp-b'`. (2) Для каждой гипотезы (текст CTA, наличие hero-steps, цена с/без «фикс-цена») смотреть рендер на 360px и 1440px. (3) Скриншотить каждый вариант (Ctrl+Shift+P → Capture full size screenshot) и сравнивать пары. (4) После выбора варианта удалить тестовый CSS-блок, оставить только победителя. (5) П",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: (1) В копии index.improved.html временно добавить в `<style>` блок: `html.hyp-a .hero-note{display:none} html.hyp-b .hero-note{font-size:15px}` — и переключать вариант, добавляя класс к `<html>` в DevTools: `document.documentElement.className='hyp-a'` / `'hyp-b'`. (2) Для каждой гипотезы (текст CTA, наличие hero-steps, цена с/без «фикс-цена») смотреть рендер на 360px и 1440px. (3) Скриншотить каждый вариант (Ctrl+Shift+P → Capture full size screenshot) и сравнивать пары. (4) После выбора варианта удалить тестовый CSS-блок, оставить только победителя. (5) П"
+ ],
+ "flags": []
+}

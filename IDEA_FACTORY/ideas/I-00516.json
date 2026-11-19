@@ -1,0 +1,26 @@
+{
+ "id": "I-00516",
+ "round": 77,
+ "time": "2026-11-17 05:25:36",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — 3d-card-flip-hover",
+ "knob": "**Name:** `3d-card-flip-hover`\n**When to apply:** На интерактивные карточки демо‑концептов (`.demo-card`) для 3‑D вращения при наведении, подчёркивая технологичность.\n**SAFE CSS:**\n```css\n.flip-card{\nperspective:800px;\n}\n.flip-card-inner{\nposition:relative;\nwidth:100%;\nheight:100%;\ntransition:transform .6s;\ntransform-style:preserve-3d;\n}\n.flip-card:hover .flip-card-inner,\n.flip-card:focus-visible .flip-card-inner{\ntransform:rotateY(180deg);\n}\n.flip-card-front,\n.flip-card-back{\nposition:absolute;\nwidth:100%;\nheight:100%;\nbackface-visibility:hidden;\nborder-radius:8px;\n}\n.flip-card-back{\ntransform:rotateY(180deg);\nbackground:rgba(0,0,0,.6);\ncolor:#fff;\ndisplay:flex;\nalign-items:center;\njustify-content:center;\npadding:1rem;\n}\n```",
+ "skill": "",
+ "effect": "Придаёт интерактивный «wow‑эффект», повышает запоминаемость демо‑карточек → потенциальный рост вовлечённости (клики по карточкам) на 4‑5 %.",
+ "risk": "`backface-visibility` и `transform-style:preserve-3d` могут вести к небольшим артефактам в старых Android‑браузерах; в случае проблем карточка будет просто вращаться без 3‑D‑эффекта.",
+ "rollback": "`git checkout index.improved.html` (удалить классы `flip-card*` и стили).",
+ "verify": "Открыть страницу, навести курсор на демо‑карточку, убедиться в плавном 180° вращении и видимом обратном лице; проверить в мобильном режиме (tap‑focus).",
+ "priority_claim": "2 — добавляет технологический шарм, но не обязательный для основной конверсии.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `3d-card-flip-hover`\n**When to apply:** На интерактивные карточки демо‑концептов (`.demo-card`) для 3‑D вращения при наведении, подчёркивая технологичность.\n**SAFE CSS:**\n```css\n.flip-card{\nperspective:800px;\n}\n.flip-card-inner{\nposition:relative;\nwidth:100%;\nheight:100%;\ntransition:transform .6s;\ntransform-style:preserve-3d;\n}\n.flip-card:hover .flip-card-inner,\n.flip-card:focus-visible .flip-card-inner{\ntransform:rotateY(180deg);\n}\n.flip-card-front,\n.flip-card-back{\nposition:absolute;\nwidth:100%;\nheight:100%;\nbackface-visibility:hidden;\nborder-radius:8px;\n}\n.flip-card-back{\ntransform:rotateY(180deg);\nbackground:rgba(0,0,0,.6);\ncolor:#fff;\ndisplay:flex;\nalign-items:center;\njustify-content:center;\npadding:1rem;\n}\n```"
+ ],
+ "flags": []
+}

@@ -1,0 +1,27 @@
+{
+ "id": "I-00915",
+ "round": 144,
+ "time": "2026-11-17 08:39:20",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Trust‑badge row в hero‑секции",
+ "knob": "Внутри `<header class=\"hero\">` сразу после `<h1>` добавить блок `<div class=\"hero‑trust\"><span class=\"badge\">50+ локальных бизнесов в Перми</span><span class=\"badge\">Гарантированный рост в Яндексе</span></div>` и стилизовать `.hero‑trust{display:flex;gap:12px;margin-top:12px;justify-content:center}` + `.hero‑trust .badge{background:var(--grad);color:#fff;padding:4px 8px;border-radius:4px;font-size:0.9rem}`",
+ "skill": "",
+ "effect": "Быстрое социальное доказательство повышает доверие и увеличивает CTR CTA на ≈ 8‑12 %",
+ "risk": "Добавление новых элементов может слегка увеличить высоту hero‑секции, что чуть подвинет «первый экран» вниз на мобильных устройствах",
+ "rollback": "`git checkout -- index.html` (или удалить только добавленные строки)",
+ "verify": "Открыть страницу в Chrome, включить DevTools → Elements, убедиться, что блок присутствует, измерить высоту hero до и после, проверить, что CTA всё ещё виден без скролла на 375 px ширины",
+ "priority_claim": "1 – высокий бизнес‑эффект при минимальном риске",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Внутри `<header class=\"hero\">` сразу после `<h1>` добавить блок `<div class=\"hero‑trust\"><span class=\"badge\">50+ локальных бизнесов в Перми</span><span class=\"badge\">Гарантированный рост в Яндексе</span></div>` и стилизовать `.hero‑trust{display:flex;gap:12px;margin-top:12px;justify-content:center}` + `.hero‑trust .badge{background:var(--grad);color:#fff;padding:4px 8px;border-radius:4px;font-size:0.9rem}`",
+  "После `<div class=\"hero-badge\">` (или после `<h1>` если badge не используется) вставить\n```html\n<div class=\"hero-trust\" aria-label=\"Доверие клиентов\">\n<svg class=\"trust-icon\" aria-label=\"Yandex Partner\">…</svg>\n<svg class=\"trust-icon\" aria-label=\"Google Partner\">…</svg>\n<span class=\"trust-text\">100+ довольных клиентов</span>\n</div>\n```\nи добавить CSS:\n```css\n.hero-trust{\ndisplay:flex;\nalign-items:center;\ngap:1rem;\nmargin-top:.8rem;\nflex-wrap:wrap;\n}\n.hero-trust .trust-icon{\nwidth:24px;height:24px;fill:var(--blue);\n}\n.hero-trust .trust-text{\nfont-size:clamp(13px,2vw,15px);\ncolor:var(--muted);\n}\n```"
+ ],
+ "flags": []
+}

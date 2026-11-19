@@ -1,0 +1,26 @@
+{
+ "id": "I-00600",
+ "round": 90,
+ "time": "2026-11-17 06:04:10",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — premium-hero-gradient-sweep",
+ "knob": "\n**Name:** `premium-hero-gradient-sweep`\n**When to apply:** На любом статическом лендинге, где герой-секция является основным элементом привлечения внимания.\n**SAFE CSS:**\n```css\n.hero {\nbackground: linear-gradient(120deg, var(--grad) 0%, var(--grad) 100%);\nbackground-clip: text;\n-webkit-background-clip: text;\ncolor: transparent;\n}\n.hero h1 {\nfont-size: clamp(34px, 5vw, 58px);\nfont-weight: 700;\nline-height: 1.2;\nmargin: 0 auto 20px;\nmax-width: 780px;\ntext-align: center;\n}\n.hero h1 span {\nbackground: var(--grad);\n-webkit-background-clip: text;\n-webkit-text-fill-color: transparent;\n}\n```",
+ "skill": "",
+ "effect": "Улучшение визуальной привлекательности герой-секции за счет применения градиентного эффекта, что делает ее более заметной и привлекательной для пользователей.",
+ "risk": "Нет рисков, поскольку это чисто CSS-решение, не влияющее на функциональность страницы.",
+ "rollback": "Удалить добавленный CSS-код.",
+ "verify": "Проверить визуальную привлекательность герой-секции после применения градиентного эффекта.",
+ "priority_claim": "2, поскольку это улучшение визуальной составляющей, не влияющее на основную функциональность страницы.",
+ "source_hint": "",
+ "site_request": "hero",
+ "category": "skill",
+ "variants": [
+  "\n**Name:** `premium-hero-gradient-sweep`\n**When to apply:** На любом статическом лендинге, где герой-секция является основным элементом привлечения внимания.\n**SAFE CSS:**\n```css\n.hero {\nbackground: linear-gradient(120deg, var(--grad) 0%, var(--grad) 100%);\nbackground-clip: text;\n-webkit-background-clip: text;\ncolor: transparent;\n}\n.hero h1 {\nfont-size: clamp(34px, 5vw, 58px);\nfont-weight: 700;\nline-height: 1.2;\nmargin: 0 auto 20px;\nmax-width: 780px;\ntext-align: center;\n}\n.hero h1 span {\nbackground: var(--grad);\n-webkit-background-clip: text;\n-webkit-text-fill-color: transparent;\n}\n```"
+ ],
+ "flags": []
+}

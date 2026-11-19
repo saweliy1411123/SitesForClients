@@ -1,0 +1,26 @@
+{
+ "id": "I-00922",
+ "round": 145,
+ "time": "2026-11-17 08:42:03",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Создать `sitemap.xml` и связать его в `robots.txt`",
+ "knob": "В корне проекта добавить файл `sitemap.xml` со списком единственной страницы (`<url><loc>https://example.com/</loc><priority>1.0</priority></url>`); в `robots.txt` добавить строку `Sitemap: https://example.com/sitemap.xml` (если файл уже существует, дополнить)",
+ "skill": "",
+ "effect": "Упростит индексацию для поисковых роботов, потенциально ускорит появление в результатах поиска",
+ "risk": "Нужно убедиться, что URL корректный; в случае ошибки robots могут блокировать страницу",
+ "rollback": "Удалить `sitemap.xml` и строку из `robots.txt` или восстановить предыдущие версии через git",
+ "verify": "В браузере открыть `https://example.com/sitemap.xml` и убедиться в корректном XML; в Google Search Console проверить статус Sitemap (можно быстро через “URL Inspection”)",
+ "priority_claim": "2 – небольшие файлы, но важны для SEO",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В корне проекта добавить файл `sitemap.xml` со списком единственной страницы (`<url><loc>https://example.com/</loc><priority>1.0</priority></url>`); в `robots.txt` добавить строку `Sitemap: https://example.com/sitemap.xml` (если файл уже существует, дополнить)"
+ ],
+ "flags": []
+}

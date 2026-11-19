@@ -1,0 +1,29 @@
+{
+ "id": "I-00299",
+ "round": 45,
+ "time": "2026-11-17 03:49:26",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.3-prime",
+  "lareper/glm-5.3",
+  "lareper/glm-5.2-fast-preview"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "Замена — «Проверка контраста CTA и текста на фоне blob-градиентов» (вместо отклонённого typewriter)",
+ "knob": "METHOD: (1) Открыть index.html, DevTools → Rendering → включить «Emulate CSS media: prefers-reduced-motion» не нужно — вместо этого: Ctrl+Shift+P → «",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: (1) Открыть index.html, DevTools → Rendering → включить «Emulate CSS media: prefers-reduced-motion» не нужно — вместо этого: Ctrl+Shift+P → «"
+ ],
+ "flags": []
+}

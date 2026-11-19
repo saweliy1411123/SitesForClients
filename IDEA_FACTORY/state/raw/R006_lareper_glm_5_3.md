@@ -1,0 +1,21 @@
+# lareper/glm-5.3  2026-11-17 01:58:50
+duration=57.5 error=- attempts=1
+
+IDEA: SKILL — «Sticky-CTA бар с появлением при прокрутке» (переносимый конверсионный скилл)
+KNOB: Название: **Sticky Scroll CTA**. Когда применять: любой статический лендинг, где главный CTA находится в hero и в финале, а между ними — длинная прокрутка (цена, FAQ, шаги); пользователь на середине страницы «теряет» кнопку. Шаги: 1) В конец `<body>` добавить `<div class="sticky-cta"><a href="#contact" class="sticky-cta__btn">Сделать демо — бесплатно</a></div>` (href — на существующий якорь финального CTA/контактов). 2) Добавить SAFE CSS ниже. 3) Добавить SAFE JS ниже — бар появляется только когда hero-CTA ушёл из вьюпорта и скрывается у финального CTA (не дублирует его). 4) Проверить на 375px: бар не перекрывает контент, добавить `padding-bottom` на body при показе. 5) Проверить Tab-порядок: кнопка в баре должна быть последней в фокусе — если мешает, добавить `tabindex="-1"` до появления.
+
+SAFE CSS:
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:999;display:flex;justify-content:center;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:linear-gradient(to top,rgba(255,255,255,.96),rgba(255,255,255,.7));backdrop-filter:blur(10px);transform:translateY(110%);transition:transform .35s cubic-bezier(.2,.8,.2,1);pointer-events:none}
+.sticky-cta.is-visible{transform:translateY(0);pointer-events:auto}
+.sticky-cta__btn{display:inline-block;padding:14px 28px;border-radius:12px;background:#8b5cf6;color:#fff;font-weight:700;text-decoration:none;box-shadow:0 8px 24px rgba(139,92,246,.35);transition:transform .2s,box-shadow .2s}
+.sticky-cta__btn:hover,.sticky-cta__btn:focus-visible{transform:translateY(-2px);box-shadow:0 12px 32px rgba(139,92,246,.45);outline:3px solid #8b5cf6;outline-offset:3px}
+@media (prefers-reduced-motion: reduce){.sticky-cta{transition:none}}
+
+SAFE JS:
+(function(){var bar=document.querySelector('.sticky-cta');if(!bar)return;var heroCta=document.querySelector('.hero .btn-primary, h1');var finalCta=document.querySelector('.final, #contact');function tick(){var r1=heroCta?heroCta.getBoundingClientRect():{bottom:0};var r2=finalCta?finalCta.getBoundingClientRect():{top:Infinity};var show=r1.bottom<0&&r2.top>window.innerHeight;bar.classList.toggle('is-visible',show);}window.addEventListener('scroll',tick,{passive:true});tick();})();
+
+EFFECT: CTA всегда в зоне большого пальца на мобильном; рост переходов к заявке со средних секций (цена/FAQ) — обычно +10–30% кликов по CTA без изменения контента.
+RISK: бар может перекрыть нижний контент на маленьких экранах — нужен отступ и проверка на 375px.
+ROLLBACK: удалить добавленный блок `<div class="sticky-cta">`, CSS и JS из копии; оригинал не трогается (git checkout -- index.html).
+VERIFY: открыть копию, прокрутить до секции цены — бар появляется; долистать до финального CTA — исчезает; Tab — фокус виден; Lighthouse mobile не падает по CLS.
+PRIORITY: 1 — самый дешёвый по трудозатратам конверсионный выигрыш для лендинга с длинной прок

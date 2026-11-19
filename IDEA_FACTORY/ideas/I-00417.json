@@ -1,0 +1,29 @@
+{
+ "id": "I-00417",
+ "round": 62,
+ "time": "2026-11-17 04:41:03",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "SKILL — magnetic-cta-pulse (премиальный CTA: магнитный hover + мягкий пульс, только для главного действия)",
+ "knob": "SKILL — magnetic-cta-pulse\nНазвание: magnetic-cta-pulse\nКогда применять: на любом статическом лендинге, где главный CTA — ссылка `.btn-primary` (или аналог), и нужно поднять кликабельность без агрессии: тонкое «магнитное» притяжение курсора и очень медленный пульс тени, который останавливается при prefers-reduced-motion.\nШаги:\n1. Найти главный CTA (на этом сайте: L462, L657, L705, L736 — `.btn-primary`).\n2. Добавить класс `magnet-pulse` только к первому экрану и финальному CTA (не ко всем — иначе эффект обесценивается).\n3. Вставить SAFE CSS в конец существующего `<style>`.\n4. Вставить SAFE JS перед `</body>` — он двигает кнопку на ±4px за курсором в радиусе 60px и возвращает её на место.\n5. Проверить на мобильном: transform через JS не срабатывает (нет mousemove) — остаётся только пульс.\n6. A/B: копия файла `index-mp.html` с классом, оригинал без — сравнить клики за 3–5 дней.\nSAFE CSS:\n```css\n.magnet-pulse{position:relative;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s}\n.magnet-pulse::after{content:'';position:absolute;inset:0;border-radius:inherit;box-shadow:0 0 0 0 rgba(139,92,246,.45);animation:mp-pulse 2.8s ease-out infinite;pointer-events:none}\n@keyframes mp-pulse{0%{box-shadow:0 0 0 0 rgba(139,92,246,.40)}70%{box-shadow:0 0 0 14px rgba(139,92,246,0)}100%{box-shadow:0 0 0 0 rgba(139,92,246,0)}}\n@media (prefers-reduced-motion: reduce){.magnet-pulse::after{animation:none}.magnet-pulse{transition:none}}\n```\nSAFE JS:\n```js\n(function(){\nif(matchMedia('(prefers-reduced-motion: reduce)').matches)return;\nvar b=document.querySelector('.hero .magnet-pulse');if(!b)return;\nvar r=null;\nb.addEventListener('mousemove',function(e){\nr=b.getBoundingClientRect();\nvar x=(e.clientX-r.left-r.width/2)/r.width, y=(e.clientY-r.top-r.height/2)/r.height;\nb.style.transform='translate('+x*8+'px,'+y*6+'px)';\n});\nb.addEventListener('mouseleave',function(){b.style.transform='';});\n})();\n```",
+ "skill": "",
+ "effect": "главный CTA заметнее на фоне других кнопок; магнитный hover даёт «дорогое» ощущение уровня студийных лендингов; ожидаемый прирост кликов по hero-CTA 5–15%.",
+ "risk": "пульс может раздражать при долгом чтении первого экрана — смягчено медленным циклом 2.8s и reduced-motion.",
+ "rollback": "`git checkout -- index.improved.html` (или удалить класс `magnet-pulse` и два вставленных блока).",
+ "verify": "(1) Открыть копию, навести курсор на hero-CTA — кнопка смещается за курсором и возвращается. (2) DevTools → Rendering → Emulate prefers-reduced-motion: reduce — пульс и смещение отключены. (3) Tab до кнопки — фокус-стили не сломаны.",
+ "priority_claim": "2 — заметный конверсионный эффект при нулевом риске для контента, но ниже структурных правок (FAQ, шаги).",
+ "source_hint": "",
+ "site_request": "hero",
+ "category": "skill",
+ "variants": [
+  "SKILL — magnetic-cta-pulse\nНазвание: magnetic-cta-pulse\nКогда применять: на любом статическом лендинге, где главный CTA — ссылка `.btn-primary` (или аналог), и нужно поднять кликабельность без агрессии: тонкое «магнитное» притяжение курсора и очень медленный пульс тени, который останавливается при prefers-reduced-motion.\nШаги:\n1. Найти главный CTA (на этом сайте: L462, L657, L705, L736 — `.btn-primary`).\n2. Добавить класс `magnet-pulse` только к первому экрану и финальному CTA (не ко всем — иначе эффект обесценивается).\n3. Вставить SAFE CSS в конец существующего `<style>`.\n4. Вставить SAFE JS перед `</body>` — он двигает кнопку на ±4px за курсором в радиусе 60px и возвращает её на место.\n5. Проверить на мобильном: transform через JS не срабатывает (нет mousemove) — остаётся только пульс.\n6. A/B: копия файла `index-mp.html` с классом, оригинал без — сравнить клики за 3–5 дней.\nSAFE CSS:\n```css\n.magnet-pulse{position:relative;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s}\n.magnet-pulse::after{content:'';position:absolute;inset:0;border-radius:inherit;box-shadow:0 0 0 0 rgba(139,92,246,.45);animation:mp-pulse 2.8s ease-out infinite;pointer-events:none}\n@keyframes mp-pulse{0%{box-shadow:0 0 0 0 rgba(139,92,246,.40)}70%{box-shadow:0 0 0 14px rgba(139,92,246,0)}100%{box-shadow:0 0 0 0 rgba(139,92,246,0)}}\n@media (prefers-reduced-motion: reduce){.magnet-pulse::after{animation:none}.magnet-pulse{transition:none}}\n```\nSAFE JS:\n```js\n(function(){\nif(matchMedia('(prefers-reduced-motion: reduce)').matches)return;\nvar b=document.querySelector('.hero .magnet-pulse');if(!b)return;\nvar r=null;\nb.addEventListener('mousemove',function(e){\nr=b.getBoundingClientRect();\nvar x=(e.clientX-r.left-r.width/2)/r.width, y=(e.clientY-r.top-r.height/2)/r.height;\nb.style.transform='translate('+x*8+'px,'+y*6+'px)';\n});\nb.addEventListener('mouseleave',function(){b.style.transform='';});\n})();\n```"
+ ],
+ "flags": []
+}

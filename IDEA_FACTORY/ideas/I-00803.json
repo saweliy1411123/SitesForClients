@@ -1,0 +1,27 @@
+{
+ "id": "I-00803",
+ "round": 121,
+ "time": "2026-11-17 07:35:42",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Метод «тепловая карта кликов» через консольный логгер на локальной копии",
+ "knob": "METHOD: (1) Открыть index.html, в консоли выполнить: `const m={};document.addEventListener('click',e=>{const s=e.target.closest('a,summary,button');const k=s?(s.textContent.trim().slice(0,40)||s.tagName):e.target.tagName;m[k]=(m[k]||0)+1;console.table(m)});` (2) Прокликать страницу как типичный посетитель: скролл, FAQ, CTA, якоря. (3) Через 2 минуты посмотреть таблицу: какие CTA кликают, какие зоны «пустые». (4) Если финальный CTA набирает меньше кликов, чем якоря — усилить его микрокопию (см. I-00708/00731).",
+ "skill": "",
+ "effect": "За 3–5 минут видно реальный путь к заявке и «мёртвые» зоны без аналитики и внешних сервисов.",
+ "risk": "Самотестирование ≠ поведение реальных пользователей, результаты иллюстративные.",
+ "rollback": "Перезагрузка страницы (F5) — скрипт живёт только в консоли.",
+ "verify": "Сразу видно, что таблица заполняется и `#contact`-CTA кликается до цели.",
+ "priority_claim": "2 — полезно, но требует честной имитации поведения.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: (1) Открыть index.html, в консоли выполнить: `const m={};document.addEventListener('click',e=>{const s=e.target.closest('a,summary,button');const k=s?(s.textContent.trim().slice(0,40)||s.tagName):e.target.tagName;m[k]=(m[k]||0)+1;console.table(m)});` (2) Прокликать страницу как типичный посетитель: скролл, FAQ, CTA, якоря. (3) Через 2 минуты посмотреть таблицу: какие CTA кликают, какие зоны «пустые». (4) Если финальный CTA набирает меньше кликов, чем якоря — усилить его микрокопию (см. I-00708/00731)."
+ ],
+ "flags": []
+}

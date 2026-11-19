@@ -1,0 +1,26 @@
+{
+ "id": "I-00736",
+ "round": 113,
+ "time": "2026-11-17 07:12:15",
+ "source": "lareper/glm-5.2-fast-preview",
+ "sources": [
+  "lareper/glm-5.2-fast-preview"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Мобильное меню-бургер — навигация сейчас полностью скрыта на <720px",
+ "knob": "В `@media(max-width:720px)` (L90) `.nav-links{display:none}` — заменить на кнопку-бургер в хедере: `<button class=\"nav-toggle\" aria-expanded=\"false\" aria-controls=\"nav-links\" aria-label=\"Меню\">` + выпадающая вертикальная панель `.nav-links` (position:absolute, фон как у хедера, ссылки крупнее 44px тап-таргет). JS: toggle класса `open` + `aria-expanded`, закрытие по клику по ссылке-якорю.",
+ "skill": "",
+ "effect": "Мобильные посетители (основной трафик локального бизнеса) получают доступ к якорям «Цена», «Вопросы», «Демо» — короче путь к заявке, меньше отказов на мобильном.",
+ "risk": "Без JS-обработки ошибок бургер может остаться открытым при переходе по якорю — закрытие по клику обязательно.",
+ "rollback": "`git checkout -- index.html` (или правка в index.improved.html, оригинал не трогаем).",
+ "verify": "DevTools → Toggle device toolbar (iPhone SE) → убедиться, что бургер открывает меню, все пункты кликабельны, Tab-навигация проходит по ссылкам; замерить клики по якорям до/после (метод I-00621).",
+ "priority_claim": "1 — сейчас на мобильном навигации нет вообще, это функциональная дыра, а не улучшение.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `@media(max-width:720px)` (L90) `.nav-links{display:none}` — заменить на кнопку-бургер в хедере: `<button class=\"nav-toggle\" aria-expanded=\"false\" aria-controls=\"nav-links\" aria-label=\"Меню\">` + выпадающая вертикальная панель `.nav-links` (position:absolute, фон как у хедера, ссылки крупнее 44px тап-таргет). JS: toggle класса `open` + `aria-expanded`, закрытие по клику по ссылке-якорю."
+ ],
+ "flags": []
+}

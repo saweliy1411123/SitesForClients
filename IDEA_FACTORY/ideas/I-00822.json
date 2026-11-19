@@ -1,0 +1,26 @@
+{
+ "id": "I-00822",
+ "round": 124,
+ "time": "2026-11-17 07:42:22",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Мобильная навигация-меню",
+ "knob": "В `@media(max-width:720px)` (L90) вместо `display:none` у `.nav-links` добавить кнопку-бургер в хедере и сделать навигацию горизонтально прокручиваемой",
+ "skill": "",
+ "effect": "Улучшение навигации на мобильных устройствах",
+ "risk": "Риск дублирования кода",
+ "rollback": "git checkout -- index.html",
+ "verify": "Проверить навигацию на мобильных устройствах",
+ "priority_claim": "2",
+ "source_hint": "",
+ "site_request": "nav-links",
+ "category": "lever",
+ "variants": [
+  "В `@media(max-width:720px)` (L90) вместо `display:none` у `.nav-links` добавить кнопку-бургер в хедере и сделать навигацию горизонтально прокручиваемой"
+ ],
+ "flags": []
+}

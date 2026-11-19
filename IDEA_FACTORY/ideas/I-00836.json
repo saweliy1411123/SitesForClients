@@ -1,0 +1,26 @@
+{
+ "id": "I-00836",
+ "round": 126,
+ "time": "2026-11-17 07:48:27",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — premium-typography-variable",
+ "knob": "**Name:** `premium-typography-variable`\n**When to apply:** На всех заголовках (h1‑h3) и важных текстовых блоках, где доступен переменный шрифт Manrope (подключён уже).\n**SAFE CSS:**\n```css\n/* enable variable font features */\nh1, h2, h3 {\nfont-family: 'Manrope', system-ui, sans-serif;\nfont-variation-settings: \"wght\" 600;\ntransition: font-variation-settings .3s ease;\n}\nh1:hover, h2:hover, h3:hover {\nfont-variation-settings: \"wght\" 800;\n}\n```\n**SAFE JS:** *(не требуется)*",
+ "skill": "",
+ "effect": "При наведении заголовок «толстеет», создавая ощущение интерактивности и высшего качества типографики без увеличения размеров шрифта.",
+ "risk": "Не все браузеры поддерживают `font-variation-settings` (например, IE); в таких браузерах эффект будет проигнорирован.",
+ "rollback": "Удалить правила `font-variation-settings` из CSS; откат через `git checkout`.",
+ "verify": "Наведите курсор на любой заголовок – его толщина должна плавно увеличиться; проверка в DevTools → Computed → font‑variation‑settings.",
+ "priority_claim": "3 – тонкое улучшение бренда, минимальный риск, легко проверяется.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `premium-typography-variable`\n**When to apply:** На всех заголовках (h1‑h3) и важных текстовых блоках, где доступен переменный шрифт Manrope (подключён уже).\n**SAFE CSS:**\n```css\n/* enable variable font features */\nh1, h2, h3 {\nfont-family: 'Manrope', system-ui, sans-serif;\nfont-variation-settings: \"wght\" 600;\ntransition: font-variation-settings .3s ease;\n}\nh1:hover, h2:hover, h3:hover {\nfont-variation-settings: \"wght\" 800;\n}\n```\n**SAFE JS:** *(не требуется)*"
+ ],
+ "flags": []
+}

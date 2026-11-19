@@ -1,0 +1,26 @@
+{
+ "id": "I-00406",
+ "round": 60,
+ "time": "2026-11-17 04:35:26",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Реализовать CSS‑scroll‑snap карусель отзывов в секции «Отзывы и работы»",
+ "knob": "Обернуть существующие карточки отзывов в `<div class=\"testimonial-carousel\" tabindex=\"0\">`; добавить CSS:\nSAFE CSS:\n```css\n.testimonial-carousel{\ndisplay:flex;overflow-x:auto;scroll-snap-type:x mandatory;\n-webkit-overflow-scrolling:touch;\n}\n.testimonial-carousel > *{\nflex:0 0 80%;margin-right:1rem;scroll-snap-align:start;\n}\n.testimonial-carousel::-webkit-scrollbar{display:none;}\n```",
+ "skill": "",
+ "effect": "Позволит пользователям быстро просматривать отзывы без JavaScript, повышая вовлечённость и доверие",
+ "risk": "Требует корректной разметки карточек; если их слишком мало, карусель будет выглядеть пустой",
+ "rollback": "Удалить обёртку и стили (`git checkout -- index.html`)",
+ "verify": "Прокрутить секцию в браузере, убедиться, что карточки «прилипают» к краю; проверить на мобильных устройствах, что свайп работает",
+ "priority_claim": "3 – улучшает UI, но не критично для конверсии",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "Обернуть существующие карточки отзывов в `<div class=\"testimonial-carousel\" tabindex=\"0\">`; добавить CSS:\nSAFE CSS:\n```css\n.testimonial-carousel{\ndisplay:flex;overflow-x:auto;scroll-snap-type:x mandatory;\n-webkit-overflow-scrolling:touch;\n}\n.testimonial-carousel > *{\nflex:0 0 80%;margin-right:1rem;scroll-snap-align:start;\n}\n.testimonial-carousel::-webkit-scrollbar{display:none;}\n```"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00937",
+ "round": 150,
+ "time": "2026-11-17 08:56:19",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Back‑to‑top floating button",
+ "knob": "После `</body>` вставить `<a href=\"#top\" class=\"back-to-top\" aria-label=\"Вернуться к началу\">↑</a>`; добавить CSS: `.back-to-top{position:fixed;right:20px;bottom:20px;width:44px;height:44px;display:none;align-items:center;justify-content:center;background:var(--blue);color:#fff;border-radius:50%;font-size:24px;z-index:1000;}`; подключить небольшой JS‑скрипт, который при `window.scrollY>300` добавляет класс `show` (display:flex) к кнопке и плавно скроллит к `#top` по клику (`scrollIntoView({behavior:'smooth'})`).",
+ "skill": "",
+ "effect": "Улучшает навигацию на длинных страницах, особенно на мобильных устройствах, ускоряя возврат к главному CTA и повышая пользовательский опыт.",
+ "risk": "Требует небольшого количества JS; при неправильной реализации может конфликтовать с другими скриптами скроллинга.",
+ "rollback": "Удалить элемент `<a class=\"back-to-top\">`, соответствующий CSS и JS; `git checkout HEAD -- index.html`.",
+ "verify": "Открыть страницу, прокрутить вниз > 300 px, убедиться, что кнопка появляется; кликнуть – страница плавно возвращается в начало; протестировать в мобильном режиме.",
+ "priority_claim": "1 – быстрый выигрыш в UX, низкая стоимость реализации.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "После `</body>` вставить `<a href=\"#top\" class=\"back-to-top\" aria-label=\"Вернуться к началу\">↑</a>`; добавить CSS: `.back-to-top{position:fixed;right:20px;bottom:20px;width:44px;height:44px;display:none;align-items:center;justify-content:center;background:var(--blue);color:#fff;border-radius:50%;font-size:24px;z-index:1000;}`; подключить небольшой JS‑скрипт, который при `window.scrollY>300` добавляет класс `show` (display:flex) к кнопке и плавно скроллит к `#top` по клику (`scrollIntoView({behavior:'smooth'})`)."
+ ],
+ "flags": []
+}

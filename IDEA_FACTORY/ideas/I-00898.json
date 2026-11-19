@@ -1,0 +1,26 @@
+{
+ "id": "I-00898",
+ "round": 140,
+ "time": "2026-11-17 08:28:21",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — scroll‑tilt‑cards",
+ "knob": "**Name:** `scroll-tilt-cards`\n**When to apply:** На любые блоки‑карточки (`.price-card`, `.step`, `.pain-card`) где нужен лёгкий 3‑D‑эффект, но без нагрузки от постоянного отслеживания мыши.\n**Steps:**\n1. Добавить к каждому элементу класс `tilt-card`.\n2. В CSS задать начальное `transform: perspective(800px) rotateX(0deg) rotateY(0deg);` и `transition`.\n3. Добавить небольшую JS‑функцию, использующую `IntersectionObserver` для вычисления процента видимости и изменяющую угол наклона в зависимости от позиции скролла.\n**SAFE CSS:**\n```css\n.tilt-card{\ntransform:perspective(800px) rotateX(0deg) rotateY(0deg);\ntransition:transform .4s ease-out;\nwill-change:transform;\n}\n```\n**SAFE JS:**\n```js\nconst tiltCards=document.querySelectorAll('.tilt-card');\nconst obs=new IntersectionObserver(entries=>{\nentries.forEach(e=>{\nif(e.isIntersecting){\nconst rect=e.target.getBoundingClientRect();\nconst tiltX= (rect.top-window.innerHeight/2)/window.innerHeight*10; // -10..10\nconst tiltY= (rect.left-window.innerWidth/2)/window.innerWidth*10;\ne.target.style.transform=`perspective(800px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;\n}\n});\n},{threshold:[0,0.5,1]});\ntiltCards.forEach(c=>obs.observe(c));\n```",
+ "skill": "",
+ "effect": "Создаёт лёгкое ощущение глубины при скролле, усиливает премиальный визуальный слой, не требует постоянного прослушивания `mousemove`.",
+ "risk": "На слабых устройствах может появиться небольшая задержка при пересчёте transform; можно отключить через `prefers-reduced-motion`.",
+ "rollback": "Удалить класс `tilt-card` и скрипт‑observer; вернуть оригинальные стили.",
+ "verify": "Прокрутить страницу, наблюдать лёгкое наклонение карточек; открыть DevTools → Performance → ensure no long tasks > 50 ms.",
+ "priority_claim": "2 — визуальный апгрейд с минимальной нагрузкой, повышает восприятие «дорогого» сайта.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `scroll-tilt-cards`\n**When to apply:** На любые блоки‑карточки (`.price-card`, `.step`, `.pain-card`) где нужен лёгкий 3‑D‑эффект, но без нагрузки от постоянного отслеживания мыши.\n**Steps:**\n1. Добавить к каждому элементу класс `tilt-card`.\n2. В CSS задать начальное `transform: perspective(800px) rotateX(0deg) rotateY(0deg);` и `transition`.\n3. Добавить небольшую JS‑функцию, использующую `IntersectionObserver` для вычисления процента видимости и изменяющую угол наклона в зависимости от позиции скролла.\n**SAFE CSS:**\n```css\n.tilt-card{\ntransform:perspective(800px) rotateX(0deg) rotateY(0deg);\ntransition:transform .4s ease-out;\nwill-change:transform;\n}\n```\n**SAFE JS:**\n```js\nconst tiltCards=document.querySelectorAll('.tilt-card');\nconst obs=new IntersectionObserver(entries=>{\nentries.forEach(e=>{\nif(e.isIntersecting){\nconst rect=e.target.getBoundingClientRect();\nconst tiltX= (rect.top-window.innerHeight/2)/window.innerHeight*10; // -10..10\nconst tiltY= (rect.left-window.innerWidth/2)/window.innerWidth*10;\ne.target.style.transform=`perspective(800px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;\n}\n});\n},{threshold:[0,0.5,1]});\ntiltCards.forEach(c=>obs.observe(c));\n```"
+ ],
+ "flags": []
+}

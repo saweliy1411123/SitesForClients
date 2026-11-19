@@ -1,0 +1,26 @@
+{
+ "id": "I-01007",
+ "round": 1,
+ "time": "2026-11-17 17:16:45",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Плавающая кнопка «Позвонить» для мгновенного контакта",
+ "knob": "В конец `<body>` добавить `<a href=\"tel:+7XXXXXXXXXX\" class=\"phone-cta\" aria-label=\"Позвонить нам\">📞</a>` и CSS `.phone-cta{position:fixed;right:1rem;bottom:1.5rem;width:56px;height:56px;background:var(--blue);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.2);opacity:0;transition:opacity .3s} .phone-cta.visible{opacity:1}` плюс небольшой скрипт `window.addEventListener('scroll',()=>{if(window.scrollY>200)document.querySelector('.phone-cta').classList.add('visible');else document.querySelector('.phone-cta').classList.remove('visible');});`.",
+ "skill": "",
+ "effect": "Пользователь в любой момент может позвонить, что повышает коэффициент телефонных лидов.",
+ "risk": "Кнопка может перекрывать важный контент на небольших экранах; необходимо протестировать на всех брейкпоинтах.",
+ "rollback": "Удалить HTML‑элемент, CSS‑правила и скрипт (git checkout HEAD -- path/to/file).",
+ "verify": "Прокрутить страницу, убедиться, что кнопка появляется после 200 px, кликабельна и открывает телефонный диалог на мобильных устройствах; измерить увеличение `tel:`‑кликов в аналитике в течение 24 ч.",
+ "priority_claim": "1 – быстрый способ увеличить конверсию без серверных изменений.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В конец `<body>` добавить `<a href=\"tel:+7XXXXXXXXXX\" class=\"phone-cta\" aria-label=\"Позвонить нам\">📞</a>` и CSS `.phone-cta{position:fixed;right:1rem;bottom:1.5rem;width:56px;height:56px;background:var(--blue);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.2);opacity:0;transition:opacity .3s} .phone-cta.visible{opacity:1}` плюс небольшой скрипт `window.addEventListener('scroll',()=>{if(window.scrollY>200)document.querySelector('.phone-cta').classList.add('visible');else document.querySelector('.phone-cta').classList.remove('visible');});`."
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00840",
+ "round": 126,
+ "time": "2026-11-17 07:49:42",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — gradient‑focus‑ring (градиентный кольцевой контур фокуса)",
+ "knob": "**Name:** `gradient-focus-ring`\n**When to apply:** На любой странице с интерактивными элементами (`a`, `.btn-primary`, `summary`) где нужен яркий, но лёгкий визуальный индикатор фокуса.\n**SAFE CSS:**\n```css\n:focus-visible {\noutline: none;\nposition: relative;\n}\n:focus-visible::after {\ncontent: '';\nposition: absolute;\ninset: -4px;\nborder-radius: 6px;\nbackground: conic-gradient(from 90deg, var(--grad) 0%, transparent 120deg);\nanimation: focusRingSpin 1.2s linear infinite;\nmask: radial-gradient(circle, white 70%, transparent);\n}\n@keyframes focusRingSpin {\nto { transform: rotate(360deg); }\n}\n```\n**SAFE JS:** (необязательно)\n```js\n// optional: add class for browsers without :focus-visible support\ndocument.querySelectorAll('a, .btn-primary, summary').forEach(el=>{\nel.addEventListener('focus',()=>el.classList.add('focus-visible'));\nel.addEventListener('blur',()=>el.classList.remove('focus-visible'));\n});\n```",
+ "skill": "",
+ "effect": "улучшает доступность, делая фокус явно видимым, одновременно подчёркивая премиальный дизайн.",
+ "risk": "небольшое увеличение CSS‑файла; в старых браузерах без `:focus-visible` может не сработать (JS‑fallback покрывает).",
+ "rollback": "удалить файл/блок `gradient-focus-ring.css` и JS‑скрипт; `git checkout index.html`.",
+ "verify": "перейти по клавише Tab к любой ссылке/кнопке, увидеть анимированный градиентный кольцевой контур; убедиться, что он исчезает при потере фокуса.",
+ "priority_claim": "3 – низкий, но повышает A11Y и воспринимаемую «премиальность».",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `gradient-focus-ring`\n**When to apply:** На любой странице с интерактивными элементами (`a`, `.btn-primary`, `summary`) где нужен яркий, но лёгкий визуальный индикатор фокуса.\n**SAFE CSS:**\n```css\n:focus-visible {\noutline: none;\nposition: relative;\n}\n:focus-visible::after {\ncontent: '';\nposition: absolute;\ninset: -4px;\nborder-radius: 6px;\nbackground: conic-gradient(from 90deg, var(--grad) 0%, transparent 120deg);\nanimation: focusRingSpin 1.2s linear infinite;\nmask: radial-gradient(circle, white 70%, transparent);\n}\n@keyframes focusRingSpin {\nto { transform: rotate(360deg); }\n}\n```\n**SAFE JS:** (необязательно)\n```js\n// optional: add class for browsers without :focus-visible support\ndocument.querySelectorAll('a, .btn-primary, summary').forEach(el=>{\nel.addEventListener('focus',()=>el.classList.add('focus-visible'));\nel.addEventListener('blur',()=>el.classList.remove('focus-visible'));\n});\n```"
+ ],
+ "flags": []
+}

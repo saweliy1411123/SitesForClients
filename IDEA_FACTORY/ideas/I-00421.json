@@ -1,0 +1,26 @@
+{
+ "id": "I-00421",
+ "round": 63,
+ "time": "2026-11-17 04:43:53",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Premium fluid typography with animated variable‑weight headings",
+ "knob": "Добавить в CSS переменные `--heading-wght` (по умолчанию 600) и применить к h1‑h3: `font-family:\"Manrope Variable\",sans-serif; font-variation-settings:\"wght\" var(--heading-wght); transition:font-variation-settings .6s ease;` ; при `:hover` или `.reveal.visible` установить `--heading-wght:800`.",
+ "skill": "",
+ "effect": "Более современный, премиальный вид текста; динамический переход веса усиливает восприятие качества и привлекает внимание к ключевым заголовкам.",
+ "risk": "В старых браузерах (IE, старый Edge) переменная часть шрифта игнорируется → будет обычный шрифт без анимации.",
+ "rollback": "Удалить добавленные CSS‑правила и переменные (`git checkout index.html` или откатить патч).",
+ "verify": "Открыть страницу, навести курсор на заголовок h1/h2/h3 – увидеть плавный переход веса; в DevTools проверить `computed style` font‑variation‑settings.",
+ "priority_claim": "2 – высокий визуальный эффект при низком риске.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Добавить в CSS переменные `--heading-wght` (по умолчанию 600) и применить к h1‑h3: `font-family:\"Manrope Variable\",sans-serif; font-variation-settings:\"wght\" var(--heading-wght); transition:font-variation-settings .6s ease;` ; при `:hover` или `.reveal.visible` установить `--heading-wght:800`."
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00260",
+ "round": 39,
+ "time": "2026-11-17 03:32:27",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Persistent Bottom CTA для моб‑версии с auto‑hide при скролле вниз",
+ "knob": "Добавить в конец `<body>` `<div class=\"mobile-cta sticky-bottom\" role=\"region\" aria-label=\"Бесплатное демо\"><a href=\"#contact\" class=\"btn-primary\">Получить демо бесплатно</a></div>`; в CSS `position:fixed;bottom:0;width:100%;transform:translateY(0);transition:transform .3s;` + JS‑IntersectionObserver для скрытия, когда пользователь скроллит вниз более 200 px и показывать при скролле вверх.",
+ "skill": "",
+ "effect": "Поддерживает CTA в поле зрения, повышает конверсию на мобильных, не мешает контенту.",
+ "risk": "Требует небольшого JS‑кода; если отключить JS, элемент будет всегда виден (не критично).",
+ "rollback": "Удалить добавленный `<div>` и JS‑файл/скрипт.",
+ "verify": "На мобильном открыть страницу, прокрутить вниз – CTA исчезнет, прокрутить вверх – появится.",
+ "priority_claim": "1 – мощный мобильный драйвер конверсий.",
+ "source_hint": "",
+ "site_request": "cta",
+ "category": "lever",
+ "variants": [
+  "Добавить в конец `<body>` `<div class=\"mobile-cta sticky-bottom\" role=\"region\" aria-label=\"Бесплатное демо\"><a href=\"#contact\" class=\"btn-primary\">Получить демо бесплатно</a></div>`; в CSS `position:fixed;bottom:0;width:100%;transform:translateY(0);transition:transform .3s;` + JS‑IntersectionObserver для скрытия, когда пользователь скроллит вниз более 200 px и показывать при скролле вверх."
+ ],
+ "flags": []
+}

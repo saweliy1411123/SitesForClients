@@ -1,0 +1,19 @@
+# LIVE SITE SNAPSHOT (2026-11-17 17:15:26)
+- file: C:\Users\Савелий\Desktop\Мой сайт\index.html
+- size: 54697 bytes, lines: 937
+- md5: 4276927afe8ac342d30f82a7ce0d3969
+- title: Савелий — лендинги для бизнеса в Перми | за 2 дня
+- <h1>: 1
+- <h2>: 7
+- <h3>: 14
+- <section>: 7
+- <script>: 1
+- <img>: 0
+- <form>: 0
+- <button>: 0
+- <link>: 4
+- <meta>: 7
+- headings: h1:Сайт для вашего бизнеса за 2 дня — клиенты находят вас в&nbsp;Яндексе | h2:Запись есть — клиентов из&nbsp;поиска нет | h3:Вас не находят в поиске | h3:ВК — это не сайт | h3:Премиум-услуги выглядят дёшево | h2:Лендинг, который приводит на&nbsp;вашу запись | h3:Запись не трогаем | h3:Дня на запуск | h3:Видно в Яндексе | h3:Идеально с телефона | h3:Быстро грузится | h3:Правки — неделю | h3:Отзывы и работы | h2:Три шага — от&nbsp;идеи до&nbsp;сайта в&nbsp;интернете | h3:Смотрите демо | h3:Вносим правки
+- external assets: data:image/svg+xml,<svg xmlns=, https://fonts.googleapis.com, https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap, https://fonts.gstatic.com
+- git status: ?? IDEA_FACTORY/ | ?? index.improved.clean.html | ?? index.improved.cleaned.html | ?? index.improved.html | ?? index.premium.html | ?? tmp_check_0.js | ?? tmp_check_1.js | ?? tmp_verify_0.js | ?? tmpdiag_script_clean.js
+- git log: 00af311 First commit: upload index.html

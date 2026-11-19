@@ -1,0 +1,26 @@
+{
+ "id": "I-00821",
+ "round": 123,
+ "time": "2026-11-17 07:40:45",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить интерактивный overlay‑текст к каждому демо‑концепту, поясняющий, что это макет",
+ "knob": "Внутри контейнера каждого демо‑элемента (см. `<!-- ============ DEMO ============ -->`) добавить `<div class=\"demo-overlay\" aria-hidden=\"true\">Это макет, а не готовый сайт</div>` и CSS: `.demo-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.6);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;opacity:0;transition:opacity .2s;}.demo-item:hover .demo-overlay,.demo-item:focus-within .demo-overlay{opacity:1;}` (где `.demo-item` — родительский блок).",
+ "skill": "",
+ "effect": "Снижает риск недопонимания пользователем, повышает доверие и уменьшает количество вопросов‑возражений.",
+ "risk": "Увеличивает объём CSS/HTML; при отключённом CSS overlay будет скрыт, но контент останется доступным.",
+ "rollback": "Удалить добавленные элементы и CSS‑правила (git checkout index.html).",
+ "verify": "Навести курсор/фокус на демо‑карточку → увидеть полупрозрачный текст; проверить в мобильном режиме (tap).",
+ "priority_claim": "2 – улучшает прозрачность предложения без изменения цены.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Внутри контейнера каждого демо‑элемента (см. `<!-- ============ DEMO ============ -->`) добавить `<div class=\"demo-overlay\" aria-hidden=\"true\">Это макет, а не готовый сайт</div>` и CSS: `.demo-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.6);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;opacity:0;transition:opacity .2s;}.demo-item:hover .demo-overlay,.demo-item:focus-within .demo-overlay{opacity:1;}` (где `.demo-item` — родительский блок)."
+ ],
+ "flags": []
+}

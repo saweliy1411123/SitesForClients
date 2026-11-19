@@ -1,0 +1,28 @@
+---
+name: SKILL — focus-visible-kit (единая премиальная клавиатурная видимость фокуса)
+source: lareper/glm-5.2-fast-preview
+round: 48
+status: proposed
+portable: true
+tags: [static-landing, portable]
+---
+
+# SKILL — focus-visible-kit (единая премиальная клавиатурная видимость фокуса)
+
+Название: focus-visible-kit. Когда применять: любой статический лендинг с ссылками-CTA, якорями, details/summary — везде, где фокус по умолчанию выглядит по-разному или скрыт обнулением outline. Шаги: (1) Проверить Tab-проход по странице: есть ли видимый фокус на .btn-primary, nav-ссылках, внешних ссылках. (2) Добавить в `<style>` блок SAFE CSS ниже. (3) Добавить skip-link сразу после `<body>`: `<a class="skip-link" href="#top">К содержимому</a>`. (4) Проверить: Tab с первого элемента — skip-link появляется, дальше фокус-кольца на всех интерактивных элементах, ни один не «теряется» на тёмном фоне. SAFE CSS:
+```css
+:root{--focus-ring:0 0 0 3px rgba(139,92,246,.55),0 0 0 6px rgba(76,201,240,.35)}
+a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{
+outline:none;box-shadow:var(--focus-ring);border-radius:8px}
+.btn-primary:focus-visible{box-shadow:var(--focus-ring),0 12px 40px rgba(139,92,246,.45)}
+.skip-link{position:fixed;top:-60px;left:16px;z-index:9999;background:#fff;color:#0a0a0f;
+padding:10px 18px;border-radius:10px;font-weight:700;transition:top .2s}
+.skip-link:focus{top:12px}
+@media (prefers-reduced-motion:reduce){.skip-link{transition:none}}
+```
+
+## Когда применять
+клавиатурные пользователи и скринридеры не теряют CTA; растёт a11y-оценка Lighthouse; премиальный единый вид фокуса вместо браузерного.
+
+## Проверка
+открыть страницу, нажать Tab 10 раз: каждый интерактивный элемент даёт видимое кольцо; skip-link появляется первым; Lighthouse Accessibility ≥ 95.

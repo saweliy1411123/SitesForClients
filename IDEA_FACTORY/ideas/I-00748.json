@@ -1,0 +1,26 @@
+{
+ "id": "I-00748",
+ "round": 115,
+ "time": "2026-11-17 07:17:35",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавление микро-кнопки «Написать в Telegram» под основным CTA",
+ "knob": "В секции `.final` (~L705) сразу под основной CTA-ссылкой добавить `<p class=\"final-note\">Написать в Telegram <span class=\"arr\">→</span></p>`",
+ "skill": "",
+ "effect": "Повышение конверсии за счёт предоставления дополнительного канала связи",
+ "risk": "Возможное снижение конверсии из-за добавления дополнительного элемента",
+ "rollback": "Удалить добавленный код",
+ "verify": "Проверить наличие кнопки и её видимость на странице",
+ "priority_claim": "2",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В секции `.final` (~L705) сразу под основной CTA-ссылкой добавить `<p class=\"final-note\">Написать в Telegram <span class=\"arr\">→</span></p>`"
+ ],
+ "flags": []
+}

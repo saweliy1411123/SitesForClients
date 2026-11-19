@@ -1,0 +1,26 @@
+{
+ "id": "I-00815",
+ "round": 123,
+ "time": "2026-11-17 07:40:07",
+ "source": "lareper/glm-5.2-fast-preview",
+ "sources": [
+  "lareper/glm-5.2-fast-preview"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Шаги — таймлайновая метка времени у каждого шага",
+ "knob": "В `.steps` (L565+) к каждому из трёх шагов добавить бейдж времени: `<span class=\"step-time\">день 1</span>` / «день 1–2» / «день 2» над/рядом с h3; стиль: `.step",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `.steps` (L565+) к каждому из трёх шагов добавить бейдж времени: `<span class=\"step-time\">день 1</span>` / «день 1–2» / «день 2» над/рядом с h3; стиль: `.step"
+ ],
+ "flags": []
+}

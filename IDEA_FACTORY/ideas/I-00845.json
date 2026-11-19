@@ -1,0 +1,26 @@
+{
+ "id": "I-00845",
+ "round": 127,
+ "time": "2026-11-17 07:51:13",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Секция цены — «что входит / что НЕ входит» как два честных списка",
+ "knob": "В `.price-card` (L644–L657) после `<ul>` включённого добавить блок `<div class=\"price-excl\"><b>Не входит:</b> оплата рекламы, ведение после недели правок, покупка домена</div>` + CSS `.price-excl{font-size:13px;color:var(--muted);margin-top:18px;padding-top:14px;border-top:1px solid var(--border)}`",
+ "skill": "",
+ "effect": "Снимает главный возражение «а что потом?» до скролла к FAQ; меньше отказов на шаге цены, более квалифицированные обращения",
+ "risk": "Список «не входит» может отпугнуть часть посетителей, если сформулирован слишком широко",
+ "rollback": "`git checkout -- index.html` (или удалить блок в копии index.improved.html)",
+ "verify": "(2 мин) Открыть копию, скролл до #price, blur-тест: читается ли «Не входит» за 3 сек; спросить 2–3 знакомых «остались ли вопросы после блока цены»",
+ "priority_claim": "2 — прямое влияние на конверсию секции с одной ценой, но требует аккуратной честной формулировки владельцем",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `.price-card` (L644–L657) после `<ul>` включённого добавить блок `<div class=\"price-excl\"><b>Не входит:</b> оплата рекламы, ведение после недели правок, покупка домена</div>` + CSS `.price-excl{font-size:13px;color:var(--muted);margin-top:18px;padding-top:14px;border-top:1px solid var(--border)}`"
+ ],
+ "flags": []
+}

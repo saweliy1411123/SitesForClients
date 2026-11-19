@@ -1,0 +1,28 @@
+{
+ "id": "I-00571",
+ "round": 86,
+ "time": "2026-11-17 05:53:22",
+ "source": "lareper/glm-5.2-fast-preview",
+ "sources": [
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.2",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 3,
+ "status": "NEW",
+ "title": "Метод «A/B через два файла и query-параметр» для локального сравнения CTA-текстов",
+ "knob": "METHOD: (1) Скопировать index.html → variant-b.html, изменить только текст CTA (например, L462 «Написать в Telegram — демо бесплатно» → «Получить демо вашего сайта за 2 дня»). (2) Открыть оба файла в двух вкладках, DevTools → Performance → снять трейс скролла до финального CTA. (3) Альтернатива без людей: в консоли каждой вкладки выполнить `performance.mark('cta-visible'); new IntersectionObserver(e=>e[0].isIntersecting&&performance.measure('scroll-to-cta','navigationStart')).observe(document.querySelector('.final'))` — сравнить, в каком варианте глаз/скролл доходит быстрее (запись экрана + подсчёт секунд). (4) Зафиксировать вывод в комментарии IDEA_FACTORY перед слиянием в index.improved.html.",
+ "skill": "",
+ "effect": "Позволяет сравнивать любые копии/варианты блоков локально, с фиксируемым результатом, до единого деплоя.",
+ "risk": "Без реального трафика метрики прокси-косвенные (время до CTA ≠ конверсия) — выводы нужно подтверждать после публикации.",
+ "rollback": "Вариант живёт в отдельном файле variant-b.html; удаление файла ничего не ломает, git status остаётся чистым по оригиналу.",
+ "verify": "Метод выполняется за 5–8 минут на два варианта; результат — два числа для сравнения.",
+ "priority_claim": "2 — полезен для любых будущих копирайтерских гипотез, но требует интерпретации.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: (1) Скопировать index.html → variant-b.html, изменить только текст CTA (например, L462 «Написать в Telegram — демо бесплатно» → «Получить демо вашего сайта за 2 дня»). (2) Открыть оба файла в двух вкладках, DevTools → Performance → снять трейс скролла до финального CTA. (3) Альтернатива без людей: в консоли каждой вкладки выполнить `performance.mark('cta-visible'); new IntersectionObserver(e=>e[0].isIntersecting&&performance.measure('scroll-to-cta','navigationStart')).observe(document.querySelector('.final'))` — сравнить, в каком варианте глаз/скролл доходит быстрее (запись экрана + подсчёт секунд). (4) Зафиксировать вывод в комментарии IDEA_FACTORY перед слиянием в index.improved.html."
+ ],
+ "flags": []
+}

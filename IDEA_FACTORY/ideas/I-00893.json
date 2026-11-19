@@ -1,0 +1,26 @@
+{
+ "id": "I-00893",
+ "round": 139,
+ "time": "2026-11-17 08:25:16",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — fluid-typography-clamp",
+ "knob": "**Name:** fluid-typography-clamp\n**When to apply:** На любом статическом лендинге, где используется фиксированное `font-size` в px/rem и требуется адаптивная типографика без множества медиазапросов.\n**Steps:**\n1. Добавить в глобальный CSS блок `SAFE CSS` (см. ниже).\n2. При необходимости задать кастомные переменные `--fs-min` и `--fs-max` в `:root` для разных уровней заголовков.\n3. На нужных элементах добавить класс `.fluid-text` (или `.fluid-h1`, `.fluid-h2` и т.д., если нужны отдельные диапазоны).\n4. При тестировании проверить читаемость на ширине 320 px – 1440 px.\n**SAFE CSS:**\n```css\n:root{\n--fs-min: 0.875rem;   /* 14 px */\n--fs-max: 1.25rem;    /* 20 px */\n}\n.fluid-text{\nfont-size: clamp(var(--fs-min), 1.2vw, var(--fs-max));\nline-height: 1.4;\n}\n.fluid-h1{\n--fs-min: 1.5rem;\n--fs-max: 2.5rem;\nfont-size: clamp(var(--fs-min), 2vw, var(--fs-max));\nline-height: 1.2;\n}\n.fluid-h2{\n--fs-min: 1.25rem;\n--fs-max: 2rem;\nfont-size: clamp(var(--fs-min), 1.8vw, var(--fs-max));\nline-height: 1.3;\n}\n```",
+ "skill": "fluid-typography-clamp",
+ "effect": "Читабельный текст, автоматически подстраивающийся под любые экраны, повышает UX и SEO‑доступность без добавления новых медиазапросов.",
+ "risk": "При экстремальных размерах окна шрифт может стать слишком маленьким/большим — требуется быстрый визуальный чек.",
+ "rollback": "Удалить класс(ы) `.fluid‑*` из HTML и удалить блок CSS из проекта (`git checkout index.html` или `git revert` соответствующего коммита).",
+ "verify": "Открыть страницу в Chrome, открыть DevTools → Device Toolbar, переключить между 320 px и 1440 px, убедиться, что размер текста плавно меняется в пределах заданных границ.",
+ "priority_claim": "2 – значительное улучшение читаемости, но не критично для конверсии.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** fluid-typography-clamp\n**When to apply:** На любом статическом лендинге, где используется фиксированное `font-size` в px/rem и требуется адаптивная типографика без множества медиазапросов.\n**Steps:**\n1. Добавить в глобальный CSS блок `SAFE CSS` (см. ниже).\n2. При необходимости задать кастомные переменные `--fs-min` и `--fs-max` в `:root` для разных уровней заголовков.\n3. На нужных элементах добавить класс `.fluid-text` (или `.fluid-h1`, `.fluid-h2` и т.д., если нужны отдельные диапазоны).\n4. При тестировании проверить читаемость на ширине 320 px – 1440 px.\n**SAFE CSS:**\n```css\n:root{\n--fs-min: 0.875rem;   /* 14 px */\n--fs-max: 1.25rem;    /* 20 px */\n}\n.fluid-text{\nfont-size: clamp(var(--fs-min), 1.2vw, var(--fs-max));\nline-height: 1.4;\n}\n.fluid-h1{\n--fs-min: 1.5rem;\n--fs-max: 2.5rem;\nfont-size: clamp(var(--fs-min), 2vw, var(--fs-max));\nline-height: 1.2;\n}\n.fluid-h2{\n--fs-min: 1.25rem;\n--fs-max: 2rem;\nfont-size: clamp(var(--fs-min), 1.8vw, var(--fs-max));\nline-height: 1.3;\n}\n```"
+ ],
+ "flags": []
+}

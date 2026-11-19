@@ -1,0 +1,26 @@
+{
+ "id": "I-01001",
+ "round": 170,
+ "time": "2026-11-17 17:11:25",
+ "source": "localhost:8080/zhipu/glm-4.7-flash",
+ "sources": [
+  "localhost:8080/zhipu/glm-4.7-flash"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Mobile Touch-Target Gap Visualizer",
+ "knob": "Console script in mobile view to inject borders around interactive elements and highlight empty space between them",
+ "skill": "",
+ "effect": "Identify if users can tap buttons accurately or if they misclick on empty gaps",
+ "risk": "Visual clutter on the actual page during testing",
+ "rollback": "`document.querySelectorAll('.touch-gap-highlight').forEach(el => el.remove())`",
+ "verify": "Open mobile view, run script, check visual gaps",
+ "priority_claim": "2 (Mobile UX)",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Console script in mobile view to inject borders around interactive elements and highlight empty space between them"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00901",
+ "round": 141,
+ "time": "2026-11-17 08:30:57",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "ARIA‑landmarks и роли для семантики и доступности",
+ "knob": "В `<body>` добавить атрибуты `role=\"banner\"` к `<header class=\"hero\">`, `role=\"navigation\"` к `<nav class=\"nav-links\">`, `role=\"main\"` к основной секции (`<section id=\"main\">` — создать, если нет), `role=\"region\"` и `aria-labelledby` к каждому крупному `<section>` (price, steps, faq, final). Добавить `<footer role=\"contentinfo\">` в конец.",
+ "skill": "",
+ "effect": "Улучшит восприятие скрин‑ридерами, повысит SEO‑оценку за счёт семантики, упростит навигацию клавиатурой → рост конверсии у пользователей с ограниченными возможностями.",
+ "risk": "Небольшой риск конфликтов со стилями, если CSS‑селекторы используют `section` без учёта новых атрибутов.",
+ "rollback": "`git checkout HEAD -- index.html` (или откатить конкретный коммит, если сохраняется в отдельной ветке).",
+ "verify": "Открыть страницу в Chrome DevTools → вкладка **Accessibility**; убедиться, что каждый элемент отмечен соответствующим landmark. Проверить, что клавиша Tab перемещается между секциями логично.",
+ "priority_claim": "1 – фундаментальная улучшение доступности и SEO, быстро реализуемо без бэкенда.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<body>` добавить атрибуты `role=\"banner\"` к `<header class=\"hero\">`, `role=\"navigation\"` к `<nav class=\"nav-links\">`, `role=\"main\"` к основной секции (`<section id=\"main\">` — создать, если нет), `role=\"region\"` и `aria-labelledby` к каждому крупному `<section>` (price, steps, faq, final). Добавить `<footer role=\"contentinfo\">` в конец."
+ ],
+ "flags": []
+}

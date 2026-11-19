@@ -1,0 +1,26 @@
+{
+ "id": "I-00575",
+ "round": 87,
+ "time": "2026-11-17 05:55:12",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "I-00455",
+ "knob": "Вместо полного инлайн‑критического CSS предлагаю использовать `rel=\"preload\"` для основного стиля и `font-display: swap` в `@font-face`, чтобы избежать блокировки рендера.",
+ "skill": "",
+ "effect": "Снизит размер HTML и упростит поддержку, сохранив быстрый First Contentful Paint.",
+ "risk": "Требует небольших правок в сборке стилей, но без изменения визуального вида.",
+ "rollback": "Удалить `<link rel=\"preload\" as=\"style\" …>` и вернуть оригинальный `<link rel=\"stylesheet\">`.",
+ "verify": "В Lighthouse проверить Time to Interactive до и после.",
+ "priority_claim": "2 – баланс пользы и риска.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Вместо полного инлайн‑критического CSS предлагаю использовать `rel=\"preload\"` для основного стиля и `font-display: swap` в `@font-face`, чтобы избежать блокировки рендера."
+ ],
+ "flags": []
+}

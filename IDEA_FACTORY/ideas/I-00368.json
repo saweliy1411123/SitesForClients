@@ -1,0 +1,26 @@
+{
+ "id": "I-00368",
+ "round": 55,
+ "time": "2026-11-17 04:20:23",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — trust-logos-carousel",
+ "knob": "**Name:** `trust-logos-carousel`\n**When to apply:** На любой лендинг, где требуется показать логотипы партнёров/клиентов для повышения доверия.\n**Steps:**\n1. Вставить после секции цены (`.price-card`) блок‑контейнер:\n```html\n<section id=\"trust\" class=\"trust\" role=\"region\" aria-label=\"Нам доверяют\">\n<h2 class=\"reveal\">Нам доверяют</h2>\n<div class=\"trust-carousel\" aria-roledescription=\"carousel\">\n<!-- повторить для каждого логотипа -->\n<div class=\"trust-item\"><img src=\"logo1.svg\" alt=\"Логотип партнёра 1\" loading=\"lazy\"></div>\n<div class=\"trust-item\"><img src=\"logo2.svg\" alt=\"Логотип партнёра 2\" loading=\"lazy\"></div>\n<div class=\"trust-item\"><img src=\"logo3.svg\" alt=\"Логотип партнёра 3\" loading=\"lazy\"></div>\n<!-- … -->\n</div>\n</section>\n```\n2. Добавить в `<head>` (или в конец `<style>`) следующий CSS (SAFE CSS):\nSAFE CSS:\n```css\n.trust {padding:80px 0;background:#111;color:#fff;text-align:center}\n.trust h2 {margin-bottom:40px;font-size:clamp(28px,5vw,36px)}\n.trust-carousel {\ndisplay:flex;gap:40px;overflow-x:auto;scroll-snap-type:x mandatory;\n-webkit-overflow-scrolling:touch;scroll-behavior:smooth;\n}\n.trust-item {\nflex:0 0 auto;scroll-snap-align:center;opacity:.6;transition:opacity .3s;\n}\n.trust-item:hover,\n.trust-item:focus-within {opacity:1}\n.trust-item img {max-height:48px;max-width:120px;display:block;margin:auto}\n/* hide scrollbar in WebKit */\n.trust-carousel::-webkit-scrollbar {display:none}\n```\n3. (Опционально) Добавить небольшую JS‑анимацию автопрокрутки, но это не требуется – пользователь может скроллить вручную.",
+ "skill": "",
+ "effect": "Показ логотипов партнёров усиливает социальное доказательство, повышает доверие и, как правило, улучшает конверсию CTA‑кнопок.",
+ "risk": "Требуется собрать/разместить логотипы партнёров; если их нет, блок будет пустым и может выглядеть небрежно.",
+ "rollback": "`git checkout index.html` или `git restore index.html` (если изменения внесены в отдельный файл `index.improved.html`).",
+ "verify": "Открыть страницу в браузере, убедиться, что блок «Нам доверяют» появился, логотипы отображаются, можно прокручивать горизонтально, и при наведении/фокусе они становятся ярче. Проверить, что на мобильных ширина 360 px логотипы не вылезают за экран.",
+ "priority_claim": "2 – умеренный объём работы (HTML + CSS), но потенциальный рост доверия и конверсии значителен.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `trust-logos-carousel`\n**When to apply:** На любой лендинг, где требуется показать логотипы партнёров/клиентов для повышения доверия.\n**Steps:**\n1. Вставить после секции цены (`.price-card`) блок‑контейнер:\n```html\n<section id=\"trust\" class=\"trust\" role=\"region\" aria-label=\"Нам доверяют\">\n<h2 class=\"reveal\">Нам доверяют</h2>\n<div class=\"trust-carousel\" aria-roledescription=\"carousel\">\n<!-- повторить для каждого логотипа -->\n<div class=\"trust-item\"><img src=\"logo1.svg\" alt=\"Логотип партнёра 1\" loading=\"lazy\"></div>\n<div class=\"trust-item\"><img src=\"logo2.svg\" alt=\"Логотип партнёра 2\" loading=\"lazy\"></div>\n<div class=\"trust-item\"><img src=\"logo3.svg\" alt=\"Логотип партнёра 3\" loading=\"lazy\"></div>\n<!-- … -->\n</div>\n</section>\n```\n2. Добавить в `<head>` (или в конец `<style>`) следующий CSS (SAFE CSS):\nSAFE CSS:\n```css\n.trust {padding:80px 0;background:#111;color:#fff;text-align:center}\n.trust h2 {margin-bottom:40px;font-size:clamp(28px,5vw,36px)}\n.trust-carousel {\ndisplay:flex;gap:40px;overflow-x:auto;scroll-snap-type:x mandatory;\n-webkit-overflow-scrolling:touch;scroll-behavior:smooth;\n}\n.trust-item {\nflex:0 0 auto;scroll-snap-align:center;opacity:.6;transition:opacity .3s;\n}\n.trust-item:hover,\n.trust-item:focus-within {opacity:1}\n.trust-item img {max-height:48px;max-width:120px;display:block;margin:auto}\n/* hide scrollbar in WebKit */\n.trust-carousel::-webkit-scrollbar {display:none}\n```\n3. (Опционально) Добавить небольшую JS‑анимацию автопрокрутки, но это не требуется – пользователь может скроллить вручную."
+ ],
+ "flags": []
+}

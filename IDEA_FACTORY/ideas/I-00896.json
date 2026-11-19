@@ -1,0 +1,26 @@
+{
+ "id": "I-00896",
+ "round": 140,
+ "time": "2026-11-17 08:28:21",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — glassmorphic‑sticky‑header",
+ "knob": "**Name:** `glassmorphic-sticky-header`\n**When to apply:** На любой одностраничный лендинг, где в шапке находятся ссылки‑якоря и нужен премиальный, «прозрачный» вид без потери читаемости.\n**Steps:**\n1. Вставить сразу после `<body>` элемент `<nav class=\"glass-header\" aria-label=\"Главное меню\">…</nav>` (скопировать существующий блок навигации).\n2. Добавить CSS‑правила (см. ниже) для фиксированного позиционирования, backdrop‑filter и плавного перехода opacity.\n3. Добавить небольшой скрипт, который при скролле > 50 px добавляет/убирает класс `scrolled`.\n**SAFE CSS:**\n```css\n.glass-header{\nposition:fixed;\ninset-inline:0;\ntop:0;\nheight:64px;\ndisplay:flex;\nalign-items:center;\njustify-content:center;\nbackdrop-filter:blur(12px);\nbackground:rgba(255,255,255,0.12);\nborder-bottom:1px solid rgba(255,255,255,0.15);\ntransition:background .3s ease, border-color .3s ease;\nz-index:1000;\n}\n.glass-header.scrolled{\nbackground:rgba(255,255,255,0.24);\nborder-color:rgba(255,255,255,0.25);\n}\n.glass-header a{\ncolor:var(--text);\nmargin:0 12px;\nfont-weight:500;\n}\n.glass-header a:focus-visible{\noutline:3px solid var(--blue);\noutline-offset:2px;\n}\n```\n**SAFE JS:**\n```js\ndocument.addEventListener('scroll',()=>{\nconst hdr=document.querySelector('.glass-header');\nif(window.scrollY>50) hdr.classList.add('scrolled');\nelse hdr.classList.remove('scrolled');\n});\n```",
+ "skill": "",
+ "effect": "Делает шапку визуально «премиальной», сохраняет её доступной на всех скроллах, повышает восприятие бренда и удерживает навигацию в поле зрения.",
+ "risk": "На старых браузерах без поддержки `backdrop-filter` будет обычный полупрозрачный фон; эффект всё‑равно будет приемлем.",
+ "rollback": "`git checkout -- index.html && git checkout -- style.css` (удалить добавленные строки и `<nav>`).",
+ "verify": "Открыть страницу, прокрутить > 50 px — шапка должна плавно поменять фон и стать чуть более непрозрачной; проверить, что ссылки остаются кликабельными.",
+ "priority_claim": "2 — небольшие изменения, быстрый выигрыш в восприятии премиальности без влияния на основную конверсию.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `glassmorphic-sticky-header`\n**When to apply:** На любой одностраничный лендинг, где в шапке находятся ссылки‑якоря и нужен премиальный, «прозрачный» вид без потери читаемости.\n**Steps:**\n1. Вставить сразу после `<body>` элемент `<nav class=\"glass-header\" aria-label=\"Главное меню\">…</nav>` (скопировать существующий блок навигации).\n2. Добавить CSS‑правила (см. ниже) для фиксированного позиционирования, backdrop‑filter и плавного перехода opacity.\n3. Добавить небольшой скрипт, который при скролле > 50 px добавляет/убирает класс `scrolled`.\n**SAFE CSS:**\n```css\n.glass-header{\nposition:fixed;\ninset-inline:0;\ntop:0;\nheight:64px;\ndisplay:flex;\nalign-items:center;\njustify-content:center;\nbackdrop-filter:blur(12px);\nbackground:rgba(255,255,255,0.12);\nborder-bottom:1px solid rgba(255,255,255,0.15);\ntransition:background .3s ease, border-color .3s ease;\nz-index:1000;\n}\n.glass-header.scrolled{\nbackground:rgba(255,255,255,0.24);\nborder-color:rgba(255,255,255,0.25);\n}\n.glass-header a{\ncolor:var(--text);\nmargin:0 12px;\nfont-weight:500;\n}\n.glass-header a:focus-visible{\noutline:3px solid var(--blue);\noutline-offset:2px;\n}\n```\n**SAFE JS:**\n```js\ndocument.addEventListener('scroll',()=>{\nconst hdr=document.querySelector('.glass-header');\nif(window.scrollY>50) hdr.classList.add('scrolled');\nelse hdr.classList.remove('scrolled');\n});\n```"
+ ],
+ "flags": []
+}

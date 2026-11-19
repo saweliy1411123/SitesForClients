@@ -1,0 +1,28 @@
+{
+ "id": "I-00056",
+ "round": 8,
+ "time": "2026-11-17 02:03:40",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b",
+  "lareper/glm-5.3"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Добавить кликабельный телефонный CTA‑кнопку рядом с основным CTA‑ссылкой",
+ "knob": "В секции hero (после `.hero-note`) добавить кнопку‑ссылку\n```html\n<a href=\"tel:+7XXXXXXXXXX\" class=\"btn-phone reveal\" style=\"--d:.3s\">\n📞 Позвонить сейчас\n</a>\n```\nи CSS (переиспользовать стили кнопок):\n```css\n.btn-phone{display:inline-block;margin-left:.8rem;padding:.6rem 1.2rem;\nbackground:#8b5cf6;color:#fff;border-radius:4px;font-weight:600;\ntext-decoration:none;transition:background .2s}\n.btn-phone:hover{background:#7c3aed}\n```",
+ "skill": "",
+ "effect": "даёт пользователям возможность сразу позвонить, повышая шанс мгновенного контакта, особенно на мобильных.",
+ "risk": "если номер будет недоступен, может вызвать негатив; требуется согласовать реальный номер с владельцем.",
+ "rollback": "удалить добавленную кнопку и CSS‑правило.",
+ "verify": "открыть страницу на мобильном устройстве, кликнуть кнопку – должно открыться диалог вызова; проверить, что стили соответствуют остальному дизайну.",
+ "priority_claim": "2 – конверсия через телефонный канал часто выше, но требует реального номера.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В секции hero (после `.hero-note`) добавить кнопку‑ссылку\n```html\n<a href=\"tel:+7XXXXXXXXXX\" class=\"btn-phone reveal\" style=\"--d:.3s\">\n📞 Позвонить сейчас\n</a>\n```\nи CSS (переиспользовать стили кнопок):\n```css\n.btn-phone{display:inline-block;margin-left:.8rem;padding:.6rem 1.2rem;\nbackground:#8b5cf6;color:#fff;border-radius:4px;font-weight:600;\ntext-decoration:none;transition:background .2s}\n.btn-phone:hover{background:#7c3aed}\n```",
+  "В конце секции боли (после карточки «Премиум-услуги выглядят дёшево», ~L542–555) добавить `<p class=\"pain-cta\">Узнали себя? <a href=\"#demo\">Посмотрите, как может выглядеть ваш сайт</a></p>` + CSS `.pain-cta{margin-top:40px;text-align:center;font-size:17px}.pain-cta a{color:var(--blue);text-decoration:underline;text-underline-offset:4px}`"
+ ],
+ "flags": []
+}

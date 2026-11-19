@@ -1,0 +1,26 @@
+{
+ "id": "I-00012",
+ "round": 2,
+ "time": "2026-11-17 01:46:23",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Быстрая проверка SEO‑структуры через локальный Structured Data Testing Tool",
+ "knob": "METHOD: добавить в проект файл `schema-test.html` копию `index.html` с включёнными `script type=\"application/ld+json\"` блоками (LocalBusiness, FAQPage) и запустить локальный Google Structured Data Testing Tool (npm‑пакет `sdttest`) в терминале, проверяя валидность за секунды.",
+ "skill": "",
+ "effect": "мгновенно увидеть, какие схемы распознаются, корректировать JSON‑LD без публикации, улучшая SEO‑видимость.",
+ "risk": "требует установки Node.js и npm, небольшая подготовка окружения.",
+ "rollback": "удалить `schema-test.html` (git rm schema-test.html).",
+ "verify": "выполнить `npx sdttest schema-test.html` и убедиться, что вывод не содержит ошибок.",
+ "priority_claim": "3 – полезно для SEO, но требует небольших подготовительных действий, поэтому ниже по срочности.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: добавить в проект файл `schema-test.html` копию `index.html` с включёнными `script type=\"application/ld+json\"` блоками (LocalBusiness, FAQPage) и запустить локальный Google Structured Data Testing Tool (npm‑пакет `sdttest`) в терминале, проверяя валидность за секунды."
+ ],
+ "flags": []
+}

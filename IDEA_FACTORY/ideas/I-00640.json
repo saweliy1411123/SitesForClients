@@ -1,0 +1,26 @@
+{
+ "id": "I-00640",
+ "round": 97,
+ "time": "2026-11-17 06:24:25",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — scroll‑triggered‑counter",
+ "knob": "**Name:** `scroll-triggered-counter`\n**When to apply:** На лендингах, где в секциях (например, «Боль», «Доказательства», «Отзывов») присутствуют статистические цифры, которые должны «оживить» пользователя при прокрутке.\n**Steps:**\n1. Обернуть каждое число в элемент с классом `counter` и атрибутом `data-target` — целевое значение (например, `<span class=\"counter\" data-target=\"124\">0</span>`).\n2. Вставить ниже CSS‑правило из `SAFE CSS` в глобальный стиль.\n3. Добавить JavaScript‑блок из `SAFE JS` в конец `<body>` (или в отдельный файл). Скрипт использует `IntersectionObserver` и анимирует счётчик от 0 до `data-target` за 1.5 сек.\n**SAFE CSS:**\n```css\n/* scroll‑triggered‑counter */\n.counter {\nfont-weight: 700;\nfont-size: clamp(30px,4vw,46px);\nline-height: 1.05;\ndisplay: inline-block;\n}\n```\n**SAFE JS:**\n```js\n// scroll‑triggered‑counter\n(() => {\nconst formatNumber = n => Math.floor(n).toLocaleString('ru-RU');\nconst animate = (el, target) => {\nconst duration = 1500;\nconst start = performance.now();\nconst step = now => {\nconst elapsed = now - start;\nconst progress = Math.min(elapsed / duration, 1);\nel.textContent = formatNumber(progress * target);\nif (progress < 1) requestAnimationFrame(step);\n};\nrequestAnimationFrame(step);\n};\nconst observer = new IntersectionObserver((entries, obs) => {\nentries.forEach(entry => {\nif (entry.isIntersecting) {\nconst el = entry.target;\nconst target = +el.dataset.target;\nanimate(el, target);\nobs.unobserve(el);\n}\n});\n}, {threshold: 0.6});\ndocument.querySelectorAll('.counter[data-target]').forEach(el => observer.observe(el));\n})();\n```",
+ "skill": "scroll‑triggered‑counter",
+ "effect": "",
+ "risk": "",
+ "rollback": "`git checkout -- index.html` (или удалить добавленные файлы/строки).",
+ "verify": "\n1. Открыть страницу в браузере, убедиться, что заголовок с классом `gradient-text` отображает плавный градиент и анимацию (можно временно отключить через DevTools → `animation: none`).\n2. Прокрутить до элемента с классом `counter`; убедиться, что цифра плавно считает от 0 до целевого значения и останавливается.",
+ "priority_claim": "1 – оба скилла дают мгновенный визуальный рост восприятия (градиентный текст усиливает бренд‑идентичность, а анимированн",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `scroll-triggered-counter`\n**When to apply:** На лендингах, где в секциях (например, «Боль», «Доказательства», «Отзывов») присутствуют статистические цифры, которые должны «оживить» пользователя при прокрутке.\n**Steps:**\n1. Обернуть каждое число в элемент с классом `counter` и атрибутом `data-target` — целевое значение (например, `<span class=\"counter\" data-target=\"124\">0</span>`).\n2. Вставить ниже CSS‑правило из `SAFE CSS` в глобальный стиль.\n3. Добавить JavaScript‑блок из `SAFE JS` в конец `<body>` (или в отдельный файл). Скрипт использует `IntersectionObserver` и анимирует счётчик от 0 до `data-target` за 1.5 сек.\n**SAFE CSS:**\n```css\n/* scroll‑triggered‑counter */\n.counter {\nfont-weight: 700;\nfont-size: clamp(30px,4vw,46px);\nline-height: 1.05;\ndisplay: inline-block;\n}\n```\n**SAFE JS:**\n```js\n// scroll‑triggered‑counter\n(() => {\nconst formatNumber = n => Math.floor(n).toLocaleString('ru-RU');\nconst animate = (el, target) => {\nconst duration = 1500;\nconst start = performance.now();\nconst step = now => {\nconst elapsed = now - start;\nconst progress = Math.min(elapsed / duration, 1);\nel.textContent = formatNumber(progress * target);\nif (progress < 1) requestAnimationFrame(step);\n};\nrequestAnimationFrame(step);\n};\nconst observer = new IntersectionObserver((entries, obs) => {\nentries.forEach(entry => {\nif (entry.isIntersecting) {\nconst el = entry.target;\nconst target = +el.dataset.target;\nanimate(el, target);\nobs.unobserve(el);\n}\n});\n}, {threshold: 0.6});\ndocument.querySelectorAll('.counter[data-target]').forEach(el => observer.observe(el));\n})();\n```"
+ ],
+ "flags": []
+}

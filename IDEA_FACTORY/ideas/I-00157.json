@@ -1,0 +1,26 @@
+{
+ "id": "I-00157",
+ "round": 23,
+ "time": "2026-11-17 02:48:47",
+ "source": "lareper/glm-5.2-fast-preview",
+ "sources": [
+  "lareper/glm-5.2-fast-preview"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Метод «тест заглушкой CTA» — проверка, ведут ли все пути к одной цели (link-flow audit)",
+ "knob": "METHOD: (1) Скопировать index.html в index-flow.html. (2) В копии временно добавить в `<head>` скрипт-аудит: перебрать `document.querySelectorAll('a[href^=\"#\"]')`, для каждой ссылки проверить, существует ли элемент с таким id (`document.querySelector(href)`), и вывести результат через `console.table` (битые якоря →",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: (1) Скопировать index.html в index-flow.html. (2) В копии временно добавить в `<head>` скрипт-аудит: перебрать `document.querySelectorAll('a[href^=\"#\"]')`, для каждой ссылки проверить, существует ли элемент с таким id (`document.querySelector(href)`), и вывести результат через `console.table` (битые якоря →"
+ ],
+ "flags": []
+}

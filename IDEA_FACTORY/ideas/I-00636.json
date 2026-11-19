@@ -1,0 +1,29 @@
+{
+ "id": "I-00636",
+ "round": 96,
+ "time": "2026-11-17 06:21:58",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "`<html lang=\"ru\">` + skip-link «к содержимому»",
+ "knob": "(1) Проверить/установить `lang=\"ru\"` на `<html>` (L1). (2) Первым элементом в `<body>` добавить `<a class=\"skip-link\" href=\"#contact\">Перейти к заявке</a>` с CSS: позиция absolute, уводится за экран, появляется при `:focus`.",
+ "skill": "",
+ "effect": "Скринридеры корректно произносят русский текст; клавиатурные пользователи за 1 Tab попадают к CTA — быстрее конверсионный путь.",
+ "risk": "Skip-link должен вести на существующий id — иначе бесполезен.",
+ "rollback": "`git checkout index.html`",
+ "verify": "Открыть страницу, нажать Tab — первая остановка фокуса должна показать skip-link; в DevTools → Elements проверить `lang` на `<html>`.",
+ "priority_claim": "1 — базовый a11y, ноль визуального риска.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "(1) Проверить/установить `lang=\"ru\"` на `<html>` (L1). (2) Первым элементом в `<body>` добавить `<a class=\"skip-link\" href=\"#contact\">Перейти к заявке</a>` с CSS: позиция absolute, уводится за экран, появляется при `:focus`."
+ ],
+ "flags": []
+}

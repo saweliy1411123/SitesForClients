@@ -1,0 +1,26 @@
+{
+ "id": "I-00977",
+ "round": 163,
+ "time": "2026-11-17 09:32:50",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Метод «проверка читаемости на низком разрешении»",
+ "knob": "Открыть index.html, F12 → Toggle device toolbar (375px), выполнить в консоли: `document.body.style.fontSize = '18px'`",
+ "skill": "",
+ "effect": "Улучшение читаемости текста на низком разрешении",
+ "risk": "Нет рисков",
+ "rollback": "Отменить изменения в консоли или перезагрузить страницу",
+ "verify": "Проверить читаемость текста на низком разрешении в течение 2–10 минут",
+ "priority_claim": "2, улучшение читаемости текста на низком разрешении повышает удобство использования сайта для пользователей с мобильных ",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Открыть index.html, F12 → Toggle device toolbar (375px), выполнить в консоли: `document.body.style.fontSize = '18px'`"
+ ],
+ "flags": []
+}

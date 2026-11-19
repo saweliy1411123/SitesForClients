@@ -1,0 +1,28 @@
+{
+ "id": "I-00349",
+ "round": 53,
+ "time": "2026-11-17 04:13:29",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Уважать предпочтения «Reduced Motion»",
+ "knob": "В CSS добавить медиа‑правило `@media (prefers-reduced-motion: reduce) { .blob, .hero-veil { animation:none; } }` (где `.blob` – класс анимационных элементов, найденный в файле)",
+ "skill": "",
+ "effect": "Пользователи, избравшие уменьшённую анимацию, не получат потенциально вызывающий дискомфорт эффект, повышая доступность и соответствие WCAG 2.1 AAA",
+ "risk": "Уменьшит визуальную «живость» для части аудитории (не критично)",
+ "rollback": "Удалить добавленное медиа‑правило (git checkout index.html)",
+ "verify": "В Chrome DevTools → Rendering → Emulate CSS media → `prefers-reduced-motion: reduce` и убедиться, что анимация отключена; проверить в Lighthouse Accessibility (Reduced Motion ✔️)",
+ "priority_claim": "2 – небольшие изменения, повышающие инклюзивность",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В CSS добавить медиа‑правило `@media (prefers-reduced-motion: reduce) { .blob, .hero-veil { animation:none; } }` (где `.blob` – класс анимационных элементов, найденный в файле)",
+  "В CSS добавить медиазапрос\n```css\n@media (prefers-reduced-motion: reduce) {\n.hero .blob{animation:none;}\n}\n```\n(заменить `animation` на текущий ключевой фрейм, если используется).",
+  "В `<style>` добавить медиазапрос `@media (prefers-reduced-motion: reduce) { .hero-blob, .hero-veil { animation: none !important; } }`"
+ ],
+ "flags": []
+}

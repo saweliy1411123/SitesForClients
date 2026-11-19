@@ -1,0 +1,29 @@
+{
+ "id": "I-00671",
+ "round": 102,
+ "time": "2026-11-17 06:41:22",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3-prime",
+  "lareper/glm-5.3"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "Финальный CTA — запасной тихий канал связи (VK) рядом с Telegram",
+ "knob": "В финальной секции (L705, блок `.final`) под основной кнопкой Telegram добавить мелкую строку-ссылку: `<p class=\"alt-contact\">Удобнее в VK? <a href=\"https://vk.com/…\" target=\"_blank\" rel=\"noopener noreferrer\">Напишите туда</a></p>` — только если у владельца реально есть VK-аккаунт для связи;",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В финальной секции (L705, блок `.final`) под основной кнопкой Telegram добавить мелкую строку-ссылку: `<p class=\"alt-contact\">Удобнее в VK? <a href=\"https://vk.com/…\" target=\"_blank\" rel=\"noopener noreferrer\">Напишите туда</a></p>` — только если у владельца реально есть VK-аккаунт для связи;"
+ ],
+ "flags": []
+}

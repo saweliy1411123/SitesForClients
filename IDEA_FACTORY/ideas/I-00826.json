@@ -1,0 +1,26 @@
+{
+ "id": "I-00826",
+ "round": 124,
+ "time": "2026-11-17 07:42:45",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить файл `robots.txt` и `<meta name=\"robots\">`",
+ "knob": "Создать в корне проекта файл `robots.txt` с содержимым\n```\nUser-agent: *\nAllow: /\nSitemap: https://saveliy-perm.ru/sitemap.xml\n```\nи в `<head>` добавить\n```html\n<meta name=\"robots\" content=\"index, follow\">\n```",
+ "skill": "",
+ "effect": "Явно укажет поисковикам, что страница должна индексироваться, и предоставит путь к карте сайта (можно позже добавить `sitemap.xml`). Улучшит crawl‑ability.",
+ "risk": "Если в дальнейшем появятся закрытые разделы, их придётся добавить в `robots.txt`.",
+ "rollback": "Удалить файл и мета‑тег.",
+ "verify": "Ввести `https://saveliy-perm.ru/robots.txt` в браузер – увидеть содержимое; в Search Console → Robots.txt Tester проверить отсутствие ошибок.",
+ "priority_claim": "3 – полезно, но менее критично, чем прямые UI‑улучшения.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Создать в корне проекта файл `robots.txt` с содержимым\n```\nUser-agent: *\nAllow: /\nSitemap: https://saveliy-perm.ru/sitemap.xml\n```\nи в `<head>` добавить\n```html\n<meta name=\"robots\" content=\"index, follow\">\n```"
+ ],
+ "flags": []
+}

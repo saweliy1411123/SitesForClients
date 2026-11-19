@@ -1,0 +1,26 @@
+{
+ "id": "I-00535",
+ "round": 80,
+ "time": "2026-11-17 05:33:28",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "I-00533 — Упростить анимацию blobs в hero‑секции",
+ "knob": "В `<style>` заменить текущие `@keyframes blob*` и `animation` на плавный `filter: blur()`‑переход без трансформаций; добавить медиазапрос `@media (prefers-reduced‑motion: reduce){ .blob{animation:none;filter:blur(80px);} }` и задать статический градиент‑фон вместо движущихся blobs.",
+ "skill": "",
+ "effect": "Сократит CPU‑нагрузку ≈ 30 % и улучшит CLS за счёт устранения длительных трансформаций; пользователи с ограниченной подвижностью не будут раздражаться.",
+ "risk": "Потеря визуального «wow‑‑эффекта» – могут снизиться первые впечатления у части аудитории.",
+ "rollback": "`git checkout index.html` (или вернуть оригинальный блок CSS из коммита).",
+ "verify": "Открыть страницу в Chrome DevTools → Performance, записать CPU time до и после; проверить, что анимация отключается при `prefers-reduced-motion`.",
+ "priority_claim": "1 – быстрый выигрыш в скорости и доступности без изменения контента.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<style>` заменить текущие `@keyframes blob*` и `animation` на плавный `filter: blur()`‑переход без трансформаций; добавить медиазапрос `@media (prefers-reduced‑motion: reduce){ .blob{animation:none;filter:blur(80px);} }` и задать статический градиент‑фон вместо движущихся blobs."
+ ],
+ "flags": []
+}

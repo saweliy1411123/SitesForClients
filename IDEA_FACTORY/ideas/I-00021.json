@@ -1,0 +1,26 @@
+{
+ "id": "I-00021",
+ "round": 4,
+ "time": "2026-11-17 01:50:26",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Внедрить схему LocalBusiness (Service) для повышения локального SEO",
+ "knob": "В `<head>` добавить `<script type=\"application/ld+json\">` с `@type: \"LocalBusiness\"`; заполнить `name: \"Савелий\"`, `address` (Пермь), `telephone`, `url`, `serviceType: \"Создание лендингов\"`, `areaServed`.",
+ "skill": "",
+ "effect": "Поисковые системы лучше ассоциируют сайт с регионом, повышая позиции в Яндекс и Google по запросам «лендинг в Перми».",
+ "risk": "Нужно использовать только достоверные данные; неверный телефон/адрес вызовет штраф.",
+ "rollback": "Удалить скрипт‑блок (git checkout -- index.html).",
+ "verify": "Прогнать страницу в Structured Data Testing Tool; убедиться в статусе “Valid”.",
+ "priority_claim": "1 — локальный SEO‑трафик критичен для бизнеса.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<head>` добавить `<script type=\"application/ld+json\">` с `@type: \"LocalBusiness\"`; заполнить `name: \"Савелий\"`, `address` (Пермь), `telephone`, `url`, `serviceType: \"Создание лендингов\"`, `areaServed`."
+ ],
+ "flags": []
+}

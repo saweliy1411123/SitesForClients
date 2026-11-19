@@ -1,0 +1,28 @@
+{
+ "id": "I-00765",
+ "round": 117,
+ "time": "2026-11-17 07:23:14",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b",
+  "localhost:8081/big_only"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Сделать ссылки‑CTA семантически кнопками с ролью button и aria‑label",
+ "knob": "Для всех `<a class=\"btn-primary\"...>` изменить на `<button class=\"btn-primary\" type=\"button\" aria-label=\"Получить демо бесплатно\" onclick=\"location.href='#contact'\">…</button>` или добавить `role=\"button\"` и `aria-label` к текущим `<a>`.",
+ "skill": "",
+ "effect": "Улучшает доступность (клавиатурная навигация, скрин‑ридеры), повышает показатель Accessibility в Lighthouse.",
+ "risk": "Требует небольшого JS для перехода по якорю (можно использовать `href=\"#contact\"` в `<a>` и оставить `role=\"button\"`; изменение в `<button>` без `href` может ломать fallback в случае отключённого JS).",
+ "rollback": "Вернуть оригинальные `<a>` (git checkout -- index.html).",
+ "verify": "В Chrome DevTools → Accessibility, проверить, что элементы объявлены как button; протестировать Tab‑navigation, убедиться, что фокус переходит к кнопке и срабатывает переход.",
+ "priority_claim": "2 – важный для a11y, но не критичен для SEO напрямую.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Для всех `<a class=\"btn-primary\"...>` изменить на `<button class=\"btn-primary\" type=\"button\" aria-label=\"Получить демо бесплатно\" onclick=\"location.href='#contact'\">…</button>` или добавить `role=\"button\"` и `aria-label` к текущим `<a>`.",
+  "Для всех ссылок‑CTA (например, в `.hero .cta-row a`, `.final a`) добавить атрибуты `role=\"button\"` и `aria-label=\"Получить бесплатное демо\"` (текст можно брать из visible текста)"
+ ],
+ "flags": []
+}

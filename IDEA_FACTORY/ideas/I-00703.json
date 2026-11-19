@@ -1,0 +1,28 @@
+{
+ "id": "I-00703",
+ "round": 108,
+ "time": "2026-11-17 06:57:56",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить видимую хлебную крошку + JSON‑LD BreadcrumbList",
+ "knob": "Вставить после `<header>` блок `<nav aria-label=\"Хлебные крошки\" class=\"breadcrumbs\"><a href=\"/\">Главная</a> / <a href=\"#price\">Цена</a></nav>` и добавить в `<head>` скрипт‑блок JSON‑LD `{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Главная\",\"item\":\"https://example.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Цена\",\"item\":\"https://example.com/#price\"}]}`.",
+ "skill": "",
+ "effect": "Улучшит навигацию пользователей, повысит локальное SEO и увеличит CTR в поиске.",
+ "risk": "Требует корректного URL‑соответствия; возможна путаница, если структура сайта изменится.",
+ "rollback": "Удалить вставленный HTML‑блок и `<script type=\"application/ld+json\">` из `<head>`.",
+ "verify": "В Chrome DevTools открыть «Rich Results Test», убедиться, что Breadcrumbs распознаются; проверить визуально, что крошка отображается корректно.",
+ "priority_claim": "1 – быстрый выигрыш для SEO и UX.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Вставить после `<header>` блок `<nav aria-label=\"Хлебные крошки\" class=\"breadcrumbs\"><a href=\"/\">Главная</a> / <a href=\"#price\">Цена</a></nav>` и добавить в `<head>` скрипт‑блок JSON‑LD `{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Главная\",\"item\":\"https://example.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Цена\",\"item\":\"https://example.com/#price\"}]}`.",
+  "После закрывающего `</header>` добавить блок\n```html\n<nav aria-label=\"Хлебные крошки\" class=\"breadcrumbs\">\n<a href=\"/\">Главная</a> / <span>Лендинг</span>\n</nav>\n```\nи в `<head>` перед `</head>` вставить\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"BreadcrumbList\",\n\"itemListElement\":[\n{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Главная\",\"item\":\"https://saveliy-perm.ru/\"},\n{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Лендинг\",\"item\":\"https://saveliy-perm.ru/#\"}\n]\n}\n</script>\n```",
+  "В `<head>` вставить следующий скрипт (пример для текущего сайта):\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\": \"https://schema.org\",\n\"@type\": \"BreadcrumbList\",\n\"itemListElement\": [\n{\n\"@type\": \"ListItem\",\n\"position\": 1,\n\"name\": \"Главная\",\n\"item\": \"https://saveliy-perm.ru/\"\n},\n{\n\"@type\": \"ListItem\",\n\"position\": 2,\n\"name\": \"Лендинг\",\n\"item\": \"https://saveliy-perm.ru/\"\n}\n]\n}\n</script>\n```"
+ ],
+ "flags": []
+}

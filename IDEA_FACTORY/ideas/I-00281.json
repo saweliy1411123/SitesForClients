@@ -1,0 +1,28 @@
+{
+ "id": "I-00281",
+ "round": 42,
+ "time": "2026-11-17 03:41:31",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3",
+  "lareper/glm-5.2-fast-preview"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "SKILL — fluid-type-scale (премиальная типографика с clamp)",
+ "knob": "SKILL — fluid-type-scale\nНазвание: fluid-type-scale\nКогда применять: любой лендинг, где заголовки заданы фиксированными px и на мобильных выглядят либо огромными, либо мелкими; обязательный шаг «дорогого» вида — плавная типографическая шкала.\nШаги:\n1. Найти в CSS все font-size у h1/h2/h3/lead (.sub, .lead) и зафиксировать текущие значения.\n2. Заменить их на clamp с тремя точками: минимум (мобильный), «резиновое» значение в vw, максимум (десктоп).\n3. Задать единую шкалу: h1 clamp(2rem,5vw,3.5rem); h2 clamp(1.5rem,3.5vw,2.5rem); h3 clamp(1.1rem,2vw,1.4rem); body 16–17px; line-height 1.15 для заголовков, 1.6 для текста.\n4. Добавить letter-spacing: -0.02em крупным заголовкам (премиальный «плотный» вид) и max-width ~60ch абзацам.\n5. Проверить на 360px, 768px, 1440px — заголовки не переносятся по одной букве, h1 помещается в 3 строки максимум.\nSAFE CSS:\n```\nh1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.12;letter-spacing:-0.02em}\nh2{font-size:clamp(1.5rem,3.5vw,2.5rem);line-height:1.15;letter-spacing:-0.015em}\nh3{font-size:clamp(1.1rem,2vw,1.4rem);line-height:1.25}\np{line-height:1.6;max-width:62ch}\n@media (prefers-reduced-motion: reduce){*{letter-spacing:normal}}\n```",
+ "skill": "",
+ "effect": "страница выглядит спроектированной, а не «растянутым шаблоном»; выше воспринимаемая цена услуги, меньше отказ на мобильных.",
+ "risk": "слишком агрессивный vw на промежуточных ширинах может дать неудачные переносы — подбирать точки вручную.",
+ "rollback": "git checkout -- index.html (или работа в копии index.improved.html).",
+ "verify": "DevTools → responsive 360/768/1440, скриншоты до/после; проверить, что h1 ≤3 строк на 360px.",
+ "priority_claim": "1 — типографика даёт максимальный «премиальный» эффект при нулевом весе.",
+ "source_hint": "",
+ "site_request": "font-size",
+ "category": "skill",
+ "variants": [
+  "SKILL — fluid-type-scale\nНазвание: fluid-type-scale\nКогда применять: любой лендинг, где заголовки заданы фиксированными px и на мобильных выглядят либо огромными, либо мелкими; обязательный шаг «дорогого» вида — плавная типографическая шкала.\nШаги:\n1. Найти в CSS все font-size у h1/h2/h3/lead (.sub, .lead) и зафиксировать текущие значения.\n2. Заменить их на clamp с тремя точками: минимум (мобильный), «резиновое» значение в vw, максимум (десктоп).\n3. Задать единую шкалу: h1 clamp(2rem,5vw,3.5rem); h2 clamp(1.5rem,3.5vw,2.5rem); h3 clamp(1.1rem,2vw,1.4rem); body 16–17px; line-height 1.15 для заголовков, 1.6 для текста.\n4. Добавить letter-spacing: -0.02em крупным заголовкам (премиальный «плотный» вид) и max-width ~60ch абзацам.\n5. Проверить на 360px, 768px, 1440px — заголовки не переносятся по одной букве, h1 помещается в 3 строки максимум.\nSAFE CSS:\n```\nh1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.12;letter-spacing:-0.02em}\nh2{font-size:clamp(1.5rem,3.5vw,2.5rem);line-height:1.15;letter-spacing:-0.015em}\nh3{font-size:clamp(1.1rem,2vw,1.4rem);line-height:1.25}\np{line-height:1.6;max-width:62ch}\n@media (prefers-reduced-motion: reduce){*{letter-spacing:normal}}\n```",
+  "SKILL — fluid-type-scale\nName: `fluid-type-scale`\nWhen to apply: на любом статическом лендинге, где размеры заголовков заданы отдельными clamp-значениями без единой системы — из-за этого h2 в разных секциях «прыгают» и типографика выглядит самодельной.\nSteps:\n1. В `<style>` в блок `:root` добавить CSS-переменные шкалы (см. SAFE CSS).\n2. Заменить существующие `font-size: clamp(...)` у h1/h2/h3 на `var(--fs-h1)`, `var(--fs-h2)`, `var(--fs-h3)`; для body/lead — `var(--fs-body)`.\n3. Добавить `letter-spacing:-.02em` крупным заголовкам и `line-height:1.15` h1/h2, `line-height:1.6` абзацам — «дорогой» ритм.\n4. Проверить на 320px и 1440px, что ни один заголовок не переносится по одной букве.\nSAFE CSS:\n```css\n:root{\n--fs-h1:clamp(30px,5.2vw,58px);\n--fs-h2:clamp(26px,4vw,44px);\n--fs-h3:clamp(18px,2.2vw,22px);\n--fs-body:clamp(15.5px,1.6vw,18px);\n}\nh1{font-size:var(--fs-h1);line-height:1.15;letter-spacing:-.02em}\nh2{font-size:var(--fs-h2);line-height:1.18;letter-spacing:-.015em}\nh3{font-size:var(--fs-h3);line-height:1.35}\np,li{font-size:var(--fs-body);line-height:1.6}\n```"
+ ],
+ "flags": []
+}

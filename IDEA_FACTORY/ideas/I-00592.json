@@ -1,0 +1,26 @@
+{
+ "id": "I-00592",
+ "round": 89,
+ "time": "2026-11-17 06:01:47",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Preconnect + display=swap уже есть — добавить `<link rel=\"preload\">` конкретного woff2 Manrope 700",
+ "knob": "В `<head>` после preconnect-ссылок (fonts.googleapis.com, fonts.gstatic.com) добавить `<link rel=\"preload\" as=\"font\" type=\"font/woff2\" crossorigin href=\"https://fonts.gstatic.com/s/manrope/v15/xn7gYHE41ni1AdIRggexSg.woff2\">` (URL взять из Network-панели при загрузке — файл с weight 700, он используется в h1/h2/CTA).",
+ "skill": "",
+ "effect": "Убирает FOUT/невидимый текст заголовков на 100–300 мс при медленном соединении — первый экран читается сразу, LCP заголовка быстрее.",
+ "risk": "Preload не того файла (не тот unicode-range/weight) даст двойную загрузку шрифта и лишний запрос.",
+ "rollback": "`git checkout index.html`",
+ "verify": "F12 → Network → фильтр Font → перезагрузка: убедиться, что woff2 для weight 700 один и грузится с приоритетом High, а не после CSS.",
+ "priority_claim": "2 — заметно на мобильных, но эффект ограничен одним файлом шрифта.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<head>` после preconnect-ссылок (fonts.googleapis.com, fonts.gstatic.com) добавить `<link rel=\"preload\" as=\"font\" type=\"font/woff2\" crossorigin href=\"https://fonts.gstatic.com/s/manrope/v15/xn7gYHE41ni1AdIRggexSg.woff2\">` (URL взять из Network-панели при загрузке — файл с weight 700, он используется в h1/h2/CTA)."
+ ],
+ "flags": []
+}

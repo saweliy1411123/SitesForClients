@@ -1,0 +1,26 @@
+{
+ "id": "I-00594",
+ "round": 89,
+ "time": "2026-11-17 06:01:47",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Проверка контраста `--muted`-текста на тёмном фоне (a11y WCAG AA)",
+ "knob": "METHOD: (1) В консоли выполнить: `[...document.querySelectorAll('p,li,span')].filter(e=>getComputedStyle(e).color).slice(0,50).forEach(e=>{const c=getComputedStyle(e).color;console.log(c,e.className||e.tagName)})` — выписать все используемые цвета текста. (2) Каждый hex прогнать через чек-лист: серый текст на `--bg` должен иметь ratio ≥4.5:1 (обычный) или ≥3:1 (≥18px bold). (3) Особое внимание `--muted` в `.price-card .per` (L350) и `.hero-note`. (4) Если ratio < 4.5 — осветлить переменную на 1–2 ступени.",
+ "skill": "",
+ "effect": "Гарантия, что слабовидящие пользователи и пользователи на телефоне при ярком свете читают цену и примечания; устранение типичного a11y-провала тёмных лендингов.",
+ "risk": "Осветление muted-цвета может снизить визуальную иерархию — менять точечно, не глобально.",
+ "rollback": "`git checkout index.html`",
+ "verify": "DevTools → Ctrl+Shift+P → «Show Rendering» → Emulate vision deficiencies → blurred vision / contrast loss: текст цены и hero-note остаётся читаемым.",
+ "priority_claim": "1 — цена — ключевая конверсионная точка, нечитаемый текст напрямую бьёт по заявкам.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: (1) В консоли выполнить: `[...document.querySelectorAll('p,li,span')].filter(e=>getComputedStyle(e).color).slice(0,50).forEach(e=>{const c=getComputedStyle(e).color;console.log(c,e.className||e.tagName)})` — выписать все используемые цвета текста. (2) Каждый hex прогнать через чек-лист: серый текст на `--bg` должен иметь ratio ≥4.5:1 (обычный) или ≥3:1 (≥18px bold). (3) Особое внимание `--muted` в `.price-card .per` (L350) и `.hero-note`. (4) Если ratio < 4.5 — осветлить переменную на 1–2 ступени."
+ ],
+ "flags": []
+}

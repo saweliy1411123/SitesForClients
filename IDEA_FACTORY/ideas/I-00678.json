@@ -1,0 +1,28 @@
+{
+ "id": "I-00678",
+ "round": 103,
+ "time": "2026-11-17 06:44:46",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 3,
+ "status": "NEW",
+ "title": "Service JSON-LD с реальными данными оффера (дополнение к LocalBusiness)",
+ "knob": "в `<head>` рядом с уже запланированным LocalBusiness (I-00613) добавить второй блок `<script type=\"application/ld+json\">` с `@type: Service`, `serviceType: \"Разработка лендингов\"`, `areaServed: \"Пермь\"`, `offers.priceSpecification` — только цифры и факты, которые реально есть на странице (цена из секции #price, срок «2 дня»).",
+ "skill": "",
+ "effect": "расширенные сниппеты в Яндексе (услуга + цена + город), рост CTR из поиска без изменения видимого контента.",
+ "risk": "расхождение разметки с фактическим текстом страницы — поисковый фильтр за структурированный спам.",
+ "rollback": "`git checkout -- index.html` (правка только в index.improved.html).",
+ "verify": "3 минуты — вставить JSON-LD в validator.schema.org и в Яндекс.Вебмастер → «Валидатор микроразметки»; убедиться, что ошибки нулевые.",
+ "priority_claim": "2 — усиливает локальное SEO, дешёво, но вторично после LocalBusiness.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "в `<head>` рядом с уже запланированным LocalBusiness (I-00613) добавить второй блок `<script type=\"application/ld+json\">` с `@type: Service`, `serviceType: \"Разработка лендингов\"`, `areaServed: \"Пермь\"`, `offers.priceSpecification` — только цифры и факты, которые реально есть на странице (цена из секции #price, срок «2 дня»)."
+ ],
+ "flags": []
+}

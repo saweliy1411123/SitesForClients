@@ -1,0 +1,26 @@
+{
+ "id": "I-00216",
+ "round": 33,
+ "time": "2026-11-17 03:15:19",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить `role=\"alert\"` к элементам счётчиков доверия (proof‑item)",
+ "knob": "В HTML обернуть каждый `<em data-count=\"…\">` в `<span class=\"proof-number\" role=\"alert\" aria-live=\"polite\">…</span>`",
+ "skill": "",
+ "effect": "Скрин‑ридеры объявят изменение цифр как важное уведомление, повышая восприятие динамических доказательств",
+ "risk": "Возможна небольшая нагрузка на скрин‑ридер при каждом обновлении счётчика; однако счётчики обновляются один раз при загрузке, так что риск ничтожен",
+ "rollback": "Удалить обёртку и атрибуты; `git checkout -- index.html`",
+ "verify": "Включить VoiceOver/NVDA, перезагрузить страницу, убедиться, что при появлении цифр озвучивается их значение",
+ "priority_claim": "3 – небольшое улучшение доступности, не критично, но полезно",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В HTML обернуть каждый `<em data-count=\"…\">` в `<span class=\"proof-number\" role=\"alert\" aria-live=\"polite\">…</span>`"
+ ],
+ "flags": []
+}

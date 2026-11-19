@@ -1,0 +1,26 @@
+{
+ "id": "I-00016",
+ "round": 2,
+ "time": "2026-11-17 01:46:23",
+ "source": "localhost:8080/zhipu/glm-4.7-flash",
+ "sources": [
+  "localhost:8080/zhipu/glm-4.7-flash"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Тест схемы LocalBusiness (Schema.org)",
+ "knob": "Вставить скрипт с `@type: LocalBusiness`, `name: \"Савелий\"`, `areaServed: \"Пермь\"`. Прогнать через тест.",
+ "skill": "",
+ "effect": "Проверить, понимает ли Google суть бизнеса (лендинги в Перми) для будущих сниппетов.",
+ "risk": "Нет (локальный тест).",
+ "rollback": "Удалить тег `<script type=\"application/ld+json\">`.",
+ "verify": "Результат теста — \"LocalBusiness\" или \"Service\"?",
+ "priority_claim": "3 (SEO)",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Вставить скрипт с `@type: LocalBusiness`, `name: \"Савелий\"`, `areaServed: \"Пермь\"`. Прогнать через тест."
+ ],
+ "flags": []
+}

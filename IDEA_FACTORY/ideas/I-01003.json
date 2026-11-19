@@ -1,0 +1,26 @@
+{
+ "id": "I-01003",
+ "round": 1,
+ "time": "2026-11-17 17:15:52",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Мини‑форма захвата лидов — email + согласие GDPR",
+ "knob": "После закрывающего `</header>` вставить блок `<section id=\"lead-capture\" class=\"lead-capture\"><h2>Получите бесплатный демо‑прототип</h2><form class=\"lead-form\" action=\"mailto:saveliy@example.com\" method=\"POST\" novalidate><input type=\"email\" name=\"email\" placeholder=\"Ваш e‑mail\" required aria-required=\"true\"><label class=\"gdpr\"><input type=\"checkbox\" name=\"gdpr\" required>Я согласен с обработкой данных</label><button type=\"submit\" class=\"btn-primary\">Отправить</button></form></section>` и добавить CSS‑стили для `.lead-capture` / `.lead-form`.",
+ "skill": "",
+ "effect": "Прямой путь к заявке без переходов повышает конверсию, а согласие удовлетворяет требования конфиденциальности.",
+ "risk": "Требует корректного `mailto:` или внешнего обработчика; если пользователь отключил почтовый клиент, запрос не дойдет.",
+ "rollback": "Удалить секцию `#lead-capture` и связанные стили (git checkout index.html).",
+ "verify": "Заполнить форму в браузере, убедиться, что открывается клиент почты с предзаполненными полями и не появляется JS‑ошибок.",
+ "priority_claim": "2 – высокий потенциал конверсии, но зависит от готовности владельца принимать письма.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "После закрывающего `</header>` вставить блок `<section id=\"lead-capture\" class=\"lead-capture\"><h2>Получите бесплатный демо‑прототип</h2><form class=\"lead-form\" action=\"mailto:saveliy@example.com\" method=\"POST\" novalidate><input type=\"email\" name=\"email\" placeholder=\"Ваш e‑mail\" required aria-required=\"true\"><label class=\"gdpr\"><input type=\"checkbox\" name=\"gdpr\" required>Я согласен с обработкой данных</label><button type=\"submit\" class=\"btn-primary\">Отправить</button></form></section>` и добавить CSS‑стили для `.lead-capture` / `.lead-form`."
+ ],
+ "flags": []
+}

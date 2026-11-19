@@ -1,0 +1,26 @@
+{
+ "id": "I-00177",
+ "round": 27,
+ "time": "2026-11-17 02:58:27",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — Safe Reveal on Scroll (IntersectionObserver)",
+ "knob": "**Name:** `safe-reveal-observer`\n**When to apply:** Для любой статической одностраничной посадочной, где элементы появляются при прокрутке (класс `.reveal`). Позволяет избавиться от «всплывающих» сдвигов и ускорить рендеринг за счёт отложенной инициализации.\n**Steps:**\n1. Убедиться, что все анимируемые блоки имеют класс `reveal`.\n2. Добавить в глобальный CSS базовые стили для скрытого состояния (см. ниже).\n3. В конец `<body>` вставить скрипт `SAFE JS:` (см. ниже).\n4. При необходимости добавить атрибут `data-delay` для кастомных задержек.\n**SAFE CSS:**\n```css\n.reveal {\nopacity: 0;\ntransform: translateY(20px);\ntransition: opacity .4s ease, transform .4s ease;\nwill-change: opacity, transform;\n}\n.reveal.visible {\nopacity: 1;\ntransform: none;\n}\n```\n**SAFE JS:**\n```js\ndocument.addEventListener('DOMContentLoaded', () => {\nconst targets = document.querySelectorAll('.reveal');\nif (!('IntersectionObserver' in window)) {\n// fallback: сразу показываем\ntargets.forEach(el => el.classList.add('visible'));\nreturn;\n}\nconst observer = new IntersectionObserver((entries, obs) => {\nentries.forEach(entry => {\nif (entry.isIntersecting) {\nentry.target.classList.add('visible');\nobs.unobserve(entry.target);\n}\n});\n}, {threshold: 0.15});\ntargets.forEach(el => observer.observe(el));\n});\n```",
+ "skill": "",
+ "effect": "Уменьшает Cumulative Layout Shift (CLS) и делает анимацию плавной, улучшая Core Web Vitals и восприятие сайта пользователем.",
+ "risk": "Требует поддержку IntersectionObserver (есть в всех современных браузерах; в старых будет простое fallback‑поведение).",
+ "rollback": "Удалить добавленные блоки CSS и JS, либо выполнить `git checkout index.html`.",
+ "verify": "Открыть страницу, включить DevTools → Performance → Layout Shift. Прокрутить страницу и убедиться, что CLS‑значение почти 0, а элементы плавно появятся.",
+ "priority_claim": "2 — улучшает метрики скорости и доступность, но требует небольшого кода; стоит реализовать после более «больших» конверс",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `safe-reveal-observer`\n**When to apply:** Для любой статической одностраничной посадочной, где элементы появляются при прокрутке (класс `.reveal`). Позволяет избавиться от «всплывающих» сдвигов и ускорить рендеринг за счёт отложенной инициализации.\n**Steps:**\n1. Убедиться, что все анимируемые блоки имеют класс `reveal`.\n2. Добавить в глобальный CSS базовые стили для скрытого состояния (см. ниже).\n3. В конец `<body>` вставить скрипт `SAFE JS:` (см. ниже).\n4. При необходимости добавить атрибут `data-delay` для кастомных задержек.\n**SAFE CSS:**\n```css\n.reveal {\nopacity: 0;\ntransform: translateY(20px);\ntransition: opacity .4s ease, transform .4s ease;\nwill-change: opacity, transform;\n}\n.reveal.visible {\nopacity: 1;\ntransform: none;\n}\n```\n**SAFE JS:**\n```js\ndocument.addEventListener('DOMContentLoaded', () => {\nconst targets = document.querySelectorAll('.reveal');\nif (!('IntersectionObserver' in window)) {\n// fallback: сразу показываем\ntargets.forEach(el => el.classList.add('visible'));\nreturn;\n}\nconst observer = new IntersectionObserver((entries, obs) => {\nentries.forEach(entry => {\nif (entry.isIntersecting) {\nentry.target.classList.add('visible');\nobs.unobserve(entry.target);\n}\n});\n}, {threshold: 0.15});\ntargets.forEach(el => observer.observe(el));\n});\n```"
+ ],
+ "flags": []
+}

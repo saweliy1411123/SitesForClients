@@ -1,0 +1,27 @@
+{
+ "id": "I-00597",
+ "round": 89,
+ "time": "2026-11-17 06:01:56",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Мобильное меню вместо скрытых nav-links",
+ "knob": "Сейчас `@media(max-width:720px){.nav-links{display:none}}` (L90) — на мобильных навигация исчезает полностью. Добавить компактное раскрывающееся меню: чекбокс-хак (`<input type=\"checkbox\" id=\"nav-toggle\" class=\"nav-toggle\">` + `<label for=\"nav-toggle\" aria-label=\"Открыть меню\">≡</label>`) без JS, ссылки «Цена», «Демо», «FAQ» остаются доступными на телефоне.",
+ "skill": "",
+ "effect": "Мобильный пользователь получает прямой путь к цене/FAQ/CTA из шапки — меньше прокрутки, выше шанс дойти до заявки.",
+ "risk": "Дополнительный CSS-блок может конфликтовать с существующей высотой nav (68px) — нужно аккуратно позиционировать выпадающий список.",
+ "rollback": "`git checkout -- index.html`",
+ "verify": "DevTools → Toggle device toolbar → iPhone-профиль → клик по ≡ → меню открывается/закрывается, ссылки кликабельны, Tab-фокус доходит.",
+ "priority_claim": "1 (реально потерянный конверсионный путь на мобильных, где основной трафик)",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Сейчас `@media(max-width:720px){.nav-links{display:none}}` (L90) — на мобильных навигация исчезает полностью. Добавить компактное раскрывающееся меню: чекбокс-хак (`<input type=\"checkbox\" id=\"nav-toggle\" class=\"nav-toggle\">` + `<label for=\"nav-toggle\" aria-label=\"Открыть меню\">≡</label>`) без JS, ссылки «Цена», «Демо», «FAQ» остаются доступными на телефоне.",
+  "В `@media(max-width:720px)` (L90) заменить `.nav-links{display:none}` на горизонтальную прокручиваемую полосу якорей: `.nav-links{display:flex;overflow-x:auto;gap:10px;font-size:13px;padding:8px 16px;position:fixed;top:0;left:0;right:0;background:rgba(10,10,15,.85);backdrop-filter:blur(8px)}` — сейчас на мобильных навигация полностью отсутствует, единственный путь — скролл."
+ ],
+ "flags": []
+}

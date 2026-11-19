@@ -1,0 +1,26 @@
+{
+ "id": "I-00630",
+ "round": 95,
+ "time": "2026-11-17 06:19:21",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Стоимость‑в‑долларах — добавить автоматический конвертер цены в USD для международных посетителей",
+ "knob": "в `.price-card .per` (где указана цена в RUB) добавить `<span class=\"price-rub\">12 000 ₽</span><span class=\"price-usd\" data-rub=\"12000\"></span>`; в CSS: ` .price-usd{margin-left:.5rem;color:var(--muted);font-size:.9em;}`; в JS‑блоке внизу добавить:\n```js\nfetch('https://api.exchangerate.host/latest?base=RUB&symbols=USD')\n.then(r=>r.json())\n.then(d=>{document.querySelectorAll('.price-usd').forEach(el=>{const rub=+el.dataset.rub;el.textContent=`≈ $${(rub*d.rates.USD).toFixed(0)}`});})\n.catch(()=>{});\n```",
+ "skill": "",
+ "effect": "повышает доверие иностранных клиентов, раскрывает потенциальный рынок, улучшает восприятие цены без изменения основной бизнес‑модели.",
+ "risk": "зависит от внешнего API (может быть недоступен); требуется подключение к сети, но без передачи личных данных.",
+ "rollback": "удалить добавленные `<span class=\"price-usd\">` и JS‑скрипт (или `git checkout -- index.html`).",
+ "verify": "открыть страницу, переключить VPN/локаль на не‑RU; убедиться, что рядом с ценой появляется «≈ $…». Проверить отсутствие ошибок в Console.",
+ "priority_claim": "3 — модный, но не критичный для локального бизнес‑офера; реализуется быстро, но имеет внешнюю зависимость.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "в `.price-card .per` (где указана цена в RUB) добавить `<span class=\"price-rub\">12 000 ₽</span><span class=\"price-usd\" data-rub=\"12000\"></span>`; в CSS: ` .price-usd{margin-left:.5rem;color:var(--muted);font-size:.9em;}`; в JS‑блоке внизу добавить:\n```js\nfetch('https://api.exchangerate.host/latest?base=RUB&symbols=USD')\n.then(r=>r.json())\n.then(d=>{document.querySelectorAll('.price-usd').forEach(el=>{const rub=+el.dataset.rub;el.textContent=`≈ $${(rub*d.rates.USD).toFixed(0)}`});})\n.catch(()=>{});\n```"
+ ],
+ "flags": []
+}

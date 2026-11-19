@@ -1,0 +1,26 @@
+{
+ "id": "I-00657",
+ "round": 100,
+ "time": "2026-11-17 06:34:55",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Console‑driven copy variant toggle (query‑param + data‑attribute)",
+ "knob": "В `<head>` добавить небольшую CSS‑правку — правила для альтернативного текста/стилей, привязанные к `body[data-variant=\"B\"]`. По‑умолчанию `data-variant=\"A\"`. В консоли менять вариант: `document.body.dataset.variant='B'` (или добавить `?v=B` и в скрипте читать `location.search`).",
+ "skill": "",
+ "effect": "мгновенно сравнивать два варианта заголовка, CTA‑текста или цвета без изменения файлов; позволяет оценить влияние копирайта на клики (через уже‑существующий click‑logger).",
+ "risk": "изменение не сохраняется после перезагрузки — результаты могут быть непоследовательными, если пользователь не обновит страницу.",
+ "rollback": "просто перезагрузить страницу (сбросит `data-variant` к «A»).",
+ "verify": "1) Открыть страницу, открыть DevTools → Console. 2) Выполнить `document.body.dataset.variant='B'`. 3) Убедиться, что изменился нужный элемент (например, текст в `.hero h1`). 4) При желании вернуть «A» командой `document.body.dataset.variant='A'`.",
+ "priority_claim": "1 — самый быстрый способ проверить гипотезу о копирайте без правки кода.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<head>` добавить небольшую CSS‑правку — правила для альтернативного текста/стилей, привязанные к `body[data-variant=\"B\"]`. По‑умолчанию `data-variant=\"A\"`. В консоли менять вариант: `document.body.dataset.variant='B'` (или добавить `?v=B` и в скрипте читать `location.search`)."
+ ],
+ "flags": []
+}

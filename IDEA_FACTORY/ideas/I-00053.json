@@ -1,0 +1,26 @@
+{
+ "id": "I-00053",
+ "round": 7,
+ "time": "2026-11-17 02:00:25",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — Premium Heading Reveal with Staggered Fade‑Scale",
+ "knob": "METHOD: Create reusable skill **premium-heading-reveal**\n```markdown\n# premium-heading-reveal.md\n## Название\nPremium Heading Reveal with Staggered Fade‑Scale\n## Когда применять\nДля ключевых заголовков (h1, h2, h3) в hero‑секции и блоках‑преимуществ, где нужен эффект появления, подчеркивающий премиальность без JavaScript.\n## Шаги\n1. Добавьте к заголовкам класс `reveal-heading`.\n2. Подключите файл `premium-heading-reveal.css` в `<head>`.\n3. При необходимости задайте задержку через CSS‑переменную `--reveal-delay`.\n## SAFE CSS:\n```css\n/* premium-heading-reveal.css */\n.reveal-heading {\nopacity: 0;\ntransform: translateY(20px) scale(0.96);\nanimation: headingReveal 0.8s forwards ease-out;\n}\n.reveal-heading[data-index] {\n--reveal-delay: calc(var(--index, 0) * 0.12s);\nanimation-delay: var(--reveal-delay);\n}\n@keyframes headingReveal {\nto {\nopacity: 1;\ntransform: translateY(0) scale(1);\n}\n}\n@media (prefers-reduced-motion: reduce) {\n.reveal-heading {\nanimation: none;\nopacity: 1;\ntransform: none;\n}\n}\n```\n## SAFE JS: *(optional – only to auto‑assign data-index for sequential headings)*\n```js\n/* premium-heading-reveal.js */\ndocument.querySelectorAll('.reveal-heading').forEach((el, i) => {\nel.dataset.index = i;\n});\n```\n```",
+ "skill": "premium-heading-reveal",
+ "effect": "Делает появление заголовков плавным и последовательным, усиливает восприятие «дорогого» дизайна, удерживает внимание пользователя в начале просмотра.",
+ "risk": "При отключённом JavaScript некоторые заголовки могут не получить `data-index`, но анимация всё равно сработает без задержки; воздействие минимально.",
+ "rollback": "`git rm src/skills/premium-heading-reveal.css src/skills/premium-heading-reveal.js && git checkout -- index.html`.",
+ "verify": "Откройте страницу, проверьте, что h1‑h3 появляются один за другим с лёгким подъёмом и увеличением; включите режим «reduce motion» — анимация должна исчезнуть, заголовки видны сразу.",
+ "priority_claim": "2 — улучшает восприятие премиального бренда, легко внедряется, не замедляет загрузку.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "METHOD: Create reusable skill **premium-heading-reveal**\n```markdown\n# premium-heading-reveal.md\n## Название\nPremium Heading Reveal with Staggered Fade‑Scale\n## Когда применять\nДля ключевых заголовков (h1, h2, h3) в hero‑секции и блоках‑преимуществ, где нужен эффект появления, подчеркивающий премиальность без JavaScript.\n## Шаги\n1. Добавьте к заголовкам класс `reveal-heading`.\n2. Подключите файл `premium-heading-reveal.css` в `<head>`.\n3. При необходимости задайте задержку через CSS‑переменную `--reveal-delay`.\n## SAFE CSS:\n```css\n/* premium-heading-reveal.css */\n.reveal-heading {\nopacity: 0;\ntransform: translateY(20px) scale(0.96);\nanimation: headingReveal 0.8s forwards ease-out;\n}\n.reveal-heading[data-index] {\n--reveal-delay: calc(var(--index, 0) * 0.12s);\nanimation-delay: var(--reveal-delay);\n}\n@keyframes headingReveal {\nto {\nopacity: 1;\ntransform: translateY(0) scale(1);\n}\n}\n@media (prefers-reduced-motion: reduce) {\n.reveal-heading {\nanimation: none;\nopacity: 1;\ntransform: none;\n}\n}\n```\n## SAFE JS: *(optional – only to auto‑assign data-index for sequential headings)*\n```js\n/* premium-heading-reveal.js */\ndocument.querySelectorAll('.reveal-heading').forEach((el, i) => {\nel.dataset.index = i;\n});\n```\n```"
+ ],
+ "flags": []
+}

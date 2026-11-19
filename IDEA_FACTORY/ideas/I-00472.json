@@ -1,0 +1,26 @@
+{
+ "id": "I-00472",
+ "round": 70,
+ "time": "2026-11-17 05:04:59",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — Gradient Underline Hover for Section Headings",
+ "knob": "METHOD: SKILL\n**Name:** gradient-underline-hover\n**When to apply:** На заголовках h2 внутри секций, где требуется акцентировать название (например, «Три шага», «Цена», «FAQ»).\n**Steps:**\n1. Добавить к h2 класс `.underline-anim`.\n2. В CSS создать псевдо‑элемент `::after` с градиентным `background-image`.\n3. При `:hover`/`:focus-visible` анимировать `transform:scaleX(1)` от `scaleX(0)`.\nSAFE CSS:\n```css\nh2.underline-anim{position:relative;overflow:hidden}\nh2.underline-anim::after{\ncontent:\"\";position:absolute;bottom:0;left:0;height:3px;width:100%;\nbackground:linear-gradient(90deg,var(--blue),var(--purple));\ntransform:scaleX(0);transform-origin:left;transition:transform .35s ease\n}\nh2.underline-anim:hover::after,\nh2.underline-anim:focus-visible::after{transform:scaleX(1)}\n```\nSAFE JS: *(не требуется)*",
+ "skill": "gradient-underline-hover",
+ "effect": "При наведении/фокусе под заголовком появляется яркая градиентная линия, подчёркивающая важность секции и усиливающая восприятие «премиального» дизайна.",
+ "risk": "Нет; только визуальное изменение, не влияет на SEO или доступность.",
+ "rollback": "Удалить класс `.underline-anim` из HTML и CSS‑правила из `index.improved.html` или откатить `git checkout -- index.improved.html`.",
+ "verify": "Открыть страницу, навести курсор на любой h2 с классом `.underline-anim` – должна появиться плавно анимированная градиентная линия; проверить доступность через клавиатуру (Tab → focus).",
+ "priority_claim": "2 – быстрый визуальный апгрейд, улучшает восприятие структуры без нагрузки.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "METHOD: SKILL\n**Name:** gradient-underline-hover\n**When to apply:** На заголовках h2 внутри секций, где требуется акцентировать название (например, «Три шага», «Цена», «FAQ»).\n**Steps:**\n1. Добавить к h2 класс `.underline-anim`.\n2. В CSS создать псевдо‑элемент `::after` с градиентным `background-image`.\n3. При `:hover`/`:focus-visible` анимировать `transform:scaleX(1)` от `scaleX(0)`.\nSAFE CSS:\n```css\nh2.underline-anim{position:relative;overflow:hidden}\nh2.underline-anim::after{\ncontent:\"\";position:absolute;bottom:0;left:0;height:3px;width:100%;\nbackground:linear-gradient(90deg,var(--blue),var(--purple));\ntransform:scaleX(0);transform-origin:left;transition:transform .35s ease\n}\nh2.underline-anim:hover::after,\nh2.underline-anim:focus-visible::after{transform:scaleX(1)}\n```\nSAFE JS: *(не требуется)*"
+ ],
+ "flags": []
+}

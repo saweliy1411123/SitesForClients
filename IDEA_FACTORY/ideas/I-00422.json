@@ -1,0 +1,26 @@
+{
+ "id": "I-00422",
+ "round": 63,
+ "time": "2026-11-17 04:43:53",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Glassmorphism для карточек цены",
+ "knob": "В `.price-card` добавить `background: rgba(255,255,255,0.07); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.12);` и скорректировать цвет текста на более контрастный (`color:#fff`). При `:hover` слегка увеличить `background`‑прозрачность.",
+ "skill": "",
+ "effect": "Современный «стеклянный» стиль повышает премиальность предложения и улучшает визуальное различие карточек.",
+ "risk": "Safari < 13 и некоторые мобильные браузеры не поддерживают `backdrop-filter` → может выглядеть без размытия.",
+ "rollback": "Удалить новые свойства из `.price-card` (git checkout).",
+ "verify": "Просмотреть карточку в Chrome/Firefox – увидеть полупрозрачный фон с размытием; в Safari проверить отсутствие ошибок.",
+ "priority_claim": "2 – заметный апдейт дизайна, совместимость в большинстве современных браузеров.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `.price-card` добавить `background: rgba(255,255,255,0.07); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.12);` и скорректировать цвет текста на более контрастный (`color:#fff`). При `:hover` слегка увеличить `background`‑прозрачность."
+ ],
+ "flags": []
+}

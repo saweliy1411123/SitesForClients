@@ -1,0 +1,26 @@
+{
+ "id": "I-00903",
+ "round": 142,
+ "time": "2026-11-17 08:33:33",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Instant Structured‑Data Validation (JSON‑LD) via Console",
+ "knob": "METHOD: In DevTools console run a one‑liner that extracts every `<script type=\"application/ld+json\">`, parses the JSON, and logs simple schema checks (required @type, @id, name, url). Example:\n```js\n[...document.querySelectorAll('script[type=\"application/ld+json\"]')].forEach(s=>{\ntry{const j=JSON.parse(s.textContent);\nconst errs=[];\nif(!j['@type'])errs.push('missing @type');\nif(j['@type']==='FAQPage' && !Array.isArray(j.mainEntity))errs.push('FAQPage needs mainEntity array');\nconsole.log('✅ JSON‑LD',j['@type']||'unknown',errs.length?`❌ ${errs.join(', ')}`:'✅ valid');\n}catch(e){console.error('❌ invalid JSON‑LD',e);}\n});\n```",
+ "skill": "",
+ "effect": "Quickly reveals malformed or missing structured data, preventing SEO penalties and improving rich‑result eligibility.",
+ "risk": "Requires the page to contain JSON‑LD; network‑less validation only checks basic fields, so deeper schema errors may stay unnoticed.",
+ "rollback": "Refresh the page – no persistent changes were made.",
+ "verify": "Open console, run the script, and confirm that each JSON‑LD block logs “✅ valid” or shows specific missing‑field errors.",
+ "priority_claim": "2 – important for search visibility but not directly tied to immediate conversion.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: In DevTools console run a one‑liner that extracts every `<script type=\"application/ld+json\">`, parses the JSON, and logs simple schema checks (required @type, @id, name, url). Example:\n```js\n[...document.querySelectorAll('script[type=\"application/ld+json\"]')].forEach(s=>{\ntry{const j=JSON.parse(s.textContent);\nconst errs=[];\nif(!j['@type'])errs.push('missing @type');\nif(j['@type']==='FAQPage' && !Array.isArray(j.mainEntity))errs.push('FAQPage needs mainEntity array');\nconsole.log('✅ JSON‑LD',j['@type']||'unknown',errs.length?`❌ ${errs.join(', ')}`:'✅ valid');\n}catch(e){console.error('❌ invalid JSON‑LD',e);}\n});\n```"
+ ],
+ "flags": []
+}

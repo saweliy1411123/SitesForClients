@@ -1,0 +1,26 @@
+{
+ "id": "I-00256",
+ "round": 39,
+ "time": "2026-11-17 03:32:27",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "CSS‑Counter Step Numbers в секции «Три шага»",
+ "knob": "В `.steps` добавить `counter-reset: step;` и к каждому элементу шага (`.step-item`) задать `counter-increment: step;` и псевдо‑элемент `::before {content: counter(step);}` стилизовать как круг.",
+ "skill": "",
+ "effect": "Визуальная нумерация упрощает восприятие процесса, повышает конверсию.",
+ "risk": "Если структура HTML изменится, счётчик может «сломаться».",
+ "rollback": "Удалить добавленные CSS‑правила.",
+ "verify": "Открыть страницу, убедиться, что перед каждым шагом появляется номер.",
+ "priority_claim": "2 – мало кода, заметный UX‑эффект.",
+ "source_hint": "",
+ "site_request": "steps",
+ "category": "lever",
+ "variants": [
+  "В `.steps` добавить `counter-reset: step;` и к каждому элементу шага (`.step-item`) задать `counter-increment: step;` и псевдо‑элемент `::before {content: counter(step);}` стилизовать как круг."
+ ],
+ "flags": []
+}

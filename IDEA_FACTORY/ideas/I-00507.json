@@ -1,0 +1,29 @@
+{
+ "id": "I-00507",
+ "round": 76,
+ "time": "2026-11-17 05:22:53",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "SKILL — fa",
+ "knob": "",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  ""
+ ],
+ "flags": [
+  "NO_KNOB"
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00441",
+ "round": 66,
+ "time": "2026-11-17 04:53:35",
+ "source": "lareper/deepseek-v4-pro-0813",
+ "sources": [
+  "lareper/deepseek-v4-pro-0813"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Замена I-00428/I-00429 (два sticky-CTA) — «Единый sticky-CTA с якорем и микро-сроком»",
+ "knob": "Вместо двух sticky-баров (I-00428 и I-00429) оставить один: в конец `<body>` добавить `<div class=\"sticky-cta-bar\">` с кнопкой `<a class=\"btn-primary\" href=\"#contact\">Получить демо за 2 дня</a>` и скрыть на десктопе, показывать только на мобильных (`@media (max-width: 768px)`)",
+ "skill": "",
+ "effect": "Убирает дубль, снижает визуальный шум, подчёркивает ключевой оффер «2 дня» в момент решения",
+ "risk": "Если sticky-бар будет перекрывать контент на маленьких экранах — ухудшит UX",
+ "rollback": "Удалить блок `.sticky-cta-bar` и связанный CSS",
+ "verify": "За 5 минут: открыть в DevTools (iPhone SE), прокрутить до середины, убедиться, что кнопка не перекрывает текст и видна всегда",
+ "priority_claim": "1 — прямо влияет на конверсию с мобильных, где основной трафик",
+ "source_hint": "",
+ "site_request": "sticky-cta",
+ "category": "lever",
+ "variants": [
+  "Вместо двух sticky-баров (I-00428 и I-00429) оставить один: в конец `<body>` добавить `<div class=\"sticky-cta-bar\">` с кнопкой `<a class=\"btn-primary\" href=\"#contact\">Получить демо за 2 дня</a>` и скрыть на десктопе, показывать только на мобильных (`@media (max-width: 768px)`)"
+ ],
+ "flags": []
+}

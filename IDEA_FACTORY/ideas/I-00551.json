@@ -1,0 +1,26 @@
+{
+ "id": "I-00551",
+ "round": 82,
+ "time": "2026-11-17 05:39:37",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Темная тема по предпочтениям пользователя",
+ "knob": "В `<style>` добавить медиа‑правило\n```css\n@media (prefers-color-scheme: dark) {\n:root{\n--bg:#111;\n--text:#eee;\n--muted:#aaa;\n--grad:linear-gradient(135deg,#8b5cf6,#0da5c5);\n}\n}\n```\nи убедиться, что все цвета в CSS используют переменные `var(--bg)`, `var(--text)` и т.д. (при необходимости добавить их в текущий набор).",
+ "skill": "",
+ "effect": "Пользователи, включившие темный режим, увидят адаптированный дизайн, повышая комфорт и удовлетворённость → косвенно улучшает поведенческие метрики (время на сайте).",
+ "risk": "Нужно проверить, что контраст в темной теме удовлетворяет WCAG AA (тёмный фон + светлый текст).",
+ "rollback": "Удалить медиа‑правило (git checkout HEAD~1 index.html).",
+ "verify": "В Chrome DevTools → Rendering включить «Emulate CSS media feature prefers-color-scheme: dark», убедиться, что фон и текст меняются без визуальных артефактов. Проверить контраст через axe‑core (встроенный в DevTools).",
+ "priority_claim": "3 — не критично для SEO, но повышает UX для части аудитории.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<style>` добавить медиа‑правило\n```css\n@media (prefers-color-scheme: dark) {\n:root{\n--bg:#111;\n--text:#eee;\n--muted:#aaa;\n--grad:linear-gradient(135deg,#8b5cf6,#0da5c5);\n}\n}\n```\nи убедиться, что все цвета в CSS используют переменные `var(--bg)`, `var(--text)` и т.д. (при необходимости добавить их в текущий набор)."
+ ],
+ "flags": []
+}

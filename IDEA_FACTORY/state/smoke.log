@@ -1,0 +1,6 @@
+SITE FACTORY: 14 моделей, 6 параллельно, 300с на модель, 1 раундов, C:\Users\Савелий\Desktop\Мой сайт\index.html
+
+=== ROUND 1 (2026-11-17 01:29:01) targets 14 ===
+  OK   lareper/glm-5.2-fast-preview                33.8s 3035 chars (1 поп.)
+  OK   lareper/glm-5.3                             37.2s 2374 chars (1 поп.)
+  OK   localhost:8080/ovh/gpt-oss-120b             17.3s 4829 chars (1 поп.)

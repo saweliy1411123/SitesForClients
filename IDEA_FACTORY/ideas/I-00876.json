@@ -1,0 +1,26 @@
+{
+ "id": "I-00876",
+ "round": 133,
+ "time": "2026-11-17 08:08:54",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Depth‑hover 3D card",
+ "knob": "SKILL — depth-hover-card\nName: depth-hover-card\nWhen to apply: На любые карточки (`.price-card`, `.step`, `.demo-card`) где нужен интерактивный 3D‑эффект при наведении.\nSAFE CSS:\n```css\n.card-3d {\nperspective: 600px;\ntransform-style: preserve-3d;\ntransition: transform .3s ease;\n}\n```\nSAFE JS:\n```js\ndocument.querySelectorAll('.card-3d').forEach(c=>{\nc.addEventListener('mousemove',e=>{\nconst r=c.getBoundingClientRect();\nconst x=((e.clientX-r.left)/r.width-0.5)*20;\nconst y=((e.clientY-r.top)/r.height-0.5)*20;\nc.style.transform=`rotateY(${x}deg) rotateX(${ -y }deg)`;\n});\nc.addEventListener('mouseleave',()=>c.style.transform='rotateY(0) rotateX(0)');\n});\n```",
+ "skill": "",
+ "effect": "Делает карточки «живыми», повышает вовлечённость и запоминаемость предложения, что может увеличить конверсии в цене/демо.",
+ "risk": "На мобильных устройствах без указателя курсор не будет работать; потребуется fallback (без трансформаций).",
+ "rollback": "`git rm SKILLS/depth-hover-card.md && git checkout -- index.improved.html`",
+ "verify": "На ПК переместить курсор по карточке – она должна наклоняться; на мобильном проверить отсутствие ошибок в консоли.",
+ "priority_claim": "2 – хороший визуальный апгрейд, но требует JS, поэтому ставим после более критичных улучшений.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "SKILL — depth-hover-card\nName: depth-hover-card\nWhen to apply: На любые карточки (`.price-card`, `.step`, `.demo-card`) где нужен интерактивный 3D‑эффект при наведении.\nSAFE CSS:\n```css\n.card-3d {\nperspective: 600px;\ntransform-style: preserve-3d;\ntransition: transform .3s ease;\n}\n```\nSAFE JS:\n```js\ndocument.querySelectorAll('.card-3d').forEach(c=>{\nc.addEventListener('mousemove',e=>{\nconst r=c.getBoundingClientRect();\nconst x=((e.clientX-r.left)/r.width-0.5)*20;\nconst y=((e.clientY-r.top)/r.height-0.5)*20;\nc.style.transform=`rotateY(${x}deg) rotateX(${ -y }deg)`;\n});\nc.addEventListener('mouseleave',()=>c.style.transform='rotateY(0) rotateX(0)');\n});\n```"
+ ],
+ "flags": []
+}

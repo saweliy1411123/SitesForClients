@@ -1,0 +1,26 @@
+{
+ "id": "I-00879",
+ "round": 134,
+ "time": "2026-11-17 08:11:56",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Кликабельный телефонный CTA с `tel:` и микроданными `schema.org/ContactPoint`",
+ "knob": "В секцию `.final` (финальный CTA) добавить после существующего текста кнопку‑ссылку:\n```html\n<a href=\"tel:+7(999)123-45-67\" class=\"btn-primary phone-cta\" aria-label=\"Позвонить Савелию: +7 999 123‑45‑67\">\n📞 Позвонить сейчас\n</a>\n```\nи в `<head>` добавить JSON‑LD:\n```json\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"LocalBusiness\",\n\"telephone\":\"+7-999-123-4567\",\n\"contactPoint\":{\n\"@type\":\"ContactPoint\",\n\"telephone\":\"+7-999-123-4567\",\n\"contactType\":\"sales\"\n}\n}\n```",
+ "skill": "",
+ "effect": "Уменьшит трение для мобильных пользователей, позволяя сразу позвонить, повышая конверсию из мобильного трафика.",
+ "risk": "Неправильный формат номера или отсутствие поддержки `tel:` на десктопе (не критично).",
+ "rollback": "Удалить добавленный `<a>` и `<script type=\"application/ld+json\">` блок.",
+ "verify": "На мобильном эмуляторе кликнуть кнопку → должно открыться dialer; в консоли проверить наличие `ContactPoint` в `application/ld+json`.",
+ "priority_claim": "2 – быстрый выигрыш в мобильной конверсии, низкий риск.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В секцию `.final` (финальный CTA) добавить после существующего текста кнопку‑ссылку:\n```html\n<a href=\"tel:+7(999)123-45-67\" class=\"btn-primary phone-cta\" aria-label=\"Позвонить Савелию: +7 999 123‑45‑67\">\n📞 Позвонить сейчас\n</a>\n```\nи в `<head>` добавить JSON‑LD:\n```json\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"LocalBusiness\",\n\"telephone\":\"+7-999-123-4567\",\n\"contactPoint\":{\n\"@type\":\"ContactPoint\",\n\"telephone\":\"+7-999-123-4567\",\n\"contactType\":\"sales\"\n}\n}\n```"
+ ],
+ "flags": []
+}

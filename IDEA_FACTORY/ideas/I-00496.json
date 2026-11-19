@@ -1,0 +1,26 @@
+{
+ "id": "I-00496",
+ "round": 74,
+ "time": "2026-11-17 05:17:14",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "ARIA‑live объявление метрики скорости загрузки",
+ "knob": "Внутри `.hero-note` обернуть элемент с ID `load-time` в `<span class=\"load-time-announcer\" aria-live=\"polite\"></span>`; в существующий JS (или добавить небольшой скрипт) установить `textContent` этого спана после расчёта времени.",
+ "skill": "",
+ "effect": "Пользователи скрин‑ридеров услышат «Сайт загружается за X мс», усиливая доверие к заявленному быстродействию.",
+ "risk": "Требует небольшого JS‑кода; при отключённом JS метрика не отобразится.",
+ "rollback": "Удалить обёртку и скрипт (git checkout index.html).",
+ "verify": "Открыть страницу с включённым экранным диктором (NVDA/VoiceOver) – должна прозвучать метрика после загрузки.",
+ "priority_claim": "3 – хорошее, но не критичное улучшение.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Внутри `.hero-note` обернуть элемент с ID `load-time` в `<span class=\"load-time-announcer\" aria-live=\"polite\"></span>`; в существующий JS (или добавить небольшой скрипт) установить `textContent` этого спана после расчёта времени."
+ ],
+ "flags": []
+}

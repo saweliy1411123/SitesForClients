@@ -1,0 +1,26 @@
+{
+ "id": "I-00996",
+ "round": 170,
+ "time": "2026-11-17 17:11:03",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Tap‑Target Size Audit (mobile usability)",
+ "knob": "METHOD: In the console run the following one‑liner – it iterates over all interactive elements (`a[href]`, `button`, `[role=\"button\"]`) and logs those whose computed width or height is < 44 px (recommended minimum).\n```js\n[...document.querySelectorAll('a[href],button,[role=\"button\"]')].forEach(e=>{\nconst r=e.getBoundingClientRect();\nif(r.width<44||r.height<44) console.warn('Small tap target',e,r);\n});\n```",
+ "skill": "",
+ "effect": "Quickly identifies elements that are hard to tap on mobile, allowing you to enlarge padding/margins and improve conversion on small screens.",
+ "risk": "None – script runs only in the console, does not modify the page.",
+ "rollback": "Refresh the page (or close the tab).",
+ "verify": "Open DevTools → Console, paste the script, press Enter – check that no warnings appear for properly sized buttons.",
+ "priority_claim": "1 – Mobile tap‑target issues directly block users from clicking CTA links, impacting conversion.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: In the console run the following one‑liner – it iterates over all interactive elements (`a[href]`, `button`, `[role=\"button\"]`) and logs those whose computed width or height is < 44 px (recommended minimum).\n```js\n[...document.querySelectorAll('a[href],button,[role=\"button\"]')].forEach(e=>{\nconst r=e.getBoundingClientRect();\nif(r.width<44||r.height<44) console.warn('Small tap target',e,r);\n});\n```"
+ ],
+ "flags": []
+}

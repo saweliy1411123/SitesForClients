@@ -1,0 +1,26 @@
+{
+ "id": "I-00192",
+ "round": 29,
+ "time": "2026-11-17 03:04:29",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Клик‑тo‑call кнопка в мобильном фикс‑CTA",
+ "knob": "В файл `index.html` в блоке «sticky mobile cta» (L409) добавить `<a href=\"tel:+79001234567\" class=\"mobile-call btn-primary\" aria-label=\"Позвонить сейчас\">📞 Позвонить</a>` рядом с существующей ссылкой‑CTA; в CSS задать `.mobile-call{display:none;}` и в медиазапросе `@media(max-width:720px){.mobile-call{display:inline-block; margin-left:8px;}}`.",
+ "skill": "",
+ "effect": "Позволяет мобильным пользователям сразу позвонить, увеличивая конверсию из мобильного трафика.",
+ "risk": "Требуется актуальный номер телефона; если пользователь находится в другой стране, ссылка может не работать (но это небольшая проблема).",
+ "rollback": "`git checkout -- index.html` (удалить `<a href=\"tel:…\">`).",
+ "verify": "Открыть страницу на мобильном эмуляторе, убедиться, что кнопка видна, клик открывает dialer (можно проверить в Chrome DevTools → \"Device toolbar\" → \"Call\" действие).",
+ "priority_claim": "3 – полезно для мобильных, но менее критично, чем ясность оффера и социальное доказательство.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В файл `index.html` в блоке «sticky mobile cta» (L409) добавить `<a href=\"tel:+79001234567\" class=\"mobile-call btn-primary\" aria-label=\"Позвонить сейчас\">📞 Позвонить</a>` рядом с существующей ссылкой‑CTA; в CSS задать `.mobile-call{display:none;}` и в медиазапросе `@media(max-width:720px){.mobile-call{display:inline-block; margin-left:8px;}}`."
+ ],
+ "flags": []
+}

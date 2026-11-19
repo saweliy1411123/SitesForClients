@@ -1,0 +1,26 @@
+{
+ "id": "I-00326",
+ "round": 49,
+ "time": "2026-11-17 04:01:44",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — modal-glass-demo",
+ "knob": "METHOD: SKILL\n**Name:** `modal-glass-demo`\n**When to apply:** Для показа PDF‑кейс‑стади или больших изображений из секции «Демо‑концепты», заменяя простую ссылку на лёгкий премиальный модальный просмотр.\n**Steps:**\n1. Вставить в конец `<body>` разметку модального окна (скрытый `<div id=\"demoModal\">`).\n2. Добавить к каждому ссылочному элементу‑триггеру атрибут `data-modal=\"#demoModal\"` и класс `modal-trigger`.\n3. Подключить CSS‑блок и JS‑скрипт ниже.\n**SAFE CSS:**\n```css\n#demoModal{\nposition:fixed; inset:0; display:none; align-items:center; justify-content:center;\nbackground:rgba(0,0,0,.6);\nbackdrop-filter:blur(8px);\nz-index:1000;\n}\n#demoModal.show{display:flex;}\n.modal-content{\nbackground:#1a1a1a;\nborder-radius:12px;\npadding:24px;\nmax-width:90vw; max-height:85vh;\nbox-shadow:0 12px 30px rgba(0,0,0,.4);\noverflow:auto;\n}\n.modal-close{\nposition:absolute; top:12px; right:12px;\nbackground:transparent; border:none; color:#fff; font-size:1.5rem;\ncursor:pointer;\n}\n```\n**SAFE JS:**\n```js\ndocument.addEventListener('click', e=>{\nconst t=e.target.closest('.modal-trigger');\nif(t){\ne.preventDefault();\nconst modal=document.querySelector(t.dataset.modal);\nmodal.classList.add('show');\n}\nif(e.target.matches('.modal-close')||e.target===document.getElementById('demoModal')){\ndocument.getElementById('demoModal').classList.remove('show');\n}\n});\ndocument.addEventListener('keydown', e=>{\nif(e.key==='Escape') document.getElementById('demoModal').classList.remove('show');\n});\n```",
+ "skill": "",
+ "effect": "Позволяет пользователю просматривать демо‑материалы без ухода со страницы, усиливая доверие и время on‑site.",
+ "risk": "Требует небольшого JS‑вставки; если пользователь отключит JS, ссылка просто не откроет модал (не ломает навигацию).",
+ "rollback": "Удалить добавленные `<div id=\"demoModal\">…</div>`, ссылки‑триггеры и стили/скрипт; `git checkout -- index.html`.",
+ "verify": "Кликнуть по любой ссылке‑триггеру в секции «Демо‑концепты» – открывается полупрозрачный модальный слой с контентом; закрыть крестом, клавишей Esc.",
+ "priority_claim": "2 – повышает конверсию, но требует небольших правок HTML/JS.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "METHOD: SKILL\n**Name:** `modal-glass-demo`\n**When to apply:** Для показа PDF‑кейс‑стади или больших изображений из секции «Демо‑концепты», заменяя простую ссылку на лёгкий премиальный модальный просмотр.\n**Steps:**\n1. Вставить в конец `<body>` разметку модального окна (скрытый `<div id=\"demoModal\">`).\n2. Добавить к каждому ссылочному элементу‑триггеру атрибут `data-modal=\"#demoModal\"` и класс `modal-trigger`.\n3. Подключить CSS‑блок и JS‑скрипт ниже.\n**SAFE CSS:**\n```css\n#demoModal{\nposition:fixed; inset:0; display:none; align-items:center; justify-content:center;\nbackground:rgba(0,0,0,.6);\nbackdrop-filter:blur(8px);\nz-index:1000;\n}\n#demoModal.show{display:flex;}\n.modal-content{\nbackground:#1a1a1a;\nborder-radius:12px;\npadding:24px;\nmax-width:90vw; max-height:85vh;\nbox-shadow:0 12px 30px rgba(0,0,0,.4);\noverflow:auto;\n}\n.modal-close{\nposition:absolute; top:12px; right:12px;\nbackground:transparent; border:none; color:#fff; font-size:1.5rem;\ncursor:pointer;\n}\n```\n**SAFE JS:**\n```js\ndocument.addEventListener('click', e=>{\nconst t=e.target.closest('.modal-trigger');\nif(t){\ne.preventDefault();\nconst modal=document.querySelector(t.dataset.modal);\nmodal.classList.add('show');\n}\nif(e.target.matches('.modal-close')||e.target===document.getElementById('demoModal')){\ndocument.getElementById('demoModal').classList.remove('show');\n}\n});\ndocument.addEventListener('keydown', e=>{\nif(e.key==='Escape') document.getElementById('demoModal').classList.remove('show');\n});\n```"
+ ],
+ "flags": []
+}

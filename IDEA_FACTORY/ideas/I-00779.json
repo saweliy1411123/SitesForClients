@@ -1,0 +1,27 @@
+{
+ "id": "I-00779",
+ "round": 119,
+ "time": "2026-11-17 07:29:22",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Glassmorphic price‑card",
+ "knob": "В CSS для селектора `.price-card` добавить `background: rgba(255,255,255,0.12); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.18); box-shadow: 0 8px 32px rgba(0,0,0,0.25);` и `border-radius: 12px;`; удалить текущий сплошной фон, если он есть.",
+ "skill": "",
+ "effect": "Делает блок цены визуально «прозрачным», усиливает премиальный стиль и улучшает контраст с фоном, повышая читаемость.",
+ "risk": "На браузерах без поддержки `backdrop-filter` (IE, старый Edge) эффект будет отсутствовать, но контент останется читаемым.",
+ "rollback": "Откатить изменения в `.price-card` через `git checkout -- index.html`.",
+ "verify": "Открыть страницу в Chrome, Safari и Firefox; убедиться, что карточка имеет полупрозрачный фон и размытие; в браузерах без `backdrop-filter` проверять, что фон стал обычным (не ломает дизайн).",
+ "priority_claim": "2 — визуальная дифференциация цены, низкий риск.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В CSS для селектора `.price-card` добавить `background: rgba(255,255,255,0.12); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.18); box-shadow: 0 8px 32px rgba(0,0,0,0.25);` и `border-radius: 12px;`; удалить текущий сплошной фон, если он есть.",
+  "В CSS для `.price-card` добавить `background: rgba(255,255,255,0.12); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.18);` и `box-shadow: 0 8px 32px rgba(0,0,0,0.25);` (удалить текущий `background:#fff` если есть)."
+ ],
+ "flags": []
+}

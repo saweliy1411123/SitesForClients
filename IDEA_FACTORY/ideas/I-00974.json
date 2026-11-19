@@ -1,0 +1,26 @@
+{
+ "id": "I-00974",
+ "round": 163,
+ "time": "2026-11-17 09:32:05",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "I-01001 — SEO Meta Completeness Audit",
+ "knob": "METHOD: (1) Открыть `index.html` в Chrome. (2) В консоли выполнить однострочник:\n```js\n(() => {\nconst required = [\n{tag:'title',msg:'<title> отсутствует'},\n{meta:'description',msg:'meta[name=\"description\"] отсутствует'},\n{meta:'og:title',msg:'OG‑title отсутствует'},\n{meta:'og:description',msg:'OG‑description отсутствует'},\n{meta:'og:type',msg:'OG‑type отсутствует'},\n{meta:'viewport',msg:'meta[name=\"viewport\"] отсутствует'}\n];\nconst missing = required.filter(r=>{\nif (r.tag) return !document.querySelector(r.tag);\nreturn !document.head.querySelector(`meta[property=\"${r.meta}\"],meta[name=\"${r.meta}\"]`);\n});\nconsole.table(missing.map(m=>({Issue:m.msg})));\n})();\n```",
+ "skill": "",
+ "effect": "Быстрая проверка наличия всех критических SEO‑тегов; позволяет сразу увидеть пробелы, повышая вероятность правильного индексации и CTR в поиске.",
+ "risk": "Никаких изменений в коде, только чтение DOM; риск — ложные отрицательные результаты, если теги генерируются динамически (что здесь не так).",
+ "rollback": "Закрыть вкладку/консоль — изменений нет.",
+ "verify": "После выполнения в консоли должна отобразиться пустая таблица — все теги присутствуют; любые строки — нужна доработка.",
+ "priority_claim": "1 — SEO‑теги критичны для видимости в Яндексе и Google, а проверка занимает ≤ 2 минуты.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: (1) Открыть `index.html` в Chrome. (2) В консоли выполнить однострочник:\n```js\n(() => {\nconst required = [\n{tag:'title',msg:'<title> отсутствует'},\n{meta:'description',msg:'meta[name=\"description\"] отсутствует'},\n{meta:'og:title',msg:'OG‑title отсутствует'},\n{meta:'og:description',msg:'OG‑description отсутствует'},\n{meta:'og:type',msg:'OG‑type отсутствует'},\n{meta:'viewport',msg:'meta[name=\"viewport\"] отсутствует'}\n];\nconst missing = required.filter(r=>{\nif (r.tag) return !document.querySelector(r.tag);\nreturn !document.head.querySelector(`meta[property=\"${r.meta}\"],meta[name=\"${r.meta}\"]`);\n});\nconsole.table(missing.map(m=>({Issue:m.msg})));\n})();\n```"
+ ],
+ "flags": []
+}

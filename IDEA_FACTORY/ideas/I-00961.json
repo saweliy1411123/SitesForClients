@@ -1,0 +1,26 @@
+{
+ "id": "I-00961",
+ "round": 159,
+ "time": "2026-11-17 09:21:26",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Явный `role=\"navigation\"` и `aria-label` для меню‑ссылок",
+ "knob": "Найти существующий контейнер навигации (вероятно `<nav class=\"nav-links\">` или аналог) и добавить атрибуты\n```html\n<nav class=\"nav-links\" role=\"navigation\" aria-label=\"Главное меню\">\n```",
+ "skill": "",
+ "effect": "Улучшает семантику и навигацию скрин‑ридеров, повышает SEO‑оценку структуры сайта.",
+ "risk": "Минимальный – изменение атрибутов не влияет на визуальное отображение.",
+ "rollback": "Удалить добавленные атрибуты (git checkout -- index.html).",
+ "verify": "В DevTools → Accessibility проверить, что элемент помечен как “navigation”.",
+ "priority_claim": "1 – быстрый апдейт, сразу повышает доступность.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Найти существующий контейнер навигации (вероятно `<nav class=\"nav-links\">` или аналог) и добавить атрибуты\n```html\n<nav class=\"nav-links\" role=\"navigation\" aria-label=\"Главное меню\">\n```"
+ ],
+ "flags": []
+}

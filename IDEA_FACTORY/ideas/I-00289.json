@@ -1,0 +1,26 @@
+{
+ "id": "I-00289",
+ "round": 44,
+ "time": "2026-11-17 03:46:38",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Quick Lighthouse Accessibility & Performance snapshot",
+ "knob": "METHOD: Open Chrome DevTools → Lighthouse panel → check **Accessibility** + **Performance** categories only → run on “Mobile” preset (no network throttling) → export the report (JSON) for comparison.",
+ "skill": "",
+ "effect": "Detects major accessibility violations (missing aria, low contrast, focus‑visible) and performance regressions (LCP, FID) within 2 minutes, allowing fast iteration before any deployment.",
+ "risk": "May surface false‑positives on animations that are intentionally decorative; requires manual triage.",
+ "rollback": "Close DevTools; no file changes made.",
+ "verify": "Review the generated Lighthouse tables; ensure Accessibility score ≥ 90 and Performance ≥ 80 before proceeding.",
+ "priority_claim": "1 – Accessibility is a legal/UX baseline; performance directly impacts conversion on this single‑page site.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: Open Chrome DevTools → Lighthouse panel → check **Accessibility** + **Performance** categories only → run on “Mobile” preset (no network throttling) → export the report (JSON) for comparison."
+ ],
+ "flags": []
+}

@@ -1,0 +1,29 @@
+{
+ "id": "I-00727",
+ "round": 112,
+ "time": "2026-11-17 07:09:22",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "SKILL — focus-glow-ring (премиальное световое кольцо на клавиатурном фокусе)",
+ "knob": "SKILL — focus-glow-ring\nName: `focus-glow-ring`\nWhen to apply: на любом лендинге, где есть ссылки-CTA, пункты меню и FAQ `<summary>` — заменить «стандартную» рамку фокуса на мягкое светящееся кольцо в фирменном цвете, чтобы навигация с клавиатуры выглядела продуманной и премиальной (a11y + стиль одновременно).\nSteps:\n1. В конец `<style>` добавить CSS из SAFE CSS.\n2. Уб",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "SKILL — focus-glow-ring\nName: `focus-glow-ring`\nWhen to apply: на любом лендинге, где есть ссылки-CTA, пункты меню и FAQ `<summary>` — заменить «стандартную» рамку фокуса на мягкое светящееся кольцо в фирменном цвете, чтобы навигация с клавиатуры выглядела продуманной и премиальной (a11y + стиль одновременно).\nSteps:\n1. В конец `<style>` добавить CSS из SAFE CSS.\n2. Уб"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00254",
+ "round": 39,
+ "time": "2026-11-17 03:32:27",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Structured‑Data Offer Schema for Hero CTA",
+ "knob": "В конец `<head>` добавить `<script type=\"application/ld+json\">` с объектом `@type\":\"Offer\"` (offerDescription из <h1>, price из price‑card, availability \"InStock\", url из href‑ссылки CTA).",
+ "skill": "",
+ "effect": "Повышает видимость в поиске (rich snippet), усиливает доверие и кликабельность.",
+ "risk": "Требует корректных данных — если цена изменится, JSON‑LD надо обновлять.",
+ "rollback": "`git checkout index.html` (или удалить добавленный `<script>`).",
+ "verify": "Открыть страницу в Chrome DevTools → «Structured Data Testing Tool», убедиться в валидности Offer.",
+ "priority_claim": "1 – быстрый ROI, улучшает SEO без кода‑бэкенда.",
+ "source_hint": "",
+ "site_request": "hero",
+ "category": "lever",
+ "variants": [
+  "В конец `<head>` добавить `<script type=\"application/ld+json\">` с объектом `@type\":\"Offer\"` (offerDescription из <h1>, price из price‑card, availability \"InStock\", url из href‑ссылки CTA)."
+ ],
+ "flags": []
+}

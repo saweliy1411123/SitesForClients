@@ -1,0 +1,26 @@
+{
+ "id": "I-00097",
+ "round": 14,
+ "time": "2026-11-17 02:21:17",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — Sticky Shrinking Header",
+ "knob": "METHOD: Добавьте класс `.sticky-header` к `<header>` и скрипт, который при прокрутке более 80 px добавляет `shrink`‑модификатор, уменьшая высоту и размер логотипа.\nSAFE CSS:\n```css\n.sticky-header {\nposition: sticky;\ntop: 0;\nbackground: var(--bg);\ntransition: all .3s ease;\nz-index: 1000;\n}\n.sticky-header.shrink {\npadding: .5rem 1rem;\n}\n.sticky-header.shrink .logo {\nheight: 32px;\n}\n.logo { height: 48px; transition: height .3s ease; }\n```\nSAFE JS:\n```js\nwindow.addEventListener('scroll', () => {\nconst hdr = document.querySelector('.sticky-header');\nif (!hdr) return;\nhdr.classList.toggle('shrink', window.scrollY > 80);\n});\n```",
+ "skill": "",
+ "effect": "Постоянно видимый CTA‑header, экономит экранное пространство при чтении, усиливает восприятие профессионального дизайна.",
+ "risk": "При отключённом JS header не будет «сжиматься», но останется фиксированным – приемлемо.",
+ "rollback": "Удалить добавленные CSS/JS и класс из HTML; откатить файл через Git.",
+ "verify": "Прокрутить страницу, убедиться, что header уменьшился после 80 px, и вернулся при возврате наверх.",
+ "priority_claim": "1 – улучшает навигацию и визуальный стиль, особенно на мобильных, без риска.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "METHOD: Добавьте класс `.sticky-header` к `<header>` и скрипт, который при прокрутке более 80 px добавляет `shrink`‑модификатор, уменьшая высоту и размер логотипа.\nSAFE CSS:\n```css\n.sticky-header {\nposition: sticky;\ntop: 0;\nbackground: var(--bg);\ntransition: all .3s ease;\nz-index: 1000;\n}\n.sticky-header.shrink {\npadding: .5rem 1rem;\n}\n.sticky-header.shrink .logo {\nheight: 32px;\n}\n.logo { height: 48px; transition: height .3s ease; }\n```\nSAFE JS:\n```js\nwindow.addEventListener('scroll', () => {\nconst hdr = document.querySelector('.sticky-header');\nif (!hdr) return;\nhdr.classList.toggle('shrink', window.scrollY > 80);\n});\n```"
+ ],
+ "flags": []
+}

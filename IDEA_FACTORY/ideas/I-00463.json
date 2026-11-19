@@ -1,0 +1,27 @@
+{
+ "id": "I-00463",
+ "round": 68,
+ "time": "2026-11-17 05:00:31",
+ "source": "lareper/glm-5.2-fast-preview",
+ "sources": [
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.2"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Локальное SEO — город и услуга в og:title/og:description и description без смены бренда",
+ "knob": "В `<meta name=\"description\">` и `og:description` добавить явные «Пермь», «лендинг за 2 дня», «бесплатное демо» (если их нет — сверить с текущим текстом), плюс `<html lang=\"ru\">` и `<meta property=\"og:locale\" content=\"ru_RU\">`.",
+ "skill": "",
+ "effect": "Лучший CTR в выдаче и корректный сниппет/превью в соцсетях для гео-запросов «лендинг Пермь».",
+ "risk": "Канонический домен неизвестен — og:url/canonical не добавлять, пока владелец не подтвердит адрес (требует решения владельца).",
+ "rollback": "`git checkout -- index.html`.",
+ "verify": "(3 мин) Открыть opengraph.xyz или devtools → Elements: убедиться, что «Пермь» и «2 дня» присутствуют в description/og, `lang=\"ru\"` стоит.",
+ "priority_claim": "2 — быстрый SEO-выигрыш, но зависит от наличия реального домена.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<meta name=\"description\">` и `og:description` добавить явные «Пермь», «лендинг за 2 дня», «бесплатное демо» (если их нет — сверить с текущим текстом), плюс `<html lang=\"ru\">` и `<meta property=\"og:locale\" content=\"ru_RU\">`."
+ ],
+ "flags": []
+}

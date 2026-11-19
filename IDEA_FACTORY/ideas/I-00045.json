@@ -1,0 +1,32 @@
+{
+ "id": "I-00045",
+ "round": 5,
+ "time": "2026-11-17 01:53:40",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b",
+  "localhost:8081/big_only"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Добавить медиа‑запрос `prefers-reduced-motion` для отключения анимаций у чувствительных пользователей",
+ "knob": "в CSS добавить\n```css\n@media (prefers-reduced-motion: reduce) {\n.reveal { animation: none !important; transition: none !important; }\n}\n```",
+ "skill": "",
+ "effect": "Уменьшит нагрузку на процессор и улучшит UX для пользователей, избегающих анимаций, соответствуя WCAG 2.1.",
+ "risk": "Анимации могут быть частью брендинга; их отключение может слегка изменить визуальное восприятие.",
+ "rollback": "Удалить добавленный блок CSS (`git checkout -- index.html`).",
+ "verify": "В Chrome DevTools → Rendering → Emulate CSS media `prefers-reduced-motion` и убедиться, что элементы с классом `.reveal` больше не анимируются.",
+ "priority_claim": "2 – небольшое изменение, повышает доступность без риска для конверсии.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "в CSS добавить\n```css\n@media (prefers-reduced-motion: reduce) {\n.reveal { animation: none !important; transition: none !important; }\n}\n```",
+  "В CSS добавить медиазапрос:\n```css\n@media (prefers-reduced-motion: reduce) {\n.reveal,\n.reveal * {\ntransition: none !important;\nanimation: none !important;\nopacity: 1 !important;\ntransform: none !important;\n}\n}\n```\nи в HTML добавить атрибут `data-reduced-motion=\"true\"` к корневому `<html>` (опционально) для отладки.",
+  "Обернуть все анимационные правила (например, `.reveal`, `.hero-note`, любые `@keyframes`) в медиа‑запрос:\n```css\n@media (prefers-reduced-motion: reduce){\n.reveal,.hero-note{transition:none;animation:none;}\n}\n```",
+  "В конец `<style>` добавить:\n```css\n@media (prefers-reduced-motion: reduce){\n.particles, .reveal, .magnetic{animation:none!important;transition:none!important}\n}\n```",
+  "Добавить в CSS блок `@media (prefers-reduced-motion: reduce){ .blob, .reveal, .hero-veil{animation:none !important; transition:none !important; } }`.",
+  "В конец CSS‑файла добавить\n```css\n/* SAFE CSS */\n@media (prefers-reduced-motion: reduce) {\n.hero .blob,\n.btn-primary .arr,\n.price-card:hover,\n.price-card:focus {\nanimation: none !important;\ntransition: none !important;\n}\n}\n```"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00184",
+ "round": 28,
+ "time": "2026-11-17 03:01:41",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "CTA‑hover glow – пульсирующее сияние кнопки",
+ "knob": "В CSS добавить правило `.btn-primary { transition: filter .3s ease; } .btn-primary:hover { filter: drop-shadow(0 0 8px rgba(139,92,246,0.7)); }` (или `box-shadow`‑аналог).",
+ "skill": "",
+ "effect": "Привлекает внимание к главному CTA без JS, создаёт ощущение интерактивности премиум‑уровня.",
+ "risk": "На слабых GPU может слегка увеличить нагрузку при частом наведении; небольшое увеличение repaint‑cost.",
+ "rollback": "Удалить новые два CSS‑правила или откатить файл через `git checkout -- index.html`.",
+ "verify": "Навести курсор на кнопку, убедиться в появлении мягкого свечения, измерить FPS в Chrome DevTools → Performance (не более 5 ms per frame).",
+ "priority_claim": "1 – минимальный код, высокий ROI для конверсии.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В CSS добавить правило `.btn-primary { transition: filter .3s ease; } .btn-primary:hover { filter: drop-shadow(0 0 8px rgba(139,92,246,0.7)); }` (или `box-shadow`‑аналог)."
+ ],
+ "flags": []
+}

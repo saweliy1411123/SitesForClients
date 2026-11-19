@@ -1,0 +1,27 @@
+{
+ "id": "I-00282",
+ "round": 42,
+ "time": "2026-11-17 03:41:31",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3",
+  "lareper/glm-5.2-fast-preview"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "SKILL — glass-card-premium (стеклянные карточки с backdrop-filter)",
+ "knob": "SKILL — glass-card-premium\nНазвание: glass-card-premium\nКогда применять: тёмный лендинг с цветными фоновыми блобами (",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "SKILL — glass-card-premium\nНазвание: glass-card-premium\nКогда применять: тёмный лендинг с цветными фоновыми блобами ("
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00259",
+ "round": 39,
+ "time": "2026-11-17 03:32:27",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Accordion FAQ на <details>/<summary>",
+ "knob": "В секции FAQ заменить текущий список вопросов на набор `<details class=\"faq-item\"><summary>Вопрос?</summary><p>Ответ.</p></details>`; добавить базовый CSS для плавный переход и индикатор «+».",
+ "skill": "",
+ "effect": "Уменьшает высоту страницы на мобильных, улучшает сканируемость, повышает UX.",
+ "risk": "Старые браузеры (IE) не поддерживают <details>, но их доля <1 % в целевой аудитории.",
+ "rollback": "Вернуть оригинальный HTML‑список вопросов.",
+ "verify": "Открыть страницу на мобильном, кликнуть вопрос – должен раскрыться.",
+ "priority_claim": "2 – незначительные изменения, улучшает мобильный UX.",
+ "source_hint": "",
+ "site_request": "FAQ",
+ "category": "lever",
+ "variants": [
+  "В секции FAQ заменить текущий список вопросов на набор `<details class=\"faq-item\"><summary>Вопрос?</summary><p>Ответ.</p></details>`; добавить базовый CSS для плавный переход и индикатор «+»."
+ ],
+ "flags": []
+}

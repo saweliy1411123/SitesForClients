@@ -1,0 +1,26 @@
+{
+ "id": "I-00882",
+ "round": 135,
+ "time": "2026-11-17 08:14:20",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "METHOD — Unused CSS selector audit",
+ "knob": "METHOD: В консоли DevTools выполнить скрипт, который перебирает все правила из `<style>` и `<link rel=\"stylesheet\">`, для каждого `rule.selectorText` делает `document.querySelectorAll(rule.selectorText)`. Если массив пуст — логировать селектор как «неиспользуемый».",
+ "skill": "",
+ "effect": "Быстрая диагностика «мёртвого» CSS — уменьшит размер стилей, ускорит рендер и снизит риск конфликтов.",
+ "risk": "Нет (только чтение DOM, без изменений).",
+ "rollback": "Закрыть консоль / перезагрузить страницу (изменения не сохраняются).",
+ "verify": "Запустить скрипт, убедиться, что в консоли выводятся только селекторы, не находящие элементы (если список пуст — всё ОК).",
+ "priority_claim": "2 — важно для скорости, но не критично для конверсии.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: В консоли DevTools выполнить скрипт, который перебирает все правила из `<style>` и `<link rel=\"stylesheet\">`, для каждого `rule.selectorText` делает `document.querySelectorAll(rule.selectorText)`. Если массив пуст — логировать селектор как «неиспользуемый»."
+ ],
+ "flags": []
+}

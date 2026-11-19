@@ -1,0 +1,26 @@
+{
+ "id": "I-00107",
+ "round": 16,
+ "time": "2026-11-17 02:26:29",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "5‑секундный Scroll‑Depth Logger",
+ "knob": "METHOD: В конец `<body>` добавить скрипт, который через `setTimeout` (5000 мс) измеряет текущий `window.scrollY` и выводит в консоль (`console.log('Scroll depth after 5s:', window.scrollY)`).",
+ "skill": "",
+ "effect": "Быстро покажет, как далеко пользователь скроллит за первые 5 секунд без взаимодействия, позволяя оценить привлекательность первого экрана и необходимость перемещения CTA выше.",
+ "risk": "Не учитывает длительные сессии; только измерение одного момента, может дать ложные выводы при медленном подключении.",
+ "rollback": "Удалить вставленный `<script>`‑блок (git checkout).",
+ "verify": "Открыть страницу, открыть DevTools → Console, дождаться 5 секунд и увидеть запись «Scroll depth after 5s: …».",
+ "priority_claim": "1 — минимум усилий, даёт прямой инсайт о вовлечённости пользователя сразу после загрузки.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: В конец `<body>` добавить скрипт, который через `setTimeout` (5000 мс) измеряет текущий `window.scrollY` и выводит в консоль (`console.log('Scroll depth after 5s:', window.scrollY)`)."
+ ],
+ "flags": []
+}

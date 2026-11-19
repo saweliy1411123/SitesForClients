@@ -1,0 +1,26 @@
+{
+ "id": "I-00730",
+ "round": 113,
+ "time": "2026-11-17 07:12:07",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Мобильная навигация-меню вместо скрытых ссылок (nav-links display:none на <720px)",
+ "knob": "В `@media(max-width:720px)` (L90) вместо `display:none` свернуть `.nav-links` в выпадающее меню: добавить после L438 кнопку-гамбургер `<button class=\"nav-toggle\" aria-expanded=\"false\" aria-label=\"Меню\">` и CSS: `.nav-toggle{display:none} @media(max-width:720px){.nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--bg);padding:20px} .nav-links.open{display:flex} .nav-toggle{display:block}}` + 3 строки JS: toggle класса `open` и атрибута `aria-expanded`.",
+ "skill": "",
+ "effect": "На телефоне (основной трафик локального бизнеса) все 5 якорей — «Цена», «Вопросы», CTA — доступны в один тап, вместо полной прокрутки; больше переходов к цене и заявке.",
+ "risk": "Без JS-обработчика кнопка будет мертва — нужно добавить тоггл в существующий `<script>` внизу.",
+ "rollback": "`git checkout -- index.html` (работать в копии index.improved.html).",
+ "verify": "DevTools → Toggle device toolbar (iPhone SE), проверить: гамбургер виден, клик открывает меню, все ссылки кликабельны, Tab-фокус попадает в меню; 3 минуты.",
+ "priority_claim": "1 — сейчас на мобильных навигация полностью отсутствует, это прямой барьер конверсии.",
+ "source_hint": "",
+ "site_request": "nav-toggle",
+ "category": "lever",
+ "variants": [
+  "В `@media(max-width:720px)` (L90) вместо `display:none` свернуть `.nav-links` в выпадающее меню: добавить после L438 кнопку-гамбургер `<button class=\"nav-toggle\" aria-expanded=\"false\" aria-label=\"Меню\">` и CSS: `.nav-toggle{display:none} @media(max-width:720px){.nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--bg);padding:20px} .nav-links.open{display:flex} .nav-toggle{display:block}}` + 3 строки JS: toggle класса `open` и атрибута `aria-expanded`."
+ ],
+ "flags": []
+}

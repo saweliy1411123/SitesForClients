@@ -1,0 +1,27 @@
+{
+ "id": "I-00047",
+ "round": 6,
+ "time": "2026-11-17 01:56:51",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — Accessible Focus Outline for Interactive Elements",
+ "knob": "METHOD: Add a reusable accessibility skill that globally applies a high‑contrast focus‑visible outline to all interactive elements (links, buttons, and any element with `role=\"button\"`).\nSAFE CSS:\n```css\n/* Accessible focus outline – applies only when user navigates via keyboard */\na:focus-visible,\nbutton:focus-visible,\n[role=\"button\"]:focus-visible {\noutline: 3px solid #8b5cf6;   /* brand accent */\noutline-offset: 4px;\nbox-shadow: 0 0 0 2px #fff;  /* ensures visibility on dark backgrounds */\n}\n/* Ensure that focus styles are not overridden by existing :focus rules */\na:focus,\nbutton:focus,\n[role=\"button\"]:focus {\noutline: none;\n}\n```",
+ "skill": "Accessible Focus Outline",
+ "effect": "Improves keyboard navigation visibility, boosting accessibility scores (WCAG 2.1 AA) and increasing conversion among users who rely on keyboard or assistive tech.",
+ "risk": "Minimal – only adds visual styling; could clash with existing custom focus styles if they use `!important`.",
+ "rollback": "`git checkout -- index.html` (or remove the added CSS block).",
+ "verify": "Open the page, press **Tab** to cycle through links/buttons; confirm a bright purple outline appears only on keyboard focus, not on mouse click. Use Chrome DevTools → Accessibility audit to see no violations.",
+ "priority_claim": "1 – quick, zero‑dependency win that immediately lifts accessibility compliance.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "METHOD: Add a reusable accessibility skill that globally applies a high‑contrast focus‑visible outline to all interactive elements (links, buttons, and any element with `role=\"button\"`).\nSAFE CSS:\n```css\n/* Accessible focus outline – applies only when user navigates via keyboard */\na:focus-visible,\nbutton:focus-visible,\n[role=\"button\"]:focus-visible {\noutline: 3px solid #8b5cf6;   /* brand accent */\noutline-offset: 4px;\nbox-shadow: 0 0 0 2px #fff;  /* ensures visibility on dark backgrounds */\n}\n/* Ensure that focus styles are not overridden by existing :focus rules */\na:focus,\nbutton:focus,\n[role=\"button\"]:focus {\noutline: none;\n}\n```",
+  "METHOD: Create a reusable “focus‑visible” skill that globally applies a high‑contrast outline to every keyboard‑focusable element (links, buttons, inputs, custom interactive blocks). The skill is stored as `SKILLS/focus-visible.md` and injected into any static landing page via a single `<link rel=\"stylesheet\" href=\"focus-visible.css\">` tag.\n**Skill body (focus-visible.md)**\n```markdown\n# Accessible Focus Outline\n## Когда применять\n- На любом сайте, где интерактивные элементы реализованы только через `<a>`‑ссылки или кастомные блоки без нативных `<button>`/`<input>`.\n- Чтобы обеспечить соответствие WCAG 2.1 AA (2.4.7 Focus Visible) без изменения существующего HTML.\n## Шаги внедрения\n1. Скопировать `focus-visible.css` в корень проекта.\n2. В `<head>` добавить `<link rel=\"stylesheet\" href=\"focus-visible.css\">`.\n3. При необходимости переопределить переменные `--focus-color` и `--focus-width` в локальном CSS.\n## SAFE CSS:\n```css\n:root {\n--focus-color: #ffb800; /* ярко‑желтый, контраст > 4.5 */\n--focus-width: 3px;\n--focus-offset: 2px;\n}\n/* Применяем только когда браузер поддерживает :focus-visible */\n*:focus-visible {\noutline: var(--focus-width) solid var(--focus-color);\noutline-offset: var(--focus-offset);\n}\n/* Фоллбэк для браузеров без :focus-visible */\n*:focus:not(:focus-visible) {\noutline: none;\n}\n/* Сброс для элементов, где уже есть кастомный outline */\nbutton:focus-visible, a:focus-visible, [role=\"button\"]:focus-visible, [tabindex]:focus-visible {\noutline: var(--focus-width) solid var(--focus-color) !important;\noutline-offset: var(--focus-offset) !important;\n}\n```\n## SAFE JS (опционально) – принудительный :focus-visible в Safari ≤14\n```js\n// Добавляем класс .js-focus-visible к элементам, получившим фокус клавиатурой\ndocument.addEventListener('keydown', e => {\nif (e.key === 'Tab') {\ndocument.body.classList.add('js-keyboard');\n}\n});\ndocument.addEventListener('focusin', e => {\nif (document.body.classList.contains('js-keyboard')) {\ne.target.classList.add('focus-visible');\n}\n});\ndocument.addEventListener('focusout', e => e.target.classList.remove('focus-visible'));\n```"
+ ],
+ "flags": []
+}

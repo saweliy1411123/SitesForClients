@@ -1,0 +1,31 @@
+{
+ "id": "I-00284",
+ "round": 43,
+ "time": "2026-11-17 03:43:35",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b",
+  "localhost:8081/big_only"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Добавить JSON‑LD разметку LocalBusiness для повышения локального SEO",
+ "knob": "В конец `<body>` вставить `<script type=\"application/ld+json\">` с объектом `@type\":\"LocalBusiness\"`: `name`, `url`, `address` (г. Пермь), `telephone`, `sameAs` (Telegram, VK), `priceRange`.",
+ "skill": "",
+ "effect": "Поисковые системы лучше понимают, что сервис предоставляется в Перми, повышая видимость в Яндекс‑поиске по локальному запросу.",
+ "risk": "Требуется актуальная контактная информация; если изменится, понадобится обновить скрипт.",
+ "rollback": "Удалить только добавленный `<script>`‑блок (git checkout index.html).",
+ "verify": "Открыть страницу в Chrome DevTools → вкладка “Application” → “Structured Data” и убедиться, что объект LocalBusiness корректно распознан без ошибок.",
+ "priority_claim": "1 – локальное SEO критично для бизнеса, а внедрение лишь один‑два строки кода, без риска для конверсий.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В конец `<body>` вставить `<script type=\"application/ld+json\">` с объектом `@type\":\"LocalBusiness\"`: `name`, `url`, `address` (г. Пермь), `telephone`, `sameAs` (Telegram, VK), `priceRange`.",
+  "вставить перед `</head>` блок `<script type=\"application/ld+json\">` с объектом `LocalBusiness` (name, url, telephone, address {streetAddress, addressLocality:\"Пермь\", postalCode, addressCountry:\"RU\"}, sameAs [Telegram, VK])",
+  "В конец `<head>` вставить `<script type=\"application/ld+json\">` с объектом `@type\":\"LocalBusiness\"` (name, url, address, telephone, openingHours, priceRange, sameAs)",
+  "** В `<head>` добавить `<script type=\"application/ld+json\">` с объектом `LocalBusiness`, включающим `name`, `url`, `address` (Пермь), `telephone`, `openingHours`, `sameAs` (Telegram, VK) и `priceRange`.",
+  "В `<head>` вставить `<script type=\"application/ld+json\">` с объектом `@type\": \"LocalBusiness\"` (name, address, telephone, url, openingHours, sameAs)."
+ ],
+ "flags": []
+}

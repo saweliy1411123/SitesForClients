@@ -1,0 +1,26 @@
+{
+ "id": "I-00608",
+ "round": 91,
+ "time": "2026-11-17 06:07:08",
+ "source": "lareper/glm-5.2-fast-preview",
+ "sources": [
+  "lareper/glm-5.2-fast-preview"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — shimmer-border-card (живая переливающаяся рамка премиум-карточек)",
+ "knob": "SKILL — shimmer-border-card\nName: `shimmer-border-card`\nWhen to apply: на любом лендинге, где есть одна выделенная карточка (цена, тариф, оффер) и её нужно визуально «поднять» без картинок и библиотек.\nSteps:\n1. Обернуть целевую карточку (`.",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "SKILL — shimmer-border-card\nName: `shimmer-border-card`\nWhen to apply: на любом лендинге, где есть одна выделенная карточка (цена, тариф, оффер) и её нужно визуально «поднять» без картинок и библиотек.\nSteps:\n1. Обернуть целевую карточку (`."
+ ],
+ "flags": []
+}

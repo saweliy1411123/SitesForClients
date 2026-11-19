@@ -1,0 +1,29 @@
+{
+ "id": "I-00758",
+ "round": 116,
+ "time": "2026-11-17 07:21:42",
+ "source": "lareper/glm-5.2-fast-preview",
+ "sources": [
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.2"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Демо-концепты — подпись под каждым концептом «что здесь показано",
+ "knob": "",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  ""
+ ],
+ "flags": [
+  "NO_KNOB"
+ ]
+}

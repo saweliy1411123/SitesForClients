@@ -1,0 +1,26 @@
+{
+ "id": "I-00448",
+ "round": 67,
+ "time": "2026-11-17 04:56:40",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Шаги — прогресс‑бар, заполняющийся по мере просмотра шагов",
+ "knob": "В секции `.steps` добавить `<div class=\"steps-progress\"><div class=\"progress-fill\"></div></div>`; в CSS `.steps-progress{height:4px;background:#e5e7eb;margin-bottom:1rem;position:relative}.progress-fill{width:0;height:100;background:#8b5cf6;transition:width .4s}`; добавить небольшой скрипт (≈ 30 строк) с `IntersectionObserver`, который при появлении каждого `.step-item` увеличивает `width` на 33%",
+ "skill": "",
+ "effect": "пользователь видит «прогресс», усиливает чувство завершённости, повышает время на странице → рост конверсии в форму ≈ 4 %",
+ "risk": "небольшая зависимость от JS (не критично, работает без него, просто без прогресса)",
+ "rollback": "удалить добавленный `<div class=\"steps-progress\">` и скрипт из `index.html` (или откатить commit)",
+ "verify": "открыть страницу, прокручивать вниз, наблюдать плавное заполнение полосы; в консоли `document.querySelector('.progress-fill').style.width` должно увеличиваться; проверить, что полоса сбрасывается при перезагрузке",
+ "priority_claim": "1 – простая визуальная подсказка, легко измерима, высокий потенциал",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В секции `.steps` добавить `<div class=\"steps-progress\"><div class=\"progress-fill\"></div></div>`; в CSS `.steps-progress{height:4px;background:#e5e7eb;margin-bottom:1rem;position:relative}.progress-fill{width:0;height:100;background:#8b5cf6;transition:width .4s}`; добавить небольшой скрипт (≈ 30 строк) с `IntersectionObserver`, который при появлении каждого `.step-item` увеличивает `width` на 33%"
+ ],
+ "flags": []
+}

@@ -1,0 +1,27 @@
+{
+ "id": "I-00495",
+ "round": 74,
+ "time": "2026-11-17 05:17:14",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Указание языка страницы (`lang=\"ru\"`)",
+ "knob": "В открывающем теге `<html>` добавить атрибут `lang=\"ru\"`; дополнительно вставить в `<head>` `<meta http-equiv=\"Content-Language\" content=\"ru-RU\">`.",
+ "skill": "",
+ "effect": "Улучшает индексацию, помогает браузерам и вспомогательным технологиям корректно обрабатывать контент, повышает SEO.",
+ "risk": "Отсутствует.",
+ "rollback": "Удалить атрибут и мета‑тег (git checkout index.html).",
+ "verify": "Открыть исходный код, убедиться в наличии `lang=\"ru\"` и соответствующего meta‑тега.",
+ "priority_claim": "1 – простое изменение с высокой отдачей.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В открывающем теге `<html>` добавить атрибут `lang=\"ru\"`; дополнительно вставить в `<head>` `<meta http-equiv=\"Content-Language\" content=\"ru-RU\">`.",
+  "В файле `index.html` заменить открывающий тег `<html>` на `<html lang=\"ru\">`"
+ ],
+ "flags": []
+}

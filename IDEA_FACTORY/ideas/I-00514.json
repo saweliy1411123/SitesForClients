@@ -1,0 +1,30 @@
+{
+ "id": "I-00514",
+ "round": 77,
+ "time": "2026-11-17 05:25:36",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — glassmorphism-card-hover",
+ "knob": "**Name:** `glassmorphism-card-hover`\n**When to apply:** На карточки цены и отзывы (`.price-card`, `.testimonial-card`) для создания премиального «стеклянного» эффекта.\n**SAFE CSS:**\n```css\n.glass-card{\nbackground:rgba(255,255,255,.07);\nbackdrop-filter:blur(12px);\nborder:1px solid rgba(255,255,255,.15);\nborder-radius:12px;\ntransition:transform .4s ease,box-shadow .4s ease;\n}\n.glass-card:hover,\n.glass-card:focus-visible{\ntransform:translateY(-6px);\nbox-shadow:0 12px 24px rgba(0,0,0,.2);\n}\n```",
+ "skill": "",
+ "effect": "Усилит визуальную дифференциацию премиум‑предложения, повышая доверие и время на странице → потенциальный рост конверсии на 2‑3 %.",
+ "risk": "`backdrop-filter` поддерживается не во всех мобильных браузерах (Safari iOS ≥ 13, Chrome ≥ 76); в неподдерживаемых браузерах будет обычный полупрозрачный фон без размытия.",
+ "rollback": "`git checkout index.improved.html` (удалить класс `glass-card` и связанные стили).",
+ "verify": "Открыть страницу в Chrome, Safari, Firefox; убедиться, что карточки имеют лёгкое размытие и поднимаются при ховере; в браузерах без поддержки проверить, что фон всё‑равно полупрозрачный и читаемый.",
+ "priority_claim": "2 — визуальный апгрейд, легко реализуемый, но не критичен для первой конверсии.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `glassmorphism-card-hover`\n**When to apply:** На карточки цены и отзывы (`.price-card`, `.testimonial-card`) для создания премиального «стеклянного» эффекта.\n**SAFE CSS:**\n```css\n.glass-card{\nbackground:rgba(255,255,255,.07);\nbackdrop-filter:blur(12px);\nborder:1px solid rgba(255,255,255,.15);\nborder-radius:12px;\ntransition:transform .4s ease,box-shadow .4s ease;\n}\n.glass-card:hover,\n.glass-card:focus-visible{\ntransform:translateY(-6px);\nbox-shadow:0 12px 24px rgba(0,0,0,.2);\n}\n```",
+  "**Name:** `glass-card-hover`\n**When to apply:** На любых карточках цены, отзывов или преимуществ (например, `.price-card`, `.testimonial`) для создания «стеклянного» ощущения при интерактиве.\n**SAFE CSS:**\n```css\n/* glass-card-hover */\n.glass-card {\nbackground: rgba(255,255,255,0.07);\nborder-radius: 10px;\nborder: 1px solid rgba(255,255,255,0.12);\nbackdrop-filter: blur(6px);\n-webkit-backdrop-filter: blur(6px);\ntransition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;\n}\n.glass-card:hover,\n.glass-card:focus-visible {\nbackground: rgba(255,255,255,0.15);\ntransform: translateY(-4px);\nbox-shadow: 0 12px 30px rgba(0,0,0,0.15);\n}\n```\n**SAFE JS:** (не требуется)",
+  "SKILL: **Name:** `glassmorphic-card-hover`\n**When to apply:** На любых «карточных» блоках (price‑card, step‑card, отзыв) для придания премиального «стеклянного» эффекта при наведении.\n**Steps:** 1️⃣ Добавить класс `card-glass` к нужным элементам. 2️⃣ Включить ниже‑приведённый CSS в общий файл стилей.\nSAFE CSS:\n```css\n.card-glass{\nbackground:rgba(255,255,255,0.12);\nborder:1px solid rgba(255,255,255,0.2);\nbackdrop-filter:blur(8px);\ntransition:transform .3s ease,box-shadow .3s ease;\n}\n.card-glass:hover,\n.card-glass:focus-visible{\ntransform:translateY(-6px) scale(1.02);\nbox-shadow:0 12px 30px rgba(0,0,0,0.2);\n}\n```",
+  "**Name:** `glassmorphic-card-hover`\n**When to apply:** На любых карточках цены, демо‑концептов или блоках‑шагов (`.price-card`, `.demo-item`, `.step`) для создания премиального «фрост‑гласса» при наведении.\n**SAFE CSS:**\n```css\n.glass-card {\nbackground: rgba(255,255,255,0.08);\nbackdrop-filter: blur(12px);\n-webkit-backdrop-filter: blur(12px);\nborder: 1px solid rgba(255,255,255,0.15);\nborder-radius: 12px;\ntransition: transform .28s ease, box-shadow .28s ease;\n}\n.glass-card:hover,\n.glass-card:focus-visible {\ntransform: translateY(-8px);\nbox-shadow: 0 16px 36px rgba(0,0,0,0.18);\n}\n```\n**SAFE JS:** _не требуется_",
+  "**Name:** glassmorphic-card\n**When to apply:** На карточках продуктов/цен (`.price-card`, `.demo-card`, `.testimonial-card`).\n**SAFE CSS:**\n```css\n.glass-card {\nbackground: rgba(255,255,255,0.12);\nborder: 1px solid rgba(255,255,255,0.18);\nbackdrop-filter: blur(12px);\nborder-radius: 12px;\nbox-shadow: 0 8px 32px rgba(0,0,0,0.25);\npadding: 24px;\ntransition: transform .3s ease, box-shadow .3s ease;\n}\n.glass-card:hover,\n.glass-card:focus-visible {\ntransform: translateY(-6px);\nbox-shadow: 0 12px 48px rgba(0,0,0,0.35);\n}\n```\n**SAFE JS:** *(не требуется)*"
+ ],
+ "flags": []
+}

@@ -1,0 +1,29 @@
+{
+ "id": "I-00316",
+ "round": 47,
+ "time": "2026-11-17 03:55:34",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime",
+  "lareper/glm-5.2-fast-preview"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "Preconnect + `media=\"print\"`-трюк для Google Fonts (устранение render-blocking)",
+ "knob": "В `<head>` (снимок: 4 `<link>`, fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700): (1) добавить `<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>`; (2) заменить основной font-link на `media=\"print\" onload=\"this.media='all'\"` + `<noscript>`-фолбэк с обычным линком.",
+ "skill": "",
+ "effect": "Шрифты перестают блокировать первый рендер — FCP/LCP на мобильном падает ориентировочно на 200–500 мс; preconnect экономит DNS+TLS до fonts.gstatic.com.",
+ "risk": "Без noscript-фолбэка при выключенном JS шрифт не загрузится — фолбэк обязателен; кратковременный FOUT закрывается `display=swap` (уже есть).",
+ "rollback": "`git checkout -- index.html`.",
+ "verify": "DevTools → Network → thrott",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<head>` (снимок: 4 `<link>`, fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700): (1) добавить `<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>`; (2) заменить основной font-link на `media=\"print\" onload=\"this.media='all'\"` + `<noscript>`-фолбэк с обычным линком."
+ ],
+ "flags": []
+}

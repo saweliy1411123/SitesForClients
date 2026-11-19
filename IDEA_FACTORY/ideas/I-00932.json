@@ -1,0 +1,26 @@
+{
+ "id": "I-00932",
+ "round": 149,
+ "time": "2026-11-17 08:53:17",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Measure Largest Contentful Paint of primary CTA",
+ "knob": "METHOD: в консоли выполнить `new PerformanceObserver((list)=>{list.getEntries().forEach(e=>{if(e.element && e.element.closest('.cta') ) console.log('CTA LCP:',e.startTime);});}).observe({type:'largest-contentful-paint', buffered:true});` – наблюдатель фиксирует LCP‑события и выводит время, когда в viewport попадает элемент с классом `.cta` (или ссылкой `#final`).",
+ "skill": "",
+ "effect": "показывает, насколько быстро пользователь видит главный призыв к действию; позволяет сравнивать варианты дизайна (например, изменение позиционирования CTA).",
+ "risk": "если на странице нет элементов с `.cta`, наблюдатель ничего не выведет – потребует уточнения селектора.",
+ "rollback": "просто перезагрузить страницу (очистка PerformanceObserver).",
+ "verify": "после перезагрузки и скроллинга до CTA в консоли появляется строка `CTA LCP: <ms>`; сравнить значения между вариантами.",
+ "priority_claim": "2 – быстрая метрика UX, влияет на конверсию, но менее критична, чем доступность.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: в консоли выполнить `new PerformanceObserver((list)=>{list.getEntries().forEach(e=>{if(e.element && e.element.closest('.cta') ) console.log('CTA LCP:',e.startTime);});}).observe({type:'largest-contentful-paint', buffered:true});` – наблюдатель фиксирует LCP‑события и выводит время, когда в viewport попадает элемент с классом `.cta` (или ссылкой `#final`)."
+ ],
+ "flags": []
+}

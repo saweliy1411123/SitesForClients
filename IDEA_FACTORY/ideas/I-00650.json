@@ -1,0 +1,26 @@
+{
+ "id": "I-00650",
+ "round": 98,
+ "time": "2026-11-17 06:29:45",
+ "source": "lareper/glm-5.3-prime",
+ "sources": [
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — glass-nav-scroll (стеклянная «плавающая» навигация при скролле)",
+ "knob": "SKILL — glass-nav-scroll\nName: `glass-nav-scroll`\nWhen to apply: на любом лендинге с фиксированной шапкой `<nav>`/`<header>`, где навигация прилипает к верху и должна выглядеть премиально при скролле (эффект матового стекла + мягкая тень).\nSteps:\n1. Убедиться, что навигация имеет `position:fixed; top:0; width:100%`.\n2. Вставить SAFE CSS в `<style>`.\n3. Вставить SAFE JS перед `</body>`: класс `.nav-scrolled` добавляется после 40px скролла.\n4. Проверить на мобильных (≤720px) — blur не должен ломать раскладку.\nSAFE CSS:\n```css\n.nav{\ntransition:background .35s ease, box-shadow .35s ease, backdrop-filter .35s ease;\nbackground:transparent;\n}\n.nav.nav-scrolled{\nbackground:rgba(12,12,20,.55);\n-webkit-backdrop-filter:blur(14px) saturate(1.3);\nbackdrop-filter:blur(14px) saturate(1.3);\nbox-shadow:0 8px 32px rgba(0,0,0,.35);\nborder-bottom:1px solid rgba(255,255,255,.06);\n}\n@media (prefers-reduced-motion:reduce){\n.nav{transition:none}\n}\n```\nSAFE JS:\n```js\n(function(){\nvar nav=document.querySelector('.nav')||document.querySelector('header');\nif(!nav)return;\nvar t=false;\nwindow.addEventListener('scroll',function(){\nif(t)return;t=true;\nrequestAnimationFrame(function(){\nnav.classList.toggle('nav-scrolled',window.scrollY>40);\nt=false;\n});\n},{passive:true});\n})();\n```",
+ "skill": "glass-nav-scroll",
+ "effect": "премиальный вид при скролле, контент читается под шапкой, доверие «дорогого» сайта без библиотек",
+ "risk": "backdrop-filter может мерцать на старых Android WebView — деградация до полупрозрачного фона безопасна",
+ "rollback": "git checkout -- index.html (или удалить добавленные блоки CSS/JS)",
+ "verify": "открыть index.html, проскроллить 100px — шапка получает стекло+тень; Tab по ссылкам — фокус виден; Lighthouse Performance не падает",
+ "priority_claim": "2 — чисто визуальный апгрейд, но сильный сигнал «дорого» на первом экране",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "SKILL — glass-nav-scroll\nName: `glass-nav-scroll`\nWhen to apply: на любом лендинге с фиксированной шапкой `<nav>`/`<header>`, где навигация прилипает к верху и должна выглядеть премиально при скролле (эффект матового стекла + мягкая тень).\nSteps:\n1. Убедиться, что навигация имеет `position:fixed; top:0; width:100%`.\n2. Вставить SAFE CSS в `<style>`.\n3. Вставить SAFE JS перед `</body>`: класс `.nav-scrolled` добавляется после 40px скролла.\n4. Проверить на мобильных (≤720px) — blur не должен ломать раскладку.\nSAFE CSS:\n```css\n.nav{\ntransition:background .35s ease, box-shadow .35s ease, backdrop-filter .35s ease;\nbackground:transparent;\n}\n.nav.nav-scrolled{\nbackground:rgba(12,12,20,.55);\n-webkit-backdrop-filter:blur(14px) saturate(1.3);\nbackdrop-filter:blur(14px) saturate(1.3);\nbox-shadow:0 8px 32px rgba(0,0,0,.35);\nborder-bottom:1px solid rgba(255,255,255,.06);\n}\n@media (prefers-reduced-motion:reduce){\n.nav{transition:none}\n}\n```\nSAFE JS:\n```js\n(function(){\nvar nav=document.querySelector('.nav')||document.querySelector('header');\nif(!nav)return;\nvar t=false;\nwindow.addEventListener('scroll',function(){\nif(t)return;t=true;\nrequestAnimationFrame(function(){\nnav.classList.toggle('nav-scrolled',window.scrollY>40);\nt=false;\n});\n},{passive:true});\n})();\n```"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00526",
+ "round": 79,
+ "time": "2026-11-17 05:30:51",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Real‑time CLS & LCP logger в консоли",
+ "knob": "METHOD: выполнить в консоли следующий скрипт, создающий `PerformanceObserver` для метрик Core Web Vitals и выводящего их в консоль:\n```js\nlet cls = 0\nnew PerformanceObserver(list => {\nfor (const entry of list.getEntries()) {\nif (!entry.hadRecentInput) cls += entry.value\n}\nconsole.log('CLS:', cls.toFixed(4))\n}).observe({type:'layout-shift', buffered:true})\nnew PerformanceObserver(list => {\nfor (const entry of list.getEntries()) {\nconsole.log('LCP:', (entry.startTime/1000).toFixed(2), 's')\n}\n}).observe({type:'largest-contentful-paint', buffered:true})\n```",
+ "skill": "",
+ "effect": "позволяет за 1‑2 минуты увидеть, как текущие анимации (blobs, reveal) влияют на CLS и LCP, и быстро оценить эффект отключения/изменения их.",
+ "risk": "метрики измеряются только в текущей вкладке и при текущих условиях сети; не заменяют полное Lighthouse‑исследование.",
+ "rollback": "закрыть вкладку или перезагрузить страницу — скрипт исчезает, состояние страницы восстанавливается.",
+ "verify": "открыть страницу, вставить скрипт, записать значения CLS (<0.1) и LCP (<2.5 s); затем временно отключить анимацию (например, `document.body.classList.add('no-blob')`) и сравнить новые цифры. Всё занимает ≤5 минут.",
+ "priority_claim": "2 – важные метрики скорости, которые напрямую влияют на SEO и конверсию, но менее срочны, чем тест копий.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: выполнить в консоли следующий скрипт, создающий `PerformanceObserver` для метрик Core Web Vitals и выводящего их в консоль:\n```js\nlet cls = 0\nnew PerformanceObserver(list => {\nfor (const entry of list.getEntries()) {\nif (!entry.hadRecentInput) cls += entry.value\n}\nconsole.log('CLS:', cls.toFixed(4))\n}).observe({type:'layout-shift', buffered:true})\nnew PerformanceObserver(list => {\nfor (const entry of list.getEntries()) {\nconsole.log('LCP:', (entry.startTime/1000).toFixed(2), 's')\n}\n}).observe({type:'largest-contentful-paint', buffered:true})\n```"
+ ],
+ "flags": []
+}

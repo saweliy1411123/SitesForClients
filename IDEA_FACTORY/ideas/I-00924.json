@@ -1,0 +1,27 @@
+{
+ "id": "I-00924",
+ "round": 146,
+ "time": "2026-11-17 08:44:36",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "scroll-reveal-fade-in",
+ "knob": "\n**Name:** scroll-reveal-fade-in\n**When to apply:** На любом статическом лендинге, где есть секции с информацией.\n**SAFE CSS:**\n```css\n.scroll-reveal {\nopacity: 0;\ntransition: opacity 0.5s;\n}\n.scroll-reveal.revealed {\nopacity: 1;\n}\n```\n**SAFE JS:**\n```javascript\nconst sections = document.querySelectorAll('.section');\nconst options = {\nthreshold: 0.5\n};\nconst observer = new IntersectionObserver((entries) => {\nentries.forEach((entry) => {\nif (entry.isIntersecting) {\nentry.target.classList.add('revealed');\n}\n});\n}, options);\nsections.forEach((section) => {\nobserver.observe(section);\n});\n```",
+ "skill": "",
+ "effect": "Повышение читаемости и вовлеченности пользователя за счет плавного появления секций при скролле.",
+ "risk": "Необходимо тщательно тестировать взаимодействие скрипта с другими элементами на странице.",
+ "rollback": "Удалить добавленный CSS и JS-код.",
+ "verify": "Проверить за 2–10 минут, просматривая страницу и наблюдая за эффектом появления секций.",
+ "priority_claim": "2",
+ "source_hint": "",
+ "site_request": "section",
+ "category": "skill",
+ "variants": [
+  "\n**Name:** scroll-reveal-fade-in\n**When to apply:** На любом статическом лендинге, где есть секции с информацией.\n**SAFE CSS:**\n```css\n.scroll-reveal {\nopacity: 0;\ntransition: opacity 0.5s;\n}\n.scroll-reveal.revealed {\nopacity: 1;\n}\n```\n**SAFE JS:**\n```javascript\nconst sections = document.querySelectorAll('.section');\nconst options = {\nthreshold: 0.5\n};\nconst observer = new IntersectionObserver((entries) => {\nentries.forEach((entry) => {\nif (entry.isIntersecting) {\nentry.target.classList.add('revealed');\n}\n});\n}, options);\nsections.forEach((section) => {\nobserver.observe(section);\n});\n```",
+  "добавить класс `.scroll-reveal` к элементам секций и добавить CSS-стили для анимации появления"
+ ],
+ "flags": []
+}

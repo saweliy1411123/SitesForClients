@@ -1,0 +1,26 @@
+{
+ "id": "I-00153",
+ "round": 23,
+ "time": "2026-11-17 02:47:33",
+ "source": "localhost:8080/zhipu/glm-4.7-flash",
+ "sources": [
+  "localhost:8080/zhipu/glm-4.7-flash"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Mobile Thumb-Zone Test",
+ "knob": "Open `index.html` on a real mobile device (not emulator). Locate the final CTA (`.btn-primary` at L462) and click it using the thumb of your non-dominant hand.",
+ "skill": "none",
+ "effect": "Checks if the primary conversion path is ergonomically accessible on mobile devices.",
+ "risk": "None.",
+ "rollback": "N/A.",
+ "verify": "Can you reach the button without stretching or awkward repositioning?",
+ "priority_claim": "1 (Mobile UX)",
+ "source_hint": "",
+ "site_request": "none",
+ "category": "lever",
+ "variants": [
+  "Open `index.html` on a real mobile device (not emulator). Locate the final CTA (`.btn-primary` at L462) and click it using the thumb of your non-dominant hand."
+ ],
+ "flags": []
+}

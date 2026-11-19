@@ -1,0 +1,29 @@
+{
+ "id": "I-00696",
+ "round": 107,
+ "time": "2026-11-17 06:55:58",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "Метод «консольный мульти-вариант через query-параметр» — тест 3 вариантов текста CTA в одной вкладке",
+ "knob": "METHOD: (1) Открыть index.html локально, F12 → Console. (2) Выполнить скрипт: `const v=new URLSearchParams(location.search).get('v')||'A'; const map={'A':'Сделаю демо под ваш сайт — бесплатно','B':'Бесплатное демо за 2 дня — без обязательств','C':'Посмотрите демо вашего сайта — бесплатно'}; document.querySelectorAll('.btn-primary').forEach(b=>{b.dataset.orig=b.textContent; if(map[v])b.textContent=map[v]}); console.log('Вариант',v)`. (3) Открыть три вкладки: `index.html?v=A`, `?v=B`, `?v=C`. (4) Прогнать пятисекундный тест (I-00616) на каждом, записать, какой CTA понятнее без контекста. (5) Победителя вносить в файл.",
+ "skill": "",
+ "effect": "Выбор формулировки CTA по наблюдаемой реакции людей, а не по вкусу; занимает 5–10 минут, ноль правок файлов.",
+ "risk": "Субъективность ручного теста — нужны 3+ респондента, иначе результат шумный.",
+ "rollback": "Скрипт живёт только в консоли; при случайном сохранении — `git checkout -- index.html`.",
+ "verify": "Открыть `index.html?v=B` — текст CTA изменился только в этой вкладке; перезагрузка без параметра возвращает оригинал.",
+ "priority_claim": "1 — дешёвый способ выбрать главную фразу оффера до любых правок.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: (1) Открыть index.html локально, F12 → Console. (2) Выполнить скрипт: `const v=new URLSearchParams(location.search).get('v')||'A'; const map={'A':'Сделаю демо под ваш сайт — бесплатно','B':'Бесплатное демо за 2 дня — без обязательств','C':'Посмотрите демо вашего сайта — бесплатно'}; document.querySelectorAll('.btn-primary').forEach(b=>{b.dataset.orig=b.textContent; if(map[v])b.textContent=map[v]}); console.log('Вариант',v)`. (3) Открыть три вкладки: `index.html?v=A`, `?v=B`, `?v=C`. (4) Прогнать пятисекундный тест (I-00616) на каждом, записать, какой CTA понятнее без контекста. (5) Победителя вносить в файл."
+ ],
+ "flags": []
+}

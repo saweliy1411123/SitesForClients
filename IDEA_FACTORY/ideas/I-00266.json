@@ -1,0 +1,27 @@
+{
+ "id": "I-00266",
+ "round": 40,
+ "time": "2026-11-17 03:35:35",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить ARIA‑роль `banner` к шапке и `contentinfo` к футеру",
+ "knob": "В элемент `<header class=\"hero\" …>` добавить `role=\"banner\"`; в блок футера (если есть) добавить `role=\"contentinfo\"`",
+ "skill": "",
+ "effect": "Явно обозначит структурные области для вспомогательных технологий, повышая доступность",
+ "risk": "Никакого, роли совместимы с HTML5‑семантикой",
+ "rollback": "Удалить добавленные атрибуты",
+ "verify": "В DevTools → Accessibility, проверить, что “Banner” и “Content info” отображаются в дереве",
+ "priority_claim": "1 – небольшое изменение, сразу улучшает навигацию скрин‑ридеров",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В элемент `<header class=\"hero\" …>` добавить `role=\"banner\"`; в блок футера (если есть) добавить `role=\"contentinfo\"`",
+  "В элемент `<header class=\"hero\">` добавить `role=\"banner\"`; в `<footer>` добавить `role=\"contentinfo\"`"
+ ],
+ "flags": []
+}

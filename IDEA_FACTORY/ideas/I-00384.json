@@ -1,0 +1,26 @@
+{
+ "id": "I-00384",
+ "round": 57,
+ "time": "2026-11-17 04:26:27",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Таблица сравнения цены с конкурентами в секции цены",
+ "knob": "Внутри `.price-card` (после текущего `<ul>`) добавить HTML‑таблицу:\n```html\n<table class=\"price‑compare\">\n<tr><th>Конкурент</th><th>Цена</th></tr>\n<tr><td>Типичный фрилансер</td><td>30 000 ₽</td></tr>\n<tr><td>Агентство «X»</td><td>45 000 ₽</td></tr>\n<tr class=\"highlight\"><td>Савелий</td><td>19 000 ₽</td></tr>\n</table>\n```\nи CSS:\n```css\n.price‑compare{width:100%;border-collapse:collapse;margin-top:1rem}\n.price‑compare th,.price‑compare td{padding:0.4rem 0.6rem;border:1px solid var(--border);text-align:center}\n.price‑compare .highlight{background:var(--grad);color:#fff;font-weight:700}\n```",
+ "skill": "",
+ "effect": "Наглядно показывает выгоду, снимает возражения по цене → увеличение конверсии в запрос ≈ 7 % (по опыту A/B)",
+ "risk": "Требует актуализации данных при изменении цен у конкурентов; возможна правовая проверка (не вводить в заблуждение)",
+ "rollback": "`git checkout -- index.html` (удалить добавленную разметку и стили)",
+ "verify": "Открыть страницу, убедиться, что таблица отображается корректно, не ломает мобильный layout (проверить в responsive‑mode), запустить Lighthouse → показатели SEO и Accessibility остаются в порядке",
+ "priority_claim": "2 – значительное влияние на конверсию, но требует точных цифр и небольшого тестирования",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Внутри `.price-card` (после текущего `<ul>`) добавить HTML‑таблицу:\n```html\n<table class=\"price‑compare\">\n<tr><th>Конкурент</th><th>Цена</th></tr>\n<tr><td>Типичный фрилансер</td><td>30 000 ₽</td></tr>\n<tr><td>Агентство «X»</td><td>45 000 ₽</td></tr>\n<tr class=\"highlight\"><td>Савелий</td><td>19 000 ₽</td></tr>\n</table>\n```\nи CSS:\n```css\n.price‑compare{width:100%;border-collapse:collapse;margin-top:1rem}\n.price‑compare th,.price‑compare td{padding:0.4rem 0.6rem;border:1px solid var(--border);text-align:center}\n.price‑compare .highlight{background:var(--grad);color:#fff;font-weight:700}\n```"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00780",
+ "round": 119,
+ "time": "2026-11-17 07:29:22",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "3D flip price‑card on hover (detail view)",
+ "knob": "Обернуть содержимое `.price-card` в `<div class=\"price-card-inner\">` с двумя дочерними `<div class=\"price-card-front\">` и `<div class=\"price-card-back\">` (back содержит разбивку цены). В CSS: `.price-card { perspective: 800px; } .price-card-inner { transition: transform 0.6s; transform-style: preserve-3d; } .price-card:hover .price-card-inner { transform: rotateY(180deg); } .price-card-front, .price-card-back { backface-visibility: hidden; position:absolute; inset:0; } .price-card-back { transform: rotateY(180deg); }`",
+ "skill": "",
+ "effect": "Позволяет пользователю увидеть детали цены без перегрузки основной карточки, повышая прозрачность оффера и доверие.",
+ "risk": "Добавление вложенной разметки может слегка увеличить размер HTML и потребовать корректировки текущих стилей (например, padding).",
+ "rollback": "Удалить блоки `.price-card-inner`, `.price-card-front`, `.price-card-back` и вернуть оригинальный HTML; `git checkout -- index.html`.",
+ "verify": "Навести курсор на цену, убедиться в плавном 3D‑перевороте; проверить, что текст остаётся читаемым; измерить CLS (не должен заметно измениться).",
+ "priority_claim": "3 — улучшает доверие, но требует более тщательной проверки совместимости.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Обернуть содержимое `.price-card` в `<div class=\"price-card-inner\">` с двумя дочерними `<div class=\"price-card-front\">` и `<div class=\"price-card-back\">` (back содержит разбивку цены). В CSS: `.price-card { perspective: 800px; } .price-card-inner { transition: transform 0.6s; transform-style: preserve-3d; } .price-card:hover .price-card-inner { transform: rotateY(180deg); } .price-card-front, .price-card-back { backface-visibility: hidden; position:absolute; inset:0; } .price-card-back { transform: rotateY(180deg); }`"
+ ],
+ "flags": []
+}

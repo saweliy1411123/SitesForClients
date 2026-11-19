@@ -1,0 +1,28 @@
+{
+ "id": "I-00217",
+ "round": 33,
+ "time": "2026-11-17 03:15:35",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+  "localhost:8080/zhipu/glm-4.7-flash"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Добавление мета-тега color-scheme",
+ "knob": "В `<head>` добавить `<meta name=\"color-scheme\" content=\"dark\">`",
+ "skill": "",
+ "effect": "Улучшение отображения сайта в темном режиме",
+ "risk": "Нет",
+ "rollback": "git checkout -- index.html",
+ "verify": "Проверка отображения",
+ "priority_claim": "3",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<head>` добавить `<meta name=\"color-scheme\" content=\"dark\">`",
+  "В `<head>` добавить `<meta name=\"color-scheme\" content=\"dark\">`."
+ ],
+ "flags": []
+}

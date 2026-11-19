@@ -1,0 +1,26 @@
+{
+ "id": "I-00923",
+ "round": 145,
+ "time": "2026-11-17 08:42:03",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить `hreflang` для указания языка и региона",
+ "knob": "В `<head>` добавить `<link rel=\"alternate\" hreflang=\"ru\" href=\"https://example.com/\">` (и, при необходимости, `x-default`)",
+ "skill": "",
+ "effect": "Помогает поисковым системам правильно обслуживать русскоязычных пользователей, улучшая SEO в гео‑таргетинге",
+ "risk": "Неправильный URL может привести к дублированию; требуется проверка корректности ссылки",
+ "rollback": "Удалить добавленные `<link rel=\"alternate\">` строки или `git checkout -- index.html`",
+ "verify": "Проверить в Google Search Console → International Targeting → Hreflang; убедиться, что ссылка корректна и не вызывает ошибок",
+ "priority_claim": "3 – полезно, но менее критично, чем предыдущие улучшения.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<head>` добавить `<link rel=\"alternate\" hreflang=\"ru\" href=\"https://example.com/\">` (и, при необходимости, `x-default`)"
+ ],
+ "flags": []
+}

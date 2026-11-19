@@ -1,0 +1,26 @@
+{
+ "id": "I-00436",
+ "round": 65,
+ "time": "2026-11-17 04:49:47",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "One‑click Lighthouse performance snapshot (speed budget)",
+ "knob": "METHOD: (1) Открыть страницу в Chrome → нажать F12 → перейти в панель **Lighthouse**; (2) Выбрать только категорию **Performance**, отключить «Simulated throttling», установить **Device** → Mobile; (3) Нажать **Generate report** и скопировать ключевые KPI (FCP, LCP, TTI, Speed Index) в таблицу. (4) При необходимости в `Settings` установить **Only current page** чтобы ускорить генерацию.",
+ "skill": "",
+ "effect": "Мгновенно получить количественную оценку скорости загрузки без развертывания билда; позволяет сравнивать гипотезы (например, предзагрузка шрифтов, lazy‑load фоновых изображений) в 2‑5 минут.",
+ "risk": "Lighthouse использует собственный Chrome‑инструментарий, поэтому результаты могут отличаться от реального пользовательского опыта, но это лишь предварительная проверка.",
+ "rollback": "Нет изменений в коде; просто закрыть панель Lighthouse или отменить изменения в DevTools (если вносились).",
+ "verify": "Убедиться, что в отчёте отображаются метрики и их значения; сравнить их с базовым «до‑изменения» отчётом (можно сохранить в clipboard).",
+ "priority_claim": "3 – полезно для оценки технической гипотезы, но менее критично для бизнес‑конверсий, чем доступность и копирайт.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: (1) Открыть страницу в Chrome → нажать F12 → перейти в панель **Lighthouse**; (2) Выбрать только категорию **Performance**, отключить «Simulated throttling», установить **Device** → Mobile; (3) Нажать **Generate report** и скопировать ключевые KPI (FCP, LCP, TTI, Speed Index) в таблицу. (4) При необходимости в `Settings` установить **Only current page** чтобы ускорить генерацию."
+ ],
+ "flags": []
+}

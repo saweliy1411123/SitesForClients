@@ -1,0 +1,28 @@
+{
+ "id": "I-00262",
+ "round": 40,
+ "time": "2026-11-17 03:35:08",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime",
+  "lareper/glm-5.2-fast-preview"
+ ],
+ "mentions": 3,
+ "status": "NEW",
+ "title": "Проверка и фиксация `lang=\"ru\"` и семантического `<main>`-landmark (аудит одним запросом)",
+ "knob": "SITE_REQUEST «lang» — проверить наличие `<html lang=\"ru\">` и тега `<main>` в разметке; если `<main>` отсутствует, обернуть секции от hero до final CTA в `<main id=\"main\">` (не меняя классы/стили).",
+ "skill": "",
+ "effect": "Скрин-ридеры и поисковики корректно определяют язык и основной контент; это базовый SEO/a11y-фактор, влияет на индексацию и Lighthouse Accessibility score.",
+ "risk": "Оборачивание в `<main>` может сломать CSS-селекторы вида `body > section`, если такие есть.",
+ "rollback": "git checkout -- index.html",
+ "verify": "В консоли DevTools: `document.documentElement.lang` и `!!document.querySelector('main')` — 30 секунд.",
+ "priority_claim": "1 — базовый a11y/SEO-фикс с нулевой стоимостью, но нужно подтверждение по снимку (в снимке `<main>` не виден).",
+ "source_hint": "",
+ "site_request": "lang",
+ "category": "lever",
+ "variants": [
+  "SITE_REQUEST «lang» — проверить наличие `<html lang=\"ru\">` и тега `<main>` в разметке; если `<main>` отсутствует, обернуть секции от hero до final CTA в `<main id=\"main\">` (не меняя классы/стили)."
+ ],
+ "flags": []
+}

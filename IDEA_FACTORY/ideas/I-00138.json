@@ -1,0 +1,28 @@
+{
+ "id": "I-00138",
+ "round": 20,
+ "time": "2026-11-17 02:38:55",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime",
+  "lareper/glm-5.2-fast-preview"
+ ],
+ "mentions": 3,
+ "status": "NEW",
+ "title": "SKILL — «Мягкое свечение CTA при появлении в вьюпорте» (cta-glow-pulse)",
+ "knob": "Название: **cta-glow-pulse**. Когда применять: любой лендинг, где главный CTA — ссылка `.btn-primary` (или аналог), находится ниже первого экрана (final-секция), и нужно привлечь внимание без агрессивных миганий. Шаги:\n1. Добавить SAFE CSS в `<style>`.\n2. Добавить SAFE JS в конец `<body>`: IntersectionObserver вешает класс `.is-visible` на CTA, когда он входит во вьюпорт; анимация пульса проигрывается 2 раза и останавливается (не бесконечная — уважает внимание и reduced-motion).\n3. Не менять разметку кнопки — только классы.\n4. Проверить: при `prefers-reduced-motion: reduce` анимация полностью отключена.\nSAFE CSS:\n.btn-primary{position:relative}\n@keyframes cta-glow{0%,100%{box-shadow:0 0 0 0 rgba(139,92,246,0)}50%{box-shadow:0 0 0 10px rgba(139,92,246,.25)}}\n.btn-primary.is-visible{animation:cta-glow 1.2s ease-in-out 2}\n@media (prefers-reduced-motion: reduce){.btn-primary.is-visible{animation:none}}\nSAFE JS:\ndocument.querySelectorAll('.btn-primary').forEach(function(b){\nif(!('IntersectionObserver",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "Название: **cta-glow-pulse**. Когда применять: любой лендинг, где главный CTA — ссылка `.btn-primary` (или аналог), находится ниже первого экрана (final-секция), и нужно привлечь внимание без агрессивных миганий. Шаги:\n1. Добавить SAFE CSS в `<style>`.\n2. Добавить SAFE JS в конец `<body>`: IntersectionObserver вешает класс `.is-visible` на CTA, когда он входит во вьюпорт; анимация пульса проигрывается 2 раза и останавливается (не бесконечная — уважает внимание и reduced-motion).\n3. Не менять разметку кнопки — только классы.\n4. Проверить: при `prefers-reduced-motion: reduce` анимация полностью отключена.\nSAFE CSS:\n.btn-primary{position:relative}\n@keyframes cta-glow{0%,100%{box-shadow:0 0 0 0 rgba(139,92,246,0)}50%{box-shadow:0 0 0 10px rgba(139,92,246,.25)}}\n.btn-primary.is-visible{animation:cta-glow 1.2s ease-in-out 2}\n@media (prefers-reduced-motion: reduce){.btn-primary.is-visible{animation:none}}\nSAFE JS:\ndocument.querySelectorAll('.btn-primary').forEach(function(b){\nif(!('IntersectionObserver"
+ ],
+ "flags": []
+}

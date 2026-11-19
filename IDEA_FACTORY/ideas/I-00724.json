@@ -1,0 +1,26 @@
+{
+ "id": "I-00724",
+ "round": 112,
+ "time": "2026-11-17 07:09:09",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — responsive-typography-clamp",
+ "knob": "Заменить фиксированные размеры шрифтов в стилях заголовков (`h1, h2, h3`) на fluid‑типы с `clamp()`. Пример:\n```css\n/* SAFE CSS */\nh1 { font-size: clamp(2rem, 5vw + 1rem, 3.5rem); }\nh2 { font-size: clamp(1.75rem, 4vw + 0.8rem, 2.8rem); }\nh3 { font-size: clamp(1.5rem, 3.5vw + 0.6rem, 2.2rem); }\n```",
+ "skill": "",
+ "effect": "Текст автоматически подстраивается под ширину экрана, улучшая читаемость и эстетический вид на всех устройствах без медиа‑запросов.",
+ "risk": "Возможны некорректные переходы размеров на экстремальных разрешениях; потребуется тестировать крайние размеры.",
+ "rollback": "`git checkout -- index.html` (удалить изменённые правила).",
+ "verify": "Открыть страницу в Chrome DevTools, переключать ширину окна и убедиться, что размеры заголовков плавно меняются в пределах заданных границ.",
+ "priority_claim": "2 – повышает UX и восприятие качества, но менее критично, чем стеклянный фон.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "Заменить фиксированные размеры шрифтов в стилях заголовков (`h1, h2, h3`) на fluid‑типы с `clamp()`. Пример:\n```css\n/* SAFE CSS */\nh1 { font-size: clamp(2rem, 5vw + 1rem, 3.5rem); }\nh2 { font-size: clamp(1.75rem, 4vw + 0.8rem, 2.8rem); }\nh3 { font-size: clamp(1.5rem, 3.5vw + 0.6rem, 2.2rem); }\n```"
+ ],
+ "flags": []
+}

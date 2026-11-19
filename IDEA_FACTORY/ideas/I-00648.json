@@ -1,0 +1,26 @@
+{
+ "id": "I-00648",
+ "round": 98,
+ "time": "2026-11-17 06:27:59",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — 3d‑tilt‑price‑card",
+ "knob": "**NAME:** 3d-tilt-price-card\n**WHEN TO APPLY:** На карточках цены (`.price-card`) в секции «Цена», где нужен интерактивный премиальный эффект при наведении/касании.\n**STEPS:**\n1. Добавить к каждому `.price-card` класс `tilt‑card`.\n2. В CSS задать `perspective` и базовый `transform`.\n3. Добавить лёгкий JS‑слушатель `pointermove` для расчёта угла наклона (max 10°).\n**SAFE CSS:**\n```css\n.tilt-card {\nperspective: 600px;\ntransition: transform 0.3s ease;\n}\n.tilt-card:hover,\n.tilt-card:focus-visible {\ntransform: rotateX(5deg) rotateY(5deg);\n}\n```\n**SAFE JS:**\n```js\ndocument.querySelectorAll('.price-card.tilt-card').forEach(card=>{\ncard.addEventListener('pointermove',e=>{\nconst rect = card.getBoundingClientRect();\nconst x = (e.clientX - rect.left) / rect.width - 0.5;\nconst y = (e.clientY - rect.top) / rect.height - 0.5;\nconst rotX = y * 10; // max 10°\nconst rotY = -x * 10;\ncard.style.transform = `perspective(600px) rotateX(${rotX}deg) rotateY(${rotY}deg)`;\n});\ncard.addEventListener('pointerleave',()=>{ card.style.transform=''; });\n});\n```",
+ "skill": "3d-tilt-price-card",
+ "effect": "Делает цену более «осязаемой», повышает вовлечённость и воспринимается как современный премиум‑дизайн → рост кликов по кнопке «Получить демо».",
+ "risk": "На мобильных без указателя эффект будет отключён (pointerleave сразу); небольшая нагрузка при большом числе карточек, но их здесь только одна‑две.",
+ "rollback": "Удалить CSS‑правила и `<script id=\"skill-tilt-price-js\">`; либо откатить файл через `git checkout`.",
+ "verify": "Навести курсор на карточку цены, увидеть плавный наклон; проверить на мобильных (должен быть без наклона).",
+ "priority_claim": "3 – улучшает взаимодействие с важным элементом цены, но требует JS; ставим ниже, если время ограничено.",
+ "source_hint": "",
+ "site_request": "price",
+ "category": "skill",
+ "variants": [
+  "**NAME:** 3d-tilt-price-card\n**WHEN TO APPLY:** На карточках цены (`.price-card`) в секции «Цена», где нужен интерактивный премиальный эффект при наведении/касании.\n**STEPS:**\n1. Добавить к каждому `.price-card` класс `tilt‑card`.\n2. В CSS задать `perspective` и базовый `transform`.\n3. Добавить лёгкий JS‑слушатель `pointermove` для расчёта угла наклона (max 10°).\n**SAFE CSS:**\n```css\n.tilt-card {\nperspective: 600px;\ntransition: transform 0.3s ease;\n}\n.tilt-card:hover,\n.tilt-card:focus-visible {\ntransform: rotateX(5deg) rotateY(5deg);\n}\n```\n**SAFE JS:**\n```js\ndocument.querySelectorAll('.price-card.tilt-card').forEach(card=>{\ncard.addEventListener('pointermove',e=>{\nconst rect = card.getBoundingClientRect();\nconst x = (e.clientX - rect.left) / rect.width - 0.5;\nconst y = (e.clientY - rect.top) / rect.height - 0.5;\nconst rotX = y * 10; // max 10°\nconst rotY = -x * 10;\ncard.style.transform = `perspective(600px) rotateX(${rotX}deg) rotateY(${rotY}deg)`;\n});\ncard.addEventListener('pointerleave',()=>{ card.style.transform=''; });\n});\n```"
+ ],
+ "flags": []
+}

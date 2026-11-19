@@ -1,0 +1,26 @@
+{
+ "id": "I-00083",
+ "round": 12,
+ "time": "2026-11-17 02:15:44",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить мета‑тег `viewport-fit=cover` для корректного отображения на iOS‑устройствах с вырезом (notch)",
+ "knob": "В существующий `<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">` добавить `, viewport-fit=cover` → `<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-fit=cover\">`",
+ "skill": "",
+ "effect": "Полноэкранный контент будет правильно растягиваться под вырезы, улучшая мобильный UX и шанс снижения Bounce Rate",
+ "risk": "Нет, совместимо со всеми современными браузерами",
+ "rollback": "Вернуть оригинальный мета‑тег (git checkout index.html)",
+ "verify": "Открыть страницу на iPhone (или эмулятор), убедиться, что контент не обрезается под вырезом; проверка в DevTools → Device Toolbar",
+ "priority_claim": "3 — небольшое улучшение мобильного отображения, не критично для SEO, но повышает UX.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В существующий `<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">` добавить `, viewport-fit=cover` → `<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-fit=cover\">`"
+ ],
+ "flags": []
+}

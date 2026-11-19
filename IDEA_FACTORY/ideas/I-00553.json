@@ -1,0 +1,28 @@
+{
+ "id": "I-00553",
+ "round": 82,
+ "time": "2026-11-17 05:39:48",
+ "source": "lareper/glm-5.3-prime",
+ "sources": [
+  "lareper/glm-5.3-prime",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3"
+ ],
+ "mentions": 3,
+ "status": "NEW",
+ "title": "aria-label и aria-current на навигации + подпись единственного script",
+ "knob": "в `<nav>` (L440) добавить `aria-label=\"Основная навигация\"`; активной/текущей ссылке якоря при скролле — `aria-current=\"true\"`; существующему `<script>` (1 шт) добавить `defer` если он не критичен для первого рендера",
+ "skill": "",
+ "effect": "скринридеры озвучивают навигацию корректно; defer убирает",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "в `<nav>` (L440) добавить `aria-label=\"Основная навигация\"`; активной/текущей ссылке якоря при скролле — `aria-current=\"true\"`; существующему `<script>` (1 шт) добавить `defer` если он не критичен для первого рендера"
+ ],
+ "flags": []
+}

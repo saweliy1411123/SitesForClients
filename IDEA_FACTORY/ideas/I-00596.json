@@ -1,0 +1,26 @@
+{
+ "id": "I-00596",
+ "round": 89,
+ "time": "2026-11-17 06:01:56",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Декоративные blob-фоны как aria-hidden для скринридеров",
+ "knob": "Ко всем декоративным элементам фона (`.final-bg`, `.final-veil`, blob-элементы в hero — классы из `@keyframes blob*`, см. L380–384) добавить атрибут `aria-hidden=\"true\"` и `tabindex=\"-1\"`, чтобы скринридер их не озвучивал.",
+ "skill": "",
+ "effect": "Чистая последовательность чтения для незрячих пользователей — только контент, без шума «изображение, градиент»; плюс к Lighthouse Accessibility.",
+ "risk": "Минимальный — чисто атрибутивная правка, на визуал не влияет.",
+ "rollback": "`git checkout -- index.html`",
+ "verify": "DevTools → Elements → найти .final-bg, убедиться что aria-hidden стоит; вкладка Accessibility tree — элемент исчез из дерева.",
+ "priority_claim": "3 (полировка a11y, быстрый выигрыш без риска)",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Ко всем декоративным элементам фона (`.final-bg`, `.final-veil`, blob-элементы в hero — классы из `@keyframes blob*`, см. L380–384) добавить атрибут `aria-hidden=\"true\"` и `tabindex=\"-1\"`, чтобы скринридер их не озвучивал."
+ ],
+ "flags": []
+}

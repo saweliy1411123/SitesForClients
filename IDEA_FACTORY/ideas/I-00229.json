@@ -1,0 +1,26 @@
+{
+ "id": "I-00229",
+ "round": 35,
+ "time": "2026-11-17 03:21:37",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — frosted-hero-bg",
+ "knob": "METHOD: SKILL\n**Name:** `frosted-hero-bg`\n**When to apply:** Для секции hero, где нужен премиальный «стеклянный» фон, подчёркивающий главный оффер и CTA, без использования PNG‑изображений.\n**Steps:**\n1. Внутри `<header class=\"hero\">` добавить элемент `<div class=\"hero-frost\"></div>` сразу после контент‑обёртки.\n2. Применить к нему `backdrop-filter: blur(12px) saturate(150%)` и полупрозрачный фон‑цвет.\n3. Ограничить высоту/ширину элементом `inset: 0; position: absolute; z-index: -1;` чтобы покрывать весь hero.\n4. Добавить fallback для браузеров без `backdrop-filter`: `background: rgba(10,10,15,0.85);`.\n**SAFE CSS:**\n```css\n.hero {\nposition: relative;\noverflow: hidden;\n}\n.hero-frost {\nposition: absolute;\ninset: 0;\nbackground: rgba(10,10,15,0.6);\nbackdrop-filter: blur(12px) saturate(150%);\n-webkit-backdrop-filter: blur(12px) saturate(150%);\nz-index: -1;\n}\n@supports not ((-webkit-backdrop-filter: blur(0)) or (backdrop-filter: blur(0))) {\n.hero-frost { background: rgba(10,10,15,0.85); }\n}\n```\n**SAFE JS:** *не требуется*",
+ "skill": "",
+ "effect": "Делает первый экран более «привлекательным» и современным, усиливает восприятие бренда как премиального, повышает читаемость текста на фоне динамичных слоёв.",
+ "risk": "На некоторых Android‑браузерах `backdrop-filter` может замедлять отрисовку; fallback‑цвет сохраняет читаемость.",
+ "rollback": "Удалить строки `<div class=\"hero-frost\"></div>` и соответствующий CSS‑блок.",
+ "verify": "Включить/выключить `backdrop-filter` в DevTools → CSS → toggle; убедиться, что текст остаётся контрастным, а FPS ≥ 55. Проверить в Chrome, Safari и Firefox.",
+ "priority_claim": "2 — Улучшает визуальную премиальность без влияния на SEO/структуру, но менее критично для конверсии, чем CTA‑эффекты.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "METHOD: SKILL\n**Name:** `frosted-hero-bg`\n**When to apply:** Для секции hero, где нужен премиальный «стеклянный» фон, подчёркивающий главный оффер и CTA, без использования PNG‑изображений.\n**Steps:**\n1. Внутри `<header class=\"hero\">` добавить элемент `<div class=\"hero-frost\"></div>` сразу после контент‑обёртки.\n2. Применить к нему `backdrop-filter: blur(12px) saturate(150%)` и полупрозрачный фон‑цвет.\n3. Ограничить высоту/ширину элементом `inset: 0; position: absolute; z-index: -1;` чтобы покрывать весь hero.\n4. Добавить fallback для браузеров без `backdrop-filter`: `background: rgba(10,10,15,0.85);`.\n**SAFE CSS:**\n```css\n.hero {\nposition: relative;\noverflow: hidden;\n}\n.hero-frost {\nposition: absolute;\ninset: 0;\nbackground: rgba(10,10,15,0.6);\nbackdrop-filter: blur(12px) saturate(150%);\n-webkit-backdrop-filter: blur(12px) saturate(150%);\nz-index: -1;\n}\n@supports not ((-webkit-backdrop-filter: blur(0)) or (backdrop-filter: blur(0))) {\n.hero-frost { background: rgba(10,10,15,0.85); }\n}\n```\n**SAFE JS:** *не требуется*"
+ ],
+ "flags": []
+}

@@ -1,0 +1,31 @@
+{
+ "id": "I-00044",
+ "round": 5,
+ "time": "2026-11-17 01:53:40",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Внедрить JSON‑LD разметку `Offer` с ценой и валютой для секции цены",
+ "knob": "в конец `<body>` добавить\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"Offer\",\n\"priceCurrency\":\"RUB\",\n\"price\":\"19900\",\n\"url\":\"https://example.com/\",\n\"availability\":\"https://schema.org/InStock\",\n\"seller\":{\"@type\":\"Person\",\"name\":\"Савелий\"}\n}\n</script>\n```\n(заменить `price` и `url` на реальные данные).",
+ "skill": "",
+ "effect": "Позволит поисковикам показывать цену в поисковой выдаче, повышая CTR и локальное SEO.",
+ "risk": "Требует согласования точной цены и условий с владельцем; если цена изменится, разметка должна быть обновлена.",
+ "rollback": "Удалить скрипт (`git checkout -- index.html`).",
+ "verify": "Прогнать страницу через Google Rich Results Test; убедиться, что Offer распознан без ошибок.",
+ "priority_claim": "3 – полезно для SEO, но менее критично, чем доступность.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "в конец `<body>` добавить\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"Offer\",\n\"priceCurrency\":\"RUB\",\n\"price\":\"19900\",\n\"url\":\"https://example.com/\",\n\"availability\":\"https://schema.org/InStock\",\n\"seller\":{\"@type\":\"Person\",\"name\":\"Савелий\"}\n}\n</script>\n```\n(заменить `price` и `url` на реальные данные).",
+  "В конец `<body>` добавить скрипт:\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"Offer\",\n\"priceCurrency\":\"RUB\",\n\"price\":\"0\",\n\"url\":\"https://example.com/#price\",\n\"availability\":\"https://schema.org/InStock\",\n\"itemOffered\":{\n\"@type\":\"Service\",\n\"name\":\"Лендинг за 2 дня\",\n\"description\":\"Одностраничный сайт под ваш бизнес, готовый к показу в Яндексе\"\n}\n}\n</script>\n```",
+  "В конец `<body>` вставить\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"Offer\",\n\"url\":\"https://example.com/#contact\",\n\"priceCurrency\":\"RUB\",\n\"price\":\"19900\",\n\"availability\":\"https://schema.org/InStock\",\n\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Лендинг за 2 дня\"}\n}\n</script>\n```",
+  "В конец `<body>` добавить скрипт:\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"Offer\",\n\"url\":\"https://example.com/#price\",\n\"priceCurrency\":\"RUB\",\n\"price\":\"19990\",\n\"priceValidUntil\":\"2027-12-31\",\n\"availability\":\"https://schema.org/InStock\",\n\"itemOffered\":{\n\"@type",
+  "После блока `.price-card` добавить JSON‑LD:\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"Offer\",\n\"priceCurrency\":\"RUB\",\n\"price\":\"12000\",\n\"url\":\"https://saveliy-perm.ru/#price\",\n\"availability\":\"https://schema.org/InStock\",\n\"seller\":{\"@type\":\"LocalBusiness\",\"name\":\"Савелий\"}\n}\n</script>\n```",
+  "После блока `.price-card` добавить `<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"Offer\",\"price\":\"12000\",\"priceCurrency\":\"RUB\",\"url\":\"https://example.com#price\",\"availability\":\"https://schema.org/InStock\",\"seller\":{\"@type\":\"Person\",\"name\":\"Савелий\"}}`"
+ ],
+ "flags": []
+}

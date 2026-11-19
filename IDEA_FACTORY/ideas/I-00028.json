@@ -1,0 +1,40 @@
+{
+ "id": "I-00028",
+ "round": 4,
+ "time": "2026-11-17 01:51:04",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.3",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "Hero — добавить микродоказательство под CTA (срок+способ связи)",
+ "knob": "В hero, после `.hero-note` (L465), добавить строку-трест: «Отвечаю в Telegram лично · демо готово за 48 часов · без предоплаты за демо». Стили — существующий класс hero-note, размер меньше (font-size:14px; opacity:.7).",
+ "skill": "",
+ "effect": "Снимает 3 возражения сразу (кто отвечает, сколько ждать, чем рискую) до первого скролла — растёт доля кликов по CTA.",
+ "risk": "Третья строка может перегрузить первый экран на 375px — нужно проверить перенос строк.",
+ "rollback": "git checkout -- index.html (или правка в index.improved.html, оригинал не трогаем).",
+ "verify": "Скриншот hero на 375px и 1440px до/после: h1 и CTA должны остаться видимыми без скролла (2 мин).",
+ "priority_claim": "1 — hero даёт наибольший вклад в конверсию, изменение копируется за 5 минут.",
+ "source_hint": "",
+ "site_request": "hero-note",
+ "category": "lever",
+ "variants": [
+  "В hero, после `.hero-note` (L465), добавить строку-трест: «Отвечаю в Telegram лично · демо готово за 48 часов · без предоплаты за демо». Стили — существующий класс hero-note, размер меньше (font-size:14px; opacity:.7).",
+  "В hero после CTA (L462) и до/вместо существующей строки-примечания добавить компактную строку: `<p class=\"hero-trust reveal\" style=\"--d:.3s\">Работаю с бизнесом в Перми · отвечаю в Telegram в течение часа в рабочее время</p>` + CSS `.hero-trust{font-size:14px;opacity:.75;margin-top:12px}`.",
+  "В hero после основной `.btn-primary` (L462) добавить вторичную ссылку `<a class=\"btn-ghost\" href=\"#demo\">Сначала посмотрите демо →</a>` + CSS `.btn-ghost{display:inline-flex;margin-left:16px;padding:14px 24px;border:1px solid rgba(255,255,255,.25);border-radius:12px;color:#fff;text-decoration:none;transition:border-color .2s}.btn-ghost:hover{border-color:#a78bfa}`. На мобильном — `flex-wrap:wrap;margin-left:0;margin-top:12px`.",
+  "L462 `<a class=\"btn-primary magnetic\" href=\"#contact\">Написать в Telegram — демо бесплатно` — проверить, куда ведёт `#contact` (SITE_REQUEST ниже); если это якорь на секцию с той же Telegram-ссылкой — оставить, но в подзаголовке `.sub` (L460) добавить хвост «— отвечаю лично в Telegram» для прозрачности пути.",
+  "В hero (L449–470), сразу под `.hero-note` (L141), добавить одну строку `<p class=\"hero-proof\">Отвечаю лично в течение часа. В демо — готовая структура вашей страницы, не шаблон.</p>` со стилем `.hero-proof{font-size:14px;color:var(--muted)}`. Текст скорректировать под реальные условия владельца.",
+  "В hero после `.btn-primary` (L462) и до `.hero-note` (L465) добавить строку: «Работаю из Перми · отвечаю в Telegram в течение часа · правки — неделю после запуска» (факты уже есть на сайте: ВК-ссылка L707, «Правки — неделю», «Дня на запуск»). Оформить как `.hero-note`, разделители «·».",
+  "В hero после `.btn-primary` (L462) добавить текстовую ссылку `<a class=\"link-ghost\" href=\"#price\">Узнать цену — от X ₽ за 2 дня</a>`; CSS: `.link-ghost{color:var(--muted);text-decoration:underline;text-underline-offset:4px;margin-left:16px}`. Точное «от X ₽» взять из `.price-card` (L642+), не выдумывать.",
+  "В `.hero` рядом с `.hero-note` (L465) добавить строку-факты из существующего контента: `<p class=\"hero-facts\">Запуск — 2 дня · Правки — неделя · Демо — бесплатно</p>` (все три факта уже есть на странице: h3 «Дня на запуск», «Правки — неделю», финальный CTA). Стиль: font-size 14px, color var(--muted), letter-spacing .02em.",
+  "В `.hero` после `.hero-note` (L141, разметка ~L470) добавить одну строку: «За 2 дня: концепт → правки → запуск. Оплата после того, как увидите демо». Стилизовать как `.hero-note`, но с `<b>` на «Оплата после демо».",
+  "В hero после `<a class=\"btn-primary magnetic\" href=\"#contact\">` (L462) добавить одну строку `<p class=\"cta-reassure\">Отвечу лично в Telegram · демо без предоплаты · без спама</p>`; в CSS рядом с `.hero-note` (L141) задать стиль 13px, `color:var(--muted)`, margin-top 12px.",
+  "В hero (L460–465) рядом с `.btn-primary` (L462) добавить вторую ссылку-призрак: `<a class=\"btn-ghost\" href=\"#demo\">Сначала посмотрите демо-концепты ↓</a>`; в CSS добавить `.btn-ghost{display:inline-flex;padding:14px 22px;border:1px solid var(--border);border-radius:12px;color:var(--text);margin-left:12px}` и на мобильных `margin-left:0;margin-top:10px`.",
+  "Проверить в hero (~L459–465), есть ли ниже h1 основная CTA-ссылка `.btn-primary`; если она визуально слабее подзаголовка/бейджей — поднять её вес (крупнее padding, тень) и оставить на первом экране ровно одну сильную кнопку, остальные ссылки hero ослабить до текстового стиля."
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00599",
+ "round": 89,
+ "time": "2026-11-17 06:02:04",
+ "source": "lareper/glm-5.3-prime",
+ "sources": [
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Единый фокус-порядок — проверка tab-обхода всей страницы",
+ "knob": "METHOD: открыть index.html, 20 раз нажать Tab с верха страницы и записать порядок фокуса: nav-ссылки → hero-CTA → якоря секций → price-CTA → FAQ (если details) → final-CTA → футер. Проверить: (1) ни один элемент не «теряет» видимый фокус; (2) sticky-CTA не перехватывает фокус посреди контента; (3) `target=\"_blank",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: открыть index.html, 20 раз нажать Tab с верха страницы и записать порядок фокуса: nav-ссылки → hero-CTA → якоря секций → price-CTA → FAQ (если details) → final-CTA → футер. Проверить: (1) ни один элемент не «теряет» видимый фокус; (2) sticky-CTA не перехватывает фокус посреди контента; (3) `target=\"_blank"
+ ],
+ "flags": []
+}

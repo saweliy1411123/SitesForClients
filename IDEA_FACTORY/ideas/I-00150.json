@@ -1,0 +1,26 @@
+{
+ "id": "I-00150",
+ "round": 23,
+ "time": "2026-11-17 02:46:38",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "CSS Coverage audit for render‑blocking/unused styles",
+ "knob": "METHOD: In Chrome DevTools open **Coverage** panel (Ctrl Shift P → “Show Coverage”), click **Start instrumenting coverage**, reload the page, then stop after load. Record total CSS bytes vs. used bytes. If unused > 15 % add a comment `/* TODO: remove unused selectors */` next to the block.",
+ "skill": "",
+ "effect": "Identifies dead CSS that inflates payload, allowing quick pruning to improve LCP and CLS without altering markup.",
+ "risk": "None – analysis‑only; removing code later must be done carefully to avoid breaking styles.",
+ "rollback": "No file changes made; if later you delete selectors, revert with `git checkout index.html`.",
+ "verify": "Run the Coverage scan, note the percentage of unused CSS; if > 15 % log the selectors for removal. The whole process takes ≤5 min.",
+ "priority_claim": "2 – Speed gains directly affect Core Web Vitals, boosting SEO and user retention, but impact is moderate compared to acc",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: In Chrome DevTools open **Coverage** panel (Ctrl Shift P → “Show Coverage”), click **Start instrumenting coverage**, reload the page, then stop after load. Record total CSS bytes vs. used bytes. If unused > 15 % add a comment `/* TODO: remove unused selectors */` next to the block."
+ ],
+ "flags": []
+}

@@ -1,0 +1,27 @@
+{
+ "id": "I-00168",
+ "round": 26,
+ "time": "2026-11-17 02:55:17",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Улучшение мобильной версии",
+ "knob": "Добавление мета-тега viewport с атрибутом width=device-width и initial-scale=1",
+ "skill": "",
+ "effect": "Улучшение отображения сайта на мобильных устройствах",
+ "risk": "Нет",
+ "rollback": "Удаление добавленного мета-тега",
+ "verify": "Проверка отображения сайта на мобильном устройстве",
+ "priority_claim": "2",
+ "source_hint": "",
+ "site_request": "mobile",
+ "category": "lever",
+ "variants": [
+  "Добавление мета-тега viewport с атрибутом width=device-width и initial-scale=1",
+  "Добавить мета-тег viewport с атрибутом width=device-width и initial-scale=1"
+ ],
+ "flags": []
+}

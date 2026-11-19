@@ -1,0 +1,26 @@
+{
+ "id": "I-00096",
+ "round": 14,
+ "time": "2026-11-17 02:21:17",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — CSS‑Only FAQ Accordion (styled details/summary)",
+ "knob": "METHOD: Преобразуйте каждый вопрос‑ответ в `<details class=\"faq-item\"><summary>Вопрос</summary><p>Ответ</p></details>` и добавьте стили для плавного раскрытия и визуального индикатора.\nSAFE CSS:\n```css\n.faq-item {\nborder-top: 1px solid #e5e7eb;\npadding: .75rem 0;\n}\n.faq-item summary {\ncursor: pointer;\nlist-style: none;\nfont-weight: 600;\nposition: relative;\npadding-right: 1.5rem;\n}\n.faq-item summary::after {\ncontent: \"▸\";\nposition: absolute;\nright: 0;\ntransition: transform .3s;\n}\n.faq-item[open] summary::after {\ntransform: rotate(90deg);\n}\n.faq-item p {\nmargin-top: .5rem;\nline-height: 1.5;\nanimation: fadeIn .3s ease-out;\n}\n@keyframes fadeIn { from {opacity:0;} to {opacity:1;} }\n```",
+ "skill": "",
+ "effect": "Улучшает структуру FAQ, делает контент сканируемым, экономит место, повышает доверие через интерактивность без JavaScript.",
+ "risk": "Требует небольших правок в HTML (замена текущих `<h3>`/`<p>` на `<details>`), но контент сохраняется.",
+ "rollback": "Восстановить оригинальные блоки из Git (коммит `git checkout index.html`).",
+ "verify": "В браузере открыть FAQ, кликнуть каждый вопрос – контент должен плавно раскрываться/сворачиваться.",
+ "priority_claim": "2 – повышает удобство чтения и SEO (структурированный контент), небольшие затраты.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "METHOD: Преобразуйте каждый вопрос‑ответ в `<details class=\"faq-item\"><summary>Вопрос</summary><p>Ответ</p></details>` и добавьте стили для плавного раскрытия и визуального индикатора.\nSAFE CSS:\n```css\n.faq-item {\nborder-top: 1px solid #e5e7eb;\npadding: .75rem 0;\n}\n.faq-item summary {\ncursor: pointer;\nlist-style: none;\nfont-weight: 600;\nposition: relative;\npadding-right: 1.5rem;\n}\n.faq-item summary::after {\ncontent: \"▸\";\nposition: absolute;\nright: 0;\ntransition: transform .3s;\n}\n.faq-item[open] summary::after {\ntransform: rotate(90deg);\n}\n.faq-item p {\nmargin-top: .5rem;\nline-height: 1.5;\nanimation: fadeIn .3s ease-out;\n}\n@keyframes fadeIn { from {opacity:0;} to {opacity:1;} }\n```"
+ ],
+ "flags": []
+}

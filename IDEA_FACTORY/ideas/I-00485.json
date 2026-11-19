@@ -1,0 +1,26 @@
+{
+ "id": "I-00485",
+ "round": 72,
+ "time": "2026-11-17 05:12:25",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Метод «grayscale-тест» — проверка иерархии без цвета",
+ "knob": "METHOD: (1) Открыть index.html в Chrome → DevTools → Ctrl+Shift+P → набрать «Show Rendering» → включить «Emulate vision deficiencies» → «Achromatopsia» (или CSS-инъекция `html{filter:grayscale(1)}` в копии index.improved.html). (2) Пройтись по hero, цене, финальному CTA. (3) Ответить: остаётся ли CTA-кнопка заметнее всего остального? Не сливается ли `.price-card` с фоном? Читается ли `.hero-note b` (синий акцент) как акцент без цвета? (4) Если CTA теряется — добавить в CSS контраст через толщину/тень/размер, а не только цвет.",
+ "skill": "",
+ "effect": "Владелец узнаёт, не полагается ли конверсионный путь только на цвет (фиолетовый theme-color #8b5cf6 на тёмном фоне); до ~8% мужчин — дальтоники, для них CTA может быть невидим.",
+ "risk": "Метод субъективен — фиксируйте выводы текстом, а не «на глаз по памяти».",
+ "rollback": "Тест только на копии index.improved.html; оригинал не трогается, откат не нужен.",
+ "verify": "Весь тест — 3–5 минут, скриншот до/после grayscale кладётся рядом с файлом как артефакт.",
+ "priority_claim": "2 — дешёвый a11y/конверсионный чек перед любыми правками CTA.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: (1) Открыть index.html в Chrome → DevTools → Ctrl+Shift+P → набрать «Show Rendering» → включить «Emulate vision deficiencies» → «Achromatopsia» (или CSS-инъекция `html{filter:grayscale(1)}` в копии index.improved.html). (2) Пройтись по hero, цене, финальному CTA. (3) Ответить: остаётся ли CTA-кнопка заметнее всего остального? Не сливается ли `.price-card` с фоном? Читается ли `.hero-note b` (синий акцент) как акцент без цвета? (4) Если CTA теряется — добавить в CSS контраст через толщину/тень/размер, а не только цвет."
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00433",
+ "round": 65,
+ "time": "2026-11-17 04:49:31",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Метод «scroll-heatmap»",
+ "knob": "METHOD: В консоли выполнить скрипт, который выдаст карту прокрутки страницы",
+ "skill": "",
+ "effect": "Позволяет визуализировать пользовательский путь и определить наиболее интересные секции",
+ "risk": "Нет",
+ "rollback": "Нет",
+ "verify": "Проверить за 2–10 минут, выполнив скрипт в консоли",
+ "priority_claim": "2",
+ "source_hint": "",
+ "site_request": "scroll-heatmap",
+ "category": "method",
+ "variants": [
+  "METHOD: В консоли выполнить скрипт, который выдаст карту прокрутки страницы"
+ ],
+ "flags": []
+}

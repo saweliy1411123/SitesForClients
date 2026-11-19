@@ -1,0 +1,28 @@
+{
+ "id": "I-00788",
+ "round": 119,
+ "time": "2026-11-17 07:30:05",
+ "source": "lareper/glm-5.2-fast-preview",
+ "sources": [
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3-prime",
+  "lareper/glm-5.2"
+ ],
+ "mentions": 3,
+ "status": "NEW",
+ "title": "SKILL — grad-text-shimmer (живой блик по градиентному тексту h1)",
+ "knob": "SKILL — grad-text-shimmer\nName: `grad-text-shimmer`\nWhen to apply: на любом лендинге, где заголовок h1 содержит акцентный градиентный `<span>` (здесь `.grad-text` в h1, L459) и нужен тонкий премиальный акцент.\nSteps:\n1. К существующему правилу `.grad-text` (L115) добавить анимацию блика поверх градиента.\n2. Вставить SAFE CSS.\n3. Ничего в разметке менять не нужно — работает на текущем span.\nSAFE CSS:\n```css",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "SKILL — grad-text-shimmer\nName: `grad-text-shimmer`\nWhen to apply: на любом лендинге, где заголовок h1 содержит акцентный градиентный `<span>` (здесь `.grad-text` в h1, L459) и нужен тонкий премиальный акцент.\nSteps:\n1. К существующему правилу `.grad-text` (L115) добавить анимацию блика поверх градиента.\n2. Вставить SAFE CSS.\n3. Ничего в разметке менять не нужно — работает на текущем span.\nSAFE CSS:\n```css"
+ ],
+ "flags": []
+}

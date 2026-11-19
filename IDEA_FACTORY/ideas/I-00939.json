@@ -1,0 +1,26 @@
+{
+ "id": "I-00939",
+ "round": 152,
+ "time": "2026-11-17 09:01:50",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Поддержка системной темы (dark‑mode) через `color‑scheme`",
+ "knob": "В `<head>` добавить мета‑тег\n```html\n<meta name=\"color-scheme\" content=\"light dark\">\n```\nи в CSS (в глобальном блоке) добавить\n```css\n@media (prefers-color-scheme: dark) {\n:root { --bg:#111; --text:#eee; --muted:#777; /* при необходимости корректировать остальные переменные */ }\n}\n```",
+ "skill": "",
+ "effect": "Пользователи, включившие тёмную тему в ОС/браузере, получат более комфортный визуал, что повышает удержание и показатель “User Experience”.",
+ "risk": "Потребуется корректировать цвета переменных, иначе в dark‑mode могут появиться плохие контрасты; однако это легко исправимо.",
+ "rollback": "Удалить мета‑тег и CSS‑блок, либо откатить файл.",
+ "verify": "Включить системный dark‑mode в браузере, проверить, что фон и текст меняются без потери контраста (контраст‑тест в DevTools → Accessibility).",
+ "priority_claim": "2 — небольшая стоимость, повышает восприятие бренда и SEO‑показатели (accessibility).",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<head>` добавить мета‑тег\n```html\n<meta name=\"color-scheme\" content=\"light dark\">\n```\nи в CSS (в глобальном блоке) добавить\n```css\n@media (prefers-color-scheme: dark) {\n:root { --bg:#111; --text:#eee; --muted:#777; /* при необходимости корректировать остальные переменные */ }\n}\n```"
+ ],
+ "flags": []
+}

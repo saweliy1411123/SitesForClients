@@ -1,0 +1,26 @@
+{
+ "id": "I-00750",
+ "round": 115,
+ "time": "2026-11-17 07:17:50",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Preload critical CSS for above‑the‑fold content",
+ "knob": "В `<head>` добавить `<link rel=\"preload\" href=\"styles.css\" as=\"style\" onload=\"this.rel='stylesheet'\">` и разместить минимальный инлайн‑блок с критическим CSS (шрифты, .hero, .btn-primary) внутри `<style>`; удалить `rel=\"stylesheet\"`‑дублирование.",
+ "skill": "",
+ "effect": "Уменьшит время до первого отрисованного контента (LCP) на ~200‑300 мс, повысит Core‑Web‑Vitals и, как следствие, ранжирование в Яндексе/Google.",
+ "risk": "Небольшой риск — если порядок загрузки нарушится, стили могут отобразиться позже (но fallback‑rel гарантирует).",
+ "rollback": "`git checkout HEAD -- index.html` (или удалить добавленные строки).",
+ "verify": "Открыть страницу в Chrome DevTools → Network, убедиться, что запрос на `styles.css` имеет статус 200 и `preload` в колонке Initiator; измерить LCP через Lighthouse до и после.",
+ "priority_claim": "2 – быстрый выигрыш в скорости без изменения UI.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<head>` добавить `<link rel=\"preload\" href=\"styles.css\" as=\"style\" onload=\"this.rel='stylesheet'\">` и разместить минимальный инлайн‑блок с критическим CSS (шрифты, .hero, .btn-primary) внутри `<style>`; удалить `rel=\"stylesheet\"`‑дублирование."
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00094",
+ "round": 14,
+ "time": "2026-11-17 02:21:17",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — Dark‑Mode Toggle with Auto‑Detect",
+ "knob": "METHOD: Добавьте CSS‑переменные для цветов темы и переключатель‑кнопку, меняющую `data-theme` на `<html>`. При загрузке проверяется `prefers‑color‑scheme`.\nSAFE CSS:\n```css\n:root {\n--bg: #ffffff;\n--text: #111111;\n--accent: #8b5cf6;\n}\n[data-theme=\"dark\"] {\n--bg: #111111;\n--text: #f5f5f5;\n--accent: #c084fc;\n}\nbody { background: var(--bg); color: var(--text); }\na.btn-primary { background: var(--accent); }\n```\nSAFE JS:\n```js\n(function(){\nconst root = document.documentElement;\nconst saved = localStorage.getItem('theme');\nconst prefersDark = matchMedia('(prefers-color-scheme: dark)').matches;\nconst theme = saved || (prefersDark ? 'dark' : 'light');\nroot.dataset.theme = theme;\ndocument.getElementById('theme-toggle').addEventListener('click',()=> {\nconst newTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';\nroot.dataset.theme = newTheme;\nlocalStorage.setItem('theme', newTheme);\n});\n})();\n```",
+ "skill": "",
+ "effect": "Позволяет пользователям выбирать тёмную тему, повышает восприятие сайта как современного и заботящегося о зрительном комфорте, потенциально увеличивает время на странице.",
+ "risk": "Требует добавить кнопку‑переключатель в HTML (`<button id=\"theme-toggle\" aria-label=\"Переключить тему\">🌓</button>`); без неё скрипт ничего не делает.",
+ "rollback": "Удалить `<script>` и стили, а также кнопку; вернуть оригинальный файл из Git.",
+ "verify": "Открыть страницу, кликнуть кнопку, убедиться в смене цветов; проверить автодетекцию, переключив системную тему в настройках OS.",
+ "priority_claim": "2 – улучшает доступность и современный имидж, но не критично для конверсии.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "METHOD: Добавьте CSS‑переменные для цветов темы и переключатель‑кнопку, меняющую `data-theme` на `<html>`. При загрузке проверяется `prefers‑color‑scheme`.\nSAFE CSS:\n```css\n:root {\n--bg: #ffffff;\n--text: #111111;\n--accent: #8b5cf6;\n}\n[data-theme=\"dark\"] {\n--bg: #111111;\n--text: #f5f5f5;\n--accent: #c084fc;\n}\nbody { background: var(--bg); color: var(--text); }\na.btn-primary { background: var(--accent); }\n```\nSAFE JS:\n```js\n(function(){\nconst root = document.documentElement;\nconst saved = localStorage.getItem('theme');\nconst prefersDark = matchMedia('(prefers-color-scheme: dark)').matches;\nconst theme = saved || (prefersDark ? 'dark' : 'light');\nroot.dataset.theme = theme;\ndocument.getElementById('theme-toggle').addEventListener('click',()=> {\nconst newTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';\nroot.dataset.theme = newTheme;\nlocalStorage.setItem('theme', newTheme);\n});\n})();\n```"
+ ],
+ "flags": []
+}

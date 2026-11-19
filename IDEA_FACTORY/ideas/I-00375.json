@@ -1,0 +1,26 @@
+{
+ "id": "I-00375",
+ "round": 56,
+ "time": "2026-11-17 04:23:22",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Reduce motion for accessibility",
+ "knob": "Добавить медиазапрос `@media (prefers-reduced-motion: reduce) { .reveal, .blob, .final-bg { animation:none; transition:none; } }` в конец CSS‑файла.",
+ "skill": "",
+ "effect": "Убирает анимацию для пользователей, выбравших «Reduced motion», повышая доступность и соответствие WCAG 2.1.",
+ "risk": "Потеря части визуального оформления для части аудитории.",
+ "rollback": "Удалить добавленный блок CSS (git checkout index.html).",
+ "verify": "Включить «Reduced motion» в настройках ОС, перезагрузить страницу, убедиться, что анимации отключились.",
+ "priority_claim": "2 – небольшие изменения, важны для соответствия рекомендациям доступности.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Добавить медиазапрос `@media (prefers-reduced-motion: reduce) { .reveal, .blob, .final-bg { animation:none; transition:none; } }` в конец CSS‑файла."
+ ],
+ "flags": []
+}

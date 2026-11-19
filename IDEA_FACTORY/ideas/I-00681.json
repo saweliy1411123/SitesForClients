@@ -1,0 +1,26 @@
+{
+ "id": "I-00681",
+ "round": 104,
+ "time": "2026-11-17 06:48:05",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Плавающий фиксированный хедер после скролла (sticky‑header‑reveal)",
+ "knob": "**SKILL — sticky-header-reveal**\n**Name:** sticky-header-reveal\n**When to apply:** На лендингах с крупным `<header class=\"hero\">` и навигационными ссылками, где полезно сохранять доступ к меню при прокрутке.\n**Steps:**\n1. Добавить в `<body>` элемент `<header class=\"sticky-header\">` с теми же навигационными ссылками, что в `.hero .nav-links`.\n2. Вставить в `<head>` блок `<style>` с SAFE CSS (см. ниже).\n3. Добавить лёгкий SAFE JS, который добавляет класс `.scrolled` к `body` при прокрутке > 80 px.\n**SAFE CSS:**\n```css\n/* базовый скрытый хедер */\n.sticky-header {\nposition: sticky;\ntop: 0;\nleft: 0;\nright: 0;\ndisplay: flex;\njustify-content: center;\nalign-items: center;\npadding: 12px 0;\nbackground: var(--bg);\nbox-shadow: 0 2px 8px rgba(0,0,0,.1);\nopacity: 0;\ntransform: translateY(-100%);\ntransition: opacity .3s ease, transform .3s ease;\nz-index: 1000;\n}\n/* видимый после скролла */\nbody.scrolled .sticky-header {\nopacity: 1;\ntransform: translateY(0);\n}\n```\n**SAFE JS:**\n```js\n// Добавляем/удаляем класс .scrolled на body при прокрутке\nwindow.addEventListener('scroll',()=>{\nif(window.scrollY>80) document.body.classList.add('scrolled');\nelse document.body.classList.remove('scrolled');\n});\n```",
+ "skill": "sticky-header-reveal",
+ "effect": "Улучшает навигацию и удерживает пользовательский фокус на CTA‑ссылках, повышая вероятность перехода к важным секциям.",
+ "risk": "Добавление нового `<header>` может слегка увеличить размер HTML; если уже есть фиксированный хедер, может возникнуть дублирование.",
+ "rollback": "Удалить вставленные блоки `.sticky-header`, CSS и JS; `git checkout -- index.html`.",
+ "verify": "Прокрутить страницу вниз более чем на 80 px – верхний хедер должен плавно появиться. Проверить, что ссылки работают и не перекрываются другими элементами.",
+ "priority_claim": "2 – небольшие изменения, положительно влияют на UX и удержание пользователя без риска для SEO.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**SKILL — sticky-header-reveal**\n**Name:** sticky-header-reveal\n**When to apply:** На лендингах с крупным `<header class=\"hero\">` и навигационными ссылками, где полезно сохранять доступ к меню при прокрутке.\n**Steps:**\n1. Добавить в `<body>` элемент `<header class=\"sticky-header\">` с теми же навигационными ссылками, что в `.hero .nav-links`.\n2. Вставить в `<head>` блок `<style>` с SAFE CSS (см. ниже).\n3. Добавить лёгкий SAFE JS, который добавляет класс `.scrolled` к `body` при прокрутке > 80 px.\n**SAFE CSS:**\n```css\n/* базовый скрытый хедер */\n.sticky-header {\nposition: sticky;\ntop: 0;\nleft: 0;\nright: 0;\ndisplay: flex;\njustify-content: center;\nalign-items: center;\npadding: 12px 0;\nbackground: var(--bg);\nbox-shadow: 0 2px 8px rgba(0,0,0,.1);\nopacity: 0;\ntransform: translateY(-100%);\ntransition: opacity .3s ease, transform .3s ease;\nz-index: 1000;\n}\n/* видимый после скролла */\nbody.scrolled .sticky-header {\nopacity: 1;\ntransform: translateY(0);\n}\n```\n**SAFE JS:**\n```js\n// Добавляем/удаляем класс .scrolled на body при прокрутке\nwindow.addEventListener('scroll',()=>{\nif(window.scrollY>80) document.body.classList.add('scrolled');\nelse document.body.classList.remove('scrolled');\n});\n```"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00785",
+ "round": 119,
+ "time": "2026-11-17 07:29:29",
+ "source": "localhost:8080/zhipu/glm-4.7-flash",
+ "sources": [
+  "localhost:8080/zhipu/glm-4.7-flash"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Infinite Scrolling Marquee",
+ "knob": "Create a `.marquee` container with `overflow: hidden` and `white-space: nowrap`. Inside, add text like \"Perm • 2 Days • SEO • Perm • 2 Days • SEO\". Animate `translateX` from 0 to -50%.",
+ "skill": "",
+ "effect": "Dynamic background motion, fills empty space, creates movement.",
+ "risk": "Motion sensitivity (accessibility).",
+ "rollback": "Delete the `.marquee` CSS and HTML element.",
+ "verify": "Check `prefers-reduced-motion` support.",
+ "priority_claim": "2",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Create a `.marquee` container with `overflow: hidden` and `white-space: nowrap`. Inside, add text like \"Perm • 2 Days • SEO • Perm • 2 Days • SEO\". Animate `translateX` from 0 to -50%."
+ ],
+ "flags": []
+}

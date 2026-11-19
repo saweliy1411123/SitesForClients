@@ -1,0 +1,26 @@
+{
+ "id": "I-00888",
+ "round": 137,
+ "time": "2026-11-17 08:19:40",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Блок доверительных знаков под ценой",
+ "knob": "Внутри `.price-card` после списка `<ul>` вставить:\n```html\n<div class=\"trust-badges\">\n<span class=\"badge\">30‑дневная гарантия</span>\n<span class=\"badge\">Оплата через Яндекс.Деньги</span>\n<span class=\"badge\">Без скрытых комиссий</span>\n</div>\n```\nи в CSS добавить простую стилизацию `.trust-badges {display:flex;gap:12px;justify:center;margin-top:12px;} .badge{background:#f3f4f6;padding:4px 8px;border-radius:4px;font-size:13px;}`",
+ "skill": "",
+ "effect": "Снимает возражения о риске покупки, повышает конверсию цены.",
+ "risk": "Нужно убедиться, что заявления правдивы (владельцу).",
+ "rollback": "`git checkout -- index.html` (удалить вставку).",
+ "verify": "В браузере увидеть новые бейджи, проверить, что они не ломают верстку на мобильных (DevTools → responsive).",
+ "priority_claim": "2 – повышает доверие, но требует согласования текста.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Внутри `.price-card` после списка `<ul>` вставить:\n```html\n<div class=\"trust-badges\">\n<span class=\"badge\">30‑дневная гарантия</span>\n<span class=\"badge\">Оплата через Яндекс.Деньги</span>\n<span class=\"badge\">Без скрытых комиссий</span>\n</div>\n```\nи в CSS добавить простую стилизацию `.trust-badges {display:flex;gap:12px;justify:center;margin-top:12px;} .badge{background:#f3f4f6;padding:4px 8px;border-radius:4px;font-size:13px;}`"
+ ],
+ "flags": []
+}

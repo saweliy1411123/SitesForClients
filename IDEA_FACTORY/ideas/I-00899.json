@@ -1,0 +1,26 @@
+{
+ "id": "I-00899",
+ "round": 140,
+ "time": "2026-11-17 08:28:21",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — pulse‑cta‑hover‑glow",
+ "knob": "**Name:** `pulse-cta-hover-glow`\n**When to apply:** На все ссылки‑CTA, оформленные как кнопки (`.btn-primary`, `.cta-row a`).\n**Steps:**\n1. Добавить к CTA класс `pulse-cta`.\n2. В CSS задать анимацию «pulse» (scale + box‑shadow) с `animation-timing-function: ease-out`.\n3. При `:focus-visible` добавить более яркую подсветку для доступности.\n**SAFE CSS:**\n```css\n.pulse-cta{\nposition:relative;\noverflow:hidden;\n}\n.pulse-cta::after{\ncontent:\"\";\nposition:absolute;\ninset:0;\nborder-radius:inherit;\nbackground:radial-gradient(circle at center, var(--blue) 0%, transparent 70%);\nopacity:0;\ntransform:scale(0);\ntransition:opacity .2s,transform .3s;\n}\n.pulse-cta:hover::after,\n.pulse-cta:focus-visible::after{\nopacity:.25;\ntransform:scale(1.2);\n}\n@keyframes pulse{\n0%{transform:scale(1);box-shadow:0 0 0 0 rgba(139,92,246,.0);}\n70%{transform:scale(1.05);box-shadow:0 0 0 12px rgba(139,92,246,.0);}\n100%{transform:scale(1);box-shadow:0 0 0 0 rgba(139,92,246,.0);}\n}\n.pulse-cta:hover{\nanimation:pulse .8s ease",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `pulse-cta-hover-glow`\n**When to apply:** На все ссылки‑CTA, оформленные как кнопки (`.btn-primary`, `.cta-row a`).\n**Steps:**\n1. Добавить к CTA класс `pulse-cta`.\n2. В CSS задать анимацию «pulse» (scale + box‑shadow) с `animation-timing-function: ease-out`.\n3. При `:focus-visible` добавить более яркую подсветку для доступности.\n**SAFE CSS:**\n```css\n.pulse-cta{\nposition:relative;\noverflow:hidden;\n}\n.pulse-cta::after{\ncontent:\"\";\nposition:absolute;\ninset:0;\nborder-radius:inherit;\nbackground:radial-gradient(circle at center, var(--blue) 0%, transparent 70%);\nopacity:0;\ntransform:scale(0);\ntransition:opacity .2s,transform .3s;\n}\n.pulse-cta:hover::after,\n.pulse-cta:focus-visible::after{\nopacity:.25;\ntransform:scale(1.2);\n}\n@keyframes pulse{\n0%{transform:scale(1);box-shadow:0 0 0 0 rgba(139,92,246,.0);}\n70%{transform:scale(1.05);box-shadow:0 0 0 12px rgba(139,92,246,.0);}\n100%{transform:scale(1);box-shadow:0 0 0 0 rgba(139,92,246,.0);}\n}\n.pulse-cta:hover{\nanimation:pulse .8s ease"
+ ],
+ "flags": []
+}

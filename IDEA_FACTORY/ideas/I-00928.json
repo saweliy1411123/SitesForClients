@@ -1,0 +1,26 @@
+{
+ "id": "I-00928",
+ "round": 147,
+ "time": "2026-11-17 08:47:40",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — scroll‑parallax‑layer",
+ "knob": "SKILL: **Name:** `scroll-parallax-layer`\n**When to apply:** К декоративным элементам в секции hero (blobs, фоновые SVG) и к любым фоновым блокам, где нужен лёгкий параллакс при прокрутке.\n**Steps:** 1️⃣ Добавить атрибут `data-speed=\"0.3\"` (значение 0–1) к каждому элементу. 2️⃣ Добавить класс `parallax-layer`. 3️⃣ Включить CSS и небольшой JS‑скрипт ниже.\nSAFE CSS:\n```css\n.parallax-layer{\nwill-change:transform;\n}\n```\nSAFE JS:\n```js\ndocument.addEventListener('scroll',()=>{\nconst y = window.scrollY;\ndocument.querySelectorAll('.parallax-layer').forEach(el=>{\nconst s = parseFloat(el.dataset.speed)||0.5;\nel.style.transform=`translateY(${y*s}px)`;\n});\n});\n```",
+ "skill": "",
+ "effect": "Создаёт ощущение глубины и динамики без тяжёлых библиотек, усиливая премиальный «живой» образ сайта.",
+ "risk": "JS‑скрипт добавляет небольшую нагрузку; на очень медленных устройствах может возникнуть лёгкое дрожание.",
+ "rollback": "Удалить атрибут `data-speed`/класс `parallax-layer` и скрипт из проекта.",
+ "verify": "Прокрутить страницу; декоративные элементы должны медленно смещаться относительно скролла; проверить плавность в Chrome DevTools → Performance.",
+ "priority_claim": "3 – увеличивает восприятие «современности», но требует небольшого JS‑влияния; стоит после реализации более критичных улу",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "SKILL: **Name:** `scroll-parallax-layer`\n**When to apply:** К декоративным элементам в секции hero (blobs, фоновые SVG) и к любым фоновым блокам, где нужен лёгкий параллакс при прокрутке.\n**Steps:** 1️⃣ Добавить атрибут `data-speed=\"0.3\"` (значение 0–1) к каждому элементу. 2️⃣ Добавить класс `parallax-layer`. 3️⃣ Включить CSS и небольшой JS‑скрипт ниже.\nSAFE CSS:\n```css\n.parallax-layer{\nwill-change:transform;\n}\n```\nSAFE JS:\n```js\ndocument.addEventListener('scroll',()=>{\nconst y = window.scrollY;\ndocument.querySelectorAll('.parallax-layer').forEach(el=>{\nconst s = parseFloat(el.dataset.speed)||0.5;\nel.style.transform=`translateY(${y*s}px)`;\n});\n});\n```"
+ ],
+ "flags": []
+}

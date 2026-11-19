@@ -1,0 +1,27 @@
+{
+ "id": "I-00506",
+ "round": 76,
+ "time": "2026-11-17 05:22:53",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "SKILL — sticky-cta-safe (единая мобильная кнопка с safe-area, скрытием у финального CTA и корректным фокусом)",
+ "knob": "В конец `<body>` (перед единственным `<script>`) добавить:\n```html\n<a class=\"sticky-cta\" href=\"#contact\" aria-label=\"Получить бесплатное демо — перейти к контакту\">Получить демо бесплатно</a>\n```\nШаги применения (переносимо на любой лендинг):\n1. Найти селектор финального CTA-секции (здесь `.final`) и якорь контакта (здесь `#contact`) — подставить свои значения в CSS/HTML ниже.\n2. Вставить HTML перед закрывающим `</body>`.\n3. Вставить SAFE CSS в конец `<style>`.\n4. Проверить на 360px и 375px, что кнопка не перекрывает контент и исчезает у финального CTA.\nSAFE CSS:\n```css\n.sticky-cta{\ndisplay:none;\n}\n@media (max-width:768px){\n.sticky-cta{\ndisplay:flex;\nalign-items:center;\njustify-content:center;\nposition:fixed;\nleft:16px;\nright:16px;\nbottom:calc(14px + env(safe-area-inset-bottom,0px));\nz-index:999;\npadding:15px 20px;\nborder-radius:14px;\nbackground:linear-gradient(135deg,#8b5cf6,#6d4aff);\ncolor:#fff;\nfont-weight:700;\nfont-size:16px;\ntext-decoration:none;\nbox-shadow:0 12px 40px rgba(139,92,246,.45);\ntransform:translateY(120%);\ntransition:transform .35s ease, opacity .35s ease;\nopacity:0;\n}\n.sticky-cta.is-visible{\ntransform:translateY(0);\nopacity:1;\n}\n.sticky-cta:focus-visible{\noutline:3px solid #fff;\noutline-offset:3px;\n}\n.sticky-cta.is-hidden-at-final{\ntransform:translateY(120%);\nopacity:0;\npointer-events:none;\n}\n}\n@media (prefers-reduced-motion: reduce){\n.sticky-cta{transition:none;transform:none;opacity:1;}\n}\n```\nSAFE JS:\n```js\n(function(){\nvar cta=document.querySelector('.sticky-cta');\nif(!cta)return;\nvar finalSection=document.querySelector('.final')||document.querySelector('footer');\nfunction update(){\nvar scrolled=window.scrollY>400;\nvar nearFinal=false;\nif(finalSection){\nvar r=finalSection.getBoundingClientRect();\nnearFinal=r.top<window.innerHeight;\n}\ncta.classList.toggle('is-visible',scrolled&&!nearFinal);\ncta.classList.toggle('is-hidden-at-final',nearFinal);\n}\nwindow.addEventListener('scroll',update,{passive:true});\nupdate();\n})();\n```",
+ "skill": "sticky-cta-safe",
+ "effect": "на мобильных (основной трафик по брифу) CTA всегда под большим пальцем — меньше потери лидов на длинном скролле; кнопка исчезает у финального блока, не создавая дубля.",
+ "risk": "без скрытия у `.final` кнопка дублирует финальный CTA и раздражает; на чужом сайте нужно подставить свои селектор/якорь.",
+ "rollback": "`git checkout -- index.improved.html` (оригинал index.html не трогаем).",
+ "verify": "(1) DevTools → iPhone SE 375px; (2) прокрутить 500px — кнопка появилась; (3) доскроллить до `.final` — исчезла; (4) Tab — фокус-кольцо видно; (5) Console: `document.querySelector('.sticky-cta')` не null.",
+ "priority_claim": "1 — прямой рост конверсии на основном (мобильном) трафике при ~30 строках кода.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "В конец `<body>` (перед единственным `<script>`) добавить:\n```html\n<a class=\"sticky-cta\" href=\"#contact\" aria-label=\"Получить бесплатное демо — перейти к контакту\">Получить демо бесплатно</a>\n```\nШаги применения (переносимо на любой лендинг):\n1. Найти селектор финального CTA-секции (здесь `.final`) и якорь контакта (здесь `#contact`) — подставить свои значения в CSS/HTML ниже.\n2. Вставить HTML перед закрывающим `</body>`.\n3. Вставить SAFE CSS в конец `<style>`.\n4. Проверить на 360px и 375px, что кнопка не перекрывает контент и исчезает у финального CTA.\nSAFE CSS:\n```css\n.sticky-cta{\ndisplay:none;\n}\n@media (max-width:768px){\n.sticky-cta{\ndisplay:flex;\nalign-items:center;\njustify-content:center;\nposition:fixed;\nleft:16px;\nright:16px;\nbottom:calc(14px + env(safe-area-inset-bottom,0px));\nz-index:999;\npadding:15px 20px;\nborder-radius:14px;\nbackground:linear-gradient(135deg,#8b5cf6,#6d4aff);\ncolor:#fff;\nfont-weight:700;\nfont-size:16px;\ntext-decoration:none;\nbox-shadow:0 12px 40px rgba(139,92,246,.45);\ntransform:translateY(120%);\ntransition:transform .35s ease, opacity .35s ease;\nopacity:0;\n}\n.sticky-cta.is-visible{\ntransform:translateY(0);\nopacity:1;\n}\n.sticky-cta:focus-visible{\noutline:3px solid #fff;\noutline-offset:3px;\n}\n.sticky-cta.is-hidden-at-final{\ntransform:translateY(120%);\nopacity:0;\npointer-events:none;\n}\n}\n@media (prefers-reduced-motion: reduce){\n.sticky-cta{transition:none;transform:none;opacity:1;}\n}\n```\nSAFE JS:\n```js\n(function(){\nvar cta=document.querySelector('.sticky-cta');\nif(!cta)return;\nvar finalSection=document.querySelector('.final')||document.querySelector('footer');\nfunction update(){\nvar scrolled=window.scrollY>400;\nvar nearFinal=false;\nif(finalSection){\nvar r=finalSection.getBoundingClientRect();\nnearFinal=r.top<window.innerHeight;\n}\ncta.classList.toggle('is-visible',scrolled&&!nearFinal);\ncta.classList.toggle('is-hidden-at-final',nearFinal);\n}\nwindow.addEventListener('scroll',update,{passive:true});\nupdate();\n})();\n```"
+ ],
+ "flags": []
+}

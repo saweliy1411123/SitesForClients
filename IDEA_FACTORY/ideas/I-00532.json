@@ -1,0 +1,28 @@
+{
+ "id": "I-00532",
+ "round": 79,
+ "time": "2026-11-17 05:32:17",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only",
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Метод «anchor-проверка» — валидация всех якорей и ссылок навигации",
+ "knob": "METHOD: (1) В консоли DevTools выполнить: `[...document.querySelectorAll('a[href^=\"#\"]')].forEach(a => console.log(a.href, !!document.querySelector(a.getAttribute('href'))))`. (2) Проверить, что каждый якорь ведёт на существующий элемент (все true). (3) Особое внимание: #contact (L462, L657, L736), #top (L449), #price (если есть).",
+ "skill": "",
+ "effect": "Выявление битых якорей, которые ломают навигацию и CTA-пути",
+ "risk": "Если якорь ведёт на скрытый элемент — метод может дать ложный позитив",
+ "rollback": "Не требуется — метод только чтение",
+ "verify": "За 2–3 минуты: выполнить скрипт, проверить все true",
+ "priority_claim": "2 — важно для конверсии, но не критично для рендера",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: (1) В консоли DevTools выполнить: `[...document.querySelectorAll('a[href^=\"#\"]')].forEach(a => console.log(a.href, !!document.querySelector(a.getAttribute('href'))))`. (2) Проверить, что каждый якорь ведёт на существующий элемент (все true). (3) Особое внимание: #contact (L462, L657, L736), #top (L449), #price (если есть).",
+  "METHOD: В консоли DevTools выполнить: `[...document.querySelectorAll('a[href^=\"#\"]')].forEach(a => { if (a.hash !== '' && !document.getElementById(a.hash.slice(1))) { console.log(`Якорь ${a.hash} не найден`); } });`"
+ ],
+ "flags": []
+}

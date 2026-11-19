@@ -1,0 +1,26 @@
+{
+ "id": "I-00070",
+ "round": 11,
+ "time": "2026-11-17 02:13:16",
+ "source": "localhost:8080/zhipu/glm-4.7-flash",
+ "sources": [
+  "localhost:8080/zhipu/glm-4.7-flash"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Hero Stats Strip",
+ "knob": "Insert `<div class=\"hero-stats\">` after `.sub` (line ~465) with text: \"Пермь | 2 дня | Личный подход\"",
+ "skill": "",
+ "effect": "Instant social proof and context anchor before the CTA",
+ "risk": "Minimal visual clutter",
+ "rollback": "Delete the `<div class=\"hero-stats\">` block",
+ "verify": "Check if text fits on mobile screens (max-width 375px)",
+ "priority_claim": "2",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Insert `<div class=\"hero-stats\">` after `.sub` (line ~465) with text: \"Пермь | 2 дня | Личный подход\""
+ ],
+ "flags": []
+}

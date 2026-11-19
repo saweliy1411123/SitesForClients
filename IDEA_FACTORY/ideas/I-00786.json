@@ -1,0 +1,26 @@
+{
+ "id": "I-00786",
+ "round": 119,
+ "time": "2026-11-17 07:29:29",
+ "source": "localhost:8080/zhipu/glm-4.7-flash",
+ "sources": [
+  "localhost:8080/zhipu/glm-4.7-flash"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Gradient Border Glow on Cards",
+ "knob": "For `.price-card` or `.step`, use `background: linear-gradient(white, white) padding-box, linear-gradient(135deg, var(--violet), var(--blue)) border-box;` with `border: 1px solid transparent;`.",
+ "skill": "",
+ "effect": "Premium glowing edges, separates card from background.",
+ "risk": "Complex CSS syntax may break if not handled carefully with `background-clip`.",
+ "rollback": "Remove the gradient border logic, revert to solid border.",
+ "verify": "Hover over the price cards.",
+ "priority_claim": "3",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "For `.price-card` or `.step`, use `background: linear-gradient(white, white) padding-box, linear-gradient(135deg, var(--violet), var(--blue)) border-box;` with `border: 1px solid transparent;`."
+ ],
+ "flags": []
+}

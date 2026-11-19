@@ -1,0 +1,28 @@
+{
+ "id": "I-00991",
+ "round": 168,
+ "time": "2026-11-17 09:46:37",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only",
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Аккордеон‑FAQ на основе `<details>/<summary>` для лучшей доступности",
+ "knob": "В секции `#faq` заменить каждый пункт `<h3>` + текст на `<details class=\"faq-item\"><summary class=\"faq-question\">[вопрос]</summary><p class=\"faq-answer\">[ответ]</p></details>`; добавить небольшие стили для плавного раскрытия.",
+ "skill": "",
+ "effect": "Позволит пользователям быстро находить ответы, уменьшит визуальный шум, повышает WCAG‑совместимость (клавиатурная навигация, ARIA‑автоматика).",
+ "risk": "Требует небольших правок HTML; может немного изменить визуальный дизайн (но стили легко скорректировать).",
+ "rollback": "Восстановить оригинальные блоки из коммита (`git checkout index.html`).",
+ "verify": "В браузере открыть страницу, нажать Tab до вопросов, убедиться в открытии/закрытии без мыши; проверить в DevTools “Accessibility” → “ARIA‑expanded”.",
+ "priority_claim": "2 – улучшает UX и доступность без нагрузки на производительность.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В секции `#faq` заменить каждый пункт `<h3>` + текст на `<details class=\"faq-item\"><summary class=\"faq-question\">[вопрос]</summary><p class=\"faq-answer\">[ответ]</p></details>`; добавить небольшие стили для плавного раскрытия.",
+  "В секции `#faq` заменить каждый пункт `<h3>` + текст на `<details class=\"faq-item\"><summary class=\"faq-summary\">...</summary><p>...</p></details>`"
+ ],
+ "flags": []
+}

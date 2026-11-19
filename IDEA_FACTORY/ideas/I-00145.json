@@ -1,0 +1,27 @@
+{
+ "id": "I-00145",
+ "round": 22,
+ "time": "2026-11-17 02:43:51",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "JSON‑LD LocalBusiness schema для Пермского бизнеса",
+ "knob": "В конец `<body>` добавить `<script type=\"application/ld+json\">` с объектом `@type\":\"LocalBusiness\"` (название, адрес, телефон, часы работы, URL, `sameAs` VK, Telegram). При необходимости добавить `geo` координаты.",
+ "skill": "",
+ "effect": "Улучшит локальное SEO в Яндексе/Google, повышая видимость в поиске и усиливая доверие за счёт структурированных данных.",
+ "risk": "Требует точных контактных данных от владельца; неверные данные могут вызвать штрафы поисковиков.",
+ "rollback": "Удалить только вставленный `<script>`‑блок (или `git checkout -- index.html`).",
+ "verify": "В Chrome DevTools → Sources искать `application/ld+json`; в Google Rich Results Test убедиться, что тип LocalBusiness распознан без ошибок.",
+ "priority_claim": "2 – высокий SEO‑эффект, низкая стоимость внедрения, не влияет на UI.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В конец `<body>` добавить `<script type=\"application/ld+json\">` с объектом `@type\":\"LocalBusiness\"` (название, адрес, телефон, часы работы, URL, `sameAs` VK, Telegram). При необходимости добавить `geo` координаты.",
+  "В конец `<head>` вставить скрипт\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"LocalBusiness\",\n\"name\":\"Савелий — лендинги для бизнеса в Перми\",\n\"url\":\"https://saveliy-perm.ru/\",\n\"logo\":\"https://saveliy-perm.ru/assets/logo.svg\",\n\"image\":\"https://saveliy-perm.ru/assets/hero.jpg\",\n\"telephone\":\"+7 (3412) 345‑678\",\n\"address\":{\n\"@type\":\"PostalAddress\",\n\"streetAddress\":\"ул. Пушкина, 10\",\n\"addressLocality\":\"Пермь\",\n\"postalCode\":\"614000\",\n\"addressCountry\":\"RU\"\n},\n\"priceRange\":\"₽₽\",\n\"openingHours\":\"Mo-Fr 09:00-18:00\",\n\"sameAs\":[\n\"https://t.me/saveliy\",\n\"https://vk.com/saveliy\"\n]\n}\n</script>\n```\n(корректировать данные под реальный бизнес)."
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00606",
+ "round": 91,
+ "time": "2026-11-17 06:06:57",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — luxury-serif-display (премиальная дисплейная типографика заголовков)",
+ "knob": "Полное тело скилла:\n**Name:** `luxury-serif-display`\n**When to apply:** На любом лендинге, где заголовки h1/h2 набраны одним гротеском и выглядят «плоско». Шаги: (1) в `<head>` добавить второй display-шрифт (Playfair Display / Prata через Google Fonts, только вес 700, `display=swap`); (2) применить его только к h1 и `.grad-text`-частям заголовков — гротеск остаётся для текста; (3) добавить `letter-spacing:-.02em` и `font-feature-settings:\"liga\"`; (4) проверить на мобильных, что размер не ломает строки.\nSAFE CSS:\n```\nh1, .final h2, .price-card h3{\nfont-family:'Playfair Display', Georgia, serif;\nletter-spacing:-.02em;\nfont-feature-settings:\"liga\" 1;\n}\n@media(max-width:480px){ h1{font-size:clamp(28px,7vw,40px);} }\n```",
+ "skill": "",
+ "effect": "визуально «дорогой» контраст serif-заголовков на фоне гротескного текста — классический приём премиум-брендов; рост воспринимаемой ценности услуги без изменения контента.",
+ "risk": "добавляется второй шрифт (~+20 КБ) — замедлит первый рендер при медленном интернете.",
+ "rollback": "`git checkout -- index.improved.html` (оригинал не трогается).",
+ "verify": "открыть index.improved.html, сравнить hero и секцию цены с оригиналом; в DevTools → Network убедиться, что шрифт грузится один раз; сузить окно до 375px — заголовки не переносятся по буквам.",
+ "priority_claim": "2 — сильный визуальный апгрейд «дорогого» вида, но с ценой в байтах.",
+ "source_hint": "",
+ "site_request": "Playfair",
+ "category": "skill",
+ "variants": [
+  "Полное тело скилла:\n**Name:** `luxury-serif-display`\n**When to apply:** На любом лендинге, где заголовки h1/h2 набраны одним гротеском и выглядят «плоско». Шаги: (1) в `<head>` добавить второй display-шрифт (Playfair Display / Prata через Google Fonts, только вес 700, `display=swap`); (2) применить его только к h1 и `.grad-text`-частям заголовков — гротеск остаётся для текста; (3) добавить `letter-spacing:-.02em` и `font-feature-settings:\"liga\"`; (4) проверить на мобильных, что размер не ломает строки.\nSAFE CSS:\n```\nh1, .final h2, .price-card h3{\nfont-family:'Playfair Display', Georgia, serif;\nletter-spacing:-.02em;\nfont-feature-settings:\"liga\" 1;\n}\n@media(max-width:480px){ h1{font-size:clamp(28px,7vw,40px);} }\n```"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00783",
+ "round": 119,
+ "time": "2026-11-17 07:29:29",
+ "source": "localhost:8080/zhipu/glm-4.7-flash",
+ "sources": [
+  "localhost:8080/zhipu/glm-4.7-flash"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Custom Text Selection Color",
+ "knob": "Add CSS rule `::selection { background: var(--violet); color: white; }` and `::-moz-selection { background: var(--violet); color: white; }`.",
+ "skill": "",
+ "effect": "Subtle brand reinforcement, tactile interaction feedback.",
+ "risk": "None.",
+ "rollback": "Delete the `::selection` CSS rules.",
+ "verify": "Highlight any text on the page (Ctrl+A).",
+ "priority_claim": "3",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Add CSS rule `::selection { background: var(--violet); color: white; }` and `::-moz-selection { background: var(--violet); color: white; }`."
+ ],
+ "flags": []
+}

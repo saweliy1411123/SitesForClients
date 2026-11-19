@@ -1,0 +1,26 @@
+{
+ "id": "I-00998",
+ "round": 170,
+ "time": "2026-11-17 17:11:03",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Instant Visual A/B Toggle via URL Parameter (design hypothesis)",
+ "knob": "METHOD: Add this snippet to the console (or bookmarklet). It reads `?variant=` from the URL; if the value is `b`, it adds a class `variant-b` to `<body>`. You can pre‑define alternative styles in a `<style>` block (e.g., change hero background colour).\n```js\n(() => {\nconst v = new URLSearchParams(location.search).get('variant');\nif(v === 'b') document.body.classList.add('variant-b');\n})();\n```",
+ "skill": "",
+ "effect": "Enables rapid, zero‑deployment visual A/B tests (e.g., hero colour, CTA button style) by simply appending `?variant=b` to the URL, letting you compare engagement metrics (scroll depth, click count) in analytics.",
+ "risk": "Requires that the alternative CSS rules are already present (or added via a temporary `<style>` tag); otherwise no visual change occurs. No permanent code change.",
+ "rollback": "Remove the URL parameter or reload the page without it.",
+ "verify": "Open the page with `?variant=b`, observe the visual change (e.g., background colour), then reload without the param to confirm revert.",
+ "priority_claim": "3 – Supports fast design iteration; less critical than usability or SEO but useful for hypothesis validation.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: Add this snippet to the console (or bookmarklet). It reads `?variant=` from the URL; if the value is `b`, it adds a class `variant-b` to `<body>`. You can pre‑define alternative styles in a `<style>` block (e.g., change hero background colour).\n```js\n(() => {\nconst v = new URLSearchParams(location.search).get('variant');\nif(v === 'b') document.body.classList.add('variant-b');\n})();\n```"
+ ],
+ "flags": []
+}

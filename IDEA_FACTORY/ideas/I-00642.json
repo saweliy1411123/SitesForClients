@@ -1,0 +1,26 @@
+{
+ "id": "I-00642",
+ "round": 97,
+ "time": "2026-11-17 06:25:24",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Cost‑loss counter with ARIA‑live в секции «Боль»",
+ "knob": "SKILL:\n**Name:** `cost-loss-counter`\n**When to apply:** На любой странице, где в блоке боли нужно визуализировать финансовый ущерб от отсутствия сайта.\n**Steps:**\n1. В нужном месте (после описания боли) добавить HTML‑блок:\n```html\n<div class=\"cost-counter\" aria-live=\"polite\">\nПотеря потенциальных клиентов: <span>0</span>\n</div>\n```\n2. В секцию `<style>` добавить безопасный CSS (SAFE CSS).\n3. В конец `<body>` добавить безопасный JS (SAFE JS), который будет плавно увеличивать число до целевого значения.\n**SAFE CSS:**\n```css\n.cost-counter{\nmargin-top:1rem;\nfont-size:1.2rem;\ncolor:var(--muted);\n}\n```\n**SAFE JS:**\n```js\n(function(){\nconst el=document.querySelector('.cost-counter span');\nif(!el) return;\nlet current=0;\nconst target=120;               // пример: 120 потенциальных клиентов в месяц\nconst step=Math.ceil(target/100);\nconst interval=setInterval(()=>{\ncurrent+=step;\nif(current>=target){\ncurrent=target;\nclearInterval(interval);\n}\nel.textContent=current;\n},200);\n})();\n```",
+ "skill": "",
+ "effect": "Пользователь сразу видит конкретный ущерб, усиливается чувство срочности → рост конверсии в CTA.",
+ "risk": "Минимальное влияние на производительность (мало‑нагрузочный скрипт).",
+ "rollback": "`git checkout -- index.html` (или откатить отдельный коммит, если применялся).",
+ "verify": "Открыть страницу, убедиться, что блок появляется под секцией боли, число растёт от 0 до целевого, а атрибут `aria-live=\"polite\"` присутствует в DOM.",
+ "priority_claim": "2 — умеренный эффект на конверсию, быстрый и безопасный к внедрению.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "SKILL:\n**Name:** `cost-loss-counter`\n**When to apply:** На любой странице, где в блоке боли нужно визуализировать финансовый ущерб от отсутствия сайта.\n**Steps:**\n1. В нужном месте (после описания боли) добавить HTML‑блок:\n```html\n<div class=\"cost-counter\" aria-live=\"polite\">\nПотеря потенциальных клиентов: <span>0</span>\n</div>\n```\n2. В секцию `<style>` добавить безопасный CSS (SAFE CSS).\n3. В конец `<body>` добавить безопасный JS (SAFE JS), который будет плавно увеличивать число до целевого значения.\n**SAFE CSS:**\n```css\n.cost-counter{\nmargin-top:1rem;\nfont-size:1.2rem;\ncolor:var(--muted);\n}\n```\n**SAFE JS:**\n```js\n(function(){\nconst el=document.querySelector('.cost-counter span');\nif(!el) return;\nlet current=0;\nconst target=120;               // пример: 120 потенциальных клиентов в месяц\nconst step=Math.ceil(target/100);\nconst interval=setInterval(()=>{\ncurrent+=step;\nif(current>=target){\ncurrent=target;\nclearInterval(interval);\n}\nel.textContent=current;\n},200);\n})();\n```"
+ ],
+ "flags": []
+}

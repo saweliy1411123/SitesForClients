@@ -1,0 +1,26 @@
+{
+ "id": "I-00409",
+ "round": 60,
+ "time": "2026-11-17 04:35:26",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить `type=\"module\"` и `defer` к единственному скрипту для лучшей загрузки",
+ "knob": "Если скрипт встроен, вынести в отдельный файл `main.js`; в `<script src=\"main.js\" type=\"module\" defer></script>` разместить перед `</body>`",
+ "skill": "",
+ "effect": "Позволит браузеру загрузить скрипт асинхронно, использовать модульную область, уменьшит риск конфликтов глобальных переменных",
+ "risk": "Возможные ошибки, если скрипт использует `document.write` или ожидает синхронных переменных – требуется тестировать",
+ "rollback": "Восстановить оригинальный `<script>` (git checkout)",
+ "verify": "Открыть страницу, открыть консоль – не должно быть ошибок `Uncaught ReferenceError`; измерить время загрузки скрипта в Network (должен быть “deferred”)",
+ "priority_claim": "2 – улучшает загрузку и поддерживаемость, умеренный риск",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Если скрипт встроен, вынести в отдельный файл `main.js`; в `<script src=\"main.js\" type=\"module\" defer></script>` разместить перед `</body>`"
+ ],
+ "flags": []
+}

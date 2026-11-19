@@ -1,0 +1,26 @@
+{
+ "id": "I-00666",
+ "round": 102,
+ "time": "2026-11-17 06:41:01",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "HERO‑LIVE‑LEADS‑COUNTER",
+ "knob": "В `<header class=\"hero\">` добавить `<div class=\"lead-counter\" aria-live=\"polite\"></div>`; в `<script>` внизу страницы добавить JS, которое при появлении секции в viewport (IntersectionObserver) стартует счёт‑ап до числа ≈ 120 (примерное количество лидов за месяц) с `data-target=\"120\"` и анимацией 1.5 с.",
+ "skill": "",
+ "effect": "Демонстрирует конкретный результат работы, повышает доверие и усиливает «социальное доказательство», стимулируя клик по CTA.",
+ "risk": "Небольшой рост JS‑веса (≈ 1 KB) и возможный конфликт, если уже есть глобальный `IntersectionObserver`.",
+ "rollback": "`git checkout HEAD -- index.html` (откатить файл).",
+ "verify": "Открыть страницу, прокрутить до hero, убедиться, что цифра плавно считает до 120 и обновляется в `aria-live`. Проверить, что скриншот в DevTools показывает правильный HTML‑элемент.",
+ "priority_claim": "2 – высокий эффект для первого экрана, но небольшие риски и лёгкая проверка.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<header class=\"hero\">` добавить `<div class=\"lead-counter\" aria-live=\"polite\"></div>`; в `<script>` внизу страницы добавить JS, которое при появлении секции в viewport (IntersectionObserver) стартует счёт‑ап до числа ≈ 120 (примерное количество лидов за месяц) с `data-target=\"120\"` и анимацией 1.5 с."
+ ],
+ "flags": []
+}

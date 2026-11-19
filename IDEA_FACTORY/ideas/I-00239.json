@@ -1,0 +1,26 @@
+{
+ "id": "I-00239",
+ "round": 37,
+ "time": "2026-11-17 03:26:29",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Метод «тест одной строки оффера»",
+ "knob": "Сжать h1+sub до 140 символов",
+ "skill": "",
+ "effect": "Улучшение читаемости и привлекательности оффера",
+ "risk": "Потеря важной информации",
+ "rollback": "Восстановить исходный текст",
+ "verify": "Проверить читаемость и понимание оффера за 2–10 минут",
+ "priority_claim": "2, потому что это простой и быстрый метод проверки гипотезы",
+ "source_hint": "",
+ "site_request": "h1",
+ "category": "lever",
+ "variants": [
+  "Сжать h1+sub до 140 символов"
+ ],
+ "flags": []
+}

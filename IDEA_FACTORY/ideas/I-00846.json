@@ -1,0 +1,28 @@
+{
+ "id": "I-00846",
+ "round": 127,
+ "time": "2026-11-17 07:51:33",
+ "source": "lareper/glm-5.2-fast-preview",
+ "sources": [
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.2"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Гарантийный блок «что если не понравится» под ценой (снятие риска без фейков)",
+ "knob": "Секция `#price`, после `.price-card` (L644+) добавить `<p class=\"price-guarantee\">Демо бесплатно. Платите только если концепт нравится — иначе просто не продолжаем.</p>` + CSS `.price-guarantee{text-align:center;color:var(--muted);font-size:14px;margin-top:18px}`",
+ "skill": "",
+ "effect": "Снижает главный риск покупки («вдруг не подойдёт»), повышает конверсию CTA у цены; опирается на уже заявленное «демо бесплатно» — ничего не выдумывается",
+ "risk": "Формулировка должна точно совпадать с реальными условиями владельца — иначе подрыв доверия",
+ "rollback": "git checkout -- index.html",
+ "verify": "Открыть файл, убедиться что фраза «демо бесплатно» уже есть на сайте (финальный CTA, L697+); 5-секундный тест секции цены с 2–3 людьми: «что вас останавливает?»",
+ "priority_claim": "1 — прямое снятие возражения в точке решения, нулевая стоимость",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Секция `#price`, после `.price-card` (L644+) добавить `<p class=\"price-guarantee\">Демо бесплатно. Платите только если концепт нравится — иначе просто не продолжаем.</p>` + CSS `.price-guarantee{text-align:center;color:var(--muted);font-size:14px;margin-top:18px}`",
+  "В `.price-card` (L644–657) сразу после `<ul>` и перед `.btn-primary` добавить блок `<p class=\"price-guarantee\">Правки в течение недели включены · исходный код передаётся вам</p>`; CSS: `.price-guarantee{font-size:13px;color:var(--muted);margin:-14px 0 24px;text-align:center}` — снимает два главных возражения («а если не понравится» и «а сайт мой или ваш»)."
+ ],
+ "flags": []
+}

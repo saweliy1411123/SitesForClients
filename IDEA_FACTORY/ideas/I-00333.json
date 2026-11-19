@@ -1,0 +1,27 @@
+{
+ "id": "I-00333",
+ "round": 50,
+ "time": "2026-11-17 04:05:32",
+ "source": "lareper/deepseek-v4-pro-0813",
+ "sources": [
+  "lareper/deepseek-v4-pro-0813",
+  "lareper/deepseek-v4-pro"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Оффер-уточнение: «Telegram» → «В Telegram за 2 минуты» + микро-срок ответа",
+ "knob": "В hero-CTA (L462 `<a class=\"btn-primary magnetic\" href=\"#contact\">`) заменить текст кнопки на «Написать в Telegram — отвечу за 2 минуты»; под кнопкой в `.hero-note` (L465) добавить строку «Сейчас онлайн — отвечаю быстро» (если это правда).",
+ "skill": "",
+ "effect": "Снижает страх «долго ждать ответа», повышает кликабельность CTA и конверсию в заявку.",
+ "risk": "Если ответ будет дольше 2 минут — потеря доверия; требует честности владельца.",
+ "rollback": "git checkout index.html (или вернуть прежний текст кнопки).",
+ "verify": "Открыть файл, Ctrl+F «Написать в Telegram» — проверить новый текст; мысленно оценить, не выглядит ли обещание ложным.",
+ "priority_claim": "1 — прямо влияет на конверсию первого экрана.",
+ "source_hint": "",
+ "site_request": "hero",
+ "category": "lever",
+ "variants": [
+  "В hero-CTA (L462 `<a class=\"btn-primary magnetic\" href=\"#contact\">`) заменить текст кнопки на «Написать в Telegram — отвечу за 2 минуты»; под кнопкой в `.hero-note` (L465) добавить строку «Сейчас онлайн — отвечаю быстро» (если это правда)."
+ ],
+ "flags": []
+}

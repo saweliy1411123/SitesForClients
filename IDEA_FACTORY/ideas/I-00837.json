@@ -1,0 +1,26 @@
+{
+ "id": "I-00837",
+ "round": 126,
+ "time": "2026-11-17 07:48:27",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — scroll-triggered-depth-reveal",
+ "knob": "**Name:** `scroll-triggered-depth-reveal`\n**When to apply:** На блоках, которые появляются ниже первого экрана (например, секции «Три шага», «Демо‑концепты», «FAQ»).\n**SAFE CSS:**\n```css\n/* initial hidden state */\n.depth-reveal {\nopacity: 0;\ntransform: translateZ(-40px);\ntransition: opacity .6s ease-out, transform .6s ease-out;\nwill-change: opacity, transform;\n}\n/* when in viewport */\n.depth-reveal.in-view {\nopacity: 1;\ntransform: translateZ(0);\n}\n```\n**SAFE JS:**\n```js\n(() => {\nconst obs = new IntersectionObserver((entries)=> {\nentries.forEach(e=> e.target.classList.toggle('in-view', e.isIntersecting));\n}, {threshold: 0.15});\ndocument.querySelectorAll('.depth-reveal').forEach(el=> obs.observe(el));\n})();\n```",
+ "skill": "",
+ "effect": "Элементы «выходят» из глубины при скролле, создавая ощущение 3‑D‑пространства и повышая вовлечённость пользователя.",
+ "risk": "Добавляет небольшую нагрузку на CPU из‑за IntersectionObserver; на старых браузерах без поддержки скрипт просто не выполнится, элементы останутся скрытыми – рекомендуется добавить fallback‑класс `in-view` в HTML.",
+ "rollback": "Удалить все `.depth-reveal`‑классы и скрипт; откат через `git checkout`.",
+ "verify": "Прокрутите страницу, элементы с классом `depth-reveal` должны плавно появиться; откройте DevTools → Console, убедитесь в отсутствии ошибок.",
+ "priority_claim": "2 – улучшает динамику страницы, поддерживается большинством современных браузеров, легко тестировать.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `scroll-triggered-depth-reveal`\n**When to apply:** На блоках, которые появляются ниже первого экрана (например, секции «Три шага», «Демо‑концепты», «FAQ»).\n**SAFE CSS:**\n```css\n/* initial hidden state */\n.depth-reveal {\nopacity: 0;\ntransform: translateZ(-40px);\ntransition: opacity .6s ease-out, transform .6s ease-out;\nwill-change: opacity, transform;\n}\n/* when in viewport */\n.depth-reveal.in-view {\nopacity: 1;\ntransform: translateZ(0);\n}\n```\n**SAFE JS:**\n```js\n(() => {\nconst obs = new IntersectionObserver((entries)=> {\nentries.forEach(e=> e.target.classList.toggle('in-view', e.isIntersecting));\n}, {threshold: 0.15});\ndocument.querySelectorAll('.depth-reveal').forEach(el=> obs.observe(el));\n})();\n```"
+ ],
+ "flags": []
+}

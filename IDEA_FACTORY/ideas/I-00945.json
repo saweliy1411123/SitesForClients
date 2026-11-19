@@ -1,0 +1,26 @@
+{
+ "id": "I-00945",
+ "round": 154,
+ "time": "2026-11-17 09:07:29",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — scroll‑parallax‑3d‑layer",
+ "knob": "**Name:** `scroll-parallax-3d-layer`\n**When to apply:** На декоративных фоновых элементах в секции `.hero` (например, `.hero-bg`, `.hero-blob`) и в секции `.final` для лёгкого 3‑D параллакса, реагирующего на движение мыши/скролл.\n**SAFE CSS:**\n```css\n.parallax-layer {\nposition:absolute;\ninset:0;\ntransform-style:preserve-3d;\nwill-change:transform;\n}\n```\n**SAFE JS:**\n```js\ndocument.addEventListener('mousemove',e=>{\nconst layers = document.querySelectorAll('.parallax-layer');\nconst {innerWidth:w, innerHeight:h}=window;\nconst x = (e.clientX/w - 0.5)*2; // -1 .. 1\nconst y = (e.clientY/h - 0.5)*2;\nlayers.forEach(el=>{\nconst depth = parseFloat(el.dataset.depth)||0.2;\nconst tx = x*depth*15;\nconst ty = y*depth*15;\nel.style.transform=`translate3d(${tx}px,${ty}px,0)`;\n});\n});\n```",
+ "skill": "scroll-parallax-3d-layer",
+ "effect": "Добавляет лёгкую глубину и интерактивность, усиливая премиальный «технологичный» имидж без тяжёлых библиотек.",
+ "risk": "На мобильных устройствах без мыши эффект может быть избыточным; в `@media (hover: none)` отключаем скрипт (проверка `window.matchMedia('(hover: none)').matches`).",
+ "rollback": "`git checkout index.html && rm -rf SKILLS/scroll-parallax-3d-layer.md`.",
+ "verify": "Открыть страницу на десктопе, перемещать курсор – фоновые слои должны слегка смещаться; открыть в мобильном эмуляторе – движение не происходит, но фон остаётся.",
+ "priority_claim": "2 — визуальная «вау‑фактор», но требует небольшого JS, поэтому ставим средний приоритет.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `scroll-parallax-3d-layer`\n**When to apply:** На декоративных фоновых элементах в секции `.hero` (например, `.hero-bg`, `.hero-blob`) и в секции `.final` для лёгкого 3‑D параллакса, реагирующего на движение мыши/скролл.\n**SAFE CSS:**\n```css\n.parallax-layer {\nposition:absolute;\ninset:0;\ntransform-style:preserve-3d;\nwill-change:transform;\n}\n```\n**SAFE JS:**\n```js\ndocument.addEventListener('mousemove',e=>{\nconst layers = document.querySelectorAll('.parallax-layer');\nconst {innerWidth:w, innerHeight:h}=window;\nconst x = (e.clientX/w - 0.5)*2; // -1 .. 1\nconst y = (e.clientY/h - 0.5)*2;\nlayers.forEach(el=>{\nconst depth = parseFloat(el.dataset.depth)||0.2;\nconst tx = x*depth*15;\nconst ty = y*depth*15;\nel.style.transform=`translate3d(${tx}px,${ty}px,0)`;\n});\n});\n```"
+ ],
+ "flags": []
+}

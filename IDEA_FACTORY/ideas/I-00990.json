@@ -1,0 +1,26 @@
+{
+ "id": "I-00990",
+ "round": 168,
+ "time": "2026-11-17 09:46:14",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — premium-card-shadow",
+ "knob": "METHOD: Добавить CSS‑класс `.premium-shadow` к карточкам (`.price-card`, `.step`, `.testimonial-card`).",
+ "skill": "",
+ "effect": "Многослойный, слегка смещённый тень‑эффект имитирует глубину и «тяжесть» премиального дизайна, делая карточки более заметными и притягательными.",
+ "risk": "При слишком сильных тенях может возникнуть визуальный шум на небольших экранах; рекомендуется использовать медиазапросы для уменьшения интенсивности.",
+ "rollback": "Удалить класс `premium-shadow` из HTML и правило `.premium-shadow{…}` из CSS (git checkout index.improved.html).",
+ "verify": "Добавить класс к одной карточке, открыть страницу, убедиться в появлении мягкой, многослойной тени; сравнить визуально с оригиналом, убедиться в отсутствии «размытия» на мобильных.",
+ "priority_claim": "2 – усиливает восприятие стоимости без влияния на скорость загрузки (только CSS).\nSKILL\nName: premium-card-shadow\nWhen t",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "METHOD: Добавить CSS‑класс `.premium-shadow` к карточкам (`.price-card`, `.step`, `.testimonial-card`)."
+ ],
+ "flags": []
+}

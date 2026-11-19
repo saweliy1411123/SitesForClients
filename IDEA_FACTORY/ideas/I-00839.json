@@ -1,0 +1,26 @@
+{
+ "id": "I-00839",
+ "round": 126,
+ "time": "2026-11-17 07:49:42",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Ленивая загрузка фонового изображения hero с LQIP‑заполнителем",
+ "knob": "заменить текущий CSS‑фон hero на `<img class=\"hero-bg\" loading=\"lazy\" src=\"data:image/webp;base64,...\" data-src=\"hero-high.webp\" alt=\"\">`; добавить небольшой JS, который при `load` заменяет `src` на `data-src` и добавляет класс `loaded` для плавного перехода (`opacity`‑анимация).",
+ "skill": "",
+ "effect": "сокращает размер первоначального HTML/CSS, ускоряет LCP → быстрее первая отрисовка, лучше для мобильных пользователей.",
+ "risk": "если JS отключён, пользователь увидит только размытый placeholder; требуется задать фиксированную высоту, чтобы избежать CLS.",
+ "rollback": "вернуть прежний CSS‑фон; удалить `<img>` и скрипт; `git checkout index.html`.",
+ "verify": "включить throttling = Slow 3G в DevTools, измерить LCP до и после; убедиться в отсутствии смещения контента.",
+ "priority_claim": "1 – высокий, напрямую влияет на Core Web Vitals и SEO.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "заменить текущий CSS‑фон hero на `<img class=\"hero-bg\" loading=\"lazy\" src=\"data:image/webp;base64,...\" data-src=\"hero-high.webp\" alt=\"\">`; добавить небольшой JS, который при `load` заменяет `src` на `data-src` и добавляет класс `loaded` для плавного перехода (`opacity`‑анимация)."
+ ],
+ "flags": []
+}

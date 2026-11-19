@@ -1,0 +1,28 @@
+{
+ "id": "I-00324",
+ "round": 49,
+ "time": "2026-11-17 04:01:13",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+  "localhost:8081/big_only"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "glass-card-premium",
+ "knob": "\n### Название\nglass-card-premium\n### Когда применять\nтёмный лендинг с цветными фоновыми изображениями\n### SAFE CSS:\n```css\n.glass-card {\nbackground: linear-gradient(180deg, rgba(139,92,246,.5), transparent 65%);\nbackdrop-filter: blur(20px);\nborder-radius: 20px;\npadding: 20px;\nbox-shadow: 0 0 20px rgba(0, 0, 0, 0.2);\n}\n```\n### SAFE JS:\n```javascript\n// нет\n```",
+ "skill": "glass-card-premium",
+ "effect": "добавляет премиальный вид карточкам демо-концептов",
+ "risk": "требует наличия цветных фоновых изображений",
+ "rollback": "удалить класс `.glass-card-premium` из CSS",
+ "verify": "проверить визуально, открыв страницу",
+ "priority_claim": "2",
+ "source_hint": "",
+ "site_request": "демо-концепты",
+ "category": "skill",
+ "variants": [
+  "\n### Название\nglass-card-premium\n### Когда применять\nтёмный лендинг с цветными фоновыми изображениями\n### SAFE CSS:\n```css\n.glass-card {\nbackground: linear-gradient(180deg, rgba(139,92,246,.5), transparent 65%);\nbackdrop-filter: blur(20px);\nborder-radius: 20px;\npadding: 20px;\nbox-shadow: 0 0 20px rgba(0, 0, 0, 0.2);\n}\n```\n### SAFE JS:\n```javascript\n// нет\n```",
+  "\n### Название\nglass-card-premium\n### Когда применять\nтёмный лендинг с цветными фоновыми изображениям\n### SAFE CSS:\n```css\n.glass-card-premium {\nbackground: linear-gradient(180deg, rgba(139, 92, 246, 0.15), transparent 60%);\nbackdrop-filter: blur(10px);\nborder-radius: 20px;\npadding: 20px;\nbox-shadow: 0 34px 100px rgba(139, 92, 246, 0.3);\n}\n```"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00993",
+ "round": 169,
+ "time": "2026-11-17 09:48:53",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Карусель отзывов клиентов с микроданными Review (JSON‑LD)",
+ "knob": "После секции `#price` вставить `<section id=\"testimonials\" class=\"testimonials\"><h2>Отзывы клиентов</h2><div class=\"testimonials-carousel\"></div></section>`; добавить скрипт‑карусель (vanilla, автоплей, навигация клавиатурой) и в каждый элемент‑отзыв включить `<blockquote>…</blockquote><cite>Имя, компания</cite>`; внизу секции добавить `<script type=\"application/ld+json\">[{ \"@context\":\"https://schema.org\",\"@type\":\"Review\",\"author\":{\"@type\":\"Person\",\"name\":\"Имя\"},\"reviewBody\":\"Текст отзыва\",\"reviewRating\":{\"@type\":\"Rating\",\"ratingValue\":\"5\"}}]</script>`; стили `.testimonials-carousel{display:flex;overflow-x:auto;gap:1rem;scroll-snap-type:x mandatory;}` и ` .testimonials-carousel > *{flex:0 0 80%;scroll-snap-align:start;}`",
+ "skill": "",
+ "effect": "Доказательство качества через реальные отзывы повышает доверие и улучшает SEO‑вывод в поиске (rich snippets).",
+ "risk": "Требует реальных отзывов; фейковые недопустимы.",
+ "rollback": "Удалить весь блок `<section id=\"testimonials\">…</section>` и связанные скрипты/стили; `git checkout index.html` откатит файл.",
+ "verify": "Открыть страницу, убедиться, что отзывы пролистываются, проверка в Chrome DevTools → Structured Data Testing Tool, что Review‑разметка валидна.",
+ "priority_claim": "2 — повышает доверие, но требует наличия реальных отзывов; средний уровень усилий.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "После секции `#price` вставить `<section id=\"testimonials\" class=\"testimonials\"><h2>Отзывы клиентов</h2><div class=\"testimonials-carousel\"></div></section>`; добавить скрипт‑карусель (vanilla, автоплей, навигация клавиатурой) и в каждый элемент‑отзыв включить `<blockquote>…</blockquote><cite>Имя, компания</cite>`; внизу секции добавить `<script type=\"application/ld+json\">[{ \"@context\":\"https://schema.org\",\"@type\":\"Review\",\"author\":{\"@type\":\"Person\",\"name\":\"Имя\"},\"reviewBody\":\"Текст отзыва\",\"reviewRating\":{\"@type\":\"Rating\",\"ratingValue\":\"5\"}}]</script>`; стили `.testimonials-carousel{display:flex;overflow-x:auto;gap:1rem;scroll-snap-type:x mandatory;}` и ` .testimonials-carousel > *{flex:0 0 80%;scroll-snap-align:start;}`"
+ ],
+ "flags": []
+}

@@ -1,0 +1,28 @@
+{
+ "id": "I-00174",
+ "round": 26,
+ "time": "2026-11-17 02:56:13",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Фокус‑видимость (focus‑visible) для всех интерактивных элементов",
+ "knob": "В глобальный CSS добавить:\n```css\n:focus-visible{outline:3px solid var(--blue);outline-offset:2px}\na:focus-visible, button:focus-visible{outline:3px solid var(--blue)}\n```",
+ "skill": "",
+ "effect": "Пользователи клавиатуры видят чёткий индикатор фокуса, соответствие WCAG 2.1 AA 2.4.7, повышает конверсию за счёт уверенного навигационного опыта",
+ "risk": "Возможен конфликт с уже существующим `outline:none` в стилях; но правило будет переопределять только при `:focus-visible`",
+ "rollback": "Удалить блок CSS (git checkout -- index.html)",
+ "verify": "Нажать `Tab` по странице – каждый элемент должен получать синий контур; проверить в axe‑core отсутствие ошибок 2.4.7",
+ "priority_claim": "2 – важно для доступности, быстро реализуемо",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В глобальный CSS добавить:\n```css\n:focus-visible{outline:3px solid var(--blue);outline-offset:2px}\na:focus-visible, button:focus-visible{outline:3px solid var(--blue)}\n```",
+  "В конец CSS добавить правило `a:focus-visible, button:focus-visible, .btn-primary:focus-visible{outline:2px solid var(--blue);outline-offset:2px;}` и убедиться, что все ссылки и кнопки используют `tabindex` по умолчанию",
+  "Добавить в глобальный CSS правило:\n```css\n:focus-visible{\noutline:2px solid var(--blue);\noutline-offset:2px;\n}\na:focus-visible,\nbutton:focus-visible,\nsummary:focus-visible{\noutline:2px solid var(--blue);\noutline-offset:2px;\n}\n```"
+ ],
+ "flags": []
+}

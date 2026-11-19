@@ -1,0 +1,28 @@
+{
+ "id": "I-00518",
+ "round": 78,
+ "time": "2026-11-17 05:28:01",
+ "source": "lareper/glm-5.2-fast-preview",
+ "sources": [
+  "lareper/glm-5.2-fast-preview",
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Якорь «Цена» в навигации — прямой путь к главному вопросу",
+ "knob": "В `<nav>` (рядом с `<a class=\"nav-cta\" href=\"#contact\">Написать</a>`, L444) добавить `<a href=\"#price\">Цена</a>` (id секции цены проверить/задать, например `id=\"price\"` на секции «одна цена»); убедиться, что секция цены имеет `id` и `scroll-margin-top`",
+ "skill": "",
+ "effect": "Посетитель, пришедший сравнить цены, попадает к офферу в один клик вместо прокрутки — меньше отказов, больше просмотров прайса",
+ "risk": "Навигация на узких экранах может стать тесной — нужен перенос/скры",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<nav>` (рядом с `<a class=\"nav-cta\" href=\"#contact\">Написать</a>`, L444) добавить `<a href=\"#price\">Цена</a>` (id секции цены проверить/задать, например `id=\"price\"` на секции «одна цена»); убедиться, что секция цены имеет `id` и `scroll-margin-top`",
+  "В `<nav>` (рядом с `<a class=\"nav-cta\" href=\"#contact\">Написать</a>`, L444) добавить `<a href=\"#price\">Цена</a>`"
+ ],
+ "flags": []
+}

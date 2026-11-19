@@ -1,0 +1,26 @@
+{
+ "id": "I-00902",
+ "round": 141,
+ "time": "2026-11-17 08:30:57",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Блок «Мы в прессе» – медиа‑упоминания с микроданными Organization",
+ "knob": "После секции `.price-card` (L644+) вставить\n```html\n<section class=\"media-mentions\" aria-labelledby=\"media-title\">\n<h2 id=\"media-title\" class=\"reveal\">Нас упомянули</h2>\n<ul class=\"media-list\">\n<li><a href=\"https://example.com/article1\" target=\"_blank\" rel=\"noopener\"\nitemscope itemtype=\"https://schema.org/Article\">\n<img src=\"assets/media1.png\" alt=\"Logo «Biz»\" loading=\"lazy\">\n<meta itemprop=\"author\" content=\"Biz Magazine\">\n<meta itemprop=\"datePublished\" content=\"2024-08-12\">\n</a></li>\n<!-- repeat 3‑4 раза -->\n</ul>\n</section>\n```\nи добавить в `<head>` JSON‑LD:\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"Organization\",\n\"name\":\"Савелий\",\n\"url\":\"https://saveliy-perm.ru\",\n\"sameAs\":[\"https://vk.com/saveliy\",\"https://t.me/saveliy\"],\n\"mentions\":[\n{\"@type\":\"Article\",\"url\":\"https://example.com/article1\",\"name\":\"Biz Magazine\"},\n{\"@type\":\"Article\",\"url\":\"https://example.com/article2\",\"name\":\"TechNews\"}\n]\n}\n</script>\n```",
+ "skill": "",
+ "effect": "Показ реальных медиа‑упоминаний повышает доверие (социальное доказательство), улучшает SEO за счёт дополнительных внешних ссылок и разметки, стимулирует клики из поисковой выдачи.",
+ "risk": "Требует согласования с владельцами упомянутых изданий; если ссылки недоступны, может выглядеть как «фейковый» PR.",
+ "rollback": "Удалить вставленную секцию и скрипт (`git checkout HEAD -- index.html`).",
+ "verify": "Проверить в Google Search Console → Rich Results Test, что `Organization` и `mentions` распознаются; визуально убедиться, что логотипы корректно загружаются и ссылки открываются.",
+ "priority_claim": "3 – добавляет уровень доверия, но требует внешних ресурсов и согласования; можно отложить после базовых улучшений.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "После секции `.price-card` (L644+) вставить\n```html\n<section class=\"media-mentions\" aria-labelledby=\"media-title\">\n<h2 id=\"media-title\" class=\"reveal\">Нас упомянули</h2>\n<ul class=\"media-list\">\n<li><a href=\"https://example.com/article1\" target=\"_blank\" rel=\"noopener\"\nitemscope itemtype=\"https://schema.org/Article\">\n<img src=\"assets/media1.png\" alt=\"Logo «Biz»\" loading=\"lazy\">\n<meta itemprop=\"author\" content=\"Biz Magazine\">\n<meta itemprop=\"datePublished\" content=\"2024-08-12\">\n</a></li>\n<!-- repeat 3‑4 раза -->\n</ul>\n</section>\n```\nи добавить в `<head>` JSON‑LD:\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"Organization\",\n\"name\":\"Савелий\",\n\"url\":\"https://saveliy-perm.ru\",\n\"sameAs\":[\"https://vk.com/saveliy\",\"https://t.me/saveliy\"],\n\"mentions\":[\n{\"@type\":\"Article\",\"url\":\"https://example.com/article1\",\"name\":\"Biz Magazine\"},\n{\"@type\":\"Article\",\"url\":\"https://example.com/article2\",\"name\":\"TechNews\"}\n]\n}\n</script>\n```"
+ ],
+ "flags": []
+}

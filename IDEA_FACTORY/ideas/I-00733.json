@@ -1,0 +1,26 @@
+{
+ "id": "I-00733",
+ "round": 113,
+ "time": "2026-11-17 07:12:11",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Мобильная якорная навигация «чипсами» вместо скрытого меню",
+ "knob": "В `@media(max-width:720px)` (L90) заменить `display:none` у `.nav-links` на горизонтальную прокручиваемую полосу: `display:flex;overflow-x:auto;gap:14px;font-size:13px;white-space:nowrap;-webkit-overflow-scrolling:touch`, ссылки — компактные «чипсы» (padding:8px 14px;border:1px solid var(--border);border-radius:999px). Пункты те же, что в L438 (Демо, Цена, Вопросы и т.д.).",
+ "skill": "",
+ "effect": "На телефоне (основной трафик локального бизнеса) пользователь в любой момент видит путь к цене/демо/FAQ вместо пустого хедера — меньше прокрутки «вслепую», больше переходов к CTA-секциям.",
+ "risk": "Полоса чипсов может спореть с логотипом по ширине на узких экранах (<360px) — нужно проверить переносы.",
+ "rollback": "`git checkout -- index.html` (или правка только media-блока L90 обратно на `display:none`).",
+ "verify": "DevTools → Toggle device toolbar → iPhone SE/360px: чипсы видны",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `@media(max-width:720px)` (L90) заменить `display:none` у `.nav-links` на горизонтальную прокручиваемую полосу: `display:flex;overflow-x:auto;gap:14px;font-size:13px;white-space:nowrap;-webkit-overflow-scrolling:touch`, ссылки — компактные «чипсы» (padding:8px 14px;border:1px solid var(--border);border-radius:999px). Пункты те же, что в L438 (Демо, Цена, Вопросы и т.д.)."
+ ],
+ "flags": []
+}

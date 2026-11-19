@@ -1,0 +1,28 @@
+{
+ "id": "I-00312",
+ "round": 46,
+ "time": "2026-11-17 03:52:59",
+ "source": "localhost:8080/zhipu/glm-4.7-flash",
+ "sources": [
+  "localhost:8080/zhipu/glm-4.7-flash",
+  "localhost:8081/big_only"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Semantic `<main>` landmark",
+ "knob": "Вставить тег `<main>` вокруг основного контента (после `<header class=\"hero\">` и до `<footer>`, если есть) для улучшения навигации скринридеров и SEO.",
+ "skill": "",
+ "effect": "Улучшение доступности (a11y) и структуры документа для поисковых роботов.",
+ "risk": "Низкий (стандартная практика).",
+ "rollback": "Удалить тег `<main>`.",
+ "verify": "В Chrome DevTools → Accessibility → Lighthouse (проверить \"Landmarks\").",
+ "priority_claim": "2 (SEO/A11y)",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Вставить тег `<main>` вокруг основного контента (после `<header class=\"hero\">` и до `<footer>`, если есть) для улучшения навигации скринридеров и SEO.",
+  "Добавить тег `<main>` вокруг основного контента (после `<header class=\"hero\">` и до `<footer>`, если новый)"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00841",
+ "round": 127,
+ "time": "2026-11-17 07:50:57",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Sticky floating CTA‑button — «Получить демо» в правом нижнем углу",
+ "knob": "В `<body>` добавить `<a href=\"#final\" class=\"sticky-cta btn-primary\" role=\"button\" aria-label=\"Получить бесплатное демо сайта\">Получить демо</a>`; в CSS добавить\n```css\n.sticky-cta{\nposition:fixed;right:1rem;bottom:1rem;\nbackground:var(--grad);color:#fff;\npadding:.75rem 1.2rem;border-radius:8px;\nbox-shadow:0 4px 12px rgba(0,0,0,.15);\ntransition:transform .2s,opacity .2s;\nz-index:1000;\n}\n.sticky-cta:hover{transform:translateY(-3px)}\n@media(max-width:720px){\n.sticky-cta{right:.5rem;bottom:.5rem;padding:.6rem .9rem}\n}\n```",
+ "skill": "",
+ "effect": "Увеличит видимость основного CTA на всех скроллах, особенно на мобильных, повышая конверсию запросов.",
+ "risk": "Может слегка замедлить рендер из‑за дополнительного элемента, но влияние минимально.",
+ "rollback": "`git checkout -- index.html` (или удалить только добавленные строки).",
+ "verify": "Открыть страницу, прокрутить вниз — кнопка должна оставаться в правом нижнем углу, клик по ней вести к секции #final; проверить в DevTools отсутствие перекрытия контента.",
+ "priority_claim": "1 — быстрый, low‑risk апдейт с высоким потенциалом конверсии.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<body>` добавить `<a href=\"#final\" class=\"sticky-cta btn-primary\" role=\"button\" aria-label=\"Получить бесплатное демо сайта\">Получить демо</a>`; в CSS добавить\n```css\n.sticky-cta{\nposition:fixed;right:1rem;bottom:1rem;\nbackground:var(--grad);color:#fff;\npadding:.75rem 1.2rem;border-radius:8px;\nbox-shadow:0 4px 12px rgba(0,0,0,.15);\ntransition:transform .2s,opacity .2s;\nz-index:1000;\n}\n.sticky-cta:hover{transform:translateY(-3px)}\n@media(max-width:720px){\n.sticky-cta{right:.5rem;bottom:.5rem;padding:.6rem .9rem}\n}\n```"
+ ],
+ "flags": []
+}

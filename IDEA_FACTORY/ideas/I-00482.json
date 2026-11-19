@@ -1,0 +1,30 @@
+{
+ "id": "I-00482",
+ "round": 72,
+ "time": "2026-11-17 05:10:55",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b",
+  "lareper/glm-5.2-fast-preview",
+  "localhost:8081/big_only"
+ ],
+ "mentions": 3,
+ "status": "NEW",
+ "title": "Быстрый «heatmap‑мок» кликов через локальное хранилище",
+ "knob": "METHOD: в консоли выполнить скрипт, который на каждый клик по странице сохраняет координаты `clientX/Y` в `localStorage` (массив). После 30 секунд (или после закрытия вкладки) скрипт рисует полупрозрачный canvas‑оверлей с кругами, размер которых пропорционален количеству кликов в данной области. Пример:\n```js\n(() => {\nconst KEY = 'clickHeatmap';\nconst data = JSON.parse(localStorage.getItem(KEY)||'[]');\ndocument.addEventListener('click', e => {\ndata.push({x:e.clientX, y:e.clientY});\nlocalStorage.setItem(KEY, JSON.stringify(data));\n});\nconst draw = () => {\nconst canvas = document.createElement('canvas');\ncanvas.style.position='fixed';canvas.style.top=0;canvas.style.left=0;\ncanvas.width=window.innerWidth;canvas.height=window.innerHeight;\ncanvas.style.pointerEvents='none';canvas.style.zIndex=9999;\ndocument.body.appendChild(canvas);\nconst ctx = canvas.getContext('2d');\ndata.forEach(p => {\nconst rad = 20;\nconst grad = ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,rad);\ngrad.addColorStop(0,'rgba(255,0,0,0.4)');\ngrad.addColorStop(1,'rgba(255,0,0,0)');\nctx.fillStyle=grad;\nctx.beginPath();ctx.arc(p.x,p.y,rad,0,2*Math.PI);ctx.fill();\n});\n};\nsetTimeout(draw, 30000); // 30 сек\n})();\n```",
+ "skill": "",
+ "effect": "визуализирует, где пользователи действительно кликают (например, на CTA, навигацию, «пустые» зоны). Позволяет быстро оценить, насколько размещённые ссылки/кнопки привлекают внимание и где стоит добавить или переместить CTA.",
+ "risk": "хранит данные в `localStorage` – при повторных запусках будет накапливаться; может замедлить страницу, если клик будет слишком частым.",
+ "rollback": "очистить `localStorage.removeItem('clickHeatmap')` и перезагрузить страницу; удалить добавленный canvas через DevTools.",
+ "verify": "открыть страницу, открыть консоль, вставить скрипт, кликать по разным элементам в течение 30 сек, после чего появится полупрозрачный overlay; визуально оценить концентрацию кликов.",
+ "priority_claim": "3 – полезно для быстрой диагностики расположения CTA и проверки гипотез о «привлекательности» элементов без изменения ко",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: в консоли выполнить скрипт, который на каждый клик по странице сохраняет координаты `clientX/Y` в `localStorage` (массив). После 30 секунд (или после закрытия вкладки) скрипт рисует полупрозрачный canvas‑оверлей с кругами, размер которых пропорционален количеству кликов в данной области. Пример:\n```js\n(() => {\nconst KEY = 'clickHeatmap';\nconst data = JSON.parse(localStorage.getItem(KEY)||'[]');\ndocument.addEventListener('click', e => {\ndata.push({x:e.clientX, y:e.clientY});\nlocalStorage.setItem(KEY, JSON.stringify(data));\n});\nconst draw = () => {\nconst canvas = document.createElement('canvas');\ncanvas.style.position='fixed';canvas.style.top=0;canvas.style.left=0;\ncanvas.width=window.innerWidth;canvas.height=window.innerHeight;\ncanvas.style.pointerEvents='none';canvas.style.zIndex=9999;\ndocument.body.appendChild(canvas);\nconst ctx = canvas.getContext('2d');\ndata.forEach(p => {\nconst rad = 20;\nconst grad = ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,rad);\ngrad.addColorStop(0,'rgba(255,0,0,0.4)');\ngrad.addColorStop(1,'rgba(255,0,0,0)');\nctx.fillStyle=grad;\nctx.beginPath();ctx.arc(p.x,p.y,rad,0,2*Math.PI);ctx.fill();\n});\n};\nsetTimeout(draw, 30000); // 30 сек\n})();\n```",
+  "METHOD: (1) Открыть index.html, F12 → Console. (2) Выполнить скрипт: `document.querySelectorAll('header.hero a, header.hero b, header.hero h1, header.hero .sub').forEach(el=>{el.style.outline='2px solid red';el.dataset.zone=el.tagName});` — подсветить все кликабельные/акцентные элементы hero. (3) Попросить 2–3 людей показать пальцем/навести курсор, куда бы они кликнули, чтобы оставить заявку; логировать `mousemove`-позицию: `let log=[];addEventListener('mousemove',e=>log.push([e.clientX,e.clientY]));` через 30 сек вывести `console.table(log.slice(0,20))`. (4) Если траектория не доходит до CTA — переставить/усилить кнопку в hero.",
+  "METHOD: В консоли выполнить скрипт, который слушает `scroll` события, вычисляет текущий процент прокрутки (`(window.scrollY+window.innerHeight)/document.body.scrollHeight*100`) и сохраняет максимум; после 30 секунд скроллинга выводит `maxScroll%`."
+ ],
+ "flags": []
+}

@@ -1,0 +1,30 @@
+{
+ "id": "I-00460",
+ "round": 68,
+ "time": "2026-11-17 05:00:24",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3",
+  "lareper/glm-5.2",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "Fallback-шрифт с metric-override — убрать CLS от Google Fonts",
+ "knob": "В `<style>` до загрузки Manrope добавить `@font-face { font-family:'Manrope-fallback'; src:local('Arial'); size-adjust:104%; ascent-override:96%; line-gap-override:0%; }` и в `font-family` элементов указать `'Manrope','Manrope-fallback',sans-serif`.",
+ "skill": "",
+ "effect": "Пока шрифт грузится (или заблокирован), текст рендерится в fallback с совпадающими метриками — нулевой layout shift (CLS), заголовки не «прыгают».",
+ "risk": "Метрики fallback не идеальны — нужен визуальный прогон на h1/price.",
+ "rollback": "`git checkout -- index.html`.",
+ "verify": "DevTools → Performance → перезагрузка, смотреть CLS до/после; либо Layout Shift regions (Rendering → Layout Shift Regions).",
+ "priority_claim": "2 — заметно на мобильных/медленной сети, но эффект тонкий.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<style>` до загрузки Manrope добавить `@font-face { font-family:'Manrope-fallback'; src:local('Arial'); size-adjust:104%; ascent-override:96%; line-gap-override:0%; }` и в `font-family` элементов указать `'Manrope','Manrope-fallback',sans-serif`.",
+  "В `@font-face`-фолбэке перед загрузкой Google Fonts добавить локальный fallback через `@font-face { font-family:'Manrope-fallback'; src:local('Arial'); size-adjust:~105%; ascent-override:~100%; }` и в `font-family` стека указать `'Manrope','Manrope-fallback',sans-serif` — цифры подобрать методом сравнения ширины h1."
+ ],
+ "flags": []
+}

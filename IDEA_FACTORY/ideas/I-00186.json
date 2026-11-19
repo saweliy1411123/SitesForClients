@@ -1,0 +1,26 @@
+{
+ "id": "I-00186",
+ "round": 28,
+ "time": "2026-11-17 03:01:41",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "URL‑parameter toggle for premium‑effects A/B‑тест",
+ "knob": "METHOD: добавить в конец `<body>` скрипт:\n```html\n<script>\nconst p = new URLSearchParams(location.search);\nif(p.get('variant')==='1') document.body.classList.add('premium-variant');\n</script>\n```\nи обернуть новые стили (из идей выше) в селектор `.premium-variant .btn-primary:hover, .premium-variant .price-card:hover, .premium-variant .hero::before { … }`.",
+ "skill": "",
+ "effect": "Позволяет быстро включать/выключать все премиальные визуальные улучшения для A/B‑тестов без создания отдельного файла.",
+ "risk": "Нужно убедиться, что скрипт не конфликтует с другими скриптами (в проекте их один); небольшое кэширование может задержать переключение.",
+ "rollback": "Удалить скрипт и убрать префикс `.premium-variant` из CSS.",
+ "verify": "Открыть `index.html?variant=1`, убедиться, что класс `premium-variant` присутствует в `<body>` и новые стили применяются; открыть без параметра – стили не активны.",
+ "priority_claim": "2 – обеспечивает быстрый эксперимент, важен для измерения реального влияния премиальных эффектов.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: добавить в конец `<body>` скрипт:\n```html\n<script>\nconst p = new URLSearchParams(location.search);\nif(p.get('variant')==='1') document.body.classList.add('premium-variant');\n</script>\n```\nи обернуть новые стили (из идей выше) в селектор `.premium-variant .btn-primary:hover, .premium-variant .price-card:hover, .premium-variant .hero::before { … }`."
+ ],
+ "flags": []
+}

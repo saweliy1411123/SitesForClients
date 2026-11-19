@@ -1,0 +1,26 @@
+{
+ "id": "I-00960",
+ "round": 159,
+ "time": "2026-11-17 09:21:26",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Обернуть основной контент в `<main id=\"main\">` и добавить ARIA‑леймарк",
+ "knob": "В `index.html` после закрывающего `</header>` (hero) вставить `<main id=\"main\">` и перенести все секции (`#problem`, `#solution`, `#how`, `#works`, `#price`, `#faq`, `#final`) внутрь; в конце добавить `</main>`. Добавить атрибут `role=\"main\"` к `<main>` (по‑молчанию уже main, но явно).",
+ "skill": "",
+ "effect": "Улучшает семантику для поисковых роботов и скрин‑ридеров, ускоряет навигацию клавиатурой, повышает SEO‑оценку структуры.",
+ "risk": "Требует небольших правок в структуре; может сломать ссылки, если они полагались на прежний порядок (малый риск).",
+ "rollback": "Восстановить оригинальный файл из git (`git checkout -- index.html`).",
+ "verify": "В Chrome DevTools → Elements увидеть `<main>` вокруг контента; использовать axe‑core (bookmarklet) – отсутствие ошибки “Landmark region missing”.",
+ "priority_claim": "1 – простая правка, сразу повышает доступность и SEO.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `index.html` после закрывающего `</header>` (hero) вставить `<main id=\"main\">` и перенести все секции (`#problem`, `#solution`, `#how`, `#works`, `#price`, `#faq`, `#final`) внутрь; в конце добавить `</main>`. Добавить атрибут `role=\"main\"` к `<main>` (по‑молчанию уже main, но явно)."
+ ],
+ "flags": []
+}

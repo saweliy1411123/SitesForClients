@@ -1,0 +1,26 @@
+{
+ "id": "I-00309",
+ "round": 46,
+ "time": "2026-11-17 03:52:46",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Превратить блоки демо‑концептов в лёгкий CSS‑карусель с snap‑scroll",
+ "knob": "Обернуть все демо‑карточки в контейнер `<div class=\"demo-carousel\" tabindex=\"0\">`; добавить CSS: `.demo-carousel{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:24px;scroll-behavior:smooth;} .demo-carousel > *{flex:0 0 80%;scroll-snap-align:center;}` и небольшие стили для скрытия скролл‑баров `::-webkit-scrollbar{display:none;}`",
+ "skill": "",
+ "effect": "Позволяет пользователям просматривать несколько демо‑примеров без вертикальной прокрутки, улучшая восприятие и удержание внимания",
+ "risk": "На старых браузерах (IE) может не работать, но большинство современных поддерживают",
+ "rollback": "Удалить обёртку и CSS‑правила (git checkout -- index.html)",
+ "verify": "На десктопе и мобильных устройствах можно горизонтально листать демо‑карточки, они «прилипают» к центру",
+ "priority_claim": "1 – повышает интерактивность без JS, быстрый выигрыш в UX",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Обернуть все демо‑карточки в контейнер `<div class=\"demo-carousel\" tabindex=\"0\">`; добавить CSS: `.demo-carousel{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:24px;scroll-behavior:smooth;} .demo-carousel > *{flex:0 0 80%;scroll-snap-align:center;}` и небольшие стили для скрытия скролл‑баров `::-webkit-scrollbar{display:none;}`"
+ ],
+ "flags": []
+}

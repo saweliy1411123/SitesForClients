@@ -1,0 +1,26 @@
+{
+ "id": "I-00235",
+ "round": 36,
+ "time": "2026-11-17 03:23:51",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Trust – Review‑Schema JSON‑LD + звёздный рейтинг в блоке отзывов",
+ "knob": "В конец `<body>` вставить скрипт `<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"Review\",\"itemReviewed\":{\"@type\":\"Service\",\"name\":\"Лендинги за 2 дня\"},\"author\":{\"@type\":\"Person\",\"name\":\"Иван Иванов\"},\"reviewRating\":{\"@type\":\"Rating\",\"ratingValue\":\"5\",\"bestRating\":\"5\"},\"reviewBody\":\"Отличный результат, сайт работает с первого дня!\"}</script>` (повторить для каждой реальной цитаты). В секцию отзывов добавить визуальный рейтинг‑звёзд (HTML `<span class=\"stars\">★★★★★</span>`) и стилизовать через CSS.",
+ "skill": "",
+ "effect": "Поисковые системы отображают звёздный рейтинг в сниппетах, повышая доверие и CTR из органического поиска.",
+ "risk": "Требуется, чтобы отзывы были реальными и получены согласие авторов; иначе может считаться вводящим в заблуждение.",
+ "rollback": "Удалить вставленный `<script type=\"application/ld+json\">` и HTML‑блоки звёзд (`git checkout -- index.html`).",
+ "verify": "В Chrome DevTools → Console выполнить `JSON.parse(document.querySelector('script[type=\"application/ld+json\"]').textContent)` — проверить корректность JSON; в Google Rich Results Test ввести URL‑страницы, убедиться, что Review‑markup обнаружен без ошибок.",
+ "priority_claim": "2 – доверие критично для B2B‑клиентов; структурированные отзывы быстро повышают SEO‑видимость и доверие без больших затр",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В конец `<body>` вставить скрипт `<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"Review\",\"itemReviewed\":{\"@type\":\"Service\",\"name\":\"Лендинги за 2 дня\"},\"author\":{\"@type\":\"Person\",\"name\":\"Иван Иванов\"},\"reviewRating\":{\"@type\":\"Rating\",\"ratingValue\":\"5\",\"bestRating\":\"5\"},\"reviewBody\":\"Отличный результат, сайт работает с первого дня!\"}</script>` (повторить для каждой реальной цитаты). В секцию отзывов добавить визуальный рейтинг‑звёзд (HTML `<span class=\"stars\">★★★★★</span>`) и стилизовать через CSS."
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00943",
+ "round": 154,
+ "time": "2026-11-17 09:07:29",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — subtle‑entrance‑fade‑up",
+ "knob": "**Name:** `subtle-entrance-fade-up`\n**When to apply:** На всех секционных блоках, которые появляются ниже «hero» (например, `.solution`, `.how`, `.works`, `.pricing`, `.faq`, `.final`).\n**SAFE CSS:**\n```css\n.reveal-up {\nopacity:0;\ntransform:translateY(24px);\ntransition:opacity .6s ease-out, transform .6s ease-out;\n}\n.reveal-up.visible {\nopacity:1;\ntransform:none;\n}\n```\n**SAFE JS:**\n```js\ndocument.addEventListener('DOMContentLoaded',()=>{\nconst obs = new IntersectionObserver((entries)=>{\nentries.forEach(e=> e.isIntersecting && e.target.classList.add('visible'));\n},{threshold:0.15});\ndocument.querySelectorAll('.reveal-up').forEach(el=>obs.observe(el));\n});\n```",
+ "skill": "subtle-entrance-fade-up",
+ "effect": "Делает скролл‑появление мягким и «живым», усиливает чувство динамики и удерживает внимание пользователя, что повышает среднее время на странице.",
+ "risk": "При отключённом JavaScript анимации не сработают – элементы останутся скрытыми; добавлен fallback‑класс `visible` в CSS‑правилах, если необходимо, можно добавить `noscript`‑стиль `opacity:1`.",
+ "rollback": "`git checkout index.html && rm -rf SKILLS/subtle-entrance-fade-up.md` (удалить скилл).",
+ "verify": "Открыть страницу, прокрутить вниз – блоки должны плавно появляться; открыть DevTools → отключить JS – блоки сразу видимы (проверка fallback).",
+ "priority_claim": "2 — улучшает UX без риска, легко измеряется в A/B.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `subtle-entrance-fade-up`\n**When to apply:** На всех секционных блоках, которые появляются ниже «hero» (например, `.solution`, `.how`, `.works`, `.pricing`, `.faq`, `.final`).\n**SAFE CSS:**\n```css\n.reveal-up {\nopacity:0;\ntransform:translateY(24px);\ntransition:opacity .6s ease-out, transform .6s ease-out;\n}\n.reveal-up.visible {\nopacity:1;\ntransform:none;\n}\n```\n**SAFE JS:**\n```js\ndocument.addEventListener('DOMContentLoaded',()=>{\nconst obs = new IntersectionObserver((entries)=>{\nentries.forEach(e=> e.isIntersecting && e.target.classList.add('visible'));\n},{threshold:0.15});\ndocument.querySelectorAll('.reveal-up').forEach(el=>obs.observe(el));\n});\n```"
+ ],
+ "flags": []
+}

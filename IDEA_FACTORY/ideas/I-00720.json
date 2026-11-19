@@ -1,0 +1,29 @@
+{
+ "id": "I-00720",
+ "round": 111,
+ "time": "2026-11-17 07:07:28",
+ "source": "localhost:8081/fast",
+ "sources": [
+  "localhost:8081/fast",
+  "localhost:8081/big_only",
+  "localhost:8081/agent",
+  "localhost:8081/auto"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "SKILL — card-hover-lift-and-shadow (премиальное поднятие карточек с мягкой тенью при наведении)",
+ "knob": "Полное тело скилла:\n**Name:** `card-hover-lift-and-shadow`\n**When to apply:** На любом лендинге с карточками (услуги, цены, демо-концепты, шаги), где нужно усилить интерактивность и «дорогой» отклик на hover.\n**Steps:**\n1. Найти все карточки (`.price-card`, `.demo-card`, `.step-card` и т.п.).\n2. Добавить CSS-правила для `:hover` и `:focus-visible`.\n3. Для плавности добавить `transition` в базовое состояние.\n**SAFE CSS:**\n```css\n.price-card,.demo-card,.step-card{transition:transform .35s cubic-bezier(.22,.61,.36,1),box-shadow .35s ease;will-change:transform}\n.price-card:hover,.demo-card:hover,.step-card:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 24px 60px rgba(0,0,0,.18),0 8px 24px rgba(139,92,246,.12)}\n.price-card:focus-visible,.demo-card:focus-visible,.step-card:focus-visible",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "Полное тело скилла:\n**Name:** `card-hover-lift-and-shadow`\n**When to apply:** На любом лендинге с карточками (услуги, цены, демо-концепты, шаги), где нужно усилить интерактивность и «дорогой» отклик на hover.\n**Steps:**\n1. Найти все карточки (`.price-card`, `.demo-card`, `.step-card` и т.п.).\n2. Добавить CSS-правила для `:hover` и `:focus-visible`.\n3. Для плавности добавить `transition` в базовое состояние.\n**SAFE CSS:**\n```css\n.price-card,.demo-card,.step-card{transition:transform .35s cubic-bezier(.22,.61,.36,1),box-shadow .35s ease;will-change:transform}\n.price-card:hover,.demo-card:hover,.step-card:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 24px 60px rgba(0,0,0,.18),0 8px 24px rgba(139,92,246,.12)}\n.price-card:focus-visible,.demo-card:focus-visible,.step-card:focus-visible"
+ ],
+ "flags": []
+}

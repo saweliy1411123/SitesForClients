@@ -1,0 +1,29 @@
+{
+ "id": "I-00644",
+ "round": 97,
+ "time": "2026-11-17 06:25:56",
+ "source": "lareper/glm-5.2-fast-preview",
+ "sources": [
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.2"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "SKILL — sticky-cta-reveal (умная плавающая CTA-кнопка, появляется после hero)",
+ "knob": "",
+ "skill": "",
+ "effect": "заявка доступна в один тап с любой точки страницы — растёт доля переходов к #contact, особенно на мобильных, где скролл длинный.",
+ "risk": "на очень коротких экранах кнопка может перекрывать контент — нужен тест на 375px и проверка, что sticky-элементы не конфликтуют.",
+ "rollback": "`git checkout -- index.improved.html` (правки только в копии) или удалить добавленный блок/стили.",
+ "verify": "(1) Открыть копию index.improved.html. (2) Скролл до середины — кнопка видна. (3) Доскроллить до финального CTA — кнопка скрылась. (4) Tab с верха — фокус доходит до кнопки, outline виден. (5) DevTools → 375px — не",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  ""
+ ],
+ "flags": [
+  "NO_KNOB"
+ ]
+}

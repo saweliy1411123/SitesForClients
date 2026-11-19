@@ -1,0 +1,34 @@
+{
+ "id": "I-00026",
+ "round": 4,
+ "time": "2026-11-17 01:50:26",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b",
+  "lareper/deepseek-v4-pro-0813",
+  "lareper/deepseek-v4-pro",
+  "lareper/glm-5.2",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 7,
+ "status": "NEW",
+ "title": "Добавить canonical и robots meta‑теги для управления индексацией",
+ "knob": "В `<head>` добавить `<link rel=\"canonical\" href=\"https://example.com/\">` (заменить на реальный URL) и `<meta name=\"robots\" content=\"index,follow\">`.",
+ "skill": "",
+ "effect": "Устранит дублирование URL, укрепит авторитет страницы в поиске.",
+ "risk": "Если указать неправильный канонический URL, может потеряться трафик.",
+ "rollback": "Удалить теги (git checkout -- index.html).",
+ "verify": "Открыть страницу в Chrome → View source → убедиться в наличии тегов; проверить в Google Search Console “URL Inspection”.",
+ "priority_claim": "2 — простая мера, повышающая SEO‑стабильность.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<head>` добавить `<link rel=\"canonical\" href=\"https://example.com/\">` (заменить на реальный URL) и `<meta name=\"robots\" content=\"index,follow\">`.",
+  "В `<head>` после `<meta name=\"viewport\">` добавить `<meta name=\"robots\" content=\"index, follow\">` и `<link rel=\"canonical\" href=\"https://<домен>/\">`. Если домен неизвестен — использовать относительный `href=\"/\"`.",
+  "В `<head>` добавить `<link rel=\"canonical\" href=\"https://<домен-владельца>/\">` и `<meta name=\"robots\" content=\"index, follow\">`; плейсхолдер домена пометить комментарием «вписать реальный домен»."
+ ],
+ "flags": []
+}

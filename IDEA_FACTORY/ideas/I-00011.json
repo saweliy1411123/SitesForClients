@@ -1,0 +1,36 @@
+{
+ "id": "I-00011",
+ "round": 2,
+ "time": "2026-11-17 01:46:23",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b",
+  "lareper/glm-5.2",
+  "lareper/glm-5.3-prime",
+  "localhost:8081/agent",
+  "localhost:8081/fast",
+  "localhost:8081/big_only",
+  "lareper/glm-5.2-fast-preview"
+ ],
+ "mentions": 7,
+ "status": "NEW",
+ "title": "Фиктивный «скрытый» элемент‑тест с CSS‑переключателем",
+ "knob": "METHOD: добавить в конец `<head>` CSS‑правило `.test‑badge {display:none}` и в HTML разместить небольшую подсказку‑баннер с классом `test‑badge` внутри CTA. Через DevTools переключать `display:block` и измерять изменение CTR (клики по ссылке) через встроенный `Performance` → `Event Listener Breakpoints`.",
+ "skill": "",
+ "effect": "проверка влияния дополнительного визуального сигнала (например, «Бесплатный аудит») без изменения HTML‑структуры.",
+ "risk": "может влиять на восприятие реального пользователя, если оставит элемент включённым в продакшн.",
+ "rollback": "удалить CSS‑правило и HTML‑элемент (git checkout index.html).",
+ "verify": "открыть страницу, в консоли выполнить `document.querySelector('.test‑badge').style.display='block'`, кликнуть CTA и посмотреть, появился ли дополнительный клик‑счёт в `Performance`.",
+ "priority_claim": "2 – малоинвазивный, но требует ручного включения, полезен для визуальных гипотез.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: добавить в конец `<head>` CSS‑правило `.test‑badge {display:none}` и в HTML разместить небольшую подсказку‑баннер с классом `test‑badge` внутри CTA. Через DevTools переключать `display:block` и измерять изменение CTR (клики по ссылке) через встроенный `Performance` → `Event Listener Breakpoints`.",
+  "METHOD: (1) Скопировать index.html в index-clickmap.html. (2) В конец `<body>` добавить скрипт ~10 строк: слушатель `click` на document, для каждого клика создать `<div>` 24×24px с полупрозрачным фиолетовым фоном в координатах `pageX/pageY` (position:absolute), плюс счётчик кликов по `[href=\"#contact\"]` в fixed-плашке. (3) Прокликать типовой сценарий (найти CTA → дойти до #contact) на десктопе и телефоне. (4) Смотреть, где скапливаются «мёртвые» клики (декоративные `.visual` L524 с onclick, заголовки, карточки) — туда добавлять ссылки или убирать ложные аффордансы.",
+  "METHOD: (1) Открыть index.html, DevTools → Device Toolbar → 360px. (2) В Console выполнить: `document.body.insertAdjacentHTML('afterbegin','<style>.hero{padding-top:96px}.hero p.sub{margin:16px 0 24px}.btn-primary{min-height:48px}</style>')`. (3) Сделать скриншот, сравнить с оригиналом. (4) Оценить, виден ли CTA без скролла.",
+  "",
+  "METHOD: В консоли выполнить скрипт, который собирает массив интересных селекторов (например, `.price-card`, `.steps .step`, `.hero h1`, `.btn-primary`), затем для каждого вызывает `getComputedStyle` на первом найденном элементе и выводит в консоль объект `{selector, fontSize: cs.fontSize, color: cs.color, background: cs.background}`; дополнительно сравнивает их с базовыми значениями из `:root` и отмечает отклонения более чем на 20 %."
+ ],
+ "flags": []
+}

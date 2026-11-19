@@ -1,0 +1,29 @@
+{
+ "id": "I-00227",
+ "round": 34,
+ "time": "2026-11-17 03:19:03",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.3-prime",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "SKILL — «Anchor-smooth-scroll + активное состояние секций» (переносимая навигация к CTA)",
+ "knob": "Название: **smooth-anchor-nav**. Когда применять: любой одностраничный лендинг, где CTA и навигация — якорные ссылки (`href=\"#contact\"` и т.п.), а секции длинные.\nШаги:\n1. Убедиться, что у целевой секции есть `id` и `tabindex=\"-1\"` (для фокуса при переходе).\n2. В CSS включить плавный скролл с уважением к reduced-motion (см. SAFE CSS).\n3. Добавить `scroll-margin-top` целевым секциям, чтобы sticky-шапка/панель не перекрывала заголовок.\n4. SAFE JS: после клика по якорю передать фокус на целевую секцию (доступность для клавиатуры и скрин-ридеров).\n5. Проверка: пройтись по странице только Tab+Enter — все якоря ведут к цели, фокус не «теряется», заголовок цели не уходит под sticky-элементы.\nSAFE CSS:\n```css\nhtml{scroll-behavior:smooth}\n@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}\nsection[id]{scroll-margin-top:72px}\nsection[id]:focus{outline:none}\n```\nSAFE JS:\n```js\ndocument.querySelectorAll('a[href^=\"#\"]').forEach(function(a){\na.addEventListener('click',function(){\nvar",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "Название: **smooth-anchor-nav**. Когда применять: любой одностраничный лендинг, где CTA и навигация — якорные ссылки (`href=\"#contact\"` и т.п.), а секции длинные.\nШаги:\n1. Убедиться, что у целевой секции есть `id` и `tabindex=\"-1\"` (для фокуса при переходе).\n2. В CSS включить плавный скролл с уважением к reduced-motion (см. SAFE CSS).\n3. Добавить `scroll-margin-top` целевым секциям, чтобы sticky-шапка/панель не перекрывала заголовок.\n4. SAFE JS: после клика по якорю передать фокус на целевую секцию (доступность для клавиатуры и скрин-ридеров).\n5. Проверка: пройтись по странице только Tab+Enter — все якоря ведут к цели, фокус не «теряется», заголовок цели не уходит под sticky-элементы.\nSAFE CSS:\n```css\nhtml{scroll-behavior:smooth}\n@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}\nsection[id]{scroll-margin-top:72px}\nsection[id]:focus{outline:none}\n```\nSAFE JS:\n```js\ndocument.querySelectorAll('a[href^=\"#\"]').forEach(function(a){\na.addEventListener('click',function(){\nvar"
+ ],
+ "flags": []
+}

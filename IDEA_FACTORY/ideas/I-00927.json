@@ -1,0 +1,26 @@
+{
+ "id": "I-00927",
+ "round": 147,
+ "time": "2026-11-17 08:47:40",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — gradient‑border‑cta",
+ "knob": "SKILL: **Name:** `gradient-border-cta`\n**When to apply:** К любой ссылке‑кнопке с классом `.btn-primary` (главный CTA) для создания анимированной градиентной рамки.\n**Steps:** 1️⃣ Заменить класс `.btn-primary` на `btn-gradient-border` (или добавить оба). 2️⃣ Добавить CSS ниже.\nSAFE CSS:\n```css\n.btn-gradient-border{\nposition:relative;\noverflow:hidden;\nborder:2px solid transparent;\nbackground:var(--bg);\ncolor:var(--blue);\ntransition:color .3s;\n}\n.btn-gradient-border::before{\ncontent:\"\";\nposition:absolute;\ninset:-2px;\nbackground:linear-gradient(45deg,var(--grad-start),var(--grad-end));\nz-index:-1;\ntransition:transform .4s;\ntransform:scaleX(0);\ntransform-origin:left;\n}\n.btn-gradient-border:hover::before,\n.btn-gradient-border:focus-visible::before{\ntransform:scaleX(1);\n}\n.btn-gradient-border:hover,\n.btn-gradient-border:focus-visible{\ncolor:#fff;\n}\n```",
+ "skill": "",
+ "effect": "Динамичная градиентная рамка привлекает внимание к CTA, усиливает ощущение «дорогого» дизайна и повышает кликабельность.",
+ "risk": "При слишком малой контрастности текста может снижаться читаемость; требуется проверить контраст.",
+ "rollback": "Убрать класс `btn-gradient-border` или закомментировать CSS‑блок.",
+ "verify": "Навести курсор на кнопку – градиентная рамка должна «заполняться» слева направо; проверить, что текст остаётся читаемым.",
+ "priority_claim": "2 – мощный визуальный триггер, простая реализация, низкий риск.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "SKILL: **Name:** `gradient-border-cta`\n**When to apply:** К любой ссылке‑кнопке с классом `.btn-primary` (главный CTA) для создания анимированной градиентной рамки.\n**Steps:** 1️⃣ Заменить класс `.btn-primary` на `btn-gradient-border` (или добавить оба). 2️⃣ Добавить CSS ниже.\nSAFE CSS:\n```css\n.btn-gradient-border{\nposition:relative;\noverflow:hidden;\nborder:2px solid transparent;\nbackground:var(--bg);\ncolor:var(--blue);\ntransition:color .3s;\n}\n.btn-gradient-border::before{\ncontent:\"\";\nposition:absolute;\ninset:-2px;\nbackground:linear-gradient(45deg,var(--grad-start),var(--grad-end));\nz-index:-1;\ntransition:transform .4s;\ntransform:scaleX(0);\ntransform-origin:left;\n}\n.btn-gradient-border:hover::before,\n.btn-gradient-border:focus-visible::before{\ntransform:scaleX(1);\n}\n.btn-gradient-border:hover,\n.btn-gradient-border:focus-visible{\ncolor:#fff;\n}\n```"
+ ],
+ "flags": []
+}

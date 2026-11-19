@@ -1,0 +1,26 @@
+{
+ "id": "I-00894",
+ "round": 139,
+ "time": "2026-11-17 08:25:16",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — section-scroll-snap",
+ "knob": "**Name:** section-scroll-snap\n**When to apply:** На одностраничных лендингах с несколькими вертикальными секциями, где желателен «прокрутка‑привязка» (scroll‑snap) для создания плавного, контролируемого скроллинга на мобильных и десктоп‑устройствах.\n**Steps:**\n1. Обернуть все основные `<section>` в контейнер `<div class=\"snap-container\">`.\n2. Добавить каждому `<section>` класс `.snap-section`.\n3. Включить глобальный `scroll-behavior: smooth;`.\n4. Добавить CSS‑правила `SAFE CSS` (см. ниже).\n5. Проверить, что ссылки‑якоря (например, в навигации) корректно скроллят к нужным секциям.\n**SAFE CSS:**\n```css\nhtml{\nscroll-behavior: smooth;\n}\n.snap-container{\noverflow-y: auto;\nheight: 100vh;\nscroll-snap-type: y mandatory;\n}\n.snap-section{\nscroll-snap-align: start;\nmin-height: 100vh;\n/* optional: keep existing padding/margin */\n}\n```",
+ "skill": "section-scroll-snap",
+ "effect": "Пользователи ощущают более «погружающий» опыт, легче воспринимают структуру страницы, снижается количество «потерянных» скроллов и повышается время, проведённое на странице.",
+ "risk": "Привязка может конфликтовать с естественным скроллом, особенно если пользователь пытается быстро пролистывать; может нарушать работу кастомных скролл‑скриптов (если появятся в будущем).",
+ "rollback": "Удалить обёртку `.snap-container` и класс `.snap-section` из HTML, а также удалить соответствующие правила из CSS (`git checkout index.html` или `git revert`).",
+ "verify": "В Chrome открыть страницу, включить мобильный режим, прокручивать мышью/трекпадом – каждая секция должна «прилипать» к верхней части окна; клик по навигационным ссылкам‑якорям должен плавно вести к секции без «прыжков».",
+ "priority_claim": "1 – значительное улучшение UX и восприятия контента, особенно на мобильных устройствах, где большинство трафика.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** section-scroll-snap\n**When to apply:** На одностраничных лендингах с несколькими вертикальными секциями, где желателен «прокрутка‑привязка» (scroll‑snap) для создания плавного, контролируемого скроллинга на мобильных и десктоп‑устройствах.\n**Steps:**\n1. Обернуть все основные `<section>` в контейнер `<div class=\"snap-container\">`.\n2. Добавить каждому `<section>` класс `.snap-section`.\n3. Включить глобальный `scroll-behavior: smooth;`.\n4. Добавить CSS‑правила `SAFE CSS` (см. ниже).\n5. Проверить, что ссылки‑якоря (например, в навигации) корректно скроллят к нужным секциям.\n**SAFE CSS:**\n```css\nhtml{\nscroll-behavior: smooth;\n}\n.snap-container{\noverflow-y: auto;\nheight: 100vh;\nscroll-snap-type: y mandatory;\n}\n.snap-section{\nscroll-snap-align: start;\nmin-height: 100vh;\n/* optional: keep existing padding/margin */\n}\n```"
+ ],
+ "flags": []
+}

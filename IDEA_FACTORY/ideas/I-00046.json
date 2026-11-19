@@ -1,0 +1,27 @@
+{
+ "id": "I-00046",
+ "round": 5,
+ "time": "2026-11-17 01:53:40",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Внедрить базовый Content Security Policy (CSP) через `<meta>`‑тег для защиты от XSS",
+ "knob": "в `<head>` добавить\n```html\n<meta http-equiv=\"Content-Security-Policy\" content=\"default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com; font-src https://fonts.gstatic.com; img-src data:; connect-src 'self'\">\n```",
+ "skill": "",
+ "effect": "Ограничит загрузку внешних скриптов и стилей, повышая безопасность сайта без необходимости серверных настроек.",
+ "risk": "Если в дальнейшем будут добавлены внешние скрипты/ресурсы, они могут быть заблокированы; потребуется обновление CSP.",
+ "rollback": "Удалить мета‑тег (`git checkout -- index.html`).",
+ "verify": "Открыть страницу, открыть DevTools → Console, убедиться, что нет CSP‑ошибок; проверить, что все стили и шрифты работают.",
+ "priority_claim": "3 – повышает безопасность, но требует внимательного тестирования, поэтому отложить после базовых улучшений доступности.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "в `<head>` добавить\n```html\n<meta http-equiv=\"Content-Security-Policy\" content=\"default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com; font-src https://fonts.gstatic.com; img-src data:; connect-src 'self'\">\n```",
+  "В `<head>` добавить строку:\n```html\n<meta http-equiv=\"Content-Security-Policy\"\ncontent=\"default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com; font-src https://fonts.gstatic.com; img-src data:;\">\n```"
+ ],
+ "flags": []
+}

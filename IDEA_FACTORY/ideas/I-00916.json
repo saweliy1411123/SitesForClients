@@ -1,0 +1,26 @@
+{
+ "id": "I-00916",
+ "round": 144,
+ "time": "2026-11-17 08:39:20",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Accordion‑style для секции «Боль»",
+ "knob": "В секции боли (после `<h2>Запись есть — клиентов из поиска нет</h2>`) заменить каждый `<h3>` + текст на `<details class=\"pain‑item\"><summary class=\"pain‑title\">Вас не находят в поиске</summary><p class=\"pain‑desc\">…текст боли…</p></details>`; добавить CSS `.pain‑item{margin-bottom:16px;} .pain‑title{cursor:pointer;font-weight:600;}`",
+ "skill": "",
+ "effect": "Уменьшает визуальный шум, особенно на мобильных, повышает скролл‑показатели и улучшает доступность (клавиатура, screen‑reader)",
+ "risk": "Пользователь может не раскрыть детали и не увидеть полностью информацию; потребуется убедиться, что важные CTA‑ссылки находятся внутри раскрытого контента",
+ "rollback": "`git checkout -- index.html` (откатить файл)",
+ "verify": "В мобильном режиме (iPhone SE) открыть страницу, кликнуть на каждый заголовок – контент должен раскрываться; проверить, что клавиша Tab фокусируется на `<summary>`",
+ "priority_claim": "2 – улучшает UX и SEO (доступность) без больших затрат",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В секции боли (после `<h2>Запись есть — клиентов из поиска нет</h2>`) заменить каждый `<h3>` + текст на `<details class=\"pain‑item\"><summary class=\"pain‑title\">Вас не находят в поиске</summary><p class=\"pain‑desc\">…текст боли…</p></details>`; добавить CSS `.pain‑item{margin-bottom:16px;} .pain‑title{cursor:pointer;font-weight:600;}`"
+ ],
+ "flags": []
+}

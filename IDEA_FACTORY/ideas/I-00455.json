@@ -1,0 +1,27 @@
+{
+ "id": "I-00455",
+ "round": 68,
+ "time": "2026-11-17 04:59:30",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Инлайн‑критический CSS + preload основного стиля",
+ "knob": "1) Выделить CSS, необходимый для первого экрана (hero, навигация, типографика) и вставить его в `<style>` внутри `<head>`.\n2) Заменить текущий `<link rel=\"stylesheet\" href=\"style.css\">` на\n```html\n<link rel=\"preload\" as=\"style\" href=\"style.css\" onload=\"this.rel='stylesheet'\">\n<noscript><link rel=\"stylesheet\" href=\"style.css\"></noscript>\n```",
+ "skill": "",
+ "effect": "Убирает блокирующий рендер ресурс, ускоряя First Contentful Paint и Time‑to‑Interactive, особенно на медленных соединениях.",
+ "risk": "Неправильно выделенный критический CSS может привести к FOUC (миганию без стилей) или к отсутствию стилей выше «складки». Требует тестирования.",
+ "rollback": "Восстановить оригинальный `<link rel=\"stylesheet\" href=\"style.css\">` и удалить инлайн‑блок.",
+ "verify": "Запустить Lighthouse → Performance, сравнить FCP/TTI до и после; визуально убедиться, что макет не «дёргается» при загрузке.",
+ "priority_claim": "1 – значительный выигрыш в скорости при умеренной работе.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "1) Выделить CSS, необходимый для первого экрана (hero, навигация, типографика) и вставить его в `<style>` внутри `<head>`.\n2) Заменить текущий `<link rel=\"stylesheet\" href=\"style.css\">` на\n```html\n<link rel=\"preload\" as=\"style\" href=\"style.css\" onload=\"this.rel='stylesheet'\">\n<noscript><link rel=\"stylesheet\" href=\"style.css\"></noscript>\n```",
+  "В `<head>` заменить обычный `<link rel=\"stylesheet\" href=\"style.css\">` на `<link rel=\"preload\" href=\"style.css\" as=\"style\" onload=\"this.rel='stylesheet'\">` и добавить `<noscript><link rel=\"stylesheet\" href=\"style.css\"></noscript>` для поддержки без JS"
+ ],
+ "flags": []
+}

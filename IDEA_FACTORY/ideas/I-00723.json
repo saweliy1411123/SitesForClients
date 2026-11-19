@@ -1,0 +1,27 @@
+{
+ "id": "I-00723",
+ "round": 112,
+ "time": "2026-11-17 07:09:09",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — glassmorphic-section-bg",
+ "knob": "Добавить класс `glass-section` к каждой `<section>` (например, `<section id=\"price\" class=\"glass-section\">`) и в CSS задать стиль:\n```css\n/* SAFE CSS */\n.glass-section {\nposition: relative;\nbackground: rgba(255,255,255,0.12);\nborder-radius: 12px;\nborder: 1px solid rgba(255,255,255,0.18);\nbackdrop-filter: blur(12px) saturate(150%);\n-webkit-backdrop-filter: blur(12px) saturate(150%);\npadding: 2rem;\noverflow: hidden;\n}\n.glass-section::before {\ncontent:\"\";\nposition:absolute;\ninset:0;\nbackground:linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0));\npointer-events:none;\n}\n```",
+ "skill": "",
+ "effect": "Придаёт каждой секции премиальный «стеклянный» вид, усиливает визуальную иерархию и повышает восприятие цены/доверия.",
+ "risk": "Может снижать контраст текста на некоторых мониторах; требуется проверка читаемости.",
+ "rollback": "`git checkout -- index.html` (или просто удалить добавленные строки CSS/классы).",
+ "verify": "Открыть страницу в браузере, убедиться, что фон секций стал полупрозрачным с блёром, а текст остаётся читаемым; проверить на мобильных устройствах.",
+ "priority_claim": "1 – высокий визуальный импакт для «дорогого» сайта, небольшие изменения кода.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "Добавить класс `glass-section` к каждой `<section>` (например, `<section id=\"price\" class=\"glass-section\">`) и в CSS задать стиль:\n```css\n/* SAFE CSS */\n.glass-section {\nposition: relative;\nbackground: rgba(255,255,255,0.12);\nborder-radius: 12px;\nborder: 1px solid rgba(255,255,255,0.18);\nbackdrop-filter: blur(12px) saturate(150%);\n-webkit-backdrop-filter: blur(12px) saturate(150%);\npadding: 2rem;\noverflow: hidden;\n}\n.glass-section::before {\ncontent:\"\";\nposition:absolute;\ninset:0;\nbackground:linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0));\npointer-events:none;\n}\n```",
+  "METHOD: Добавить CSS‑класс `.glass-section` и применить его к любому контейнеру‑блоку (например, к секциям `.price-card`, `.steps`, `.faq`)."
+ ],
+ "flags": []
+}

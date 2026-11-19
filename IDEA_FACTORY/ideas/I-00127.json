@@ -1,0 +1,27 @@
+{
+ "id": "I-00127",
+ "round": 19,
+ "time": "2026-11-17 02:35:37",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Скрыть декоративные SVG от скрин‑ридеров",
+ "knob": "Для всех inline‑SVG, используемых как фон/декор (поиск `data:image/svg+xml` в CSS/HTML), добавить атрибут `aria-hidden=\"true\"` и `focusable=\"false\"` (если в HTML) либо в CSS добавить `svg{pointer-events:none;}` если они только визуальны.",
+ "skill": "",
+ "effect": "Уменьшит «шум» для пользователей скрин‑ридеров, улучшит доступность без визуального изменения.",
+ "risk": "Если какой‑то SVG несёт смысловую нагрузку, он станет недоступным; необходимо проверять каждый случай.",
+ "rollback": "Удалить добавленные атрибуты/правило из CSS.",
+ "verify": "Включить режим «Screen Reader» (NVDA/VoiceOver) → переместиться к секции с SVG, убедиться, что они не объявляются; в DevTools → Elements → проверить наличие `aria-hidden`.",
+ "priority_claim": "3 – небольшое улучшение доступности, низкий риск, легко откатывается.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Для всех inline‑SVG, используемых как фон/декор (поиск `data:image/svg+xml` в CSS/HTML), добавить атрибут `aria-hidden=\"true\"` и `focusable=\"false\"` (если в HTML) либо в CSS добавить `svg{pointer-events:none;}` если они только визуальны.",
+  "В секцию боли (после заголовка «Запись есть — клиентов из поиска нет») вставить `<svg class=\"no-results-ill\" aria-hidden=\"true\" width=\"120\" height=\"120\" viewBox=\"0 0 24 24\"><path fill=\"none\" stroke=\"#c3cad9\" d=\"M2 2l20 20M2 22l20-20\"/></svg>` и в CSS добавить `.no-results-ill{margin:1rem auto;display:block;opacity:.4}`"
+ ],
+ "flags": []
+}

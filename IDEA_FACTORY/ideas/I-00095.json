@@ -1,0 +1,26 @@
+{
+ "id": "I-00095",
+ "round": 14,
+ "time": "2026-11-17 02:21:17",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — Animated Gradient Text",
+ "knob": "METHOD: Создайте класс `.gradient-text` с анимированным градиентом через `background-clip` и `@keyframes`. Применяется к элементам, где нужен премиальный визуальный акцент (например, к слову «за 2 дня» в h1).\nSAFE CSS:\n```css\n.gradient-text {\nbackground: linear-gradient(45deg, #8b5cf6, #ec4899, #f59e0b);\nbackground-size: 300% 300%;\n-webkit-background-clip: text;\ncolor: transparent;\nanimation: gradientShift 8s ease infinite;\n}\n@keyframes gradientShift {\n0%   { background-position: 0% 50%; }\n50%  { background-position: 100% 50%; }\n100% { background-position: 0% 50%; }\n}\n```",
+ "skill": "",
+ "effect": "Привлекает внимание к ключевому сообщению, усиливает ощущение «дорогого» бренда без дополнительных изображений.",
+ "risk": "На старых браузерах (IE) текст будет прозрачным; однако такие браузеры уже не поддерживаются основной аудиторией.",
+ "rollback": "Удалить класс из HTML и CSS‑правила; откатить файл из Git.",
+ "verify": "Открыть страницу, убедиться, что градиент плавно меняется; проверить в Chrome DevTools, отключив `prefers-reduced-motion` (должна работать).",
+ "priority_claim": "1 – быстрый визуальный апгрейд, повышает запоминаемость оффера.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "METHOD: Создайте класс `.gradient-text` с анимированным градиентом через `background-clip` и `@keyframes`. Применяется к элементам, где нужен премиальный визуальный акцент (например, к слову «за 2 дня» в h1).\nSAFE CSS:\n```css\n.gradient-text {\nbackground: linear-gradient(45deg, #8b5cf6, #ec4899, #f59e0b);\nbackground-size: 300% 300%;\n-webkit-background-clip: text;\ncolor: transparent;\nanimation: gradientShift 8s ease infinite;\n}\n@keyframes gradientShift {\n0%   { background-position: 0% 50%; }\n50%  { background-position: 100% 50%; }\n100% { background-position: 0% 50%; }\n}\n```"
+ ],
+ "flags": []
+}

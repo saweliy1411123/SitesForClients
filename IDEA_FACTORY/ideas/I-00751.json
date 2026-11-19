@@ -1,0 +1,26 @@
+{
+ "id": "I-00751",
+ "round": 115,
+ "time": "2026-11-17 07:17:50",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить фокус‑видимый контур для всех интерактивных элементов (a, button)",
+ "knob": "В CSS добавить правило `:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }` и убедиться, что все ссылки‑CTA имеют `role=\"button\"` и `aria-label` при необходимости.",
+ "skill": "",
+ "effect": "Улучшит доступность (WCAG 2.1 AA) и восприятие интерактивных элементов пользователями клавиатуры, что может увеличить конверсию за счёт снижения фрустрации.",
+ "risk": "Минимальный – визуальное изменение может не понравиться некоторым пользователям, но это легко откатить.",
+ "rollback": "Удалить добавленное правило из CSS (git checkout HEAD -- index.html).",
+ "verify": "Включить режим клавиатурной навигации (Tab) в браузере, проверить видимый контур на всех CTA‑ссылках; использовать axe‑core в DevTools для подтверждения отсутствия нарушений focus-visible.",
+ "priority_claim": "3 – важно для a11y, но менее критично для бизнес‑метрик, чем скорость.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В CSS добавить правило `:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }` и убедиться, что все ссылки‑CTA имеют `role=\"button\"` и `aria-label` при необходимости."
+ ],
+ "flags": []
+}

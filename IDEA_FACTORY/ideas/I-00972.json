@@ -1,0 +1,26 @@
+{
+ "id": "I-00972",
+ "round": 162,
+ "time": "2026-11-17 09:29:29",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить визуальный «Гарантия возврата денег 100 %» рядом с ценой",
+ "knob": "Внутри `.price-card` после блока `<div class=\"price-fine\">…</div>` добавить `<div class=\"guarantee-badge\" role=\"img\" aria-label=\"Гарантия возврата денег 100%\">✅ Гарантия возврата 100 %</div>` и в CSS добавить `.guarantee-badge{margin-top:12px;padding:8px 12px;background:linear-gradient(90deg,#34d399,#10b981);color:#fff;border-radius:6px;font-weight:600;font-size:14px;text-align:center}`",
+ "skill": "",
+ "effect": "Усилит доверие к цене, уменьшит страх перед покупкой, повысит коэффициент конверсии в блоке цены",
+ "risk": "Нужно убедиться, что действительно предоставляется такая гарантия; иначе риск юридический",
+ "rollback": "`git checkout -- index.html` (удалить добавленный div и CSS)",
+ "verify": "Проверить в браузере, что рядом с ценой появился зелёный бейдж, и что он корректно отображается на мобильных устройствах (тестировать в DevTools)",
+ "priority_claim": "2 — значимый trust‑сигнал, но требует согласования юридической части",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Внутри `.price-card` после блока `<div class=\"price-fine\">…</div>` добавить `<div class=\"guarantee-badge\" role=\"img\" aria-label=\"Гарантия возврата денег 100%\">✅ Гарантия возврата 100 %</div>` и в CSS добавить `.guarantee-badge{margin-top:12px;padding:8px 12px;background:linear-gradient(90deg,#34d399,#10b981);color:#fff;border-radius:6px;font-weight:600;font-size:14px;text-align:center}`"
+ ],
+ "flags": []
+}

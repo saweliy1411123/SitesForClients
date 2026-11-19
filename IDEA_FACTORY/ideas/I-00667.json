@@ -1,0 +1,26 @@
+{
+ "id": "I-00667",
+ "round": 102,
+ "time": "2026-11-17 06:41:01",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "PAIN‑COLLAPSIBLE‑COST‑OF‑INACTION",
+ "knob": "В секции боли (идентификатор, вероятно `#pain`) добавить кнопку `<button class=\"cost-toggle\" aria-expanded=\"false\" aria-controls=\"cost-details\">Показать стоимость бездействия</button>` и скрытый блок `<div id=\"cost-details\" class=\"cost-details\" hidden>…текст‑расчёт потерь…</div>`; в CSS добавить `.cost-details[hidden]{display:none}` и простую JS‑тоггл‑handler (без fetch).",
+ "skill": "",
+ "effect": "Позволяет пользователю раскрыть конкретные цифры потерь, усиливая мотивацию к действию, но без перегрузки страницы.",
+ "risk": "Добавление интерактивного элемента требует проверки доступности (keyboard).",
+ "rollback": "`git checkout HEAD -- index.html`.",
+ "verify": "Нажать кнопку – блок появляется/скрывается, атрибут `aria-expanded` меняется, проверка в Chrome DevTools → Accessibility.",
+ "priority_claim": "2 – улучшает конверсию в блоке боли, простой код.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В секции боли (идентификатор, вероятно `#pain`) добавить кнопку `<button class=\"cost-toggle\" aria-expanded=\"false\" aria-controls=\"cost-details\">Показать стоимость бездействия</button>` и скрытый блок `<div id=\"cost-details\" class=\"cost-details\" hidden>…текст‑расчёт потерь…</div>`; в CSS добавить `.cost-details[hidden]{display:none}` и простую JS‑тоггл‑handler (без fetch)."
+ ],
+ "flags": []
+}

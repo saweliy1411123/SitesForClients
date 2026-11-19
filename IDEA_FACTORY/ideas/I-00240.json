@@ -1,0 +1,26 @@
+{
+ "id": "I-00240",
+ "round": 37,
+ "time": "2026-11-17 03:26:42",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Quick CTA‑path audit via one‑liner console script",
+ "knob": "METHOD – In Chrome DevTools console run the snippet:\n```js\n(() => {\nconst cta = '#contact';\nconst links = [...document.querySelectorAll('a[href]')];\nconst good = links.filter(l => l.getAttribute('href').startsWith(cta) || l.getAttribute('href').startsWith('tel:'));\nconst bad = links.filter(l => !good.includes(l));\nconsole.table({total: links.length, good: good.length, bad: bad.length});\nconsole.group('Bad links');\nbad.forEach(l => console.log(l.outerHTML));\nconsole.groupEnd();\n})();\n```",
+ "skill": "",
+ "effect": "Instantly shows whether every clickable element routes to the intended contact CTA (or phone), exposing dead‑ends or misleading links before any code change.",
+ "risk": "None – read‑only script, no DOM mutation.",
+ "rollback": "No file change; simply close the console.",
+ "verify": "After running, confirm that `bad` count is 0; if not, note the offending selectors for later fixing.",
+ "priority_claim": "1 – ensures the core conversion funnel works; fastest sanity check.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD – In Chrome DevTools console run the snippet:\n```js\n(() => {\nconst cta = '#contact';\nconst links = [...document.querySelectorAll('a[href]')];\nconst good = links.filter(l => l.getAttribute('href').startsWith(cta) || l.getAttribute('href').startsWith('tel:'));\nconst bad = links.filter(l => !good.includes(l));\nconsole.table({total: links.length, good: good.length, bad: bad.length});\nconsole.group('Bad links');\nbad.forEach(l => console.log(l.outerHTML));\nconsole.groupEnd();\n})();\n```"
+ ],
+ "flags": []
+}

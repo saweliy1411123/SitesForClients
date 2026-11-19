@@ -1,0 +1,26 @@
+{
+ "id": "I-00983",
+ "round": 165,
+ "time": "2026-11-17 09:37:50",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Шаги‑тайм‑лайн с анимацией заполнения линии при скролле",
+ "knob": "Перед `<div class=\"steps\">` (см. SITE_REQUEST «steps») вставить `<div class=\"steps-line\"></div>`; в CSS задать фиксированную высоту линии и использовать `background: linear-gradient(to bottom, var(--blue) 0%, transparent 0%);` + `IntersectionObserver` в небольшом inline‑script, который увеличивает процент заполнения по мере прокрутки.",
+ "skill": "",
+ "effect": "Визуально связывает три шага, усиливая ощущение прогресса и удерживая внимание.",
+ "risk": "Требует небольшого JS‑кода; может слегка увеличить LCP, но скрипт лёгкий.",
+ "rollback": "Удалить вставленный `<div class=\"steps-line\">` и `<script>`‑блок; `git checkout -- index.html`.",
+ "verify": "Открыть страницу, прокрутить к шагам, увидеть, как линия заполняется от верхней части к нижней; проверить отсутствие ошибок в консоли.",
+ "priority_claim": "2 – улучшает визуальную коммуникацию процесса.",
+ "source_hint": "",
+ "site_request": "steps",
+ "category": "lever",
+ "variants": [
+  "Перед `<div class=\"steps\">` (см. SITE_REQUEST «steps») вставить `<div class=\"steps-line\"></div>`; в CSS задать фиксированную высоту линии и использовать `background: linear-gradient(to bottom, var(--blue) 0%, transparent 0%);` + `IntersectionObserver` в небольшом inline‑script, который увеличивает процент заполнения по мере прокрутки."
+ ],
+ "flags": []
+}

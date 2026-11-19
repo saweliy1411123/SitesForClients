@@ -1,0 +1,26 @@
+{
+ "id": "I-00607",
+ "round": 91,
+ "time": "2026-11-17 06:06:57",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — tilt-parallax-demo-cards (3D-наклон демо-концептов с глубиной слоёв)",
+ "knob": "Полное тело скилла:\n**Name:** `tilt-parallax-demo-cards`\n**When to apply:** На сетках карточек (демо-концепты, шаги), где нужен «объём» без библиотек. Шаги: (1) обернуть содержимое карточки во внутренний слой `.card-inner`; (2) повесить на контейнер `perspective`; (3) hover — `rotateY/rotateX` + `translateZ` внутреннего слоя; (4) SAFE JS — лёгкий tilt по позиции курсора, только pointermove на десктопе (`matchMedia('(hover:hover)')`), отключение при `prefers-reduced-motion`; (5) на тач-устройствах tilt не активен, остаётся только hover-подъём.\nSAFE CSS:\n```\n.card-tilt{perspective:900px;}\n.card-tilt .card-inner{transition:transform .25s ease;transform-style:preserve-3d;will-change:transform;}\n.card-tilt:hover .card-inner{transform:translateZ(18px);}\n@media (prefers-reduced-motion: reduce){.card-tilt .card-inner{transition:none;transform:none!important;}}\n```\nSAFE JS:\n```\ndocument.querySelectorAll('.card-tilt').forEach(function(c){\nif(!matchMedia('(hover:hover)').matches) return;\nvar inner=c.querySelector('.card-inner'); if(!inner) return;\nc.addEventListener('pointermove',function(e){\nvar r=c.getBoundingClientRect();\nvar x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;\ninner.style.transform='rotateY('+(x*8)+'deg) rotateX('+(-y*8)+'deg) translateZ(12px)';\n});\nc.addEventListener('pointerleave',function(){",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "Полное тело скилла:\n**Name:** `tilt-parallax-demo-cards`\n**When to apply:** На сетках карточек (демо-концепты, шаги), где нужен «объём» без библиотек. Шаги: (1) обернуть содержимое карточки во внутренний слой `.card-inner`; (2) повесить на контейнер `perspective`; (3) hover — `rotateY/rotateX` + `translateZ` внутреннего слоя; (4) SAFE JS — лёгкий tilt по позиции курсора, только pointermove на десктопе (`matchMedia('(hover:hover)')`), отключение при `prefers-reduced-motion`; (5) на тач-устройствах tilt не активен, остаётся только hover-подъём.\nSAFE CSS:\n```\n.card-tilt{perspective:900px;}\n.card-tilt .card-inner{transition:transform .25s ease;transform-style:preserve-3d;will-change:transform;}\n.card-tilt:hover .card-inner{transform:translateZ(18px);}\n@media (prefers-reduced-motion: reduce){.card-tilt .card-inner{transition:none;transform:none!important;}}\n```\nSAFE JS:\n```\ndocument.querySelectorAll('.card-tilt').forEach(function(c){\nif(!matchMedia('(hover:hover)').matches) return;\nvar inner=c.querySelector('.card-inner'); if(!inner) return;\nc.addEventListener('pointermove',function(e){\nvar r=c.getBoundingClientRect();\nvar x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;\ninner.style.transform='rotateY('+(x*8)+'deg) rotateX('+(-y*8)+'deg) translateZ(12px)';\n});\nc.addEventListener('pointerleave',function(){"
+ ],
+ "flags": []
+}

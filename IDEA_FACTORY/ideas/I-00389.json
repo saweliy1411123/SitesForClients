@@ -1,0 +1,26 @@
+{
+ "id": "I-00389",
+ "round": 58,
+ "time": "2026-11-17 04:29:01",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "CTA Contrast‑Ratio Checker",
+ "knob": "METHOD: В консоли DevTools выполнить скрипт, указывая селектор CTA (по умолчанию `.btn-primary`):\n```js\n(() => {\nconst selector = '.btn-primary';\nconst elems = document.querySelectorAll(selector);\nconst toRgb = c => {\nconst ctx = document.createElement('canvas').getContext('2d');\nctx.fillStyle = c; return ctx.fillStyle;\n};\nconst luminance = rgb => {\nconst [r,g,b] = rgb.match(/\\w\\w/g).map(v=>parseInt(v,16)/255).map(v=>v<=0.03928?v/12.92:Math.pow((v+0.055)/1.055,2.4));\nreturn 0.2126*r + 0.7152*g + 0.0722*b;\n};\nconst contrast = (c1,c2)=> {\nconst L1 = luminance(toRgb(c1)) + 0.05;\nconst L2 = luminance(toRgb(c2)) + 0.05;\nreturn L1 > L2 ? L1/L2 : L2/L1;\n};\nelems.forEach(el=>{\nconst fg = getComputedStyle(el).color;\nconst bg = getComputedStyle(el).backgroundColor;\nconst ratio = contrast(fg,bg).toFixed(2);\nconsole.log(`CTA \"${el.textContent.trim()}\" contrast: ${ratio}:1`);\n});\n})();\n```",
+ "skill": "",
+ "effect": "Мгновенно проверяет, удовлетворяют ли кнопки CTA WCAG 2.1 (минимум 4.5:1 для текста, 3:1 для крупного текста), улучшая читаемость и конверсию.",
+ "risk": "Нет (только чтение стилей).",
+ "rollback": "Не меняет код; просто закрыть консоль.",
+ "verify": "После выполнения скрипта в консоли появятся строки с коэффициентом контраста; если любой ниже 4.5, рекомендуется скорректировать цвета.",
+ "priority_claim": "3 — полезно для финальной полировки и соответствия доступности, но менее срочно, чем скорость или дубли‑id.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: В консоли DevTools выполнить скрипт, указывая селектор CTA (по умолчанию `.btn-primary`):\n```js\n(() => {\nconst selector = '.btn-primary';\nconst elems = document.querySelectorAll(selector);\nconst toRgb = c => {\nconst ctx = document.createElement('canvas').getContext('2d');\nctx.fillStyle = c; return ctx.fillStyle;\n};\nconst luminance = rgb => {\nconst [r,g,b] = rgb.match(/\\w\\w/g).map(v=>parseInt(v,16)/255).map(v=>v<=0.03928?v/12.92:Math.pow((v+0.055)/1.055,2.4));\nreturn 0.2126*r + 0.7152*g + 0.0722*b;\n};\nconst contrast = (c1,c2)=> {\nconst L1 = luminance(toRgb(c1)) + 0.05;\nconst L2 = luminance(toRgb(c2)) + 0.05;\nreturn L1 > L2 ? L1/L2 : L2/L1;\n};\nelems.forEach(el=>{\nconst fg = getComputedStyle(el).color;\nconst bg = getComputedStyle(el).backgroundColor;\nconst ratio = contrast(fg,bg).toFixed(2);\nconsole.log(`CTA \"${el.textContent.trim()}\" contrast: ${ratio}:1`);\n});\n})();\n```"
+ ],
+ "flags": []
+}

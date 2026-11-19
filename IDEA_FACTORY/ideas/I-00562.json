@@ -1,0 +1,29 @@
+{
+ "id": "I-00562",
+ "round": 84,
+ "time": "2026-11-17 05:45:57",
+ "source": "lareper/glm-5.3-prime",
+ "sources": [
+  "lareper/glm-5.3-prime",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3",
+  "lareper/glm-5.2"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "SKILL — spotlight-text (последовательное «проявление» слов h2 при появлении секции)",
+ "knob": "SKILL — spotlight-word-reveal\nНазвание: spotlight-word",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "SKILL — spotlight-word-reveal\nНазвание: spotlight-word"
+ ],
+ "flags": []
+}

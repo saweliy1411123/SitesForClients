@@ -1,0 +1,29 @@
+{
+ "id": "I-00498",
+ "round": 75,
+ "time": "2026-11-17 05:19:53",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "FAQPage JSON-LD разметка для rich results в Яндексе/Google",
+ "knob": "В конец `<body>` (рядом с будущим Service JSON-LD) добавить `<script type=\"application/ld+json\">` с `@type: FAQPage` и `mainEntity` — по 3–5 реальных вопросов/ответов, скопированных дословно из секции FAQ (L663–705), без выдуманных фактов.",
+ "skill": "",
+ "effect": "Шанс расширенного сниппета (вопросы прямо в выдаче) → выше CTR по запросам «лендинг Пермь вопросы/цена».",
+ "risk": "Если текст ответов в JSON-LD разойдётся с видимым текстом — поисковик может игнорировать разметку.",
+ "rollback": "`git checkout -- index.html` (или удалить блок скрипта в копии).",
+ "verify": "Вставить JSON в validator.schema.org → 0 ошибок; в Rich Results Test URL — тип FAQPage распознан.",
+ "priority_claim": "1 — дёшево, усиливает уже существующую секцию FAQ и локальное SEO.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В конец `<body>` (рядом с будущим Service JSON-LD) добавить `<script type=\"application/ld+json\">` с `@type: FAQPage` и `mainEntity` — по 3–5 реальных вопросов/ответов, скопированных дословно из секции FAQ (L663–705), без выдуманных фактов."
+ ],
+ "flags": []
+}

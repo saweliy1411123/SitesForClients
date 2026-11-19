@@ -1,0 +1,31 @@
+{
+ "id": "I-00413",
+ "round": 61,
+ "time": "2026-11-17 04:38:31",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b",
+  "localhost:8081/big_only",
+  "localhost:8081/agent",
+  "localhost:8081/auto",
+  "localhost:8081/fast"
+ ],
+ "mentions": 5,
+ "status": "NEW",
+ "title": "Отключить автоматическое преобразование телефонных номеров в iOS",
+ "knob": "добавить в `<head>` мета‑тег `<meta name=\"format-detection\" content=\"telephone=no\">`",
+ "skill": "",
+ "effect": "Предотвращает нежелательное автосвязывание цифр как телефонных ссылок, сохраняет дизайн и предотвращает случайные клики",
+ "risk": "Если действительно нужны кликабельные номера, они перестанут работать; в текущем дизайне номеров нет – риск нулевой",
+ "rollback": "удалить мета‑тег из `<head>`",
+ "verify": "открыть страницу в Safari на iOS, убедиться, что любые цифры не преобразуются в ссылки; проверить в Chrome DevTools → Mobile view – мета‑тег присутствует в DOM",
+ "priority_claim": "3 – низкий приоритет, но реализуется за секунды",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "добавить в `<head>` мета‑тег `<meta name=\"format-detection\" content=\"telephone=no\">`",
+  "В `<head>` добавить `<meta name=\"format-detection\" content=\"telephone=no\">` — запрещает iOS автоматически превращать цифры в ссылки-звонки"
+ ],
+ "flags": []
+}

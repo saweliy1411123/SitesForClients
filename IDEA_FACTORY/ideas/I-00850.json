@@ -1,0 +1,26 @@
+{
+ "id": "I-00850",
+ "round": 128,
+ "time": "2026-11-17 07:53:37",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Быстрый замер First Input Delay (FID) через PerformanceObserver",
+ "knob": "METHOD: В консоли DevTools выполнить однострочник, который создаёт `new PerformanceObserver(entry => { console.log('FID:', entry.startTime.toFixed(2), 'ms'); })` с `entryTypes:['first-input']` и сразу имитирует пользовательский ввод (`document.dispatchEvent(new MouseEvent('click', {bubbles:true, cancelable:true}));`).",
+ "skill": "",
+ "effect": "Позволит за 2 минуты увидеть реальное время отклика первой интеракции, оценить восприятие скорости сайта посетителями и при необходимости оптимизировать JS‑блокирующие скрипты.",
+ "risk": "Требует открытой страницы в браузере; измерения могут отличаться в разных браузерах/устройствах.",
+ "rollback": "Перезагрузить страницу — скрипт не сохраняется.",
+ "verify": "Открыть `index.html` в Chrome, открыть DevTools → Console, вставить скрипт, увидеть вывод «FID: X ms». При FID > 100 ms — нужна оптимизация.",
+ "priority_claim": "1 – FID это ключевой показатель Core Web Vitals; плохой FID напрямую снижает конверсию и SEO.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: В консоли DevTools выполнить однострочник, который создаёт `new PerformanceObserver(entry => { console.log('FID:', entry.startTime.toFixed(2), 'ms'); })` с `entryTypes:['first-input']` и сразу имитирует пользовательский ввод (`document.dispatchEvent(new MouseEvent('click', {bubbles:true, cancelable:true}));`)."
+ ],
+ "flags": []
+}

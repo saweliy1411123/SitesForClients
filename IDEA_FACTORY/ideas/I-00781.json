@@ -1,0 +1,26 @@
+{
+ "id": "I-00781",
+ "round": 119,
+ "time": "2026-11-17 07:29:22",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "METHOD: A/B‑тест hero‑copy via URL‑параметр",
+ "knob": "**Name:** glassmorphic-cta-button\n**When to apply:** На любой лендинг, где CTA‑кнопки оформлены как ссылки `<a class=\"btn-primary\">`.\n**SAFE CSS:**\n```css\n.btn-primary.glassy {\nbackground: rgba(255,255,255,0.15);\nbackdrop-filter: blur(8px);\nborder: 1px solid rgba(255,255,255,0.25);\nborder-radius: 8px;\ncolor: #fff;\npadding: 0.75rem 1.5rem;\ndisplay: inline-flex;\nalign-items: center;\ngap: 0.5rem;\ntransition: background 0.3s, transform 0.2s;\n}\n.btn-primary.glassy:hover,\n.btn-primary.glassy:focus-visible {\nbackground: rgba(255,255,255,0.25);\ntransform: translateY(-2px);\n}\n.btn-primary.glassy .arr {\ntransition: transform 0.2s;\n}\n.btn-primary.glassy:hover .arr {\ntransform: translateX(4px);\n}\n```\n**SAFE JS:** *(необязательно, но добавляет копирование текста при клике)*\n```js\ndocument.querySelectorAll('.btn-primary.glassy').forEach(btn=>{\nbtn.addEventListener('click',e=>{\nif(e.shiftKey){ // Shift‑click копирует ссылку в буфер\nnavigator.clipboard.writeText(btn.href);\nbtn.textContent='Ссылка скопирована!';\n}\n});\n});\n```",
+ "skill": "",
+ "effect": "Делает CTA визуально премиальными, повышает доверие и улучшает конверсию за счёт яркого, но лёгкого эффекта.",
+ "risk": "На браузерах без `backdrop-filter` кнопка будет выглядеть менее «стеклянно», но останется читаемой.",
+ "rollback": "Удалить класс `glassy` из всех CTA‑ссылок и убрать CSS‑файл/блок; `git checkout -- index.html`.",
+ "verify": "Добавить класс к одной ссылке, открыть страницу, убедиться в прозрачном фоне и плавном hover‑эффекте; проверить, что в старых браузерах кнопка остаётся обычной.",
+ "priority_claim": "1 — быстрый визуальный апгрейд, легко измеримый через клики CTA.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** glassmorphic-cta-button\n**When to apply:** На любой лендинг, где CTA‑кнопки оформлены как ссылки `<a class=\"btn-primary\">`.\n**SAFE CSS:**\n```css\n.btn-primary.glassy {\nbackground: rgba(255,255,255,0.15);\nbackdrop-filter: blur(8px);\nborder: 1px solid rgba(255,255,255,0.25);\nborder-radius: 8px;\ncolor: #fff;\npadding: 0.75rem 1.5rem;\ndisplay: inline-flex;\nalign-items: center;\ngap: 0.5rem;\ntransition: background 0.3s, transform 0.2s;\n}\n.btn-primary.glassy:hover,\n.btn-primary.glassy:focus-visible {\nbackground: rgba(255,255,255,0.25);\ntransform: translateY(-2px);\n}\n.btn-primary.glassy .arr {\ntransition: transform 0.2s;\n}\n.btn-primary.glassy:hover .arr {\ntransform: translateX(4px);\n}\n```\n**SAFE JS:** *(необязательно, но добавляет копирование текста при клике)*\n```js\ndocument.querySelectorAll('.btn-primary.glassy').forEach(btn=>{\nbtn.addEventListener('click',e=>{\nif(e.shiftKey){ // Shift‑click копирует ссылку в буфер\nnavigator.clipboard.writeText(btn.href);\nbtn.textContent='Ссылка скопирована!';\n}\n});\n});\n```"
+ ],
+ "flags": []
+}

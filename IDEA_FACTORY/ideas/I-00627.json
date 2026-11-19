@@ -1,0 +1,26 @@
+{
+ "id": "I-00627",
+ "round": 95,
+ "time": "2026-11-17 06:19:21",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Hero‑benefits‑list — четыре коротких пункта‑подсказки под <h1>",
+ "knob": "в `.hero .wrap` сразу после `<h1>` добавить `<ul class=\"hero‑benefits\"><li>Первые заявки уже в 1‑й день</li><li>Оптимизировано под Яндекс Search</li><li>Мобильный адаптив — 100 % конверсия</li><li>Гарантия быстрого запуска</li></ul>` и в CSS задать `ul.hero‑benefits{display:flex;gap:1rem;flex-wrap:wrap;list-style:none;margin-top:1rem;font-size:clamp(14px,2vw,16px);color:var(--muted)}`.",
+ "skill": "",
+ "effect": "мгновенно повышает ясность оффера, повышает время‑на‑странице и CTR CTA за счёт визуального доказательства ценности.",
+ "risk": "небольшое увеличение HTML‑размера (≈200 Б) и возможно «переполнение» на очень маленьких экранах.",
+ "rollback": "`git checkout -- index.html` (или удалить только вставку `<ul class=\"hero‑benefits\">…</ul>`).",
+ "verify": "открыть страницу, убедиться, что список виден под заголовком, проверить в DevTools → Elements, а также измерить CLS до/после (должен оставаться < 0.1).",
+ "priority_claim": "1 — ключевой блок первого экрана, влияет на восприятие оффера и SEO‑поведенческие сигналы.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "в `.hero .wrap` сразу после `<h1>` добавить `<ul class=\"hero‑benefits\"><li>Первые заявки уже в 1‑й день</li><li>Оптимизировано под Яндекс Search</li><li>Мобильный адаптив — 100 % конверсия</li><li>Гарантия быстрого запуска</li></ul>` и в CSS задать `ul.hero‑benefits{display:flex;gap:1rem;flex-wrap:wrap;list-style:none;margin-top:1rem;font-size:clamp(14px,2vw,16px);color:var(--muted)}`."
+ ],
+ "flags": []
+}

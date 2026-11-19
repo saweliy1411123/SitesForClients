@@ -1,0 +1,26 @@
+{
+ "id": "I-00601",
+ "round": 90,
+ "time": "2026-11-17 06:04:18",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — content‑visibility‑auto (lazy‑render секций ниже фолда)",
+ "knob": "**Name:** `content-visibility-auto`\n**When to apply:** На любой одностраничный лендинг, где ниже‑фолд контент тяжёлый (текст, карточки, изображения) и нужен быстрый First Contentful Paint.\n**Steps:**\n1. Открыть `index.html` и добавить в конец `<style>` блок ниже существующего CSS.\n2. Вставить CSS‑правило, которое включает `content-visibility: auto` для всех секций, кроме первой (hero) и навигации.\n3. При желании задать `contain-intrinsic-size` – пример ≈ 600 px, чтобы браузер оставил место до загрузки.\n**SAFE CSS:**\n```css\n/* ---------- content‑visibility‑auto ---------- */\nsection:not(.hero):not(.nav) {\ncontent-visibility: auto;\ncontain-intrinsic-size: 600px;\n}\n```\n**SAFE JS:** *(не требуется)*",
+ "skill": "",
+ "effect": "Уменьшает количество DOM‑элементов, отрисовываемых до скролла, тем самым сокращая LCP и CLS → быстрее загрузка, лучше Core Web Vitals, повышается конверсия на мобильных.",
+ "risk": "Если секция сильно меньше 600 px, может появиться «прыжок» при загрузке; но он минимален и легко корректируется.",
+ "rollback": "`git checkout HEAD -- index.html` или удалить только только что добавленный CSS‑блок.",
+ "verify": "Открыть страницу в Chrome, открыть DevTools → Performance, выполнить скролл до нижних секций и убедиться, что их `content‑visibility` = `auto` (вкладка Elements → Computed). Затем измерить LCP до и после (можно через `PerformanceObserver` в консоли).",
+ "priority_claim": "2 – быстрая победа без риска, улучшает Core Web Vitals, но не меняет бизнес‑логики.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `content-visibility-auto`\n**When to apply:** На любой одностраничный лендинг, где ниже‑фолд контент тяжёлый (текст, карточки, изображения) и нужен быстрый First Contentful Paint.\n**Steps:**\n1. Открыть `index.html` и добавить в конец `<style>` блок ниже существующего CSS.\n2. Вставить CSS‑правило, которое включает `content-visibility: auto` для всех секций, кроме первой (hero) и навигации.\n3. При желании задать `contain-intrinsic-size` – пример ≈ 600 px, чтобы браузер оставил место до загрузки.\n**SAFE CSS:**\n```css\n/* ---------- content‑visibility‑auto ---------- */\nsection:not(.hero):not(.nav) {\ncontent-visibility: auto;\ncontain-intrinsic-size: 600px;\n}\n```\n**SAFE JS:** *(не требуется)*"
+ ],
+ "flags": []
+}

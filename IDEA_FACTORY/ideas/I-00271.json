@@ -1,0 +1,26 @@
+{
+ "id": "I-00271",
+ "round": 40,
+ "time": "2026-11-17 03:35:51",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Проверка hreflang/robots/sitemap-готовности и «паразитных» внешних ссылок в head",
+ "knob": "METHOD: (1) Открыть index.html, DevTools → Console, выполнить: `console.log([...document.querySelectorAll('link[rel], meta[name], meta[property]')].map(e=>e.rel||e.name||e.getAttribute('property')+' → '+(e.href||e.content)))`. (2) Сверить наличие: canonical (есть ли реальный домен у владельца), robots meta, favicon/apple-touch-icon. (3) Проверить, что 4 `<link>` — это только preconnect/fonts, без случайных внешних ссылок. (4) Если canonical ещё нет (I-00165 в куче) — зафиксировать, что нужен реальный домен от владельца, не example.com.",
+ "skill": "",
+ "effect": "Полная картина head-тегов за 2 минуты; исключает публикацию с битым/заглушечным canonical и подтверждает готовность к индексации.",
+ "risk": "Низкий — только чтение, ничего не меняется.",
+ "rollback": "Не требуется (read-only проверка).",
+ "verify": "Сама проверка занимает ~2 минуты; результат — чек-лист из 5 пунктов (canonical/robots/favicon/og:image/лишние link).",
+ "priority_claim": "2 — быстрая диагностика перед любыми SEO-правками, предотвращает публикацию заглушек.",
+ "source_hint": "",
+ "site_request": "link",
+ "category": "method",
+ "variants": [
+  "METHOD: (1) Открыть index.html, DevTools → Console, выполнить: `console.log([...document.querySelectorAll('link[rel], meta[name], meta[property]')].map(e=>e.rel||e.name||e.getAttribute('property')+' → '+(e.href||e.content)))`. (2) Сверить наличие: canonical (есть ли реальный домен у владельца), robots meta, favicon/apple-touch-icon. (3) Проверить, что 4 `<link>` — это только preconnect/fonts, без случайных внешних ссылок. (4) Если canonical ещё нет (I-00165 в куче) — зафиксировать, что нужен реальный домен от владельца, не example.com."
+ ],
+ "flags": []
+}

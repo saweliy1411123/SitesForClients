@@ -1,0 +1,26 @@
+{
+ "id": "I-00820",
+ "round": 123,
+ "time": "2026-11-17 07:40:45",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Прогресс‑бар над секцией «Три шага», заполняющийся при скролле",
+ "knob": "Вставить перед `<div class=\"steps\">` элемент `<div class=\"steps-progress\"><div class=\"fill\"></div></div>`. Добавить в конец <body> небольшую JS‑функцию, которая измеряет `getBoundingClientRect()` секции #steps и обновляет ширину `.fill` в % от пройденного скролла. Добавить CSS: `.steps-progress{height:4px;background:#e5e7eb;position:sticky;top:0;z-index:10;}.steps-progress .fill{height:100%;background:var(--violet);width:0;transition:width .2s;}`.",
+ "skill": "",
+ "effect": "Пользователь видит, сколько контента уже просмотрено, усиливает вовлечённость и мотивирует дочитать до конца.",
+ "risk": "Требует небольшого JS; в старых браузерах без поддержки IntersectionObserver может не работать (но работает в современных).",
+ "rollback": "Удалить вставленный HTML‑блок и скрипт (git checkout index.html).",
+ "verify": "Прокрутить страницу, наблюдать плавный рост полоски; проверить в мобильном режиме.",
+ "priority_claim": "2 – заметный UX‑бонус, небольшая стоимость реализации.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Вставить перед `<div class=\"steps\">` элемент `<div class=\"steps-progress\"><div class=\"fill\"></div></div>`. Добавить в конец <body> небольшую JS‑функцию, которая измеряет `getBoundingClientRect()` секции #steps и обновляет ширину `.fill` в % от пройденного скролла. Добавить CSS: `.steps-progress{height:4px;background:#e5e7eb;position:sticky;top:0;z-index:10;}.steps-progress .fill{height:100%;background:var(--violet);width:0;transition:width .2s;}`."
+ ],
+ "flags": []
+}

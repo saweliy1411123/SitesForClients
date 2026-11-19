@@ -1,0 +1,37 @@
+{
+ "id": "I-00172",
+ "round": 26,
+ "time": "2026-11-17 02:56:13",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b",
+  "localhost:8080/zhipu/glm-4.7-flash"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "“Skip‑to‑content” ссылка для улучшения навигации клавиатурой",
+ "knob": "Сразу после открывающего `<body>` вставить `<a href=\"#main\" class=\"skip-link\">Перейти к содержимому</a>`; добавить `id=\"main\"` к `<main>` (или к первому крупному контейнеру) и стили: `.skip-link{position:absolute;top:-40px;left:0;background:#fff;color:#000;padding:8px;z-index:100;transition:top .3s;} .skip-link:focus{top:0;}`",
+ "skill": "",
+ "effect": "Пользователи скрин‑ридеров и клавиатурные навигаторы мгновенно попадают в основной контент, повышается WCAG 2.1 AA по пункту 2.4.1 (блоки)",
+ "risk": "Небольшой визуальный сдвиг при фокусе, но стили контролируются, конфликтов нет",
+ "rollback": "Удалить вставленную строку и атрибут `id` (git checkout -- index.html)",
+ "verify": "Нажать `Tab` сразу после загрузки – фокус должен перейти на ссылку, нажать `Enter` – страница скроллится к основному контенту; проверить в axe‑core (bookmarklet) отсутствие ошибок 2.4.1",
+ "priority_claim": "1 – значительное улучшение доступности за 2 минуты",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Сразу после открывающего `<body>` вставить `<a href=\"#main\" class=\"skip-link\">Перейти к содержимому</a>`; добавить `id=\"main\"` к `<main>` (или к первому крупному контейнеру) и стили: `.skip-link{position:absolute;top:-40px;left:0;background:#fff;color:#000;padding:8px;z-index:100;transition:top .3s;} .skip-link:focus{top:0;}`",
+  "В начале `<body>` вставить `<a href=\"#main\" class=\"skip-link\">Перейти к содержимому</a>` и добавить CSS `.skip-link{position:absolute;top:-40px;left:0;background:#fff;color:#000;padding:8px;z-index:100;transition:top .3s;} .skip-link:focus{top:0;}`.",
+  "Сразу после открывающего `<body>` вставить `<a href=\"#main\" class=\"skip-link\">Перейти к содержимому</a>`; добавить CSS `.skip-link{position:absolute;top:-40px;left:0;background:#fff;color:#000;padding:8px;z-index:1000;transition:top .3s;} .skip-link:focus{top:0;}` и в основной контент добавить `<main id=\"main\">`.",
+  "В начало `<body>` вставить `<a href=\"#main\" class=\"skip-link\">Перейти к содержимому</a>`; добавить CSS `.skip-link{position:absolute;top:-40px;left:0;background:#fff;color:#000;padding:8px;z-index:100;transition:top .3s;} .skip-link:focus{top:0;}` и установить `id=\"main\"` на `<main>` (если его нет)",
+  "В начало `<body>` добавить скрытую ссылку: `<a href=\"#main\" class=\"skip-link\">Перейти к основному контенту</a>`. CSS: `.skip-link { position: absolute; top: -40px; left: 0; background: #8b5cf6; color: white; padding: 8px; z-index: 100; transition: top 0.3s; } .skip-link:focus { top: 0; }`.",
+  "Сразу после открывающего `<body>` вставить `<a href=\"#main\" class=\"skip-link\">Перейти к основному контенту</a>` и добавить CSS `.skip-link{position:absolute;top:-40px;left:0;background:#fff;color:#000;padding:8px;z-index:100;transition:top .3s;} .skip-link:focus{top:0;}`; добавить `id=\"main\"` к `<main>` (если отсутствует)",
+  "В начале `<body>` вставить `<a href=\"#main-content\" class=\"skip-link\">Перейти к содержимому</a>`; добавить CSS: `.skip-link{position:absolute;top:-40px;left:0;background:#fff;color:#000;padding:8px;z-index:100;transition:top .3s;} .skip-link:focus{top:0;}`; добавить `id=\"main-content\"` к элементу `<main>` (если его ещё нет).",
+  "В начало `<body>` добавить `<a href=\"#main\" class=\"skip-link\">Перейти к содержимому</a>`; в CSS `.skip-link{position:absolute;top:-40px;left:0;background:#fff;color:#000;padding:8px;z-index:100;transition:top .3s;} .skip-link:focus{top:0;}`; добавить `<main id=\"main\">` вокруг основного контента.",
+  "Сразу после открывающего `<body>` добавить\n```html\n<a href=\"#main\" class=\"skip-link\">Перейти к основному содержимому</a>\n```\nи в CSS\n```css\n.skip-link{position:absolute;top:-40px;left:0;background:#fff;color:#000;padding:8px;z-index:100;transition:top .3s;}\n.skip-link:focus{top:0;}\n```\nТакже добавить `id=\"main\"` к элементу `<main>` (если его нет).",
+  "Вставить «skip‑link» в начало `<body>` для улучшения навигации клавиатурой и скрин‑ридеров:\n```html\n<a class=\"skip-link\" href=\"#main\" aria-label=\"Перейти к содержимому\">Перейти к содержимому</a>\n```\nи добавить стили:\n```css\n.skip-link{position:absolute;top:-40px;left:0;background:#fff;color:#000;padding:8px;z-index:100;}\n.skip-link:focus{top:0;}\n```\nТакже обернуть основной контент в `<main id=\"main\">`.",
+  "Сразу после открывающего `<body>` добавить\n```html\n<a href=\"#main\" class=\"skip-link\">Перейти к содержимому</a>\n```\nи добавить `id=\"main\"` к первому крупному контейнеру (например, `<section id=\"hero\" …>`). Стилизовать `.skip-link{position:absolute;left:-9999px;top:auto;}` и `:focus{left:0;z-index:1000;}`."
+ ],
+ "flags": []
+}

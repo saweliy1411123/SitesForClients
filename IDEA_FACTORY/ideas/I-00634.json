@@ -1,0 +1,29 @@
+{
+ "id": "I-00634",
+ "round": 96,
+ "time": "2026-11-17 06:21:58",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "Уникальный alt/доступное имя для SVG-favicon и декоративных фонов",
+ "knob": "Инлайн-SVG favicon (L12) уже без alt — ок; проверить, что все декоративные div (`.hero-veil`, blobs, `.final-veil`) получили `aria-hidden=\"true\"` и `role=\"presentation\"` — добавить недостающие атрибуты.",
+ "skill": "",
+ "effect": "Скринридер не озвучивает мусор, порядок чтения чище — меньше отказов у пользователей с a11y-настройками.",
+ "risk": "Минимальный — атрибуты не меняют визуал.",
+ "rollback": "`git checkout index.html`",
+ "verify": "В консоли: `[...document.querySelectorAll('.hero-veil,.final-veil,[class*=blob]')].filter(e=>!e.hasAttribute('aria-hidden'))` — пустой массив после правки.",
+ "priority_claim": "2 — низкий риск, но эффект узкий.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Инлайн-SVG favicon (L12) уже без alt — ок; проверить, что все декоративные div (`.hero-veil`, blobs, `.final-veil`) получили `aria-hidden=\"true\"` и `role=\"presentation\"` — добавить недостающие атрибуты."
+ ],
+ "flags": []
+}

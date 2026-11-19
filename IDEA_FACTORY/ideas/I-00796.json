@@ -1,0 +1,26 @@
+{
+ "id": "I-00796",
+ "round": 121,
+ "time": "2026-11-17 07:35:17",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Быстрый измеритель LCP через PerformanceObserver",
+ "knob": "METHOD: в консоли DevTools выполнить короткий скрипт, который создаёт `new PerformanceObserver(entryList => { console.log('LCP:', entryList.getEntries()[0].value); })` с фильтром `entryTypes: ['largest-contentful-paint']` и сразу вызывает `observer.observe({type: 'largest-contentful-paint', buffered: true});`. Затем перезагрузить страницу (`location.reload()`).",
+ "skill": "",
+ "effect": "позволяет оценить влияние изменений (например, добавление `contain: layout` в hero) на показатель Largest Contentful Paint без сторонних инструментов.",
+ "risk": "измерения зависят от текущей нагрузки сети/CPU; результаты могут варьироваться, поэтому требуется несколько повторов.",
+ "rollback": "закрыть консоль или перезапустить браузер — обсервер исчезнет.",
+ "verify": "выполнить скрипт, перезагрузить страницу, убедиться, что в консоли появился числовой LCP‑результат (мс).",
+ "priority_claim": "3 – полезно для быстрой проверки гипотез о скорости, но менее критично для конверсии, поэтому ставим ниже первых двух.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: в консоли DevTools выполнить короткий скрипт, который создаёт `new PerformanceObserver(entryList => { console.log('LCP:', entryList.getEntries()[0].value); })` с фильтром `entryTypes: ['largest-contentful-paint']` и сразу вызывает `observer.observe({type: 'largest-contentful-paint', buffered: true});`. Затем перезагрузить страницу (`location.reload()`)."
+ ],
+ "flags": []
+}

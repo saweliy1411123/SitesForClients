@@ -1,0 +1,26 @@
+{
+ "id": "I-00728",
+ "round": 113,
+ "time": "2026-11-17 07:11:57",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Accessible CTA links — роль button и aria‑label",
+ "knob": "Во всех ссылках‑CTA с классом `.btn-primary` добавить атрибуты `role=\"button\"` и `aria-label=\"Получить бесплатный демо‑лендинг\"`; дополнительно в глобальном CSS добавить `:focus-visible {outline:3px solid var(--blue);}` (если ещё нет).",
+ "skill": "",
+ "effect": "Увеличит конверсию у пользователей скрин‑ридеров и клавиатурной навигации, повысит WCAG‑AA‑соответствие и доверие к сайту.",
+ "risk": "Небольшой риск — некоторые старые браузеры могут игнорировать `role=\"button\"` (но это безопасно).",
+ "rollback": "`git checkout -- index.html` (или восстановить из копии).",
+ "verify": "Открыть страницу в Chrome, включить DevTools → Accessibility, убедиться, что у CTA‑ссылок есть `role=\"button\"` и `aria-label`; проверить, что при Tab‑фокусе появляется outline.",
+ "priority_claim": "1 — доступность напрямую влияет на конверсию и SEO.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Во всех ссылках‑CTA с классом `.btn-primary` добавить атрибуты `role=\"button\"` и `aria-label=\"Получить бесплатный демо‑лендинг\"`; дополнительно в глобальном CSS добавить `:focus-visible {outline:3px solid var(--blue);}` (если ещё нет)."
+ ],
+ "flags": []
+}

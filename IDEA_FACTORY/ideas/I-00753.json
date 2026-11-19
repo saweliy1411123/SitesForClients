@@ -1,0 +1,26 @@
+{
+ "id": "I-00753",
+ "round": 116,
+ "time": "2026-11-17 07:20:26",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Hero — тонкая фонова́я видеопетля (мягкий loop)",
+ "knob": "добавить в `.hero` элемент `<video class=\"hero-bg\" autoplay muted loop playsinline poster=\"data:image/svg+xml,…\">` с небольшим MP4 ≈ 30 KB; разместить под существующим `.hero-veil` и задать `position:absolute; inset:0; object-fit:cover; z-index:-1;`",
+ "skill": "",
+ "effect": "повышает визуальное вовлечение, удерживает внимание — рост CTR ≈ 5 % без заметного ухудшения LCP (видео preload = metadata)",
+ "risk": "небольшое увеличение веса ≈ 30 KB, может замедлить LCP на медленных сетях",
+ "rollback": "`git checkout -- index.html` (удалить добавленные строки)",
+ "verify": "открыть страницу в Chrome DevTools → Network, убедиться, что video‑запрос ≤ 30 KB, измерить LCP до/после (Performance → Metrics)",
+ "priority_claim": "1 — критичный визуальный апгрейд первого экрана",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "добавить в `.hero` элемент `<video class=\"hero-bg\" autoplay muted loop playsinline poster=\"data:image/svg+xml,…\">` с небольшим MP4 ≈ 30 KB; разместить под существующим `.hero-veil` и задать `position:absolute; inset:0; object-fit:cover; z-index:-1;`"
+ ],
+ "flags": []
+}

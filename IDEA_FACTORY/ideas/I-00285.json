@@ -1,0 +1,26 @@
+{
+ "id": "I-00285",
+ "round": 43,
+ "time": "2026-11-17 03:43:35",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Внедрить фиксированную верхнюю панель с телефонным click‑to‑call и небольшим trust‑badge",
+ "knob": "Сразу после открывающего `<body>` добавить `<div class=\"top-contact-bar\" role=\"region\" aria-label=\"Контакты\"> <a href=\"tel:+7 (912) 345‑67‑89\" class=\"phone-link\" aria-label=\"Позвонить: +7 912 345‑67‑89\">+7 912 345‑67‑89</a> <span class=\"trust-badge\" aria-label=\"Партнёр Яндекс.Бизнес\">🟦 Яндекс.Бизнес</span> </div>`; в CSS задать фиксированное позиционирование, высокий z‑index, адаптивный padding, контрастный фон и `:focus-visible`‑обводку.",
+ "skill": "",
+ "effect": "Пользователи сразу видят способ позвонить и знакомый бренд‑логотип, повышая доверие и шанс мгновенного контакта.",
+ "risk": "На небольших экранах может отнимать место; решение – скрывать на <768px или свернуть в иконку.",
+ "rollback": "Удалить блок `<div class=\"top-contact-bar\">…</div>` и связанные CSS‑правила (git checkout index.html).",
+ "verify": "На разных ширинах экрана (desktop, tablet, mobile) проверить, что панель видна, ссылка открывает набор номера, а badge отображается без смещения контента.",
+ "priority_claim": "2 – усиливает доверие и конверсию без изменения основного контента; требует небольших CSS‑правок.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Сразу после открывающего `<body>` добавить `<div class=\"top-contact-bar\" role=\"region\" aria-label=\"Контакты\"> <a href=\"tel:+7 (912) 345‑67‑89\" class=\"phone-link\" aria-label=\"Позвонить: +7 912 345‑67‑89\">+7 912 345‑67‑89</a> <span class=\"trust-badge\" aria-label=\"Партнёр Яндекс.Бизнес\">🟦 Яндекс.Бизнес</span> </div>`; в CSS задать фиксированное позиционирование, высокий z‑index, адаптивный padding, контрастный фон и `:focus-visible`‑обводку."
+ ],
+ "flags": []
+}

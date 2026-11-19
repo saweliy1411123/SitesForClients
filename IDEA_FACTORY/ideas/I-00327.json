@@ -1,0 +1,27 @@
+{
+ "id": "I-00327",
+ "round": 49,
+ "time": "2026-11-17 04:01:44",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — section-fade-in-scroll",
+ "knob": "METHOD: SKILL\n**Name:** `section-fade-in-scroll`\n**When to apply:** На любые секции `<section>` (кроме `.hero`), где нужен плавный вход при прокрутке, создающий ощущение «живого» лендинга.\n**Steps:**\n1. Добавить к целевым секциям класс `fade-section`.\n2. Подключить CSS‑анимацию и JS‑обработчик ниже.\n**SAFE CSS:**\n```css\n.fade-section{\nopacity:0;\ntransform:translateY(30px);\ntransition:opacity .6s ease-out,transform .6s ease-out;\nwill-change:opacity,transform;\n}\n.fade-section.in-view{\nopacity:1;\ntransform:translateY(0);\n}\n```\n**SAFE JS:**\n```js\nconst observer=new IntersectionObserver((entries)=>{\nentries.forEach(entry=>{\nif(entry.isIntersecting) entry.target.classList.add('in-view');\n});\n},{threshold:0.15});\ndocument.querySelectorAll('.fade-section').forEach(el=>observer.observe(el));\n```",
+ "skill": "",
+ "effect": "Уменьшает визуальный шум, делает скролл более динамичным, повышает время пребывания и воспринимаемую «премиальность».",
+ "risk": "На устройствах с отключённым JS эффект не будет работать, но секция останется видимой (opacity 0 → будет скрыта). Чтобы избежать, добавить `opacity:1` в базовый стиль как fallback (необязательно).",
+ "rollback": "Удалить добавленные классы и блоки CSS/JS; `git checkout -- index.html`.",
+ "verify": "Прокрутить страницу – секции должны плавно появляться; открыть DevTools → Disable JavaScript – секции сразу видимы (fallback).",
+ "priority_claim": "2 – легко реализуемо, заметный визуальный эффект, умеренный риск без JS.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "METHOD: SKILL\n**Name:** `section-fade-in-scroll`\n**When to apply:** На любые секции `<section>` (кроме `.hero`), где нужен плавный вход при прокрутке, создающий ощущение «живого» лендинга.\n**Steps:**\n1. Добавить к целевым секциям класс `fade-section`.\n2. Подключить CSS‑анимацию и JS‑обработчик ниже.\n**SAFE CSS:**\n```css\n.fade-section{\nopacity:0;\ntransform:translateY(30px);\ntransition:opacity .6s ease-out,transform .6s ease-out;\nwill-change:opacity,transform;\n}\n.fade-section.in-view{\nopacity:1;\ntransform:translateY(0);\n}\n```\n**SAFE JS:**\n```js\nconst observer=new IntersectionObserver((entries)=>{\nentries.forEach(entry=>{\nif(entry.isIntersecting) entry.target.classList.add('in-view');\n});\n},{threshold:0.15});\ndocument.querySelectorAll('.fade-section').forEach(el=>observer.observe(el));\n```",
+  "**Name:** `scroll-fade-reveal`\n**When to apply:** На все секционные блоки (`section`) и крупные элементы (карточки, изображения) для плавного появления при скролле.\n**SAFE CSS:**\n```css\n[data-reveal]{\nopacity:0;\ntransform:translateY(20px);\ntransition:opacity .6s ease-out,transform .6s ease-out;\n}\n[data-reveal].visible{\nopacity:1;\ntransform:none;\n}\n```\n**SAFE JS:**\n```js\nconst observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.1});\ndocument.querySelectorAll('[data-reveal]').forEach(el=>observer.observe(el));\n```"
+ ],
+ "flags": []
+}

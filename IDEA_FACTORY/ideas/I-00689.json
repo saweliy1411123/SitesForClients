@@ -1,0 +1,26 @@
+{
+ "id": "I-00689",
+ "round": 106,
+ "time": "2026-11-17 06:52:30",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить JSON‑LD Review / AggregateRating для повышения доверия и SEO",
+ "knob": "В `<head>` перед закрывающим `</head>` вставить скрипт‑блок `<script type=\"application/ld+json\">` с `@type\":\"Review\"` и `\"aggregateRating\"` (5‑звёздный рейтинг, 30 отзывов, примерные данные — реальные по запросу владельца).",
+ "skill": "",
+ "effect": "Поисковые системы смогут показывать звёздный рейтинг в сниппете, повышая CTR и создавая социальное доказательство доверия.",
+ "risk": "Если указанные данные не соответствуют реальной статистике, может возникнуть конфликт с правилами Google (потенциальный штраф).",
+ "rollback": "Удалить только добавленный `<script type=\"application/ld+json\">…</script>` (git checkout -- index.html).",
+ "verify": "Открыть страницу в Chrome → DevTools → Console → `JSON.parse(document.querySelector('script[type=\"application/ld+json\"]').innerText)` — проверить корректность JSON; затем выполнить `fetch('https://search.google.com/structured-data/testing-tool')` (или использовать Rich Results Test) и убедиться, что схема валидна.",
+ "priority_claim": "1 — быстрый SEO‑буст и доверие без изменения UI.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<head>` перед закрывающим `</head>` вставить скрипт‑блок `<script type=\"application/ld+json\">` с `@type\":\"Review\"` и `\"aggregateRating\"` (5‑звёздный рейтинг, 30 отзывов, примерные данные — реальные по запросу владельца)."
+ ],
+ "flags": []
+}

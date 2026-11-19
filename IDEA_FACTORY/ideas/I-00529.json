@@ -1,0 +1,29 @@
+{
+ "id": "I-00529",
+ "round": 79,
+ "time": "2026-11-17 05:31:29",
+ "source": "lareper/glm-5.2-fast-preview",
+ "sources": [
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime",
+  "lareper/glm-5.2"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "Метод «путь к заявке за N кликов» — аудит конверсионных путей",
+ "knob": "METHOD: (1) Открыть index.html локально, включить DevTools → Console. (2) Выполнить скрипт-обёртку: временно подсвечивать каждый клик по ссылкам (addEventListener('click', e=>console.log('CLICK→', e.currentTarget.textContent.trim(), '→', e.currentTarget.getAttribute('href')))). (3) Пройти сценарии: «хочу демо», «хочу узнать цену», «сомневаюсь,",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: (1) Открыть index.html локально, включить DevTools → Console. (2) Выполнить скрипт-обёртку: временно подсвечивать каждый клик по ссылкам (addEventListener('click', e=>console.log('CLICK→', e.currentTarget.textContent.trim(), '→', e.currentTarget.getAttribute('href')))). (3) Пройти сценарии: «хочу демо», «хочу узнать цену», «сомневаюсь,"
+ ],
+ "flags": []
+}

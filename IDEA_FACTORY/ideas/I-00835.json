@@ -1,0 +1,26 @@
+{
+ "id": "I-00835",
+ "round": 126,
+ "time": "2026-11-17 07:48:27",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — ambient-hero-gradient-flow",
+ "knob": "**Name:** `ambient-hero-gradient-flow`\n**When to apply:** В секции hero, где нужен фон‑градиент, медленно «текущий» по оси X/Y, создающий ощущение премиального движения без JavaScript.\n**SAFE CSS:**\n```css\n/* ambient gradient animation */\n.hero-bg-ambient {\nposition: absolute;\ninset: 0;\nbackground: linear-gradient(135deg,\n#8b5cf6 0%,\n#34d399 35%,\n#22d3ee 70%,\n#8b5cf6 100%);\nbackground-size: 300% 300%;\nanimation: ambientFlow 20s ease infinite;\nz-index: -1;\n}\n@keyframes ambientFlow {\n0%   {background-position: 0% 50%;}\n50%  {background-position: 100% 50%;}\n100% {background-position: 0% 50%;}\n}\n```\n**SAFE JS:** *(не требуется)*",
+ "skill": "",
+ "effect": "Создаёт динамический, но ненавязчивый фон, усиливающий ощущение «дорогого» сайта и удерживает взгляд посетителя в верхней части страницы.",
+ "risk": "Поскольку анимация бесконечна, может увеличить расход батареи на мобильных устройствах; рекомендуется добавить `prefers-reduced-motion`‑медиа‑запрос.",
+ "rollback": "Удалить элемент `<div class=\"hero-bg-ambient\"></div>` и его CSS‑правила; откат через `git checkout`.",
+ "verify": "Открыть страницу, убедиться в плавном смещении градиента в hero; проверить в Chrome DevTools → Computed → animation‑name.",
+ "priority_claim": "3 – улучшает восприятие бренда, но менее критично для конверсии.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `ambient-hero-gradient-flow`\n**When to apply:** В секции hero, где нужен фон‑градиент, медленно «текущий» по оси X/Y, создающий ощущение премиального движения без JavaScript.\n**SAFE CSS:**\n```css\n/* ambient gradient animation */\n.hero-bg-ambient {\nposition: absolute;\ninset: 0;\nbackground: linear-gradient(135deg,\n#8b5cf6 0%,\n#34d399 35%,\n#22d3ee 70%,\n#8b5cf6 100%);\nbackground-size: 300% 300%;\nanimation: ambientFlow 20s ease infinite;\nz-index: -1;\n}\n@keyframes ambientFlow {\n0%   {background-position: 0% 50%;}\n50%  {background-position: 100% 50%;}\n100% {background-position: 0% 50%;}\n}\n```\n**SAFE JS:** *(не требуется)*"
+ ],
+ "flags": []
+}

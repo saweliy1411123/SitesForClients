@@ -1,0 +1,26 @@
+{
+ "id": "I-00999",
+ "round": 170,
+ "time": "2026-11-17 17:11:25",
+ "source": "localhost:8080/zhipu/glm-4.7-flash",
+ "sources": [
+  "localhost:8080/zhipu/glm-4.7-flash"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Foveated Vision Simulator",
+ "knob": "Console script to apply `filter: blur(5px)` to `body` and remove it from a central `div` tracking mouse position",
+ "skill": "",
+ "effect": "Visual check if critical info (CTA/H1) is in the \"sweet spot\" of vision without user testing",
+ "risk": "CSS filter can cause layout shift if not isolated properly",
+ "rollback": "`document.body.style.filter = ''`",
+ "verify": "Run script in console, move mouse, check if text is readable only in center",
+ "priority_claim": "2 (UX/Layout)",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Console script to apply `filter: blur(5px)` to `body` and remove it from a central `div` tracking mouse position"
+ ],
+ "flags": []
+}

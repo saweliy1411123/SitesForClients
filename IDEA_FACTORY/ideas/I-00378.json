@@ -1,0 +1,26 @@
+{
+ "id": "I-00378",
+ "round": 57,
+ "time": "2026-11-17 04:26:18",
+ "source": "lareper/glm-5.3-prime",
+ "sources": [
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Доказательство скорости — «этот сайт грузится за X мс» в hero",
+ "knob": "В `.hero-note` (L465) добавить строку: «Этот сайт — пример моей работы: <b id=\"load-time\">…</b> мс до первого рендера». В конец `<body>` добавить крошечный скрипт: `document.getElementById('load-time').textContent = Math.round(performance.now())`. Стиль — как существующий `.hero-note b` (синий акцент).",
+ "skill": "",
+ "effect": "Лендинг сам является портфолио — живая метрика превращает обещание «быстро грузится» (h3 в оффере) в проверяемый факт прямо в первом экране; усиливает доверие без фейковых цифр.",
+ "risk": "Значение зависит от сети клиента; при медленном соединении цифра может выглядеть неубедительно.",
+ "rollback": "`git checkout index.html`",
+ "verify": "Открыть страницу, убедиться что число появилось и обновляется при перезагрузке; Lighthouse Performance — метрика согласуется с показанной цифрой.",
+ "priority_claim": "2 — сильный уникальный trusted-сигнал, минимальный код.",
+ "source_hint": "",
+ "site_request": "hero-note",
+ "category": "lever",
+ "variants": [
+  "В `.hero-note` (L465) добавить строку: «Этот сайт — пример моей работы: <b id=\"load-time\">…</b> мс до первого рендера». В конец `<body>` добавить крошечный скрипт: `document.getElementById('load-time').textContent = Math.round(performance.now())`. Стиль — как существующий `.hero-note b` (синий акцент)."
+ ],
+ "flags": []
+}

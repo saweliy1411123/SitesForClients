@@ -1,0 +1,26 @@
+{
+ "id": "I-00809",
+ "round": 122,
+ "time": "2026-11-17 07:37:50",
+ "source": "localhost:8080/zhipu/glm-4.7-flash",
+ "sources": [
+  "localhost:8080/zhipu/glm-4.7-flash"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Scroll-Aware Step Highlighter",
+ "knob": "Replace static \"explicit result\" text ideas with a JS-driven progress bar above `.steps` (L565). Use `IntersectionObserver` to highlight the active step as the user scrolls.",
+ "skill": "",
+ "effect": "Visualizes progress, reduces cognitive load, guides attention to the current step without cluttering the UI.",
+ "risk": "Adds ~100 lines of JS, potential FOUC if not handled.",
+ "rollback": "Remove the `<div class=\"step-progress\">` and the JS script block.",
+ "verify": "Open DevTools, scroll through the \"Three steps\" section, check console for errors and visual highlighting.",
+ "priority_claim": "2 (UX improvement over static text additions).",
+ "source_hint": "",
+ "site_request": "steps",
+ "category": "lever",
+ "variants": [
+  "Replace static \"explicit result\" text ideas with a JS-driven progress bar above `.steps` (L565). Use `IntersectionObserver` to highlight the active step as the user scrolls."
+ ],
+ "flags": []
+}

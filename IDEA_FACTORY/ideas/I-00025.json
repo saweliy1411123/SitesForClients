@@ -1,0 +1,26 @@
+{
+ "id": "I-00025",
+ "round": 4,
+ "time": "2026-11-17 01:50:26",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить фиксированную панель‑CTA при прокрутке (sticky)",
+ "knob": "В конец `<body>` добавить `<div class=\"sticky-cta\" aria-live=\"polite\"><a href=\"https://t.me/your_username\" class=\"btn-primary\">Получить демо бесплатно</a></div>`; в CSS: `.sticky-cta{position:fixed;bottom:0;left:0;width:100%;background:#fff;box-shadow:0 -2px 8px rgba(0,0,0,0.1);display:flex;justify-content:center;padding:0.5rem;z-index:1000;}` и `@media (min-width:768px){.sticky-cta{display:none;}}`.",
+ "skill": "",
+ "effect": "Увеличит количество кликов по CTA на длинных страницах, особенно на мобильных устройствах.",
+ "risk": "Может восприниматься как навязчивая реклама; нужно обеспечить достаточный контраст и возможность закрыть (добавить кнопку закрытия).",
+ "rollback": "Удалить вставленный HTML и CSS (git checkout -- index.html).",
+ "verify": "Прокрутить страницу на мобильном эмуляторе, убедиться в появлении панели и её кликабельности; измерить CTR через быстрый локальный клик‑трекинг (консоль).",
+ "priority_claim": "3 — потенциальный рост конверсии, но требует UX‑тестов.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В конец `<body>` добавить `<div class=\"sticky-cta\" aria-live=\"polite\"><a href=\"https://t.me/your_username\" class=\"btn-primary\">Получить демо бесплатно</a></div>`; в CSS: `.sticky-cta{position:fixed;bottom:0;left:0;width:100%;background:#fff;box-shadow:0 -2px 8px rgba(0,0,0,0.1);display:flex;justify-content:center;padding:0.5rem;z-index:1000;}` и `@media (min-width:768px){.sticky-cta{display:none;}}`."
+ ],
+ "flags": []
+}

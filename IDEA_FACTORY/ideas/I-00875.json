@@ -1,0 +1,26 @@
+{
+ "id": "I-00875",
+ "round": 133,
+ "time": "2026-11-17 08:08:54",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Parallax blob background",
+ "knob": "SKILL — parallax-blob-layer\nName: parallax-blob-layer\nWhen to apply: В секции `.hero` (или любой full‑width секции) для создания глубины с лёгким движением при наведении/скролле.\nSAFE CSS:\n```css\n.hero {\nperspective: 800px;\noverflow: hidden;\n}\n.hero .blob-layer {\nposition: absolute;\ninset: 0;\npointer-events: none;\nbackground-repeat: no-repeat;\nbackground-size: cover;\nwill-change: transform;\n}\n.blob-layer--far  { background-image: url('data:image/svg+xml,…'); transform: translateZ(-30px) scale(1.2); }\n.blob-layer--mid  { background-image: url('data:image/svg+xml,…'); transform: translateZ(-15px) scale(1.1); }\n.blob-layer--near { background-image: url('data:image/svg+xml,…'); transform: translateZ(0); }\n```\nSAFE JS:\n```js\ndocument.addEventListener('mousemove',e=>{\nconst {innerWidth:w,innerHeight:h}=window;\nconst x=(e.clientX/w-0.5)*2;\nconst y=(e.clientY/h-0.5)*2;\ndocument.querySelectorAll('.blob-layer').forEach(el=>{\nconst depth=el.dataset.depth||0;\nel.style.transform=`translate3d(${x*depth*10}px,${y*depth*10}px,0)`;\n});\n});\n```",
+ "skill": "",
+ "effect": "Создаёт ощущение трёхмерного пространства, усиливает эмоциональное вовлечение и удержание внимания на первом экране.",
+ "risk": "При сильных движениях может возникнуть небольшая «дрожь» на слабом GPU; пользователи с отключённым JS не увидят анимацию.",
+ "rollback": "`git rm SKILLS/parallax-blob-layer.md && git checkout -- index.improved.html`",
+ "verify": "Открыть страницу, переместить курсор – фон‑слои должны плавно смещаться в разных направлениях; проверить отсутствие лагов в DevTools → Performance.",
+ "priority_claim": "2 – повышает визуальную привлекательность, но требует небольшого JS; стоит после базовых улучшений.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "SKILL — parallax-blob-layer\nName: parallax-blob-layer\nWhen to apply: В секции `.hero` (или любой full‑width секции) для создания глубины с лёгким движением при наведении/скролле.\nSAFE CSS:\n```css\n.hero {\nperspective: 800px;\noverflow: hidden;\n}\n.hero .blob-layer {\nposition: absolute;\ninset: 0;\npointer-events: none;\nbackground-repeat: no-repeat;\nbackground-size: cover;\nwill-change: transform;\n}\n.blob-layer--far  { background-image: url('data:image/svg+xml,…'); transform: translateZ(-30px) scale(1.2); }\n.blob-layer--mid  { background-image: url('data:image/svg+xml,…'); transform: translateZ(-15px) scale(1.1); }\n.blob-layer--near { background-image: url('data:image/svg+xml,…'); transform: translateZ(0); }\n```\nSAFE JS:\n```js\ndocument.addEventListener('mousemove',e=>{\nconst {innerWidth:w,innerHeight:h}=window;\nconst x=(e.clientX/w-0.5)*2;\nconst y=(e.clientY/h-0.5)*2;\ndocument.querySelectorAll('.blob-layer').forEach(el=>{\nconst depth=el.dataset.depth||0;\nel.style.transform=`translate3d(${x*depth*10}px,${y*depth*10}px,0)`;\n});\n});\n```"
+ ],
+ "flags": []
+}

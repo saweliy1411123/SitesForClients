@@ -1,0 +1,26 @@
+{
+ "id": "I-00524",
+ "round": 79,
+ "time": "2026-11-17 05:30:46",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "scroll-snap-auditor",
+ "knob": "METHOD: В консоли выполнить скрипт, который проверяет корректность реализации CSS-scroll-snap на странице.",
+ "skill": "",
+ "effect": "Позволяет быстро проверить корректность реализации CSS-scroll-snap на странице.",
+ "risk": "Нет рисков.",
+ "rollback": "Нет необходимости откатывать.",
+ "verify": "Проверить за 2–10 минут, открыв страницу и перейдя по ссылкам.",
+ "priority_claim": "2, так как это полезный инструмент для аудита страницы.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: В консоли выполнить скрипт, который проверяет корректность реализации CSS-scroll-snap на странице."
+ ],
+ "flags": []
+}

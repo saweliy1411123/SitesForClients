@@ -1,0 +1,26 @@
+{
+ "id": "I-00817",
+ "round": 123,
+ "time": "2026-11-17 07:40:25",
+ "source": "lareper/glm-5.3-prime",
+ "sources": [
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Временные метки на шагах — «День 1», «День 1–2», «День 2»",
+ "knob": "В секции «Три шага» (`.",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В секции «Три шага» (`."
+ ],
+ "flags": []
+}

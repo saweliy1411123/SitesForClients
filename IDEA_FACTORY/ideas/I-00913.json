@@ -1,0 +1,26 @@
+{
+ "id": "I-00913",
+ "round": 143,
+ "time": "2026-11-17 08:36:26",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Add rel=canonical tag — уникальная ссылка для поисковых систем",
+ "knob": "В <head> вставить `<link rel=\"canonical\" href=\"https://saveliy-perm.ru/\">` (заменить на реальный домен) сразу перед закрывающим `</head>`",
+ "skill": "",
+ "effect": "Убирает риск дублирования контента, усиливает сигнал основной версии страницы для Яндекса и Google → улучшение SEO‑видимости.",
+ "risk": "Неправильно указан URL может привести к перенаправлению индексации на чужой ресурс.",
+ "rollback": "Удалить добавленную строку (`git checkout index.html`)",
+ "verify": "Открыть страницу, посмотреть исходный код → наличие `<link rel=\"canonical\"...>`; проверить в Search Console, что canonical распознан.",
+ "priority_claim": "1 — высокий, быстрый выигрыш без риска.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В <head> вставить `<link rel=\"canonical\" href=\"https://saveliy-perm.ru/\">` (заменить на реальный домен) сразу перед закрывающим `</head>`"
+ ],
+ "flags": []
+}

@@ -1,0 +1,27 @@
+{
+ "id": "I-00772",
+ "round": 117,
+ "time": "2026-11-17 07:24:27",
+ "source": "lareper/glm-5.2-fast-preview",
+ "sources": [
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.2"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Видимый фокус-стиль для всех интерактивных элементов с сохранением дизайна",
+ "knob": "В `<style>` добавить `a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #8b5cf6;outline-offset:3px;border-radius:4px;}` и убедиться, что нет глобального `outline:none`",
+ "skill": "",
+ "effect": "Клавиатурные пользователи и скринридер-аудитория видят, где фокус — WCAG AA, плюс Lighthouse a11y",
+ "risk": "Почти нулевой; при мыши-клике outline не показ",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<style>` добавить `a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #8b5cf6;outline-offset:3px;border-radius:4px;}` и убедиться, что нет глобального `outline:none`"
+ ],
+ "flags": []
+}

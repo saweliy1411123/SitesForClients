@@ -1,0 +1,26 @@
+{
+ "id": "I-00374",
+ "round": 56,
+ "time": "2026-11-17 04:23:22",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — premium‑glass‑button (glassmorphism CTA)",
+ "knob": "METHOD: SKILL\n**Name:** `premium-glass-button`\n**When to apply:** Для всех CTA‑кнопок (`.btn-primary`, `.sticky-cta .btn-primary`) на темных или градиентных фонах, где нужен современный стеклянный вид.\n**SAFE CSS:**\n```css\n.glass-btn{\nposition:relative;\noverflow:hidden;\nborder:1px solid rgba(255,255,255,.2);\nbackground:rgba(255,255,255,.1);\nbackdrop-filter:blur(8px);\ncolor:var(--primary);\npadding:.75rem 1.5rem;\nborder-radius:12px;\ntransition:background .3s,transform .2s;\n}\n.glass-btn::after{\ncontent:\"\";\nposition:absolute;\ninset:0;\nbackground:linear-gradient(45deg,rgba(255,255,255,.15),transparent);\nopacity:0;\ntransition:opacity .3s;\n}\n.glass-btn:hover{\nbackground:rgba(255,255,255,.2);\ntransform:translateY(-2px);\n}\n.glass-btn:hover::after{\nopacity:1;\n}\n```\n**SAFE JS:** *(не требуется)*",
+ "skill": "",
+ "effect": "Придаёт CTA‑кнопкам премиальный «стеклянный» вид, усиливает визуальный клик‑эффект, повышает конверсию за счёт более заметного CTA.",
+ "risk": "На старых браузерах без поддержки `backdrop-filter` эффект будет отсутствовать; кнопка всё равно останется читаемой.",
+ "rollback": "`git checkout index.html` (удалить класс и стили).",
+ "verify": "Добавить класс `glass-btn` к любой существующей кнопке, открыть страницу, убедиться в появлении полупрозрачного фонового блёра и плавного hover‑эффекта.",
+ "priority_claim": "2 – визуальное улучшение с низким риском, быстро проверяется.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "METHOD: SKILL\n**Name:** `premium-glass-button`\n**When to apply:** Для всех CTA‑кнопок (`.btn-primary`, `.sticky-cta .btn-primary`) на темных или градиентных фонах, где нужен современный стеклянный вид.\n**SAFE CSS:**\n```css\n.glass-btn{\nposition:relative;\noverflow:hidden;\nborder:1px solid rgba(255,255,255,.2);\nbackground:rgba(255,255,255,.1);\nbackdrop-filter:blur(8px);\ncolor:var(--primary);\npadding:.75rem 1.5rem;\nborder-radius:12px;\ntransition:background .3s,transform .2s;\n}\n.glass-btn::after{\ncontent:\"\";\nposition:absolute;\ninset:0;\nbackground:linear-gradient(45deg,rgba(255,255,255,.15),transparent);\nopacity:0;\ntransition:opacity .3s;\n}\n.glass-btn:hover{\nbackground:rgba(255,255,255,.2);\ntransform:translateY(-2px);\n}\n.glass-btn:hover::after{\nopacity:1;\n}\n```\n**SAFE JS:** *(не требуется)*"
+ ],
+ "flags": []
+}

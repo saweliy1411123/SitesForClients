@@ -1,0 +1,26 @@
+{
+ "id": "I-00938",
+ "round": 151,
+ "time": "2026-11-17 08:58:59",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Gradient‑text shimmer на заголовке hero",
+ "knob": "В CSS добавить анимацию и стили для `.hero h1`:\n```css\n.hero h1 {\nbackground: linear-gradient(90deg,var(--grad) 0%,#fff 50%,var(--grad) 100%);\nbackground-size:200%;\n-webkit-background-clip:text;\ncolor:transparent;\nanimation:shimmer 3s infinite;\n}\n@keyframes shimmer{to{background-position:-200% 0;}}\n```",
+ "skill": "",
+ "effect": "Привлекает внимание к основному офферу, повышая CTR на CTA.",
+ "risk": "Увеличивает объём CSS ≈ 200 Б, на старых браузерах эффект просто не отобразится.",
+ "rollback": "Удалить добавленные правила; `git checkout index.html`.",
+ "verify": "Открыть страницу, убед",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В CSS добавить анимацию и стили для `.hero h1`:\n```css\n.hero h1 {\nbackground: linear-gradient(90deg,var(--grad) 0%,#fff 50%,var(--grad) 100%);\nbackground-size:200%;\n-webkit-background-clip:text;\ncolor:transparent;\nanimation:shimmer 3s infinite;\n}\n@keyframes shimmer{to{background-position:-200% 0;}}\n```"
+ ],
+ "flags": []
+}

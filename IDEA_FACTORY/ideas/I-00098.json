@@ -1,0 +1,26 @@
+{
+ "id": "I-00098",
+ "round": 14,
+ "time": "2026-11-17 02:21:35",
+ "source": "localhost:8080/zhipu/glm-4.7-flash",
+ "sources": [
+  "localhost:8080/zhipu/glm-4.7-flash"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "CSS smooth scroll",
+ "knob": "Add `scroll-behavior: smooth` to `html` selector in `<style>`",
+ "skill": "",
+ "effect": "Плавная прокрутка к якорным ссылкам (CTA, FAQ), улучшает UX при навигации",
+ "risk": "Нет",
+ "rollback": "Удалить строку `scroll",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Add `scroll-behavior: smooth` to `html` selector in `<style>`"
+ ],
+ "flags": []
+}

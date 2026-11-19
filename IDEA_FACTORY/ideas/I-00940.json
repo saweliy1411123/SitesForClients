@@ -1,0 +1,28 @@
+{
+ "id": "I-00940",
+ "round": 153,
+ "time": "2026-11-17 09:04:23",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b",
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "SKILL — gradient-underline-hover",
+ "knob": "**Name:** `gradient-underline-hover`\n**When to apply:** На любой лендинге, где ссылки‑CTA оформлены без рамок и требуется визуально выделить интерактивность без изменения HTML‑структуры.\n**Steps:**\n1. Добавить в глобальный CSS правило для селектора `.btn-primary, a.cta-link`.\n2. Использовать псевдо‑элемент `::after` для градиентной линии, которая появляется при `:hover` и `:focus-visible`.\n**SAFE CSS:**\n```css\n/* Базовый стиль для интерактивных ссылок */\na.cta-link,\n.btn-primary {\nposition: relative;\ncolor: inherit;\ntext-decoration: none;\n}\n/* Градиентный подчёркнутый эффект */\na.cta-link::after,\n.btn-primary::after {\ncontent: \"\";\nposition: absolute;\nleft: 0;\nbottom: -2px;\nheight: 3px;\nwidth: 0;\nbackground: linear-gradient(90deg, #8b5cf6, #4ec9f0);\ntransition: width .3s ease;\n}\n/* При наведении/фокусе анимация */\na.cta-link:hover::after,\na.cta-link:focus-visible::after,\n.btn-primary:hover::after,\n.btn-primary:focus-visible::after {\nwidth: 100%;\n}\n/* Увеличенный таргет для доступности */\n@media (pointer: coarse) {\na.cta-link,\n.btn-primary {\nmin-height: 44px;\nmin-width: 44px;\ndisplay: inline-flex;\nalign-items: center;\njustify-content: center;\n}\n}\n```",
+ "skill": "",
+ "effect": "Интерактивные ссылки получают заметный, но лёгкий визуальный отклик → рост кликабельности и лучшая восприятие бренда.",
+ "risk": "Если уже есть `::after`‑стили для тех же селекторов, может произойти конфликт; требуется проверка специфичности.",
+ "rollback": "Удалить добавленный CSS‑блок (или откатить `git checkout index.html`).",
+ "verify": "Открыть страницу, наведите курсор на любую кнопку/ссылку с классом `.cta-link` или `.btn-primary` – должна появиться плавно растущая градиентная линия; проверить, что она видна и не перекрывает текст.",
+ "priority_claim": "3 – небольшое улучшение UX без влияния на бизнес‑метрики, но легко реализуемое.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `gradient-underline-hover`\n**When to apply:** На любой лендинге, где ссылки‑CTA оформлены без рамок и требуется визуально выделить интерактивность без изменения HTML‑структуры.\n**Steps:**\n1. Добавить в глобальный CSS правило для селектора `.btn-primary, a.cta-link`.\n2. Использовать псевдо‑элемент `::after` для градиентной линии, которая появляется при `:hover` и `:focus-visible`.\n**SAFE CSS:**\n```css\n/* Базовый стиль для интерактивных ссылок */\na.cta-link,\n.btn-primary {\nposition: relative;\ncolor: inherit;\ntext-decoration: none;\n}\n/* Градиентный подчёркнутый эффект */\na.cta-link::after,\n.btn-primary::after {\ncontent: \"\";\nposition: absolute;\nleft: 0;\nbottom: -2px;\nheight: 3px;\nwidth: 0;\nbackground: linear-gradient(90deg, #8b5cf6, #4ec9f0);\ntransition: width .3s ease;\n}\n/* При наведении/фокусе анимация */\na.cta-link:hover::after,\na.cta-link:focus-visible::after,\n.btn-primary:hover::after,\n.btn-primary:focus-visible::after {\nwidth: 100%;\n}\n/* Увеличенный таргет для доступности */\n@media (pointer: coarse) {\na.cta-link,\n.btn-primary {\nmin-height: 44px;\nmin-width: 44px;\ndisplay: inline-flex;\nalign-items: center;\njustify-content: center;\n}\n}\n```",
+  "\n**Name:** gradient-underline-hover\n**When to apply:** На любой лендинг, где ссылки‑CTA оформлены как кнопки\n**SAFE CSS:**\n```css\n.btn-primary:hover {\nbackground: linear-gradient(90deg, #8b5cf6, #6b46c1);\nbackground-size: 100% 3px;\nbackground-position: 0% 100%;\nbackground-repeat: no-repeat;\ntext-decoration: none;\n}\n```\n**SAFE JS:** (не требуется)"
+ ],
+ "flags": []
+}

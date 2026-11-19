@@ -1,0 +1,26 @@
+{
+ "id": "I-00739",
+ "round": 114,
+ "time": "2026-11-17 07:14:39",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "CTA‑Visibility Timing (время до первой видимости CTA)",
+ "knob": "METHOD: В консоли выполнить скрипт, который использует `IntersectionObserver` для элемента `.btn-primary` (первый CTA) и выводит в консоль `performance.now()`‑метку, когда CTA впервые попадает в область видимости.\n```js\n(() => {\nconst cta = document.querySelector('.btn-primary');\nif (!cta) return console.warn('CTA not found');\nconst observer = new IntersectionObserver(entries => {\nentries.forEach(e => {\nif (e.isIntersecting) {\nconsole.log('CTA first visible at', Math.round(performance.now()), 'ms');\nobserver.disconnect();\n}\n});\n});\nobserver.observe(cta);\n})();\n```",
+ "skill": "",
+ "effect": "Даёт количественную метрику «время до первой возможности конверсии», позволяя оценить, насколько быстро пользователь может кликнуть CTA после загрузки (важно для мобильных устройств и длинных hero‑секций).",
+ "risk": "Не влияет на реальных пользователей; измерение только в текущей сессии.",
+ "rollback": "Перезагрузить страницу — наблюдатель исчезнет.",
+ "verify": "Открыть страницу в обычном режиме, открыть консоль, вставить скрипт, наблюдать вывод (например, `CTA first visible at 1243 ms`). Сравнить с изменённым вариантом (например, уменьшив высоту hero).",
+ "priority_claim": "2 – помогает быстро понять, нужна ли оптимизация первого экрана или перемещение CTA выше, что критично для конверсии.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: В консоли выполнить скрипт, который использует `IntersectionObserver` для элемента `.btn-primary` (первый CTA) и выводит в консоль `performance.now()`‑метку, когда CTA впервые попадает в область видимости.\n```js\n(() => {\nconst cta = document.querySelector('.btn-primary');\nif (!cta) return console.warn('CTA not found');\nconst observer = new IntersectionObserver(entries => {\nentries.forEach(e => {\nif (e.isIntersecting) {\nconsole.log('CTA first visible at', Math.round(performance.now()), 'ms');\nobserver.disconnect();\n}\n});\n});\nobserver.observe(cta);\n})();\n```"
+ ],
+ "flags": []
+}

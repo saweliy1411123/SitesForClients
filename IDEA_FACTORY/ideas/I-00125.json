@@ -1,0 +1,32 @@
+{
+ "id": "I-00125",
+ "round": 19,
+ "time": "2026-11-17 02:35:37",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b",
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Добавить мета‑тег robots «index, follow»",
+ "knob": "В `<head>` после существующих `<meta>` вставить `<meta name=\"robots\" content=\"index, follow\">`",
+ "skill": "",
+ "effect": "Убедится, что поисковые роботы индексируют страницу и учитывают ссылки, повышая шанс появления в результатах поиска.",
+ "risk": "Минимальный – может конфликтовать с будущей политикой noindex, если владелец изменит стратегию.",
+ "rollback": "`git checkout HEAD -- index.html` (или удалить строку вручную)",
+ "verify": "Открыть страницу в браузере → «View source» → убедиться, что тег присутствует; запустить Lighthouse → SEO‑раздел, проверка «Meta robots tag».",
+ "priority_claim": "1 – базовый SEO‑фактор, прост в реализации, быстрый выигрыш.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<head>` после существующих `<meta>` вставить `<meta name=\"robots\" content=\"index, follow\">`",
+  "В `<head>` после остальных `<meta>` вставить `<meta name=\"robots\" content=\"index, follow\">`",
+  "добавить в `<head>` строку\n```html\n<meta name=\"robots\" content=\"index, follow\">\n```",
+  "В `<head>` добавить сразу после `<meta name=\"theme-color\"...>` строку\n```html\n<meta name=\"robots\" content=\"index, follow\">\n```",
+  "В `<head>` после остальных `<meta>` добавить `<meta name=\"robots\" content=\"index, follow\">`",
+  "В `<head>` добавить строку\n```html\n<meta name=\"robots\" content=\"index, follow\">\n```"
+ ],
+ "flags": []
+}

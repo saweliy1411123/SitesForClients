@@ -1,0 +1,28 @@
+{
+ "id": "I-00074",
+ "round": 11,
+ "time": "2026-11-17 02:13:16",
+ "source": "localhost:8080/zhipu/glm-4.7-flash",
+ "sources": [
+  "localhost:8080/zhipu/glm-4.7-flash",
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "SKILL — Magnetic Button Effect",
+ "knob": "Add reusable skill \"Magnetic Button\" to `index.html` CSS and small JS\nSAFE CSS:\n.btn-magnetic {\ndisplay: inline-flex;\nalign-items: center;\njustify-content: center;\npadding: 1rem 2.5rem;\nborder-radius: 50px;\ntext-decoration: none;\nposition: relative;\noverflow: hidden;\ntransition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s;\nbox-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);\nbackground: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);\ncolor: white;\nfont-weight: 600;\n}\n.btn-magnetic::after {\ncontent: '';\nposition: absolute;\ninset: 0;\nbackground: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);\nopacity: 0;\ntransition: opacity 0.2s;\n}\n.btn-magnetic:hover {\ntransform: scale(1.05);\nbox-shadow: 0 8px 25px rgba(139, 92, 246, 0.4",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "Add reusable skill \"Magnetic Button\" to `index.html` CSS and small JS\nSAFE CSS:\n.btn-magnetic {\ndisplay: inline-flex;\nalign-items: center;\njustify-content: center;\npadding: 1rem 2.5rem;\nborder-radius: 50px;\ntext-decoration: none;\nposition: relative;\noverflow: hidden;\ntransition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s;\nbox-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);\nbackground: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);\ncolor: white;\nfont-weight: 600;\n}\n.btn-magnetic::after {\ncontent: '';\nposition: absolute;\ninset: 0;\nbackground: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);\nopacity: 0;\ntransition: opacity 0.2s;\n}\n.btn-magnetic:hover {\ntransform: scale(1.05);\nbox-shadow: 0 8px 25px rgba(139, 92, 246, 0.4",
+  "METHOD: Добавить в index.html CSS и небольшой JS для создания магнитного эффекта кнопки.\nSAFE CSS:\n```css\n.btn-magnetic {\ndisplay: inline-block;\npadding: 10px 20px;\nborder: none;\nborder-radius: 5px;\nbackground: linear-gradient(to right, #8b5cf6, #6a64f6);\ncolor: #fff;\ncursor: pointer;\ntransition: transform 0.2s;\n}\n.btn-magnetic:hover {\ntransform: scale(1.1);\n}\n.btn-magnetic:active {\ntransform: scale(0.9);\n}\n```\nSAFE JS:\n```javascript\n// Add event listener to buttons with class btn-magnetic\ndocument.addEventListener(\"DOMContentLoaded\", function() {\nconst buttons = document.querySelectorAll(\".btn-magnetic\");\nbuttons.forEach(button => {\nbutton.addEventListener(\"mouseover\", function() {\nbutton.classList.add(\"hover\");\n});\nbutton.addEventListener(\"mouseout\", function() {\nbutton.classList.remove(\"hover\");\n});\n});\n});\n```"
+ ],
+ "flags": []
+}

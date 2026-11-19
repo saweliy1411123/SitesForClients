@@ -1,0 +1,33 @@
+{
+ "id": "I-00043",
+ "round": 5,
+ "time": "2026-11-17 01:53:40",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b",
+  "lareper/glm-5.3-prime",
+  "localhost:8081/big_only"
+ ],
+ "mentions": 3,
+ "status": "NEW",
+ "title": "Добавить `font-display: swap` и предзагрузку шрифтов Google Fonts",
+ "knob": "в `<head>` после существующего `<link href=\"https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">` добавить `<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>` и изменить запрос шрифтов на `&display=swap` (если отсутствует) + добавить `<link rel=\"preload\" as=\"style\" href=\"https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap\" onload=\"this.rel='stylesheet'\">`.",
+ "skill": "",
+ "effect": "Уменьшает время до первого отображения текста, устраняет «flash of invisible text», улучшает LCP в Lighthouse.",
+ "risk": "Возможны дублирование запросов, если оба `<link rel=\"stylesheet\">` и `preload` остаются; убедиться, что оригинальный `<link>` имеет `rel=\"preload\"` с `onload` и `rel=\"stylesheet\"` заменяется.",
+ "rollback": "Удалить добавленные строки и вернуть оригинальный `<link>` (`git checkout -- index.html`).",
+ "verify": "В Chrome DevTools → Network посмотреть, что шрифт загружается с `font-display: swap`; запустить Lighthouse → Performance, сравнить LCP до/после.",
+ "priority_claim": "2 – небольшое изменение, заметно ускорит рендеринг текста.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "в `<head>` после существующего `<link href=\"https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">` добавить `<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>` и изменить запрос шрифтов на `&display=swap` (если отсутствует) + добавить `<link rel=\"preload\" as=\"style\" href=\"https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap\" onload=\"this.rel='stylesheet'\">`.",
+  "** В <head> добавить:\n```html\n<link rel=\"preload\" as=\"style\" href=\"style.css\" onload=\"this.rel='stylesheet'\">\n<noscript><link rel=\"stylesheet\" href=\"style.css\"></noscript>\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\" crossorigin>\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n<link href=\"https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n```\nВ CSS‑файле для `@font-face` указать `font-display: swap;`.",
+  "В `<head>` добавить сразу после существующего `<link href=\"https://fonts.googleapis.com/css2?family=Manrope…\">` две строки:\n```html\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n<link rel=\"preload\" as=\"style\" href=\"https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap\" onload=\"this.rel='stylesheet'\">\n```",
+  "В `<head>` добавить `<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>`; заменить текущий `<link href=\"https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap\">` на:\n```html\n<link rel=\"preload\" href=\"https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap\" as=\"style\" onload=\"this.rel='stylesheet'\">\n<noscript><link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap\"></noscript>\n```",
+  "В `<head>` заменить блокирующий `<link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Manrope...\">` на пару: `<link rel=\"preload\" as=\"style\" href=\"...\">` + `<link rel=\"stylesheet\" href=\"...\" media=\"print\" onload=\"this.media='all'\">` + `<noscript><link rel=\"stylesheet\" href=\"...\"></noscript>`. Preconnect к fonts.googleapis.com/fonts.gstatic.com уже есть — не трогать.",
+  "Изменить URL импорта шрифтов в `<link href=\"https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap\">` → добавить параметр `&display=swap` (если отсутствует) или изменить существующий на `swap`."
+ ],
+ "flags": []
+}

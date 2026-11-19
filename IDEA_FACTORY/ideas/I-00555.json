@@ -1,0 +1,29 @@
+{
+ "id": "I-00555",
+ "round": 82,
+ "time": "2026-11-17 05:40:33",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only",
+  "localhost:8081/agent",
+  "localhost:8081/auto",
+  "localhost:8081/fast"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "Семантический `<address>` для контактных данных в футере",
+ "knob": "В футере (после L736) обернуть контакты «Савелий · Пермь · Telegram/VK» в `<address>` с `aria-label=\"Контакты\"`",
+ "skill": "",
+ "effect": "Скринридеры корректно озвучивают контактную информацию; улучшает семантику и доступность",
+ "risk": "Минимальный — только семантическая обёртка",
+ "rollback": "Заменить `<address>` на `<div>`",
+ "verify": "Проверить в Accessibility-дереве Chrome, что контакты читаются как единый блок",
+ "priority_claim": "3",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В футере (после L736) обернуть контакты «Савелий · Пермь · Telegram/VK» в `<address>` с `aria-label=\"Контакты\"`"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00777",
+ "round": 119,
+ "time": "2026-11-17 07:29:22",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Hero headline gradient animation",
+ "knob": "Добавить к `<h1 class=\"reveal\">` CSS‑правило `background: linear-gradient(90deg, #8b5cf6, #34d399, #8b5cf6); -webkit-background-clip: text; color: transparent; animation: hueShift 8s infinite linear;` и `@keyframes hueShift { from {background-position: 0% 0%;} to {background-position: 100% 0%;} }`",
+ "skill": "",
+ "effect": "Привлекает внимание к главному офферу, повышает восприятие премиальности и потенциально увеличивает CTR первой CTA.",
+ "risk": "Возможен небольшой рост CLS из‑за изменения размеров текста при загрузке шрифта.",
+ "rollback": "`git checkout -- index.html` (или откатить изменения в `index.improved.html`).",
+ "verify": "Открыть страницу в Chrome, включить DevTools → Elements, убедиться, что `<h1>` имеет `background-clip: text` и анимацию работает без мерцания; измерить CLS через Lighthouse (должен оставаться ≤ 0.1).",
+ "priority_claim": "1 — визуальный «wow‑factor» на первом экране, быстрый ROI.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Добавить к `<h1 class=\"reveal\">` CSS‑правило `background: linear-gradient(90deg, #8b5cf6, #34d399, #8b5cf6); -webkit-background-clip: text; color: transparent; animation: hueShift 8s infinite linear;` и `@keyframes hueShift { from {background-position: 0% 0%;} to {background-position: 100% 0%;} }`"
+ ],
+ "flags": []
+}

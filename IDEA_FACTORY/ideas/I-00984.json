@@ -1,0 +1,26 @@
+{
+ "id": "I-00984",
+ "round": 165,
+ "time": "2026-11-17 09:37:50",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Демо‑блок — ленивая загрузка видеопревью с модальным воспроизведением",
+ "knob": "В секции между «Три шага» и «Цена» (см. SITE_REQUEST «demo») заменить текущий статичный блок на `<div class=\"demo-preview\" role=\"button\" tabindex=\"0\" aria-label=\"Просмотр демо‑видео\"><img src=\"data:image/svg+xml,…\" alt=\"Превью демо\" class=\"demo-thumb\"><div class=\"play-icon\"></div></div>` и добавить небольшой JS‑модуль, который при клике (или клавише Enter) открывает `<dialog class=\"demo-modal\"><video src=\"demo.mp4\" controls autoplay></video></dialog>`.",
+ "skill": "",
+ "effect": "Сокращает начальный вес страницы (только превью‑изображение), повышает вовлечённость через видео‑демо без автозапуска.",
+ "risk": "Требует размещения видеофайла; если сервер медленный, загрузка видео может быть длительной, но это в модальном окне.",
+ "rollback": "Удалить добавленные элементы и скрипт; `git checkout -- index.html`.",
+ "verify": "Открыть страницу, убедиться, что превью‑картинка видна, при клике открывается модальное окно с работающим видео; проверить, что при закрытии окно исчезает и фокус возвращается к превью.",
+ "priority_claim": "2 – повышает доверие через демонстрацию продукта.",
+ "source_hint": "",
+ "site_request": "demo",
+ "category": "lever",
+ "variants": [
+  "В секции между «Три шага» и «Цена» (см. SITE_REQUEST «demo») заменить текущий статичный блок на `<div class=\"demo-preview\" role=\"button\" tabindex=\"0\" aria-label=\"Просмотр демо‑видео\"><img src=\"data:image/svg+xml,…\" alt=\"Превью демо\" class=\"demo-thumb\"><div class=\"play-icon\"></div></div>` и добавить небольшой JS‑модуль, который при клике (или клавише Enter) открывает `<dialog class=\"demo-modal\"><video src=\"demo.mp4\" controls autoplay></video></dialog>`."
+ ],
+ "flags": []
+}

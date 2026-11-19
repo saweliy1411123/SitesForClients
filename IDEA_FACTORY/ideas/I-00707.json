@@ -1,0 +1,26 @@
+{
+ "id": "I-00707",
+ "round": 109,
+ "time": "2026-11-17 07:00:58",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Переключатель «мес/год» в блоке цены",
+ "knob": "Внутри `.price-card` добавить переключатель:\n```html\n<label class=\"price-toggle\">\n<input type=\"radio\" name=\"priceMode\" value=\"monthly\" checked> мес.\n<input type=\"radio\" name=\"priceMode\" value=\"yearly\"> год.\n</label>\n<span class=\"price-value\">12 000 ₽</span>\n```\nи небольшую JS‑логика (SAFE JS):\n```js\ndocument.querySelectorAll('.price-toggle input').forEach(i=>{\ni.addEventListener('change',e=>{\nconst price = e.target.value==='monthly'?'12 000 ₽':'120 000 ₽';\ndocument.querySelector('.price-value').textContent = price;\n});\n});\n```",
+ "skill": "",
+ "effect": "Позволяет пользователю увидеть более выгодный годовой тариф, повышает восприятие",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Внутри `.price-card` добавить переключатель:\n```html\n<label class=\"price-toggle\">\n<input type=\"radio\" name=\"priceMode\" value=\"monthly\" checked> мес.\n<input type=\"radio\" name=\"priceMode\" value=\"yearly\"> год.\n</label>\n<span class=\"price-value\">12 000 ₽</span>\n```\nи небольшую JS‑логика (SAFE JS):\n```js\ndocument.querySelectorAll('.price-toggle input').forEach(i=>{\ni.addEventListener('change',e=>{\nconst price = e.target.value==='monthly'?'12 000 ₽':'120 000 ₽';\ndocument.querySelector('.price-value').textContent = price;\n});\n});\n```"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00475",
+ "round": 71,
+ "time": "2026-11-17 05:07:32",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Кнопка «Позвонить сейчас» — tel: CTA для мгновенного контакта",
+ "knob": "В блок `.cta-row` (L462‑L470) добавить рядом с существующей ссылкой кнопку: `<a class=\"btn-primary btn-call\" href=\"tel:+7XXXXXXXXXX\" aria-label=\"Позвонить Савелию сейчас\">📞 Позвонить</a>`; в CSS добавить `.btn-call{margin-left:8px; background:var(--blue);}` и обеспечить контраст (color #fff).",
+ "skill": "",
+ "effect": "Упрощает путь к звонку, особенно на мобильных, повышает конверсию лидов.",
+ "risk": "Требует актуального телефонного номера от владельца; возможна потеря кликов, если номер неверный.",
+ "rollback": "Удалить добавленную кнопку и связанные стили (`git checkout -- index.html`).",
+ "verify": "На мобильном устройстве кликнуть кнопку – должна открыться звонилка; проверить, что стили совпадают с другими CTA.",
+ "priority_claim": "2 — быстрый прирост конверсии без изменения контента.",
+ "source_hint": "",
+ "site_request": "cta-row",
+ "category": "lever",
+ "variants": [
+  "В блок `.cta-row` (L462‑L470) добавить рядом с существующей ссылкой кнопку: `<a class=\"btn-primary btn-call\" href=\"tel:+7XXXXXXXXXX\" aria-label=\"Позвонить Савелию сейчас\">📞 Позвонить</a>`; в CSS добавить `.btn-call{margin-left:8px; background:var(--blue);}` и обеспечить контраст (color #fff)."
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00293",
+ "round": 44,
+ "time": "2026-11-17 03:46:53",
+ "source": "localhost:8080/zhipu/glm-4.7-flash",
+ "sources": [
+  "localhost:8080/zhipu/glm-4.7-flash"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Метод «Mobile Viewport Stress Test» (проверка первого экрана на мобильных)",
+ "knob": "METHOD: В Chrome DevTools включить Device Toolbar (F12 -> Ctrl+Shift+M), выбрать ширину 360px. Измерить высоту `hero` (L449) и `wrap` (L455). Если `hero.offsetHeight > window.innerHeight * 1.5`, значит оффер не виден сразу.",
+ "skill": "",
+ "effect": "Выявляет риск, что на мобильных устройствах пользователю нужно скроллить мимо главного предложения, снижая конверсию.",
+ "risk": "Низкий.",
+ "rollback": "Отмена Device Toolbar (Ctrl+Shift+M).",
+ "verify": "3 минуты.",
+ "priority_claim": "2 (Конверсия)",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: В Chrome DevTools включить Device Toolbar (F12 -> Ctrl+Shift+M), выбрать ширину 360px. Измерить высоту `hero` (L449) и `wrap` (L455). Если `hero.offsetHeight > window.innerHeight * 1.5`, значит оффер не виден сразу."
+ ],
+ "flags": []
+}

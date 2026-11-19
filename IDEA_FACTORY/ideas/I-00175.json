@@ -1,0 +1,26 @@
+{
+ "id": "I-00175",
+ "round": 26,
+ "time": "2026-11-17 02:56:13",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "JSON‑LD HowTo schema для «Трёх шагов»",
+ "knob": "В конец `<body>` добавить скрипт:\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"HowTo\",\n\"name\":\"Как получить лендинг за 2 дня\",\n\"step\":[\n{\"@type\":\"HowToStep\",\"url\":\"#step1\",\"name\":\"Идея и ТЗ\",\"text\":\"Вы присылаете идею и требования\"},\n{\"@type\":\"HowToStep\",\"url\":\"#step2\",\"name\":\"Создание демо\",\"text\":\"Мы делаем демо‑макет\"},\n{\"@type\":\"HowToStep\",\"url\":\"#step3\",\"name\":\"Запуск и правки\",\"text\":\"Публикуем и вносим правки\"}\n]\n}\n</script>\n```",
+ "skill": "",
+ "effect": "Расширенные сниппеты «Как сделать…» могут появиться в поиске, повышая видимость и привлечение трафика из органических результатов",
+ "risk": "Нужно поддерживать актуальность шагов; если контент изменится – требуется обновление, но это простая правка",
+ "rollback": "Удалить скрипт (git checkout -- index.html)",
+ "verify": "В Rich Results Test проверить наличие HowTo‑разметки без ошибок; при наличии – ожидается возможность появления в поиске",
+ "priority_claim": "3 – SEO‑улучшение, но без гарантии мгновенного эффекта",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В конец `<body>` добавить скрипт:\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"HowTo\",\n\"name\":\"Как получить лендинг за 2 дня\",\n\"step\":[\n{\"@type\":\"HowToStep\",\"url\":\"#step1\",\"name\":\"Идея и ТЗ\",\"text\":\"Вы присылаете идею и требования\"},\n{\"@type\":\"HowToStep\",\"url\":\"#step2\",\"name\":\"Создание демо\",\"text\":\"Мы делаем демо‑макет\"},\n{\"@type\":\"HowToStep\",\"url\":\"#step3\",\"name\":\"Запуск и правки\",\"text\":\"Публикуем и вносим правки\"}\n]\n}\n</script>\n```"
+ ],
+ "flags": []
+}

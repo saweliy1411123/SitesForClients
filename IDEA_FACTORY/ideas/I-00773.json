@@ -1,0 +1,26 @@
+{
+ "id": "I-00773",
+ "round": 117,
+ "time": "2026-11-17 07:24:51",
+ "source": "lareper/glm-5.3-prime",
+ "sources": [
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Скрытая на мобильных навигация — чипсы-якоря с overflow-x (новое значение: семантика + a11y вместо только стиля)",
+ "knob": "В `@media(max-width:720px)` (L90) заменить `.nav-links{display:none}` на: `.nav-links{display:flex;overflow-x:auto;-webkit-overflow-scrolling:touch;gap:12px;padding:8px 16px;position:fixed;top:0;left:0;right:0;background:var(--bg);z-index:50}` + `.nav-links a{white-space:nowrap;padding:8px 14px;border:1px solid rgba(255,255,255,.12);border-radius:99px;min-height:44px;display:flex;align-items:center}`. HTML не менять — ссылки уже в DOM (L438), просто станут видимыми и доступными с клавиатуры на мобильных.",
+ "skill": "",
+ "effect": "на телефонах (основной трафик локального бизнеса) появляется навигация к цене/FAQ",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `@media(max-width:720px)` (L90) заменить `.nav-links{display:none}` на: `.nav-links{display:flex;overflow-x:auto;-webkit-overflow-scrolling:touch;gap:12px;padding:8px 16px;position:fixed;top:0;left:0;right:0;background:var(--bg);z-index:50}` + `.nav-links a{white-space:nowrap;padding:8px 14px;border:1px solid rgba(255,255,255,.12);border-radius:99px;min-height:44px;display:flex;align-items:center}`. HTML не менять — ссылки уже в DOM (L438), просто станут видимыми и доступными с клавиатуры на мобильных."
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00194",
+ "round": 30,
+ "time": "2026-11-17 03:06:40",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Quick Lighthouse snapshot with custom SEO/Performance focus",
+ "knob": "METHOD: In Chrome DevTools, open the “Lighthouse” panel, select only the **Performance** and **SEO** categories, set the device to “Mobile”, and click **Generate report**. Record the scores and note any “Opportunities” (e.g., render‑blocking CSS, un‑compressed images).",
+ "skill": "",
+ "effect": "Provides an objective, quantifiable baseline for page speed and SEO health within 2‑3 minutes, highlighting low‑hanging‑fruit (e.g., lazy‑load, preload) that can be prioritized.",
+ "risk": "None – the test is read‑only and does not modify the site.",
+ "rollback": "N/A (no changes made).",
+ "verify": "Confirm that the Lighthouse UI shows the generated report; copy the key metrics (FCP, LCP, CLS, SEO score) to a temporary note for later comparison.",
+ "priority_claim": "2 – speed and SEO directly affect organic traffic and user experience; a quick audit guides subsequent optimization work",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: In Chrome DevTools, open the “Lighthouse” panel, select only the **Performance** and **SEO** categories, set the device to “Mobile”, and click **Generate report**. Record the scores and note any “Opportunities” (e.g., render‑blocking CSS, un‑compressed images)."
+ ],
+ "flags": []
+}

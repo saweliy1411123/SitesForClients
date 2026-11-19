@@ -1,0 +1,31 @@
+{
+ "id": "I-00055",
+ "round": 8,
+ "time": "2026-11-17 02:03:40",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b",
+  "localhost:8081/big_only"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Добавить короткий список преимуществ сразу под H1 (яркая выгода)",
+ "knob": "Вставить после `<h1 class=\"reveal\"...>` блок\n```html\n<ul class=\"hero-benefits reveal\" style=\"--d:.2s\">\n<li><svg class=\"check-icon\" ...></svg> Сайт готов за 2 дня</li>\n<li><svg class=\"check-icon\" ...></svg> Клиенты находят вас в Яндексе</li>\n<li><svg class=\"check-icon\" ...></svg> Бесплатный демо‑макет</li>\n</ul>\n```\nи добавить минимальный CSS:\n```css\n.hero-benefits{display:flex;gap:1rem;flex-wrap:wrap;justify:center;margin-top:1rem}\n.hero-benefits li{display:flex;align-items:center;font-size:1rem;color:#222}\n.check-icon{width:1.2rem;height:1.2rem;margin-right:.4rem;stroke:#8b5cf6;stroke-width:2;fill:none}\n```",
+ "skill": "",
+ "effect": "мгновенно повышает ясность оффера, пользователь видит 3‑х конкретных выгоды без необходимости скроллить.",
+ "risk": "небольшое увеличение HTML‑размера; если список будет слишком длинным — визуальный шум.",
+ "rollback": "`git checkout -- index.html` (или удалить вставленный блок и CSS).",
+ "verify": "открыть страницу в браузере, убедиться, что список отображается под заголовком, проверить адаптивность (375 px, 768 px).",
+ "priority_claim": "1 – самый быстрый способ повысить конверсию на первом экране.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Вставить после `<h1 class=\"reveal\"...>` блок\n```html\n<ul class=\"hero-benefits reveal\" style=\"--d:.2s\">\n<li><svg class=\"check-icon\" ...></svg> Сайт готов за 2 дня</li>\n<li><svg class=\"check-icon\" ...></svg> Клиенты находят вас в Яндексе</li>\n<li><svg class=\"check-icon\" ...></svg> Бесплатный демо‑макет</li>\n</ul>\n```\nи добавить минимальный CSS:\n```css\n.hero-benefits{display:flex;gap:1rem;flex-wrap:wrap;justify:center;margin-top:1rem}\n.hero-benefits li{display:flex;align-items:center;font-size:1rem;color:#222}\n.check-icon{width:1.2rem;height:1.2rem;margin-right:.4rem;stroke:#8b5cf6;stroke-width:2;fill:none}\n```",
+  "Добавить к `<h1>` класс `gradient-text`; в CSS:\n```css\n.gradient-text{\nbackground:linear-gradient(45deg,#8b5cf6,#ff6b6b);\n-webkit-background-clip:text;\ncolor:transparent;\nanimation:gradientShift 8s linear infinite;\n}\n@keyframes gradientShift{\n0%{background-position:0% 50%}\n50%{background-position:100% 50%}\n100%{background-position:0% 50%}\n}\n```",
+  "В секцию hero (после `<h1>` и перед `.hero-note`) добавить `<ul class=\"offer-bullets\"><li>✅ Первый клиент уже через 2 дня</li><li>🚀 Полный SEO‑подтяг под Яндекс</li><li>📱 Адаптивный дизайн под любые экраны</li></ul>` и в CSS задать стили‑иконки, отступы и `font-size: clamp(14px,1.2vw,18px)`.",
+  "В hero‑секцию сразу после `<h1 class=\"reveal\">…</h1>` добавить `<p class=\"hero-sub\" style=\"font-size:clamp(18px,4vw,24px);color:var(--muted);margin-top:12px;\">Получите готовый сайт за 2 дня — заявки из Яндекса вырастут минимум 30 %</p>`",
+  "После `<h1>` в секции hero добавить `<ul class=\"hero-benefits\"><li>Быстрый запуск за 2 дня</li><li>Позиция в Яндексе уже через неделю</li><li>Поддержка и правки в течение месяца</li></ul>`; в CSS задать `.hero-benefits{display:flex;gap:1rem;justify-content:center;margin-top:1rem;list-style:none;font-size:clamp(14px,2vw,18px);color:#c3cad9}` и стили для адаптивности"
+ ],
+ "flags": []
+}

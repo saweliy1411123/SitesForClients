@@ -1,0 +1,26 @@
+{
+ "id": "I-00330",
+ "round": 50,
+ "time": "2026-11-17 04:04:35",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить секцию «Нас доверяют» с логотипами партнёров и разметкой Organization schema",
+ "knob": "После секции цены (`.price-card`) вставить новый `<section id=\"trust\" class=\"trust\">` с flex‑grid из 4‑6 логотипов (svg‑или png‑файлы, `alt` и `title`), каждый обернут в `<a href=\"https://partner.example\" target=\"_blank\" rel=\"noopener noreferrer\">`. Под секцией добавить `<script type=\"application/ld+json\">` с массивом `@type\":\"Organization\"`‑объектов (name, url, sameAs) для каждого партнёра.",
+ "skill": "",
+ "effect": "Повышает доверие потенциальных клиентов за счёт визуального соцдоказательства и улучшает SEO через структурированные данные.",
+ "risk": "Увеличение веса страницы из‑за изображений; необходимо использовать оптимизированные SVG/WEBP или inline‑svg.",
+ "rollback": "`git checkout -- index.html` или удалить секцию `#trust` и скрипт JSON‑LD.",
+ "verify": "Открыть страницу, убедиться, что логотипы отображаются, проверить размер HTML < 60 KB, запустить Google Rich Results Test – должна появиться разметка Organization.",
+ "priority_claim": "1 – высокий потенциал конверсии при минимальном объёме работ.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "После секции цены (`.price-card`) вставить новый `<section id=\"trust\" class=\"trust\">` с flex‑grid из 4‑6 логотипов (svg‑или png‑файлы, `alt` и `title`), каждый обернут в `<a href=\"https://partner.example\" target=\"_blank\" rel=\"noopener noreferrer\">`. Под секцией добавить `<script type=\"application/ld+json\">` с массивом `@type\":\"Organization\"`‑объектов (name, url, sameAs) для каждого партнёра."
+ ],
+ "flags": []
+}

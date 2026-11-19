@@ -1,0 +1,26 @@
+{
+ "id": "I-00873",
+ "round": 133,
+ "time": "2026-11-17 08:08:41",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — reduced-motion-respect (уважение предпочтений пользователя по анимациям)",
+ "knob": "\nSKILL — reduced-motion-respect\nName: `reduced-motion-respect`\nWhen to apply: На любом лендинге с CSS-анимациями, трансформациями, параллаксом — для соблюдения WCAG 2.1 (Success Criterion 2.3.3) и уважения пользователей с вестибулярными нарушениями.\nSAFE CSS:\n```css\n@media (prefers-reduced-motion: reduce) {\n*, *::before, *::after {\nanimation-duration: 0.01ms !important;\nanimation-iteration-count: 1",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "\nSKILL — reduced-motion-respect\nName: `reduced-motion-respect`\nWhen to apply: На любом лендинге с CSS-анимациями, трансформациями, параллаксом — для соблюдения WCAG 2.1 (Success Criterion 2.3.3) и уважения пользователей с вестибулярными нарушениями.\nSAFE CSS:\n```css\n@media (prefers-reduced-motion: reduce) {\n*, *::before, *::after {\nanimation-duration: 0.01ms !important;\nanimation-iteration-count: 1"
+ ],
+ "flags": []
+}

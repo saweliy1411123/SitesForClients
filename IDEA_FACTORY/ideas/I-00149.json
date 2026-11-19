@@ -1,0 +1,26 @@
+{
+ "id": "I-00149",
+ "round": 23,
+ "time": "2026-11-17 02:46:38",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Tab‑order & focus‑visibility audit (quick keyboard test)",
+ "knob": "METHOD: Add a temporary overlay `<div class=\"focus‑audit\" style=\"position:fixed;bottom:0;right:0;padding:4px;background:#000;color:#fff;font-size:12px;z-index:9999\">Press Tab to check focus order</div>` and ensure every interactive element (`<a>`, `<button>`, `[role=\"button\"]`) has a visible `:focus` style (e.g., `outline:2px solid var(--blue);`). No code changes required beyond this visual cue.",
+ "skill": "",
+ "effect": "Confirms that users navigating via keyboard can see where focus moves, preventing drop‑offs for accessibility‑oriented visitors and improving WCAG 2.1 AA compliance.",
+ "risk": "Minimal – only adds a non‑intrusive visual hint; may slightly shift layout if focus outline wasn’t previously defined.",
+ "rollback": "Delete the overlay `<div>` and the added `:focus` rule (git checkout index.html).",
+ "verify": "Open the page locally, press Tab repeatedly, watch the overlay and ensure each focusable element receives a clear outline; note any missing outlines or illogical order (e.g., jumping from hero CTA to footer). Completed in ≤2 min.",
+ "priority_claim": "1 – Accessibility fixes have high impact on conversion and legal compliance with virtually no cost.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: Add a temporary overlay `<div class=\"focus‑audit\" style=\"position:fixed;bottom:0;right:0;padding:4px;background:#000;color:#fff;font-size:12px;z-index:9999\">Press Tab to check focus order</div>` and ensure every interactive element (`<a>`, `<button>`, `[role=\"button\"]`) has a visible `:focus` style (e.g., `outline:2px solid var(--blue);`). No code changes required beyond this visual cue."
+ ],
+ "flags": []
+}

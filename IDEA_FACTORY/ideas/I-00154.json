@@ -1,0 +1,26 @@
+{
+ "id": "I-00154",
+ "round": 23,
+ "time": "2026-11-17 02:47:33",
+ "source": "localhost:8080/zhipu/glm-4.7-flash",
+ "sources": [
+  "localhost:8080/zhipu/glm-4.7-flash"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Print Layout Audit (Ctrl+P)",
+ "knob": "Open `index.html` in a browser, press Ctrl+P (or Cmd+P), and switch to the \"Save as PDF\" preview.",
+ "skill": "none",
+ "effect": "Checks if the site remains readable and functional in a non-interactive environment (print/backup).",
+ "risk": "None.",
+ "rollback": "N/A.",
+ "verify": "Is the font size readable? Are links preserved? Does the layout break?",
+ "priority_claim": "3 (A11y/Design)",
+ "source_hint": "",
+ "site_request": "none",
+ "category": "lever",
+ "variants": [
+  "Open `index.html` in a browser, press Ctrl+P (or Cmd+P), and switch to the \"Save as PDF\" preview."
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00684",
+ "round": 105,
+ "time": "2026-11-17 06:49:15",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — 3d-tilt-demo-grid",
+ "knob": "**Name:** `3d-tilt-demo-grid`\n**When to apply:** На секции с демонстрационными концепт‑карточками (примерно L589) для создания глубины и интерактивности без JS.\n**SAFE CSS:**\n```css\n/* 3d-tilt-demo-grid */\n.demo-grid {\ndisplay: flex;\nflex-wrap: wrap;\ngap: 1.5rem;\nperspective: 800px;\n}\n.demo-grid .card {\nbackground: rgba(255,255,255,0.08);\nborder-radius: 12px;\npadding: 1.2rem;\nflex: 1 1 calc(33.333% - 1rem);\ntransform-style: preserve-3d;\ntransition: transform 0.35s ease, box-shadow 0.35s ease;\nbox-shadow: 0 8px 24px rgba(0,0,0,0.12);\n}\n.demo-grid .card:hover,\n.demo-grid .card:focus-visible {\ntransform: rotateX(4deg) rotateY(-6deg) translateZ(12px);\nbox-shadow: 0 20px 48px rgba(0,0,0,0.18);\n}\n.demo-grid .card h3 {\nmargin-top:0;\n}\n```\n**SAFE JS:** (не требуется)",
+ "skill": "",
+ "effect": "Добавляет премиальный 3‑D‑эффект при наведении, повышает вовлечённость и делает демонстрацию более запоминающейся.",
+ "risk": "На мобильных устройствах hover‑эффект не срабатывает – но это не ухудшает UX; может слегка увеличить нагрузку на GPU, но в пределах приемлемого для небольшого количества карточек.",
+ "rollback": "`git checkout -- index.html` (удалить добавленные классы и CSS)",
+ "verify": "Открыть страницу в десктоп‑браузере, навести курсор на любую карточку – она должна слегка наклониться и подняться; проверить плавность перехода в DevTools → Performance → FPS.",
+ "priority_claim": "2 – Средний приоритет: повышает восприятие качества, но не критичен для конверсии.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `3d-tilt-demo-grid`\n**When to apply:** На секции с демонстрационными концепт‑карточками (примерно L589) для создания глубины и интерактивности без JS.\n**SAFE CSS:**\n```css\n/* 3d-tilt-demo-grid */\n.demo-grid {\ndisplay: flex;\nflex-wrap: wrap;\ngap: 1.5rem;\nperspective: 800px;\n}\n.demo-grid .card {\nbackground: rgba(255,255,255,0.08);\nborder-radius: 12px;\npadding: 1.2rem;\nflex: 1 1 calc(33.333% - 1rem);\ntransform-style: preserve-3d;\ntransition: transform 0.35s ease, box-shadow 0.35s ease;\nbox-shadow: 0 8px 24px rgba(0,0,0,0.12);\n}\n.demo-grid .card:hover,\n.demo-grid .card:focus-visible {\ntransform: rotateX(4deg) rotateY(-6deg) translateZ(12px);\nbox-shadow: 0 20px 48px rgba(0,0,0,0.18);\n}\n.demo-grid .card h3 {\nmargin-top:0;\n}\n```\n**SAFE JS:** (не требуется)"
+ ],
+ "flags": []
+}

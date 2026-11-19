@@ -1,0 +1,26 @@
+{
+ "id": "I-00348",
+ "round": 53,
+ "time": "2026-11-17 04:13:29",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "BreadcrumbList JSON‑LD for site hierarchy",
+ "knob": "В конец `<head>` добавить `<script type=\"application/ld+json\">` со схемой `BreadcrumbList` (Home → Landing)",
+ "skill": "",
+ "effect": "Улучшит локальное SEO и появление хлебных крошек в результатах поиска, повышая CTR",
+ "risk": "Требует поддержания актуальности при изменении структуры сайта (не критично)",
+ "rollback": "Удалить только вставленный `<script>`‑блок (git checkout index.html)",
+ "verify": "В Chrome DevTools → Console выполнить `JSON.parse(document.querySelector('script[type=\"application/ld+json\"]').innerHTML)` и убедиться в корректной структуре; проверить в Rich Results Test → “Breadcrumb” ✔️",
+ "priority_claim": "1 – быстрый SEO‑выигрыш без кода‑бэка",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В конец `<head>` добавить `<script type=\"application/ld+json\">` со схемой `BreadcrumbList` (Home → Landing)"
+ ],
+ "flags": []
+}

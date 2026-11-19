@@ -1,0 +1,26 @@
+{
+ "id": "I-00101",
+ "round": 15,
+ "time": "2026-11-17 02:23:45",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "I-00101 — Гарантийный бейдж «100 % удовлетворение или возврат» рядом с основным CTA",
+ "knob": "После основной кнопки в hero добавить `<div class=\"guarantee-badge\" role=\"note\">✅ 100 % удовлетворение или возврат денег</div>`; стилизовать через `.guarantee-badge{margin-top:.8rem;color:#fff;background:#28a745;padding:.4rem .8rem;border-radius:.4rem;font-weight:600;}`.",
+ "skill": "",
+ "effect": "Снижает психологический барьер, усиливает доверие и воспринимаемую надёжность предложения.",
+ "risk": "Требует реального гарантийного механизма от владельца; в противном случае может вызвать претензии.",
+ "rollback": "Удалить добавленный `<div>` и CSS‑правило (или `git checkout`).",
+ "verify": "Проверить в браузере, что бейдж виден, корректно адаптируется на мобильных ширинах, и что цвет контрастирует (WCAG AA).",
+ "priority_claim": "2 — низкозатратное улучшение доверия, быстро проверяется через метрики кликов.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "После основной кнопки в hero добавить `<div class=\"guarantee-badge\" role=\"note\">✅ 100 % удовлетворение или возврат денег</div>`; стилизовать через `.guarantee-badge{margin-top:.8rem;color:#fff;background:#28a745;padding:.4rem .8rem;border-radius:.4rem;font-weight:600;}`."
+ ],
+ "flags": []
+}

@@ -1,0 +1,29 @@
+{
+ "id": "I-00617",
+ "round": 93,
+ "time": "2026-11-17 06:13:19",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "Метод «два файла, сплит-скрин» — параллельное сравнение варианта до/после правки",
+ "knob": "METHOD: (1) `copy index.html index-variant.html` (не переименовывая оригинал). (2) В index-variant.html внести ровно ОДНУ гипотезу (например, новый текст CTA на L462). (3) Открыть оба файла рядом в окне сплит-скрин (Win+← / Win+→) на одинаковой ширине, включая мобильный режим DevTools (Ctrl+Shift+M) на 375px. (4) Пройти",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: (1) `copy index.html index-variant.html` (не переименовывая оригинал). (2) В index-variant.html внести ровно ОДНУ гипотезу (например, новый текст CTA на L462). (3) Открыть оба файла рядом в окне сплит-скрин (Win+← / Win+→) на одинаковой ширине, включая мобильный режим DevTools (Ctrl+Shift+M) на 375px. (4) Пройти"
+ ],
+ "flags": []
+}

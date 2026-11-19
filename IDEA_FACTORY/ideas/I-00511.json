@@ -1,0 +1,26 @@
+{
+ "id": "I-00511",
+ "round": 77,
+ "time": "2026-11-17 05:25:12",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "3D‑tilt glass‑morphism для карточек цены",
+ "knob": "**SKILL — tilt-glass-price-card**\n**Name:** `tilt-glass-price-card`\n**When to apply:** На блоках `.price-card` в секции цены, где нужен премиальный 3‑D‑эффект и стеклянный вид.\n**SAFE CSS:**\n```css\n.price-card {\nperspective: 800px;\nbackground: rgba(255,255,255,0.07);\nbackdrop-filter: blur(12px);\nborder: 1px solid rgba(255,255,255,0.2);\ntransform-style: preserve-3d;\ntransition: transform 0.35s ease, box-shadow 0.35s ease;\n}\n.price-card:hover,\n.price-card:focus-visible {\ntransform: rotateY(8deg) rotateX(4deg) translateZ(20px);\nbox-shadow: 0 12px 30px rgba(0,0,0,0.25);\n}\n.price-card::before {\ncontent:\"\";\nposition:absolute;\ninset:0;\nborder-radius:inherit;\nbackground: linear-gradient(135deg, rgba(255,255,255,0.15), transparent);\npointer-events:none;\n}\n```\n**SAFE JS:** *(не требуется)*",
+ "skill": "tilt-glass-price-card",
+ "effect": "Делает цену более «осязаемой», повышает доверие и запоминаемость предложения, усиливает восприятие премиального бренда.",
+ "risk": "На слабых устройствах (мобильные старые) может возникнуть небольшое падение FPS; требуется тестировать на low‑end.",
+ "rollback": "`git checkout HEAD -- index.html` (откатить изменения в `.price-card` стили).",
+ "verify": "Открыть страницу на десктопе и мобильном, проверить плавность анимации (Chrome DevTools → Rendering → FPS > 55).",
+ "priority_claim": "2 – хороший визуальный эффект, но требует проверки производительности.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**SKILL — tilt-glass-price-card**\n**Name:** `tilt-glass-price-card`\n**When to apply:** На блоках `.price-card` в секции цены, где нужен премиальный 3‑D‑эффект и стеклянный вид.\n**SAFE CSS:**\n```css\n.price-card {\nperspective: 800px;\nbackground: rgba(255,255,255,0.07);\nbackdrop-filter: blur(12px);\nborder: 1px solid rgba(255,255,255,0.2);\ntransform-style: preserve-3d;\ntransition: transform 0.35s ease, box-shadow 0.35s ease;\n}\n.price-card:hover,\n.price-card:focus-visible {\ntransform: rotateY(8deg) rotateX(4deg) translateZ(20px);\nbox-shadow: 0 12px 30px rgba(0,0,0,0.25);\n}\n.price-card::before {\ncontent:\"\";\nposition:absolute;\ninset:0;\nborder-radius:inherit;\nbackground: linear-gradient(135deg, rgba(255,255,255,0.15), transparent);\npointer-events:none;\n}\n```\n**SAFE JS:** *(не требуется)*"
+ ],
+ "flags": []
+}

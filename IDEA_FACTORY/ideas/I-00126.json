@@ -1,0 +1,27 @@
+{
+ "id": "I-00126",
+ "round": 19,
+ "time": "2026-11-17 02:35:37",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Внедрить разметку schema.org Service для локального SEO",
+ "knob": "В конец `<body>` добавить `<script type=\"application/ld+json\">` с JSON‑LD:\n```json\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"Service\",\n\"name\":\"Лендинги за 2 дня\",\n\"provider\":{\"@type\":\"LocalBusiness\",\"name\":\"Савелий\",\"areaServed\":\"Пермь\"},\n\"offers\":{\"@type\":\"Offer\",\"priceCurrency\":\"RUB\",\"price\":\"0\",\"availability\":\"https://schema.org/InStock\"},\n\"serviceType\":\"Создание лендингов\",\n\"url\":\"https://example.com/\"\n}\n```",
+ "skill": "",
+ "effect": "Предоставит поисковикам точную информацию о предлагаемой услуге, улучшит видимость в локальном поиске и в блоке «Услуги».",
+ "risk": "Требует согласования цены (указана 0 RUB как «демо бесплатно») – может потребоваться корректировка при изменении цены.",
+ "rollback": "`git checkout HEAD -- index.html`",
+ "verify": "В DevTools → «Console» → выполнить `JSON.parse(document.querySelector('script[type=\"application/ld+json\"]').innerHTML)` без ошибок; в Google Rich Results Test загрузить страницу и убедиться в валидности Service.",
+ "priority_claim": "2 – повышает SEO, но требует точных данных; небольшая работа, но ценность выше, чем у простого meta‑тега.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В конец `<body>` добавить `<script type=\"application/ld+json\">` с JSON‑LD:\n```json\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"Service\",\n\"name\":\"Лендинги за 2 дня\",\n\"provider\":{\"@type\":\"LocalBusiness\",\"name\":\"Савелий\",\"areaServed\":\"Пермь\"},\n\"offers\":{\"@type\":\"Offer\",\"priceCurrency\":\"RUB\",\"price\":\"0\",\"availability\":\"https://schema.org/InStock\"},\n\"serviceType\":\"Создание лендингов\",\n\"url\":\"https://example.com/\"\n}\n```",
+  "В конец `<body>` вставить `<script type=\"application/ld+json\">` с:\n```json\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"Service\",\n\"serviceType\":\"Создание лендингов за 2 дня\",\n\"provider\":{\"@type\":\"LocalBusiness\",\"name\":\"Савелий\",\"address\":{\"@type\":\"PostalAddress\",\"addressLocality\":\"Пермь\"}},\n\"areaServed\":\"Пермь\",\n\"offers\":{\"@type\":\"Offer\",\"priceCurrency\":\"RUB\",\"price\":\"0\",\"url\":\"#contact\",\"availability\":\"https://schema.org/InStock\"}\n}\n```"
+ ],
+ "flags": []
+}

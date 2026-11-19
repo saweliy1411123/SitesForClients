@@ -1,0 +1,26 @@
+{
+ "id": "I-00519",
+ "round": 78,
+ "time": "2026-11-17 05:28:06",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Schema.org Review‑разметка для отзывов",
+ "knob": "В секции отзывов (около L589) обернуть каждый отзыв в `<blockquote itemscope itemtype=\"https://schema.org/Review\"><p itemprop=\"reviewBody\">…текст отзыва…</p><footer>— <span itemprop=\"author\">Имя Фамилия</span></footer></blockquote>`; добавить в `<head>` JSON‑LD‑скрипт:\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"ItemList\",\n\"itemListElement\":[\n{\"@type\":\"ListItem\",\"position\":1,\"item\":{\"@type\":\"Review\",\"reviewBody\":\"…\",\"author\":{\"@type\":\"Person\",\"name\":\"Имя\"}}},\n{\"@type\":\"ListItem\",\"position\":2,\"item\":{\"@type\":\"Review\",\"reviewBody\":\"…\",\"author\":{\"@type\":\"Person\",\"name\":\"Имя\"}}}\n]\n}\n</script>\n```",
+ "skill": "",
+ "effect": "Увеличивает доверие через отображение rich‑snippets в поиске, улучшает SEO‑показатели и конверсию.",
+ "risk": "Требует реальных отзывов с реальными именами; фальшивые данные могут нарушить правила поисковых систем.",
+ "rollback": "`git checkout index.html` (удалить добавленные блоки и скрипт).",
+ "verify": "Запустить Google Rich Results Test по URL и убедиться, что отзывы обнаружены как Review.",
+ "priority_claim": "2 — средний, потому что повышает доверие, но требует точных данных.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В секции отзывов (около L589) обернуть каждый отзыв в `<blockquote itemscope itemtype=\"https://schema.org/Review\"><p itemprop=\"reviewBody\">…текст отзыва…</p><footer>— <span itemprop=\"author\">Имя Фамилия</span></footer></blockquote>`; добавить в `<head>` JSON‑LD‑скрипт:\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"ItemList\",\n\"itemListElement\":[\n{\"@type\":\"ListItem\",\"position\":1,\"item\":{\"@type\":\"Review\",\"reviewBody\":\"…\",\"author\":{\"@type\":\"Person\",\"name\":\"Имя\"}}},\n{\"@type\":\"ListItem\",\"position\":2,\"item\":{\"@type\":\"Review\",\"reviewBody\":\"…\",\"author\":{\"@type\":\"Person\",\"name\":\"Имя\"}}}\n]\n}\n</script>\n```"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00559",
+ "round": 83,
+ "time": "2026-11-17 05:42:23",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — scroll-then-animate",
+ "knob": "\n**Name:** `scroll-then-animate`\n**When to apply:** На любом статическом лендинге, где есть секции с анимацией, которые должны быть запущены при скролле.\n**Safe CSS:**\n```css\n@keyframes slideIn {\nfrom { transform: translateY(100px); }\nto { transform: translateY(0); }\n}\n.scroll-then-animate {\nanimation: slideIn 0.5s ease-in-out;\nopacity: 0;\ntransition: opacity 0.5s;\n}\n.scroll-then-animate.show {\nopacity: 1;\nanimation: slideIn 0.5s ease-in-out;\n}\n```\n**Safe JS:**\n```javascript\nconst elements = document.querySelectorAll('.scroll-then-animate');\nconst observer = new IntersectionObserver((entries) => {\nentries.forEach((entry) => {\nif (entry.isIntersecting) {\nentry.target.classList.add('show');\n}\n});\n}, { threshold: 0.5 });\nelements.forEach((element) => {\nobserver.observe(element);\n});\n```",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "Проверить за 2–10 минут до внесения, открыв index.html в Chrome → F12 → Elements → найдя секции с анимацией, проверить, запускаются ли они при скролле.",
+ "priority_claim": "2, потому что этот скилл улучшает пользовательский опыт на любом статическом лендинге.",
+ "source_hint": "",
+ "site_request": "скролл-анимация",
+ "category": "skill",
+ "variants": [
+  "\n**Name:** `scroll-then-animate`\n**When to apply:** На любом статическом лендинге, где есть секции с анимацией, которые должны быть запущены при скролле.\n**Safe CSS:**\n```css\n@keyframes slideIn {\nfrom { transform: translateY(100px); }\nto { transform: translateY(0); }\n}\n.scroll-then-animate {\nanimation: slideIn 0.5s ease-in-out;\nopacity: 0;\ntransition: opacity 0.5s;\n}\n.scroll-then-animate.show {\nopacity: 1;\nanimation: slideIn 0.5s ease-in-out;\n}\n```\n**Safe JS:**\n```javascript\nconst elements = document.querySelectorAll('.scroll-then-animate');\nconst observer = new IntersectionObserver((entries) => {\nentries.forEach((entry) => {\nif (entry.isIntersecting) {\nentry.target.classList.add('show');\n}\n});\n}, { threshold: 0.5 });\nelements.forEach((element) => {\nobserver.observe(element);\n});\n```"
+ ],
+ "flags": []
+}

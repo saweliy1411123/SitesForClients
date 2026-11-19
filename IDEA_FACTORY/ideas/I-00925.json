@@ -1,0 +1,26 @@
+{
+ "id": "I-00925",
+ "round": 146,
+ "time": "2026-11-17 08:45:15",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — Ambient hero blur background",
+ "knob": "**Name:** `ambient-hero-blur`\n**When to apply:** На любой лендинг, где в `<header class=\"hero\">` используется градиентный фон и хочется добавить лёгкую, не‑дистрактивную анимацию без JavaScript.\n**Steps:**\n1. В `<head>` добавить ссылку на файл `skills/ambient-hero-blur.css` (или вставить содержимое в `<style>`).\n2. В HTML‑разметке добавить класс `ambient-blur` к контейнеру hero: `<header class=\"hero ambient-blur\" id=\"top\">`.\n3. При желании переопределить цвета в CSS‑переменных `--blur-color-1` / `--blur-color-2`.\n**SAFE CSS:**\n```css\n/* ambient-hero-blur */\n:root {\n--blur-color-1: rgba(139,92,246,0.4);\n--blur-color-2: rgba(76,201,240,0.4);\n}\n.ambient-blur::before,\n.ambient-blur::after {\ncontent:\"\";\nposition:absolute;\ninset:0;\npointer-events:none;\nbackground:radial-gradient(circle at 30% 30%, var(--blur-color-1), transparent 70%),\nradial-gradient(circle at 70% 70%, var(--blur-color-2), transparent 70%);\nfilter:blur(80px);\nopacity:0;\nanimation:ambientBlurFade 12s infinite ease-in-out;\n}\n.ambient-blur::after {\nanimation-delay:6s;\n}\n@keyframes ambientBlurFade{\n0%,100%{opacity:0}\n50%{opacity:1}\n}\n```\n**SAFE JS:** *(не требуется)*",
+ "skill": "ambient-hero-blur",
+ "effect": "Увеличивает визуальную привлекательность hero‑секции, удерживая внимание посетителя и снижая показатель bounce‑rate без дополнительного кода.",
+ "risk": "Возможен незначительный рост CLS, если размеры псевдо‑элементов не заданы фиксированно.",
+ "rollback": "`git checkout HEAD -- index.improved.html && rm -rf skills/ambient-hero-blur.css`",
+ "verify": "Открыть страницу в браузере, включить DevTools → Performance → записать 5 секунд; убедиться, что анимация видна и не появляется CLS‑спайк (Layout Shift < 0.1).",
+ "priority_claim": "2 – быстрый визуальный апгрейд, не требует бэкенда и улучшает восприятие бренда.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `ambient-hero-blur`\n**When to apply:** На любой лендинг, где в `<header class=\"hero\">` используется градиентный фон и хочется добавить лёгкую, не‑дистрактивную анимацию без JavaScript.\n**Steps:**\n1. В `<head>` добавить ссылку на файл `skills/ambient-hero-blur.css` (или вставить содержимое в `<style>`).\n2. В HTML‑разметке добавить класс `ambient-blur` к контейнеру hero: `<header class=\"hero ambient-blur\" id=\"top\">`.\n3. При желании переопределить цвета в CSS‑переменных `--blur-color-1` / `--blur-color-2`.\n**SAFE CSS:**\n```css\n/* ambient-hero-blur */\n:root {\n--blur-color-1: rgba(139,92,246,0.4);\n--blur-color-2: rgba(76,201,240,0.4);\n}\n.ambient-blur::before,\n.ambient-blur::after {\ncontent:\"\";\nposition:absolute;\ninset:0;\npointer-events:none;\nbackground:radial-gradient(circle at 30% 30%, var(--blur-color-1), transparent 70%),\nradial-gradient(circle at 70% 70%, var(--blur-color-2), transparent 70%);\nfilter:blur(80px);\nopacity:0;\nanimation:ambientBlurFade 12s infinite ease-in-out;\n}\n.ambient-blur::after {\nanimation-delay:6s;\n}\n@keyframes ambientBlurFade{\n0%,100%{opacity:0}\n50%{opacity:1}\n}\n```\n**SAFE JS:** *(не требуется)*"
+ ],
+ "flags": []
+}

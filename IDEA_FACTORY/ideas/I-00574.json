@@ -1,0 +1,26 @@
+{
+ "id": "I-00574",
+ "round": 87,
+ "time": "2026-11-17 05:55:12",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "I-00454",
+ "knob": "Предпочтительнее использовать `<link rel=\"preconnect\">` вместо `dns-prefetch` для доменов Google Fonts и соцсетей, так как ускоряет TLS‑handshake.",
+ "skill": "",
+ "effect": "Сократит время до первого отображения шрифтов и внешних ресурсов.",
+ "risk": "Небольшой рост количества запросов в `head`, но без влияния на рендеринг.",
+ "rollback": "Удалить строки `<link rel=\"preconnect\">` из `head`.",
+ "verify": "В Network‑панели проверить, что соединения к `fonts.googleapis.com` и `fonts.gstatic.com` открыты до загрузки CSS.",
+ "priority_claim": "2 – умеренный выигрыш, легко реализуемо.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Предпочтительнее использовать `<link rel=\"preconnect\">` вместо `dns-prefetch` для доменов Google Fonts и соцсетей, так как ускоряет TLS‑handshake."
+ ],
+ "flags": []
+}

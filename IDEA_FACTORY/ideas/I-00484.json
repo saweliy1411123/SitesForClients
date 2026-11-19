@@ -1,0 +1,26 @@
+{
+ "id": "I-00484",
+ "round": 72,
+ "time": "2026-11-17 05:12:20",
+ "source": "lareper/glm-5.2-fast-preview",
+ "sources": [
+  "lareper/glm-5.2-fast-preview"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Метод «прогон по чек-листу Lighthouse-категорий вручную за 5 минут»",
+ "knob": "METHOD: (1) Открыть index.html локально, F12 → Lighthouse → категория SEO + Accessibility (не Performance), Mobile, Run. (2) Выписать только красные/оранжевые пункты в список из ≤7 строк. (3) Каждому пункту присвоить приоритет 1–3. (4) Прогнать повторно на index.improved.html после правок — сравнить цифры. (5) Дополнительно вручную: Tab-проход по странице (фокус виден?), зум 200% (не ломается ли?), 375px ширина (нет ли горизонтального скролла — `document.documentElement.scrollWidth > innerWidth`).",
+ "skill": "",
+ "effect": "Объективный baseline-балл до/после, приоритезация правок по реальным проблемам, а не по вкусу.",
+ "risk": "Lighthouse на file:// даёт часть предупреждений ложно (нет HTTPS/домена) — учитывать только структурные пункты (headings, aria, contrast, meta).",
+ "rollback": "Метод не меняет файлы; результаты хранить в `IDEA_FACTORY/audit-2026",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: (1) Открыть index.html локально, F12 → Lighthouse → категория SEO + Accessibility (не Performance), Mobile, Run. (2) Выписать только красные/оранжевые пункты в список из ≤7 строк. (3) Каждому пункту присвоить приоритет 1–3. (4) Прогнать повторно на index.improved.html после правок — сравнить цифры. (5) Дополнительно вручную: Tab-проход по странице (фокус виден?), зум 200% (не ломается ли?), 375px ширина (нет ли горизонтального скролла — `document.documentElement.scrollWidth > innerWidth`)."
+ ],
+ "flags": []
+}

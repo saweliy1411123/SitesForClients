@@ -1,0 +1,27 @@
+{
+ "id": "I-00550",
+ "round": 82,
+ "time": "2026-11-17 05:39:37",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Предзагрузка критического CSS‑файла и `font-display: swap` в @font-face",
+ "knob": "В `<head>` добавить\n```html\n<link rel=\"preload\" as=\"style\" href=\"styles.css\" onload=\"this.rel='stylesheet'\">\n<noscript><link rel=\"stylesheet\" href=\"styles.css\"></noscript>\n```\nи в уже существующем `<style>` (или в отдельном файле) добавить\n```css\n@font-face{\nfont-family:'Manrope';\nsrc:url('https://fonts.gstatic.com/s/manrope/v14/...-Regular.woff2') format('woff2');\nfont-weight:400;\nfont-display:swap;\n}\n```",
+ "skill": "",
+ "effect": "`preload` ускорит загрузку основного CSS, а `font-display:swap` устранит блокировку рендеринга шрифтов → снижается CLS и ускоряется LCP.",
+ "risk": "Если `styles.css` уже инлайн‑встроен, двойная загрузка может увеличить трафик; убедиться, что ссылка указывает на отдельный файл (можно вынести критический CSS в отдельный файл).",
+ "rollback": "Удалить обе вставки (git restore index.html).",
+ "verify": "В DevTools → Network проверить, что CSS загружается как `preload` (status 200, `rel=preload`), и измерить CLS/LCP до и после (Lighthouse → Performance).",
+ "priority_claim": "1 — значительное улучшение Core Web Vitals с минимальными изменениями.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<head>` добавить\n```html\n<link rel=\"preload\" as=\"style\" href=\"styles.css\" onload=\"this.rel='stylesheet'\">\n<noscript><link rel=\"stylesheet\" href=\"styles.css\"></noscript>\n```\nи в уже существующем `<style>` (или в отдельном файле) добавить\n```css\n@font-face{\nfont-family:'Manrope';\nsrc:url('https://fonts.gstatic.com/s/manrope/v14/...-Regular.woff2') format('woff2');\nfont-weight:400;\nfont-display:swap;\n}\n```",
+  "В `<head>` заменить текущий `<link href=\"https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap\">` на `<link rel=\"preload\" as=\"style\" href=\"https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap\" onload=\"this.rel='stylesheet'\">` и добавить `<style> @font-face{font-family:'Manrope';src:url(https://fonts.gstatic.com/s/manrope/v14/...-Regular.woff2) format('woff2');font-display:swap;}</style>` (указать только `font-display:swap` в CSS‑правиле)."
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00910",
+ "round": 143,
+ "time": "2026-11-17 08:36:22",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Блок доверительных знаков под ценой",
+ "knob": "Внутри `.price-card` после списка `<ul>` вставить `<div class=\"trust-badges\">...</div>`",
+ "skill": "",
+ "effect": "Увеличение доверия потенциальных клиентов",
+ "risk": "Возможное увеличение времени загрузки страницы",
+ "rollback": "Удалить добавленный блок",
+ "verify": "Проверить наличие доверительных знаков на странице",
+ "priority_claim": "1, потому что доверие клиентов является ключевым фактором для продаж",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Внутри `.price-card` после списка `<ul>` вставить `<div class=\"trust-badges\">...</div>`"
+ ],
+ "flags": []
+}

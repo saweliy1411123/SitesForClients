@@ -1,0 +1,26 @@
+{
+ "id": "I-00970",
+ "round": 161,
+ "time": "2026-11-17 09:26:50",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "3D‑parallax фон в hero‑секции, реагирующий на движение мыши",
+ "knob": "METHOD: добавить в `<header class=\"hero\">` два вложенных `<div class=\"hero-layer hero-layer‑bg\"></div>` и `<div class=\"hero-layer hero-layer‑fg\"></div>`; в CSS задать `position:absolute; inset:0; transform-style:preserve-3d; perspective:800px;` и `transform: translateZ(0);`. Добавить небольшой JS‑скрипт, который на `mousemove` рассчитывает `rotateX/Y` в пределах ±5° и применяет к `.hero-layer‑bg` и `.hero-layer‑fg` с разными коэффициентами (фон – меньше, передний – больше).",
+ "skill": "",
+ "effect": "Динамический визуальный эффект создаёт ощущение глубины и премиального дизайна, удерживает внимание в верхней части страницы.",
+ "risk": "На мобильных устройствах без мыши скрипт будет неактивен; следует добавить `@media (hover: hover) and (pointer: fine)` чтобы ограничить только десктоп.",
+ "rollback": "Удалить добавленные `<div>` и скрипт; `git checkout -- index.html && git checkout -- style.css && git checkout -- script.js`.",
+ "verify": "Открыть страницу в десктоп‑браузере, переместить мышь – фон должен слегка наклоняться; в мобильном режиме эффект не должен появляться.",
+ "priority_claim": "3 – более сложный визуальный апгрейд, требует тестов на разных устройствах, но усиливает бренд.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: добавить в `<header class=\"hero\">` два вложенных `<div class=\"hero-layer hero-layer‑bg\"></div>` и `<div class=\"hero-layer hero-layer‑fg\"></div>`; в CSS задать `position:absolute; inset:0; transform-style:preserve-3d; perspective:800px;` и `transform: translateZ(0);`. Добавить небольшой JS‑скрипт, который на `mousemove` рассчитывает `rotateX/Y` в пределах ±5° и применяет к `.hero-layer‑bg` и `.hero-layer‑fg` с разными коэффициентами (фон – меньше, передний – больше)."
+ ],
+ "flags": []
+}

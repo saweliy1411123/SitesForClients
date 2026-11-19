@@ -1,0 +1,29 @@
+{
+ "id": "I-00604",
+ "round": 90,
+ "time": "2026-11-17 06:04:34",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "SKILL — section-entrance-stagger (каскадное появление блоков секции при скролле с резервом для no-JS)",
+ "knob": "SKILL — section-entrance-stagger\nНазвание: `section-entrance-stagger`\nКогда применять: на любом одностраничном лендинге, где секции/карточки появляются резко или без анимации; даёт «дорогую» каскадную анимацию появления (IntersectionObserver + CSS-переходы) с гарантией видимости контента при выключенном JS.\nШаги:\n1. Вставить SAFE CSS.\n2. Вставить SAFE JS перед `</body>`.\n3. Разметить нужные элементы классом `.stagger-item` (карточки",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "SKILL — section-entrance-stagger\nНазвание: `section-entrance-stagger`\nКогда применять: на любом одностраничном лендинге, где секции/карточки появляются резко или без анимации; даёт «дорогую» каскадную анимацию появления (IntersectionObserver + CSS-переходы) с гарантией видимости контента при выключенном JS.\nШаги:\n1. Вставить SAFE CSS.\n2. Вставить SAFE JS перед `</body>`.\n3. Разметить нужные элементы классом `.stagger-item` (карточки"
+ ],
+ "flags": []
+}

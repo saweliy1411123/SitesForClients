@@ -1,0 +1,26 @@
+{
+ "id": "I-00956",
+ "round": 158,
+ "time": "2026-11-17 09:18:34",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Иконки‑визуализация пунктов боли",
+ "knob": "В секции `#problem` (см. SITE_REQUEST «problem») заменить каждый `<h3>`‑пункт на блок с SVG‑иконкой слева:\n```html\n<div class=\"pain-item\">\n<svg class=\"icon\" aria-hidden=\"true\">…</svg>\n<h3>Вас не находят в поиске</h3>\n</div>\n```\nи добавить в CSS `.pain-item{display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;}`.",
+ "skill": "",
+ "effect": "Улучшает сканируемость текста, повышает восприятие проблемы и удерживает внимание.",
+ "risk": "Увеличит размер HTML (~1 KB) за счёт встроенных SVG‑иконок.",
+ "rollback": "Удалить блоки `.pain-item` и вернуть оригинальные `<h3>` (git checkout).",
+ "verify": "В браузере убедиться, что каждый пункт отображается с иконкой и выравнивается корректно.",
+ "priority_claim": "2 – повышает UX без влияния на SEO, небольшие затраты.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В секции `#problem` (см. SITE_REQUEST «problem») заменить каждый `<h3>`‑пункт на блок с SVG‑иконкой слева:\n```html\n<div class=\"pain-item\">\n<svg class=\"icon\" aria-hidden=\"true\">…</svg>\n<h3>Вас не находят в поиске</h3>\n</div>\n```\nи добавить в CSS `.pain-item{display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;}`."
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00591",
+ "round": 89,
+ "time": "2026-11-17 06:01:44",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "role=\"contentinfo\" + <address> с aria‑label в футере",
+ "knob": "Обернуть контактный блок в футере (после L736) в `<footer role=\"contentinfo\"><address aria-label=\"Контактные данные\">Савелий · Пермь · <a href=\"https://t.me/...\" rel=\"noopener noreferrer\">Telegram</a></address></footer>` (если уже есть `<footer>`, добавить `role=\"contentinfo\"` и `<address aria-label=\"Контактные данные\">`).",
+ "skill": "",
+ "effect": "Улучшает семантику и доступность для скрин‑ридеров, повышает SEO‑оценку по accessibility.",
+ "risk": "Никаких.",
+ "rollback": "Удалить добавленные атрибуты/теги (git checkout index.html).",
+ "verify": "В DevTools → Accessibility, убедиться, что элемент имеет роль “contentinfo” и адрес отмечен как “landmark”.",
+ "priority_claim": "3 – небольшое улучшение доступности, но менее критично, чем скорость.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Обернуть контактный блок в футере (после L736) в `<footer role=\"contentinfo\"><address aria-label=\"Контактные данные\">Савелий · Пермь · <a href=\"https://t.me/...\" rel=\"noopener noreferrer\">Telegram</a></address></footer>` (если уже есть `<footer>`, добавить `role=\"contentinfo\"` и `<address aria-label=\"Контактные данные\">`)."
+ ],
+ "flags": []
+}

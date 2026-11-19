@@ -1,0 +1,26 @@
+{
+ "id": "I-00490",
+ "round": 73,
+ "time": "2026-11-17 05:14:12",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "I-00500 [Добавить семантические landmarks <header>, <main>, <footer>]",
+ "knob": "В `index.html` обернуть текущий блок `.hero` и навигацию в `<header>`, все секции (от `.hero` до `.final`) – в `<main>`, а финальный CTA и контакт‑инфо – в `<footer>`. При необходимости скорректировать CSS‑селекторы, заменив глобальные селекты типа `.hero` на `header .hero` и `.final` на `footer .final`.",
+ "skill": "",
+ "effect": "Улучшит SEO (поисковые роботы лучше понимают структуру), повысит доступность (скрин‑ридеры получают landmarks), может увеличить Lighthouse‑оценки в секциях SEO и Accessibility без изменения визуального представления.",
+ "risk": "Небольшой риск нарушения существующего CSS, если селекторы зависят от контекста `body > .hero`.",
+ "rollback": "`git checkout index.html` или `git restore --source=HEAD --staged --worktree index.html`.",
+ "verify": "Запустить Lighthouse (SEO + Accessibility) и убедиться, что `<header>`, `<main>`, `<footer>` присутствуют; проверить, что визуально страница не изменилась (скриншот «до‑после»).",
+ "priority_claim": "1 – высокий эффект при минимальном объёме работы.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `index.html` обернуть текущий блок `.hero` и навигацию в `<header>`, все секции (от `.hero` до `.final`) – в `<main>`, а финальный CTA и контакт‑инфо – в `<footer>`. При необходимости скорректировать CSS‑селекторы, заменив глобальные селекты типа `.hero` на `header .hero` и `.final` на `footer .final`."
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00842",
+ "round": 127,
+ "time": "2026-11-17 07:50:57",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Блок «Отзывы клиентов»‑карусель с микроданными Review (schema.org)",
+ "knob": "После секции `.price-card` (L644) вставить\n```html\n<section id=\"testimonials\" class=\"testimonials\">\n<h2 class=\"reveal\">Что говорят клиенты</h2>\n<div class=\"carousel\">\n<blockquote class=\"review\">\n<p>«Сайт за 2 дня принес мне 15 новых заявок уже в первую неделю!»</p>\n<footer>Иван Иванов, <cite>Салон красоты «Люкс»</cite></footer>\n</blockquote>\n<blockquote class=\"review\">\n<p>«Быстрая загрузка и отличная позиция в Яндексе – клиенты приходят сами.»</p>\n<footer>Мария Петрова, <cite>Кофейня «Арома»</cite></footer>\n</blockquote>\n</div>\n</section>\n```\nCSS (добавить в файл):\n```css\n.testimonials{padding:80px 0;text-align:center}\n.carousel{display:flex;overflow-x:auto;gap:2rem;scroll-snap-type:x mandatory}\n.review{flex:0 0 80%;scroll-snap-align:center;background:#fff;\nborder-radius:12px;padding:1.5rem;box-shadow:0 4px 12px rgba(0,0,0,.1)}\n```\nВ `<head>` добавить JSON‑LD:\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"Review\",\n\"author\":{\"@type\":\"Person\",\"name\":\"Иван Иванов\"},\n\"reviewBody\":\"Сайт за 2 дня принес мне 15 новых заявок уже в первую неделю!\",\n\"reviewRating\":{\"@type\":\"Rating\",\"ratingValue\":\"5\"},\n\"itemReviewed\":{\"@type\":\"Service\",\"name\":\"Лендинг за 2 дня\"}\n}\n</script>\n```\n(повторить для остальных отзывов).",
+ "skill": "",
+ "effect": "Доверие — социальное доказательство повышает конверсию, а schema.org Review улучшает SEO в поиске.",
+ "risk": "Требует реальных отзывов; использование вымышленных может нарушать честность.",
+ "rollback": "Удалить вставленные блоки и скрипт; `git checkout -- index.html`.",
+ "verify": "В браузере увидеть плавный горизонтальный скролл отзывов, кликнуть — нет переложения; в Chrome DevTools → Structured Data Testing Tool проверить наличие Review.",
+ "priority_claim": "2 — важный trust‑signal, но требует реальных отзывов; умеренный effort.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "После секции `.price-card` (L644) вставить\n```html\n<section id=\"testimonials\" class=\"testimonials\">\n<h2 class=\"reveal\">Что говорят клиенты</h2>\n<div class=\"carousel\">\n<blockquote class=\"review\">\n<p>«Сайт за 2 дня принес мне 15 новых заявок уже в первую неделю!»</p>\n<footer>Иван Иванов, <cite>Салон красоты «Люкс»</cite></footer>\n</blockquote>\n<blockquote class=\"review\">\n<p>«Быстрая загрузка и отличная позиция в Яндексе – клиенты приходят сами.»</p>\n<footer>Мария Петрова, <cite>Кофейня «Арома»</cite></footer>\n</blockquote>\n</div>\n</section>\n```\nCSS (добавить в файл):\n```css\n.testimonials{padding:80px 0;text-align:center}\n.carousel{display:flex;overflow-x:auto;gap:2rem;scroll-snap-type:x mandatory}\n.review{flex:0 0 80%;scroll-snap-align:center;background:#fff;\nborder-radius:12px;padding:1.5rem;box-shadow:0 4px 12px rgba(0,0,0,.1)}\n```\nВ `<head>` добавить JSON‑LD:\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"Review\",\n\"author\":{\"@type\":\"Person\",\"name\":\"Иван Иванов\"},\n\"reviewBody\":\"Сайт за 2 дня принес мне 15 новых заявок уже в первую неделю!\",\n\"reviewRating\":{\"@type\":\"Rating\",\"ratingValue\":\"5\"},\n\"itemReviewed\":{\"@type\":\"Service\",\"name\":\"Лендинг за 2 дня\"}\n}\n</script>\n```\n(повторить для остальных отзывов)."
+ ],
+ "flags": []
+}

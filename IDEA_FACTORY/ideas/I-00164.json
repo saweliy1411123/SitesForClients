@@ -1,0 +1,26 @@
+{
+ "id": "I-00164",
+ "round": 25,
+ "time": "2026-11-17 02:53:22",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Scroll‑cue arrow в hero‑секции",
+ "knob": "В конец `<header class=\"hero\">` добавить `<div class=\"scroll-cue\" aria-hidden=\"true\"></div>` и в CSS `.scroll-cue{position:absolute;bottom:1rem;left:50%;transform:translateX(-50%);width:24px;height:24px;background:url('data:image/svg+xml,…') no‑repeat center;animation:bounce 2s infinite}`",
+ "skill": "",
+ "effect": "Пользователи сразу видят визуальный подсказку, что контент ниже, повышая глубину скролла и вовлечённость.",
+ "risk": "Небольшой рост CSS‑веса; если анимация будет слишком навязчивой – может раздражать.",
+ "rollback": "`git checkout index.html` (удалить добавленные строки).",
+ "verify": "Открыть страницу в мобильном режиме, убедиться, что стрелка видна и анимируется, и скролл вниз работает без смещения контента.",
+ "priority_claim": "1 – быстрый визуальный сигнал, повышающий показатель «скролл дальше» без кода‑бэка.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В конец `<header class=\"hero\">` добавить `<div class=\"scroll-cue\" aria-hidden=\"true\"></div>` и в CSS `.scroll-cue{position:absolute;bottom:1rem;left:50%;transform:translateX(-50%);width:24px;height:24px;background:url('data:image/svg+xml,…') no‑repeat center;animation:bounce 2s infinite}`"
+ ],
+ "flags": []
+}

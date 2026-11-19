@@ -1,0 +1,26 @@
+{
+ "id": "I-00670",
+ "round": 102,
+ "time": "2026-11-17 06:41:01",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "FAQ‑VOICE‑READ‑OUT",
+ "knob": "В каждом элементе FAQ (например, `<div class=\"faq-item\">`) добавить кнопку `<button class=\"faq-read\" aria-label=\"Прослушать ответ\">🔊</button>`; в `<script>` добавить обработчик, который берёт текст соседнего `.answer` и воспроизводит через `window.speechSynthesis.speak(new SpeechSynthesisUtterance(text))`.",
+ "skill": "",
+ "effect": "Доступность для пользователей с ограниченным зрением, повышает время взаимодействия и SEO‑оценку за счёт улучшенной семантики.",
+ "risk": "На некоторых браузерах (Safari) SpeechSynthesis может требовать пользовательского взаимодействия; кнопка решает это, но может не работать в старых браузерах.",
+ "rollback": "`git checkout HEAD -- index.html`.",
+ "verify": "Нажать кнопку – услышать озвучивание текста ответа, проверка в консоли отсутствия ошибок.",
+ "priority_claim": "3 – полезно для a11y, но эффект на конверсию менее очевиден; реализуемо без сторонних сервисов.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В каждом элементе FAQ (например, `<div class=\"faq-item\">`) добавить кнопку `<button class=\"faq-read\" aria-label=\"Прослушать ответ\">🔊</button>`; в `<script>` добавить обработчик, который берёт текст соседнего `.answer` и воспроизводит через `window.speechSynthesis.speak(new SpeechSynthesisUtterance(text))`."
+ ],
+ "flags": []
+}

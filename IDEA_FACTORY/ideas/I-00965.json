@@ -1,0 +1,26 @@
+{
+ "id": "I-00965",
+ "round": 160,
+ "time": "2026-11-17 09:24:17",
+ "source": "localhost:8080/zhipu/glm-4.7-flash",
+ "sources": [
+  "localhost:8080/zhipu/glm-4.7-flash"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Skeleton Loader для Hero-секции",
+ "knob": "В HTML секции `.hero` (внутри `<div class=\"wrap\">`) добавить `<div class=\"hero-skeleton\"></div>`. В JS (внутри `<script>`) добавить строку `document.querySelector('.hero-skeleton').remove();` перед рендером частиц/градиентов.",
+ "skill": "skeleton-hero-loader\nSAFE CSS:\n```css\n.hero-skeleton {\nwidth: 100%;\nheight: 300px;\nbackground: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);\nbackground-size: 200% 100%;\nanimation: shi",
+ "effect": "Устраняет эффект \"мигания\" (FOUC) при загрузке тяжелых градиентов и скриптов, сайт выглядит профессиональнее.",
+ "risk": "Нет.",
+ "rollback": "Удалить добавленный div и JS строку.",
+ "verify": "Обновить страницу, проверить отсутствие пустого блока перед появлением контента.",
+ "priority_claim": "3",
+ "source_hint": "",
+ "site_request": "hero",
+ "category": "lever",
+ "variants": [
+  "В HTML секции `.hero` (внутри `<div class=\"wrap\">`) добавить `<div class=\"hero-skeleton\"></div>`. В JS (внутри `<script>`) добавить строку `document.querySelector('.hero-skeleton').remove();` перед рендером частиц/градиентов."
+ ],
+ "flags": []
+}

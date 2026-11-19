@@ -1,0 +1,26 @@
+{
+ "id": "I-00257",
+ "round": 39,
+ "time": "2026-11-17 03:32:27",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Lazy‑loaded Video‑Preview для каждого демо‑концепта",
+ "knob": "В секции «Демо‑концепты» под каждый блок добавить `<video preload=\"metadata\" poster=\"thumb.jpg\" class=\"demo-video\" muted loop playsinline><source src=\"demo.mp4\" type=\"video/mp4\"></video>` и в CSS `video{opacity:0;transition:opacity .3s}` + JS‑интерсекшон Observer для установки `src` при появлении в viewport.",
+ "skill": "",
+ "effect": "Демонстрирует реальный результат, увеличивает время на странице лишь при просмотре, повышает конверсию.",
+ "risk": "Требует размещения видеоматериалов – может увеличить хостинг‑расходы.",
+ "rollback": "Удалить `<video>`‑блоки и скрипт‑observer.",
+ "verify": "Открыть страницу, прокрутить до демо‑блока, убедиться, что видео стартует только после появления в зоне видимости.",
+ "priority_claim": "2 – сильный визуальный аргумент, но требует контента.",
+ "source_hint": "",
+ "site_request": "демо",
+ "category": "lever",
+ "variants": [
+  "В секции «Демо‑концепты» под каждый блок добавить `<video preload=\"metadata\" poster=\"thumb.jpg\" class=\"demo-video\" muted loop playsinline><source src=\"demo.mp4\" type=\"video/mp4\"></video>` и в CSS `video{opacity:0;transition:opacity .3s}` + JS‑интерсекшон Observer для установки `src` при появлении в viewport."
+ ],
+ "flags": []
+}

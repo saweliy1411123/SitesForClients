@@ -1,0 +1,26 @@
+{
+ "id": "I-00971",
+ "round": 161,
+ "time": "2026-11-17 09:26:50",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Focus‑visible кольцо с glass‑эффектом для всех интерактивных элементов",
+ "knob": "В глобальном CSS добавить:\n```css\n:focus-visible {\noutline: 2px solid rgba(255,255,255,0.8);\noutline-offset: 4px;\nbox-shadow: 0 0 8px rgba(255,255,255,0.6);\nbackdrop-filter: blur(4px);\n}\n```",
+ "skill": "",
+ "effect": "Улучшает доступность, одновременно подчёркивая премиальный дизайн за счёт мягкого размытия вокруг фокуса.",
+ "risk": "На старых браузерах без `backdrop-filter` будет обычное кольцо – приемлемо.",
+ "rollback": "Удалить правило из CSS; `git checkout -- style.css`.",
+ "verify": "Перейти клавиатурой к любой ссылке/кнопке (Tab) – должно появиться стилизованное кольцо.",
+ "priority_claim": "1 – простое улучшение доступности, повышает соответствие WCAG и бренд‑имидж.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В глобальном CSS добавить:\n```css\n:focus-visible {\noutline: 2px solid rgba(255,255,255,0.8);\noutline-offset: 4px;\nbox-shadow: 0 0 8px rgba(255,255,255,0.6);\nbackdrop-filter: blur(4px);\n}\n```"
+ ],
+ "flags": []
+}

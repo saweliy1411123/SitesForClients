@@ -1,0 +1,26 @@
+{
+ "id": "I-00404",
+ "round": 60,
+ "time": "2026-11-17 04:35:26",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Перенести скрипт в конец `<body>` и добавить `defer`",
+ "knob": "В `<script>` (единственный) изменить на `<script src=\"script.js\" defer></script>` и разместить перед закрывающим `</body>` (если скрипт встроен, вынести в отдельный файл `script.js` и подключить с `defer`)",
+ "skill": "",
+ "effect": "Уменьшит блокировку рендеринга, ускорит First Contentful Paint, особенно на мобильных устройствах",
+ "risk": "Если скрипт зависит от элементов, объявленных после него, `defer` гарантирует их загрузку после парсинга – проверка обязательна",
+ "rollback": "Восстановить оригинальный `<script>` из репозитория (`git checkout -- index.html`)",
+ "verify": "В Chrome DevTools → Network убедиться, что скрипт загружается как “deferred”; измерить FCP до/после через Lighthouse",
+ "priority_claim": "2 – ускорение загрузки стоит усилий, но риск низок",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<script>` (единственный) изменить на `<script src=\"script.js\" defer></script>` и разместить перед закрывающим `</body>` (если скрипт встроен, вынести в отдельный файл `script.js` и подключить с `defer`)"
+ ],
+ "flags": []
+}

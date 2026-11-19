@@ -1,0 +1,31 @@
+{
+ "id": "I-00009",
+ "round": 2,
+ "time": "2026-11-17 01:46:23",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime",
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 5,
+ "status": "NEW",
+ "title": "METHOD — аудит клавиатурной навигации за 3 минуты",
+ "knob": "METHOD: Открыть index.html, нажать Tab от верха страницы и пройти все интерактивные элементы (CTA-ссылки). Проверить: виден ли focus-стиль на каждом, логичен ли порядок, нет ли «ловушек». Параллельно в devtools → Rendering → «Emulate vision deficiencies» включить blurred vision для проверки контраста CTA. Записать список элементов без видимого focus.",
+ "skill": "",
+ "effect": "Находит недоступные CTA — потерянные заявки с клавиатуры и с мобильных (focus-стили коррелируют с тап-отзывчивостью).",
+ "risk": "Ручной проход может пропустить edge-cases (например, поведение при скринридере).",
+ "rollback": "Метод не меняет файл; только заметки.",
+ "verify": "3–5 минут на полный проход Tab + скриншоты проблемных мест.",
+ "priority_claim": "1 — при 0 форм/кнопок CTA через ссылки — критичный путь конверсии, а проверка почти бесплатна.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: Открыть index.html, нажать Tab от верха страницы и пройти все интерактивные элементы (CTA-ссылки). Проверить: виден ли focus-стиль на каждом, логичен ли порядок, нет ли «ловушек». Параллельно в devtools → Rendering → «Emulate vision deficiencies» включить blurred vision для проверки контраста CTA. Записать список элементов без видимого focus.",
+  "METHOD: (1) Открыть index.html, DevTools → Rendering → Emulate vision deficiencies → «Blurred vision» (2) Проверить, сохраняется ли иерархия страницы."
+ ],
+ "flags": []
+}

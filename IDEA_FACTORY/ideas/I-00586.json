@@ -1,0 +1,26 @@
+{
+ "id": "I-00586",
+ "round": 88,
+ "time": "2026-11-17 05:58:38",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "I-00605 Добавить лёгкий CSS‑слайдер отзывов (только flex + scroll‑snap)",
+ "knob": "Обернуть текущие отзывы (см. `SITE_REQUEST \"отзывы\"`) в контейнер\n```html\n<div class=\"testimonials\">\n<div class=\"testimonial\">…</div>\n<div class=\"testimonial\">…</div>\n<div class=\"testimonial\">…</div>\n</div>\n```\nи в CSS добавить\n```css\n.testimonials{\ndisplay:flex; overflow-x:auto; scroll-snap-type:x mandatory;\ngap:1rem; padding:1rem 0;\n}\n.testimonial{\nflex:0 0 80%; scroll-snap-align:center;\nbackground:#fff; border-radius:8px; padding:1rem;\n}\n```",
+ "skill": "",
+ "effect": "Динамический блок соц‑доказательств без JS повышает доверие и удерживает внимание.",
+ "risk": "На очень узких экранах может выглядеть срезанным; потребуется медиазапросы.",
+ "rollback": "Удалить контейнер и CSS‑правила.",
+ "verify": "Прокрутить горизонтально, убедиться, что каждый отзыв «прилипает» к центру.",
+ "priority_claim": "2 – средний UX‑эффект, без нагрузки JS.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Обернуть текущие отзывы (см. `SITE_REQUEST \"отзывы\"`) в контейнер\n```html\n<div class=\"testimonials\">\n<div class=\"testimonial\">…</div>\n<div class=\"testimonial\">…</div>\n<div class=\"testimonial\">…</div>\n</div>\n```\nи в CSS добавить\n```css\n.testimonials{\ndisplay:flex; overflow-x:auto; scroll-snap-type:x mandatory;\ngap:1rem; padding:1rem 0;\n}\n.testimonial{\nflex:0 0 80%; scroll-snap-align:center;\nbackground:#fff; border-radius:8px; padding:1rem;\n}\n```"
+ ],
+ "flags": []
+}

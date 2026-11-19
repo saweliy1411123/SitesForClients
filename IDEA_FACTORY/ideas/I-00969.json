@@ -1,0 +1,26 @@
+{
+ "id": "I-00969",
+ "round": 161,
+ "time": "2026-11-17 09:26:50",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Sticky glass‑styled CTA‑бар после прокрутки 50 %",
+ "knob": "В HTML после `</header>` вставить `<div class=\"sticky-cta\" role=\"dialog\" aria-label=\"Получить бесплатное демо\"><a href=\"#final\" class=\"btn-primary\">Получить демо</a></div>`. В CSS: `.sticky-cta{position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,0.15);backdrop-filter:blur(10px);padding:12px;text-align:center;transform:translateY(100%);transition:transform .4s ease;}` + JS‑мелкый скрипт, который добавляет класс `show` когда `window.scrollY > document.body.scrollHeight/2`. `.sticky-cta.show{transform:translateY(0);}`",
+ "skill": "",
+ "effect": "Постоянный, но ненавязчивый CTA повышает конверсию, особенно на мобильных, где «скролл‑до‑конца» часто не происходит.",
+ "risk": "Требует небольшого JS‑кода; если пользователь отключил JS, CTA не появится – но основной CTA остаётся.",
+ "rollback": "Удалить вставленный HTML‑блок и связанные CSS/JS‑строки; `git checkout -- index.html && git checkout -- style.css && git checkout -- script.js`.",
+ "verify": "Прокрутить страницу более чем на 50 % и убедиться, что появляется нижний бар; кликнуть кнопку – должна перейти к финальному CTA.",
+ "priority_claim": "2 – повышает конверсию без изменения основной структуры, легко тестировать.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В HTML после `</header>` вставить `<div class=\"sticky-cta\" role=\"dialog\" aria-label=\"Получить бесплатное демо\"><a href=\"#final\" class=\"btn-primary\">Получить демо</a></div>`. В CSS: `.sticky-cta{position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,0.15);backdrop-filter:blur(10px);padding:12px;text-align:center;transform:translateY(100%);transition:transform .4s ease;}` + JS‑мелкый скрипт, который добавляет класс `show` когда `window.scrollY > document.body.scrollHeight/2`. `.sticky-cta.show{transform:translateY(0);}`"
+ ],
+ "flags": []
+}

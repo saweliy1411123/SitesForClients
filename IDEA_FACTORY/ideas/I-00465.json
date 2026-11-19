@@ -1,0 +1,29 @@
+{
+ "id": "I-00465",
+ "round": 69,
+ "time": "2026-11-17 05:02:04",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "SKILL — scroll-triggered-step-highlight (шаги подсвечиваются по мере прокрутки, «живой» прогресс без бэкенда)",
+ "knob": "SKILL — scroll-triggered-step-highlight\nНазвание: scroll-triggered-step-highlight\nКогда применять: на любом статическом лендинге с нумерованными шагами/процессом (3–5 карточек в ряд), чтобы шаги «оживали» по мере прокрутки и вели глаз сверху вниз. Не требует библиотек, работает на чистом IntersectionObserver.\nШаги:\n1. Убедиться, что шаги секции обёрнуты в общий контейнер (например `.steps`) и каждый шаг — карточка с классом `.step` (добавить класс, если его нет).\n2. Вставить SAFE CSS в конец `<style>`.\n3. Вставить SAFE JS перед `</body>` (после основного скрипта).\n4. Проверить: при прокрутке шаги по очереди получают класс `.is-active` — рамка/номер подсвечиваются; при `prefers-reduced-motion` анимации отключены.\n5. Откатить — удалить вставленные блоки (оригинал index.html не трогается, всё уходит в index.improved.html).\nSAFE CSS:\n.steps{--step-accent:#8b5cf6}\n.step{position:relative;transition:transform .45s ease,box-shadow .45s ease,opacity .45s ease;opacity:.55}\n.step.is-active{opacity:1;transform:translateY(-4px);box-shadow:0 24px 60px rgba(139,92,246,.18)}\n.step .step-num{transition:color .45s ease,transform .45s ease}\n.step.is-active .step-num{color:var(--step-accent);transform:scale(1.12)}\n.step.is-active::before{content:'';position:absolute;inset:-1px;border-radius:inherit;border:1px solid rgba(139,92,246,.45);pointer-events:none}\n@media (prefers-reduced-motion: reduce){.step,.step .step-num{transition:none}.step.is-active{transform:none}}\nSAFE JS:\ndocument.addEventListener('DOMContentLoaded',function(){\nvar steps=document.querySelectorAll('.steps .step');\nif(!steps.length||!('IntersectionObserver' in window))return;\nvar io=new IntersectionObserver(function(entries){\nentries.forEach(function(e){\nif(e.isIntersecting){e.target.classList.add('is-active');io.unobserve(e.target);}\n});\n},{threshold:.4});\nsteps.forEach(function(s){io.observe(s);});\n});",
+ "skill": "",
+ "effect": "посетитель визуально проходит путь «шаг 1 → шаг 3», лучше понимает процесс и доходит до CTA цены; выглядит дороже, чем статичный список.",
+ "risk": "при очень плотной вёрстке подсветка может конфликтовать с существующим hover-эффектом карточек — проверить на копии.",
+ "rollback": "git checkout -- index.improved.html (или удалить вставленные CSS/JS блоки).",
+ "verify": "открыть index.improved.html, прокрутить до «Три шага»: карточки по очереди подсвечиваются; в DevTools → Rendering → Emulate prefers-reduced-motion: reduce — анимации отключены; Tab-порядок не изменился.",
+ "priority_claim": "2 — заметный визуальный/конверсионный выигрыш при нулевом риске для контента.",
+ "source_hint": "",
+ "site_request": "steps",
+ "category": "skill",
+ "variants": [
+  "SKILL — scroll-triggered-step-highlight\nНазвание: scroll-triggered-step-highlight\nКогда применять: на любом статическом лендинге с нумерованными шагами/процессом (3–5 карточек в ряд), чтобы шаги «оживали» по мере прокрутки и вели глаз сверху вниз. Не требует библиотек, работает на чистом IntersectionObserver.\nШаги:\n1. Убедиться, что шаги секции обёрнуты в общий контейнер (например `.steps`) и каждый шаг — карточка с классом `.step` (добавить класс, если его нет).\n2. Вставить SAFE CSS в конец `<style>`.\n3. Вставить SAFE JS перед `</body>` (после основного скрипта).\n4. Проверить: при прокрутке шаги по очереди получают класс `.is-active` — рамка/номер подсвечиваются; при `prefers-reduced-motion` анимации отключены.\n5. Откатить — удалить вставленные блоки (оригинал index.html не трогается, всё уходит в index.improved.html).\nSAFE CSS:\n.steps{--step-accent:#8b5cf6}\n.step{position:relative;transition:transform .45s ease,box-shadow .45s ease,opacity .45s ease;opacity:.55}\n.step.is-active{opacity:1;transform:translateY(-4px);box-shadow:0 24px 60px rgba(139,92,246,.18)}\n.step .step-num{transition:color .45s ease,transform .45s ease}\n.step.is-active .step-num{color:var(--step-accent);transform:scale(1.12)}\n.step.is-active::before{content:'';position:absolute;inset:-1px;border-radius:inherit;border:1px solid rgba(139,92,246,.45);pointer-events:none}\n@media (prefers-reduced-motion: reduce){.step,.step .step-num{transition:none}.step.is-active{transform:none}}\nSAFE JS:\ndocument.addEventListener('DOMContentLoaded',function(){\nvar steps=document.querySelectorAll('.steps .step');\nif(!steps.length||!('IntersectionObserver' in window))return;\nvar io=new IntersectionObserver(function(entries){\nentries.forEach(function(e){\nif(e.isIntersecting){e.target.classList.add('is-active');io.unobserve(e.target);}\n});\n},{threshold:.4});\nsteps.forEach(function(s){io.observe(s);});\n});"
+ ],
+ "flags": []
+}

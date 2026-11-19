@@ -1,0 +1,26 @@
+{
+ "id": "I-00883",
+ "round": 135,
+ "time": "2026-11-17 08:14:20",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "METHOD — First Contentful Paint measurement",
+ "knob": "METHOD: В консоли DevTools выполнить однострочник:\n```js\nnew PerformanceObserver(list=>{\nlist.getEntriesByName('first-contentful-paint')\n.forEach(e=>console.log('FCP:', e.startTime.toFixed(2), 'ms'));\n}).observe({type:'paint',buffered:true});\n```",
+ "skill": "",
+ "effect": "Мгновенный вывод FCP — позволит сравнить варианты hero‑копий/стилей без деплоя, оценить восприятие скорости.",
+ "risk": "Нет (только чтение Perf API).",
+ "rollback": "Закрыть консоль / перезагрузить страницу.",
+ "verify": "После выполнения скрипта в консоли появится строка `FCP: <value> ms`. При смене вариантов (например, изменяя текст в dev‑инспекторе) повторить — разница будет видна.",
+ "priority_claim": "1 — ключевой показатель восприятия скорости, быстрый и лёгкий способ сравнения гипотез.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: В консоли DevTools выполнить однострочник:\n```js\nnew PerformanceObserver(list=>{\nlist.getEntriesByName('first-contentful-paint')\n.forEach(e=>console.log('FCP:', e.startTime.toFixed(2), 'ms'));\n}).observe({type:'paint',buffered:true});\n```"
+ ],
+ "flags": []
+}

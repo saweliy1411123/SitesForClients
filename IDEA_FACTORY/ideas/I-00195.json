@@ -1,0 +1,26 @@
+{
+ "id": "I-00195",
+ "round": 30,
+ "time": "2026-11-17 03:06:40",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Simulated click‑flow timing with Chrome Recorder (no backend)",
+ "knob": "METHOD: Open Chrome DevTools → **Run command** (`Ctrl+Shift+P`) → type “**Record performance**”. Start recording, then perform the typical user journey: scroll to the hero CTA, click “Написать в Telegram — демо бесплатно”, and scroll to the final “Получить демо бесплатно” button. Stop recording and examine the **Performance** tab for task duration and any jank.",
+ "skill": "",
+ "effect": "Gives immediate insight into perceived interaction smoothness and identifies any UI freezes or delayed scroll‑behaviour that could deter conversions, all without code changes.",
+ "risk": "Minimal; only captures client‑side performance; does not affect live users.",
+ "rollback": "N/A – the method is observational only.",
+ "verify": "After recording, look for long‑running tasks (> 50 ms) in the Main thread and note any layout‑shift events; ensure the flow completes within a few seconds.",
+ "priority_claim": "3 – while less critical than headline clarity, smooth interaction reinforces trust and can improve conversion; quick to ",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: Open Chrome DevTools → **Run command** (`Ctrl+Shift+P`) → type “**Record performance**”. Start recording, then perform the typical user journey: scroll to the hero CTA, click “Написать в Telegram — демо бесплатно”, and scroll to the final “Получить демо бесплатно” button. Stop recording and examine the **Performance** tab for task duration and any jank."
+ ],
+ "flags": []
+}

@@ -1,0 +1,28 @@
+{
+ "id": "I-00679",
+ "round": 103,
+ "time": "2026-11-17 06:44:46",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 3,
+ "status": "NEW",
+ "title": "aria-hidden на иконочных SVG внутри контента (не фоновых)",
+ "knob": "SITE_REQUEST: `<svg` — найти все инлайновые SVG-иконки в пунктах списка цены/шагов; каждому декоративному добавить `aria-hidden=\"true\" focusable=\"false\"`, если ещё нет.",
+ "skill": "",
+ "effect": "скринридер не зачитывает «графика, без названия» перед каждым пунктом; чище семантика списков.",
+ "risk": "если какой-то SVG несёт смысл (иконка-статус), его скрытие уберёт информацию — проверять каждый.",
+ "rollback": "`git checkout -- index.html`.",
+ "verify": "2 минуты — включить VoiceOver/NVDA или расшир",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "SITE_REQUEST: `<svg` — найти все инлайновые SVG-иконки в пунктах списка цены/шагов; каждому декоративному добавить `aria-hidden=\"true\" focusable=\"false\"`, если ещё нет."
+ ],
+ "flags": []
+}

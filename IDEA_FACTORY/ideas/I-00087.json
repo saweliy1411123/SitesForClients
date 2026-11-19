@@ -1,0 +1,29 @@
+{
+ "id": "I-00087",
+ "round": 13,
+ "time": "2026-11-17 02:18:13",
+ "source": "lareper/glm-5.2-fast-preview",
+ "sources": [
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime",
+  "lareper/glm-5.2"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "SKILL — Scroll Progress Ring на CTA (прогресс-индикатор дочитывания вокруг кнопки)",
+ "knob": "Название: **scroll-progress-cta**. Когда применять: любой статический лендинг с одним якорным CTA (#contact) и длинной прокруткой — повышает мотивацию дочитать и кликнуть, показывает «вы у цели». Шаги: (1) добавить в CSS кольцевой индикатор через conic-gradient, привязанный к переменной --sp; (2) добавить крошечный JS, который на scroll обновляет --sp на <html>; (3) повесить класс .progress-ring на главную CTA-кнопку (например, .btn-primary в hero и final). Не трогает контент и вёрстку, только визуальный слой.\nSAFE CSS:\n```css\n.progress-ring{position:relative;isolation:isolate}\n.progress-ring::before{content:\"\";position:absolute;inset:-4px;border-radius:inherit;padding:2px;\nbackground:conic-gradient(var(--grad,#8b5cf6 0%,#4cc9f0 calc(var(--sp,0)*1%)),rgba(255,255,255,.08) 0);\n-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);\n-webkit-mask-composite:xor;mask-composite:exclude;z-index:-1;transition:background .1s linear}\n.progress-ring:hover,.progress-ring:focus-visible{transform:scale(1.03)}\n@media (prefers-reduced-motion: reduce){.progress-ring::before{transition:none}}\n```\nSAFE JS:\n```js\n(function(){\nvar d=document.documentElement;\nfunction upd(){\nvar h=d.scrollHeight-d.clientHeight;\nd.style.setProperty('--sp', h>0?Math.round(window.scrollY/h*100):0);\n}\nwindow.addEventListener('scroll',upd,{passive:true});\nupd();\n})();\n```",
+ "skill": "",
+ "effect": "визуальный триггер завершённости («вы дочитали — жмите»), +кликабельность CTA в нижних секциях, премиальный вид без картинок и библиотек.",
+ "risk": "conic-gradient с mask-composite не поддерживается в старых Safari — кольцо просто не отрисуется, кнопка останется обычной (деградация безопасная).",
+ "rollback": "git checkout -- index.html (или удалить класс .progress-ring и блоки CSS/JS).",
+ "verify": "открыть копию index.improved.html, прокрутить страницу — кольцо вокруг CTA должно заполняться по мере скролла; проверить Tab-фокус и prefers-reduced-motion в DevTools.",
+ "priority_claim": "2 — заметный конверсионный и визуальный апгрейд, нулевой риск контента.",
+ "source_hint": "",
+ "site_request": "reveal",
+ "category": "skill",
+ "variants": [
+  "Название: **scroll-progress-cta**. Когда применять: любой статический лендинг с одним якорным CTA (#contact) и длинной прокруткой — повышает мотивацию дочитать и кликнуть, показывает «вы у цели». Шаги: (1) добавить в CSS кольцевой индикатор через conic-gradient, привязанный к переменной --sp; (2) добавить крошечный JS, который на scroll обновляет --sp на <html>; (3) повесить класс .progress-ring на главную CTA-кнопку (например, .btn-primary в hero и final). Не трогает контент и вёрстку, только визуальный слой.\nSAFE CSS:\n```css\n.progress-ring{position:relative;isolation:isolate}\n.progress-ring::before{content:\"\";position:absolute;inset:-4px;border-radius:inherit;padding:2px;\nbackground:conic-gradient(var(--grad,#8b5cf6 0%,#4cc9f0 calc(var(--sp,0)*1%)),rgba(255,255,255,.08) 0);\n-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);\n-webkit-mask-composite:xor;mask-composite:exclude;z-index:-1;transition:background .1s linear}\n.progress-ring:hover,.progress-ring:focus-visible{transform:scale(1.03)}\n@media (prefers-reduced-motion: reduce){.progress-ring::before{transition:none}}\n```\nSAFE JS:\n```js\n(function(){\nvar d=document.documentElement;\nfunction upd(){\nvar h=d.scrollHeight-d.clientHeight;\nd.style.setProperty('--sp', h>0?Math.round(window.scrollY/h*100):0);\n}\nwindow.addEventListener('scroll',upd,{passive:true});\nupd();\n})();\n```"
+ ],
+ "flags": []
+}

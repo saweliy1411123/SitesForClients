@@ -1,0 +1,27 @@
+{
+ "id": "I-00833",
+ "round": 126,
+ "time": "2026-11-17 07:47:56",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Прогресс-бар скролла над секцией «Три шага»",
+ "knob": "Вставить перед `<div class=\"steps\">` элемент `<div class=\"steps-progress\"><div class=\"fill\"></div></div>`.",
+ "skill": "scroll-reveal-progress-bar",
+ "effect": "Повышение вовлеченности пользователя при скролле через секцию «Три шага».",
+ "risk": "Требует добавления интерактивного контента без явного обоснования.",
+ "rollback": "Удалить добавленный прогресс-бар.",
+ "verify": "Проверить видимость прогресс-бара при скролле через секцию «Три шага» за 2 минуты.",
+ "priority_claim": "2, поскольку улучшает пользовательский опыт, но не критически важен для конверсии.",
+ "source_hint": "",
+ "site_request": "steps",
+ "category": "lever",
+ "variants": [
+  "Вставить перед `<div class=\"steps\">` элемент `<div class=\"steps-progress\"><div class=\"fill\"></div></div>`.",
+  "Вставить перед `<div class=\"steps\">` элемент `<div class=\"steps-progress\"><div class=\"fill\"></div></div>`"
+ ],
+ "flags": []
+}

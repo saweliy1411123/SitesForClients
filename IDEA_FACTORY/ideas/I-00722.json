@@ -1,0 +1,27 @@
+{
+ "id": "I-00722",
+ "round": 112,
+ "time": "2026-11-17 07:08:55",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — glassy-nav-scroll",
+ "knob": "\n**Name:** `glassy-nav-scroll`\n**When to apply:** На любом лендинге с фиксированным верхним меню, где нужен премиальный вид навигации.\n**SAFE CSS:**\n```css\n.glassy-nav-scroll {\nbackground: linear-gradient(to bottom, var(--nav-bg-start), var(--nav-bg-end));\nbackdrop-filter: blur(20px);\npadding: 1rem;\nposition: sticky;\ntop: 0;\nz-index: 1000;\n}\n```",
+ "skill": "",
+ "effect": "Пользователи будут испытывать премиальный эффект навигации при скролле страницы.",
+ "risk": "Может потребоваться корректировка существующих стилей навигации для совместимости с новым скиллом.",
+ "rollback": "Удалить класс `glassy-nav-scroll` из навигационного меню.",
+ "verify": "Проверить визуальное качество и корректность скилла на разных устройствах и разрешениях.",
+ "priority_claim": "2",
+ "source_hint": "",
+ "site_request": "nav-links",
+ "category": "skill",
+ "variants": [
+  "\n**Name:** `glassy-nav-scroll`\n**When to apply:** На любом лендинге с фиксированным верхним меню, где нужен премиальный вид навигации.\n**SAFE CSS:**\n```css\n.glassy-nav-scroll {\nbackground: linear-gradient(to bottom, var(--nav-bg-start), var(--nav-bg-end));\nbackdrop-filter: blur(20px);\npadding: 1rem;\nposition: sticky;\ntop: 0;\nz-index: 1000;\n}\n```",
+  "\n**Name:** `glassy-nav-scroll`\n**When to apply:** На любом лендинге с фиксированным верхним меню, где нужен эффект стеклянной навигации.\n**How to apply:**\n- SAFE CSS:\n```css\n.glassy-nav-scroll {\nbackground: linear-gradient(180deg, rgba(10,10,15,.4) 0%, transparent 40%, var(--bg) 100%);\nbackdrop-filter: blur(10px);\npadding: 10px;\nborder-radius: 10px;\n}\n.glassy-nav-scroll:hover {\nbackdrop-filter: blur(20px);\n}\n```\n- SAFE JS: Нет."
+ ],
+ "flags": []
+}

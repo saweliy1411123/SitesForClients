@@ -1,0 +1,26 @@
+{
+ "id": "I-00955",
+ "round": 158,
+ "time": "2026-11-17 09:18:34",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Click‑to‑call CTA‑button в hero‑секции",
+ "knob": "Внутри `<header class=\"hero\">` добавить сразу после подзаголовка `<p class=\"sub\">` кнопку‑ссылку\n```html\n<a href=\"tel:+73412345678\" class=\"btn-primary cta-call\" role=\"button\" aria-label=\"Позвонить сейчас\">\n📞 Позвонить бесплатно\n</a>\n```\nи в CSS добавить минимум `margin-top:1rem;` для отступа.",
+ "skill": "",
+ "effect": "Увеличивает конверсию мобильных пользователей, позволяя сразу связаться без копирования номера.",
+ "risk": "Требует подтверждения владельца о наличии рабочего телефонного номера.",
+ "rollback": "`git checkout -- index.html` (или удалить только добавленные строки).",
+ "verify": "Открыть страницу на мобильном эмуляторе, кликнуть кнопку – должно открыться приложение звонка/диалог “Позвонить”.",
+ "priority_claim": "1 – быстрый прирост конверсии на мобильных, минимальные изменения кода.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Внутри `<header class=\"hero\">` добавить сразу после подзаголовка `<p class=\"sub\">` кнопку‑ссылку\n```html\n<a href=\"tel:+73412345678\" class=\"btn-primary cta-call\" role=\"button\" aria-label=\"Позвонить сейчас\">\n📞 Позвонить бесплатно\n</a>\n```\nи в CSS добавить минимум `margin-top:1rem;` для отступа."
+ ],
+ "flags": []
+}

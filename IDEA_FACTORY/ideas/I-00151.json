@@ -1,0 +1,26 @@
+{
+ "id": "I-00151",
+ "round": 23,
+ "time": "2026-11-17 02:46:38",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "URL‑parameter‑driven copy toggle for instant A/B testing",
+ "knob": "METHOD: Add a tiny script at the end of `<body>`:\n```html\n<script>\nconst params = new URLSearchParams(location.search);\nif (params.get('v') === '2') {\ndocument.querySelector('h1').textContent = 'Сайт для вашего бизнеса — через 2 дня, клиенты находят вас в Яндексе';\ndocument.querySelector('.hero-note b').textContent = 'демо‑макет с вашими услугами и ценами за 2 дня';\n}\n</script>\n```\nNo other files changed.",
+ "skill": "",
+ "effect": "Enables a zero‑deployment A/B test: compare original copy (v=1) vs. revised copy (v=2) by simply changing the URL, measuring click‑through on the CTA via console or screen‑recording.",
+ "risk": "Requires manual URL change; if left in production it could expose test copy to users unintentionally.",
+ "rollback": "Remove the script block (git checkout index.html).",
+ "verify": "Open `index.html?v=2` locally, confirm the h1 and hero‑note text have swapped; click the CTA and observe any difference in click count (log via `console.log` inside the script). Takes ≤3 min.",
+ "priority_claim": "3 – Provides fast, data‑driven copy validation with negligible overhead; lower priority than accessibility and performan",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: Add a tiny script at the end of `<body>`:\n```html\n<script>\nconst params = new URLSearchParams(location.search);\nif (params.get('v') === '2') {\ndocument.querySelector('h1').textContent = 'Сайт для вашего бизнеса — через 2 дня, клиенты находят вас в Яндексе';\ndocument.querySelector('.hero-note b').textContent = 'демо‑макет с вашими услугами и ценами за 2 дня';\n}\n</script>\n```\nNo other files changed."
+ ],
+ "flags": []
+}

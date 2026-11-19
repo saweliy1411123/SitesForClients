@@ -1,0 +1,26 @@
+{
+ "id": "I-00337",
+ "round": 51,
+ "time": "2026-11-17 04:07:26",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "URL‑Param Copy Switch for Instant A/B",
+ "knob": "METHOD – В `<head>` вставить скрипт, читающий параметр `?v=2` и переключающий класс `variant‑2` на `<body>`; в HTML добавить альтернативные тексты в атрибуты `data-alt` и показать их через CSS / JS. Пример:\n```js\n(() => {\nconst url = new URL(location);\nif (url.searchParams.get('v') === '2') document.body.classList.add('variant-2');\n})();\n```\nCSS:\n```css\n.variant-2 h1::after{content:\"Сайт за 2 дня — клиенты находят вас в Яндексе (тест)\";}\n.variant-2 .hero-note{display:none;}\n```",
+ "skill": "",
+ "effect": "Позволяет мгновенно сравнивать два варианта заголовка или текста без деплоя, проверяя реакцию пользователей (через аналитику или быстрый опрос).",
+ "risk": "Требует добавить `data‑alt`/CSS‑правила; если оставить, могут появиться лишние стили в продакшн‑версии.",
+ "rollback": "Удалить скрипт и связанные CSS‑правила; `git checkout -- index.html`.",
+ "verify": "Открыть `index.html?v=2` и убедиться, что отображается альтернативный заголовок/текст; сравнить с обычным `index.html`.",
+ "priority_claim": "2 – быстрый способ тестировать копию, но менее критичен, чем проверка кликов.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD – В `<head>` вставить скрипт, читающий параметр `?v=2` и переключающий класс `variant‑2` на `<body>`; в HTML добавить альтернативные тексты в атрибуты `data-alt` и показать их через CSS / JS. Пример:\n```js\n(() => {\nconst url = new URL(location);\nif (url.searchParams.get('v') === '2') document.body.classList.add('variant-2');\n})();\n```\nCSS:\n```css\n.variant-2 h1::after{content:\"Сайт за 2 дня — клиенты находят вас в Яндексе (тест)\";}\n.variant-2 .hero-note{display:none;}\n```"
+ ],
+ "flags": []
+}

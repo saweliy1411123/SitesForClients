@@ -1,0 +1,26 @@
+{
+ "id": "I-01005",
+ "round": 1,
+ "time": "2026-11-17 17:16:45",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Benefit‑icons row under hero for instant offer clarity",
+ "knob": "Insert after `</header>` a `<section class=\"hero-benefits\"><div class=\"benefit-item\"><svg…></svg><p>2‑дневный запуск</p></div><div class=\"benefit‑item\"><svg…></svg><p>SEO‑оптимизация</p></div><div class=\"benefit‑item\"><svg…></svg><p>Поддержка 24/7</p></div></section>` and add CSS `.hero-benefits{display:flex;justify-content:center;gap:2rem;padding:1rem 0;background:rgba(var(--bg-rgb),0.6)} .benefit‑item{flex:1;text-align:center;font-size:clamp(14px,1.2vw,18px)} .benefit‑item svg{width:40px;height:40px;margin-bottom:0.5rem}`.",
+ "skill": "",
+ "effect": "Пользователь за 1‑2 секунды видит ключевые выгоды, повышается понятность оффера и коэффициент конверсии.",
+ "risk": "Небольшой рост загрузки из‑за SVG‑иконок; требуется подобрать подходящие иконки.",
+ "rollback": "Удалить вставленный HTML‑блок и соответствующее CSS‑правило (git checkout HEAD -- path/to/file).",
+ "verify": "Открыть страницу в десктоп‑ и мобильных режимах, убедиться, что блок отображается под хэдером, текст читаем‑ся, а Lighthouse ‘Performance’ не падает более 5 % от базовой версии.",
+ "priority_claim": "1 – высокий ROI при минимальном объёме работы.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Insert after `</header>` a `<section class=\"hero-benefits\"><div class=\"benefit-item\"><svg…></svg><p>2‑дневный запуск</p></div><div class=\"benefit‑item\"><svg…></svg><p>SEO‑оптимизация</p></div><div class=\"benefit‑item\"><svg…></svg><p>Поддержка 24/7</p></div></section>` and add CSS `.hero-benefits{display:flex;justify-content:center;gap:2rem;padding:1rem 0;background:rgba(var(--bg-rgb),0.6)} .benefit‑item{flex:1;text-align:center;font-size:clamp(14px,1.2vw,18px)} .benefit‑item svg{width:40px;height:40px;margin-bottom:0.5rem}`."
+ ],
+ "flags": []
+}

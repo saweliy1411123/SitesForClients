@@ -1,0 +1,27 @@
+{
+ "id": "I-00426",
+ "round": 63,
+ "time": "2026-11-17 04:43:56",
+ "source": "lareper/glm-5.3-prime",
+ "sources": [
+  "lareper/glm-5.3-prime",
+  "lareper/glm-5.2-fast-preview"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "SKILL — light-sweep-heading (световой блик по заголовку секции)",
+ "knob": "SKILL — light-sweep-heading\nНазвание: light-sweep-heading\nКогда применять: на заголовках h2 секций («Лендинг, который приводит…», «Три шага…», цена) на тёмных лендингах — тонкий пробегающий свет даёт «премиальность» без JS.\nШаги: добавить класс `.sweep` к выбранным",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "SKILL — light-sweep-heading\nНазвание: light-sweep-heading\nКогда применять: на заголовках h2 секций («Лендинг, который приводит…», «Три шага…», цена) на тёмных лендингах — тонкий пробегающий свет даёт «премиальность» без JS.\nШаги: добавить класс `.sweep` к выбранным"
+ ],
+ "flags": []
+}

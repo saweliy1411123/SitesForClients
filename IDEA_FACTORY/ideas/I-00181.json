@@ -1,0 +1,29 @@
+{
+ "id": "I-00181",
+ "round": 28,
+ "time": "2026-11-17 03:01:18",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.3-prime",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "SKILL — Premium Light Sweep (блик, пробегающий по карточке при hover)",
+ "knob": "SKILL — light-sweep-card\n### Название\nlight-sweep-card\n### Когда применять\nЛюбой лендинг с карточками (демо-концепты, тарифы, шаги), где нужен «дорогой» эффект света без библиотек. Применять к `.demo-card`, `.price-card`, `.step` и подобным блочным элементам.\n### Шаги\n1. Добавить CSS ниже в `<style>` (или в копию index.improved.html).\n2. Убедиться, что у карточки есть `position:relative; overflow:hidden`.\n3. Проверить на мобильном: эффект только по hover/focus-within, на тач-устройствах не мешает.\nSAFE CSS:\n.card-sweep{position:relative;overflow:hidden}\n.card-sweep::after{content:\"\";position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.14),transparent);transform:skewX(-18deg);transition:left .7s ease;pointer-events:none}\n.card-sweep:hover::after,.card-sweep:focus-within::after{left:130%}\n@media (prefers-reduced-motion:reduce){.card-sweep::after{display:none}}",
+ "skill": "light-sweep-card",
+ "effect": "премиальное ощущение «дорогого» сайта, карточки реагируют на курсор — выше воспринимаемая ценность услуги.",
+ "risk": "на слабых устройствах анимация left может дёргаться — ограничено hover и отключено при prefers-reduced-motion.",
+ "rollback": "git checkout -- index.html (или удалить блок .card-sweep из CSS).",
+ "verify": "открыть index.improved.html, навести курсор на карточку демо — блик пробегает слева направо за ~0.7 с; проверить Tab-фокус тоже вызывает блик.",
+ "priority_claim": "2 — чисто визуальный апгрейд, но дешёвый и безопасный.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "SKILL — light-sweep-card\n### Название\nlight-sweep-card\n### Когда применять\nЛюбой лендинг с карточками (демо-концепты, тарифы, шаги), где нужен «дорогой» эффект света без библиотек. Применять к `.demo-card`, `.price-card`, `.step` и подобным блочным элементам.\n### Шаги\n1. Добавить CSS ниже в `<style>` (или в копию index.improved.html).\n2. Убедиться, что у карточки есть `position:relative; overflow:hidden`.\n3. Проверить на мобильном: эффект только по hover/focus-within, на тач-устройствах не мешает.\nSAFE CSS:\n.card-sweep{position:relative;overflow:hidden}\n.card-sweep::after{content:\"\";position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.14),transparent);transform:skewX(-18deg);transition:left .7s ease;pointer-events:none}\n.card-sweep:hover::after,.card-sweep:focus-within::after{left:130%}\n@media (prefers-reduced-motion:reduce){.card-sweep::after{display:none}}"
+ ],
+ "flags": []
+}

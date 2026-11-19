@@ -1,0 +1,26 @@
+{
+ "id": "I-00156",
+ "round": 23,
+ "time": "2026-11-17 02:48:47",
+ "source": "lareper/glm-5.2-fast-preview",
+ "sources": [
+  "lareper/glm-5.2-fast-preview"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Метод «контрастный силуэт» — проверка иерархии страницы в режиме Grayscale + Blur",
+ "knob": "METHOD: (1) Открыть index.html, DevTools → Rendering → Emulate vision deficiencies → «Blurred vision» (или установить CSS-фильтр `html{filter:grayscale(1) blur(1.5px)}` через DevTools → Elements → documentElement → element.style). (2) Пролистать страницу за 30 секунд и отметить: видно ли, где цена, где CTA, где демо-концепты. (3) Если CTA-кнопка и цена не «выстреливают» из силуэта страницы — усилить контраст/размер этих элементов. (4) Убрать фильтр, сравнить до/после на копии index.improved.html.",
+ "skill": "",
+ "effect": "Выявляет слабую визуальную иерархию, которую не видно при нормальном зрении; имитирует беглое сканирование реального посетителя и проверяет WCAG-контраст без инструментов.",
+ "risk": "Размытие — лишь приближение к реальному «сканирующему» просмотру, не заменяет eye-tracking.",
+ "rollback": "Фильтр применяется только в DevTools на живой странице, файл не меняется — откат не нужен.",
+ "verify": "Весь тест 2–3 минуты; критерий — CTA и цена различимы в размытом силуэте с расстояния «прищура».",
+ "priority_claim": "2 — дополняет контраст-аудит I-00086 (тот проверяет цифры WCAG, этот — визуальную иерархию целиком).",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: (1) Открыть index.html, DevTools → Rendering → Emulate vision deficiencies → «Blurred vision» (или установить CSS-фильтр `html{filter:grayscale(1) blur(1.5px)}` через DevTools → Elements → documentElement → element.style). (2) Пролистать страницу за 30 секунд и отметить: видно ли, где цена, где CTA, где демо-концепты. (3) Если CTA-кнопка и цена не «выстреливают» из силуэта страницы — усилить контраст/размер этих элементов. (4) Убрать фильтр, сравнить до/после на копии index.improved.html."
+ ],
+ "flags": []
+}

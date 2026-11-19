@@ -1,0 +1,27 @@
+{
+ "id": "I-00212",
+ "round": 32,
+ "time": "2026-11-17 03:12:48",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3",
+  "lareper/glm-5.2-fast-preview"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Демо-концепты — добавить над каждым концептом строку «для какого бизнеса» (подпись-контекст)",
+ "knob": "Секция демо (L589+, h3 «Отзывы и работы», «Идеально с телефона», «Быстро грузится») — над каждым h3 добавить `<p class=\"demo-for\">",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Секция демо (L589+, h3 «Отзывы и работы», «Идеально с телефона», «Быстро грузится») — над каждым h3 добавить `<p class=\"demo-for\">"
+ ],
+ "flags": []
+}

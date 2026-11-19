@@ -1,0 +1,26 @@
+{
+ "id": "I-00609",
+ "round": 91,
+ "time": "2026-11-17 06:07:20",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — neon-glow-border",
+ "knob": "**Name:** `neon-glow-border`\n**When to apply:** На всех CTA‑кнопках (`.btn-primary`) и на карточках цены (`.price-card`) для придания премиального «неонового» обводки.\n**SAFE CSS:**\n```css\n/* neon glow border */\n.neon-glow {\nposition: relative;\noverflow: hidden;\n}\n.neon-glow::before {\ncontent: \"\";\nposition: absolute;\ninset: -2px;\nbackground: linear-gradient(45deg,\n#8b5cf6, #4ec9f0, #8b5cf6);\nfilter: blur(6px);\nopacity: 0;\ntransition: opacity .3s ease-in-out;\nz-index: -1;\n}\n.neon-glow:hover::before,\n.neon-glow:focus-visible::before {\nopacity: 0.8;\n}\n.neon-glow {\nbox-shadow: 0 0 10px rgba(139,92,246,.2);\n}\n```\n**SAFE JS:** (необязательно)\n```js\n// добавляем класс .neon-glow к нужным элементам один раз\ndocument.querySelectorAll('.btn-primary,.price-card').forEach(el=>el.classList.add('neon-glow'));\n```",
+ "skill": "",
+ "effect": "Усиление визуального восприятия CTA и ценовых карточек, повышает чувство эксклюзивности и привлекает внимание к конверсионным элементам.",
+ "risk": "При слишком яркой настройке может ухудшить контраст для слабовидящих; нужно проверять WCAG AA.",
+ "rollback": "`git checkout HEAD -- index.html` (или удалить добавленные строки в CSS/JS).",
+ "verify": "Открыть страницу, навести курсор на кнопку и карточку – должна появиться мягкая неоновая подсветка без смещения контента; проверить в режиме «prefers-reduced-motion» (должно быть отключено).",
+ "priority_claim": "1 – быстрый визуальный апгрейд, минимум кода, высокий ROI.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `neon-glow-border`\n**When to apply:** На всех CTA‑кнопках (`.btn-primary`) и на карточках цены (`.price-card`) для придания премиального «неонового» обводки.\n**SAFE CSS:**\n```css\n/* neon glow border */\n.neon-glow {\nposition: relative;\noverflow: hidden;\n}\n.neon-glow::before {\ncontent: \"\";\nposition: absolute;\ninset: -2px;\nbackground: linear-gradient(45deg,\n#8b5cf6, #4ec9f0, #8b5cf6);\nfilter: blur(6px);\nopacity: 0;\ntransition: opacity .3s ease-in-out;\nz-index: -1;\n}\n.neon-glow:hover::before,\n.neon-glow:focus-visible::before {\nopacity: 0.8;\n}\n.neon-glow {\nbox-shadow: 0 0 10px rgba(139,92,246,.2);\n}\n```\n**SAFE JS:** (необязательно)\n```js\n// добавляем класс .neon-glow к нужным элементам один раз\ndocument.querySelectorAll('.btn-primary,.price-card').forEach(el=>el.classList.add('neon-glow'));\n```"
+ ],
+ "flags": []
+}

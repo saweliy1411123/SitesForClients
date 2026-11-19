@@ -1,0 +1,29 @@
+{
+ "id": "I-00014",
+ "round": 2,
+ "time": "2026-11-17 01:46:23",
+ "source": "localhost:8080/zhipu/glm-4.7-flash",
+ "sources": [
+  "localhost:8080/zhipu/glm-4.7-flash",
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+  "localhost:8081/big_only"
+ ],
+ "mentions": 3,
+ "status": "NEW",
+ "title": "Проверка доступности фокуса (Keyboard Navigation)",
+ "knob": "Добавить CSS `.cta-link:focus-visible { outline: 3px solid #8b5cf6; outline-offset: 4px; }` на все `<a>` с классом CTA.",
+ "skill": "",
+ "effect": "Убедиться, что пользователи клавиатуры могут найти кнопку \"Сделаю демо\" и перейти по ней.",
+ "risk": "Нет.",
+ "rollback": "Удалить CSS-правило.",
+ "verify": "Нажать Tab на клавиатуре. Есть ли фокус и подсветка на ссылках?",
+ "priority_claim": "2 (UX/A11y)",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Добавить CSS `.cta-link:focus-visible { outline: 3px solid #8b5cf6; outline-offset: 4px; }` на все `<a>` с классом CTA.",
+  "Добавить CSS `.cta-link:focus-visible { outline: 3px solid #8b5cf6; outline-offset: 4px; }` на все ссылки-CTA"
+ ],
+ "flags": []
+}

@@ -1,0 +1,32 @@
+{
+ "id": "I-00207",
+ "round": 32,
+ "time": "2026-11-17 03:12:43",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b",
+  "localhost:8081/fast",
+  "localhost:8081/auto",
+  "localhost:8081/big_only",
+  "localhost:8081/agent"
+ ],
+ "mentions": 5,
+ "status": "NEW",
+ "title": "Демо — PDF‑кейс‑стади «Смотрите результат»",
+ "knob": "В секцию «Демо‑концепты» после каждого блока добавить кнопку‑ссылку `<a href=\"case-study.pdf\" class=\"demo-pdf\" download>Скачать PDF‑кейс</a>` и в CSS `.demo-pdf{display:inline-block;margin-top:.5rem;color:#8b5cf6;text-decoration:underline;}`",
+ "skill": "",
+ "effect": "Позволяет потенциальным клиентам подробно изучить результаты офлайн, повышая доверие и вероятность заявки.",
+ "risk": "Нужно предоставить PDF‑файл; отсутствие файла приведёт к 404‑ошибке.",
+ "rollback": "Удалить ссылки и стили.",
+ "verify": "Кликнуть по ссылке, убедиться, что файл скачивается (или открывается).",
+ "priority_claim": "3 — добавляет ценность, но зависит от наличия готового PDF.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В секцию «Демо‑концепты» после каждого блока добавить кнопку‑ссылку `<a href=\"case-study.pdf\" class=\"demo-pdf\" download>Скачать PDF‑кейс</a>` и в CSS `.demo-pdf{display:inline-block;margin-top:.5rem;color:#8b5cf6;text-decoration:underline;}`",
+  "В секции финального CTA (L697+, `.final .cta-row`, L388) добавить вторую кнопку `<a class=\"btn-secondary\" href=\"#contact\" data-download=\"demo-checklist\">Скачать чек-лист «Что нужно для демо»</a>`; рядом с ней текст-пояснение «Пришлю PDF со списком: ваши услуги, цены, фото, ссылка на запись — 5 минут на заполнение»",
+  "В секции демо (см. SITE_REQUEST «works») после описания каждого концепта добавить кнопку‑ссылку:\n```html\n<a href=\"case-study-01.pdf\" class=\"btn-secondary download-pdf\" download>Скачать кейс‑стади (PDF)</a>\n```\nи в CSS `.download-pdf{margin-top:0.5rem;}`."
+ ],
+ "flags": []
+}

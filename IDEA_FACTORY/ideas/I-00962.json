@@ -1,0 +1,26 @@
+{
+ "id": "I-00962",
+ "round": 159,
+ "time": "2026-11-17 09:21:32",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить ARIA‑роль «contentinfo» к подвалу для лучшей навигации скрин‑ридеров",
+ "knob": "Найти элемент `<footer>` (или обернуть финальный CTA в `<footer>`) и добавить атрибут `role=\"contentinfo\"`",
+ "skill": "",
+ "effect": "Явно обозначает область подвала, упрощая ориентирование пользователей вспомогательных технологий",
+ "risk": "Отсутствует; изменение только атрибута",
+ "rollback": "Удалить атрибут `role=\"contentinfo\"`",
+ "verify": "Включить Chrome Accessibility pane или axe‑core; подвал должен быть помечен как «content info»",
+ "priority_claim": "1 — важный шаг в доступности, риск‑ноль",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Найти элемент `<footer>` (или обернуть финальный CTA в `<footer>`) и добавить атрибут `role=\"contentinfo\"`"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00461",
+ "round": 68,
+ "time": "2026-11-17 05:00:24",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "scroll-margin-top для якорей + плавный скролл (CTA → #contact под sticky-шапкой)",
+ "knob": "В CSS добавить `html{scroll-behavior:smooth}` и `[id]{scroll-margin-top:90px}` (значение = высота sticky-хедера). Кнопки ведут на `#contact",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В CSS добавить `html{scroll-behavior:smooth}` и `[id]{scroll-margin-top:90px}` (значение = высота sticky-хедера). Кнопки ведут на `#contact"
+ ],
+ "flags": []
+}

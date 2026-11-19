@@ -1,0 +1,27 @@
+{
+ "id": "I-00003",
+ "round": 2,
+ "time": "2026-11-17 01:46:23",
+ "source": "lareper/deepseek-v4-pro",
+ "sources": [
+  "lareper/deepseek-v4-pro",
+  "lareper/deepseek-v4-pro-0813"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Проверка скорости через Lighthouse с эмуляцией Slow 4G",
+ "knob": "METHOD: Откройте DevTools → Lighthouse → выберите Mobile, эмуляция Slow 4G, throttling CPU 4x. Прогоните аудит. Запишите: Performance score, Largest Contentful Paint (LCP), Total Blocking Time (TBT). Если LCP > 2.5s — найдите render-blocking ресурсы (шрифты Google, CSS) во вкладке Opportunities.",
+ "skill": "",
+ "effect": "За 3 минуты получаете объективные метрики скорости и список конкретных исправлений (preload, critical CSS), которые можно применить в следующих итерациях.",
+ "risk": "Локальный Lighthouse не учитывает реальный хостинг и сеть, но для относительной оценки годится.",
+ "rollback": "Не требуется — аудит не меняет файлы.",
+ "verify": "DevTools → Lighthouse → Generate report → смотрите LCP и TBT.",
+ "priority_claim": "1 — скорость напрямую влияет на SEO и конверсию, а проверка бесплатна и быстра.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: Откройте DevTools → Lighthouse → выберите Mobile, эмуляция Slow 4G, throttling CPU 4x. Прогоните аудит. Запишите: Performance score, Largest Contentful Paint (LCP), Total Blocking Time (TBT). Если LCP > 2.5s — найдите render-blocking ресурсы (шрифты Google, CSS) во вкладке Opportunities."
+ ],
+ "flags": []
+}

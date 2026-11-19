@@ -1,0 +1,28 @@
+{
+ "id": "I-00354",
+ "round": 53,
+ "time": "2026-11-17 04:13:41",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only",
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "BreadcrumbList structured data",
+ "knob": "вставить в конец `<body>` скрипт JSON‑LD:\n```json\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"BreadcrumbList\",\n\"itemListElement\":[\n{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Главная\",\"item\":\"https://example.com/\"},\n{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Лендинг Савелий\",\"",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "вставить в конец `<body>` скрипт JSON‑LD:\n```json\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"BreadcrumbList\",\n\"itemListElement\":[\n{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Главная\",\"item\":\"https://example.com/\"},\n{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Лендинг Савелий\",\"",
+  "В конец `<body>` (перед закрывающим `</body>`) вставить скрипт:\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"BreadcrumbList\",\n\"itemListElement\":[\n{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Главная\",\"item\":\"https://example.com/\"},\n{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Лендинг\",\"item\":\"https://example.com/#price\"}\n]\n}\n</script>\n```\n(заменить `example.com` на реальный домен)."
+ ],
+ "flags": []
+}

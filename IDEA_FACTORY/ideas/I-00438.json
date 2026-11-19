@@ -1,0 +1,28 @@
+{
+ "id": "I-00438",
+ "round": 65,
+ "time": "2026-11-17 04:50:30",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 3,
+ "status": "NEW",
+ "title": "Метод «мобильный thumbs-тест» — достижимость CTA большим пальцем на 360px",
+ "knob": "METHOD: (1) DevTools → Toggle device toolbar → iPhone SE (375px) и generic 360px. (2) Скриншот viewport. (3) В Paint/любом редакторе наложить овал «зона большого пальца» (нижние ~60% экрана, дуга) — проверить, попадают ли CTA hero и финального блока в неё при прокрутке. (4) Прокрутить до финального CTA (L707, «Или пишите в ВК») и замерить: расстояние от CTA до края экрана (должно быть ≥48px touch-target по WCAG). (5) Зафиксировать, какие CTA требуют «тянуться» — кандидат на sticky-CTA (I-00428/429",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: (1) DevTools → Toggle device toolbar → iPhone SE (375px) и generic 360px. (2) Скриншот viewport. (3) В Paint/любом редакторе наложить овал «зона большого пальца» (нижние ~60% экрана, дуга) — проверить, попадают ли CTA hero и финального блока в неё при прокрутке. (4) Прокрутить до финального CTA (L707, «Или пишите в ВК») и замерить: расстояние от CTA до края экрана (должно быть ≥48px touch-target по WCAG). (5) Зафиксировать, какие CTA требуют «тянуться» — кандидат на sticky-CTA (I-00428/429"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00338",
+ "round": 51,
+ "time": "2026-11-17 04:07:26",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Scroll‑Funnel Visibility Logger",
+ "knob": "METHOD – В конец `<body>` добавить скрипт, использующий `IntersectionObserver` для всех `<section>` и выводящий в консоль порядок их появления:\n```js\n(() => {\nconst sections = document.querySelectorAll('section[id]');\nconst order = [];\nconst obs = new IntersectionObserver((e) => {\ne.forEach(i => {\nif (i.isIntersecting) {\nconst id = i.target.id;\nif (!order.includes(id)) {\norder.push(id);\nconsole.log('SECTION VIEWED →', id);\n}\n}\n});\n}, {threshold: 0.5});\nsections.forEach(s => obs.observe(s));\nwindow.addEventListener('beforeunload', () => console.log('VIEW SEQUENCE:', order));\n})();\n```",
+ "skill": "",
+ "effect": "Позволяет увидеть, какие секции действительно видит пользователь в реальном порядке, проверяя гипотезу о том, что «Три шага» и «FAQ» находятся в «горячей» части воронки.",
+ "risk": "Небольшой overhead от наблюдателя; при забытом удалении может оставаться в продакшн‑версии.",
+ "rollback": "Удалить скрипт; `git checkout -- index.html`.",
+ "verify": "Открыть страницу, прокручивать её в обычном порядке, наблюдать в консоли сообщения «SECTION VIEWED → …»; убедиться, что порядок соответствует ожидаемому.",
+ "priority_claim": "2 – полезно для оптимизации структуры контента, но менее срочно, чем проверка кликов.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD – В конец `<body>` добавить скрипт, использующий `IntersectionObserver` для всех `<section>` и выводящий в консоль порядок их появления:\n```js\n(() => {\nconst sections = document.querySelectorAll('section[id]');\nconst order = [];\nconst obs = new IntersectionObserver((e) => {\ne.forEach(i => {\nif (i.isIntersecting) {\nconst id = i.target.id;\nif (!order.includes(id)) {\norder.push(id);\nconsole.log('SECTION VIEWED →', id);\n}\n}\n});\n}, {threshold: 0.5});\nsections.forEach(s => obs.observe(s));\nwindow.addEventListener('beforeunload', () => console.log('VIEW SEQUENCE:', order));\n})();\n```"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00015",
+ "round": 2,
+ "time": "2026-11-17 01:46:23",
+ "source": "localhost:8080/zhipu/glm-4.7-flash",
+ "sources": [
+  "localhost:8080/zhipu/glm-4.7-flash"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Симуляция мобильной верстки (Device Toolbar)",
+ "knob": "Проверить ширину 375px и высоту 667px.",
+ "skill": "",
+ "effect": "Проверить, не ломается ли верстка, не скрывается ли контент и нет ли горизонтального скролла на узких экранах.",
+ "risk": "Нет.",
+ "rollback": "Закрыть DevTools.",
+ "verify": "Все заголовки (h1-h3) читабельны без масштабирования?",
+ "priority_claim": "1 (Critical)",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Проверить ширину 375px и высоту 667px."
+ ],
+ "flags": []
+}

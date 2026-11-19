@@ -1,0 +1,32 @@
+{
+ "id": "I-00165",
+ "round": 25,
+ "time": "2026-11-17 02:53:22",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b",
+  "localhost:8081/big_only"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Добавить meta‑тег canonical",
+ "knob": "В `<head>` после остальных `<meta>` вставить `<link rel=\"canonical\" href=\"https://example.com/\">` (заменить на реальный URL).",
+ "skill": "",
+ "effect": "Укрепит SEO, предотвратит дублирование контента, укажет поисковикам на основной URL.",
+ "risk": "Ошибочный URL может привести к потере индексации.",
+ "rollback": "Удалить строку `<link rel=\"canonical\"...>`.",
+ "verify": "Открыть страницу, посмотреть в «View Page Source», убедиться в наличии тега; в Google Search Console проверить отсутствие ошибок «duplicate content».",
+ "priority_claim": "2 – небольшое изменение, но важный SEO‑фактор.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<head>` после остальных `<meta>` вставить `<link rel=\"canonical\" href=\"https://example.com/\">` (заменить на реальный URL).",
+  "Вставить сразу после существующих `<meta>` строк `<link rel=\"canonical\" href=\"https://saveliy-perm.ru/\">` (заменить на реальный домен)",
+  "В `<head>` добавить `<link rel=\"canonical\" href=\"https://example.com/\">` (заменить `example.com` на реальный домен)",
+  "добавить в `<head>` строку `<link rel=\"canonical\" href=\"https://example.com/\">` (заменить `example.com` на реальный домен сайта).",
+  "В `<head>` вставить строку `<link rel=\"canonical\" href=\"https://saveliy.example.com/\">` сразу после существующих мета‑тегов",
+  "В `<head>` добавить\n```html\n<link rel=\"canonical\" href=\"https://example.com/\">\n```\n(заменить на реальный домен)."
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00775",
+ "round": 118,
+ "time": "2026-11-17 07:26:35",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — sticky-header-reveal",
+ "knob": "\n**Name:** sticky-header-reveal\n**When to apply:** На лендингах с крупной hero-секцией и фиксированным верхним меню.\n**SAFE CSS:**\n```css\n.sticky-header {\nposition: fixed;\ntop: 0;\nleft: 0;\nwidth: 100%;\nbackground-color: var(--bg);\nbox-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\nz-index: 1000;\ntransform: translateY(-100%);\ntransition: transform 0.3s ease-in-out;\n}\n.sticky-header.reveal {\ntransform: translateY(0);\n}\n.sticky-header nav {\ndisplay: flex;\njustify-content: space-between;\nalign-items: center;\npadding: 1rem;\n}\n.sticky-header nav a {\ncolor: var(--text);\ntext-decoration: none;\ntransition: color 0.2s ease-in-out;\n}\n.sticky-header nav a:hover {\ncolor: var(--link-hover);\n}\n```\n**SAFE JS:**\n```javascript\nconst header = document.querySelector('.sticky-header');\nwindow.addEventListener('scroll', () => {\nconst scrollPosition = window.scrollY;\nif (scrollPosition > 200) {\nheader.classList.add('reveal');\n} else {\nheader.classList.remove('reveal');\n}\n});\n```",
+ "skill": "sticky-header-reveal",
+ "effect": "Улучшает навигацию и пользовательский опыт на лендингах с крупной hero-секцией и фиксированным верхним меню.",
+ "risk": "Нет значительных рисков, но может потребоваться корректировка стилей и скриптов для адаптации к конкретному дизайну лендинга.",
+ "rollback": "Удалить добавленный CSS и JS-код.",
+ "verify": "Проверить визуальное отображение и функциональность фиксированного меню на разных устройствах и разрешениях.",
+ "priority_claim": "2",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "\n**Name:** sticky-header-reveal\n**When to apply:** На лендингах с крупной hero-секцией и фиксированным верхним меню.\n**SAFE CSS:**\n```css\n.sticky-header {\nposition: fixed;\ntop: 0;\nleft: 0;\nwidth: 100%;\nbackground-color: var(--bg);\nbox-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\nz-index: 1000;\ntransform: translateY(-100%);\ntransition: transform 0.3s ease-in-out;\n}\n.sticky-header.reveal {\ntransform: translateY(0);\n}\n.sticky-header nav {\ndisplay: flex;\njustify-content: space-between;\nalign-items: center;\npadding: 1rem;\n}\n.sticky-header nav a {\ncolor: var(--text);\ntext-decoration: none;\ntransition: color 0.2s ease-in-out;\n}\n.sticky-header nav a:hover {\ncolor: var(--link-hover);\n}\n```\n**SAFE JS:**\n```javascript\nconst header = document.querySelector('.sticky-header');\nwindow.addEventListener('scroll', () => {\nconst scrollPosition = window.scrollY;\nif (scrollPosition > 200) {\nheader.classList.add('reveal');\n} else {\nheader.classList.remove('reveal');\n}\n});\n```"
+ ],
+ "flags": []
+}

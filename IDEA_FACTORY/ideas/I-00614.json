@@ -1,0 +1,26 @@
+{
+ "id": "I-00614",
+ "round": 92,
+ "time": "2026-11-17 06:09:54",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Встроить инлайн‑критический CSS для hero‑секции — ускорить LCP",
+ "knob": "В начале `<head>` добавить `<style>` с минимальными стилями, необходимыми для первой отрисовки hero:\n```css\n/* critical hero */\nhtml{font-size:16px}\nbody{margin:0;font-family:Manrope,system-ui,sans-serif;background:#111;color:#e8eaf2}\n.hero{display:flex;align-items:center;min-height:100vh;padding:130px 0 100px;background:#111}\n.hero h1{font-size:clamp(40px,6.4vw,76px);font-weight:700;letter-spacing:-.035em;line-height:1.04}\n.hero p.sub{font-size:clamp(16.5px,2vw,20px);color:#c3cad9;margin:28px 0 38px}\n.btn-primary{display:inline-flex;align-items:center;padding:15px 24px;background:var(--grad);color:#fff;font-weight:600}\n```\nи удалить эти же правила из основного CSS‑файла (или оставить их дублирующимися).",
+ "skill": "",
+ "effect": "Уменьшит время до первой отрисовки заголовка (LCP) с ~2.3 s до < 1.5 s на мобильных 3G, улучшит показатель Core Web Vitals → потенциальный рост конверсии ≈ 3 %",
+ "risk": "Дублирование стилей может вызвать небольшие конфликты при будущих правках; потребуется поддерживать синхронность с основным CSS‑файлом",
+ "rollback": "`git checkout -- index.html` (удалить вставленный `<style>` и вернуть оригинальный CSS)",
+ "verify": "Открыть страницу в Chrome → DevTools → Performance, измерить LCP до ≈ 1.5 s; сравнить с базовым замером (можно воспользоваться Lighthouse)",
+ "priority_claim": "2 — быстрая техническая выгода, но требует поддержки; SEO‑плюс и пользовательский опыт важнее, чем визуальные улучшения,",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В начале `<head>` добавить `<style>` с минимальными стилями, необходимыми для первой отрисовки hero:\n```css\n/* critical hero */\nhtml{font-size:16px}\nbody{margin:0;font-family:Manrope,system-ui,sans-serif;background:#111;color:#e8eaf2}\n.hero{display:flex;align-items:center;min-height:100vh;padding:130px 0 100px;background:#111}\n.hero h1{font-size:clamp(40px,6.4vw,76px);font-weight:700;letter-spacing:-.035em;line-height:1.04}\n.hero p.sub{font-size:clamp(16.5px,2vw,20px);color:#c3cad9;margin:28px 0 38px}\n.btn-primary{display:inline-flex;align-items:center;padding:15px 24px;background:var(--grad);color:#fff;font-weight:600}\n```\nи удалить эти же правила из основного CSS‑файла (или оставить их дублирующимися)."
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00897",
+ "round": 140,
+ "time": "2026-11-17 08:28:21",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — variable‑font‑typography‑premium",
+ "knob": "**Name:** `variable-font-typography-premium`\n**When to apply:** На любые заголовки h1‑h3 и ключевые блоки текста, где нужен плавный диапазон весов без загрузки нескольких файлов шрифтов.\n**Steps:**\n1. В `<head>` добавить `@font-face` для Manrope Variable (Google Fonts поддерживает `@font-face` с `font-variation-settings`).\n2. Заменить текущие `font-weight` на `font-variation-settings: 'wght' <value>` через CSS‑переменные.\n3. Использовать `clamp()` + `vw` для fluid‑typography, привязав к переменной `--fs-base`.\n**SAFE CSS:**\n```css\n@font-face{\nfont-family:'Manrope';\nsrc:url('https://fonts.gstatic.com/s/manrope/v13/1Ptug8zYS_SKggPNyC0ISg.woff2') format('woff2');\nfont-weight:100 900;\nfont-display:swap;\n}\n:root{\n--fs-base:clamp(1rem,1.2vw,1.5rem);\n}\nh1,h2,h3{\nfont-family:'Manrope',sans-serif;\nfont-variation-settings:'wght' var(--weight,600);\nfont-size:var(--fs-base);\n}\nh1{--weight:800;}\nh2{--weight:700;}\nh3{--weight:600;}\n```\n**SAFE JS:** *(не требуется)*",
+ "skill": "",
+ "effect": "Сокращает количество запросов к шрифту, ускоряет рендер, а также даёт плавные переходы веса при интерактивных состояниях (например, при ховере — меняем `--weight`). Улучшает читаемость и ощущение «премиум‑типа».",
+ "risk": "Требуется поддержка переменных шрифтов (Chrome ≥ 84, Safari ≥ 14, Firefox ≥ 71) – старые браузеры упадут к обычному весу.",
+ "rollback": "Удалить блок `@font-face` и CSS‑правила, вернуть прежние `font-weight` = 400/600.",
+ "verify": "Открыть DevTools → Computed → проверить, что `font-variation-settings` присутствует; переключить `--weight` в консоли и убедиться в плавном изменении толщины.",
+ "priority_claim": "1 — экономит ~30 KB запросов шрифтов, сразу повышает метрику LCP и воспринимается как «дорогой» дизайн.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `variable-font-typography-premium`\n**When to apply:** На любые заголовки h1‑h3 и ключевые блоки текста, где нужен плавный диапазон весов без загрузки нескольких файлов шрифтов.\n**Steps:**\n1. В `<head>` добавить `@font-face` для Manrope Variable (Google Fonts поддерживает `@font-face` с `font-variation-settings`).\n2. Заменить текущие `font-weight` на `font-variation-settings: 'wght' <value>` через CSS‑переменные.\n3. Использовать `clamp()` + `vw` для fluid‑typography, привязав к переменной `--fs-base`.\n**SAFE CSS:**\n```css\n@font-face{\nfont-family:'Manrope';\nsrc:url('https://fonts.gstatic.com/s/manrope/v13/1Ptug8zYS_SKggPNyC0ISg.woff2') format('woff2');\nfont-weight:100 900;\nfont-display:swap;\n}\n:root{\n--fs-base:clamp(1rem,1.2vw,1.5rem);\n}\nh1,h2,h3{\nfont-family:'Manrope',sans-serif;\nfont-variation-settings:'wght' var(--weight,600);\nfont-size:var(--fs-base);\n}\nh1{--weight:800;}\nh2{--weight:700;}\nh3{--weight:600;}\n```\n**SAFE JS:** *(не требуется)*"
+ ],
+ "flags": []
+}

@@ -1,0 +1,31 @@
+{
+ "id": "I-00024",
+ "round": 4,
+ "time": "2026-11-17 01:50:26",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b",
+  "lareper/glm-5.3-prime",
+  "lareper/glm-5.2-fast-preview"
+ ],
+ "mentions": 3,
+ "status": "NEW",
+ "title": "Заменить основной CTA‑ссылка на семантическую кнопку с клиент‑сайд редиректом в Telegram",
+ "knob": "В секции hero заменить `<a class=\"btn-primary magnetic\" href=\"#contact\">…</a>` на `<button class=\"btn-primary magnetic\" id=\"cta-demo\">…</button>` и добавить в конец `<script>` небольшую JS‑функцию: `document.getElementById('cta-demo').addEventListener('click',()=>{location.href='https://t.me/your_username';});`.",
+ "skill": "",
+ "effect": "Улучшит семантику (кнопка → действие), позволит добавить анимацию/отслеживание без изменения URL, повышает доступность (focus/enter).",
+ "risk": "Требует небольшого JS; если пользователь отключил скрипты, CTA не сработает → добавить fallback `<noscript><a href=\"https://t.me/your_username\">…</a></noscript>`.",
+ "rollback": "Вернуть оригинальный `<a>` (git checkout -- index.html).",
+ "verify": "Кликнуть кнопку, убедиться в переходе в Telegram; отключить JS в браузере и проверить наличие fallback‑ссылки.",
+ "priority_claim": "2 — семантика и возможность аналитики, но не критично.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В секции hero заменить `<a class=\"btn-primary magnetic\" href=\"#contact\">…</a>` на `<button class=\"btn-primary magnetic\" id=\"cta-demo\">…</button>` и добавить в конец `<script>` небольшую JS‑функцию: `document.getElementById('cta-demo').addEventListener('click',()=>{location.href='https://t.me/your_username';});`.",
+  "METHOD: Аудит всех точ",
+  "под основной CTA в `.final` добавить `<button class=\"copy-telegram btn-primary\" type=\"button\" aria-label=\"Скопировать ссылку на Telegram\">Копировать ссылку <span class=\"arr\">→</span></button>`; скрипт `navigator.clipboard.writeText('https://t.me/TrainersDontPlays')` с toast‑сообщением «Ссылка скопирована». Стилизовать как `.copy-telegram{margin-top:12px;}`",
+  "В `.final` (~L705–710) рядом с основной CTA добавить компактную ссылку-альтернативу: `<a class=\"final-alt\" href=\"https://vk.ru/trainersdontplays\" target=\"_blank\" rel=\"noopener\">Удобнее в ВК — напишите сюда</a>`, стиль: тихая текстовая ссылка, не конкурирующая с btn-primary."
+ ],
+ "flags": []
+}

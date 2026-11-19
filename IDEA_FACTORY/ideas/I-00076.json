@@ -1,0 +1,27 @@
+{
+ "id": "I-00076",
+ "round": 12,
+ "time": "2026-11-17 02:15:44",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Preload critical CSS to eliminate render‑blocking",
+ "knob": "В `<head>` добавить `<link rel=\"preload\" as=\"style\" href=\"style.css\" onload=\"this.rel='stylesheet'\">` и оставить существующий `<link rel=\"stylesheet\" href=\"style.css\">` как fallback",
+ "skill": "",
+ "effect": "Сокращение FCP ≈ 15‑20 % → быстрее отображение первого экрана, лучше Core Web Vitals",
+ "risk": "Если путь к CSS неверен, стили не загрузятся → страница без стилей",
+ "rollback": "Удалить добавленную строку `<link rel=\"preload\"...>` (git checkout index.html)",
+ "verify": "Открыть DevTools → Network, убедиться, что файл CSS помечен как “preload” и применяется без ошибки; измерить FCP в Lighthouse (меньше, чем до)",
+ "priority_claim": "1 — критический фактор скорости и SEO",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<head>` добавить `<link rel=\"preload\" as=\"style\" href=\"style.css\" onload=\"this.rel='stylesheet'\">` и оставить существующий `<link rel=\"stylesheet\" href=\"style.css\">` как fallback",
+  "В `<head>` добавить `<link rel=\"preload\" href=\"styles.css\" as=\"style\" onload=\"this.rel='stylesheet'\">` (заменить `styles.css` на реальное имя) и оставить оригинальный `<link rel=\"stylesheet\">` как fallback"
+ ],
+ "flags": []
+}

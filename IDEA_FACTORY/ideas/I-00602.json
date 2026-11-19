@@ -1,0 +1,26 @@
+{
+ "id": "I-00602",
+ "round": 90,
+ "time": "2026-11-17 06:04:18",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — link‑underline‑reveal (анимированное подчёркивание ссылок‑CTA)",
+ "knob": "**Name:** `link-underline-reveal`\n**When to apply:** На статических лендингах, где CTA‑ссылки оформлены как `<a class=\"btn-primary …\">` и нужны визуальные подсказки при наведении/фокусе без JavaScript.\n**Steps:**\n1. В конец `<style>` добавить CSS‑правило, которое использует псевдо‑элемент `::after` для создания 2‑px линии, появляющейся слева‑направо.\n2. Применить класс `underline-reveal` к любой ссылке‑CTA (например, добавить к существующим `btn-primary`).\n**SAFE CSS:**\n```css\n/* ---------- link‑underline‑reveal ---------- */\n.underline-reveal {\nposition: relative;\noverflow: hidden;\n}\n.underline-reveal::after {\ncontent: \"\";\nposition: absolute;\nleft: 0;\nbottom: 0;\nheight: 2px;\nwidth: 0;\nbackground: var(--grad, #8b5cf6);\ntransition: width .25s ease;\n}\n.underline-reveal:hover::after,\n.underline-reveal:focus-visible::after {\nwidth: 100%;\n}\n```\n**SAFE JS:** *(не требуется)*",
+ "skill": "",
+ "effect": "Делает интерактивные ссылки более заметными, усиливает ощущение «кликабельности», повышает коэффициент кликов (CTR) на CTA без добавления лишних элементов.",
+ "risk": "Требует, чтобы у ссылки был `position: relative` (добавлено в правиле) – конфликтов с уже установленными позициями маловероятен.",
+ "rollback": "Удалить только CSS‑блок и убрать класс `underline-reveal` из HTML‑разметки (можно откатить файл через `git checkout`).",
+ "verify": "Открыть страницу, навести курсор и/или перейти клавишей Tab к ссылке‑CTA; убедиться, что подчеркивание анимировано от нуля до полной ширины. Проверить отсутствие смещения текста (должно оставаться на месте).",
+ "priority_claim": "3 – не критично для скорости, но улучшает UX и визуальную иерархию; легко внедряется и откатывается.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `link-underline-reveal`\n**When to apply:** На статических лендингах, где CTA‑ссылки оформлены как `<a class=\"btn-primary …\">` и нужны визуальные подсказки при наведении/фокусе без JavaScript.\n**Steps:**\n1. В конец `<style>` добавить CSS‑правило, которое использует псевдо‑элемент `::after` для создания 2‑px линии, появляющейся слева‑направо.\n2. Применить класс `underline-reveal` к любой ссылке‑CTA (например, добавить к существующим `btn-primary`).\n**SAFE CSS:**\n```css\n/* ---------- link‑underline‑reveal ---------- */\n.underline-reveal {\nposition: relative;\noverflow: hidden;\n}\n.underline-reveal::after {\ncontent: \"\";\nposition: absolute;\nleft: 0;\nbottom: 0;\nheight: 2px;\nwidth: 0;\nbackground: var(--grad, #8b5cf6);\ntransition: width .25s ease;\n}\n.underline-reveal:hover::after,\n.underline-reveal:focus-visible::after {\nwidth: 100%;\n}\n```\n**SAFE JS:** *(не требуется)*"
+ ],
+ "flags": []
+}

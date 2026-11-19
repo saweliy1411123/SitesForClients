@@ -1,0 +1,27 @@
+{
+ "id": "I-00686",
+ "round": 105,
+ "time": "2026-11-17 06:50:44",
+ "source": "lareper/glm-5.3-prime",
+ "sources": [
+  "lareper/glm-5.3-prime",
+  "lareper/glm-5.2"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "SKILL — premium-tracking-headings (тонкий letter-spacing/word-spacing ритм для «дорогой» типографики)",
+ "knob": "SKILL — premium-tracking-headings\nName: `premium-tracking-headings`\nWhen to apply: на любом лендинге, где крупные заголовки (h1/h2) выглядят «плотно» и дёшево из-за дефолтного трекинга; особенно при отрицательном letter-spacing, доведённом до экстремума.\nSteps:\n1. Найти текущие значения letter-spacing у h1/h2 (у `.price-card .price` уже −.04em — экстремум).\n2. Задать иерархию трекинга: чем крупнее текст — тем плотнее, но в пределах −.01…−.03em; крупным цифрам цены вернуть −.02em вместо −.04em.\n3. Добавить `font-feature-settings:\"k",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "SKILL — premium-tracking-headings\nName: `premium-tracking-headings`\nWhen to apply: на любом лендинге, где крупные заголовки (h1/h2) выглядят «плотно» и дёшево из-за дефолтного трекинга; особенно при отрицательном letter-spacing, доведённом до экстремума.\nSteps:\n1. Найти текущие значения letter-spacing у h1/h2 (у `.price-card .price` уже −.04em — экстремум).\n2. Задать иерархию трекинга: чем крупнее текст — тем плотнее, но в пределах −.01…−.03em; крупным цифрам цены вернуть −.02em вместо −.04em.\n3. Добавить `font-feature-settings:\"k"
+ ],
+ "flags": []
+}

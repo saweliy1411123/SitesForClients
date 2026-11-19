@@ -1,0 +1,26 @@
+{
+ "id": "I-00704",
+ "round": 108,
+ "time": "2026-11-17 06:57:56",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Включить PWA‑манифест и простой service worker для кэширования статических ресурсов",
+ "knob": "Добавить в корень проекта `manifest.json` с минимальными полями (`name`, `short_name`, `start_url`, `display`, `background_color`, `theme_color`, `icons`), подключить его в `<head>` через `<link rel=\"manifest\" href=\"/manifest.json\">`; создать `sw.js` с кодом кэширования (`self.addEventListener('install', e=>e.waitUntil(caches.open('static').then(c=>c.addAll(['/', '/index.html','/style.css'])))); self.addEventListener('fetch', e=>e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request))));` и подключить в конце `<body>` `<script src=\"/sw.js\" defer></script>`.",
+ "skill": "",
+ "effect": "Ускорит повторные посещения, позволит работать офлайн, повысит показатель Core Web Vitals и позицию в поиске (PWA‑фактор).",
+ "risk": "Требуется HTTPS (локальный dev может работать через `localhost`), возможные конфликты кэширования при будущих обновлениях.",
+ "rollback": "Удалить `manifest.json`, `<link rel=\"manifest\">` и `sw.js`, а также `<script src=\"/sw.js\">`.",
+ "verify": "Открыть страницу в Chrome, открыть DevTools → Application → Manifest, убедиться, что манифест загружается; проверить Service Workers, убедиться, что активен и кэширует ресурсы.",
+ "priority_claim": "2 – повышает техническую репутацию и готовит сайт к будущим улучшениям, но требует HTTPS для продакшн.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Добавить в корень проекта `manifest.json` с минимальными полями (`name`, `short_name`, `start_url`, `display`, `background_color`, `theme_color`, `icons`), подключить его в `<head>` через `<link rel=\"manifest\" href=\"/manifest.json\">`; создать `sw.js` с кодом кэширования (`self.addEventListener('install', e=>e.waitUntil(caches.open('static').then(c=>c.addAll(['/', '/index.html','/style.css'])))); self.addEventListener('fetch', e=>e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request))));` и подключить в конце `<body>` `<script src=\"/sw.js\" defer></script>`."
+ ],
+ "flags": []
+}

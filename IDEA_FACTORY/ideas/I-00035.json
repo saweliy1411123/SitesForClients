@@ -1,0 +1,26 @@
+{
+ "id": "I-00035",
+ "round": 4,
+ "time": "2026-11-17 01:51:35",
+ "source": "lareper/deepseek-v4-pro",
+ "sources": [
+  "lareper/deepseek-v4-pro"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить микроразметку FAQPage в секцию FAQ",
+ "knob": "В секцию FAQ (после последнего вопроса) добавить `<script type=\"application/ld+json\">` со schema.org FAQPage, где mainEntity — массив из существующих вопросов и ответов (скопировать текст из видимого HTML, не выдумывать)",
+ "skill": "",
+ "effect": "Сниппет с вопросами в Яндексе/Google, выше CTR и доверие; бесплатно и без изменения видимого контента",
+ "risk": "Если ответы в разметке разойдутся с видимым текстом — возможен фильтр; нужна синхронизация вручную",
+ "rollback": "Удалить добавленный `<script>` блок из index.html",
+ "verify": "Открыть страницу в валидаторе Schema.org (validator.schema.org) или вставить HTML в тестер — проверить, что нет ошибок и все вопросы распознаны",
+ "priority_claim": "1 — быстрый выигрыш для SEO, не требует дизайн-решений",
+ "source_hint": "",
+ "site_request": "FAQ",
+ "category": "lever",
+ "variants": [
+  "В секцию FAQ (после последнего вопроса) добавить `<script type=\"application/ld+json\">` со schema.org FAQPage, где mainEntity — массив из существующих вопросов и ответов (скопировать текст из видимого HTML, не выдумывать)"
+ ],
+ "flags": []
+}

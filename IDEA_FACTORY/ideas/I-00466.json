@@ -1,0 +1,29 @@
+{
+ "id": "I-00466",
+ "round": 69,
+ "time": "2026-11-17 05:02:04",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "SKILL — anchor-cta-safe-area (якорные CTA с корректным фокусом, скроллом и safe-area на мобильных — единый фикс для всех",
+ "knob": "SKILL — anchor-cta-safe-area\nНазвание: anchor-cta-safe-area\nКогда применять: на любом лендинге, где CTA — это `<a href=\"#...\">`-якоря, а на мобильных есть фиксированный sticky-CTA/шапка: якорь уезжает под фикс-элемент, фокус не виден, на iPhone кнопка прилипает к краю экрана. Один блок чинит всё сразу.\nШаги",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "SKILL — anchor-cta-safe-area\nНазвание: anchor-cta-safe-area\nКогда применять: на любом лендинге, где CTA — это `<a href=\"#...\">`-якоря, а на мобильных есть фиксированный sticky-CTA/шапка: якорь уезжает под фикс-элемент, фокус не виден, на iPhone кнопка прилипает к краю экрана. Один блок чинит всё сразу.\nШаги"
+ ],
+ "flags": []
+}

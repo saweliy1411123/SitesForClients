@@ -1,0 +1,30 @@
+{
+ "id": "I-00219",
+ "round": 33,
+ "time": "2026-11-17 03:16:33",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3",
+  "lareper/glm-5.2",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "prefers-reduced-motion для particles/reveal/magnetic",
+ "knob": "в `<style>` добавить блок `@media (prefers-reduced-motion: reduce){ #particles{display:none} .reveal{transition:none;opacity:1;transform:none} .magnetic{transform:none} *{animation-duration:.01ms!important} }`",
+ "skill": "",
+ "effect": "пользователи с вестибулярными нарушениями не получают анимации; плюс Lighthouse a11y-балл",
+ "risk": "частицы и reveal-эффекты исчезнут у части пользователей — визуально проще, но не сломается",
+ "rollback": "`git checkout -- index.html`",
+ "verify": "DevTools → Rendering → Emulate CSS media feature prefers-reduced-motion → убедиться, что анимации отключены и контент виден",
+ "priority_claim": "2 — стандартная a11y-практика, нулевой риск для контента",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "в `<style>` добавить блок `@media (prefers-reduced-motion: reduce){ #particles{display:none} .reveal{transition:none;opacity:1;transform:none} .magnetic{transform:none} *{animation-duration:.01ms!important} }`",
+  "В `<style>` добавить `@media (prefers-reduced-motion: reduce){ .reveal, .magnetic, [class*=\"blob\"]{animation:none!important;transition:none!important;opacity:1!important;transform:none!important} }`."
+ ],
+ "flags": []
+}

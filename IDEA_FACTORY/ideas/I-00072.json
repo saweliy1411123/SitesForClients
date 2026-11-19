@@ -1,0 +1,26 @@
+{
+ "id": "I-00072",
+ "round": 11,
+ "time": "2026-11-17 02:13:16",
+ "source": "localhost:8080/zhipu/glm-4.7-flash",
+ "sources": [
+  "localhost:8080/zhipu/glm-4.7-flash"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Price Trust Badge",
+ "knob": "Add `<div class=\"price-trust\">` near the price block (around line 643) with text \"Безопасная сделка · Демо бесплатно\"",
+ "skill": "",
+ "effect": "Reduces purchase anxiety, clarifies the \"free demo\" offer",
+ "risk": "None",
+ "rollback": "Remove the `<div class=\"price-trust\">` element",
+ "verify": "Check contrast and alignment with the price text",
+ "priority_claim": "3",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Add `<div class=\"price-trust\">` near the price block (around line 643) with text \"Безопасная сделка · Демо бесплатно\""
+ ],
+ "flags": []
+}

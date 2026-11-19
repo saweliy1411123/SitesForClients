@@ -1,0 +1,26 @@
+{
+ "id": "I-00456",
+ "round": 68,
+ "time": "2026-11-17 05:00:23",
+ "source": "lareper/glm-5.3-prime",
+ "sources": [
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Аудит и фикс горизонтального overflow на мобильных (блобы/широкие элементы)",
+ "knob": "METHOD: (1) Открыть index.html, DevTools → Toggle device toolbar → iPhone SE (375px). (2) В Console выполнить: `document.documentElement.scrollWidth > document.documentElement.clientWidth` — если true, найти виновника: `document.querySelectorAll('*').forEach(el=>{if(el.scrollWidth>document.documentElement.clientWidth)console.log(el.className)})`. (3) Типичный кандидат — blob-слои с отрицательными координатами (L58, L195 и т.п.). (4) Фикс: на `body`/секции добавить `overflow-x:clip` (не hidden — не ломает position:sticky).",
+ "skill": "",
+ "effect": "Убирается горизонтальный дёргающийся скролл на телефонах — главный источник ощущения «кривой сайт» на мобильных, где живёт большинство трафика лендинга.",
+ "risk": "`overflow-x:hidden` на предке может сломать sticky-элементы — использовать `clip`.",
+ "rollback": "git checkout -- index.html (правка только в CSS-блоке).",
+ "verify": "Тот же однострочник в консоли до/после: должен вернуть false на 360px и 375px.",
+ "priority_claim": "1 — частый реальный баг на лендингах с blob-декором, проверка за 2 минуты.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: (1) Открыть index.html, DevTools → Toggle device toolbar → iPhone SE (375px). (2) В Console выполнить: `document.documentElement.scrollWidth > document.documentElement.clientWidth` — если true, найти виновника: `document.querySelectorAll('*').forEach(el=>{if(el.scrollWidth>document.documentElement.clientWidth)console.log(el.className)})`. (3) Типичный кандидат — blob-слои с отрицательными координатами (L58, L195 и т.п.). (4) Фикс: на `body`/секции добавить `overflow-x:clip` (не hidden — не ломает position:sticky)."
+ ],
+ "flags": []
+}

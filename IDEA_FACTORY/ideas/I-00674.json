@@ -1,0 +1,28 @@
+{
+ "id": "I-00674",
+ "round": 103,
+ "time": "2026-11-17 06:44:08",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить JSON‑LD Service‑schema для локального SEO",
+ "knob": "В `<head>` перед закрывающим `</head>` вставить:\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"Service\",\n\"serviceType\":\"Создание лендингов за 2 дня\",\n\"provider\":{\n\"@type\":\"LocalBusiness\",\n\"name\":\"Савелий\",\n\"address\":{\"@type\":\"PostalAddress\",\"addressLocality\":\"Пермь\",\"addressCountry\":\"RU\"},\n\"telephone\":\"+7‑999‑123‑45‑67\",\n\"url\":\"https://example.com/\"\n},\n\"areaServed\":\"Пермь\"\n}\n</script>\n```",
+ "skill": "",
+ "effect": "Укрепит локальную релевантность в поиске, появятся rich‑snippets в результатах Google — повышение CTR",
+ "risk": "Требует точных контактных данных; если информация будет неточной, может привести к штрафу за недостоверную разметку",
+ "rollback": "Удалить `<script type=\"application/ld+json\">` (git checkout HEAD -- index.html)",
+ "verify": "В консоли Chrome выполнить `JSON.parse(document.querySelector('script[type=\"application/ld+json\"]').innerHTML)` без ошибок; проверить в Google Rich Results Test → валидность",
+ "priority_claim": "2 – значимый SEO‑эффект, умеренный риск",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<head>` перед закрывающим `</head>` вставить:\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"Service\",\n\"serviceType\":\"Создание лендингов за 2 дня\",\n\"provider\":{\n\"@type\":\"LocalBusiness\",\n\"name\":\"Савелий\",\n\"address\":{\"@type\":\"PostalAddress\",\"addressLocality\":\"Пермь\",\"addressCountry\":\"RU\"},\n\"telephone\":\"+7‑999‑123‑45‑67\",\n\"url\":\"https://example.com/\"\n},\n\"areaServed\":\"Пермь\"\n}\n</script>\n```",
+  "в `<head>` перед закрывающим `</head>` вставить `<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"LocalBusiness\",\"name\":\"Савелий — лендинги для бизнеса в Перми\",\"address\":{\"@type\":\"PostalAddress\",\"addressLocality\":\"Пермь\",\"addressRegion\":\"Пермский край\"},\"telephone\":\"+7 ...\",\"url\":\"https://example.com\",\"openingHours\":\"Mo-Fr 09:00-18:00\"}</script>`",
+  "Вставить сразу после существующих <meta> блок `<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"LocalBusiness\",\"name\":\"Савелий\",\"url\":\"https://example.com\",\"address\":{\"@type\":\"PostalAddress\",\"addressLocality\":\"Пермь\",\"addressCountry\":\"RU\"},\"telephone\":\"+7 123 456‑78‑90\",\"sameAs\":[\"https://vk.com/trainersdontplays\"]}</script>`"
+ ],
+ "flags": []
+}

@@ -1,0 +1,31 @@
+{
+ "id": "I-00508",
+ "round": 77,
+ "time": "2026-11-17 05:25:12",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "SKILL — depth-layer-parallax (многослойный 3D-параллакс фона секций с translateZ и scroll-слоями)",
+ "knob": "",
+ "skill": "",
+ "effect": "ощущение дорогого «глубокого» сайта, дольше удержание внимания, премиальность без единой внешней библиотеки; вес <1 КБ JS.",
+ "risk": "при большом числе слоёв возможен джанк на слабых телефонах — ограничить 2–3 слоями на секцию.",
+ "rollback": "удалить блок `.depth-scene` и SAFE JS; либо `git checkout -- index.improved.html`.",
+ "verify": "открыть копию index.improved.html, прокрутить — фоновые слои смещаются медленнее контента; в DevTools → Rendering → Paint flashing нет постоянной перекраски всего экрана; на эмуляции touch эффекта нет.",
+ "priority_claim": "2 — заметный премиум-эффект, но не влияет напрямую на конверсию; применять после контентных улучшений.",
+ "source_hint": "",
+ "site_request": "blob",
+ "category": "skill",
+ "variants": [
+  ""
+ ],
+ "flags": [
+  "NO_KNOB"
+ ]
+}

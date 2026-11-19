@@ -1,0 +1,27 @@
+{
+ "id": "I-00385",
+ "round": 57,
+ "time": "2026-11-17 04:26:27",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "JSON‑LD Service + Offer разметка для локального SEO",
+ "knob": "В конец `<body>` вставить `<script type=\"application/ld+json\">` с объектом:\n```json\n{\n\"@context\": \"https://schema.org\",\n\"@type\": \"Service\",\n\"name\": \"Создание лендингов за 2 дня\",\n\"provider\": {\n\"@type\": \"LocalBusiness\",\n\"name\": \"Савелий\",\n\"address\": {\n\"@type\": \"PostalAddress\",\n\"addressLocality\": \"Пермь\",\n\"addressCountry\": \"RU\"\n},\n\"telephone\": \"+7XXXXXXXXXX\",\n\"url\": \"https://saveliy.ru\"\n},\n\"offers\": {\n\"@type\": \"Offer\",\n\"priceCurrency\": \"RUB\",\n\"price\": \"19000\",\n\"url\": \"https://saveliy.ru#price\",\n\"availability\": \"https://schema.org/InStock\"\n},\n\"areaServed\": {\n\"@type\": \"Place\",\n\"name\": \"Пермский регион\"\n}\n}\n```",
+ "skill": "",
+ "effect": "Улучшает видимость в поиске (Rich Snippets), повышает доверие за счёт структурированных данных → потенциальный рост органического трафика ≈ 10 % в среднесрочной перспективе",
+ "risk": "Требует точных данных (цена, телефон); если данные не совпадают с реальностью – может быть отклонено модераторами Яндекса/Google",
+ "rollback": "Удалить вставленный `<script>`‑блок (`git checkout -- index.html`)",
+ "verify": "В Google Rich Results Test ввести URL, убедиться, что разметка проходит без ошибок; проверить в Яндекс.Вебмастер → раздел «Разметка» – отсутствие предупреждений",
+ "priority_claim": "3 – долгосрочный SEO‑эффект, но менее критичен для мгновенной конверсии, поэтому ниже по приоритету.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В конец `<body>` вставить `<script type=\"application/ld+json\">` с объектом:\n```json\n{\n\"@context\": \"https://schema.org\",\n\"@type\": \"Service\",\n\"name\": \"Создание лендингов за 2 дня\",\n\"provider\": {\n\"@type\": \"LocalBusiness\",\n\"name\": \"Савелий\",\n\"address\": {\n\"@type\": \"PostalAddress\",\n\"addressLocality\": \"Пермь\",\n\"addressCountry\": \"RU\"\n},\n\"telephone\": \"+7XXXXXXXXXX\",\n\"url\": \"https://saveliy.ru\"\n},\n\"offers\": {\n\"@type\": \"Offer\",\n\"priceCurrency\": \"RUB\",\n\"price\": \"19000\",\n\"url\": \"https://saveliy.ru#price\",\n\"availability\": \"https://schema.org/InStock\"\n},\n\"areaServed\": {\n\"@type\": \"Place\",\n\"name\": \"Пермский регион\"\n}\n}\n```",
+  "В конец `<body>` вставить `<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"Offer\",\"price\":\"29900\",\"priceCurrency\":\"RUB\",\"availability\":\"https://schema.org/InStock\",\"url\":\"#price\",\"seller\":{\"@type\":\"LocalBusiness\",\"name\":\"Савелий\",\"address\":{\"@type\":\"PostalAddress\",\"addressLocality\":\"Пермь\",\"addressCountry\":\"RU\"}}}</script>`"
+ ],
+ "flags": []
+}

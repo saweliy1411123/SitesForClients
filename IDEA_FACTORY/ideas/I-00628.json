@@ -1,0 +1,26 @@
+{
+ "id": "I-00628",
+ "round": 95,
+ "time": "2026-11-17 06:19:21",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "FAQ‑accordion‑semantic — заменить текущие блоки `<div class=\"faq-item\">` на `<details class=\"faq-item\"><summary>Вопрос</",
+ "knob": "в секции `#faq` заменить каждый вопрос‑ответ на `<details class=\"faq-item\"><summary>Текст вопроса</summary><p>Текст ответа</p></details>`; добавить в CSS `details.faq-item{margin-bottom:1rem;cursor:pointer} details[open] summary{font-weight:600}` и `summary{outline:none}`.",
+ "skill": "",
+ "effect": "улучшает семантику, ускоряет загрузку (меньше JavaScript), повышает доступность (скрин‑ридеры читают summary), упрощает мобильный UX (только один клик).",
+ "risk": "если стили уже зависят от классов `.faq-item h3`, потребуется небольшая корректировка CSS.",
+ "rollback": "`git checkout -- index.html` (или вернуть оригинальные `<div>`‑блоки).",
+ "verify": "в браузере кликнуть по каждому вопросу — ответ раскрывается; проверить отсутствие JS‑ошибок в Console; выполнить `document.querySelectorAll('details[open]').length` — ожидаем 0 до взаимодействия.",
+ "priority_claim": "1 — семантика и доступность критичны для SEO и конверсии в FAQ‑разделе.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "в секции `#faq` заменить каждый вопрос‑ответ на `<details class=\"faq-item\"><summary>Текст вопроса</summary><p>Текст ответа</p></details>`; добавить в CSS `details.faq-item{margin-bottom:1rem;cursor:pointer} details[open] summary{font-weight:600}` и `summary{outline:none}`."
+ ],
+ "flags": []
+}

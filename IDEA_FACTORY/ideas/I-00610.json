@@ -1,0 +1,26 @@
+{
+ "id": "I-00610",
+ "round": 91,
+ "time": "2026-11-17 06:07:20",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — perspective-tilt-parallax",
+ "knob": "**Name:** `perspective-tilt-parallax`\n**When to apply:** На секциях с фоновыми иллюстрациями (например, `.hero`, `.final`) чтобы добавить лёгкий 3‑D‑параллакс‑эффект при скролле.\n**SAFE CSS:**\n```css\n/* container with perspective */\n.parallax-perspective {\nperspective: 800px;\noverflow: hidden;\n}\n.parallax-perspective .parallax-layer {\ntransform: translateZ(var(--tz, 0));\ntransition: transform .2s ease-out;\n}\n```\n**SAFE JS:**\n```js\n// лёгкий скролл‑тильт, без throttling (мало элементов)\ndocument.addEventListener('scroll', () => {\nconst scrollY = window.scrollY;\ndocument.querySelectorAll('.parallax-perspective .parallax-layer')\n.forEach(el => {\nconst depth = parseFloat(el.dataset.depth) || 0;\nconst tz = (scrollY * depth) * 0.05;\nel.style.setProperty('--tz', `${tz}px`);\n});\n});\n```",
+ "skill": "",
+ "effect": "Создаёт ощущение глубины и динамики, усиливая премиальный «тёплый» визуальный стиль без тяжёлых библиотек.",
+ "risk": "На слабом железе может вызвать небольшие лаги; рекомендуется отключать при `prefers-reduced-motion: reduce`.",
+ "rollback": "Удалить добавленные классы `.parallax-perspective` и `.parallax-layer` и связанные скрипты; `git checkout HEAD -- index.html`.",
+ "verify": "Прокрутить страницу, убедиться, что фоновые слои слегка смещаются в зависимости от скролла; включить/выключить `prefers-reduced-motion` в DevTools – эффект исчезает.",
+ "priority_claim": "2 – добавляет «wow‑factor», но требует небольшого JS, поэтому ставим средний приоритет.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `perspective-tilt-parallax`\n**When to apply:** На секциях с фоновыми иллюстрациями (например, `.hero`, `.final`) чтобы добавить лёгкий 3‑D‑параллакс‑эффект при скролле.\n**SAFE CSS:**\n```css\n/* container with perspective */\n.parallax-perspective {\nperspective: 800px;\noverflow: hidden;\n}\n.parallax-perspective .parallax-layer {\ntransform: translateZ(var(--tz, 0));\ntransition: transform .2s ease-out;\n}\n```\n**SAFE JS:**\n```js\n// лёгкий скролл‑тильт, без throttling (мало элементов)\ndocument.addEventListener('scroll', () => {\nconst scrollY = window.scrollY;\ndocument.querySelectorAll('.parallax-perspective .parallax-layer')\n.forEach(el => {\nconst depth = parseFloat(el.dataset.depth) || 0;\nconst tz = (scrollY * depth) * 0.05;\nel.style.setProperty('--tz', `${tz}px`);\n});\n});\n```"
+ ],
+ "flags": []
+}

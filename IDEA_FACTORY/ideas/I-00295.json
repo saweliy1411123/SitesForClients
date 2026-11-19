@@ -1,0 +1,26 @@
+{
+ "id": "I-00295",
+ "round": 44,
+ "time": "2026-11-17 03:46:53",
+ "source": "localhost:8080/zhipu/glm-4.7-flash",
+ "sources": [
+  "localhost:8080/zhipu/glm-4.7-flash"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Метод «Dark Mode Contrast Audit» (проверка читаемости)",
+ "knob": "METHOD: В Chrome DevTools -> Accessibility -> Compute Styles. Выбрать текст в `h1` (L455) и `p.sub` (L460). Использовать Eye Dropper для проверки соотношения яркости текста и фона (градиент `#8b5cf6` -> `#0a0a0f`). Цель: WCAG AA (4.5:1).",
+ "skill": "",
+ "effect": "Гарантирует, что премиальный тёмный дизайн не нарушает законы доступности и не раздражает пользователей с ослабленным зрением.",
+ "risk": "Низкий.",
+ "rollback": "Закрыть вкладку Accessibility.",
+ "verify": "5 минут.",
+ "priority_claim": "2 (Доступность)",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: В Chrome DevTools -> Accessibility -> Compute Styles. Выбрать текст в `h1` (L455) и `p.sub` (L460). Использовать Eye Dropper для проверки соотношения яркости текста и фона (градиент `#8b5cf6` -> `#0a0a0f`). Цель: WCAG AA (4.5:1)."
+ ],
+ "flags": []
+}

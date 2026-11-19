@@ -1,0 +1,26 @@
+{
+ "id": "I-00862",
+ "round": 129,
+ "time": "2026-11-17 07:57:14",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "** Универсальный фокус‑видимый контур и увеличение тап‑таргетов для всех интерактивных элементов",
+ "knob": "** В глобальный CSS добавить правило:\n```css\n:focus-visible {\noutline: 3px solid var(--blue);\noutline-offset: 2px;\nborder-radius: 4px;\n}\na, .btn-primary {\nmin-width: 44px;\nmin-height: 44px;\ndisplay: inline-flex;\nalign-items: center;\njustify-content: center;\n}\n```",
+ "skill": "",
+ "effect": "** Повысит доступность (WCAG 2.1 AA) для пользователей клавиатурой и мобильных, уменьшит количество «потерянных» кликов, тем самым улучшит коэффициент конверсии на CTA‑ссылках.",
+ "risk": "** Минимальное – небольшое изменение визуального стиля может слегка изменить дизайн кнопок, но это легко откатывается.",
+ "rollback": "** Удалить только добавленные строки CSS (git checkout index.html).",
+ "verify": "** Открыть страницу в Chrome, включить режим эмуляции клавиатуры (`Tab`), убедиться, что каждый интерактивный элемент получает ярко‑видимый контур; проверить в мобильном режиме, что кнопки не меньше 44 × 44 px (DevTools → Elements → Computed).",
+ "priority_claim": "** 2 – быстро реализуемо, улучшает UX и SEO (по показателям доступности), но менее критично, чем локальная разметка.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "** В глобальный CSS добавить правило:\n```css\n:focus-visible {\noutline: 3px solid var(--blue);\noutline-offset: 2px;\nborder-radius: 4px;\n}\na, .btn-primary {\nmin-width: 44px;\nmin-height: 44px;\ndisplay: inline-flex;\nalign-items: center;\njustify-content: center;\n}\n```"
+ ],
+ "flags": []
+}

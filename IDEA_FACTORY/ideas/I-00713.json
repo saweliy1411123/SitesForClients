@@ -1,0 +1,27 @@
+{
+ "id": "I-00713",
+ "round": 110,
+ "time": "2026-11-17 07:03:36",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Предзагрузка DNS и шрифтов для ускорения LCP",
+ "knob": "В `<head>` добавить перед существующими `<link rel=\"preconnect\">` строки:\n```html\n<link rel=\"dns-prefetch\" href=\"//fonts.googleapis.com\">\n<link rel=\"dns-prefetch\" href=\"//fonts.gstatic.com\">\n<link rel=\"preload\" as=\"style\" href=\"https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&display=swap\" crossorigin>\n```",
+ "skill": "",
+ "effect": "Сократит время установления соединения с CDN‑шрифтами, ускорит отрисовку текста в hero‑секции → улучшит LCP и Core Web Vitals → положительно отразится на SEO и пользовательском опыте",
+ "risk": "Если указать неверный URL, браузер может попытаться загрузить несуществующий ресурс (не критично)",
+ "rollback": "`git checkout -- index.html` (удалить добавленные строки)",
+ "verify": "В Chrome → Network посмотреть, что запросы DNS‑prefetch и preload выполнены; в Lighthouse → Performance проверить улучшение LCP (скрытый в пределах 2 сек)",
+ "priority_claim": "2 — умеренный эффект на скорость, простая правка",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<head>` добавить перед существующими `<link rel=\"preconnect\">` строки:\n```html\n<link rel=\"dns-prefetch\" href=\"//fonts.googleapis.com\">\n<link rel=\"dns-prefetch\" href=\"//fonts.gstatic.com\">\n<link rel=\"preload\" as=\"style\" href=\"https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&display=swap\" crossorigin>\n```",
+  "В <head> перед существующими `<link rel=\"preconnect\">` добавить:\n```html\n<link rel=\"dns-prefetch\" href=\"https://fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n<link rel=\"preload\" as=\"style\" href=\"https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap\" onload=\"this.rel='stylesheet'\">\n<noscript><link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap\"></noscript>\n```"
+ ],
+ "flags": []
+}

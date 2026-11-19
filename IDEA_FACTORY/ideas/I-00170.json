@@ -1,0 +1,26 @@
+{
+ "id": "I-00170",
+ "round": 26,
+ "time": "2026-11-17 02:55:36",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Декоративные фоновые слои (particles, glow-блобы) скрыть от скрин-ридеров и вынести из DOM-потока",
+ "knob": "По снимку есть как минимум 4 декоративных абсолютных слоя: `#particles` (L103), fixed-круг 480px (L58), два glow-блоба (L204, L332) и оверлей (L284). Каждому добавить `aria-hidden=\"true\"` и `role=\"presentation\"`; для `#particles` — если это canvas с анимацией — дополнительно `tabindex=\"-1\"`. Проверить SITE_REQUEST «particles», чтобы увидеть, canvas это или div.",
+ "skill": "",
+ "effect": "Скрин-ридер не читает мусорные пустые слои («графика», «канвас»), навигация по Tab не застревает; чище семантика для SEO-парсеров.",
+ "risk": "Если aria-hidden поставить на элемент, содержащий фокусируемые элементы, они станут недоступными — здесь слои pointer-events:none, риск минимален.",
+ "rollback": "`git checkout -- index.html`.",
+ "verify": "(1) Tab по странице с включённым скрин-ридером (NVDA, 3 мин): не должно быть «canvas», «unlabeled» между секциями. (2) Lighthouse → Accessibility → проверить, что нет пункта «ARIA hidden element contains focusable».",
+ "priority_claim": "2 — быстрый a11y-вин без визуальных изменений; particles-канвас почти наверняка озвучивается как безымянный элемент.",
+ "source_hint": "",
+ "site_request": "particles",
+ "category": "lever",
+ "variants": [
+  "По снимку есть как минимум 4 декоративных абсолютных слоя: `#particles` (L103), fixed-круг 480px (L58), два glow-блоба (L204, L332) и оверлей (L284). Каждому добавить `aria-hidden=\"true\"` и `role=\"presentation\"`; для `#particles` — если это canvas с анимацией — дополнительно `tabindex=\"-1\"`. Проверить SITE_REQUEST «particles», чтобы увидеть, canvas это или div."
+ ],
+ "flags": []
+}

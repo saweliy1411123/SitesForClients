@@ -1,0 +1,27 @@
+{
+ "id": "I-00419",
+ "round": 63,
+ "time": "2026-11-17 04:43:20",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "scroll-snap-carousel",
+ "knob": "Обернуть все демо-карточки в контейнер `<div class=\"demo-carousel\" tabindex=\"0\">`; добавить CSS: `.demo-carousel { ... }`",
+ "skill": "scroll-snap-carousel",
+ "effect": "Улучшение пользовательского опыта за счет добавления карусели для демо-концептов",
+ "risk": "Требует проверки на совместимость с другими элементами на странице",
+ "rollback": "Удалить добавленный контейнер и CSS-стили",
+ "verify": "Проверить корректную работу карусели на разных устройствах и браузерах",
+ "priority_claim": "2",
+ "source_hint": "",
+ "site_request": "scroll-snap-carousel",
+ "category": "lever",
+ "variants": [
+  "Обернуть все демо-карточки в контейнер `<div class=\"demo-carousel\" tabindex=\"0\">`; добавить CSS: `.demo-carousel { ... }`",
+  "METHOD: SKILL — scroll-snap-carousel\n**Name:** `scroll-snap-carousel`\n**When to apply:** На лендингах с крупными визуальными блоками.\n**SAFE CSS:**\n```css\n.demo-carousel {\ndisplay: flex;\noverflow: hidden;\nscroll-snap-type: x mandatory;\n}\n.demo-carousel > * {\nflex: 0 0 100%;\nscroll-snap-align: start;\n}\n```\n**SAFE JS:** (необязательно)\n```javascript\n// нет\n```"
+ ],
+ "flags": []
+}

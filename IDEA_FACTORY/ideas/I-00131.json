@@ -1,0 +1,26 @@
+{
+ "id": "I-00131",
+ "round": 19,
+ "time": "2026-11-17 02:36:36",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "сократить набор весов Manrope (700 → убрать неиспользуемый)",
+ "knob": "SITE_REQUEST «font-weight» — проверить, используется ли weight 700 (или 400/500). В `<link>` Google Fonts оставить только реально применяемые веса, например `wght@400;600`.",
+ "skill": "",
+ "effect": "меньше байт шрифта и меньше вариантов подмены (FOUT) — быстрее отрисовка текста, особенно на 3G.",
+ "risk": "если вес используется в CSS, текст станет тоньше/жирнее — визуальный сдвиг.",
+ "rollback": "вернуть исходный `<link>`: `git checkout index.html`.",
+ "verify": "в DevTools → Searching по `font-weight` найти все значения; сверить с запрошенными весами за 3 минуты.",
+ "priority_claim": "2 — дешёвая победа по скорости, нулевой риск при сверке.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "SITE_REQUEST «font-weight» — проверить, используется ли weight 700 (или 400/500). В `<link>` Google Fonts оставить только реально применяемые веса, например `wght@400;600`."
+ ],
+ "flags": []
+}

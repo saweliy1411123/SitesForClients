@@ -1,0 +1,26 @@
+{
+ "id": "I-00191",
+ "round": 29,
+ "time": "2026-11-17 03:04:29",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Доверие — карусель отзывов с реальными клиентами",
+ "knob": "После секции «Цена» (примерно L660) вставить `<section id=\"testimonials\" class=\"testimonials reveal\"><h2>Что говорят клиенты</h2><div class=\"carousel\"><div class=\"slide\"><img src=\"logo1.svg\" alt=\"Логотип клиента 1\"><p>«Сайт привёл 30 заявок за первый месяц»</p></div><div class=\"slide\"><img src=\"logo2.svg\" alt=\"Логотип клиента 2\"><p>«Работа в 2 дня, всё готово к запуску»</p></div></div></section>` и добавить CSS‑анимацию `@keyframes slide` + `overflow:hidden; white-space:nowrap;` для автопрокрутки.",
+ "skill": "",
+ "effect": "Показ реальных кейсов повышает доверие и уменьшает барьер к заявке → рост коэффициента конверсии.",
+ "risk": "Требуется добавить небольшие изображения‑логотипы (≈ 5 KB каждый); отсутствие реальных отзывов может вызвать скепсис, поэтому использовать только проверенные кейсы.",
+ "rollback": "`git checkout -- index.html` (удалить секцию `#testimonials`).",
+ "verify": "Перезагрузить страницу, убедиться, что карусель отображается и автоматически скроллит, проверить работу в мобильном режиме (скролл по свайпу).",
+ "priority_claim": "2 – усиливает социальное доказательство, но не критично для первого экрана.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "После секции «Цена» (примерно L660) вставить `<section id=\"testimonials\" class=\"testimonials reveal\"><h2>Что говорят клиенты</h2><div class=\"carousel\"><div class=\"slide\"><img src=\"logo1.svg\" alt=\"Логотип клиента 1\"><p>«Сайт привёл 30 заявок за первый месяц»</p></div><div class=\"slide\"><img src=\"logo2.svg\" alt=\"Логотип клиента 2\"><p>«Работа в 2 дня, всё готово к запуску»</p></div></div></section>` и добавить CSS‑анимацию `@keyframes slide` + `overflow:hidden; white-space:nowrap;` для автопрокрутки."
+ ],
+ "flags": []
+}

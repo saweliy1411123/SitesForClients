@@ -1,0 +1,26 @@
+{
+ "id": "I-00215",
+ "round": 33,
+ "time": "2026-11-17 03:15:19",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Перенести скрипт анимации частиц в `defer` и добавить поддержку `prefers-reduced-motion`",
+ "knob": "1) В `<script src=\"...\">` добавить атрибут `defer` (или если скрипт inline – обернуть в `<script defer>…</script>`).\n2) В CSS добавить медиа‑правило:\n```css\n@media (prefers-reduced-motion: reduce) {\n#particles { display:none; }\n}\n```",
+ "skill": "",
+ "effect": "Скрипт не блокирует парсинг HTML, а пользователи с отключённой анимацией не увидят лишние визуальные эффекты → лучше доступность и время первой отрисовки",
+ "risk": "Если скрипт зависит от элементов, которые ещё не созданы к моменту выполнения, может потребоваться небольшая корректировка (обычно `defer` решает)",
+ "rollback": "Удалить `defer` и медиа‑правило; `git checkout -- index.html`",
+ "verify": "Открыть страницу в Chrome → Performance, убедиться, что `script` загружается после `DOMContentLoaded`; включить “Reduced motion” в системных настройках и проверить отсутствие canvas‑анимации",
+ "priority_claim": "2 – повышает перфоманс и удовлетворяет требованиям доступности",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "1) В `<script src=\"...\">` добавить атрибут `defer` (или если скрипт inline – обернуть в `<script defer>…</script>`).\n2) В CSS добавить медиа‑правило:\n```css\n@media (prefers-reduced-motion: reduce) {\n#particles { display:none; }\n}\n```"
+ ],
+ "flags": []
+}

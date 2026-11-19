@@ -1,0 +1,26 @@
+{
+ "id": "I-00623",
+ "round": 94,
+ "time": "2026-11-17 06:16:11",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Add consistent focus-visible outline for all interactive elements",
+ "knob": "В CSS добавить правило\n```css\n/* SAFE CSS */\n:focus-visible {\noutline: 3px solid var(--blue);\noutline-offset: 2px;\nborder-radius: 4px;\n}\na:focus-visible,\nbutton:focus-visible,\n[role=\"button\"]:focus-visible,\n.nav-links a:focus-visible,\n.btn-primary:focus-visible {\noutline: 3px solid var(--blue);\n}\n```\nи обеспечить, что все ссылки‑CTA и навигационные ссылки используют `tabindex=\"0\"` (если они не‑интерактивные по умолчанию).",
+ "skill": "",
+ "effect": "Явный визуальный индикатор фокуса улучшает доступность, повышает доверие пользователей с ограниченными возможностями и соответствует WCAG 2.1 AA; это также положительно воспринимается поисковыми системами (SEO‑фактор “accessibility”).",
+ "risk": "Минимальный риск – возможные конфликты с уже существующими `outline:none` в некоторых стилях; решается добавлением `!important` только при необходимости.",
+ "rollback": "Удалить добавленный блок CSS и вернуть прежний файл (`git checkout -- index.html`).",
+ "verify": "В браузере включить клавиатурную навигацию (Tab), пройтись по всем интерактивным элементам – каждый должен получать синий контур; проверить в Chrome DevTools → Accessibility → “Focus order”.",
+ "priority_claim": "2 – низкая стоимость реализации, но критичный для соответствия a11y‑стандартам и повышения конверсии через доверие.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В CSS добавить правило\n```css\n/* SAFE CSS */\n:focus-visible {\noutline: 3px solid var(--blue);\noutline-offset: 2px;\nborder-radius: 4px;\n}\na:focus-visible,\nbutton:focus-visible,\n[role=\"button\"]:focus-visible,\n.nav-links a:focus-visible,\n.btn-primary:focus-visible {\noutline: 3px solid var(--blue);\n}\n```\nи обеспечить, что все ссылки‑CTA и навигационные ссылки используют `tabindex=\"0\"` (если они не‑интерактивные по умолчанию)."
+ ],
+ "flags": []
+}

@@ -1,0 +1,27 @@
+{
+ "id": "I-00415",
+ "round": 62,
+ "time": "2026-11-17 04:40:34",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — scroll-snap-carousel",
+ "knob": "\n**Name:** `scroll-snap-carousel`\n**When to apply:** На лендингах с крупными визуальными блоками.\n**SAFE CSS:**\n```css\n.scroll-snap-carousel {\ndisplay: flex;\nflex-wrap: nowrap;\noverflow-x: auto;\nscroll-snap-type: x mandatory;\n}\n.scroll-snap-carousel > * {\nflex: 0 0 100%;\nheight: 100vh;\nscroll-snap-align: start;\n}\n```\n**SAFE JS:** (нет)",
+ "skill": "scroll-snap-carousel",
+ "effect": "Улучшение пользовательского опыта за счет визуальной карусели.",
+ "risk": "Требует решения владельца для адаптации к существующему контенту.",
+ "rollback": "Удалить добавленный CSS-код.",
+ "verify": "Проверить визуальное качество и скорость загрузки карусели.",
+ "priority_claim": "2, улучшает пользовательский опыт.",
+ "source_hint": "",
+ "site_request": "scroll-snap-carousel",
+ "category": "skill",
+ "variants": [
+  "\n**Name:** `scroll-snap-carousel`\n**When to apply:** На лендингах с крупными визуальными блоками.\n**SAFE CSS:**\n```css\n.scroll-snap-carousel {\ndisplay: flex;\nflex-wrap: nowrap;\noverflow-x: auto;\nscroll-snap-type: x mandatory;\n}\n.scroll-snap-carousel > * {\nflex: 0 0 100%;\nheight: 100vh;\nscroll-snap-align: start;\n}\n```\n**SAFE JS:** (нет)",
+  "\n**Name:** `scroll-snap-carousel`\n**When to apply:** На любой статический лендинг, где есть секции или карточки, которые можно просматривать в виде карусели.\n**SAFE CSS:**\n```css\n.carousel {\ndisplay: flex;\noverflow-x: auto;\nscroll-snap-type: x mandatory;\n}\n.carousel-item {\nflex: 0 0 100%;\nscroll-snap-align: start;\n}\n```\n**SAFE JS:** (не требуется)"
+ ],
+ "flags": []
+}

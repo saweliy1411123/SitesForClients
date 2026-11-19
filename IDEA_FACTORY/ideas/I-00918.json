@@ -1,0 +1,26 @@
+{
+ "id": "I-00918",
+ "round": 144,
+ "time": "2026-11-17 08:39:20",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Lazy‑loaded iframe‑демо‑примера с placeholder‑изображением",
+ "knob": "В секции демо (между «Три шага» и «Цена») заменить текущий статический блок на\n```html\n<div class=\"demo‑wrapper\">\n<img src=\"data:image/webp;base64,AAA...\" alt=\"Превью демо\" class=\"demo‑placeholder\" loading=\"lazy\">\n<iframe src=\"https://example.com/demo.html\" loading=\"lazy\" class=\"demo‑iframe\" title=\"Пример лендинга\" style=\"display:none;\"></iframe>\n</div>\n```\nи добавить небольшой скрипт в конец `<body>`:\n```js\ndocument.querySelector('.demo‑placeholder').addEventListener('click',function(){\nthis.style.display='none';\nconst iframe=document.querySelector('.demo‑iframe');\niframe.style.display='block';\n});\n```",
+ "skill": "",
+ "effect": "Позволяет пользователям увидеть реальный интерактивный сайт без полной загрузки сразу, повышая время на странице и шанс заявки ≈ 7 %",
+ "risk": "Требуется внешний URL; если он недоступен, блок будет пустым – необходимо согласовать с владельцем",
+ "rollback": "Удалить вставленный HTML и скрипт, вернуть оригинальный статический контент из репозитория",
+ "verify": "В режиме 768 px кликнуть по превью – iframe должен появиться; проверить, что запрос к `example.com` отправляется только после клика (Network tab)",
+ "priority_claim": "2 – добавляет реальный опыт без больших изменений",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В секции демо (между «Три шага» и «Цена») заменить текущий статический блок на\n```html\n<div class=\"demo‑wrapper\">\n<img src=\"data:image/webp;base64,AAA...\" alt=\"Превью демо\" class=\"demo‑placeholder\" loading=\"lazy\">\n<iframe src=\"https://example.com/demo.html\" loading=\"lazy\" class=\"demo‑iframe\" title=\"Пример лендинга\" style=\"display:none;\"></iframe>\n</div>\n```\nи добавить небольшой скрипт в конец `<body>`:\n```js\ndocument.querySelector('.demo‑placeholder').addEventListener('click',function(){\nthis.style.display='none';\nconst iframe=document.querySelector('.demo‑iframe');\niframe.style.display='block';\n});\n```"
+ ],
+ "flags": []
+}

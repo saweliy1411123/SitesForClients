@@ -1,0 +1,26 @@
+{
+ "id": "I-00994",
+ "round": 169,
+ "time": "2026-11-17 09:48:53",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Верхняя полоса с телефоном + адресом, разметка LocalBusiness (ContactPoint)",
+ "knob": "Вставить сразу после открывающего `<body>` блок `<div class=\"top-bar\" role=\"banner\"><a href=\"tel:+7XXXXXXXXXX\" class=\"phone-link\" aria-label=\"Позвонить: +7 XXX XXX‑XX‑XX\">+7 XXX XXX‑XX‑XX</a><span class=\"address\">г. Пермь, ул. Примерная, 12</span></div>`; добавить в `<head>` скрипт JSON‑LD:\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"LocalBusiness\",\n\"name\":\"Савелий — лендинги для бизнеса в Перми\",\n\"url\":\"https://saveliy-perm.ru/\",\n\"telephone\":\"+7XXXXXXXXXX\",\n\"address\":{\n\"@type\":\"PostalAddress\",\n\"streetAddress\":\"ул. Примерная, 12\",\n\"addressLocality\":\"Пермь\",\n\"addressRegion\":\"Пермь\",\n\"postalCode\":\"614000\",\n\"addressCountry\":\"RU\"\n},\n\"contactPoint\":[{\n\"@type\":\"ContactPoint\",\n\"telephone\":\"+7XXXXXXXXXX\",\n\"contactType\":\"customer service\",\n\"availableLanguage\":[\"Russian\"]\n}]\n}\n</script>\n```\nCSS `.top-bar{background:#f5f5f5;padding:8px 16px;display:flex;justify-content:center;gap:1.5rem;font-size:14px;}` и `.phone-link{color:var(--blue);font-weight:600;}`",
+ "skill": "",
+ "effect": "Явный контактный пункт повышает доверие, улучшает локальное SEO (по запросам «лендинг в Перми»), а также упрощает пользователям звонок.",
+ "risk": "Требует актуального номера и адреса; если данные изменятся, их надо поддерживать.",
+ "rollback": "Удалить блок `<div class=\"top-bar\">…</div>` и соответствующий `<script type=\"application/ld+json\">`; `git checkout index.html`.",
+ "verify": "Открыть страницу, убедиться, что телефонный линк кликабелен, в DevTools → Application → Structured Data проверка наличия LocalBusiness; клик по телефону открывает dialer.",
+ "priority_claim": "3 — полезно для SEO и доверия, но требует поддержания актуальности данных; реализуется быстро, но менее критично для кон",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Вставить сразу после открывающего `<body>` блок `<div class=\"top-bar\" role=\"banner\"><a href=\"tel:+7XXXXXXXXXX\" class=\"phone-link\" aria-label=\"Позвонить: +7 XXX XXX‑XX‑XX\">+7 XXX XXX‑XX‑XX</a><span class=\"address\">г. Пермь, ул. Примерная, 12</span></div>`; добавить в `<head>` скрипт JSON‑LD:\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"LocalBusiness\",\n\"name\":\"Савелий — лендинги для бизнеса в Перми\",\n\"url\":\"https://saveliy-perm.ru/\",\n\"telephone\":\"+7XXXXXXXXXX\",\n\"address\":{\n\"@type\":\"PostalAddress\",\n\"streetAddress\":\"ул. Примерная, 12\",\n\"addressLocality\":\"Пермь\",\n\"addressRegion\":\"Пермь\",\n\"postalCode\":\"614000\",\n\"addressCountry\":\"RU\"\n},\n\"contactPoint\":[{\n\"@type\":\"ContactPoint\",\n\"telephone\":\"+7XXXXXXXXXX\",\n\"contactType\":\"customer service\",\n\"availableLanguage\":[\"Russian\"]\n}]\n}\n</script>\n```\nCSS `.top-bar{background:#f5f5f5;padding:8px 16px;display:flex;justify-content:center;gap:1.5rem;font-size:14px;}` и `.phone-link{color:var(--blue);font-weight:600;}`"
+ ],
+ "flags": []
+}

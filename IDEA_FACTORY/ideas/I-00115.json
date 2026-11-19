@@ -1,0 +1,28 @@
+{
+ "id": "I-00115",
+ "round": 17,
+ "time": "2026-11-17 02:29:17",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only",
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Добавить BreadcrumbList (schema.org) для улучшения SEO и навигации",
+ "knob": "В `<head>` вставить `<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Главная\",\"item\":\"https://example.com/\"}]}</script>` (заменить `example.com` на реальный домен) и добавить визуальный «хлебные крошки» над `<main>` с разметкой `<nav aria-label=\"Хлебные крошки\"><ol class=\"breadcrumb\"><li><a href=\"/\">Главная</a></li></ol></nav>`.",
+ "skill": "",
+ "effect": "Повысит видимость в поиске (rich snippets), улучшит пользовательский опыт, позволяя быстро понять структуру сайта.",
+ "risk": "Требует уточнения реального URL и возможной правки в случае изменения структуры сайта; небольшая вероятность конфликтов с уже существующей разметкой.",
+ "rollback": "Удалить добавленный `<script>` и `<nav>`‑блок (`git checkout HEAD -- index.html`).",
+ "verify": "Открыть страницу в Google Rich Results Test, убедиться, что BreadcrumbList распознан без ошибок; проверить визуально, что хлебные крошки отображаются корректно.",
+ "priority_claim": "2 — быстрый и безопасный SEO‑апгрейд с высокой отдачей.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<head>` вставить `<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Главная\",\"item\":\"https://example.com/\"}]}</script>` (заменить `example.com` на реальный домен) и добавить визуальный «хлебные крошки» над `<main>` с разметкой `<nav aria-label=\"Хлебные крошки\"><ol class=\"breadcrumb\"><li><a href=\"/\">Главная</a></li></ol></nav>`.",
+  "Сразу после `<header>` вставить\n```html\n<nav class=\"breadcrumb\" aria-label=\"Хлебные крошки\">\n<a href=\"/\">Главная</a> / <span>Лендинг</span>\n</nav>\n```\nи в конец `<body>` добавить\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"BreadcrumbList\",\n\"itemListElement\":[\n{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Главная\",\"item\":\"https://example.com/\"},\n{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Лендинг\",\"item\":\"https://example.com/landing\"}\n]\n}\n</script>\n```"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00228",
+ "round": 35,
+ "time": "2026-11-17 03:21:37",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — parallax-scroll-layers",
+ "knob": "METHOD: SKILL\n**Name:** `parallax-scroll-layers`\n**When to apply:** На лендингах, где есть несколько визуальных слоёв (фон, иллюстрации, карточки) и требуется лёгкий глубинный эффект при прокрутке, не используя тяжёлые JS‑библиотеки.\n**Steps:**\n1. Добавить в HTML контейнер‑обёртку `data-parallax` вокруг слоёв, которым нужен эффект (например, `.bg-layer`, `.mid-layer`, `.fg-layer`).\n2. В CSS задать каждому слою начальное `transform: translateZ(0)` и `will-change: transform`.\n3. Внизу файла добавить безопасный JS, который на событии `scroll` (с `requestAnimationFrame`) считает процент прокрутки и обновляет `transform: translateY(var(--offset))` для каждого слоя, используя коэффициенты глубины (например, 0.3, 0.6, 0.9).\n4. Добавить `@media (prefers-reduced-motion: reduce)`‑правило, которое отключает скрипт (ставит `transform: none`).\n**SAFE CSS:**\n```css\n[data-parallax] {\nperspective: 1000px;\noverflow: hidden;\n}\n[data-parallax] > .layer {\nposition: absolute;\ntop: 0;\nleft: 0;\nwidth: 100%;\nheight: 100%;\nwill-change: transform;\n}\n.layer-bg   { --depth: 0.2; }\n.layer-mid  { --depth: 0.5; }\n.layer-fg   { --depth: 0.8; }\n```\n**SAFE JS:**\n```js\n(() => {\nconst layers = document.querySelectorAll('[data-parallax] .layer');\nif (!layers.length) return;\nconst onScroll = () => {\nconst scrollY = window.scrollY;\nlayers.forEach(l => {\nconst depth = parseFloat(getComputedStyle(l).getPropertyValue('--depth'));\nl.style.transform = `translateY(${scrollY * depth}px)`;\n});\n};\nconst raf = () => { onScroll(); requestAnimationFrame(raf); };\nif (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;\nrequestAnimationFrame(raf);\n})();\n```",
+ "skill": "",
+ "effect": "Создаёт ощущение глубины и динамичности без тяжёлых библиотек, усиливая премиальный визуальный стиль и удерживая внимание посетителя.",
+ "risk": "Малый риск «jank» на старых мобильных устройствах при высоких коэффициентах глубины; можно скорректировать коэффициенты.",
+ "rollback": "`git checkout -- index.html` (если изменения внесены в копию `index.improved.html`).",
+ "verify": "Открыть страницу в браузере, включить DevTools → Performance, прокрутить и убедиться, что FPS ≥ 55 и нет «long tasks». Проверить, что при `prefers-reduced-motion` слой не движется.",
+ "priority_claim": "1 — Высокий визуальный и конверсионный потенциал при минимальном весе кода.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "METHOD: SKILL\n**Name:** `parallax-scroll-layers`\n**When to apply:** На лендингах, где есть несколько визуальных слоёв (фон, иллюстрации, карточки) и требуется лёгкий глубинный эффект при прокрутке, не используя тяжёлые JS‑библиотеки.\n**Steps:**\n1. Добавить в HTML контейнер‑обёртку `data-parallax` вокруг слоёв, которым нужен эффект (например, `.bg-layer`, `.mid-layer`, `.fg-layer`).\n2. В CSS задать каждому слою начальное `transform: translateZ(0)` и `will-change: transform`.\n3. Внизу файла добавить безопасный JS, который на событии `scroll` (с `requestAnimationFrame`) считает процент прокрутки и обновляет `transform: translateY(var(--offset))` для каждого слоя, используя коэффициенты глубины (например, 0.3, 0.6, 0.9).\n4. Добавить `@media (prefers-reduced-motion: reduce)`‑правило, которое отключает скрипт (ставит `transform: none`).\n**SAFE CSS:**\n```css\n[data-parallax] {\nperspective: 1000px;\noverflow: hidden;\n}\n[data-parallax] > .layer {\nposition: absolute;\ntop: 0;\nleft: 0;\nwidth: 100%;\nheight: 100%;\nwill-change: transform;\n}\n.layer-bg   { --depth: 0.2; }\n.layer-mid  { --depth: 0.5; }\n.layer-fg   { --depth: 0.8; }\n```\n**SAFE JS:**\n```js\n(() => {\nconst layers = document.querySelectorAll('[data-parallax] .layer');\nif (!layers.length) return;\nconst onScroll = () => {\nconst scrollY = window.scrollY;\nlayers.forEach(l => {\nconst depth = parseFloat(getComputedStyle(l).getPropertyValue('--depth'));\nl.style.transform = `translateY(${scrollY * depth}px)`;\n});\n};\nconst raf = () => { onScroll(); requestAnimationFrame(raf); };\nif (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;\nrequestAnimationFrame(raf);\n})();\n```"
+ ],
+ "flags": []
+}

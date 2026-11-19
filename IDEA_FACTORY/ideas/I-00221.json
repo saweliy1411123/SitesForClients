@@ -1,0 +1,26 @@
+{
+ "id": "I-00221",
+ "round": 34,
+ "time": "2026-11-17 03:18:24",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — sr‑only utility class",
+ "knob": "**Name:** `sr-only`\n**When to apply:** На любой статический лендинг, где нужны скрытые от визуального восприятия, но читаемые скрин‑ридерами тексты (например, пояснения к иконкам, скрытые заголовки, aria‑labels).\n**Steps:**\n1. Добавить в файл `index.improved.html` (или отдельный CSS‑файл) блок ниже в секцию `<style>` или в подключённый CSS.\n2. Использовать класс `sr-only` в HTML‑разметке там, где требуется скрытый от глаз контент, но доступный для ассистивных технологий.\n**SAFE CSS:**\n```css\n.sr-only {\nposition: absolute !important;\nwidth: 1px;\nheight: 1px;\npadding: 0;\nmargin: -1px;\noverflow: hidden;\nclip: rect(0, 0, 0, 0);\nwhite-space: nowrap;\nborder: 0;\n}\n```\n**SAFE JS:** *(не требуется)*",
+ "skill": "sr-only",
+ "effect": "Улучшает доступность (a11y) без визуального изменения дизайна, повышает SEO‑оценку за счёт корректных ARIA‑меток.",
+ "risk": "Никакого — класс безопасен, не влияет на визуальный рендер.",
+ "rollback": "`git checkout -- index.improved.html` (или удалить строку с `.sr-only` из CSS).",
+ "verify": "Открыть страницу, включить Chrome DevTools → Elements, проверить, что элемент с классом `sr-only` скрыт визуально, но виден в Accessibility tree. Быстро проверить, что скрин‑ридер (NVDA/VoiceOver) читает его.",
+ "priority_claim": "2 — важный для доступности, но не критичен для первой конверсии.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `sr-only`\n**When to apply:** На любой статический лендинг, где нужны скрытые от визуального восприятия, но читаемые скрин‑ридерами тексты (например, пояснения к иконкам, скрытые заголовки, aria‑labels).\n**Steps:**\n1. Добавить в файл `index.improved.html` (или отдельный CSS‑файл) блок ниже в секцию `<style>` или в подключённый CSS.\n2. Использовать класс `sr-only` в HTML‑разметке там, где требуется скрытый от глаз контент, но доступный для ассистивных технологий.\n**SAFE CSS:**\n```css\n.sr-only {\nposition: absolute !important;\nwidth: 1px;\nheight: 1px;\npadding: 0;\nmargin: -1px;\noverflow: hidden;\nclip: rect(0, 0, 0, 0);\nwhite-space: nowrap;\nborder: 0;\n}\n```\n**SAFE JS:** *(не требуется)*"
+ ],
+ "flags": []
+}

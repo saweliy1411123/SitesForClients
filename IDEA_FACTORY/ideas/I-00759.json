@@ -1,0 +1,26 @@
+{
+ "id": "I-00759",
+ "round": 116,
+ "time": "2026-11-17 07:21:45",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "FAQ-секция — проверка структуры (details/summary или кнопки) и aria",
+ "knob": "SITE_REQUEST «faq» — посмотреть, как реализованы FAQ-элементы: если это div с JS-кликом без `<button>`, добавить `role=\"button\"`, `tabindex=\"0\"`, обработку Enter/Space, `aria-expanded` на триггере.",
+ "skill": "",
+ "effect": "FAQ доступен с клавиатуры и для скринридеров — меньше потерянных пользователей, лучше поведенческие сигналы.",
+ "risk": "Изменение разметки FAQ может сломать существующий JS-обработчик аккордеона.",
+ "rollback": "`git checkout index.html`",
+ "verify": "Tab-ом пройтись по FAQ: фокус виден, Enter/Space раскрывают ответ — 2 минуты.",
+ "priority_claim": "2 — важно для a11y, но частично покрыто I-00717/00751; нужно сначала увидеть разметку.",
+ "source_hint": "",
+ "site_request": "faq-item",
+ "category": "lever",
+ "variants": [
+  "SITE_REQUEST «faq» — посмотреть, как реализованы FAQ-элементы: если это div с JS-кликом без `<button>`, добавить `role=\"button\"`, `tabindex=\"0\"`, обработку Enter/Space, `aria-expanded` на триггере."
+ ],
+ "flags": []
+}

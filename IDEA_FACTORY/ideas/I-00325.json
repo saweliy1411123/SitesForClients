@@ -1,0 +1,29 @@
+{
+ "id": "I-00325",
+ "round": 49,
+ "time": "2026-11-17 04:01:44",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b",
+  "localhost:8081/big_only"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "SKILL — card-3d-tilt-hover",
+ "knob": "METHOD: SKILL\n**Name:** `card-3d-tilt-hover`\n**When to apply:** На карточках `.price-card`, `.demo-item` (или любой `.card`) для придания премиального 3‑D‑ощущения при наведении.\n**Steps:**\n1. Добавить к нужным элементам класс `card-3d`.\n2. Подключить CSS‑блок ниже (автоподключение через `<style>` или отдельный файл).\n**SAFE CSS:**\n```css\n.card-3d{\nperspective:800px;\ntransform-style:preserve-3d;\ntransition:transform .35s ease,var(--shadow) .35s ease;\nwill-change:transform;\n}\n.card-3d:hover{\ntransform:rotateX(4deg) rotateY(6deg) scale(1.02);\nbox-shadow:0 20px 40px rgba(0,0,0,.25);\n}\n.card-3d::before{\ncontent:\"\";\nposition:absolute;\ninset:0;\nborder-radius:inherit;\nbackground:linear-gradient(135deg,rgba(255,255,255,.12),transparent);\npointer-events:none;\n}\n```\n**SAFE JS:** (необязательно – только если требуется отключить эффект при `prefers-reduced-motion`)\n```js\nif(window.matchMedia('(prefers-reduced-motion: reduce)').matches){\ndocument.querySelectorAll('.card-3d').forEach(el=>el.style.transition='none');\n}\n```",
+ "skill": "",
+ "effect": "Увеличивает восприятие «премиальности» и удерживает внимание на цене/демо‑карточках, повышая CTR на CTA внутри карточек.",
+ "risk": "На старых браузерах без поддержки `transform-style:preserve-3d` эффект будет простым скейлом; визуально не сломает страницу.",
+ "rollback": "`git checkout -- index.html` (или удалить добавленный класс и стили).",
+ "verify": "Открыть страницу, наведите курсор на любую `.price-card` – должна появиться лёгкая 3‑D‑наклонка и тень; проверить в Chrome DevTools → Emulation → `prefers-reduced-motion`.",
+ "priority_claim": "1 – быстрый визуальный апгрейд, высокий ROI без риска.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "METHOD: SKILL\n**Name:** `card-3d-tilt-hover`\n**When to apply:** На карточках `.price-card`, `.demo-item` (или любой `.card`) для придания премиального 3‑D‑ощущения при наведении.\n**Steps:**\n1. Добавить к нужным элементам класс `card-3d`.\n2. Подключить CSS‑блок ниже (автоподключение через `<style>` или отдельный файл).\n**SAFE CSS:**\n```css\n.card-3d{\nperspective:800px;\ntransform-style:preserve-3d;\ntransition:transform .35s ease,var(--shadow) .35s ease;\nwill-change:transform;\n}\n.card-3d:hover{\ntransform:rotateX(4deg) rotateY(6deg) scale(1.02);\nbox-shadow:0 20px 40px rgba(0,0,0,.25);\n}\n.card-3d::before{\ncontent:\"\";\nposition:absolute;\ninset:0;\nborder-radius:inherit;\nbackground:linear-gradient(135deg,rgba(255,255,255,.12),transparent);\npointer-events:none;\n}\n```\n**SAFE JS:** (необязательно – только если требуется отключить эффект при `prefers-reduced-motion`)\n```js\nif(window.matchMedia('(prefers-reduced-motion: reduce)').matches){\ndocument.querySelectorAll('.card-3d').forEach(el=>el.style.transition='none');\n}\n```",
+  "\n**Name:** `card-3d-tilt-hover`\n**When to apply:** На карточках `.price-card`, `.demo-item`\n**SAFE CSS:**\n```css\n.card-3d-tilt-hover {\nperspective: 1000px;\nperspective-origin: 50% 50%;\n}\n.card-3d-tilt-hover:hover {\ntransform: rotateY(10deg) rotateX(5deg);\nbox-shadow: 0 0 10px rgba(0, 0, 0, 0.2);\n}\n.card-3d-tilt-hover .card-content {\ntransform: translateZ(20px);\ntransition: transform 0.2s;\n}\n.card-3d-tilt-hover:hover .card-content {\ntransform: translateZ(30px);\n}\n```",
+  "**Name:** `card-3d-tilt-hover`\n**When to apply:** На карточках цены, шагов или демо‑концептов, где нужен интерактивный 3‑D‑эффект при наведении курсора.\n**SAFE CSS:**\n```css\n/* 3D‑tilt container */\n.tilt-card {\nperspective: 800px;\n}\n.tilt-card-inner {\ntransition: transform .25s ease-out;\ntransform-style: preserve-3d;\n}\n.tilt-card:hover .tilt-card-inner,\n.tilt-card:focus-visible .tilt-card-inner {\ntransform: rotateX(4deg) rotateY(-4deg);\n}\n```\n**SAFE JS:** *(не требуется – эффект работает только на hover/focus)*"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00947",
+ "round": 156,
+ "time": "2026-11-17 09:13:16",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "METHOD — Real‑time LCP & FID measurement for variant testing",
+ "knob": "METHOD: В консоли DevTools выполнить однострочник, который создаёт два `PerformanceObserver`‑а – один слушает `largest-contentful-paint`, второй `first-input-delay`. При каждом событии скрипт выводит в `console.table` метрику, название варианта (читается из `location.search` `?var=`) и таймстамп.",
+ "skill": "",
+ "effect": "Позволяет за 2‑5 минут увидеть, как изменения (например, замена фонового градиента на изображение) влияют на ключевые показатели Core Web Vitals, что напрямую связано с SEO и конверсией.",
+ "risk": "Нет риска для пользователей – скрипт работает только в открытой DevTools‑сессии.",
+ "rollback": "Закрыть вкладку DevTools / перезагрузить страницу.",
+ "verify": "1) Открыть страницу в Chrome, открыть DevTools → Console. 2) Вставить предложенный скрипт. 3) Добавить к URL `?var=gradient` и `?var=image` поочерёдно, перезагружать. 4) Сравнить вывод LCP и FID в консоли.",
+ "priority_claim": "1 – быстрый, низко‑трудозатратный способ проверить гипотезу о влиянии визуального оформления на скорость, критически важ",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: В консоли DevTools выполнить однострочник, который создаёт два `PerformanceObserver`‑а – один слушает `largest-contentful-paint`, второй `first-input-delay`. При каждом событии скрипт выводит в `console.table` метрику, название варианта (читается из `location.search` `?var=`) и таймстамп."
+ ],
+ "flags": []
+}

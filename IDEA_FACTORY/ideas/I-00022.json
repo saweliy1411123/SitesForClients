@@ -1,0 +1,28 @@
+{
+ "id": "I-00022",
+ "round": 4,
+ "time": "2026-11-17 01:50:26",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Ускорить загрузку шрифтов через preconnect и font-display swap",
+ "knob": "В `<head>` добавить `<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">` и `<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>`. В уже подключаемом Google‑Fonts URL добавить `&display=swap`.",
+ "skill": "",
+ "effect": "Сократит время до первого отображения текста (CLS ↓, LCP ↓), улучшит Core Web Vitals.",
+ "risk": "Небольшой рост количества запросов (2 preconnect), но без влияния на функциональность.",
+ "rollback": "Удалить добавленные `<link>`‑теги и вернуть оригинальный URL шрифта (git checkout -- index.html).",
+ "verify": "В Chrome DevTools → Network → check “Initiator” for fonts; измерить LCP до/после (Lighthouse).",
+ "priority_claim": "1 — быстрый выигрыш в скорости без кода.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<head>` добавить `<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">` и `<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>`. В уже подключаемом Google‑Fonts URL добавить `&display=swap`.",
+  "В `<head>` добавить два `<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\" crossorigin>` и `<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>` перед текущими `<link href=\"https://fonts.googleapis.com/...\">`.",
+  "В `<head>` добавить `<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\" crossorigin>` и `<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>` перед ссылкой на Google Fonts"
+ ],
+ "flags": []
+}

@@ -1,0 +1,28 @@
+{
+ "id": "I-00264",
+ "round": 40,
+ "time": "2026-11-17 03:35:08",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime",
+  "lareper/glm-5.2-fast-preview"
+ ],
+ "mentions": 3,
+ "status": "NEW",
+ "title": "Мобильный аудит отступов hero (safe-area-inset для sticky CTA на iPhone)",
+ "knob": "В CSS для `.sticky-cta` (L409–418) добавить `padding-bottom: calc(12px + env(safe-area-inset-bottom));` — чтобы мобильная CTA-панель не перекрывалась жестовой полосой iPhone.",
+ "skill": "",
+ "effect": "На iPhone с «чёлкой» кнопка",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В CSS для `.sticky-cta` (L409–418) добавить `padding-bottom: calc(12px + env(safe-area-inset-bottom));` — чтобы мобильная CTA-панель не перекрывалась жестовой полосой iPhone."
+ ],
+ "flags": []
+}

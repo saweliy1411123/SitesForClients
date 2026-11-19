@@ -1,0 +1,26 @@
+{
+ "id": "I-00564",
+ "round": 85,
+ "time": "2026-11-17 05:48:25",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Видимая «хлебные крошки» для улучшения навигации и локального SEO",
+ "knob": "В начале основного контента (после открывающего `<header>`) добавить\n```html\n<nav class=\"breadcrumb\" aria-label=\"breadcrumb\">\n<a href=\"/\">Главная</a> / <a href=\"#price\">Цена</a> / <span aria-current=\"page\">Заказ</span>\n</nav>\n```\nи CSS `.breadcrumb{font-size:14px;margin:16px 0;color:var(--muted)} .breadcrumb a{color:var(--blue);text-decoration:none}`.",
+ "skill": "",
+ "effect": "Упрощает ориентацию пользователя, снижает отток, создаёт дополнительный внутренний линк‑текст для поисковиков.",
+ "risk": "Нужно следить за актуальностью ссылок; избыточные крошки могут перегрузить мобильный экран.",
+ "rollback": "`git checkout index.html` или удалить `<nav class=\"breadcrumb\">…</nav>` и CSS‑правила.",
+ "verify": "Проверить, что крошки видны и кликабельны, убедиться в наличии `aria-label` и `aria-current`; в Chrome DevTools → Accessibility убедить, что они объявлены как navigation.",
+ "priority_claim": "2 – средний эффект на UX и SEO, быстрый внедряемый элемент.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В начале основного контента (после открывающего `<header>`) добавить\n```html\n<nav class=\"breadcrumb\" aria-label=\"breadcrumb\">\n<a href=\"/\">Главная</a> / <a href=\"#price\">Цена</a> / <span aria-current=\"page\">Заказ</span>\n</nav>\n```\nи CSS `.breadcrumb{font-size:14px;margin:16px 0;color:var(--muted)} .breadcrumb a{color:var(--blue);text-decoration:none}`."
+ ],
+ "flags": []
+}

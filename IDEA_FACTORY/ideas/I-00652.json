@@ -1,0 +1,26 @@
+{
+ "id": "I-00652",
+ "round": 99,
+ "time": "2026-11-17 06:31:28",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Scroll‑triggered sticky CTA‑кнопка «Получить демо бесплатно»",
+ "knob": "Добавить в `<body>` элемент `<a href=\"#contact\" class=\"btn-primary sticky-cta-scroll\" role=\"button\" aria-label=\"Получить демо бесплатно\">Получить демо бесплатно <span class=\"arr\">→</span></a>`; в CSS задать `.sticky-cta-scroll{position:fixed;bottom:-100px;right:20px;transition:bottom .4s;z-index:1000}` и `.sticky-cta-scroll.show{bottom:20px}`; подключить небольшой скрипт в конец `<body>`:\n```js\n/* SAFE JS */\nconst cta=document.querySelector('.sticky-cta-scroll');\nconst hero=document.querySelector('.hero');\nconst observer=new IntersectionObserver(e=>{cta.classList.toggle('show',!e[0].isIntersecting);},{threshold:0});\nobserver.observe(hero);\n```",
+ "skill": "",
+ "effect": "CTA появляется, когда пользователь уже увидел контент, повышая шансы клика без навязчивости.",
+ "risk": "Требует JavaScript (маленький скрипт ≈1 KB); может конфликтовать с уже существующим `.sticky-cta`‑стилем.",
+ "rollback": "Удалить добавленный `<a>` и скрипт; либо `git checkout -- index.html`.",
+ "verify": "Открыть страницу, прокрутить вниз; убедиться, что кнопка плавно появляется после выхода из hero; кликнуть – должна вести к секции `#contact`.",
+ "priority_claim": "2 — средний приоритет: улучшает конверсию без больших изменений.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Добавить в `<body>` элемент `<a href=\"#contact\" class=\"btn-primary sticky-cta-scroll\" role=\"button\" aria-label=\"Получить демо бесплатно\">Получить демо бесплатно <span class=\"arr\">→</span></a>`; в CSS задать `.sticky-cta-scroll{position:fixed;bottom:-100px;right:20px;transition:bottom .4s;z-index:1000}` и `.sticky-cta-scroll.show{bottom:20px}`; подключить небольшой скрипт в конец `<body>`:\n```js\n/* SAFE JS */\nconst cta=document.querySelector('.sticky-cta-scroll');\nconst hero=document.querySelector('.hero');\nconst observer=new IntersectionObserver(e=>{cta.classList.toggle('show',!e[0].isIntersecting);},{threshold:0});\nobserver.observe(hero);\n```"
+ ],
+ "flags": []
+}

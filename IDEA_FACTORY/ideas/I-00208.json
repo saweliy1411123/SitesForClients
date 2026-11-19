@@ -1,0 +1,26 @@
+{
+ "id": "I-00208",
+ "round": 32,
+ "time": "2026-11-17 03:12:43",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Финальный CTA — Desktop‑sticky bottom bar (появляется после 60 % прокрутки)",
+ "knob": "В конец `<body>` добавить\n```html\n<div class=\"sticky-cta-desktop\" role=\"region\" aria-label=\"Бесплатное демо\">\n<a href=\"#contact\" class=\"btn-primary\">Получить демо бесплатно</a>\n</div>\n```\nCSS:\n```css\n.sticky-cta-desktop{\nposition:fixed;bottom:-80px;left:0;right:0;background:#111;padding:1rem;display:flex;justify-content:center;transition:bottom .4s ease;z-index:1000;\n}\n.sticky-cta-desktop.show{bottom:0}\n```\nJS (в конце `<body>`):\n```js\nconst bar=document.querySelector('.sticky-cta-desktop')\nwindow.addEventListener('scroll',()=>{\nconst scrollPerc = window.scrollY / (document.body.scrollHeight - window.innerHeight)\nbar.classList.toggle('show', scrollPerc > 0.6)\n})\n```",
+ "skill": "",
+ "effect": "Повторный, но контекстный CTA для десктоп‑посетителей, увеличивает шанс клика после ознакомления с контентом.",
+ "risk": "Может восприниматься как навязчивая реклама, если анимация слишком резкая; можно настроить плавность.",
+ "rollback": "Удалить HTML‑блок, CSS‑правила и скрипт.",
+ "verify": "Прокрутить страницу до 70 % высоты, убедиться, что бар плавно выезжает и ссылка работает.",
+ "priority_claim": "2 — добавляет дополнительный путь к конверсии без изменения существующего CTA.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В конец `<body>` добавить\n```html\n<div class=\"sticky-cta-desktop\" role=\"region\" aria-label=\"Бесплатное демо\">\n<a href=\"#contact\" class=\"btn-primary\">Получить демо бесплатно</a>\n</div>\n```\nCSS:\n```css\n.sticky-cta-desktop{\nposition:fixed;bottom:-80px;left:0;right:0;background:#111;padding:1rem;display:flex;justify-content:center;transition:bottom .4s ease;z-index:1000;\n}\n.sticky-cta-desktop.show{bottom:0}\n```\nJS (в конце `<body>`):\n```js\nconst bar=document.querySelector('.sticky-cta-desktop')\nwindow.addEventListener('scroll',()=>{\nconst scrollPerc = window.scrollY / (document.body.scrollHeight - window.innerHeight)\nbar.classList.toggle('show', scrollPerc > 0.6)\n})\n```"
+ ],
+ "flags": []
+}

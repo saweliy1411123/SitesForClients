@@ -1,0 +1,26 @@
+{
+ "id": "I-00171",
+ "round": 26,
+ "time": "2026-11-17 02:55:36",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Фокус-стили для интерактивных элементов (details/summary и ссылки) — видимая клавиатурная навигация",
+ "knob": "В `<style>` добавить единый блок: `",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<style>` добавить единый блок: `"
+ ],
+ "flags": []
+}

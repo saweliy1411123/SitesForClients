@@ -1,0 +1,26 @@
+{
+ "id": "I-00527",
+ "round": 79,
+ "time": "2026-11-17 05:30:51",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Accessibility‑tree inspection for screen‑reader order",
+ "knob": "METHOD: в Chrome DevTools открыть панель **Accessibility** (Esc → «Accessibility»), включить «Show accessibility properties», выбрать корневой элемент `<body>` и просмотреть «Computed Accessible Name/Role Order». Проверить, что порядок элементов (h1 → h2 → CTA‑links → формы) соответствует визуальному порядку и нет пропусков. При необходимости добавить `role`, `aria‑label` или корректировать порядок в HTML.",
+ "skill": "",
+ "effect": "гарантирует корректный порядок озвучивания скрин‑ридерами, повышая доступность и удовлетворяя требования WCAG 2.1 AA, что также положительно сказывается на SEO.",
+ "risk": "требует базовых навыков работы с панелью Accessibility; может не выявить визуальные проблемы, только логические.",
+ "rollback": "проверка не вносит изменений; если обнаружены проблемы — исправлять в коде, а затем повторить проверку.",
+ "verify": "открыть страницу, открыть DevTools → Accessibility, скопировать дерево и убедиться, что первая позиция — h1, далее секционные h2, затем интерактивные ссылки/кнопки; процесс занимает ≤5 минут.",
+ "priority_claim": "3 – улучшает доступность и репутацию бренда, но имеет более низкий прямой бизнес‑impact по сравнению с копирайтом и метр",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: в Chrome DevTools открыть панель **Accessibility** (Esc → «Accessibility»), включить «Show accessibility properties», выбрать корневой элемент `<body>` и просмотреть «Computed Accessible Name/Role Order». Проверить, что порядок элементов (h1 → h2 → CTA‑links → формы) соответствует визуальному порядку и нет пропусков. При необходимости добавить `role`, `aria‑label` или корректировать порядок в HTML."
+ ],
+ "flags": []
+}

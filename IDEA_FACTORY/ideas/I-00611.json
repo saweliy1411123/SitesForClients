@@ -1,0 +1,26 @@
+{
+ "id": "I-00611",
+ "round": 91,
+ "time": "2026-11-17 06:07:20",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — glass-modal-fade",
+ "knob": "**Name:** `glass-modal-fade`\n**When to apply:** Для отображения дополнительной информации (например, «Подробный чек‑лист цены») в модальном окне с эффектом стеклянной морфологии.\n**SAFE CSS:**\n```css\n/* backdrop glass effect */\n.glass-modal {\nposition: fixed;\ninset: 0;\ndisplay: none;\nalign-items: center;\njustify-content: center;\nbackground: rgba(255,255,255,.1);\nbackdrop-filter: blur(12px) saturate(180%);\n-webkit-backdrop-filter: blur(12px) saturate(180%);\nz-index: 1000;\n}\n.glass-modal.active {display: flex;}\n.glass-modal .content {\nbackground: rgba(255,255,255,.15);\nborder-radius: 12px;\npadding: 2rem;\nmax-width: 90%;\nmax-height: 80vh;\noverflow-y: auto;\nbox-shadow: 0 8px 32px rgba(0,0,0,.25);\nanimation: fadeIn .3s ease-out forwards;\n}\n@keyframes fadeIn {\nfrom {opacity:0; transform:scale(.95);}\nto {opacity:1; transform:scale(1);}\n}\n```\n**SAFE JS:**\n```js\n// открытие/закрытие модального окна\ndocument.addEventListener('click', e => {\nif (e.target.matches('[data-modal-open]')) {\nconst id = e.target.dataset.modalOpen;\ndocument.getElementById(id).classList.add('active');\n}\nif (e.target.matches('.glass-modal') || e.target.matches('.glass-modal .close')) {\ne.target.closest('.glass-modal').classList.remove('active');\n}\n});\n```",
+ "skill": "",
+ "effect": "Позволяет показать детальную информацию без перехода на новую страницу, сохраняет стиль «luxury» через стеклянный фон, повышает время нахождения пользователя на сайте.",
+ "risk": "Требует небольшого JS‑кода и корректного управления фокусом; без него может возникнуть проблема доступности.",
+ "rollback": "Удалить блоки `.glass-modal` и скрипт; `git checkout HEAD -- index.html`.",
+ "verify": "Добавить кнопку `data-modal-open=\"priceInfo\"` к любой секции, кликнуть – открывается полупрозрачное модальное окно; проверить, что скролл внутри окна работает и закрытие по клику вне контента.",
+ "priority_claim": "3 – полезно, но требует дополнительного тестирования доступности, поэтому отложим после более простых улучшений.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `glass-modal-fade`\n**When to apply:** Для отображения дополнительной информации (например, «Подробный чек‑лист цены») в модальном окне с эффектом стеклянной морфологии.\n**SAFE CSS:**\n```css\n/* backdrop glass effect */\n.glass-modal {\nposition: fixed;\ninset: 0;\ndisplay: none;\nalign-items: center;\njustify-content: center;\nbackground: rgba(255,255,255,.1);\nbackdrop-filter: blur(12px) saturate(180%);\n-webkit-backdrop-filter: blur(12px) saturate(180%);\nz-index: 1000;\n}\n.glass-modal.active {display: flex;}\n.glass-modal .content {\nbackground: rgba(255,255,255,.15);\nborder-radius: 12px;\npadding: 2rem;\nmax-width: 90%;\nmax-height: 80vh;\noverflow-y: auto;\nbox-shadow: 0 8px 32px rgba(0,0,0,.25);\nanimation: fadeIn .3s ease-out forwards;\n}\n@keyframes fadeIn {\nfrom {opacity:0; transform:scale(.95);}\nto {opacity:1; transform:scale(1);}\n}\n```\n**SAFE JS:**\n```js\n// открытие/закрытие модального окна\ndocument.addEventListener('click', e => {\nif (e.target.matches('[data-modal-open]')) {\nconst id = e.target.dataset.modalOpen;\ndocument.getElementById(id).classList.add('active');\n}\nif (e.target.matches('.glass-modal') || e.target.matches('.glass-modal .close')) {\ne.target.closest('.glass-modal').classList.remove('active');\n}\n});\n```"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00230",
+ "round": 35,
+ "time": "2026-11-17 03:21:37",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — neon-glow-interactive",
+ "knob": "METHOD: SKILL\n**Name:** `neon-glow-interactive`\n**When to apply:** Для интерактивных элементов (кнопки, ссылки, карточки) на темных премиальных лендингах, где нужен мягкий световой акцент при наведении/фокусе, но без мерцания и без JavaScript.\n**Steps:**\n1. Добавить всем интерактивным элементам класс `.neon`.\n2. В CSS задать переменную `--neon-color` (по умолчанию `#4cc9f0`).\n3. Применить `box-shadow` и `filter: drop-shadow` для создания «неонового» свечения, а также `transition` для плавного появления.\n4. Добавить `:focus-visible` стиль, идентичный `:hover`, чтобы обеспечить доступность.\n**SAFE CSS:**\n```css\n.neon {\n--neon-color: #4cc9f0;\nposition: relative;\ncolor: var(--neon-color);\ntext-decoration: none;\ntransition: box-shadow .3s ease, filter .3s ease;\n}\n.neon::after {\ncontent: \"\";\nposition: absolute;\ninset: -4px;\nborder-radius: inherit;\nbackground: var(--neon-color);\nopacity: 0;\ntransition: opacity .3s ease;\n}\n.neon:hover,\n.neon:focus-visible {\nbox-shadow: 0 0 12px var(--neon-color), 0 0 24px var(--neon-color);\nfilter: drop-shadow(0 0 8px var(--neon-color));\n}\n.neon:hover::after,\n.neon:focus-visible::after {\nopacity: 0.15;\n}\n```\n**SAFE JS:** *не требуется*",
+ "skill": "",
+ "effect": "Делает ссылки и кнопки более заметными на тёмном фоне, повышает восприятие «премиального» дизайна и улучшает кликабельность без навязывания.",
+ "risk": "При слишком ярком цвете возможен визуальный дискомфорт; рекомендуется протестировать на разных дисплеях.",
+ "rollback": "Удалить класс `.neon` из HTML и CSS‑блок выше.",
+ "verify": "Открыть страницу, навести курсор и переключить фокус (Tab) – проверять, что световой эффект появляется и исчезает плавно, а в `prefers-reduced-motion` он отключается (можно добавить `@media (prefers-reduced-motion: reduce) { .neon { transition: none; } }`).",
+ "priority_claim": "3 — Низкий порог внедрения, улучшает детали UI, но не критичен для основной конверсии.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "METHOD: SKILL\n**Name:** `neon-glow-interactive`\n**When to apply:** Для интерактивных элементов (кнопки, ссылки, карточки) на темных премиальных лендингах, где нужен мягкий световой акцент при наведении/фокусе, но без мерцания и без JavaScript.\n**Steps:**\n1. Добавить всем интерактивным элементам класс `.neon`.\n2. В CSS задать переменную `--neon-color` (по умолчанию `#4cc9f0`).\n3. Применить `box-shadow` и `filter: drop-shadow` для создания «неонового» свечения, а также `transition` для плавного появления.\n4. Добавить `:focus-visible` стиль, идентичный `:hover`, чтобы обеспечить доступность.\n**SAFE CSS:**\n```css\n.neon {\n--neon-color: #4cc9f0;\nposition: relative;\ncolor: var(--neon-color);\ntext-decoration: none;\ntransition: box-shadow .3s ease, filter .3s ease;\n}\n.neon::after {\ncontent: \"\";\nposition: absolute;\ninset: -4px;\nborder-radius: inherit;\nbackground: var(--neon-color);\nopacity: 0;\ntransition: opacity .3s ease;\n}\n.neon:hover,\n.neon:focus-visible {\nbox-shadow: 0 0 12px var(--neon-color), 0 0 24px var(--neon-color);\nfilter: drop-shadow(0 0 8px var(--neon-color));\n}\n.neon:hover::after,\n.neon:focus-visible::after {\nopacity: 0.15;\n}\n```\n**SAFE JS:** *не требуется*"
+ ],
+ "flags": []
+}

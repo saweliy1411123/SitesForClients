@@ -1,0 +1,26 @@
+{
+ "id": "I-00345",
+ "round": 52,
+ "time": "2026-11-17 04:09:50",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Accessible CTA Buttons instead of anchor‑links",
+ "knob": "Заменить все CTA‑ссылки вида `<a class=\"btn-primary …\" href=\"#contact\">…</a>` на `<button class=\"btn-primary\" type=\"button\" aria-label=\"Получить бесплатное демо\">…</button>`; добавить небольшой inline‑script в конце <body>:\n```html\n<script>\ndocument.querySelectorAll('.btn-primary').forEach(b=>b.addEventListener('click',e=>{\nconst target=document.querySelector('#contact');\nif(target) target.scrollIntoView({behavior:'smooth'});\n}));\n</script>\n```\nОбновить CSS, если требуется `cursor:pointer;` для `<button>`.",
+ "skill": "",
+ "effect": "Явно сигнализирует о «действии», улучшает поддержку клавиатурной навигации и скрин‑ридеров, повышает доступность (WCAG 2.1 AA).",
+ "risk": "Требуется небольшое JS‑взаимодействие; при отключённом JS кнопка не выполнит скролл (но сохраняет фокус и семантику).",
+ "rollback": "Вернуть оригинальные `<a>`‑элементы и удалить скрипт (git checkout index.html).",
+ "verify": "В Chrome DevTools → Elements → Accessibility проверить, что элемент имеет роль button; нажать Tab, активировать клавишей Enter/Space – страница должна плавно прокрутиться к #contact.",
+ "priority_claim": "2 – важный шаг к соответствию доступности, средний уровень усилий, без влияния на SEO.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Заменить все CTA‑ссылки вида `<a class=\"btn-primary …\" href=\"#contact\">…</a>` на `<button class=\"btn-primary\" type=\"button\" aria-label=\"Получить бесплатное демо\">…</button>`; добавить небольшой inline‑script в конце <body>:\n```html\n<script>\ndocument.querySelectorAll('.btn-primary').forEach(b=>b.addEventListener('click',e=>{\nconst target=document.querySelector('#contact');\nif(target) target.scrollIntoView({behavior:'smooth'});\n}));\n</script>\n```\nОбновить CSS, если требуется `cursor:pointer;` для `<button>`."
+ ],
+ "flags": []
+}

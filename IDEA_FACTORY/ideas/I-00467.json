@@ -1,0 +1,26 @@
+{
+ "id": "I-00467",
+ "round": 69,
+ "time": "2026-11-17 05:02:15",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — focus-visible-enhancer",
+ "knob": "**Name:** `focus-visible-enhancer`\n**When to apply:** На любом статическом лендинге, где есть интерактивные элементы (`<a>`, `<button>`, элементы с `role=\"button\"`), но отсутствуют чёткие визуальные индикаторы фокуса – для соответствия WCAG 2.1 AA.\n**Steps:**\n1. Вставить в глобальный CSS блок `:focus-visible`‑стилей (см. `SAFE CSS`).\n2. Добавить лёгкий полифил JS, который при первом нажатии клавиши Tab добавляет класс `js-keyboard` к `<html>` и переключает `:focus-visible`‑обработку в браузерах без поддержки.\n3. При клике мышью/касании удалить класс `js-keyboard`, чтобы вернуть привычные стили hover.\n4. Проверить, что существующие кастомные `:focus`‑стили не конфликтуют (при необходимости уточнить селекторы).\n**SAFE CSS:**\n```css\n/* focus-visible‑enhancer */\nhtml.js-keyboard a:focus-visible,\nhtml.js-keyboard button:focus-visible,\nhtml.js-keyboard [role=\"button\"]:focus-visible,\nhtml.js-keyboard .btn-primary:focus-visible {\noutline: 2px solid var(--blue);\noutline-offset: 2px;\nbox-shadow: 0 0 0 3px rgba(139,92,246,.3);\n}\n```\n**SAFE JS:**\n```js\n/* focus-visible‑enhancer polyfill */\n(function(){\nconst onKeyDown = e=>{ if(e.key===\"Tab\"){ document.documentElement.classList.add('js-keyboard'); } };\nconst onMouseDown = ()=>{ document.documentElement.classList.remove('js-keyboard'); };\nwindow.addEventListener('keydown', onKeyDown, {once:true});\nwindow.addEventListener('mousedown', onMouseDown);\nwindow.addEventListener('touchstart', onMouseDown);\n})();\n```",
+ "skill": "focus-visible-enhancer",
+ "effect": "Улучшает доступность – пользователи клавиатуры сразу видят, какой элемент активен; повышает соответствие WCAG 2.1 AA, что может положительно сказаться на SEO и доверии.",
+ "risk": "Возможен конфликт с уже существующими кастомными `:focus`‑стилями; в редких случаях браузеры без `:focus-visible` могут отобразить двойной outline.",
+ "rollback": "`git checkout index.improved.html` или удалить добавленные блоки CSS/JS из `index.improved.html`.",
+ "verify": "Открыть страницу, нажать Tab — должен появиться синий outline на первой ссылке/кнопке; переключить на мышь — outline исчезает. Проверить в Chrome + Firefox.",
+ "priority_claim": "2 – важно для доступности и соответствия требованиям, но не критично для первой конверсии.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `focus-visible-enhancer`\n**When to apply:** На любом статическом лендинге, где есть интерактивные элементы (`<a>`, `<button>`, элементы с `role=\"button\"`), но отсутствуют чёткие визуальные индикаторы фокуса – для соответствия WCAG 2.1 AA.\n**Steps:**\n1. Вставить в глобальный CSS блок `:focus-visible`‑стилей (см. `SAFE CSS`).\n2. Добавить лёгкий полифил JS, который при первом нажатии клавиши Tab добавляет класс `js-keyboard` к `<html>` и переключает `:focus-visible`‑обработку в браузерах без поддержки.\n3. При клике мышью/касании удалить класс `js-keyboard`, чтобы вернуть привычные стили hover.\n4. Проверить, что существующие кастомные `:focus`‑стили не конфликтуют (при необходимости уточнить селекторы).\n**SAFE CSS:**\n```css\n/* focus-visible‑enhancer */\nhtml.js-keyboard a:focus-visible,\nhtml.js-keyboard button:focus-visible,\nhtml.js-keyboard [role=\"button\"]:focus-visible,\nhtml.js-keyboard .btn-primary:focus-visible {\noutline: 2px solid var(--blue);\noutline-offset: 2px;\nbox-shadow: 0 0 0 3px rgba(139,92,246,.3);\n}\n```\n**SAFE JS:**\n```js\n/* focus-visible‑enhancer polyfill */\n(function(){\nconst onKeyDown = e=>{ if(e.key===\"Tab\"){ document.documentElement.classList.add('js-keyboard'); } };\nconst onMouseDown = ()=>{ document.documentElement.classList.remove('js-keyboard'); };\nwindow.addEventListener('keydown', onKeyDown, {once:true});\nwindow.addEventListener('mousedown', onMouseDown);\nwindow.addEventListener('touchstart', onMouseDown);\n})();\n```"
+ ],
+ "flags": []
+}

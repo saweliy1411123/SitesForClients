@@ -1,0 +1,29 @@
+{
+ "id": "I-00706",
+ "round": 109,
+ "time": "2026-11-17 07:00:58",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b",
+  "localhost:8081/big_only"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Добавить OG‑изображение для соцсетей",
+ "knob": "В `<head>` добавить\n```html\n<meta property=\"og:image\" content=\"https://example.com/assets/og-image.jpg\">\n<meta property=\"og:image:width\" content=\"1200\">\n<meta property=\"og:image:height\" content=\"630\">\n```\n(заменить URL на реальное изображение проекта).",
+ "skill": "",
+ "effect": "При публикации ссылки в соцсетях будет показываться привлекательный превью‑картинка → рост CTR из соцсетей.",
+ "risk": "Требуется разместить готовое изображение — если его нет, превью будет пустым.",
+ "rollback": "Удалить только добавленные `<meta>`‑теги (git checkout – путь‑к‑файлу).",
+ "verify": "Открыть `https://developers.facebook.com/tools/debug/` и вставить URL сайта — картинка должна отобразиться.",
+ "priority_claim": "2 – небольшие изменения, но заметный эффект в соцсетях.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<head>` добавить\n```html\n<meta property=\"og:image\" content=\"https://example.com/assets/og-image.jpg\">\n<meta property=\"og:image:width\" content=\"1200\">\n<meta property=\"og:image:height\" content=\"630\">\n```\n(заменить URL на реальное изображение проекта).",
+  "В `<head>` после существующих OG‑тегов вставить\n```html\n<meta property=\"og:image\" content=\"https://example.com/assets/og-image.jpg\">\n<meta property=\"og:image:width\" content=\"1200\">\n<meta property=\"og:image:height\" content=\"630\">\n<meta property=\"og:image:alt\" content=\"Сайт‑лендинг Савелия: 2‑дневный запуск, лиды из Яндекса\">\n```\n(изображение разместить в `assets/og-image.jpg`, размер ≈ 120 KB).",
+  "В `<head>` после остальных OG‑тегов вставить `<meta property=\"og:image\" content=\"https://example.com/assets/og-image.jpg\">` (заменить URL на реальное изображение)"
+ ],
+ "flags": []
+}

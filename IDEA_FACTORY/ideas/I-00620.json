@@ -1,0 +1,26 @@
+{
+ "id": "I-00620",
+ "round": 93,
+ "time": "2026-11-17 06:13:29",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "One‑Click Lighthouse Snapshot",
+ "knob": "METHOD: Открыть Chrome DevTools → вкладка **Lighthouse**, выбрать категории **Performance**, **SEO**, **Accessibility**, **Best Practices**, установить «Device» = Mobile, нажать «Generate report». Сохранить полученный скриншот/JSON для сравнения с будущими изменениями.",
+ "skill": "",
+ "effect": "За ~30 секунд предоставляет количественные метрики (LCP, CLS, SEO‑оценка, доступность), позволяющие быстро проверить гипотезы о скорости загрузки, структурных SEO‑ошибках или проблемах доступности.",
+ "risk": "Lighthouse использует эмулированные условия (медленное соединение, CPU throttling), результаты могут отличаться от реального поведения пользователей; требует Chrome ≥ 90.",
+ "rollback": "Нет изменений в коде; просто закрыть DevTools.",
+ "verify": "После запуска появятся карточки с баллами (0‑100); убедиться, что они отображаются и сохранить их для будущего сравнения.",
+ "priority_claim": "1 – предоставляет самый широкий набор быстрых инсайтов о состоянии сайта, критичен для SEO и конверсии.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: Открыть Chrome DevTools → вкладка **Lighthouse**, выбрать категории **Performance**, **SEO**, **Accessibility**, **Best Practices**, установить «Device» = Mobile, нажать «Generate report». Сохранить полученный скриншот/JSON для сравнения с будущими изменениями."
+ ],
+ "flags": []
+}

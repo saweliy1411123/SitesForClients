@@ -1,0 +1,26 @@
+{
+ "id": "I-00829",
+ "round": 125,
+ "time": "2026-11-17 07:45:25",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — focus-visible-gradient-ring",
+ "knob": "**Name:** `focus-visible-gradient-ring`\n**When to apply:** На любой лендинге, где есть интерактивные ссылки, кнопки и элементы‑сводки (`<summary>`), чтобы улучшить доступность и добавить премиальный визуальный акцент при клавиатурной навигации.\n**Steps:**\n1. Убедиться, что в корневом `:root` объявлена переменная `--grad` (используется в проекте).\n2. В CSS‑файл (или в `<style>`) добавить правила из `SAFE CSS` ниже.\n3. При желании, в конец `<body>` можно добавить небольшой скрипт из `SAFE JS` (необязательно) для поддержки старых браузеров, не поддерживающих `:focus-visible`.\n**SAFE CSS:**\n```css\na:focus-visible,\nbutton:focus-visible,\nsummary:focus-visible{\noutline:none;\nbox-shadow:0 0 0 3px var(--grad);\nborder-radius:4px;\ntransition:box-shadow .2s ease-in-out;\n}\n```\n**SAFE JS (optional):**\n```js\n(() => {\nconst style = document.createElement('style');\nstyle.textContent = 'a:focus,button:focus,summary:focus{outline:none;box-shadow:0 0 0 3px var(--grad);border-radius:4px;}';\ndocument.head.appendChild(style);\n})();\n```",
+ "skill": "",
+ "effect": "Ясный визуальный индикатор фокуса повышает доступность (WCAG 2.1 AA) и усиливает восприятие бренда как «премиального». Это может увеличить конверсию за счёт снижения количества «потерянных» пользователей, навигирующих клавиатурой.",
+ "risk": "Возможен конфликт с уже существующими кастомными `:focus`‑стилями; в этом случае потребуется уточнить селекторы.",
+ "rollback": "`git checkout -- index.html` (удалить добавленные CSS‑правила/JS‑блок).",
+ "verify": "Открыть страницу, перейти к любой ссылке/кнопке с помощью клавиши Tab – вокруг элемента должен появиться градиентный светящийся контур; убедиться, что контур исчезает при потере фокуса и нет ошибок в консоли.",
+ "priority_claim": "2 – улучшение доступности и визуального восприятия, требует лишь небольших изменений в CSS, но даёт ощутимый прирост дов",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `focus-visible-gradient-ring`\n**When to apply:** На любой лендинге, где есть интерактивные ссылки, кнопки и элементы‑сводки (`<summary>`), чтобы улучшить доступность и добавить премиальный визуальный акцент при клавиатурной навигации.\n**Steps:**\n1. Убедиться, что в корневом `:root` объявлена переменная `--grad` (используется в проекте).\n2. В CSS‑файл (или в `<style>`) добавить правила из `SAFE CSS` ниже.\n3. При желании, в конец `<body>` можно добавить небольшой скрипт из `SAFE JS` (необязательно) для поддержки старых браузеров, не поддерживающих `:focus-visible`.\n**SAFE CSS:**\n```css\na:focus-visible,\nbutton:focus-visible,\nsummary:focus-visible{\noutline:none;\nbox-shadow:0 0 0 3px var(--grad);\nborder-radius:4px;\ntransition:box-shadow .2s ease-in-out;\n}\n```\n**SAFE JS (optional):**\n```js\n(() => {\nconst style = document.createElement('style');\nstyle.textContent = 'a:focus,button:focus,summary:focus{outline:none;box-shadow:0 0 0 3px var(--grad);border-radius:4px;}';\ndocument.head.appendChild(style);\n})();\n```"
+ ],
+ "flags": []
+}

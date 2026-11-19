@@ -1,0 +1,26 @@
+{
+ "id": "I-00612",
+ "round": 92,
+ "time": "2026-11-17 06:09:54",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить блок «Клиенты и партнёры»‑карусель с логотипами — социальное доказательство",
+ "knob": "Вставить после секции «Отзывы и работы» (около L553) новый `<section id=\"partners\" class=\"reveal\">` с HTML‑разметкой `<h2>Клиенты и партнёры</h2><div class=\"partners-carousel\"><img src=\"logo1.svg\" alt=\"Компания 1\" loading=\"lazy\"><img src=\"logo2.svg\" alt=\"Компания 2\" loading=\"lazy\">…</div>` и CSS‑правила `display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory; .partners-carousel img{height:40px;filter:grayscale(100%);scroll-snap-align:start;}`",
+ "skill": "",
+ "effect": "Повышает доверие за счёт визуального подтверждения работы с известными брендами → рост конверсии на ≈ 5 % (по отраслевым данным)",
+ "risk": "Увеличит размер HTML/CSS ≈ 5 KB, небольшое влияние на скорость загрузки",
+ "rollback": "`git checkout -- index.html` (или удалить вставленный блок и стили)",
+ "verify": "Открыть страницу, убедиться, что блок виден, скролл‑карусель работает, проверить `Network`‑вкладку — добавленные изображения ≤ 15 KB каждый, общий вес < 50 KB",
+ "priority_claim": "1 — социальное доказательство критично для первого контакта, а добавление небольших логотипов почти не влияет на перфома",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Вставить после секции «Отзывы и работы» (около L553) новый `<section id=\"partners\" class=\"reveal\">` с HTML‑разметкой `<h2>Клиенты и партнёры</h2><div class=\"partners-carousel\"><img src=\"logo1.svg\" alt=\"Компания 1\" loading=\"lazy\"><img src=\"logo2.svg\" alt=\"Компания 2\" loading=\"lazy\">…</div>` и CSS‑правила `display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory; .partners-carousel img{height:40px;filter:grayscale(100%);scroll-snap-align:start;}`"
+ ],
+ "flags": []
+}

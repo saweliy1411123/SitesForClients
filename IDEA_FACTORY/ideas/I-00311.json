@@ -1,0 +1,26 @@
+{
+ "id": "I-00311",
+ "round": 46,
+ "time": "2026-11-17 03:52:46",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить «Back to top» кнопку, появляющуюся после прокрутки 600 px",
+ "knob": "В конец `<body>` вставить `<button class=\"back-to-top\" aria-label=\"Наверх\">↑</button>`; CSS: `.back-to-top{position:fixed;right:20px;bottom:20px;background:var(--violet);color:#fff;border:none;border-radius:50%;width:48px;height:48px;display:none;align-items:center;justify-content:center;cursor:pointer;}` `window.addEventListener('scroll',()=>{document.querySelector('.back-to-top').style.display = window.scrollY>600?'flex':'none';});` `document.querySelector('.back-to-top').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'});});`",
+ "skill": "",
+ "effect": "Упрощает навигацию, повышает пользовательский опыт, потенциально увеличивает время на сайте",
+ "risk": "Требует небольшого JS, но без сторонних зависимостей; может конфликтовать с другими фиксированными элементами",
+ "rollback": "Удалить HTML‑элемент и JS‑блок, а также CSS‑правила (git checkout -- index.html)",
+ "verify": "Прокрутить страницу вниз – кнопка появляется, клик возвращает в начало без резкого скачка",
+ "priority_claim": "3 – полезно, но менее критично для основной конверсии",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В конец `<body>` вставить `<button class=\"back-to-top\" aria-label=\"Наверх\">↑</button>`; CSS: `.back-to-top{position:fixed;right:20px;bottom:20px;background:var(--violet);color:#fff;border:none;border-radius:50%;width:48px;height:48px;display:none;align-items:center;justify-content:center;cursor:pointer;}` `window.addEventListener('scroll',()=>{document.querySelector('.back-to-top').style.display = window.scrollY>600?'flex':'none';});` `document.querySelector('.back-to-top').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'});});`"
+ ],
+ "flags": []
+}

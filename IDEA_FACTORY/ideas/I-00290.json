@@ -1,0 +1,26 @@
+{
+ "id": "I-00290",
+ "round": 44,
+ "time": "2026-11-17 03:46:38",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Instant Structured‑Data validation via Rich Results Test",
+ "knob": "METHOD: In the live page, locate the `<script type=\"application/ld+json\">` block (e.g., FAQPage, LocalBusiness). Copy its JSON content, paste into https://search.google.com/test/rich-results → run test → note any errors/warnings.",
+ "skill": "",
+ "effect": "Confirms that schema markup is syntactically correct and eligible for rich results, improving click‑through rates from search.",
+ "risk": "Requires internet access; temporary reliance on external tool (no code change).",
+ "rollback": "No changes made; simply close the tool.",
+ "verify": "The test returns “No errors detected” for each JSON‑LD block; if errors appear, note line numbers for later fix.",
+ "priority_claim": "2 – Correct schema boosts SEO without affecting UI, and errors are easy to fix.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: In the live page, locate the `<script type=\"application/ld+json\">` block (e.g., FAQPage, LocalBusiness). Copy its JSON content, paste into https://search.google.com/test/rich-results → run test → note any errors/warnings."
+ ],
+ "flags": []
+}

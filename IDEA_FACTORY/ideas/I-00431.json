@@ -1,0 +1,27 @@
+{
+ "id": "I-00431",
+ "round": 64,
+ "time": "2026-11-17 04:48:14",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3",
+  "lareper/glm-5.2"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Контакт-блок в footer с явным именем/городом/часами ответа + LocalBusiness JSON-LD",
+ "knob": "В финальной секции/футере (после L736) добавить компактный блок: «Савелий · Пермь · отвечаю в Telegram ежедневно 9:00–22:00» (взять реальные данные у владельца); в конец `<body>` — `<script type=\"application/ld+json\">` с `@type: LocalBusiness` (name: Савелий, areaServed: Пермь, url, sameAs: https://t.me/TrainersDontPlays, priceRange по реальной цене со страницы).",
+ "skill": "",
+ "effect": "Усиливает локальное SEO по запросам «лендинг Пермь», даёт доверие (живой человек, город, часы ответа) — снимает страх «напишу и никто не ответит».",
+ "risk": "Часы ответа и город — только подтверждённые владельцем данные, иначе это недостоверная информация.",
+ "rollback": "`git checkout -- index.html`.",
+ "verify": "Rich Results Test (search.google.com/test/rich) на копию файла — валидный LocalBusiness без ошибок; визуально блок виден на мобильном 360px.",
+ "priority_claim": "1 — прямой SEO+доверие эффект, дёшево, не дублирует существующие идеи (FAQPage/Service есть, LocalBusiness — нет).",
+ "source_hint": "",
+ "site_request": "footer",
+ "category": "lever",
+ "variants": [
+  "В финальной секции/футере (после L736) добавить компактный блок: «Савелий · Пермь · отвечаю в Telegram ежедневно 9:00–22:00» (взять реальные данные у владельца); в конец `<body>` — `<script type=\"application/ld+json\">` с `@type: LocalBusiness` (name: Савелий, areaServed: Пермь, url, sameAs: https://t.me/TrainersDontPlays, priceRange по реальной цене со страницы)."
+ ],
+ "flags": []
+}

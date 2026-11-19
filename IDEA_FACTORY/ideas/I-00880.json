@@ -1,0 +1,26 @@
+{
+ "id": "I-00880",
+ "round": 134,
+ "time": "2026-11-17 08:11:56",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Карусель логотипов клиентов (социальное доказательство) под секцией цены",
+ "knob": "После закрывающего `</section>` цены (`#price`) вставить:\n```html\n<section class=\"clients-carousel\" aria-label=\"Клиенты\">\n<h3 class=\"visually-hidden\">Наши клиенты</h3>\n<div class=\"carousel-track\">\n<img src=\"client1.svg\" alt=\"Логотип клиента 1\" loading=\"lazy\">\n<img src=\"client2.svg\" alt=\"Логотип клиента 2\" loading=\"lazy\">\n<img src=\"client3.svg\" alt=\"Логотип клиента 3\" loading=\"lazy\">\n<img src=\"client4.svg\" alt=\"Логотип клиента 4\" loading=\"lazy\">\n</div>\n</section>\n```\nи CSS:\n```css\n.clients-carousel{overflow:hidden;padding:40px 0;background:#f9fafb}\n.carousel-track{display:flex;gap:32px;animation:scroll 20s linear infinite}\n.carousel-track img{height:40px;filter:grayscale(100%) contrast(0.9)}\n@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}\n```",
+ "skill": "",
+ "effect": "Демонстрирует реальное сотрудничество, повышая социальное доказательство и доверие, что положительно сказывается на конверсии.",
+ "risk": "Нужно иметь реальные логотипы; использование вымышленных может нарушать правила честности.",
+ "rollback": "Удалить вставленный блок и CSS‑правила.",
+ "verify": "Открыть страницу, убедиться, что карусель отображается, анимация работает, и логотипы загружаются без ошибок (Network).",
+ "priority_claim": "3 – дополнительный социальный сигнал, требует подготовки логотипов, но полезен для долгосрочного доверия.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "После закрывающего `</section>` цены (`#price`) вставить:\n```html\n<section class=\"clients-carousel\" aria-label=\"Клиенты\">\n<h3 class=\"visually-hidden\">Наши клиенты</h3>\n<div class=\"carousel-track\">\n<img src=\"client1.svg\" alt=\"Логотип клиента 1\" loading=\"lazy\">\n<img src=\"client2.svg\" alt=\"Логотип клиента 2\" loading=\"lazy\">\n<img src=\"client3.svg\" alt=\"Логотип клиента 3\" loading=\"lazy\">\n<img src=\"client4.svg\" alt=\"Логотип клиента 4\" loading=\"lazy\">\n</div>\n</section>\n```\nи CSS:\n```css\n.clients-carousel{overflow:hidden;padding:40px 0;background:#f9fafb}\n.carousel-track{display:flex;gap:32px;animation:scroll 20s linear infinite}\n.carousel-track img{height:40px;filter:grayscale(100%) contrast(0.9)}\n@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}\n```"
+ ],
+ "flags": []
+}

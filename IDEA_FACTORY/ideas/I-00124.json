@@ -1,0 +1,36 @@
+{
+ "id": "I-00124",
+ "round": 18,
+ "time": "2026-11-17 02:32:23",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "localhost:8080/ovh/gpt-oss-120b",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 5,
+ "status": "NEW",
+ "title": "Финальный CTA — повторение «бейджа свободности» из hero",
+ "knob": "В финальной секции (L697–710) перед CTA-ссылкой добавить копию бейджа из L458: `<span class=\"badge\"><span class=\"pulse\"></span>Свободен для 1 заказа на этой неделе</span>` (тот же класс",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В финальной секции (L697–710) перед CTA-ссылкой добавить копию бейджа из L458: `<span class=\"badge\"><span class=\"pulse\"></span>Свободен для 1 заказа на этой неделе</span>` (тот же класс",
+  "В `<header class=\"hero\">` после основной кнопки `<a class=\"btn-primary magnetic\" href=\"#contact\">…</a>` добавить `<a class=\"btn-secondary\" href=\"#portfolio\" aria-label=\"Посмотреть портфолио\">Портфолио</a>`; в CSS задать стиль `.btn-secondary` с прозрачным фоном, обводкой и hover‑эффектом, а также `margin-left:12px`. Добавить якорный блок `<section id=\"portfolio\">` с мини‑галереей примеров (можно placeholder‑картинки).",
+  "В `.hero .wrap` (разметка ~L462) после `.btn-primary` добавить вторую ссылку `<a class=\"btn-ghost\" href=\"#demo\">Сначала посмотрите демо-концепты ↓</a>`; в CSS задать `.btn-ghost` прозрачный фон, бордер `1px solid var(--border)`, тот же min-height 52px, что у `.btn-primary`.",
+  "В hero (L460–465) рядом с основной кнопкой добавить вторичную ссылку-ghost: `<a href=\"#demo\" class=\"btn-ghost\">Смотреть демо-концепты</a>` (стиль: прозрачный фон, border 1px var(--border), hover — border var(--blue)). Основная CTA остаётся ведущей, вторичная — для «холодных», которым нужен праймер перед контактом.",
+  "В hero после `.btn-primary` (L462) добавить вторую тихую ссылку `<a class=\"btn-ghost\" href=\"#demo\">Сначала посмотреть демо-концепты ↓</a>` (стиль: прозрачная, border 1px var(--muted)); секция демо-концептов уже есть в структуре (7 секций, id проверить).",
+  "В `.hero` рядом с основной `.btn-primary` (L462) добавить вторую ghost-ссылку `<a class=\"btn-ghost\" href=\"#demo\">Сначала посмотрите демо-концепты</a>`; в CSS добавить `.btn-ghost` (прозрачный фон, бордер var(--border), hover — бордер var(--blue)).",
+  "METHOD: (1) В консоли: `[...document.querySelectorAll('a')].filter(a=>a.href.includes('t.me')||a.href.includes('tel:')).map(a=>({text:a.textContent.trim().slice(0,40),href:a.href,section:a.closest('section')?.id||'hero'}))` — получить карту всех путей к заявке. (2) Если в hero нет контактной ссылки (только CTA внизу), продублировать Telegram-ссылку в `.hero` после `.sub` маленькой текстовой ссылкой «или сразу напишите в Telegram →» классом `.hero-alt-cta` (font-size:14px, color:var(--muted), underline on hover). (3) Убедиться, что все три CTA ведут на один и тот же контакт — расхождение путей убивает доверие."
+ ],
+ "flags": []
+}

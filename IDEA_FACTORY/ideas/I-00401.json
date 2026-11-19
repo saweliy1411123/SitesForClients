@@ -1,0 +1,26 @@
+{
+ "id": "I-00401",
+ "round": 59,
+ "time": "2026-11-17 04:33:40",
+ "source": "localhost:8081/fast",
+ "sources": [
+  "localhost:8081/fast"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Замена — «Секция цены: гарантия результата + срок возврата» (вместо I-00384 таблицы сравнения)",
+ "knob": "В `.price-card` (L642–660) после `<ul>` добавить блок `<p class=\"price-guarantee\">Если сайт не начнёт приводить клиентов за 30 дней — верну деньги. Условия простые: вы разместили сайт, я настроил аналитику.</p>` + CSS: `.price-guarantee{margin-top:16px;padding:12px 14px;border:1px solid rgba(139,92,246,.3);border-radius:12px;background:rgba(139,92,246,.08);font-size:13.5px;color:var(--muted)}`.",
+ "skill": "",
+ "effect": "Снимает главное возражение «а вдруг не сработает» — повышает конверсию в заявку сильнее, чем таблица сравнения с конкурентами (которую сложно проверить и легко оспорить).",
+ "risk": "Гарантия создаёт обязательство возврата — требует готовности владельца реально вернуть деньги.",
+ "rollback": "Удалить блок",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `.price-card` (L642–660) после `<ul>` добавить блок `<p class=\"price-guarantee\">Если сайт не начнёт приводить клиентов за 30 дней — верну деньги. Условия простые: вы разместили сайт, я настроил аналитику.</p>` + CSS: `.price-guarantee{margin-top:16px;padding:12px 14px;border:1px solid rgba(139,92,246,.3);border-radius:12px;background:rgba(139,92,246,.08);font-size:13.5px;color:var(--muted)}`."
+ ],
+ "flags": []
+}

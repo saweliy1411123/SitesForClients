@@ -1,0 +1,26 @@
+{
+ "id": "I-00073",
+ "round": 11,
+ "time": "2026-11-17 02:13:16",
+ "source": "localhost:8080/zhipu/glm-4.7-flash",
+ "sources": [
+  "localhost:8080/zhipu/glm-4.7-flash"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Pain Section Bridge CTA",
+ "knob": "Add `<a href=\"#contact\" class=\"pain-cta\">Не теряйте клиентов — сделайте демо</a>` inside the Pain section (after the last h3)",
+ "skill": "",
+ "effect": "Prevents bounce by offering an immediate solution within the problem section",
+ "risk": "None",
+ "rollback": "Remove the `<a>` tag",
+ "verify": "Ensure tap target is large enough on mobile",
+ "priority_claim": "2",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Add `<a href=\"#contact\" class=\"pain-cta\">Не теряйте клиентов — сделайте демо</a>` inside the Pain section (after the last h3)"
+ ],
+ "flags": []
+}

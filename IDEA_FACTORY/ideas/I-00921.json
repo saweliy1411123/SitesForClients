@@ -1,0 +1,26 @@
+{
+ "id": "I-00921",
+ "round": 145,
+ "time": "2026-11-17 08:42:03",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить JSON‑LD схему `Organization` с контактами и соцсетями",
+ "knob": "В `<head>` после уже существующего `LocalBusiness`‑скрипта вставить новый `<script type=\"application/ld+json\">` с объектом `@type\":\"Organization\"`; включить `name`, `url`, `logo`, `contactPoint` (телефон, email) и `sameAs` (ссылки на соцсети)",
+ "skill": "",
+ "effect": "Расширит микроданные, поможет поисковикам лучше понять бизнес, может появиться в Knowledge Graph → рост кликов",
+ "risk": "Требует точных данных, но нет риска «обмана», только необходимость правдивой информации",
+ "rollback": "Удалить вставленный скрипт или `git checkout -- index.html`",
+ "verify": "Скопировать содержимое скрипта в https://search.google.com/structured-data/testing-tool и убедиться в отсутствии ошибок; проверить в Lighthouse → SEO → Structured Data",
+ "priority_claim": "2 – добавит ценность, но требует актуальных данных",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<head>` после уже существующего `LocalBusiness`‑скрипта вставить новый `<script type=\"application/ld+json\">` с объектом `@type\":\"Organization\"`; включить `name`, `url`, `logo`, `contactPoint` (телефон, email) и `sameAs` (ссылки на соцсети)"
+ ],
+ "flags": []
+}

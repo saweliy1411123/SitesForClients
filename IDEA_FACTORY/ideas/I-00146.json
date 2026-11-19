@@ -1,0 +1,26 @@
+{
+ "id": "I-00146",
+ "round": 22,
+ "time": "2026-11-17 02:43:51",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Exit‑intent modal «Получите бесплатное демо сейчас!»",
+ "knob": "В конец `<body>` добавить скрытый `<div id=\"exit-modal\" class=\"modal hidden\" role=\"dialog\" aria-modal=\"true\"><p>Уходим? Получите демо‑макет бесплатно — кликните «Да».</p><button id=\"exit-yes\" class=\"btn-primary\">Да, хочу демо</button><button id=\"exit-no\" class=\"btn-secondary\">Нет, спасибо</button></div>` и подключить небольшой скрипт перед закрывающим `</body>`: слушать `mouseleave` на `document` и показывать модал, если `event.clientY < 0`. Кнопка «Да» → `window.location.href=\"#contact\"`; «Нет» → скрыть модал.",
+ "skill": "",
+ "effect": "Захватывает уходящих посетителей, повышая количество заявок без изменения основного UI.",
+ "risk": "Может раздражать пользователей; необходимо обеспечить лёгкое закрытие и не показывать более 1 раз за сессию.",
+ "rollback": "Удалить вставленный HTML‑блок и скрипт (или `git checkout -- index.html`).",
+ "verify": "Открыть страницу, быстро переместить курсор к верхней границе окна – появится модал; клик «Да» переводит к форме контакта; клик «Нет» закрывает модал. Проверить, что модал не появляется повторно при перезагрузке.",
+ "priority_claim": "3 – увеличивает конверсию у «потенциальных» отказов, но требует тестирования UX, поэтому ставим ниже, чем базовые trust‑",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В конец `<body>` добавить скрытый `<div id=\"exit-modal\" class=\"modal hidden\" role=\"dialog\" aria-modal=\"true\"><p>Уходим? Получите демо‑макет бесплатно — кликните «Да».</p><button id=\"exit-yes\" class=\"btn-primary\">Да, хочу демо</button><button id=\"exit-no\" class=\"btn-secondary\">Нет, спасибо</button></div>` и подключить небольшой скрипт перед закрывающим `</body>`: слушать `mouseleave` на `document` и показывать модал, если `event.clientY < 0`. Кнопка «Да» → `window.location.href=\"#contact\"`; «Нет» → скрыть модал."
+ ],
+ "flags": []
+}

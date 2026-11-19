@@ -1,0 +1,29 @@
+{
+ "id": "I-00554",
+ "round": 82,
+ "time": "2026-11-17 05:40:33",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only",
+  "localhost:8081/agent",
+  "localhost:8081/auto",
+  "localhost:8081/fast"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "Кнопка «Позвонить» с tel: ссылкой в мобильной навигации",
+ "knob": "В `<nav>` (L444) рядом с `<a class=\"nav-cta\" href=\"#contact\">Написать</a>` добавить `<a class=\"nav-tel\" href=\"tel:+79000000000\" aria-label=\"Позвонить\">📞</a>` — только на мобильных (CSS `@media (max-width:768px){.nav-tel{display:inline-flex}}`, на десктопе `display:none`)",
+ "skill": "",
+ "effect": "Мобильный пользователь может мгновенно позвонить в один тап, не прокручивая к CTA — снижает трение на самом горячем канале",
+ "risk": "Номер телефона вымышленный — нужен реальный, иначе потеря доверия",
+ "rollback": "Удалить добавленный `<a>` и CSS-правило",
+ "verify": "Открыть в DevTools iPhone SE, проверить видимость иконки и кликабельность",
+ "priority_claim": "2",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<nav>` (L444) рядом с `<a class=\"nav-cta\" href=\"#contact\">Написать</a>` добавить `<a class=\"nav-tel\" href=\"tel:+79000000000\" aria-label=\"Позвонить\">📞</a>` — только на мобильных (CSS `@media (max-width:768px){.nav-tel{display:inline-flex}}`, на десктопе `display:none`)"
+ ],
+ "flags": []
+}

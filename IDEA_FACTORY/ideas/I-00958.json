@@ -1,0 +1,26 @@
+{
+ "id": "I-00958",
+ "round": 158,
+ "time": "2026-11-17 09:18:34",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Тултип‑подсказка «Что входит в цену» в карточке цены",
+ "knob": "Внутри `.price-card` (см. SITE_REQUEST «price») добавить атрибут `aria-describedby=\"price-incl\"` к элементу цены и блок‑тултип:\n```html\n<span id=\"price-incl\" class=\"tooltip\" role=\"tooltip\">\nВключает: дизайн, адаптивность, базовый SEO, 1‑мес. поддержки\n</span>\n```\nCSS:\n```css\n.tooltip{\nvisibility:hidden;\nopacity:0;\nposition:absolute;\nbackground:#fff;\nborder:1px solid var(--border);\npadding:0.5rem;\nborder-radius:4px;\ntop:100%; left:0;\ntransition:opacity .2s;\n}\n.price-card:hover .tooltip{visibility:visible;opacity:1;}\n```",
+ "skill": "",
+ "effect": "Снимает сомнения о составе цены, повышает доверие и готовность к покупке.",
+ "risk": "Тултип может перекрывать другие элементы на маленьких экранах; требуется проверка на мобильных.",
+ "rollback": "Удалить блок `.tooltip` и атрибут `aria-describedby` (git checkout).",
+ "verify": "Навести курсор (или тап) на цену – появится подсказка с перечислением включений.",
+ "priority_claim": "2 – повышает прозрачность предложения, небольшие изменения.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Внутри `.price-card` (см. SITE_REQUEST «price») добавить атрибут `aria-describedby=\"price-incl\"` к элементу цены и блок‑тултип:\n```html\n<span id=\"price-incl\" class=\"tooltip\" role=\"tooltip\">\nВключает: дизайн, адаптивность, базовый SEO, 1‑мес. поддержки\n</span>\n```\nCSS:\n```css\n.tooltip{\nvisibility:hidden;\nopacity:0;\nposition:absolute;\nbackground:#fff;\nborder:1px solid var(--border);\npadding:0.5rem;\nborder-radius:4px;\ntop:100%; left:0;\ntransition:opacity .2s;\n}\n.price-card:hover .tooltip{visibility:visible;opacity:1;}\n```"
+ ],
+ "flags": []
+}

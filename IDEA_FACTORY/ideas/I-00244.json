@@ -1,0 +1,26 @@
+{
+ "id": "I-00244",
+ "round": 37,
+ "time": "2026-11-17 03:26:44",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Быстрый аудит CLS (Cumulative Layout Shift) через PerformanceObserver",
+ "knob": "METHOD: В конец `<body>` вставить скрипт‑однострочник:\n```js\nnew PerformanceObserver(l=>{let cls=0;l.getEntries().forEach(e=>cls+=e.value);console.log('CLS:',cls);})\n.observe({type:'layout-shift',buffered:true});\n```",
+ "skill": "",
+ "effect": "При загрузке страницы в консоль будет выведено суммарное значение CLS, позволяя оценить, влияют ли новые элементы (анимации, динамический контент) на визуальную стабильность.",
+ "risk": "Скрипт лишь выводит данные, не меняет страницу; небольшое влияние на производительность (меньше 1 мс).",
+ "rollback": "Удалить вставленный `<script>`; `git checkout index.html` откатит изменения.",
+ "verify": "Открыть страницу в Chrome, открыть DevTools → Console, перезагрузить → увидеть значение CLS (должно быть < 0.1). Сравнить до/после изменения в 2‑5 минут.",
+ "priority_claim": "2 – важный SEO‑показатель, проверка занимает секунды, помогает избежать ухудшения ранжирования.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: В конец `<body>` вставить скрипт‑однострочник:\n```js\nnew PerformanceObserver(l=>{let cls=0;l.getEntries().forEach(e=>cls+=e.value);console.log('CLS:',cls);})\n.observe({type:'layout-shift',buffered:true});\n```"
+ ],
+ "flags": []
+}

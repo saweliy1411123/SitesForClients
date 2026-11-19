@@ -1,0 +1,27 @@
+{
+ "id": "I-00093",
+ "round": 14,
+ "time": "2026-11-17 02:21:17",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — Fluid Typography with CSS clamp()",
+ "knob": "METHOD: Внедрите глобальный набор CSS‑переменных `--fs-base`, `--fs-scale` и используйте `clamp()` для всех заголовков и текста, обеспечивая адаптивный размер шрифта от мобильных до десктопных экранов.\nSAFE CSS:\n```css\n:root {\n--fs-base: 1rem;          /* 16px */\n--fs-scale: 1.2;          /* multiplier */\n}\nh1 { font-size: clamp(1.75rem, calc(var(--fs-base) * var(--fs-scale) * 2.5), 3rem); }\nh2 { font-size: clamp(1.5rem, calc(var(--fs-base) * var(--fs-scale) * 2), 2.5rem); }\nh3 { font-size: clamp(1.25rem, calc(var(--fs-base) * var(--fs-scale) * 1.5), 2rem); }\np, li { font-size: clamp(0.875rem, calc(var(--fs-base) * var(--fs-scale)), 1rem); }\n```",
+ "skill": "",
+ "effect": "Текст выглядит оптимально на любом устройстве без медиа‑запросов, улучшает читаемость и восприятие качества.",
+ "risk": "Нет. CSS‑поддержка `clamp()` охватывает все современные браузеры.",
+ "rollback": "Удалить объявленные переменные и правила, восстановить оригинальные размеры из Git.",
+ "verify": "Открыть страницу в DevTools, переключить размеры окна (375 px → 1440 px) и убедиться, что шрифты плавно масштабируются без резких скачков.",
+ "priority_claim": "2 – повышает UX на всех устройствах, мало затрат, но эффект менее заметный, чем анимации.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "METHOD: Внедрите глобальный набор CSS‑переменных `--fs-base`, `--fs-scale` и используйте `clamp()` для всех заголовков и текста, обеспечивая адаптивный размер шрифта от мобильных до десктопных экранов.\nSAFE CSS:\n```css\n:root {\n--fs-base: 1rem;          /* 16px */\n--fs-scale: 1.2;          /* multiplier */\n}\nh1 { font-size: clamp(1.75rem, calc(var(--fs-base) * var(--fs-scale) * 2.5), 3rem); }\nh2 { font-size: clamp(1.5rem, calc(var(--fs-base) * var(--fs-scale) * 2), 2.5rem); }\nh3 { font-size: clamp(1.25rem, calc(var(--fs-base) * var(--fs-scale) * 1.5), 2rem); }\np, li { font-size: clamp(0.875rem, calc(var(--fs-base) * var(--fs-scale)), 1rem); }\n```",
+  "METHOD:\n**Name:** fluid-typography-clamp\n**When to apply:** На любом статическом лендинге, где в CSS заданы фиксированные `font-size` / `line-height`.\n**Steps:**\n1. В `<head>` добавить корневые переменные `--fs-min` и `--fs-max` для каждого типографического уровня (h1 – h6, p, .hero‑note).\n2. Заменить каждое фиксированное `font-size: XXpx;` на\n```css\nfont-size: clamp(var(--fs-min), 1.5vw, var(--fs-max));\n```\n3. При необходимости задать `line-height` через `clamp()` аналогично.\n4. Тестировать на разных ширинах, скорректировать min/max‑значения.\nSAFE CSS:\n```css\n:root{\n--fs-h1-min:2.5rem; --fs-h1-max:4rem;\n--fs-h2-min:2rem;   --fs-h2-max:3rem;\n--fs-h3-min:1.5rem; --fs-h3-max:2.25rem;\n--fs-p-min:1rem;    --fs-p-max:1.25rem;\n}\nh1{font-size:clamp(var(--fs-h1-min),5vw,var(--fs-h1-max));}\nh2{font-size:clamp(var(--fs-h2-min),4vw,var(--fs-h2-max));}\nh3{font-size:clamp(var(--fs-h3-min),3vw,var(--fs-h3-max));}\np, .hero-note{font-size:clamp(var(--fs-p-min),2.5vw,var(--fs-p-max));}\n```\nSAFE JS: *(нет)*"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00399",
+ "round": 59,
+ "time": "2026-11-17 04:32:38",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Замена exit-intent и логгеров — один статичный блок «отвечаю в течение часа» рядом с финальным CTA",
+ "knob": "METHOD: Вместо I-00308 (exit-intent попап), I-00336/338 (мёртвые логгеры",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: Вместо I-00308 (exit-intent попап), I-00336/338 (мёртвые логгеры"
+ ],
+ "flags": []
+}

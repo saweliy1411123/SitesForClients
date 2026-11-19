@@ -1,0 +1,26 @@
+{
+ "id": "I-00481",
+ "round": 72,
+ "time": "2026-11-17 05:10:55",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "URL‑hash A/B‑тест копий Hero‑заголовка",
+ "knob": "METHOD: в консоли Chrome выполнить скрипт, который при загрузке страницы читает `location.hash` (например `#vA` или `#vB`) и заменяет `innerHTML` элемента `.hero h1` и/или `.hero p.sub` на заранее заданные варианты, хранящиеся в объекте `variants`. Пример кода:\n```js\n(() => {\nconst variants = {\nvA: {h1:'Сайт за 2 дня — клиенты находят вас в Яндексе', sub:'Быстрый запуск, максимум продаж'},\nvB: {h1:'Ваш бизнес онлайн за 48 часов', sub:'Получайте заявки уже сегодня'}\n};\nconst hash = location.hash.replace('#','');\nif (variants[hash]) {\nconst h1 = document.querySelector('.hero h1');\nconst sub = document.querySelector('.hero p.sub');\nif (h1) h1.textContent = variants[hash].h1;\nif (sub) sub.textContent = variants[hash].sub;\n}\n})();\n```",
+ "skill": "",
+ "effect": "позволяет за 1‑2 минуты переключать варианты текста, собрать вручную метрики кликов по CTA (через `console.log` в обработчике) и сравнить CTR без изменения репозитория.",
+ "risk": "скрипт действует только в текущей сессии браузера; при перезапуске страницы без хеша изменения исчезнут.",
+ "rollback": "закрыть вкладку или удалить скрипт из консоли; при коммите просто не сохранять изменения.",
+ "verify": "открыть страницу, открыть DevTools → Console, вставить скрипт, добавить `#vA` к URL, убедиться в изменённом заголовке, кликнуть CTA и посмотреть `console.log` счётчик; повторить с `#vB`.",
+ "priority_claim": "2 – быстрый, не требует правок кода, даёт прямую метрику CTR, полезно для выбора лучшего месседжа.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: в консоли Chrome выполнить скрипт, который при загрузке страницы читает `location.hash` (например `#vA` или `#vB`) и заменяет `innerHTML` элемента `.hero h1` и/или `.hero p.sub` на заранее заданные варианты, хранящиеся в объекте `variants`. Пример кода:\n```js\n(() => {\nconst variants = {\nvA: {h1:'Сайт за 2 дня — клиенты находят вас в Яндексе', sub:'Быстрый запуск, максимум продаж'},\nvB: {h1:'Ваш бизнес онлайн за 48 часов', sub:'Получайте заявки уже сегодня'}\n};\nconst hash = location.hash.replace('#','');\nif (variants[hash]) {\nconst h1 = document.querySelector('.hero h1');\nconst sub = document.querySelector('.hero p.sub');\nif (h1) h1.textContent = variants[hash].h1;\nif (sub) sub.textContent = variants[hash].sub;\n}\n})();\n```"
+ ],
+ "flags": []
+}

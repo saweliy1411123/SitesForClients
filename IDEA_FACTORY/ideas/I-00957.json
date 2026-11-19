@@ -1,0 +1,26 @@
+{
+ "id": "I-00957",
+ "round": 158,
+ "time": "2026-11-17 09:18:34",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Автоматическая нумерация шагов с анимацией появления",
+ "knob": "В секции «Три шага» (см. SITE_REQUEST «steps») добавить класс‑контейнеру шагов `class=\"step\"` и в CSS использовать счётчик:\n```css\n.step::before{\ncounter-increment: step;\ncontent: counter(step);\ndisplay:inline-block;\nwidth:2rem;height:2rem;\nline-height:2rem;\ntext-align:center;\nbackground:var(--blue);\ncolor:#fff;\nborder-radius:50%;\nmargin-right:0.5rem;\nopacity:0;\ntransform:translateY(10px);\ntransition:opacity .4s ease,transform .4s ease;\n}\n.step.visible::before{opacity:1;transform:none;}\n```\nJS‑скрипт (≈10 строк) добавит класс `.visible` к каждому `.step` при появлении в viewport (IntersectionObserver).",
+ "skill": "",
+ "effect": "Делает процесс более наглядным, усиливает восприятие последовательности, повышает вовлечённость.",
+ "risk": "Требует небольшого JS; может конфликтовать с уже существующим скриптом, если он использует глобальные переменные.",
+ "rollback": "Удалить добавленные стили и скрипт (git checkout).",
+ "verify": "Прокрутить страницу, убедиться, что перед каждым шагом появляется цифра с плавной анимацией.",
+ "priority_claim": "2 – визуальный апгрейд, легко реализуемый, улучшает UX.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В секции «Три шага» (см. SITE_REQUEST «steps») добавить класс‑контейнеру шагов `class=\"step\"` и в CSS использовать счётчик:\n```css\n.step::before{\ncounter-increment: step;\ncontent: counter(step);\ndisplay:inline-block;\nwidth:2rem;height:2rem;\nline-height:2rem;\ntext-align:center;\nbackground:var(--blue);\ncolor:#fff;\nborder-radius:50%;\nmargin-right:0.5rem;\nopacity:0;\ntransform:translateY(10px);\ntransition:opacity .4s ease,transform .4s ease;\n}\n.step.visible::before{opacity:1;transform:none;}\n```\nJS‑скрипт (≈10 строк) добавит класс `.visible` к каждому `.step` при появлении в viewport (IntersectionObserver)."
+ ],
+ "flags": []
+}

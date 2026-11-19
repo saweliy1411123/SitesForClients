@@ -1,0 +1,771 @@
+[2026-11-19 02:37:47] round 1: asking 14 models
+[2026-11-19 02:40:48]   OK   localhost:8080/ovh/gpt-oss-120b           30.1s Кофе на Выходе
+[2026-11-19 02:40:48]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 02:40:48]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 02:40:48]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 02:40:48]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 02:40:48]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 02:40:48]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 02:40:48]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 02:40:48]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  33.1s Умный Ремонт
+[2026-11-19 02:40:48]   OK   localhost:8080/zhipu/glm-4.7-flash        33.5s ФитоПартнёр
+[2026-11-19 02:40:48]   OK   localhost:8081/big_only                   50.6s Профессиональная уборка
+[2026-11-19 02:40:48]   FAIL localhost:8081/auto                      empty
+[2026-11-19 02:40:48]   FAIL localhost:8081/fast                      empty
+[2026-11-19 02:40:48]   FAIL localhost:8081/agent                     empty
+[2026-11-19 02:40:48] WINNER Кофе на Выходе (localhost:8080/ovh/gpt-oss-120b) -> 20261119-0240-кофе-на-выходе.html
+[2026-11-19 02:42:48] round 2: asking 14 models
+[2026-11-19 02:46:29]   OK   localhost:8080/ovh/gpt-oss-120b           17.1s SmartLock
+[2026-11-19 02:46:29]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 02:46:29]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 02:46:29]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 02:46:29]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 02:46:29]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  32.5s Мастерская Мечты
+[2026-11-19 02:46:29]   OK   localhost:8081/big_only                   21.8s ТехноДом
+[2026-11-19 02:46:29]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 02:46:29]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 02:46:29]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 02:46:29]   OK   localhost:8080/zhipu/glm-4.7-flash        41.4s МебельМастер
+[2026-11-19 02:46:29]   FAIL localhost:8081/fast                      HTTP Error 502: Bad Gateway
+[2026-11-19 02:46:29]   FAIL localhost:8081/auto                      HTTP Error 502: Bad Gateway
+[2026-11-19 02:46:29]   FAIL localhost:8081/agent                     HTTP Error 502: Bad Gateway
+[2026-11-19 02:46:29] WINNER SmartLock (localhost:8080/ovh/gpt-oss-120b) -> 20261119-0246-smartlock.html
+[2026-11-19 02:48:29] round 3: asking 14 models
+[2026-11-19 02:52:03]   OK   localhost:8080/ovh/gpt-oss-120b           18.9s ЭкоЧисто
+[2026-11-19 02:52:03]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 02:52:03]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 02:52:03]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 02:52:03]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 02:52:03]   FAIL localhost:8080/zhipu/glm-4.7-flash       HTTP Error 502: Bad Gateway
+[2026-11-19 02:52:03]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  36.6s Эко-Доставка
+[2026-11-19 02:52:03]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 02:52:03]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 02:52:03]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 02:52:03]   OK   localhost:8081/fast                       36.6s Чистый Взгляд
+[2026-11-19 02:52:03]   OK   localhost:8081/agent                      32.4s Чистый Взгляд
+[2026-11-19 02:52:03]   FAIL localhost:8081/auto                      HTTP Error 502: Bad Gateway
+[2026-11-19 02:52:03]   FAIL localhost:8081/big_only                  timed out
+[2026-11-19 02:52:03] WINNER ЭкоЧисто (localhost:8080/ovh/gpt-oss-120b) -> 20261119-0252-экочисто.html
+[2026-11-19 02:54:03] round 4: asking 14 models
+[2026-11-19 02:57:15]   OK   localhost:8080/ovh/gpt-oss-120b           24.3s 3DМастер
+[2026-11-19 02:57:15]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 02:57:15]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 02:57:15]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 02:57:15]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 02:57:15]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  12.8s Помощь Дома
+[2026-11-19 02:57:15]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 02:57:15]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 02:57:15]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 02:57:15]   OK   localhost:8081/big_only                   31.1s Домашний Пекарь
+[2026-11-19 02:57:15]   OK   localhost:8080/zhipu/glm-4.7-flash        37.9s Мур-Груминг
+[2026-11-19 02:57:15]   FAIL localhost:8081/fast                      HTTP Error 502: Bad Gateway
+[2026-11-19 02:57:15]   FAIL localhost:8081/auto                      HTTP Error 502: Bad Gateway
+[2026-11-19 02:57:15]   OK   localhost:8081/agent                      65.7s Печать на дом
+[2026-11-19 02:57:15] WINNER 3DМастер (localhost:8080/ovh/gpt-oss-120b) -> 20261119-0257-3dмастер.html
+[2026-11-19 02:59:15] round 5: asking 14 models
+[2026-11-19 03:02:11]   OK   localhost:8080/ovh/gpt-oss-120b           15.4s Клик-Ремонт
+[2026-11-19 03:02:11]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 03:02:11]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 03:02:11]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 03:02:11]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 03:02:11]   FAIL localhost:8080/zhipu/glm-4.7-flash       HTTP Error 502: Bad Gateway
+[2026-11-19 03:02:11]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 03:02:11]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 03:02:11]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 03:02:11]   OK   localhost:8081/agent                      57.9s ДомСвет
+[2026-11-19 03:02:11]   OK   localhost:8081/fast                       70.3s ДомСвет
+[2026-11-19 03:02:11]   OK   localhost:8081/auto                        4.2s ДомСвет
+[2026-11-19 03:02:11]   FAIL localhost:8081/big_only                  empty
+[2026-11-19 03:02:11]   FAIL localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct timed out
+[2026-11-19 03:02:11] WINNER ДомСвет (localhost:8081/agent) -> 20261119-0302-домсвет.html
+[2026-11-19 03:04:11] round 6: asking 14 models
+[2026-11-19 03:07:58]   OK   localhost:8080/ovh/gpt-oss-120b           18.1s Книжный Путь
+[2026-11-19 03:07:58]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 03:07:58]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 03:07:58]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 03:07:58]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 03:07:58]   FAIL localhost:8080/zhipu/glm-4.7-flash       HTTP Error 502: Bad Gateway
+[2026-11-19 03:07:58]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 03:07:58]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 03:07:58]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 03:07:58]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  22.8s ЗвукПро
+[2026-11-19 03:07:58]   FAIL localhost:8081/auto                      HTTP Error 502: Bad Gateway
+[2026-11-19 03:07:58]   FAIL localhost:8081/big_only                  timed out
+[2026-11-19 03:07:58]   FAIL localhost:8081/fast                      timed out
+[2026-11-19 03:07:58]   FAIL localhost:8081/agent                     timed out
+[2026-11-19 03:07:58] WINNER Книжный Путь (localhost:8080/ovh/gpt-oss-120b) -> 20261119-0307-книжный-путь.html
+[2026-11-19 03:09:58] round 7: asking 14 models
+[2026-11-19 03:13:58]   OK   localhost:8080/ovh/gpt-oss-120b           31.6s ГоршокМастер
+[2026-11-19 03:13:58]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 03:13:58]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 03:13:58]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 03:13:58]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 03:13:58]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 03:13:58]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 03:13:58]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 03:13:58]   OK   localhost:8080/zhipu/glm-4.7-flash        32.9s Снежный Сервис
+[2026-11-19 03:13:58]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  22.1s ЗвукПро
+[2026-11-19 03:13:58]   FAIL localhost:8081/auto                      HTTP Error 502: Bad Gateway
+[2026-11-19 03:13:58]   FAIL localhost:8081/fast                      timed out
+[2026-11-19 03:13:58]   FAIL localhost:8081/big_only                  timed out
+[2026-11-19 03:13:58]   FAIL localhost:8081/agent                     timed out
+[2026-11-19 03:13:58] WINNER ГоршокМастер (localhost:8080/ovh/gpt-oss-120b) -> 20261119-0313-горшокмастер.html
+[2026-11-19 03:15:58] round 8: asking 14 models
+[2026-11-19 03:18:32]   OK   localhost:8080/ovh/gpt-oss-120b           25.1s СнегСнятие
+[2026-11-19 03:18:32]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 03:18:32]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 03:18:32]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 03:18:32]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 03:18:32]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  16.0s ФлораСтудия
+[2026-11-19 03:18:32]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 03:18:32]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 03:18:32]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 03:18:32]   OK   localhost:8080/zhipu/glm-4.7-flash        51.9s ПарМобиль
+[2026-11-19 03:18:32]   OK   localhost:8081/big_only                   54.1s ЗвукМастер
+[2026-11-19 03:18:32]   OK   localhost:8081/auto                       44.6s ШкафОК
+[2026-11-19 03:18:32]   OK   localhost:8081/fast                       31.7s ШкафОК
+[2026-11-19 03:18:32]   OK   localhost:8081/agent                      23.7s ШкафОК
+[2026-11-19 03:18:32] WINNER СнегСнятие (localhost:8080/ovh/gpt-oss-120b) -> 20261119-0318-снегснятие.html
+[2026-11-19 03:20:32] round 9: asking 14 models
+[2026-11-19 03:23:12]   OK   lareper/glm-5.2                           20.7s РемТочка
+[2026-11-19 03:23:12]   OK   localhost:8080/ovh/gpt-oss-120b           21.0s АромаСвет
+[2026-11-19 03:23:12]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 03:23:12]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 03:23:12]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 03:23:12]   FAIL localhost:8080/zhipu/glm-4.7-flash       HTTP Error 502: Bad Gateway
+[2026-11-19 03:23:12]   OK   lareper/glm-5.2-fast-preview              22.0s РемТочка
+[2026-11-19 03:23:12]   OK   lareper/glm-5.3                           14.1s РемТочка
+[2026-11-19 03:23:12]   OK   lareper/glm-5.3-prime                     15.7s РемТочка
+[2026-11-19 03:23:12]   BAD  localhost:8081/big_only                  not json
+[2026-11-19 03:23:12]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  65.9s ЗвукПро
+[2026-11-19 03:23:12]   FAIL localhost:8081/auto                      empty
+[2026-11-19 03:23:12]   FAIL localhost:8081/fast                      empty
+[2026-11-19 03:23:12]   FAIL localhost:8081/agent                     empty
+[2026-11-19 03:23:12] WINNER РемТочка (lareper/glm-5.2) -> 20261119-0323-ремточка.html
+[2026-11-19 03:25:12] round 10: asking 14 models
+[2026-11-19 03:28:58]   OK   localhost:8080/ovh/gpt-oss-120b           16.5s Эко‑Капля
+[2026-11-19 03:28:58]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 03:28:58]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 03:28:58]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 03:28:58]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 03:28:58]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 03:28:58]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 03:28:58]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 03:28:58]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  55.6s Уютный Пол
+[2026-11-19 03:28:58]   OK   localhost:8080/zhipu/glm-4.7-flash        44.9s ПухляшМастер
+[2026-11-19 03:28:58]   OK   localhost:8081/big_only                   75.0s ФитоМир
+[2026-11-19 03:28:58]   FAIL localhost:8081/fast                      HTTP Error 502: Bad Gateway
+[2026-11-19 03:28:58]   FAIL localhost:8081/auto                      HTTP Error 502: Bad Gateway
+[2026-11-19 03:28:58]   FAIL localhost:8081/agent                     HTTP Error 502: Bad Gateway
+[2026-11-19 03:28:58] WINNER Эко‑Капля (localhost:8080/ovh/gpt-oss-120b) -> 20261119-0328-эко-капля.html
+[2026-11-19 03:30:58] round 11: asking 14 models
+[2026-11-19 03:34:45]   OK   localhost:8080/ovh/gpt-oss-120b           32.1s ЧистоТех
+[2026-11-19 03:34:45]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 03:34:45]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 03:34:45]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 03:34:45]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 03:34:45]   OK   localhost:8081/big_only                   14.1s Уютный Пол
+[2026-11-19 03:34:45]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  15.1s ЗвукПро
+[2026-11-19 03:34:45]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 03:34:45]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 03:34:45]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 03:34:45]   OK   localhost:8080/zhipu/glm-4.7-flash        68.1s Шаг-Шаг
+[2026-11-19 03:34:45]   FAIL localhost:8081/auto                      HTTP Error 502: Bad Gateway
+[2026-11-19 03:34:45]   FAIL localhost:8081/fast                      HTTP Error 502: Bad Gateway
+[2026-11-19 03:34:45]   FAIL localhost:8081/agent                     timed out
+[2026-11-19 03:34:45] WINNER Шаг-Шаг (localhost:8080/zhipu/glm-4.7-flash) -> 20261119-0334-шаг-шаг.html
+[2026-11-19 03:36:45] round 12: asking 14 models
+[2026-11-19 03:40:37]   OK   localhost:8080/ovh/gpt-oss-120b           14.5s СветоТень
+[2026-11-19 03:40:37]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 03:40:37]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 03:40:37]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 03:40:37]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 03:40:37]   OK   localhost:8081/big_only                   18.1s Домашний Мастер
+[2026-11-19 03:40:37]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 03:40:37]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 03:40:37]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 03:40:37]   OK   localhost:8080/zhipu/glm-4.7-flash        64.8s Стирка-Мастер
+[2026-11-19 03:40:37]   BAD  localhost:8081/auto                      not json
+[2026-11-19 03:40:37]   BAD  localhost:8081/fast                      not json
+[2026-11-19 03:40:37]   FAIL localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct timed out
+[2026-11-19 03:40:37]   FAIL localhost:8081/agent                     timed out
+[2026-11-19 03:40:37] WINNER Домашний Мастер (localhost:8081/big_only) -> 20261119-0340-домашний-мастер.html
+[2026-11-19 03:42:37] round 13: asking 14 models
+[2026-11-19 03:46:17]   FAIL lareper/deepseek-v4.1-flash              empty
+[2026-11-19 03:46:17]   FAIL lareper/glm-5.2                          HTTP Error 429: Too Many Requests
+[2026-11-19 03:46:17]   OK   localhost:8080/ovh/gpt-oss-120b           14.8s 3D‑ПечатьPRO
+[2026-11-19 03:46:17]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 03:46:17]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 03:46:17]   OK   localhost:8080/zhipu/glm-4.7-flash        26.4s АвтоПрофиль
+[2026-11-19 03:46:17]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 03:46:17]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 03:46:17]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 03:46:17]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  43.3s ЗвукМастер
+[2026-11-19 03:46:17]   OK   localhost:8081/big_only                   72.3s ЭкоТепло
+[2026-11-19 03:46:17]   FAIL localhost:8081/auto                      timed out
+[2026-11-19 03:46:17]   FAIL localhost:8081/fast                      timed out
+[2026-11-19 03:46:17]   FAIL localhost:8081/agent                     timed out
+[2026-11-19 03:46:17] WINNER АвтоПрофиль (localhost:8080/zhipu/glm-4.7-flash) -> 20261119-0346-автопрофиль.html
+[2026-11-19 03:48:17] round 14: asking 14 models
+[2026-11-19 03:51:45]   OK   localhost:8080/ovh/gpt-oss-120b           16.7s ОфисЭкспресс
+[2026-11-19 03:51:45]   OK   lareper/glm-5.2                           25.0s ЗерноДом
+[2026-11-19 03:51:45]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 03:51:45]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 03:51:45]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 03:51:45]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  21.7s Зеленый Уголок
+[2026-11-19 03:51:45]   OK   localhost:8080/zhipu/glm-4.7-flash        23.9s Стекло-Чисто
+[2026-11-19 03:51:45]   OK   lareper/glm-5.3                           22.3s ЗерноДом
+[2026-11-19 03:51:45]   OK   lareper/glm-5.3-prime                     22.3s ЗерноДом
+[2026-11-19 03:51:45]   OK   lareper/glm-5.2-fast-preview              27.7s ЗерноДом
+[2026-11-19 03:51:45]   OK   localhost:8081/big_only                   24.4s Зеленый Уголок
+[2026-11-19 03:51:45]   FAIL localhost:8081/fast                      timed out
+[2026-11-19 03:51:45]   FAIL localhost:8081/auto                      timed out
+[2026-11-19 03:51:45]   FAIL localhost:8081/agent                     HTTP Error 502: Bad Gateway
+[2026-11-19 03:51:45] WINNER Стекло-Чисто (localhost:8080/zhipu/glm-4.7-flash) -> 20261119-0351-стекло-чисто.html
+[2026-11-19 03:53:45] round 15: asking 14 models
+[2026-11-19 03:57:19]   OK   localhost:8080/ovh/gpt-oss-120b           24.2s Зелёный Двор
+[2026-11-19 03:57:19]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 03:57:19]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 03:57:19]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 03:57:19]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 03:57:19]   FAIL lareper/glm-5.2-fast-preview             HTTP Error 429: Too Many Requests
+[2026-11-19 03:57:19]   FAIL lareper/glm-5.3                          HTTP Error 429: Too Many Requests
+[2026-11-19 03:57:19]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  12.0s Зеленый Уголок
+[2026-11-19 03:57:19]   FAIL localhost:8080/zhipu/glm-4.7-flash       HTTP Error 502: Bad Gateway
+[2026-11-19 03:57:19]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 03:57:19]   FAIL localhost:8081/auto                      HTTP Error 502: Bad Gateway
+[2026-11-19 03:57:19]   FAIL localhost:8081/fast                      HTTP Error 502: Bad Gateway
+[2026-11-19 03:57:19]   FAIL localhost:8081/big_only                  timed out
+[2026-11-19 03:57:19]   FAIL localhost:8081/agent                     timed out
+[2026-11-19 03:57:19] WINNER Зелёный Двор (localhost:8080/ovh/gpt-oss-120b) -> 20261119-0357-зелёный-двор.html
+[2026-11-19 03:59:19] round 16: asking 14 models
+[2026-11-19 04:03:05]   OK   localhost:8080/ovh/gpt-oss-120b           17.9s Мастер‑Шкаф
+[2026-11-19 04:03:05]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 04:03:05]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 04:03:05]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 04:03:05]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 04:03:05]   FAIL localhost:8080/zhipu/glm-4.7-flash       HTTP Error 502: Bad Gateway
+[2026-11-19 04:03:05]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 04:03:05]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 04:03:05]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 04:03:05]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  57.4s Звездный Час
+[2026-11-19 04:03:05]   BAD  localhost:8081/auto                      not json
+[2026-11-19 04:03:05]   FAIL localhost:8081/big_only                  timed out
+[2026-11-19 04:03:05]   FAIL localhost:8081/fast                      timed out
+[2026-11-19 04:03:05]   FAIL localhost:8081/agent                     timed out
+[2026-11-19 04:03:05] WINNER Звездный Час (localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct) -> 20261119-0403-звездный-час.html
+[2026-11-19 04:05:05] round 17: asking 14 models
+[2026-11-19 04:08:56]   OK   localhost:8080/ovh/gpt-oss-120b           22.3s СканерДок
+[2026-11-19 04:08:56]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 04:08:56]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 04:08:56]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 04:08:56]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 04:08:56]   OK   lareper/glm-5.3-prime                     19.4s Ключ-Момент
+[2026-11-19 04:08:56]   OK   lareper/glm-5.2-fast-preview              25.3s Остро-Дом
+[2026-11-19 04:08:56]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 04:08:56]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  59.8s Уютный Дом
+[2026-11-19 04:08:56]   OK   localhost:8080/zhipu/glm-4.7-flash        54.3s Смарт-Старт
+[2026-11-19 04:08:56]   FAIL localhost:8081/auto                      timed out
+[2026-11-19 04:08:56]   FAIL localhost:8081/big_only                  timed out
+[2026-11-19 04:08:56]   FAIL localhost:8081/fast                      timed out
+[2026-11-19 04:08:56]   FAIL localhost:8081/agent                     timed out
+[2026-11-19 04:08:56] WINNER Ключ-Момент (lareper/glm-5.3-prime) -> 20261119-0408-ключ-момент.html
+[2026-11-19 04:10:56] round 18: asking 14 models
+[2026-11-19 04:14:46]   OK   localhost:8080/ovh/gpt-oss-120b           22.3s Кофе‑Колесо
+[2026-11-19 04:14:46]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 04:14:46]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 04:14:46]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 04:14:46]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 04:14:46]   OK   lareper/glm-5.3                           18.4s ТеплоДом
+[2026-11-19 04:14:46]   OK   lareper/glm-5.2-fast-preview              20.0s ТеплоДом
+[2026-11-19 04:14:46]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  31.9s Чистый Воздух
+[2026-11-19 04:14:46]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 04:14:46]   OK   localhost:8080/zhipu/glm-4.7-flash        54.1s Стирка-Мобил
+[2026-11-19 04:14:46]   OK   localhost:8081/big_only                   54.4s Посылка‑Легко
+[2026-11-19 04:14:46]   FAIL localhost:8081/auto                      HTTP Error 502: Bad Gateway
+[2026-11-19 04:14:46]   FAIL localhost:8081/fast                      HTTP Error 502: Bad Gateway
+[2026-11-19 04:14:46]   FAIL localhost:8081/agent                     timed out
+[2026-11-19 04:14:46] WINNER Стирка-Мобил (localhost:8080/zhipu/glm-4.7-flash) -> 20261119-0414-стирка-мобил.html
+[2026-11-19 04:16:46] round 19: asking 14 models
+[2026-11-19 04:20:17]   OK   localhost:8080/ovh/gpt-oss-120b           15.3s ТеплоЭкспресс
+[2026-11-19 04:20:17]   OK   lareper/glm-5.2                           22.0s Топ-Стирка
+[2026-11-19 04:20:17]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  12.3s Домашний Мастер
+[2026-11-19 04:20:17]   OK   lareper/glm-5.2-fast-preview              10.0s Топ-Стирка
+[2026-11-19 04:20:17]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 04:20:17]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 04:20:17]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 04:20:17]   OK   localhost:8080/zhipu/glm-4.7-flash        32.5s Мастер-Клик
+[2026-11-19 04:20:17]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 04:20:17]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 04:20:17]   OK   localhost:8081/big_only                   78.6s Домашний Уют
+[2026-11-19 04:20:17]   FAIL localhost:8081/auto                      empty
+[2026-11-19 04:20:17]   FAIL localhost:8081/fast                      empty
+[2026-11-19 04:20:17]   FAIL localhost:8081/agent                     empty
+[2026-11-19 04:20:17] WINNER Домашний Мастер (localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct) -> 20261119-0420-домашний-мастер.html
+[2026-11-19 04:22:17] round 20: asking 14 models
+[2026-11-19 04:25:50]   OK   localhost:8080/ovh/gpt-oss-120b           21.8s ЭкоЧисто
+[2026-11-19 04:25:50]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 04:25:50]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 04:25:50]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 04:25:50]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 04:25:50]   FAIL localhost:8080/zhipu/glm-4.7-flash       HTTP Error 502: Bad Gateway
+[2026-11-19 04:25:50]   OK   lareper/glm-5.3                           18.6s Обед-Курс
+[2026-11-19 04:25:50]   OK   lareper/glm-5.3-prime                     28.8s Хвост-Гуляет
+[2026-11-19 04:25:50]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 04:25:50]   OK   localhost:8081/agent                      54.3s Био-Барьер
+[2026-11-19 04:25:50]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  28.1s Эко-Помощь
+[2026-11-19 04:25:50]   OK   localhost:8081/fast                       33.1s Био-Барьер
+[2026-11-19 04:25:50]   FAIL localhost:8081/auto                      timed out
+[2026-11-19 04:25:50]   FAIL localhost:8081/big_only                  timed out
+[2026-11-19 04:25:50] WINNER Хвост-Гуляет (lareper/glm-5.3-prime) -> 20261119-0425-хвост-гуляет.html
+[2026-11-19 04:25:50] finished
+[2026-11-19 04:26:34] round 1: asking 14 models
+[2026-11-19 04:30:22]   OK   localhost:8080/ovh/gpt-oss-120b           21.7s КофеНаПороге
+[2026-11-19 04:30:22]   FAIL lareper/deepseek-v4-pro-0813             empty
+[2026-11-19 04:30:22]   FAIL lareper/deepseek-v4-pro                  empty
+[2026-11-19 04:30:22]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 04:30:22]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 04:30:22]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  25.0s Умная Кухня
+[2026-11-19 04:30:22]   OK   lareper/glm-5.3                           26.9s Торт-Таймер
+[2026-11-19 04:30:22]   OK   lareper/glm-5.3-prime                     21.7s Торт-Таймер
+[2026-11-19 04:30:22]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 04:30:22]   OK   localhost:8080/zhipu/glm-4.7-flash        65.5s Сапожник-Мобил
+[2026-11-19 04:30:22]   FAIL localhost:8081/auto                      HTTP Error 502: Bad Gateway
+[2026-11-19 04:30:22]   FAIL localhost:8081/fast                      timed out
+[2026-11-19 04:30:22]   FAIL localhost:8081/big_only                  timed out
+[2026-11-19 04:30:22]   FAIL localhost:8081/agent                     timed out
+[2026-11-19 04:30:22] WINNER Умная Кухня (localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct) -> 20261119-0430-умная-кухня.html
+[2026-11-19 04:32:22] round 2: asking 14 models
+[2026-11-19 04:35:26]   OK   localhost:8080/ovh/gpt-oss-120b           25.9s Садовый Дворник
+[2026-11-19 04:35:26]   OK   lareper/glm-5.2                           26.0s МебельСобрана
+[2026-11-19 04:35:26]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 04:35:26]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 04:35:26]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 04:35:26]   FAIL localhost:8080/zhipu/glm-4.7-flash       HTTP Error 502: Bad Gateway
+[2026-11-19 04:35:26]   OK   lareper/glm-5.2-fast-preview              13.2s МебельСобрана
+[2026-11-19 04:35:26]   OK   lareper/glm-5.3                           10.6s МебельСобрана
+[2026-11-19 04:35:26]   OK   lareper/glm-5.3-prime                     12.2s МебельСобрана
+[2026-11-19 04:35:26]   OK   localhost:8081/big_only                   32.3s Цветочная Мастерская
+[2026-11-19 04:35:26]   OK   localhost:8081/agent                      51.7s Релакс-Мастер
+[2026-11-19 04:35:26]   OK   localhost:8081/auto                        9.1s Релакс-Мастер
+[2026-11-19 04:35:26]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  23.7s Цвет-Мир
+[2026-11-19 04:35:26]   FAIL localhost:8081/fast                      HTTP Error 502: Bad Gateway
+[2026-11-19 04:35:26] WINNER МебельСобрана (lareper/glm-5.2) -> 20261119-0435-мебельсобрана.html
+[2026-11-19 04:37:26] round 3: asking 14 models
+[2026-11-19 04:40:30]   FAIL lareper/deepseek-v4-pro-0813             HTTP Error 429: Too Many Requests
+[2026-11-19 04:40:30]   FAIL lareper/deepseek-v4-pro                  HTTP Error 429: Too Many Requests
+[2026-11-19 04:40:30]   FAIL lareper/glm-5.2                          HTTP Error 429: Too Many Requests
+[2026-11-19 04:40:30]   FAIL lareper/deepseek-v4.1-flash              HTTP Error 429: Too Many Requests
+[2026-11-19 04:40:30]   FAIL lareper/glm-5.2-fast-preview             HTTP Error 429: Too Many Requests
+[2026-11-19 04:40:30]   FAIL lareper/glm-5.3-prime                    HTTP Error 429: Too Many Requests
+[2026-11-19 04:40:30]   FAIL localhost:8080/zhipu/glm-4.7-flash       HTTP Error 502: Bad Gateway
+[2026-11-19 04:40:30]   OK   localhost:8080/ovh/gpt-oss-120b           22.2s ТутУтилизатор
+[2026-11-19 04:40:30]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 04:40:30]   OK   localhost:8081/big_only                   79.3s Зеленый Уют
+[2026-11-19 04:40:30]   FAIL localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct timed out
+[2026-11-19 04:40:30]   FAIL localhost:8081/auto                      HTTP Error 502: Bad Gateway
+[2026-11-19 04:40:30]   FAIL localhost:8081/agent                     HTTP Error 502: Bad Gateway
+[2026-11-19 04:40:30]   FAIL localhost:8081/fast                      timed out
+[2026-11-19 04:40:30] WINNER Зеленый Уют (localhost:8081/big_only) -> 20261119-0440-зеленый-уют.html
+[2026-11-19 04:42:30] round 4: asking 14 models
+[2026-11-19 04:46:22]   OK   localhost:8080/ovh/gpt-oss-120b           16.3s Полиграфия‑Экспресс
+[2026-11-19 04:46:22]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 04:46:22]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 04:46:22]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 04:46:22]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 04:46:22]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 04:46:22]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 04:46:22]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 04:46:22]   OK   localhost:8080/zhipu/glm-4.7-flash        42.8s Смарт-Замок
+[2026-11-19 04:46:22]   OK   localhost:8081/big_only                   64.6s Спа-Уют
+[2026-11-19 04:46:22]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  15.4s Чистый Воздух
+[2026-11-19 04:46:22]   FAIL localhost:8081/auto                      HTTP Error 502: Bad Gateway
+[2026-11-19 04:46:22]   FAIL localhost:8081/fast                      HTTP Error 502: Bad Gateway
+[2026-11-19 04:46:22]   FAIL localhost:8081/agent                     empty
+[2026-11-19 04:46:22] WINNER Спа-Уют (localhost:8081/big_only) -> 20261119-0446-спа-уют.html
+[2026-11-19 04:48:22] round 5: asking 14 models
+[2026-11-19 04:50:33]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 04:50:33]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 04:50:33]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 04:50:33]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 04:50:33]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 04:50:33]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 04:50:33]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 04:50:33]   OK   localhost:8080/ovh/gpt-oss-120b           63.7s Турбо‑Чистка
+[2026-11-19 04:50:33]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  69.3s Умный Дом
+[2026-11-19 04:50:33]   OK   localhost:8080/zhipu/glm-4.7-flash        73.2s Шаг-Ремонт
+[2026-11-19 04:50:33]   OK   localhost:8081/fast                       13.3s Батарея-Плюс
+[2026-11-19 04:50:33]   OK   localhost:8081/auto                       16.4s Батарея-Плюс
+[2026-11-19 04:50:33]   OK   localhost:8081/agent                       3.2s Батарея-Плюс
+[2026-11-19 04:50:33]   FAIL localhost:8081/big_only                  empty
+[2026-11-19 04:50:33] WINNER Умный Дом (localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct) -> 20261119-0450-умный-дом.html
+[2026-11-19 04:52:33] round 6: asking 14 models
+[2026-11-19 04:56:06]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 04:56:06]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 04:56:06]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 04:56:06]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 04:56:06]   OK   localhost:8080/ovh/gpt-oss-120b           43.9s ЭкспрессПрачка
+[2026-11-19 04:56:06]   FAIL localhost:8080/zhipu/glm-4.7-flash       HTTP Error 502: Bad Gateway
+[2026-11-19 04:56:06]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 04:56:06]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 04:56:06]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 04:56:06]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  32.3s Умный Ремонт
+[2026-11-19 04:56:06]   OK   localhost:8081/agent                      58.2s Чисто-Дом
+[2026-11-19 04:56:06]   OK   localhost:8081/auto                        7.5s Чисто-Дом
+[2026-11-19 04:56:06]   OK   localhost:8081/fast                       67.7s Чисто-Дом
+[2026-11-19 04:56:06]   FAIL localhost:8081/big_only                  timed out
+[2026-11-19 04:56:06] WINNER ЭкспрессПрачка (localhost:8080/ovh/gpt-oss-120b) -> 20261119-0456-экспресспрачка.html
+[2026-11-19 04:58:06] round 7: asking 14 models
+[2026-11-19 05:01:40]   OK   localhost:8080/ovh/gpt-oss-120b           20.1s СтильВдом
+[2026-11-19 05:01:40]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 05:01:40]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 05:01:40]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 05:01:40]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 05:01:40]   FAIL localhost:8080/zhipu/glm-4.7-flash       HTTP Error 502: Bad Gateway
+[2026-11-19 05:01:40]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 05:01:40]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 05:01:40]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 05:01:40]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  62.9s Умный Ремонт
+[2026-11-19 05:01:40]   OK   localhost:8081/fast                       55.5s Забота
+[2026-11-19 05:01:40]   OK   localhost:8081/auto                       55.7s Забота
+[2026-11-19 05:01:40]   OK   localhost:8081/agent                      42.9s Забота
+[2026-11-19 05:01:40]   FAIL localhost:8081/big_only                  timed out
+[2026-11-19 05:01:40] WINNER СтильВдом (localhost:8080/ovh/gpt-oss-120b) -> 20261119-0501-стильвдом.html
+[2026-11-19 05:03:40] round 8: asking 14 models
+[2026-11-19 05:05:02]   OK   localhost:8080/ovh/gpt-oss-120b           16.4s СнимокPRO
+[2026-11-19 05:05:02]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 05:05:02]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 05:05:02]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 05:05:02]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 05:05:02]   OK   localhost:8080/zhipu/glm-4.7-flash        19.8s АвтоКонтроль
+[2026-11-19 05:05:02]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 05:05:02]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 05:05:02]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 05:05:02]   OK   localhost:8081/big_only                   33.2s Домашний Повар
+[2026-11-19 05:05:02]   OK   localhost:8081/auto                       35.4s БалконМастер
+[2026-11-19 05:05:02]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  57.1s Эко-Помощь
+[2026-11-19 05:05:02]   OK   localhost:8081/agent                      30.2s БалконМастер
+[2026-11-19 05:05:02]   OK   localhost:8081/fast                       50.1s БалконМастер
+[2026-11-19 05:05:02] WINNER БалконМастер (localhost:8081/auto) -> 20261119-0505-балконмастер.html
+[2026-11-19 05:07:02] round 9: asking 14 models
+[2026-11-19 05:09:17]   OK   localhost:8080/ovh/gpt-oss-120b           30.6s Ключевой Сервис
+[2026-11-19 05:09:17]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 05:09:17]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 05:09:17]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 05:09:17]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 05:09:17]   OK   lareper/glm-5.2-fast-preview              19.5s АвтоНаДом
+[2026-11-19 05:09:17]   OK   lareper/glm-5.3                           21.1s АвтоНаДом
+[2026-11-19 05:09:17]   OK   localhost:8080/zhipu/glm-4.7-flash        21.5s Твой Друг
+[2026-11-19 05:09:17]   OK   localhost:8081/auto                       27.2s ДомоПорядок
+[2026-11-19 05:09:17]   OK   localhost:8081/agent                      10.4s ДомоПорядок
+[2026-11-19 05:09:17]   OK   localhost:8081/fast                       28.5s ДомоПорядок
+[2026-11-19 05:09:17]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 05:09:17]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  44.4s Красивый Пол
+[2026-11-19 05:09:17]   FAIL localhost:8081/big_only                  empty
+[2026-11-19 05:09:17] WINNER Ключевой Сервис (localhost:8080/ovh/gpt-oss-120b) -> 20261119-0509-ключевой-сервис.html
+[2026-11-19 05:11:17] round 10: asking 14 models
+[2026-11-19 05:12:45]   OK   localhost:8080/ovh/gpt-oss-120b           17.8s Капсульный Сад
+[2026-11-19 05:12:45]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  13.8s Зеленый Уголок
+[2026-11-19 05:12:45]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 05:12:45]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 05:12:45]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 05:12:45]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 05:12:45]   OK   lareper/glm-5.3                           24.1s КолесоВыезд
+[2026-11-19 05:12:45]   OK   lareper/glm-5.3-prime                     24.8s ЧистоВоздух
+[2026-11-19 05:12:45]   OK   localhost:8081/auto                       29.1s АвтоПортрет
+[2026-11-19 05:12:45]   OK   localhost:8081/agent                      29.3s АвтоПортрет
+[2026-11-19 05:12:45]   OK   localhost:8081/fast                       29.9s АвтоПортрет
+[2026-11-19 05:12:45]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 05:12:45]   OK   localhost:8080/zhipu/glm-4.7-flash        34.1s Авто-Чистота
+[2026-11-19 05:12:45]   OK   localhost:8081/big_only                   55.8s Зелёный Дом
+[2026-11-19 05:12:45] WINNER Капсульный Сад (localhost:8080/ovh/gpt-oss-120b) -> 20261119-0512-капсульный-сад.html
+[2026-11-19 05:14:45] round 11: asking 14 models
+[2026-11-19 05:18:18]   OK   localhost:8080/ovh/gpt-oss-120b           22.0s МобилСервис
+[2026-11-19 05:18:18]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 05:18:18]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 05:18:18]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 05:18:18]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 05:18:18]   OK   lareper/glm-5.3                           28.0s АвтоДок
+[2026-11-19 05:18:18]   OK   lareper/glm-5.3-prime                     28.3s АвтоБум
+[2026-11-19 05:18:18]   OK   localhost:8080/zhipu/glm-4.7-flash        30.1s Мур-Мобиль
+[2026-11-19 05:18:18]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 05:18:18]   OK   localhost:8081/auto                       32.2s ТёплыйКран
+[2026-11-19 05:18:18]   OK   localhost:8081/fast                       32.2s ТёплыйКран
+[2026-11-19 05:18:18]   OK   localhost:8081/agent                       7.0s ТёплыйКран
+[2026-11-19 05:18:18]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct   8.6s ЗвукПро
+[2026-11-19 05:18:18]   FAIL localhost:8081/big_only                  timed out
+[2026-11-19 05:18:18] WINNER АвтоДок (lareper/glm-5.3) -> 20261119-0518-автодок.html
+[2026-11-19 05:20:18] round 12: asking 14 models
+[2026-11-19 05:22:34]   OK   localhost:8080/ovh/gpt-oss-120b           22.0s Пчелиный Гнёздко
+[2026-11-19 05:22:34]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 05:22:34]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 05:22:34]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 05:22:34]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 05:22:34]   FAIL localhost:8080/zhipu/glm-4.7-flash       HTTP Error 502: Bad Gateway
+[2026-11-19 05:22:34]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  32.8s ЗвукМастер
+[2026-11-19 05:22:34]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 05:22:34]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 05:22:34]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 05:22:34]   OK   localhost:8081/fast                       81.6s БутербродБокс
+[2026-11-19 05:22:34]   OK   localhost:8081/agent                      68.2s БутербродБокс
+[2026-11-19 05:22:34]   OK   localhost:8081/auto                       81.8s БутербродБокс
+[2026-11-19 05:22:34]   OK   localhost:8081/big_only                   14.4s УмДом24
+[2026-11-19 05:22:34] WINNER Пчелиный Гнёздко (localhost:8080/ovh/gpt-oss-120b) -> 20261119-0522-пчелиный-гнёздко.html
+[2026-11-19 05:24:34] round 13: asking 14 models
+[2026-11-19 05:26:00]   OK   localhost:8080/ovh/gpt-oss-120b           18.6s 3DPrintHome
+[2026-11-19 05:26:00]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 05:26:00]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 05:26:00]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 05:26:00]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 05:26:00]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  23.9s Эко-Помощь
+[2026-11-19 05:26:00]   OK   localhost:8081/big_only                   13.9s КофеКапля
+[2026-11-19 05:26:00]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 05:26:00]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 05:26:00]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 05:26:00]   OK   localhost:8080/zhipu/glm-4.7-flash        40.7s Умный Дом — В Доме
+[2026-11-19 05:26:00]   BAD  localhost:8081/auto                      not json
+[2026-11-19 05:26:00]   BAD  localhost:8081/fast                      not json
+[2026-11-19 05:26:00]   BAD  localhost:8081/agent                     not json
+[2026-11-19 05:26:00] WINNER КофеКапля (localhost:8081/big_only) -> 20261119-0526-кофекапля.html
+[2026-11-19 05:28:00] round 14: asking 14 models
+[2026-11-19 05:31:17]   OK   localhost:8080/ovh/gpt-oss-120b           15.9s Био-Стирка
+[2026-11-19 05:31:17]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct   9.0s Звездный Ночник
+[2026-11-19 05:31:17]   FAIL lareper/deepseek-v4.1-flash              empty
+[2026-11-19 05:31:17]   FAIL lareper/deepseek-v4-pro                  empty
+[2026-11-19 05:31:17]   FAIL lareper/deepseek-v4-pro-0813             empty
+[2026-11-19 05:31:17]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 05:31:17]   FAIL localhost:8080/zhipu/glm-4.7-flash       HTTP Error 502: Bad Gateway
+[2026-11-19 05:31:17]   OK   lareper/glm-5.2-fast-preview              26.1s СушилкаПро
+[2026-11-19 05:31:17]   OK   lareper/glm-5.3-prime                     24.9s СушилкаПро
+[2026-11-19 05:31:17]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 05:31:17]   FAIL localhost:8081/big_only                  empty
+[2026-11-19 05:31:17]   FAIL localhost:8081/auto                      empty
+[2026-11-19 05:31:17]   FAIL localhost:8081/agent                     empty
+[2026-11-19 05:31:17]   FAIL localhost:8081/fast                      HTTP Error 502: Bad Gateway
+[2026-11-19 05:31:17] WINNER СушилкаПро (lareper/glm-5.2-fast-preview) -> 20261119-0531-сушилкапро.html
+[2026-11-19 05:33:17] round 15: asking 14 models
+[2026-11-19 05:35:51]   OK   lareper/glm-5.2                           10.4s ТеньПлюс
+[2026-11-19 05:35:51]   OK   lareper/glm-5.2-fast-preview               2.1s ТеньПлюс
+[2026-11-19 05:35:51]   FAIL lareper/deepseek-v4-pro                  empty
+[2026-11-19 05:35:51]   OK   lareper/glm-5.3                            3.0s ТеньПлюс
+[2026-11-19 05:35:51]   FAIL lareper/deepseek-v4-pro-0813             empty
+[2026-11-19 05:35:51]   OK   lareper/glm-5.3-prime                      2.0s ТеньПлюс
+[2026-11-19 05:35:51]   BAD  localhost:8081/big_only                  not json
+[2026-11-19 05:35:51]   OK   localhost:8080/ovh/gpt-oss-120b           26.8s БлагоСервис
+[2026-11-19 05:35:51]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 05:35:51]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  24.4s ФлораДизайн
+[2026-11-19 05:35:51]   OK   localhost:8080/zhipu/glm-4.7-flash        40.8s СмартФикс
+[2026-11-19 05:35:51]   BAD  localhost:8081/auto                      not json
+[2026-11-19 05:35:51]   BAD  localhost:8081/fast                      not json
+[2026-11-19 05:35:51]   BAD  localhost:8081/agent                     not json
+[2026-11-19 05:35:51] WINNER ТеньПлюс (lareper/glm-5.2) -> 20261119-0535-теньплюс.html
+[2026-11-19 05:37:51] round 16: asking 14 models
+[2026-11-19 05:40:14]   BAD  localhost:8080/ovh/gpt-oss-120b          not json
+[2026-11-19 05:40:14]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 05:40:14]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 05:40:14]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 05:40:14]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 05:40:14]   FAIL localhost:8080/zhipu/glm-4.7-flash       HTTP Error 502: Bad Gateway
+[2026-11-19 05:40:14]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  17.8s Зеленый Уголок
+[2026-11-19 05:40:15]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 05:40:15]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 05:40:15]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 05:40:15]   OK   localhost:8081/big_only                   59.2s PrintBox
+[2026-11-19 05:40:15]   OK   localhost:8081/fast                       12.2s Батарейкин
+[2026-11-19 05:40:15]   OK   localhost:8081/agent                       2.7s Батарейкин
+[2026-11-19 05:40:15]   OK   localhost:8081/auto                       22.3s Батарейкин
+[2026-11-19 05:40:15] WINNER Зеленый Уголок (localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct) -> 20261119-0540-зеленый-уголок.html
+[2026-11-19 05:42:15] round 17: asking 14 models
+[2026-11-19 05:45:52]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 05:45:52]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 05:45:52]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 05:45:52]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 05:45:52]   OK   localhost:8080/ovh/gpt-oss-120b           43.8s ТехноДом
+[2026-11-19 05:45:52]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  28.2s Уютный Домик
+[2026-11-19 05:45:52]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 05:45:52]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 05:45:52]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 05:45:52]   OK   localhost:8080/zhipu/glm-4.7-flash        64.2s Прачечная на Вы
+[2026-11-19 05:45:52]   FAIL localhost:8081/big_only                  empty
+[2026-11-19 05:45:52]   FAIL localhost:8081/auto                      HTTP Error 502: Bad Gateway
+[2026-11-19 05:45:52]   FAIL localhost:8081/fast                      timed out
+[2026-11-19 05:45:52]   FAIL localhost:8081/agent                     timed out
+[2026-11-19 05:45:52] WINNER Уютный Домик (localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct) -> 20261119-0545-уютный-домик.html
+[2026-11-19 05:47:52] round 18: asking 14 models
+[2026-11-19 05:51:29]   OK   lareper/glm-5.2                           11.3s КлючДверь
+[2026-11-19 05:51:29]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 05:51:29]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 05:51:29]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 05:51:29]   OK   localhost:8080/ovh/gpt-oss-120b           35.3s КупиКрафт
+[2026-11-19 05:51:29]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 05:51:29]   FAIL localhost:8080/zhipu/glm-4.7-flash       HTTP Error 502: Bad Gateway
+[2026-11-19 05:51:29]   BAD  localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct not json
+[2026-11-19 05:51:29]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 05:51:29]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 05:51:29]   OK   localhost:8081/big_only                   55.3s Эко-Пакет
+[2026-11-19 05:51:29]   FAIL localhost:8081/agent                     HTTP Error 502: Bad Gateway
+[2026-11-19 05:51:29]   FAIL localhost:8081/auto                      timed out
+[2026-11-19 05:51:29]   FAIL localhost:8081/fast                      timed out
+[2026-11-19 05:51:29] WINNER Эко-Пакет (localhost:8081/big_only) -> 20261119-0551-эко-пакет.html
+[2026-11-19 05:53:29] round 19: asking 14 models
+[2026-11-19 05:54:36]   OK   localhost:8080/ovh/gpt-oss-120b           25.5s СветоТочка
+[2026-11-19 05:54:36]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 05:54:36]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 05:54:36]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 05:54:36]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 05:54:36]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  10.2s Эко-Дом
+[2026-11-19 05:54:36]   FAIL localhost:8080/zhipu/glm-4.7-flash       HTTP Error 502: Bad Gateway
+[2026-11-19 05:54:36]   OK   lareper/glm-5.3                           25.7s КлючНаРуку
+[2026-11-19 05:54:36]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 05:54:36]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 05:54:36]   OK   localhost:8081/big_only                   31.2s СветМир
+[2026-11-19 05:54:36]   OK   localhost:8081/fast                       35.0s АвтоЗаряд
+[2026-11-19 05:54:36]   OK   localhost:8081/auto                       35.2s АвтоЗаряд
+[2026-11-19 05:54:36]   OK   localhost:8081/agent                      31.7s АвтоЗаряд
+[2026-11-19 05:54:36] WINNER АвтоЗаряд (localhost:8081/fast) -> 20261119-0554-автозаряд.html
+[2026-11-19 05:56:36] round 20: asking 14 models
+[2026-11-19 05:59:03]   OK   localhost:8080/ovh/gpt-oss-120b           19.5s ТеплоПод
+[2026-11-19 05:59:03]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 05:59:03]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 05:59:03]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 05:59:03]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 05:59:03]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 05:59:03]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 05:59:03]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 05:59:03]   OK   localhost:8081/auto                       38.0s ЧистоТех
+[2026-11-19 05:59:03]   OK   localhost:8081/agent                       8.5s ЧистоТех
+[2026-11-19 05:59:03]   OK   localhost:8081/big_only                   41.2s КофеТурбо
+[2026-11-19 05:59:03]   OK   localhost:8081/fast                        2.7s ЧистоТех
+[2026-11-19 05:59:03]   FAIL localhost:8080/zhipu/glm-4.7-flash       HTTP Error 502: Bad Gateway
+[2026-11-19 05:59:03]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  48.4s Чистый Воздух
+[2026-11-19 05:59:03] WINNER ЧистоТех (localhost:8081/auto) -> 20261119-0559-чистотех.html
+[2026-11-19 05:59:03] finished
+[2026-11-19 05:59:33] round 1: asking 14 models
+[2026-11-19 06:03:03]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 06:03:03]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 06:03:03]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 06:03:03]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 06:03:03]   FAIL localhost:8080/zhipu/glm-4.7-flash       HTTP Error 502: Bad Gateway
+[2026-11-19 06:03:03]   OK   localhost:8080/ovh/gpt-oss-120b           48.6s Крафт-Лаб
+[2026-11-19 06:03:03]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  17.0s Помощник по дому
+[2026-11-19 06:03:03]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 06:03:03]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 06:03:03]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 06:03:03]   FAIL localhost:8081/big_only                  HTTP Error 402: Payment Required
+[2026-11-19 06:03:03]   FAIL localhost:8081/auto                      HTTP Error 502: Bad Gateway
+[2026-11-19 06:03:03]   FAIL localhost:8081/fast                      empty
+[2026-11-19 06:03:03]   FAIL localhost:8081/agent                     empty
+[2026-11-19 06:03:03] WINNER Помощник по дому (localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct) -> 20261119-0603-помощник-по-дому.html
+[2026-11-19 06:05:03] round 2: asking 14 models
+[2026-11-19 06:08:39]   OK   localhost:8080/ovh/gpt-oss-120b           14.8s 3D‑Лаб
+[2026-11-19 06:08:39]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 06:08:39]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 06:08:39]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 06:08:39]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 06:08:39]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  20.5s Красивый Вид
+[2026-11-19 06:08:39]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 06:08:39]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 06:08:39]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 06:08:39]   FAIL localhost:8080/zhipu/glm-4.7-flash       HTTP Error 502: Bad Gateway
+[2026-11-19 06:08:39]   FAIL localhost:8081/fast                      timed out
+[2026-11-19 06:08:39]   FAIL localhost:8081/big_only                  timed out
+[2026-11-19 06:08:39]   FAIL localhost:8081/auto                      timed out
+[2026-11-19 06:08:39]   FAIL localhost:8081/agent                     timed out
+[2026-11-19 06:08:39] WINNER Красивый Вид (localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct) -> 20261119-0608-красивый-вид.html
+[2026-11-19 06:10:39] round 3: asking 14 models
+[2026-11-19 06:13:37]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 06:13:37]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 06:13:37]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 06:13:37]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 06:13:37]   OK   localhost:8080/ovh/gpt-oss-120b           37.7s ВелоМастер
+[2026-11-19 06:13:37]   FAIL localhost:8080/zhipu/glm-4.7-flash       HTTP Error 502: Bad Gateway
+[2026-11-19 06:13:37]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 06:13:37]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 06:13:37]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 06:13:37]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  15.8s Здоровый Питомец
+[2026-11-19 06:13:37]   OK   localhost:8081/auto                       27.4s Мобильный Грумер
+[2026-11-19 06:13:37]   OK   localhost:8081/fast                        3.8s Мобильный Грумер
+[2026-11-19 06:13:37]   OK   localhost:8081/agent                       2.8s Мобильный Грумер
+[2026-11-19 06:13:37]   FAIL localhost:8081/big_only                  HTTP Error 402: Payment Required
+[2026-11-19 06:13:37] WINNER Здоровый Питомец (localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct) -> 20261119-0613-здоровый-питомец.html
+[2026-11-19 06:15:37] round 4: asking 14 models
+[2026-11-19 06:19:13]   OK   localhost:8080/ovh/gpt-oss-120b           15.4s 3DМастер
+[2026-11-19 06:19:13]   BAD  lareper/deepseek-v4.1-flash              not json
+[2026-11-19 06:19:13]   BAD  lareper/deepseek-v4-pro-0813             not json
+[2026-11-19 06:19:13]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 06:19:13]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 06:19:13]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  19.5s Профессиональная Фотосъемка
+[2026-11-19 06:19:13]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 06:19:13]   OK   localhost:8080/zhipu/glm-4.7-flash        33.8s Стирка на Дом
+[2026-11-19 06:19:13]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 06:19:13]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 06:19:13]   BAD  localhost:8081/big_only                  not json
+[2026-11-19 06:19:13]   FAIL localhost:8081/fast                      HTTP Error 502: Bad Gateway
+[2026-11-19 06:19:13]   FAIL localhost:8081/auto                      timed out
+[2026-11-19 06:19:13]   FAIL localhost:8081/agent                     timed out
+[2026-11-19 06:19:13] WINNER Профессиональная Фотосъемка (localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct) -> 20261119-0619-профессиональная-фотосъемка.html
+[2026-11-19 06:21:13] round 5: asking 14 models
+[2026-11-19 06:24:42]   OK   localhost:8080/ovh/gpt-oss-120b           15.7s Лёгкий Переезд
+[2026-11-19 06:24:42]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 06:24:42]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 06:24:42]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 06:24:42]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 06:24:42]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  38.0s Эко Пакет
+[2026-11-19 06:24:42]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 06:24:42]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 06:24:42]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 06:24:42]   OK   localhost:8080/zhipu/glm-4.7-flash        47.0s Свой Мастер
+[2026-11-19 06:24:42]   FAIL localhost:8081/big_only                  empty
+[2026-11-19 06:24:42]   OK   localhost:8081/fast                       52.7s МобиМойка
+[2026-11-19 06:24:42]   OK   localhost:8081/auto                       52.8s МобиМойка
+[2026-11-19 06:24:42]   OK   localhost:8081/agent                      66.4s МобиМойка
+[2026-11-19 06:24:42] WINNER Лёгкий Переезд (localhost:8080/ovh/gpt-oss-120b) -> 20261119-0624-лёгкий-переезд.html
+[2026-11-19 06:26:42] round 6: asking 14 models
+[2026-11-19 06:29:49]   OK   localhost:8080/ovh/gpt-oss-120b           18.4s Арома-Комфорт
+[2026-11-19 06:29:49]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 06:29:49]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 06:29:49]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 06:29:49]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 06:29:49]   OK   localhost:8081/big_only                   16.9s Эко Уют
+[2026-11-19 06:29:49]   OK   lareper/glm-5.3-prime                     20.6s СмартКлюч
+[2026-11-19 06:29:49]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 06:29:49]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 06:29:49]   OK   localhost:8080/zhipu/glm-4.7-flash        45.8s АвтоКлимат
+[2026-11-19 06:29:49]   FAIL localhost:8081/auto                      timed out
+[2026-11-19 06:29:49]   FAIL localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct timed out
+[2026-11-19 06:29:49]   FAIL localhost:8081/fast                      timed out
+[2026-11-19 06:29:49]   FAIL localhost:8081/agent                     timed out
+[2026-11-19 06:29:49] WINNER Арома-Комфорт (localhost:8080/ovh/gpt-oss-120b) -> 20261119-0629-арома-комфорт.html
+[2026-11-19 06:31:49] round 7: asking 14 models
+[2026-11-19 06:35:25]   OK   localhost:8080/ovh/gpt-oss-120b           22.6s 3D‑Лаб
+[2026-11-19 06:35:25]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 06:35:25]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 06:35:25]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 06:35:25]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 06:35:25]   OK   localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct  12.3s Эко-Помощь
+[2026-11-19 06:35:25]   FAIL localhost:8080/zhipu/glm-4.7-flash       HTTP Error 502: Bad Gateway
+[2026-11-19 06:35:25]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 06:35:25]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 06:35:25]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 06:35:25]   OK   localhost:8081/big_only                   57.9s Уютный Уголок
+[2026-11-19 06:35:25]   FAIL localhost:8081/auto                      HTTP Error 502: Bad Gateway
+[2026-11-19 06:35:25]   OK   localhost:8081/fast                       76.7s Ключ-Мастер
+[2026-11-19 06:35:25]   FAIL localhost:8081/agent                     timed out
+[2026-11-19 06:35:25] WINNER Ключ-Мастер (localhost:8081/fast) -> 20261119-0635-ключ-мастер.html
+[2026-11-19 06:37:25] round 8: asking 14 models
+[2026-11-19 06:40:32]   OK   localhost:8080/ovh/gpt-oss-120b           26.3s ГринДом
+[2026-11-19 06:40:32]   FAIL lareper/glm-5.2                          The read operation timed out
+[2026-11-19 06:40:32]   FAIL lareper/deepseek-v4-pro-0813             The read operation timed out
+[2026-11-19 06:40:32]   FAIL lareper/deepseek-v4-pro                  The read operation timed out
+[2026-11-19 06:40:32]   FAIL lareper/deepseek-v4.1-flash              The read operation timed out
+[2026-11-19 06:40:32]   OK   localhost:8081/big_only                   29.6s Эко-Чистота
+[2026-11-19 06:40:32]   FAIL lareper/glm-5.3                          The read operation timed out
+[2026-11-19 06:40:32]   FAIL lareper/glm-5.2-fast-preview             The read operation timed out
+[2026-11-19 06:40:32]   FAIL lareper/glm-5.3-prime                    The read operation timed out
+[2026-11-19 06:40:32]   OK   localhost:8081/agent                      27.4s Чистый Воздух
+[2026-11-19 06:40:32]   OK   localhost:8081/auto                        2.8s Чистый Воздух
+[2026-11-19 06:40:32]   OK   localhost:8081/fast                        2.7s Чистый Воздух
+[2026-11-19 06:40:32]   FAIL localhost:8080/zhipu/glm-4.7-flash       HTTP Error 502: Bad Gateway
+[2026-11-19 06:40:32]   FAIL localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct timed out
+[2026-11-19 06:40:32] WINNER ГринДом (localhost:8080/ovh/gpt-oss-120b) -> 20261119-0640-гриндом.html
+[2026-11-19 06:42:32] round 9: asking 14 models

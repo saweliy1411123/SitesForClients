@@ -1,0 +1,26 @@
+{
+ "id": "I-00981",
+ "round": 165,
+ "time": "2026-11-17 09:37:50",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Hero‑scroll‑hint arrow",
+ "knob": "Внутри `<header class=\"hero\">` после `<div class=\"wrap\">` добавить элемент `<div class=\"scroll-hint\" aria-hidden=\"true\"></div>` и в CSS‑файле добавить стили, чтобы стрелка‑иконка плавно мигала и исчезала после первого скролла (использовать `animation` + `position:absolute; bottom:20px; left:50%; transform:translateX(-50%);`).",
+ "skill": "",
+ "effect": "Подсказывает пользователям, что ниже есть контент, повышая глубину просмотра и вероятность перехода к блокам‑призывам.",
+ "risk": "Минимальное увеличение CSS‑объёма; может конфликтовать с уже существующими позиционированиями в hero.",
+ "rollback": "`git checkout -- index.html && git checkout -- index.improved.html` (откатить файл к предыдущей версии).",
+ "verify": "Открыть страницу в браузере, убедиться, что стрелка видна в верхнем экране и исчезает после прокрутки > 100 px; проверить отсутствие смещения остальных элементов.",
+ "priority_claim": "1 – критически влияет на вовлечённость сразу после загрузки.",
+ "source_hint": "",
+ "site_request": "hero",
+ "category": "lever",
+ "variants": [
+  "Внутри `<header class=\"hero\">` после `<div class=\"wrap\">` добавить элемент `<div class=\"scroll-hint\" aria-hidden=\"true\"></div>` и в CSS‑файле добавить стили, чтобы стрелка‑иконка плавно мигала и исчезала после первого скролла (использовать `animation` + `position:absolute; bottom:20px; left:50%; transform:translateX(-50%);`)."
+ ],
+ "flags": []
+}

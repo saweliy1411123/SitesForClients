@@ -1,0 +1,26 @@
+{
+ "id": "I-00310",
+ "round": 46,
+ "time": "2026-11-17 03:52:46",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "В секции «Боль» добавить небольшую иллюстрацию «поисковой выдачи без вашего сайта» с доступным alt‑текстом",
+ "knob": "Перед первым `<h3>` в блоке боли вставить `<svg class=\"search-mock\" aria-hidden=\"true\" width=\"200\" height=\"100\" viewBox=\"0 0 200 100\"><rect width=\"200\" height=\"100\" fill=\"#f0f0f0\"/><text x=\"10\" y=\"55\" fill=\"#999\" font-family=\"Manrope\" font-size=\"14\">Ваш бизнес не найден</text></svg>`; добавить CSS `.search-mock{margin-bottom:16px;}` и `aria-label=\"Пример отсутствия сайта в поисковой выдаче\"` на родительский `<section>`",
+ "skill": "",
+ "effect": "Визуально подкрепляет проблему, повышая эмоциональное восприятие и конверсию",
+ "risk": "Увеличивает размер HTML/CSS, но минимально (SVG инлайн)",
+ "rollback": "Удалить SVG‑блок и связанные стили (git checkout -- index.html)",
+ "verify": "Открыть страницу, увидеть графическое изображение в секции боли, проверить, что скрин‑ридеры игнорируют его (aria‑hidden) и при необходимости читают `aria-label` родительского блока",
+ "priority_claim": "2 – визуальное усиление проблемы, умеренный трудозатрат",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Перед первым `<h3>` в блоке боли вставить `<svg class=\"search-mock\" aria-hidden=\"true\" width=\"200\" height=\"100\" viewBox=\"0 0 200 100\"><rect width=\"200\" height=\"100\" fill=\"#f0f0f0\"/><text x=\"10\" y=\"55\" fill=\"#999\" font-family=\"Manrope\" font-size=\"14\">Ваш бизнес не найден</text></svg>`; добавить CSS `.search-mock{margin-bottom:16px;}` и `aria-label=\"Пример отсутствия сайта в поисковой выдаче\"` на родительский `<section>`"
+ ],
+ "flags": []
+}

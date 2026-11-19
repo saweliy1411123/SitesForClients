@@ -1,0 +1,27 @@
+{
+ "id": "I-00323",
+ "round": 48,
+ "time": "2026-11-17 03:59:12",
+ "source": "lareper/glm-5.2-fast-preview",
+ "sources": [
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.2"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "SKILL — anchor-offset-fix (якоря не прячутся под фиксированной шапкой)",
+ "knob": "Название: anchor-offset-fix. Когда применять: любой одностраничник с фиксированным/sticky-хедером и якорной навигацией (#faq, #price, #steps) — при клике заголовок секции уезжает под шапку. Шаги: (1) Кликнуть по каждой якор",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "Название: anchor-offset-fix. Когда применять: любой одностраничник с фиксированным/sticky-хедером и якорной навигацией (#faq, #price, #steps) — при клике заголовок секции уезжает под шапку. Шаги: (1) Кликнуть по каждой якор"
+ ],
+ "flags": []
+}

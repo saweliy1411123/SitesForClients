@@ -1,0 +1,26 @@
+{
+ "id": "I-00936",
+ "round": 150,
+ "time": "2026-11-17 08:56:19",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Cookie consent banner for compliance",
+ "knob": "В конец `<body>` добавить фиксированный `<div class=\"cookie-banner\">` с текстом «Мы используем cookie для улучшения работы сайта», кнопкой `<button class=\"cookie-accept\">Принять</button>`; подключить небольшой скрипт, сохраняющий `localStorage.cookieAccepted=true` и скрывающий баннер; добавить CSS: `position:fixed;bottom:0;left:0;width:100%;background:var(--bg);padding:12px;text-align:center;z-index:1000;` и стили для кнопки.",
+ "skill": "",
+ "effect": "Повышает юридическую безопасность, повышает доверие пользователей, уменьшает риск отказа от сайта из‑за отсутствия информации о конфиденциальности.",
+ "risk": "Небольшое увеличение объёма страницы и потенциальный дискомфорт, если баннер будет слишком навязчивым.",
+ "rollback": "Удалить блок `<div class=\"cookie-banner\">`, связанный `<script>` и CSS‑правила; `git checkout HEAD -- index.html` (или откатить файл к предыдущей версии).",
+ "verify": "Открыть страницу в режиме инкогнито, убедиться, что баннер появляется; кликнуть «Принять», перезагрузить – баннер исчезает; проверить отсутствие ошибок в консоли.",
+ "priority_claim": "2 – важен для соответствия требованиям, но не критичен для конверсии.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В конец `<body>` добавить фиксированный `<div class=\"cookie-banner\">` с текстом «Мы используем cookie для улучшения работы сайта», кнопкой `<button class=\"cookie-accept\">Принять</button>`; подключить небольшой скрипт, сохраняющий `localStorage.cookieAccepted=true` и скрывающий баннер; добавить CSS: `position:fixed;bottom:0;left:0;width:100%;background:var(--bg);padding:12px;text-align:center;z-index:1000;` и стили для кнопки."
+ ],
+ "flags": []
+}

@@ -1,0 +1,30 @@
+{
+ "id": "I-00167",
+ "round": 25,
+ "time": "2026-11-17 02:53:22",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b",
+  "lareper/glm-5.2"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "ARIA‑label для навигационных ссылок",
+ "knob": "В каждый `<a>` внутри навигации (например, `.nav-links a`) добавить атрибут `aria-label` с описанием пункта (e.g., `<a href=\"#price\" aria-label=\"Перейти к разделу цены\">Цена</a>`).",
+ "skill": "",
+ "effect": "Улучшит доступность для скрин‑ридеров, повышая WCAG‑соответствие.",
+ "risk": "Неправильные описания могут ввести в заблуждение; требуется проверить каждый пункт.",
+ "rollback": "Удалить добавленные `aria-label` атрибуты.",
+ "verify": "В Chrome DevTools → Accessibility, убедиться, что каждый элемент имеет читаемый label; можно использовать axe‑core bookmarklet для быстрой проверки.",
+ "priority_claim": "2 – небольшое изменение, но значимый шаг к доступности.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В каждый `<a>` внутри навигации (например, `.nav-links a`) добавить атрибут `aria-label` с описанием пункта (e.g., `<a href=\"#price\" aria-label=\"Перейти к разделу цены\">Цена</a>`).",
+  "В каждый `<a>` внутри навигации (`.nav-links a`) добавить `aria-label=\"Перейти к разделу <текст ссылки>\"` (пример: `<a href=\"#price\" aria-label=\"Перейти к разделу цены\">Цена</a>`)",
+  "В CSS добавить `.nav a:focus-visible,.btn-primary:focus-visible,a:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:4px}`; в `<nav>` (~L440–445) добавить `aria-label=\"Основная навигация\"`, а ссылкам-якорям без текста (если есть иконочные) — `aria-label`.",
+  "для всех `<a>` с `target=\"_blank\"` добавить после текста `<span class=\"external-icon\" aria-hidden=\"true\">↗</span>` и атрибут `aria-label=\"Открыть в новой вкладке\"`; стилизовать `.external-icon{margin-left:4px;font-size:0.8em;}`"
+ ],
+ "flags": []
+}

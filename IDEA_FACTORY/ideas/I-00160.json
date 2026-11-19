@@ -1,0 +1,29 @@
+{
+ "id": "I-00160",
+ "round": 24,
+ "time": "2026-11-17 02:49:56",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Единый SEO-пакет: FAQPage JSON-L",
+ "knob": "",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  ""
+ ],
+ "flags": [
+  "NO_KNOB"
+ ]
+}

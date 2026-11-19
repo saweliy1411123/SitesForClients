@@ -1,0 +1,26 @@
+{
+ "id": "I-00887",
+ "round": 136,
+ "time": "2026-11-17 08:17:24",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "I-00901 Визуальный бейдж‑ценностного предложения в hero с анимированным fade‑in",
+ "knob": "Внутри `<header class=\"hero\">` сразу после `<h1 class=\"reveal\">` вставить:\n```html\n<div class=\"hero-badge\" aria-label=\"2 дня — сайт — виден в Яндексе\">\n<span>2 дня • сайт • Яндекс</span>\n</div>\n```\nи добавить в CSS (после существующих правил):\n```css\n.hero-badge{\ndisplay:inline-block;\nmargin-top:12px;\npadding:4px 10px;\nbackground:var(--grad);\ncolor:#fff;\nfont-size:clamp(14px,2.5vw,18px);\nfont-weight:600;\nborder-radius:6px;\nopacity:0;\ntransform:translateY(8px);\nanimation:badgeIn .6s forwards ease-out;\n}\n@keyframes badgeIn{\nto{opacity:1;transform:none}\n}\n```",
+ "skill": "",
+ "effect": "Мгновенно привлекает внимание к ключевой выгоде — «2 дня», повышая запоминаемость оффера и CTR по первому CTA.",
+ "risk": "Возможен визуальный конфликт с уже существующим градиентным текстом; требует проверки на разных ширинах.",
+ "rollback": "Удалить только только что добавленный HTML‑блок и CSS‑правила; `git checkout -- index.html` если изменения в отдельной ветке.",
+ "verify": "Включить мобильный режим (375 px) в DevTools, убедиться, что бейдж виден, не перекрывает важный контент, и измерить изменение в Click‑Through Rate через быстрый A/B‑тест (пример: добавить `?variant=badge` в URL и сравнить метрики).",
+ "priority_claim": "2 — сильный визуальный сигнал с низкой стоимостью реализации и быстрым измеримым результатом.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Внутри `<header class=\"hero\">` сразу после `<h1 class=\"reveal\">` вставить:\n```html\n<div class=\"hero-badge\" aria-label=\"2 дня — сайт — виден в Яндексе\">\n<span>2 дня • сайт • Яндекс</span>\n</div>\n```\nи добавить в CSS (после существующих правил):\n```css\n.hero-badge{\ndisplay:inline-block;\nmargin-top:12px;\npadding:4px 10px;\nbackground:var(--grad);\ncolor:#fff;\nfont-size:clamp(14px,2.5vw,18px);\nfont-weight:600;\nborder-radius:6px;\nopacity:0;\ntransform:translateY(8px);\nanimation:badgeIn .6s forwards ease-out;\n}\n@keyframes badgeIn{\nto{opacity:1;transform:none}\n}\n```"
+ ],
+ "flags": []
+}

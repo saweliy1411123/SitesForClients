@@ -1,0 +1,26 @@
+{
+ "id": "I-00651",
+ "round": 98,
+ "time": "2026-11-17 06:29:45",
+ "source": "lareper/glm-5.3-prime",
+ "sources": [
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — stacked-depth-sections (карточки-«стопка» с translateZ при скролле)",
+ "knob": "SKILL — stacked-depth-sections\nName: `stacked-depth-sections`\nWhen to apply: на лендингах, где 3–4 смысловых блока идут подряд (шаги, преимущества) и хочется премиальной «глубины» без библиотек.\nSteps:\n1. Обернуть целевые карточки в контейнер `.stack`.\n2. Вставить SAFE",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "SKILL — stacked-depth-sections\nName: `stacked-depth-sections`\nWhen to apply: на лендингах, где 3–4 смысловых блока идут подряд (шаги, преимущества) и хочется премиальной «глубины» без библиотек.\nSteps:\n1. Обернуть целевые карточки в контейнер `.stack`.\n2. Вставить SAFE"
+ ],
+ "flags": []
+}

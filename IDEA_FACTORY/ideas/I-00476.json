@@ -1,0 +1,26 @@
+{
+ "id": "I-00476",
+ "round": 71,
+ "time": "2026-11-17 05:07:32",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Schema.org LocalBusiness для доверия и локального SEO",
+ "knob": "В конец `<body>` вставить `<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"LocalBusiness\",\"name\":\"Савелий — лендинги для бизнеса в Перми\",\"url\":\"https://saveliy.ru/\",\"logo\":\"https://saveliy.ru/logo.png\",\"telephone\":\"+7XXXXXXXXXX\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Улица, дом\",\"addressLocality\":\"Пермь\",\"postalCode\":\"614000\",\"addressCountry\":\"RU\"},\"openingHours\":\"Mo-Fr 09:00-18:00\",\"sameAs\":[\"https://vk.ru/trainersdontplays\",\"https://t.me/TrainersDontPlays\"]}</script>` (заполнить реальными данными).",
+ "skill": "",
+ "effect": "Укрепляет доверие поисковых систем и пользователей, улучшает локальный поиск в Яндексе и Google.",
+ "risk": "Неправильные данные могут вызвать штрафы; требует согласования с владельцем о точных контактах.",
+ "rollback": "Удалить скрипт из HTML (`git checkout -- index.html`).",
+ "verify": "В Chrome DevTools → Console выполнить `JSON.parse(document.querySelector('script[type=\"application/ld+json\"]').innerText)` и убедиться, что объект корректен; проверить в Rich Results Test.",
+ "priority_claim": "3 — повышает доверие и SEO, но не критично для мгновенной конверсии.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В конец `<body>` вставить `<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"LocalBusiness\",\"name\":\"Савелий — лендинги для бизнеса в Перми\",\"url\":\"https://saveliy.ru/\",\"logo\":\"https://saveliy.ru/logo.png\",\"telephone\":\"+7XXXXXXXXXX\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Улица, дом\",\"addressLocality\":\"Пермь\",\"postalCode\":\"614000\",\"addressCountry\":\"RU\"},\"openingHours\":\"Mo-Fr 09:00-18:00\",\"sameAs\":[\"https://vk.ru/trainersdontplays\",\"https://t.me/TrainersDontPlays\"]}</script>` (заполнить реальными данными)."
+ ],
+ "flags": []
+}

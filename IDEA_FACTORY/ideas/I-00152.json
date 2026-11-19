@@ -1,0 +1,26 @@
+{
+ "id": "I-00152",
+ "round": 23,
+ "time": "2026-11-17 02:47:33",
+ "source": "localhost:8080/zhipu/glm-4.7-flash",
+ "sources": [
+  "localhost:8080/zhipu/glm-4.7-flash"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Voice Search Readability Test",
+ "knob": "Use browser text-to-speech (Ctrl+Shift+V) to read the H1 \"Сайт для вашего бизнеса за 2 дня — клиенты находят вас в Яндексе\" aloud. Check if it sounds like a natural question or a clear statement.",
+ "skill": "none",
+ "effect": "Verifies if the offer is clear for voice queries and natural language processing (SEO).",
+ "risk": "None.",
+ "rollback": "N/A.",
+ "verify": "Does the text flow naturally? Is \"Яндексе\" pronounced correctly? Is the value proposition clear?",
+ "priority_claim": "2 (SEO/Conversion)",
+ "source_hint": "",
+ "site_request": "none",
+ "category": "lever",
+ "variants": [
+  "Use browser text-to-speech (Ctrl+Shift+V) to read the H1 \"Сайт для вашего бизнеса за 2 дня — клиенты находят вас в Яндексе\" aloud. Check if it sounds like a natural question or a clear statement."
+ ],
+ "flags": []
+}

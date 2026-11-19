@@ -1,0 +1,26 @@
+{
+ "id": "I-00868",
+ "round": 130,
+ "time": "2026-11-17 07:59:29",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить атрибут `async` к единственному `<script>`",
+ "knob": "В `<script src=\"...\">` (см. SITE_REQUEST «script») добавить `async defer`.",
+ "skill": "",
+ "effect": "Уменьшит блокировку рендеринга, ускорит First Contentful Paint.",
+ "risk": "Если скрипт зависит от DOM‑элементов, асинхронная загрузка может вызвать ошибки; но большинство простых скриптов безопасны.",
+ "rollback": "Удалить `async defer` из тега.",
+ "verify": "Открыть страницу, открыть Network → убедиться, что скрипт загружается асинхронно, проверить отсутствие JS‑ошибок в консоли.",
+ "priority_claim": "2 — небольшое улучшение скорости без риска.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<script src=\"...\">` (см. SITE_REQUEST «script») добавить `async defer`."
+ ],
+ "flags": []
+}

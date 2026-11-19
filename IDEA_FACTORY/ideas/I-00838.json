@@ -1,0 +1,26 @@
+{
+ "id": "I-00838",
+ "round": 126,
+ "time": "2026-11-17 07:49:42",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "3D‑tilt hero‑section on mouse move",
+ "knob": "METHOD: add a tiny script that listens to `mousemove` on the `.hero` container and sets `style.transform = perspective(1000px) rotateX(${(y/height-0.5)*10}deg) rotateY(${(x/width-0.5)*10}deg)`; add CSS `transition: transform .2s ease-out; will-change: transform;` to `.hero`.",
+ "skill": "",
+ "effect": "создаёт премиальный интерактивный эффект, увеличивает время пребывания и воспринимаемую ценность сайта.",
+ "risk": "небольшое падение FPS на слабых устройствах, возможный дискомфорт у чувствительных к движению пользователей.",
+ "rollback": "удалить добавленный `<script>` и CSS‑правило; `git checkout index.html` откатит изменения.",
+ "verify": "открыть страницу в Chrome, перемещать курсор по hero‑секции, убедиться в плавном наклоне; в DevTools проверить FPS > 30.",
+ "priority_claim": "1 – высокий, потому что влияет на первое впечатление и конверсию.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: add a tiny script that listens to `mousemove` on the `.hero` container and sets `style.transform = perspective(1000px) rotateX(${(y/height-0.5)*10}deg) rotateY(${(x/width-0.5)*10}deg)`; add CSS `transition: transform .2s ease-out; will-change: transform;` to `.hero`."
+ ],
+ "flags": []
+}

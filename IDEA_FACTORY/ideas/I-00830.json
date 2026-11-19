@@ -1,0 +1,26 @@
+{
+ "id": "I-00830",
+ "round": 125,
+ "time": "2026-11-17 07:45:38",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — scroll-reveal-progress-bar",
+ "knob": "\n**Name:** `scroll-reveal-progress-bar`\n**When to apply:** На любом статическом лендинге, где есть секции с информацией.\n**Steps:**\n1. Добавьте контейнер для прогресс-бара над секцией с информацией.\n2. Используйте CSS, чтобы создать анимацию заполнения прогресс-бара при скролле.\nSAFE CSS:\n```css\n.scroll-progress {\nposition: relative;\nheight: 5px;\nbackground: #ccc;\nborder-radius: 5px;\n}\n.scroll-progress .fill {\nposition: absolute;\ntop: 0;\nleft: 0;\nheight: 100%;\nbackground: var(--blue);\nborder-radius: 5px;\nwidth: 0;\ntransition: width 0.5s ease-out;\n}\n```\nSAFE JS:\n```javascript\nconst progressBars = document.querySelectorAll('.scroll-progress .fill');\nwindow.addEventListener('scroll', () => {\nconst scrollPosition = window.scrollY;\nconst maxHeight = document.body.offsetHeight - window.innerHeight;\nconst scrollFraction = scrollPosition / maxHeight;\nprogressBars.forEach((bar) => {\nbar.style.width = `${scrollFraction * 100}%`;\n});\n});\n```",
+ "skill": "frontend",
+ "effect": "Добавление интерактивного прогресс-бара, который заполняется при скролле, повышая вовлеченность пользователя.",
+ "risk": "Требует добавления JavaScript-кода, который может не работать в старых браузерах.",
+ "rollback": "Удалить добавленный код и стили.",
+ "verify": "Проверить, что прогресс-бар заполняется правильно при скролле.",
+ "priority_claim": "2, потому что это улучшает пользовательский опыт и вовлеченность.",
+ "source_hint": "",
+ "site_request": "progress-bar",
+ "category": "skill",
+ "variants": [
+  "\n**Name:** `scroll-reveal-progress-bar`\n**When to apply:** На любом статическом лендинге, где есть секции с информацией.\n**Steps:**\n1. Добавьте контейнер для прогресс-бара над секцией с информацией.\n2. Используйте CSS, чтобы создать анимацию заполнения прогресс-бара при скролле.\nSAFE CSS:\n```css\n.scroll-progress {\nposition: relative;\nheight: 5px;\nbackground: #ccc;\nborder-radius: 5px;\n}\n.scroll-progress .fill {\nposition: absolute;\ntop: 0;\nleft: 0;\nheight: 100%;\nbackground: var(--blue);\nborder-radius: 5px;\nwidth: 0;\ntransition: width 0.5s ease-out;\n}\n```\nSAFE JS:\n```javascript\nconst progressBars = document.querySelectorAll('.scroll-progress .fill');\nwindow.addEventListener('scroll', () => {\nconst scrollPosition = window.scrollY;\nconst maxHeight = document.body.offsetHeight - window.innerHeight;\nconst scrollFraction = scrollPosition / maxHeight;\nprogressBars.forEach((bar) => {\nbar.style.width = `${scrollFraction * 100}%`;\n});\n});\n```"
+ ],
+ "flags": []
+}

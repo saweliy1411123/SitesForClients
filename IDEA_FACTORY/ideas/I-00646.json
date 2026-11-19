@@ -1,0 +1,26 @@
+{
+ "id": "I-00646",
+ "round": 98,
+ "time": "2026-11-17 06:27:59",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — premium‑typography‑shadow",
+ "knob": "**NAME:** premium-typography-shadow\n**WHEN TO APPLY:** На любом статическом лендинге, где нужен премиальный визуальный акцент заголовков (h1‑h3).\n**STEPS:**\n1. Добавить в `<head>` блок `<style id=\"skill-premium-typography\">` (или отдельный файл).\n2. Применить к заголовкам класс `typography‑premium`.\n3. При желании включить переключатель «dark‑mode»‑совместимости через CSS‑переменные.\n**SAFE CSS:**\n```css\n.typography-premium {\nfont-weight: 700;\nletter-spacing: -0.02em;\ntext-shadow: 0 2px 4px rgba(0,0,0,0.15), 0 0 12px rgba(255,255,255,0.12);\nbackground: linear-gradient(135deg, #8b5cf6 0%, #5a67d8 100%);\n-webkit-background-clip: text;\n-webkit-text-fill-color: transparent;\n}\n@media (prefers-color-scheme: dark) {\n.typography-premium {\ntext-shadow: 0 2px 4px rgba(0,0,0,0.45), 0 0 12px rgba(255,255,255,0.08);\n}\n}\n```\n**SAFE JS:** *(не требуется)*",
+ "skill": "premium-typography-shadow",
+ "effect": "Повышает восприятие бренда как премиального, улучшает визуальный фокус на ключевых сообщениях → рост CTR на CTA‑кнопки.",
+ "risk": "На очень старых браузерах (IE 11) градиент‑текст может отобразиться без эффекта, но дизайн сохранится.",
+ "rollback": "`git checkout HEAD -- index.improved.html && rm -f index.improved.html` (или удалить `<style id=\"skill-premium-typography\">`).",
+ "verify": "Открыть страницу в Chrome, убедиться, что h1/h2/h3 теперь имеют градиентный текст и лёгкую тень; сравнить скриншот до/после.",
+ "priority_claim": "1 – самое заметное визуальное улучшение, быстро реализуется, сразу влияет на восприятие.",
+ "source_hint": "",
+ "site_request": "hero",
+ "category": "skill",
+ "variants": [
+  "**NAME:** premium-typography-shadow\n**WHEN TO APPLY:** На любом статическом лендинге, где нужен премиальный визуальный акцент заголовков (h1‑h3).\n**STEPS:**\n1. Добавить в `<head>` блок `<style id=\"skill-premium-typography\">` (или отдельный файл).\n2. Применить к заголовкам класс `typography‑premium`.\n3. При желании включить переключатель «dark‑mode»‑совместимости через CSS‑переменные.\n**SAFE CSS:**\n```css\n.typography-premium {\nfont-weight: 700;\nletter-spacing: -0.02em;\ntext-shadow: 0 2px 4px rgba(0,0,0,0.15), 0 0 12px rgba(255,255,255,0.12);\nbackground: linear-gradient(135deg, #8b5cf6 0%, #5a67d8 100%);\n-webkit-background-clip: text;\n-webkit-text-fill-color: transparent;\n}\n@media (prefers-color-scheme: dark) {\n.typography-premium {\ntext-shadow: 0 2px 4px rgba(0,0,0,0.45), 0 0 12px rgba(255,255,255,0.08);\n}\n}\n```\n**SAFE JS:** *(не требуется)*"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00700",
+ "round": 108,
+ "time": "2026-11-17 06:57:56",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Критика I-00601‑I-00609 – переизбыток декоративных скиллов без измеримой ценности",
+ "knob": "Сократить список скиллов до тех, которые напрямую влияют на Core‑Metrics (LCP, CLS, CTR). Оставить только проверенные (например, `content‑visibility‑auto`, `link-underline-reveal`).",
+ "skill": "",
+ "effect": "Снизит технический долг, ускорит загрузку и упростит поддержку.",
+ "risk": "Уменьшится визуальная «фишка», что может повлиять на восприятие премиальности.",
+ "rollback": "Восстановить удалённые файлы из `IDEA_FACTORY/` через `git checkout`.",
+ "verify": "Запустить Lighthouse, убедиться, что метрики не ухудшились, а количество CSS‑правил уменьшилось.",
+ "priority_claim": "2 – баланс между эстетикой и производительностью.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Сократить список скиллов до тех, которые напрямую влияют на Core‑Metrics (LCP, CLS, CTR). Оставить только проверенные (например, `content‑visibility‑auto`, `link-underline-reveal`)."
+ ],
+ "flags": []
+}

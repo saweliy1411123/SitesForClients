@@ -1,0 +1,26 @@
+{
+ "id": "I-00408",
+ "round": 60,
+ "time": "2026-11-17 04:35:26",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить `aria-hidden=\"true\"` к декоративным SVG‑элементам (particles, blobs)",
+ "knob": "Во все `<svg>`/`<div id=\"particles\">` и элементы с классом `blob`, `veil` добавить `aria-hidden=\"true\"`",
+ "skill": "",
+ "effect": "Уменьшит «шум» для скрин‑ридеров, улучшит доступность без визуального изменения",
+ "risk": "Никакого визуального влияния, только риск пропустить какой‑то интерактивный SVG (проверить)",
+ "rollback": "Удалить атрибуты (`git checkout -- index.html`)",
+ "verify": "В DevTools → Accessibility проверить, что элементы помечены как «Ignored»; использовать экранный ридер (NVDA/VoiceOver) и убедиться, что они не озвучиваются",
+ "priority_claim": "3 – небольшое улучшение a11y, низкая сложность",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Во все `<svg>`/`<div id=\"particles\">` и элементы с классом `blob`, `veil` добавить `aria-hidden=\"true\"`"
+ ],
+ "flags": []
+}

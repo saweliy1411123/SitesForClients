@@ -1,0 +1,37 @@
+{
+ "id": "I-00362",
+ "round": 54,
+ "time": "2026-11-17 04:16:58",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b",
+  "lareper/glm-5.2-fast-preview"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Добавить канонический URL",
+ "knob": "В `<head>` вставить `<link rel=\"canonical\" href=\"https://saveliy.ru/\">` (заменить на реальный домен)",
+ "skill": "",
+ "effect": "Предотвращает возможные дубли страниц в индексации, повышает SEO‑вес оригинальной страницы",
+ "risk": "Неправильный URL‑каноник может «отклонить» страницу из индекса",
+ "rollback": "`git checkout -- index.html` (или удалить только добавленную строку)",
+ "verify": "Открыть страницу в Chrome → DevTools → Elements, убедиться, что в `<head>` есть `<link rel=\"canonical\">` с нужным href; проверить в Search Console → Coverage, что статус “Valid”",
+ "priority_claim": "1 – канонический тег критичен для SEO и не требует ресурсов",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<head>` вставить `<link rel=\"canonical\" href=\"https://saveliy.ru/\">` (заменить на реальный домен)",
+  "METHOD: (1) В копии index.improved.html добавить в конец `<style>`: `html[data-hyp=\"b\"] .hero-note{display:none} html[data-hyp=\"b\"] .cta-row .btn-secondary{display:none}` (селекторы под конкретную гипотезу). (2) В существующий `<script>` добавить 2 строки: `document.documentElement.dataset.hyp=new URLSearchParams(location.search).get('h')||'a'`. (3) Открыть `index.improved.html?h=a` и `?h=b` в двух вкладках рядом, сравнить поведение/вид. (4) Зафиксировать вывод в комментарии `<!-- HYP: b выигрывает по ... -->`.",
+  "В `<head>` вставить `<link rel=\"canonical\" href=\"https://saveliy.ru/\">` сразу после существующих `<meta>`‑тегов.",
+  "В `<head>` добавить `<link rel=\"canonical\" href=\"https://example.com/\">` (заменить `example.com` на реальный домен).",
+  "В `<head>` добавить\n```html\n<link rel=\"canonical\" href=\"https://example.com/\">\n```\n(заменить `example.com` на реальный домен).",
+  "В `<head>` вставить `<link rel=\"canonical\" href=\"https://example.com/\">` (заменить `example.com` на текущий домен)",
+  "В `<head>` вставить\n```html\n<link rel=\"canonical\" href=\"https://saveliy-perm.ru/\">\n```",
+  "В `<head>` сразу после `<title>` вставить `<link rel=\"canonical\" href=\"https://saveliy-perm.ru/\">` (заменить на реальный домен)",
+  "В `<head>` после существующих `<meta>` добавить\n```html\n<link rel=\"canonical\" href=\"https://saveliy-perm.ru/\">\n```\n(заменить URL на реальный домен).",
+  "В `<head>` вставить `<link rel=\"canonical\" href=\"https://example.com/\">` (заменить example.com на реальный домен)",
+  "В `<head>` вставить `<link rel=\"canonical\" href=\"https://example.com/\">` (заменить example.com на реальный домен)."
+ ],
+ "flags": []
+}

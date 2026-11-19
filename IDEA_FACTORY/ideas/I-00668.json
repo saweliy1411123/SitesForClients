@@ -1,0 +1,26 @@
+{
+ "id": "I-00668",
+ "round": 102,
+ "time": "2026-11-17 06:41:01",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "DEMO‑SCROLL‑SNAP‑CAROUSEL",
+ "knob": "В секции демо‑концептов (около L589) обернуть текущие концепты в `<div class=\"demo-carousel\" role=\"region\" aria-label=\"Демо‑концепты\">`; добавить CSS `display:flex; overflow-x:auto; scroll-snap-type:x mandatory;` и каждому элементу класс `demo-card` с `scroll-snap-align:center; min-width:80%; margin-right:1rem;`. Добавить небольшую подсказку‑стрелку в виде `::after` для индикации прокрутки.",
+ "skill": "",
+ "effect": "Интерактивный просмотр демо‑концептов без JavaScript, повышает вовлечённость и удержание внимания.",
+ "risk": "На старых браузерах (IE) scroll‑snap не поддерживается – будет обычный скролл.",
+ "rollback": "`git checkout HEAD -- index.html`.",
+ "verify": "Открыть страницу, попытаться прокрутить секцию демо мышью/тапом – карточки «прилипают» к центру, проверка в DevTools → Styles.",
+ "priority_claim": "1 – значительный UX‑бонус при минимальном коде, легко измеряется через скролл‑тест.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В секции демо‑концептов (около L589) обернуть текущие концепты в `<div class=\"demo-carousel\" role=\"region\" aria-label=\"Демо‑концепты\">`; добавить CSS `display:flex; overflow-x:auto; scroll-snap-type:x mandatory;` и каждому элементу класс `demo-card` с `scroll-snap-align:center; min-width:80%; margin-right:1rem;`. Добавить небольшую подсказку‑стрелку в виде `::after` для индикации прокрутки."
+ ],
+ "flags": []
+}

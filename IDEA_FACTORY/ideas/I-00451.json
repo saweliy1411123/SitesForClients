@@ -1,0 +1,26 @@
+{
+ "id": "I-00451",
+ "round": 67,
+ "time": "2026-11-17 04:56:40",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Финальный CTA — кнопка «Скопировать ссылку на Telegram» с toast‑уведомлением",
+ "knob": "В блоке `.final .btn-primary` добавить рядом кнопку `<button class=\"copy-cta\" type=\"button\" data-link=\"https://t.me/TrainersDontPlays\">Копировать ссылку</button>`; CSS `.copy-cta{margin-left:0.5rem;background:transparent;color:var(--blue);border:none;cursor:pointer}`; JS `document.querySelectorAll('.copy-cta').forEach(btn=>{btn.addEventListener('click',()=>{navigator.clipboard.writeText(btn.dataset.link).then(()=>{showToast('Ссылка скопирована')});});});function showToast(msg){const el=document.createElement('div');el.className='toast';el.textContent=msg;document.body.appendChild(el);setTimeout(()=>el.remove(),2000);}`; CSS `.toast{position:fixed;bottom:1rem;right:1rem;background:#333;color:#fff;padding:0.5rem 1rem;border-radius:0.3rem;z-index:1000}`",
+ "skill": "",
+ "effect": "упрощает действие для пользователей, повышает вероятность перехода в мессенджер → рост конверсии ≈ 4 %",
+ "risk": "требует доступа к Clipboard API (не работает в старых браузерах); возможные ограничения в iOS Safari без пользовательского взаимодействия (но клик считается)",
+ "rollback": "удалить кнопку и скрипт, оставить оригинальный CTA",
+ "verify": "кликнуть кнопку, убедиться, что в буфер попала ссылка (Ctrl+V в любой текстовый редактор), увидеть toast; проверить в разных браузерах (Chrome, Safari)",
+ "priority_claim": "1 – небольшое изменение, высокая вероятность улучшения конверсии, легко откатывается.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В блоке `.final .btn-primary` добавить рядом кнопку `<button class=\"copy-cta\" type=\"button\" data-link=\"https://t.me/TrainersDontPlays\">Копировать ссылку</button>`; CSS `.copy-cta{margin-left:0.5rem;background:transparent;color:var(--blue);border:none;cursor:pointer}`; JS `document.querySelectorAll('.copy-cta').forEach(btn=>{btn.addEventListener('click',()=>{navigator.clipboard.writeText(btn.dataset.link).then(()=>{showToast('Ссылка скопирована')});});});function showToast(msg){const el=document.createElement('div');el.className='toast';el.textContent=msg;document.body.appendChild(el);setTimeout(()=>el.remove(),2000);}`; CSS `.toast{position:fixed;bottom:1rem;right:1rem;background:#333;color:#fff;padding:0.5rem 1rem;border-radius:0.3rem;z-index:1000}`"
+ ],
+ "flags": []
+}

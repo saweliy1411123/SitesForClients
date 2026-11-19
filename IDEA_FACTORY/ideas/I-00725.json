@@ -1,0 +1,26 @@
+{
+ "id": "I-00725",
+ "round": 112,
+ "time": "2026-11-17 07:09:09",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "METHOD — hero‑copy‑variant‑test (A/B‑тест без деплоя)",
+ "knob": "В конец `<body>` добавить небольшую скриптовую строку, которая читает параметр `?copy=alt` и, если он присутствует, заменяет текст внутри `<h1 class=\"hero-title\">` на альтернативный вариант. Пример:\n```js\n/* SAFE JS */\n(() => {\nconst url = new URL(location);\nif (url.searchParams.get('copy') === 'alt') {\nconst h1 = document.querySelector('h1');\nif (h1) h1.textContent = 'Сайт за 2 дня — клиенты уже ищут вас в Яндексе';\n}\n})();\n```",
+ "skill": "",
+ "effect": "Позволяет быстро запускать A/B‑тесты разных копий заголовка, сравнивая метрики (CTR, время на странице) без необходимости менять репозиторий.",
+ "risk": "Требует согласования с владельцем, чтобы не вводить пользователей в заблуждение; скрипт должен быть небольшим, чтобы не влиять на LCP.",
+ "rollback": "Удалить добавленный `<script>`‑блок (или `git checkout -- index.html`).",
+ "verify": "Открыть `index.html?copy=alt` и убедиться, что заголовок изменён; открыть без параметра – оригинал остаётся.",
+ "priority_claim": "3 – полезно для оптимизации конверсии, но менее визуально значимо, чем стилистические улучшения.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В конец `<body>` добавить небольшую скриптовую строку, которая читает параметр `?copy=alt` и, если он присутствует, заменяет текст внутри `<h1 class=\"hero-title\">` на альтернативный вариант. Пример:\n```js\n/* SAFE JS */\n(() => {\nconst url = new URL(location);\nif (url.searchParams.get('copy') === 'alt') {\nconst h1 = document.querySelector('h1');\nif (h1) h1.textContent = 'Сайт за 2 дня — клиенты уже ищут вас в Яндексе';\n}\n})();\n```"
+ ],
+ "flags": []
+}

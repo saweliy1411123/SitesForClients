@@ -1,0 +1,26 @@
+{
+ "id": "I-00121",
+ "round": 18,
+ "time": "2026-11-17 02:32:20",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Демо — ленивый видео‑демо с постером",
+ "knob": "В секцию «Демо‑концепты» после каждого блока добавить `<video class=\"demo-video\" preload=\"none\" poster=\"assets/demo-poster.jpg\" controls><source src=\"assets/demo.mp4\" type=\"video/mp4\"></video>` и CSS `video{max-width:100%;height:auto;}`.",
+ "skill": "",
+ "effect": "Позволяет пользователю увидеть реальный результат работы без долгой загрузки, повышает доверие к качеству.",
+ "risk": "Требует наличия видео‑файла; если файл недоступен, блок будет пустой.",
+ "rollback": "Удалить `<video>`‑теги и связанные стили.",
+ "verify": "Открыть страницу, убедиться, что видео не загружается до клика (проверка Network), а после нажатия воспроизводится.",
+ "priority_claim": "2 — визуальный доказательство, но добавляет вес страницы; использовать `preload=\"none\"` уменьшит влияние.",
+ "source_hint": "",
+ "site_request": "демо",
+ "category": "lever",
+ "variants": [
+  "В секцию «Демо‑концепты» после каждого блока добавить `<video class=\"demo-video\" preload=\"none\" poster=\"assets/demo-poster.jpg\" controls><source src=\"assets/demo.mp4\" type=\"video/mp4\"></video>` и CSS `video{max-width:100%;height:auto;}`."
+ ],
+ "flags": []
+}

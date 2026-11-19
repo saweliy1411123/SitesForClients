@@ -1,0 +1,29 @@
+{
+ "id": "I-00103",
+ "round": 15,
+ "time": "2026-11-17 02:24:00",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime",
+  "lareper/glm-5.2-fast-preview"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "FAQ — добавить в ответы микро-CTA со ссылкой на Telegram",
+ "knob": "В секции FAQ (~L660–690) внутрь 2–3 самых «горячих» ответов (например, «Подвоха нет…» L675 и ответ про запись L671) после текста `<p>` добавить: `<p class=\"faq-cta\">Остались вопросы — <a href=\"https://t.me/TrainersDontPlays\" target=\"_blank\" rel=\"noopener noreferrer\">напишите в Telegram</a>, отвечу лично.</p>` + CSS `.faq-cta a{text-decoration:underline}`.",
+ "skill": "",
+ "effect": "Читатель, у которого FAQ снял часть возражений, получает следующий шаг прямо в момент сомнения — меньше «прочитал и ушёл», больше переходов в личку.",
+ "risk": "Слишком частые CTA в FAQ могут выглядеть навязчиво — ограничить 2–3 пунктами.",
+ "rollback": "git checkout -- index.html (или удалить добавленные строки .faq-cta).",
+ "verify": "Открыть копию файла, кликнуть по ссылке из FAQ — ведёт в Telegram; проверить на 375px, что строка не ломает вёрстку карточки ответа.",
+ "priority_claim": "2 — дёшево, усиливает конверсию в тёплой точке, но эффект вторичен по отношению к hero-CTA.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В секции FAQ (~L660–690) внутрь 2–3 самых «горячих» ответов (например, «Подвоха нет…» L675 и ответ про запись L671) после текста `<p>` добавить: `<p class=\"faq-cta\">Остались вопросы — <a href=\"https://t.me/TrainersDontPlays\" target=\"_blank\" rel=\"noopener noreferrer\">напишите в Telegram</a>, отвечу лично.</p>` + CSS `.faq-cta a{text-decoration:underline}`."
+ ],
+ "flags": []
+}

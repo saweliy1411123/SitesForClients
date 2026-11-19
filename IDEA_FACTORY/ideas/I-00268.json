@@ -1,0 +1,26 @@
+{
+ "id": "I-00268",
+ "round": 40,
+ "time": "2026-11-17 03:35:35",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить `rel=\"noopener noreferrer\"` к внешним ссылкам (Telegram)",
+ "knob": "В `<a class=\"btn-primary magnetic\" href=\"#contact\">` и в любой другой внешней ссылке (например, `href=\"https://t.me/...\"`) добавить `rel=\"noopener noreferrer\"`",
+ "skill": "",
+ "effect": "Повышает безопасность (защита от reverse tabnabbing) и небольшое улучшение SEO за счёт чистых атрибутов",
+ "risk": "Никакого",
+ "rollback": "Удалить атрибут `rel`",
+ "verify": "В DevTools → Elements проверить наличие атрибута; в консоли `document.querySelectorAll('a[rel=\"noopener noreferrer\"]').length` > 0",
+ "priority_claim": "3 – небольшая правка, но хорошая практика",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<a class=\"btn-primary magnetic\" href=\"#contact\">` и в любой другой внешней ссылке (например, `href=\"https://t.me/...\"`) добавить `rel=\"noopener noreferrer\"`"
+ ],
+ "flags": []
+}

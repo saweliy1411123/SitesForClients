@@ -1,0 +1,26 @@
+{
+ "id": "I-00585",
+ "round": 88,
+ "time": "2026-11-17 05:58:38",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "I-00604 Пронумеровать шаги в секции «Три шага» с помощью CSS‑счётчика",
+ "knob": "В CSS добавить\n```css\n.steps {counter-reset: step;}\n.steps h3::before{\ncounter-increment: step;\ncontent: counter(step) \". \";\nfont-weight:700;\nmargin-right:.4rem;\n}\n```\nи в HTML убедиться, что шаги находятся внутри контейнера с классом `.steps`.",
+ "skill": "",
+ "effect": "Чёткая нумерация повышает сканируемость и запоминаемость процесса.",
+ "risk": "Возможен конфликт с уже существующими стилями `h3`; потребуется небольшая корректировка.",
+ "rollback": "Удалить добавленные правила CSS.",
+ "verify": "В браузере проверить, что перед каждым заголовком шага появляется цифра 1‑3.",
+ "priority_claim": "3 – небольшой визуальный апгрейд, низкая сложность.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В CSS добавить\n```css\n.steps {counter-reset: step;}\n.steps h3::before{\ncounter-increment: step;\ncontent: counter(step) \". \";\nfont-weight:700;\nmargin-right:.4rem;\n}\n```\nи в HTML убедиться, что шаги находятся внутри контейнера с классом `.steps`."
+ ],
+ "flags": []
+}

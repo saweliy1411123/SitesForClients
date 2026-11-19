@@ -1,0 +1,26 @@
+{
+ "id": "I-00629",
+ "round": 95,
+ "time": "2026-11-17 06:19:21",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Scroll‑progress‑indicator — полоска‑прогресса в верхней части страницы, показывающая, сколько контента уже просмотрено",
+ "knob": "добавить в `<body>` сразу после `<header>` элемент `<div class=\"scroll‑progress\"><div class=\"scroll‑track\"></div></div>`; в CSS:\n```css\n/* SAFE CSS */\n.scroll-progress{position:fixed;top:0;left:0;width:100%;height:4px;background:rgba(0,0,0,0.1);z-index:9999}\n.scroll-track{height:100%;width:0;background:var(--blue);transition:width .2s ease}\n```\nи в `<script>` внизу добавить:\n```js\ndocument.addEventListener('scroll',()=>{const d=document.documentElement;const scrolled=(d.scrollTop||body.scrollTop)/(d.scrollHeight-d.clientHeight)*100;document.querySelector('.scroll-track').style.width=`${scrolled}%`;});\n```",
+ "skill": "",
+ "effect": "визуальный индикатор вовлечённости, повышает восприятие «прогресса» и мотивирует к дальнейшему скроллингу, улучшает UX на длинных страницах.",
+ "risk": "небольшая нагрузка на JS при каждом скролле (но микросекундная).",
+ "rollback": "удалить добавленные HTML‑/CSS‑/JS‑блоки или `git checkout -- index.html`.",
+ "verify": "открыть страницу, прокручивать вниз — полоска должна заполняться; в Console проверить отсутствие ошибок.",
+ "priority_claim": "2 — модернизирует UX, но не критично для конверсии.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "добавить в `<body>` сразу после `<header>` элемент `<div class=\"scroll‑progress\"><div class=\"scroll‑track\"></div></div>`; в CSS:\n```css\n/* SAFE CSS */\n.scroll-progress{position:fixed;top:0;left:0;width:100%;height:4px;background:rgba(0,0,0,0.1);z-index:9999}\n.scroll-track{height:100%;width:0;background:var(--blue);transition:width .2s ease}\n```\nи в `<script>` внизу добавить:\n```js\ndocument.addEventListener('scroll',()=>{const d=document.documentElement;const scrolled=(d.scrollTop||body.scrollTop)/(d.scrollHeight-d.clientHeight)*100;document.querySelector('.scroll-track').style.width=`${scrolled}%`;});\n```"
+ ],
+ "flags": []
+}

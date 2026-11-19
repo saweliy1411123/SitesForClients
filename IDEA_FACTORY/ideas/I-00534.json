@@ -1,0 +1,26 @@
+{
+ "id": "I-00534",
+ "round": 80,
+ "time": "2026-11-17 05:33:21",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавление якоря «Цена» в навигации",
+ "knob": "Добавить в `<nav>` якорь «Цена»",
+ "skill": "",
+ "effect": "Упрощение навигации и прямой доступ к главному вопросу",
+ "risk": "Риск загромождения навигации",
+ "rollback": "git checkout HEAD~1",
+ "verify": "Проверка навигации на наличие якоря «Цена»",
+ "priority_claim": "3",
+ "source_hint": "",
+ "site_request": "цена",
+ "category": "lever",
+ "variants": [
+  "Добавить в `<nav>` якорь «Цена»"
+ ],
+ "flags": []
+}

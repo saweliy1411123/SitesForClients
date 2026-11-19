@@ -1,0 +1,26 @@
+{
+ "id": "I-00953",
+ "round": 157,
+ "time": "2026-11-17 09:15:47",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Вставить в секцию цены блок «Что включено / Что исключено» с двумя колонками",
+ "knob": "Внутри `.price-card` (L644+) добавить после `<ul>`:\n```html\n<div class=\"price-details\">\n<div class=\"included\">Что включено</div>\n<div class=\"excluded\">Что исключено</div>\n</div>\n```",
+ "skill": "",
+ "effect": "Улучшение читаемости и понимания цены",
+ "risk": "Риск загромождения секции ценой",
+ "rollback": "Удалить добавленный код",
+ "verify": "Проверить наличие и читаемость добавленной информации",
+ "priority_claim": "3",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Внутри `.price-card` (L644+) добавить после `<ul>`:\n```html\n<div class=\"price-details\">\n<div class=\"included\">Что включено</div>\n<div class=\"excluded\">Что исключено</div>\n</div>\n```"
+ ],
+ "flags": []
+}

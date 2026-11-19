@@ -1,0 +1,29 @@
+{
+ "id": "I-00635",
+ "round": 96,
+ "time": "2026-11-17 06:21:58",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "Сокращение веса Manrope — оставить только используемые веса",
+ "knob": "В URL Google Fonts (L~13) `wght@400;500;600;700` — проверить в DevTools → Elements computed styles, какие веса реально используются; если 500 не встречается, убрать его из запроса: `wght@400;600;700`.",
+ "skill": "",
+ "effect": "Меньше байт шрифтового CSS и woff2 — быстрее LCP на мобильных (шрифт — главный render-blocking ресурс).",
+ "risk": "Если вес всё же используется где-то, браузер подставит синтетический — изменится начертание.",
+ "rollback": "`git checkout index.html`",
+ "verify": "В консоли: `['400','500','600','700'].map(w=>[w,!![...document.querySelectorAll('*')].find(e=>getComputedStyle(e).fontWeight===w)])` — вычеркнуть только неиспользуемые.",
+ "priority_claim": "2 — микрооптимизация, но бесплатная и безопасная при проверке.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В URL Google Fonts (L~13) `wght@400;500;600;700` — проверить в DevTools → Elements computed styles, какие веса реально используются; если 500 не встречается, убрать его из запроса: `wght@400;600;700`."
+ ],
+ "flags": []
+}

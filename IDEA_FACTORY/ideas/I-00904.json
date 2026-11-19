@@ -1,0 +1,26 @@
+{
+ "id": "I-00904",
+ "round": 142,
+ "time": "2026-11-17 08:33:33",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Cursor‑Heatmap Proxy for Visual Attention",
+ "knob": "METHOD: Inject a short script in the console that records mousemove coordinates for 30 s, aggregates them, and draws a semi‑transparent heat‑map overlay using a canvas. Example:\n```js\n(() => {\nconst pts=[];\nconst onMove=e=>pts.push([e.clientX,e.clientY]);\ndocument.addEventListener('mousemove',onMove);\nsetTimeout(()=>{\ndocument.removeEventListener('mousemove',onMove);\nconst c=document.createElement('canvas');\nc.style.position='fixed';c.style.top=0;c.style.left=0;c.style.pointerEvents='none';\nc.width=window.innerWidth;c.height=window.innerHeight;\ndocument.body.appendChild(c);\nconst ctx=c.getContext('2d');\npts.forEach(p=>{ctx.fillStyle='rgba(255,0,0,0.03)';ctx.fillRect(p[0],p[1],20,20);});\n},30000);\n})();\n```",
+ "skill": "",
+ "effect": "Gives an immediate, low‑fidelity visual map of where users move the cursor, approximating attention hotspots to guide layout tweaks.",
+ "risk": "Cursor movement is not a perfect proxy for gaze; on touch‑only devices it yields no data.",
+ "rollback": "Refresh the page to clear the injected script and remove the canvas overlay.",
+ "verify": "After 30 s a translucent red overlay appears; dense red zones indicate frequent cursor activity.",
+ "priority_claim": "3 – useful for UX insight but less critical than SEO or CTA copy.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: Inject a short script in the console that records mousemove coordinates for 30 s, aggregates them, and draws a semi‑transparent heat‑map overlay using a canvas. Example:\n```js\n(() => {\nconst pts=[];\nconst onMove=e=>pts.push([e.clientX,e.clientY]);\ndocument.addEventListener('mousemove',onMove);\nsetTimeout(()=>{\ndocument.removeEventListener('mousemove',onMove);\nconst c=document.createElement('canvas');\nc.style.position='fixed';c.style.top=0;c.style.left=0;c.style.pointerEvents='none';\nc.width=window.innerWidth;c.height=window.innerHeight;\ndocument.body.appendChild(c);\nconst ctx=c.getContext('2d');\npts.forEach(p=>{ctx.fillStyle='rgba(255,0,0,0.03)';ctx.fillRect(p[0],p[1],20,20);});\n},30000);\n})();\n```"
+ ],
+ "flags": []
+}

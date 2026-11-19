@@ -1,0 +1,26 @@
+{
+ "id": "I-00810",
+ "round": 122,
+ "time": "2026-11-17 07:37:50",
+ "source": "localhost:8080/zhipu/glm-4.7-flash",
+ "sources": [
+  "localhost:8080/zhipu/glm-4.7-flash"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Dynamic FAQ Schema.org (FAQPage)",
+ "knob": "Replace generic \"Add JSON-LD\" with a specific FAQPage schema. Insert `<script type=\"application/ld+json\">` in `<head>` that parses questions from the FAQ section (L664+) and answers from the DOM.",
+ "skill": "",
+ "effect": "Enables Google FAQ rich snippets, potentially increasing CTR by 20-30% in SERP.",
+ "risk": "Schema must match content exactly; mismatched answers get rejected.",
+ "rollback": "Delete the `<script type=\"application/ld+json\">` block.",
+ "verify": "Run URL through Google Rich Results Test.",
+ "priority_claim": "1 (High impact SEO).",
+ "source_hint": "",
+ "site_request": "faq",
+ "category": "lever",
+ "variants": [
+  "Replace generic \"Add JSON-LD\" with a specific FAQPage schema. Insert `<script type=\"application/ld+json\">` in `<head>` that parses questions from the FAQ section (L664+) and answers from the DOM."
+ ],
+ "flags": []
+}

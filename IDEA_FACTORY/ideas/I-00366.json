@@ -1,0 +1,27 @@
+{
+ "id": "I-00366",
+ "round": 54,
+ "time": "2026-11-17 04:18:48",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3",
+  "lareper/glm-5.2"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "aria-hidden для декоративных слоёв (particles, blob, veil)",
+ "knob": "Элементам `#particles` (L103), фоновым blob-слоям (L58, L195, L204, L284, L332) и `.hero-veil`/`.final-veil` добавить атрибут `aria-hidden=\"true\"` (и `role=\"presentation\"`, если это div с контентом-псевдографикой). Скринридеры сейчас могут объявлять пустые/декоративные блоки как «регионы» и замедлять чтение.",
+ "skill": "",
+ "effect": "Чистая линейная навигация для скринридера — пользователь сразу попадает на h1 и оффер; плюс к Lighthouse Accessibility.",
+ "risk": "Если случайно пометить aria-hidden блок с реальным текстом — он исчезнет из дерева доступности.",
+ "rollback": "`git checkout -- index.html` (правки вносить в index.improved.html).",
+ "verify": "DevTools → Elements → Accessibility tree: до/после — декоративные узлы не должны появляться; 2 минуты.",
+ "priority_claim": "2 — дёшево, заметный a11y-выигрыш, не задето в куче (I-00255 касался только svg в боли).",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Элементам `#particles` (L103), фоновым blob-слоям (L58, L195, L204, L284, L332) и `.hero-veil`/`.final-veil` добавить атрибут `aria-hidden=\"true\"` (и `role=\"presentation\"`, если это div с контентом-псевдографикой). Скринридеры сейчас могут объявлять пустые/декоративные блоки как «регионы» и замедлять чтение."
+ ],
+ "flags": []
+}

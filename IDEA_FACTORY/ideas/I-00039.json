@@ -1,0 +1,29 @@
+{
+ "id": "I-00039",
+ "round": 5,
+ "time": "2026-11-17 01:53:03",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+  "localhost:8081/big_only"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Улучшение доступности ссылок",
+ "knob": "Добавить атрибут `aria-label` к ссылкам, не имеющим описательного текста",
+ "skill": "",
+ "effect": "Повышение доступности сайта для пользователей с ограниченными возможностями",
+ "risk": "Нет",
+ "rollback": "Удалить добавленные атрибуты `aria-label`",
+ "verify": "Проверить с помощью инструмента доступности, например, Lighthouse",
+ "priority_claim": "2",
+ "source_hint": "",
+ "site_request": "aria-label",
+ "category": "lever",
+ "variants": [
+  "Добавить атрибут `aria-label` к ссылкам, не имеющим описательного текста",
+  "добавить атрибут `aria-label` к ссылкам, не имеющим описательного текста",
+  "Добавление атрибута aria-label к навигационным ссылкам"
+ ],
+ "flags": []
+}

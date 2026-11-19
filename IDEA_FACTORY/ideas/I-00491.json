@@ -1,0 +1,26 @@
+{
+ "id": "I-00491",
+ "round": 73,
+ "time": "2026-11-17 05:14:12",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "I-00501 [Заменить hero‑CTA‑ссылку на кнопку + toast‑уведомление]",
+ "knob": "В `.hero` заменить `<a class=\"btn-primary\" href=\"#contact\">Получить демо</a>` на `<button type=\"button\" class=\"btn-primary\" id=\"hero-cta\">Получить демо</button>`. Добавить небольшую JS‑поточку (inline `<script>` в `<body>` или отдельный `main.js` с `defer`) : при `click` скроллить к `#contact` (`element.scrollIntoView({behavior:'smooth'});`) и показать скрытый `<div class=\"toast hidden\" role=\"status\" aria-live=\"polite\">Демо‑запрос отправлен</div>` (удалять класс `hidden` через `classList.toggle`). Добавить `aria-describedby=\"hero-cta\"` к кнопке, если нужен дополнительный текст.",
+ "skill": "",
+ "effect": "Улучшит доступность (правильный элемент `button` для действия), даст мгновенную обратную связь (toast), повышает конверсию за счёт более понятного взаимодействия и устранения потенциальных проблем с `href=\"#\"`‑переходами.",
+ "risk": "Требует JavaScript; при отключённом JS кнопка не выполнит действие – рекомендуется добавить fallback‑ссылку в `noscript` или использовать `href=\"#contact\"` в `<a>` как альтернативу.",
+ "rollback": "Откатить строку изменения CTA (`git checkout index.html` или `git restore index.html`).",
+ "verify": "В браузере кликнуть кнопку → увидеть плавный скролл к `#contact` и появление toast‑сообщения; проверить работу клавиш Enter/Space; отключить JS и убедиться, что кнопка не ломает страницу (fallback‑ссылка работает).",
+ "priority_claim": "2 – умеренный трудозатрат, но заметный прирост UX и доступности.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `.hero` заменить `<a class=\"btn-primary\" href=\"#contact\">Получить демо</a>` на `<button type=\"button\" class=\"btn-primary\" id=\"hero-cta\">Получить демо</button>`. Добавить небольшую JS‑поточку (inline `<script>` в `<body>` или отдельный `main.js` с `defer`) : при `click` скроллить к `#contact` (`element.scrollIntoView({behavior:'smooth'});`) и показать скрытый `<div class=\"toast hidden\" role=\"status\" aria-live=\"polite\">Демо‑запрос отправлен</div>` (удалять класс `hidden` через `classList.toggle`). Добавить `aria-describedby=\"hero-cta\"` к кнопке, если нужен дополнительный текст."
+ ],
+ "flags": []
+}

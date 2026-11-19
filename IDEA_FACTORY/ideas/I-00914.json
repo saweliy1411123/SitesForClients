@@ -1,0 +1,26 @@
+{
+ "id": "I-00914",
+ "round": 143,
+ "time": "2026-11-17 08:36:26",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Preload critical CSS и Google Font — ускорить рендер первой краски",
+ "knob": "В <head> добавить сразу после существующего `<link href=\"https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">` строку:\n```html\n<link rel=\"preload\" href=\"https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap\" as=\"style\" onload=\"this.rel='stylesheet'\">\n<noscript><link href=\"https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap\" rel=\"stylesheet\"></noscript>\n```\nи перед закрывающим `</head>` вставить:\n```html\n<link rel=\"preload\" href=\"styles/critical.css\" as=\"style\" onload=\"this.rel='stylesheet'\">\n<noscript><link href=\"styles/critical.css\" rel=\"stylesheet\"></noscript>\n```\n(где `critical.css` содержит стили hero, nav и типографию).",
+ "skill": "",
+ "effect": "Убирает render‑blocking запросы, ускоряет LCP и First Contentful Paint → лучше показатели Core Web Vitals и более высокий CTR.",
+ "risk": "Если файл `critical.css` недоступен, стили могут не примениться; требуется обеспечить fallback через `<noscript>`.",
+ "rollback": "Удалить добавленные `<link rel=\"preload\">` и `<noscript>`‑блоки (`git checkout index.html`).",
+ "verify": "В DevTools → Network → проверка, что запросы к шрифту и critical.css имеют статус 200 и `priority: high`; измерить LCP до/после через Lighthouse.",
+ "priority_claim": "1 — высокий, быстрый техничный выигрыш без изменения контента.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В <head> добавить сразу после существующего `<link href=\"https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">` строку:\n```html\n<link rel=\"preload\" href=\"https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap\" as=\"style\" onload=\"this.rel='stylesheet'\">\n<noscript><link href=\"https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap\" rel=\"stylesheet\"></noscript>\n```\nи перед закрывающим `</head>` вставить:\n```html\n<link rel=\"preload\" href=\"styles/critical.css\" as=\"style\" onload=\"this.rel='stylesheet'\">\n<noscript><link href=\"styles/critical.css\" rel=\"stylesheet\"></noscript>\n```\n(где `critical.css` содержит стили hero, nav и типографию)."
+ ],
+ "flags": []
+}

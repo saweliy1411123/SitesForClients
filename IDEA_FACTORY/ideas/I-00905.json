@@ -1,0 +1,26 @@
+{
+ "id": "I-00905",
+ "round": 142,
+ "time": "2026-11-17 08:33:33",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Quick A/B Test of CTA Copy via URL Parameter",
+ "knob": "METHOD: In the console (or via a bookmarklet) read `location.search` for `?cta=alt` and replace the inner text of all elements with class `.btn-primary` (or any CTA link) with an alternative copy, e.g., “Получить бесплатный демо‑сайт”. Example:\n```js\n(() => {\nconst params = new URLSearchParams(location.search);\nif(params.get('cta')==='alt'){\ndocument.querySelectorAll('.btn-primary').forEach(el=>el.textContent='Получить бесплатный демо‑сайт');\nconsole.log('✅ CTA copy swapped');\n}\n})();\n```",
+ "skill": "",
+ "effect": "Enables instant copy testing without code changes; stakeholders can compare conversion proxies (e.g., click count) by reloading with/without the param.",
+ "risk": "Only works locally; if the param is forgotten the page shows default copy, possibly confusing testers.",
+ "rollback": "Remove `?cta=alt` from the URL or simply reload the page.",
+ "verify": "Open the page with `?cta=alt` in the address bar, run the script (or use a bookmarklet), and confirm that all CTA buttons display the new wording.",
+ "priority_claim": "1 – directly influences conversion rates with minimal effort.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: In the console (or via a bookmarklet) read `location.search` for `?cta=alt` and replace the inner text of all elements with class `.btn-primary` (or any CTA link) with an alternative copy, e.g., “Получить бесплатный демо‑сайт”. Example:\n```js\n(() => {\nconst params = new URLSearchParams(location.search);\nif(params.get('cta')==='alt'){\ndocument.querySelectorAll('.btn-primary').forEach(el=>el.textContent='Получить бесплатный демо‑сайт');\nconsole.log('✅ CTA copy swapped');\n}\n})();\n```"
+ ],
+ "flags": []
+}

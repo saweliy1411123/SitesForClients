@@ -1,0 +1,26 @@
+{
+ "id": "I-00280",
+ "round": 42,
+ "time": "2026-11-17 03:40:49",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "typewriter‑hero‑headline — typewriter‑text‑animation",
+ "knob": "обернуть основной заголовок `<h1>` в элемент `<span class=\"typewriter\">` и добавить CSS‑анимацию, которая выводит текст символ‑за‑символом с помощью `@keyframes typing` и `steps()`; использовать `overflow:hidden; border-right:2px solid var(--text);` для «мигающего курсора».",
+ "skill": "typewriter‑hero‑headline\n**Name:** typewriter‑hero‑headline\n**When to apply:** На одностраничных лендингах с крупным H1‑оффером, где нужен эффект «печати» без JS.\n**Steps:**\n1. Обернуть текст H1 в `<s",
+ "effect": "динамичный ввод текста привлекает внимание к офферу, повышает запоминаемость и создаёт ощущение интерактивности без JavaScript.",
+ "risk": "анимация может увеличить CLS, если высота строки меняется; также может раздражать пользователей с чувствительностью к движению.",
+ "rollback": "удалить/закомментировать блок CSS `@keyframes typing` и класс `.typewriter` в HTML.",
+ "verify": "открыть страницу, убедиться, что заголовок появляется «печатаясь» в течение 2‑3 сек; измерить CLS в Lighthouse – должен быть < 0.1; отключить анимацию через DevTools → проверка, что страница остаётся читаемой.",
+ "priority_claim": "2 — сильный визуальный эффект, но требует проверки на CLS и доступность; стоит внедрять после базовых улучшений.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "обернуть основной заголовок `<h1>` в элемент `<span class=\"typewriter\">` и добавить CSS‑анимацию, которая выводит текст символ‑за‑символом с помощью `@keyframes typing` и `steps()`; использовать `overflow:hidden; border-right:2px solid var(--text);` для «мигающего курсора»."
+ ],
+ "flags": []
+}

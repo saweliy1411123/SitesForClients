@@ -1,0 +1,26 @@
+{
+ "id": "I-00941",
+ "round": 154,
+ "time": "2026-11-17 09:07:01",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Improve Mobile Readability",
+ "knob": "Add font-size: 18px to text in sections for mobile devices",
+ "skill": "",
+ "effect": "Improved readability on mobile devices",
+ "risk": "Potential impact on desktop layout",
+ "rollback": "Remove the added CSS rule",
+ "verify": "Check the website on a mobile device",
+ "priority_claim": "2",
+ "source_hint": "",
+ "site_request": "mobile",
+ "category": "lever",
+ "variants": [
+  "Add font-size: 18px to text in sections for mobile devices"
+ ],
+ "flags": []
+}

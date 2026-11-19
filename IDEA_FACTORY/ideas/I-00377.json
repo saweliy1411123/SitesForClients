@@ -1,0 +1,29 @@
+{
+ "id": "I-00377",
+ "round": 56,
+ "time": "2026-11-17 04:23:37",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "SKILL — price-card-shine (премиальный блик по карточке цены на hover)",
+ "knob": "SKILL — price-card-shine",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "SKILL — price-card-shine"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00542",
+ "round": 81,
+ "time": "2026-11-17 05:36:31",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Back‑to‑top sticky button with accessibility support",
+ "knob": "В конец `<body>` добавить `<a href=\"#\" class=\"back-to-top\" aria-label=\"Вернуться к началу страницы\">↑</a>`; в CSS `.back-to-top{position:fixed;right:1rem;bottom:1rem;display:none;z-index:1000;padding:0.6rem 0.8rem;background:rgba(0,0,0,0.6);color:#fff;border-radius:0.4rem;transition:opacity .3s;} .back-to-top:focus-visible{outline:2px solid #fff;} @media (prefers-reduced-motion:reduce){.back-to-top{transition:none;}}` и JS `window.addEventListener('scroll',()=>{document.querySelector('.back-to-top').style.display=window.scrollY>400?'block':'none'});document.querySelector('.back-to-top').addEventListener('click',e=>{e.preventDefault();window.scrollTo({top:0,behavior:'smooth'});});`",
+ "skill": "",
+ "effect": "Уменьшает отток пользователей, повышает среднее время на странице и конверсию, особенно на длинных страницах.",
+ "risk": "Минимальный риск конфликтов со стилями — может потребоваться корректировать z‑index.",
+ "rollback": "`git checkout -- index.html && git checkout -- index.improved.html` (если правки внесены в копию)",
+ "verify": "Открыть страницу, прокрутить более 400 px — кнопка должна появиться; клик — плавный скролл к верху; проверить `tab`‑фокус.",
+ "priority_claim": "1 — высокий ROI за небольшие изменения, улучшает UX и SEO (повышает dwell‑time).",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В конец `<body>` добавить `<a href=\"#\" class=\"back-to-top\" aria-label=\"Вернуться к началу страницы\">↑</a>`; в CSS `.back-to-top{position:fixed;right:1rem;bottom:1rem;display:none;z-index:1000;padding:0.6rem 0.8rem;background:rgba(0,0,0,0.6);color:#fff;border-radius:0.4rem;transition:opacity .3s;} .back-to-top:focus-visible{outline:2px solid #fff;} @media (prefers-reduced-motion:reduce){.back-to-top{transition:none;}}` и JS `window.addEventListener('scroll',()=>{document.querySelector('.back-to-top').style.display=window.scrollY>400?'block':'none'});document.querySelector('.back-to-top').addEventListener('click',e=>{e.preventDefault();window.scrollTo({top:0,behavior:'smooth'});});`"
+ ],
+ "flags": []
+}

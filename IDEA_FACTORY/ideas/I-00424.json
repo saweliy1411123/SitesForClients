@@ -1,0 +1,26 @@
+{
+ "id": "I-00424",
+ "round": 63,
+ "time": "2026-11-17 04:43:53",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Видимый `focus-visible` outline для интерактивных элементов",
+ "knob": "В CSS добавить `.btn-primary:focus-visible, a:focus-visible, .nav-links a:focus-visible{outline:2px solid var(--blue);outline-offset:2px;}`.",
+ "skill": "",
+ "effect": "Пользователи клавиатуры видят чёткую индикацию фокуса, повышая удобство навигации.",
+ "risk": "Минимальный – только небольшие визуальные изменения.",
+ "rollback": "Удалить правило (git checkout).",
+ "verify": "Перейти по странице клавишей `Tab` – каждый активный элемент должен подсвечиваться обводкой.",
+ "priority_claim": "2 – улучшает доступность, простая реализация.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В CSS добавить `.btn-primary:focus-visible, a:focus-visible, .nav-links a:focus-visible{outline:2px solid var(--blue);outline-offset:2px;}`."
+ ],
+ "flags": []
+}

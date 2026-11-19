@@ -1,0 +1,26 @@
+{
+ "id": "I-00729",
+ "round": 113,
+ "time": "2026-11-17 07:11:57",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Яндекс‑Бизнес‑верификация — визуальный trust‑badge и schema.org LocalBusiness verificationProperty",
+ "knob": "После секции `#price` вставить блок `<div class=\"trust-badge\"><img src=\"yandex-badge.svg\" alt=\"Подтверждено в Яндекс.Бизнес\" width=\"120\"><span>Проверено в Яндекс.Бизнес</span></div>`; добавить в `<head>` JSON‑LD `<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"LocalBusiness\",\"name\":\"Савелий\",\"address\":{\"@type\":\"PostalAddress\",\"addressLocality\":\"Пермь\"},\"verificationProperty\":\"Yandex Business\"}\"</script>`.",
+ "skill": "",
+ "effect": "Усиливает доверие потенциальных клиентов (социальное доказательство) и улучшает локальное SEO за счёт структурированных данных.",
+ "risk": "Требует наличия реального подтверждения в Яндекс.Бизнес; без него может выглядеть вводящим в заблуждение.",
+ "rollback": "Удалить вставленный `<div class=\"trust-badge\">` и скрипт‑блок; `git checkout -- index.html`.",
+ "verify": "В браузере увидеть бейдж под ценой; в DevTools → Structured Data проверить наличие `LocalBusiness` с `verificationProperty`.",
+ "priority_claim": "2 — доверие критично для B2B‑лендинга, а реализация лёгка.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "После секции `#price` вставить блок `<div class=\"trust-badge\"><img src=\"yandex-badge.svg\" alt=\"Подтверждено в Яндекс.Бизнес\" width=\"120\"><span>Проверено в Яндекс.Бизнес</span></div>`; добавить в `<head>` JSON‑LD `<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"LocalBusiness\",\"name\":\"Савелий\",\"address\":{\"@type\":\"PostalAddress\",\"addressLocality\":\"Пермь\"},\"verificationProperty\":\"Yandex Business\"}\"</script>`."
+ ],
+ "flags": []
+}

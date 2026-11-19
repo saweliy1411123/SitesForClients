@@ -1,0 +1,26 @@
+{
+ "id": "I-00336",
+ "round": 51,
+ "time": "2026-11-17 04:07:26",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Click‑Heatmap Console Logger",
+ "knob": "METHOD – В конец `<body>` добавить однострочный `<script>` :\n```js\n(() => {\nconst log = e => {\nconst path = e.composedPath?.()[0] ?? e.target;\nconsole.log('CLICK', path.tagName, path.className, e.clientX, e.clientY);\n};\ndocument.addEventListener('click', log, {once: false});\nsetTimeout(() => document.removeEventListener('click', log), 30000);\n})();\n```",
+ "skill": "",
+ "effect": "За 30 секунд фиксируются все клики, их целевые элементы и координаты – быстрый инсайт, какие блоки (CTA, ссылки, «боль») действительно привлекают внимание.",
+ "risk": "Временно добавленный скрипт может слегка замедлить обработку событий, если забыть удалить.",
+ "rollback": "`git checkout -- index.html` или просто удалить вставленный `<script>`‑блок.",
+ "verify": "Открыть страницу, открыть DevTools → Console, кликнуть по различным элементам – в консоли появятся записи; проверить, что клик по главному CTA логируется.",
+ "priority_claim": "1 – критично для подтверждения гипотезы о расположении CTA.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD – В конец `<body>` добавить однострочный `<script>` :\n```js\n(() => {\nconst log = e => {\nconst path = e.composedPath?.()[0] ?? e.target;\nconsole.log('CLICK', path.tagName, path.className, e.clientX, e.clientY);\n};\ndocument.addEventListener('click', log, {once: false});\nsetTimeout(() => document.removeEventListener('click', log), 30000);\n})();\n```"
+ ],
+ "flags": []
+}

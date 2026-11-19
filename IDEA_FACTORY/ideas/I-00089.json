@@ -1,0 +1,26 @@
+{
+ "id": "I-00089",
+ "round": 13,
+ "time": "2026-11-17 02:18:13",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — Magnetic Button Effect (Hover‑Magnet)",
+ "knob": "METHOD: Создать переносимый «магнитный» эффект для CTA‑кнопок, который слегка притягивает курсор к центру кнопки и возвращает её в исходное положение при уходе курсора. Файл `magnetic-button.css` + небольшой `magnetic-button.js` подключается одной строкой `<script src=\"magnetic-button.js\" defer></script>` и классом `.magnetic` к любой ссылке/кнопке.\n**Skill body (magnetic-button.md)**\n```markdown\n# Magnetic Button\n## Когда применять\n- Для CTA‑кнопок в hero‑секции, фиксированных панелей и любых ярких ссылок, где требуется визуальная «привлекательность» без ущерба производительности.\n- На статических лендингах без сложных JS‑фреймворков.\n## Шаги внедрения\n1. Скопировать `magnetic-button.css` и `magnetic-button.js` в корень проекта.\n2. В `<head>` добавить `<link rel=\"stylesheet\" href=\"magnetic-button.css\">`.\n3. В конце `<body>` добавить `<script src=\"magnetic-button.js\" defer></script>`.\n4. Добавить класс `magnetic` к любой `<a>`/`<button>` элементу, который должен иметь эффект.\n## SAFE CSS:\n```css\n/* Базовый стиль кнопки, сохраняет существующий .btn-primary */\n.btn-primary.magnetic {\nposition: relative;\noverflow: hidden;\ntransition: transform 0.2s ease-out;\n}\n/* Плавный переход при возврате */\n.btn-primary.magnetic:hover {\ntransform: translate3d(0, 0, 0);\n}\n```\n## SAFE JS:\n```js\n// Магнитный эффект без внешних библиотек, работает в современных браузерах\ndocument.querySelectorAll('.magnetic').forEach(btn => {\nconst strength = 30; // пикселей отклонения\nconst rect = btn.getBoundingClientRect();\nconst move = e => {\nconst x = e.clientX - (rect.left + rect.width / 2);\nconst y = e.clientY - (rect.top + rect.height / 2);\nconst dx = (x / rect.width) * strength;\nconst dy = (y / rect.height) * strength;\nbtn.style.transform = `translate(${dx}px, ${dy}px)`;\n};\nconst reset = () => {\nbtn.style.transform = 'translate(0,0)';\n};\nbtn.addEventListener('mousemove', move);\nbtn.addEventListener('mouseleave', reset);\n});\n```",
+ "skill": "",
+ "effect": "Увеличивает визуальное вовлечение и воспринимаемую «интерактивность» кнопок, повышая CTR на CTA‑элементы без добавления тяжёлых библиотек.",
+ "risk": "На слабых устройствах (старый смартфон) может слегка повысить нагрузку CPU из‑за частых `mousemove`‑событий.",
+ "rollback": "Удалить `magnetic-button.css`, `magnetic-button.js` и соответствующие `<link>`/`<script>` строки; либо выполнить `git checkout -- magnetic-button.* index.html`.",
+ "verify": "Открыть страницу в Chrome, навести курсор на кнопку с классом `magnetic` – должна наблюдаться небольшая «притягивающая» анимация; протестировать на мобильном (должно работать без эффекта, т.к. `mousemove` не вызывается).",
+ "priority_claim": "1 – небольшое изменение, которое сразу повышает конверсию CTA, поэтому ставим высокий приоритет.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "METHOD: Создать переносимый «магнитный» эффект для CTA‑кнопок, который слегка притягивает курсор к центру кнопки и возвращает её в исходное положение при уходе курсора. Файл `magnetic-button.css` + небольшой `magnetic-button.js` подключается одной строкой `<script src=\"magnetic-button.js\" defer></script>` и классом `.magnetic` к любой ссылке/кнопке.\n**Skill body (magnetic-button.md)**\n```markdown\n# Magnetic Button\n## Когда применять\n- Для CTA‑кнопок в hero‑секции, фиксированных панелей и любых ярких ссылок, где требуется визуальная «привлекательность» без ущерба производительности.\n- На статических лендингах без сложных JS‑фреймворков.\n## Шаги внедрения\n1. Скопировать `magnetic-button.css` и `magnetic-button.js` в корень проекта.\n2. В `<head>` добавить `<link rel=\"stylesheet\" href=\"magnetic-button.css\">`.\n3. В конце `<body>` добавить `<script src=\"magnetic-button.js\" defer></script>`.\n4. Добавить класс `magnetic` к любой `<a>`/`<button>` элементу, который должен иметь эффект.\n## SAFE CSS:\n```css\n/* Базовый стиль кнопки, сохраняет существующий .btn-primary */\n.btn-primary.magnetic {\nposition: relative;\noverflow: hidden;\ntransition: transform 0.2s ease-out;\n}\n/* Плавный переход при возврате */\n.btn-primary.magnetic:hover {\ntransform: translate3d(0, 0, 0);\n}\n```\n## SAFE JS:\n```js\n// Магнитный эффект без внешних библиотек, работает в современных браузерах\ndocument.querySelectorAll('.magnetic').forEach(btn => {\nconst strength = 30; // пикселей отклонения\nconst rect = btn.getBoundingClientRect();\nconst move = e => {\nconst x = e.clientX - (rect.left + rect.width / 2);\nconst y = e.clientY - (rect.top + rect.height / 2);\nconst dx = (x / rect.width) * strength;\nconst dy = (y / rect.height) * strength;\nbtn.style.transform = `translate(${dx}px, ${dy}px)`;\n};\nconst reset = () => {\nbtn.style.transform = 'translate(0,0)';\n};\nbtn.addEventListener('mousemove', move);\nbtn.addEventListener('mouseleave', reset);\n});\n```"
+ ],
+ "flags": []
+}

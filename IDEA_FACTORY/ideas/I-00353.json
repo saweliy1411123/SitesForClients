@@ -1,0 +1,26 @@
+{
+ "id": "I-00353",
+ "round": 53,
+ "time": "2026-11-17 04:13:41",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Skip‑to‑content link for keyboard navigation",
+ "knob": "вставить в начало `<body>` скрытую ссылку `<a href=\"#main-content\" class=\"skip-link\">Перейти к содержимому</a>`; добавить `id=\"main-content\"` к элементу `<main>`; стилизовать `.skip-link{position:absolute;left:-999px;top:-999px;} .skip-link:focus{left:0;top:0;z-index:1000;}`.",
+ "skill": "",
+ "effect": "улучшает доступность, повышает оценку Lighthouse A11y, облегчает навигацию скрин‑ридеров и клавиатурных пользователей.",
+ "risk": "почти отсутствует, лишь небольшое изменение HTML‑структуры.",
+ "rollback": "удалить вставку и атрибут `id`, откатить через `git checkout index.html`.",
+ "verify": "в браузере нажать `Tab` сразу после загрузки, убедиться, что ссылка появляется и фокус переходит к `<main>`; проверить отсутствие ошибок в консоли.",
+ "priority_claim": "1 – критичный для доступности, быстрый фикс.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "вставить в начало `<body>` скрытую ссылку `<a href=\"#main-content\" class=\"skip-link\">Перейти к содержимому</a>`; добавить `id=\"main-content\"` к элементу `<main>`; стилизовать `.skip-link{position:absolute;left:-999px;top:-999px;} .skip-link:focus{left:0;top:0;z-index:1000;}`."
+ ],
+ "flags": []
+}

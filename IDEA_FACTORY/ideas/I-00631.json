@@ -1,0 +1,29 @@
+{
+ "id": "I-00631",
+ "round": 95,
+ "time": "2026-11-17 06:19:30",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "Цена — строка «что нужно от вас» (снижение барьера усилий)",
+ "knob": "В `.price-card` (разметка L644+) после списка включённого добавить компактный блок `<p class=\"price-effort\">От вас: 30 минут на созвон и тексты о бизнесе. Остальное — на мне.</",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `.price-card` (разметка L644+) после списка включённого добавить компактный блок `<p class=\"price-effort\">От вас: 30 минут на созвон и тексты о бизнесе. Остальное — на мне.</"
+ ],
+ "flags": []
+}

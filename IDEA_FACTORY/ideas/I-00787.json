@@ -1,0 +1,28 @@
+{
+ "id": "I-00787",
+ "round": 119,
+ "time": "2026-11-17 07:30:05",
+ "source": "lareper/glm-5.2-fast-preview",
+ "sources": [
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3-prime",
+  "lareper/glm-5.2"
+ ],
+ "mentions": 3,
+ "status": "NEW",
+ "title": "SKILL — hero-parallax-depth (слоистый параллакс blobs за мышью, глубина «дорогого» сайта)",
+ "knob": "SKILL — hero-parallax-depth\nName: `hero-parallax-depth`\nWhen to apply: на любом лендинге с hero-секцией, где есть фоновые декоративные слои (blobs, градиенты, орнаменты) и нужен премиальный эффект глубины без библиотек.\nSteps:\n1. В hero найти декоративные фоновые элементы (blobs/veil) и добавить им классы `plx` и data-атрибут глубины: `data-depth=\"0.03\"` (фоновые), `data-depth=\"0.06\"` (средние).\n2. Вставить SAFE CSS и SAFE JS ниже.\n3. На тач-устройствах эффект автоматически не активен (JS проверяет `matchMedia('(hover:hover)')`).\nSAFE CSS:\n```css\n.plx{will-change:transform;transition:transform .25s cubic-bezier(.2,.6,.2,1)}\n@media (prefers-reduced-motion:reduce){.plx{transition:none;transform:none!important}}\n```\nSAFE JS:\n```js\n(function(){\nif(!matchMedia('(hover:hover)').matches||matchMedia('(prefers-reduced-motion:reduce)').matches)return;\nvar els=document.querySelectorAll('.plx'),hx=0,hy=0,cx=0,cy=0,raf=null;\ndocument.querySelector('.hero').addEventListener('mousemove',function(e){\nhx=(e.clientX/innerWidth-.5)*2;hy=(e.clientY/innerHeight-.5)*2;\nif(!raf)raf=requestAnimationFrame(step);});\nfunction step(){cx+=(hx-cx)*.08;cy+=(hy-cy)*.08;\nels.forEach(function(el){var d=parseFloat(el.dataset.depth||.04);\nel.style.transform='translate3d('+(cx*d*100)+'px,'+(cy*d*100)+'px,0)';});\nif(Math.abs(hx-cx)>.001||Math.abs(hy-cy)>.001){raf=requestAnimationFrame(step);}else{raf=null;}}\n})();\n```",
+ "skill": "hero-parallax-depth",
+ "effect": "hero ощущается объёмным и «дорогим», повышается воспринимаемый уровень продукта; ноль запросов и зависимостей.",
+ "risk": "на слабых устройствах постоянный rAF при движении мыши может слегка грузить CPU; эффект чисто декоративный.",
+ "rollback": "git checkout -- index.improved.html (или удалить классы .plx и скрипт).",
+ "verify": "открыть копию файла, поводить мышью по hero — blobs должны плавно смещаться с разной амплитудой; в DevTools → Rendering → включить prefers-reduced-motion и убедиться, что движение исчезло; проверить на мобильной эмуляции, что слушатель не вешается.",
+ "priority_claim": "2 — заметный премиум-эффект на первом экране, но не влияет напрямую на конверсию.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "SKILL — hero-parallax-depth\nName: `hero-parallax-depth`\nWhen to apply: на любом лендинге с hero-секцией, где есть фоновые декоративные слои (blobs, градиенты, орнаменты) и нужен премиальный эффект глубины без библиотек.\nSteps:\n1. В hero найти декоративные фоновые элементы (blobs/veil) и добавить им классы `plx` и data-атрибут глубины: `data-depth=\"0.03\"` (фоновые), `data-depth=\"0.06\"` (средние).\n2. Вставить SAFE CSS и SAFE JS ниже.\n3. На тач-устройствах эффект автоматически не активен (JS проверяет `matchMedia('(hover:hover)')`).\nSAFE CSS:\n```css\n.plx{will-change:transform;transition:transform .25s cubic-bezier(.2,.6,.2,1)}\n@media (prefers-reduced-motion:reduce){.plx{transition:none;transform:none!important}}\n```\nSAFE JS:\n```js\n(function(){\nif(!matchMedia('(hover:hover)').matches||matchMedia('(prefers-reduced-motion:reduce)').matches)return;\nvar els=document.querySelectorAll('.plx'),hx=0,hy=0,cx=0,cy=0,raf=null;\ndocument.querySelector('.hero').addEventListener('mousemove',function(e){\nhx=(e.clientX/innerWidth-.5)*2;hy=(e.clientY/innerHeight-.5)*2;\nif(!raf)raf=requestAnimationFrame(step);});\nfunction step(){cx+=(hx-cx)*.08;cy+=(hy-cy)*.08;\nels.forEach(function(el){var d=parseFloat(el.dataset.depth||.04);\nel.style.transform='translate3d('+(cx*d*100)+'px,'+(cy*d*100)+'px,0)';});\nif(Math.abs(hx-cx)>.001||Math.abs(hy-cy)>.001){raf=requestAnimationFrame(step);}else{raf=null;}}\n})();\n```"
+ ],
+ "flags": []
+}

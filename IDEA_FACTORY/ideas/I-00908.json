@@ -1,0 +1,26 @@
+{
+ "id": "I-00908",
+ "round": 142,
+ "time": "2026-11-17 08:33:35",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Click‑through Tracking per Variant via URL Parameter",
+ "knob": "METHOD: in console execute a short script that parses `location.search` for `variant=`; attaches `click` listeners to all elements with class `.btn-primary`; on click increments a counter stored in `localStorage` under key `ctaClicks_variantX`; logs counts after each click.",
+ "skill": "",
+ "effect": "Provides quantitative data on which URL‑variant (e.g., `?variant=1` vs `?variant=2`) drives more CTA clicks, allowing data‑driven decisions without backend integration.",
+ "risk": "Counts only reflect the current browser session; results may be noisy with a single user and require manual reset of `localStorage`.",
+ "rollback": "Run `localStorage.removeItem('ctaClicks_variant1'); localStorage.removeItem('ctaClicks_variant2');` and detach listeners (`removeEventListener`) or simply refresh the page to discard the script.",
+ "verify": "Reload page with `?variant=1`, run the script, click a CTA, note console output; repeat with `?variant=2` and compare counts—all within 2 minutes.",
+ "priority_claim": "2 – adds conversion insight with minimal effort, useful for testing copy or style variants.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: in console execute a short script that parses `location.search` for `variant=`; attaches `click` listeners to all elements with class `.btn-primary`; on click increments a counter stored in `localStorage` under key `ctaClicks_variantX`; logs counts after each click."
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00677",
+ "round": 103,
+ "time": "2026-11-17 06:44:08",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить CSS‑свойство `contain: layout` к тяжёлой hero‑секции",
+ "knob": "В `.hero` добавить `contain: layout;` (можно в уже существующий блок стилей)",
+ "skill": "",
+ "effect": "Ограничит влияние изменения размеров hero‑блока на остальную страницу, улучшит производительность при скролле и анимациях",
+ "risk": "При некорректных вложенных позиций может нарушиться позиционирование – потребуется визуальная проверка",
+ "rollback": "Удалить `contain: layout;` из правила `.hero` (git checkout HEAD -- index.html)",
+ "verify": "В DevTools → Computed увидеть `contain: layout`; измерить FPS скролла (DevTools → Performance) до и после, ожидая небольшое улучшение",
+ "priority_claim": "3 – не критично, но полезно для микропроизводительности.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `.hero` добавить `contain: layout;` (можно в уже существующий блок стилей)"
+ ],
+ "flags": []
+}

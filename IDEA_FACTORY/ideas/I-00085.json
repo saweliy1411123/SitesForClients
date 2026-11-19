@@ -1,0 +1,29 @@
+{
+ "id": "I-00085",
+ "round": 12,
+ "time": "2026-11-17 02:16:25",
+ "source": "lareper/glm-5.3-prime",
+ "sources": [
+  "lareper/glm-5.3-prime",
+  "lareper/glm-5.2",
+  "lareper/glm-5.3",
+  "lareper/glm-5.2-fast-preview"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "Убрать render-blocking Google Fonts — self-host fallback через system-font stack",
+ "knob": "В `<head>` (L~7, ссылки на fonts.googleapis.com) добавить `<link rel=\"preload\" as=\"style\" href=\"https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap\">` с `onload=\"this.rel='stylesheet'\"` + `<noscript>`-фолбэк; в CSS-переменную шрифта добавить фолбэк-стек `Manrope, -apple-system, 'Segoe UI', Roboto, sans-serif` (если ещё нет).",
+ "skill": "",
+ "effect": "Текст рендерится сразу системным шрифтом, Manrope подгружается асинхронно — FCP/LCP на мобильных 3G падает на 300–700 мс, меньше отказов с медленного мобильного трафика из Яндекса.",
+ "risk": "Кратковременный FOUT — скачок метрик шрифта, при неправильном фолбэке заметный сдвиг текста (CLS).",
+ "rollback": "git checkout -- index.html.",
+ "verify": "DevTools → Network → throttling Slow 4G, перезагрузить: шрифт не должен блокировать отрисовку; Lighthouse Performance до/после сравнить FCP.",
+ "priority_claim": "1 — единственный render-blocking внешний ресурс на странице, прямой выигрыш в скорости без изменения контента.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<head>` (L~7, ссылки на fonts.googleapis.com) добавить `<link rel=\"preload\" as=\"style\" href=\"https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap\">` с `onload=\"this.rel='stylesheet'\"` + `<noscript>`-фолбэк; в CSS-переменную шрифта добавить фолбэк-стек `Manrope, -apple-system, 'Segoe UI', Roboto, sans-serif` (если ещё нет)."
+ ],
+ "flags": []
+}

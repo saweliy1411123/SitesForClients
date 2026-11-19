@@ -1,0 +1,28 @@
+{
+ "id": "I-00643",
+ "round": 97,
+ "time": "2026-11-17 06:25:24",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only",
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Переключатель темы (light / dark) через CSS‑переменные",
+ "knob": "SKILL:\n**Name:** `theme-switcher-css-variable`\n**When to apply:** На любой статический лендинг, где уже реализована поддержка светлой и тёмной темы (см. `@media (prefers-color-scheme: dark)`), но нужен ручной пользовательский переключатель.\n**Steps:**\n1. В `<header>` (или рядом с навигацией) добавить кнопку‑переключатель:\n```html\n<button class=\"theme-toggle\" aria-label=\"Переключить тему\">🌓</button>\n```\n2. В `<style>` объявить набор CSS‑переменных для обеих тем и правило, которое их применяет в зависимости от атрибута `data-theme` у `<html>`.\n3. В конец `<body>` добавить небольшой скрипт, меняющий атрибут `data-theme` при клике.\n**SAFE CSS:**\n```css\n:root{\n--bg:#fff;\n--text:#0a0a0f;\n--accent:#8b5cf6;\n}\n[data-theme=\"dark\"]{\n--bg:#111;\n--text:#e8eaf2;\n--accent:#c084fc;\n}\nbody{\nbackground:var(--bg);\ncolor:var(--text);\n}\n.theme-toggle{\nbackground:none;\nborder:none;\ncursor:pointer;\nfont-size:1.4rem;\npadding:0.4rem;\n}\n```\n**SAFE JS:**\n```js\n(function(){\nconst btn=document.querySelector('.theme-toggle');\nif(!btn) return;\nbtn.addEventListener('click',()=>{\nconst html=document.documentElement;\nconst cur=html.getAttribute('data-theme')||'light';\nhtml.setAttribute('data-theme', cur==='dark'?'light':'dark');\n});\n})();\n```",
+ "skill": "",
+ "effect": "Пользователь может явно выбрать предпочтительную цветовую схему, повышается удобство и удовлетворённость → потенциальный рост времени на сайте и SEO‑оценки (повышенный показатель Core Web Vitals).",
+ "risk": "Возможен конфликт с уже существующим `prefers-color-scheme`‑медиа‑правилом, но при правильном порядке правил конфликт минимален.",
+ "rollback": "Удалить добавленную кнопку, CSS‑правила и JS‑скрипт; либо выполнить `git checkout -- index.html`.",
+ "verify": "Открыть страницу, кликнуть кнопку – фон и цвета текста должны переключаться между светлой и тёмной схемой; проверить, что в `<html>` меняется атрибут `data-theme`.",
+ "priority_claim": "1 — высокий эффект на UX и SEO, небольшие затраты, легко тестируемо.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "SKILL:\n**Name:** `theme-switcher-css-variable`\n**When to apply:** На любой статический лендинг, где уже реализована поддержка светлой и тёмной темы (см. `@media (prefers-color-scheme: dark)`), но нужен ручной пользовательский переключатель.\n**Steps:**\n1. В `<header>` (или рядом с навигацией) добавить кнопку‑переключатель:\n```html\n<button class=\"theme-toggle\" aria-label=\"Переключить тему\">🌓</button>\n```\n2. В `<style>` объявить набор CSS‑переменных для обеих тем и правило, которое их применяет в зависимости от атрибута `data-theme` у `<html>`.\n3. В конец `<body>` добавить небольшой скрипт, меняющий атрибут `data-theme` при клике.\n**SAFE CSS:**\n```css\n:root{\n--bg:#fff;\n--text:#0a0a0f;\n--accent:#8b5cf6;\n}\n[data-theme=\"dark\"]{\n--bg:#111;\n--text:#e8eaf2;\n--accent:#c084fc;\n}\nbody{\nbackground:var(--bg);\ncolor:var(--text);\n}\n.theme-toggle{\nbackground:none;\nborder:none;\ncursor:pointer;\nfont-size:1.4rem;\npadding:0.4rem;\n}\n```\n**SAFE JS:**\n```js\n(function(){\nconst btn=document.querySelector('.theme-toggle');\nif(!btn) return;\nbtn.addEventListener('click',()=>{\nconst html=document.documentElement;\nconst cur=html.getAttribute('data-theme')||'light';\nhtml.setAttribute('data-theme', cur==='dark'?'light':'dark');\n});\n})();\n```",
+  "В `<head>` добавить `<meta name=\"color-scheme\" content=\"light dark\">`. В CSS определить переменные `--bg`, `--text`, `--accent` для светлой темы; в `@media (prefers-color-scheme: dark)` переопределить их (например, `--bg:#111; --text:#eee; --accent:#8b5cf6`). Добавить в шапке кнопку `<button class=\"theme-toggle\" aria-label=\"Переключить тему\">🌓</button>` и JS‑скрипт, который переключает класс `dark` на `<html>` и сохраняет предпочтение в `localStorage`."
+ ],
+ "flags": []
+}

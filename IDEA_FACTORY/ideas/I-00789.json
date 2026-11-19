@@ -1,0 +1,27 @@
+{
+ "id": "I-00789",
+ "round": 120,
+ "time": "2026-11-17 07:32:10",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Контрастный подзаголовок",
+ "knob": "В `.hero p.sub` добавить `color: var(--text)` и `font-weight: 500` для повышения читаемости",
+ "skill": "",
+ "effect": "Повышение читаемости и привлекательности подзаголовка",
+ "risk": "Нарушение дизайна или читаемости страницы",
+ "rollback": "Удалить добавленные стили",
+ "verify": "Проверить визуальную читаемость и контрастность подзаголовка",
+ "priority_claim": "2, потому что это улучшение читаемости и привлекательности",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `.hero p.sub` добавить `color: var(--text)` и `font-weight: 500` для повышения читаемости",
+  "В `.hero p.sub` добавить `color: var(--text)` и `font-weight: 500`"
+ ],
+ "flags": []
+}

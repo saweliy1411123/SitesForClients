@@ -1,0 +1,26 @@
+{
+ "id": "I-00986",
+ "round": 165,
+ "time": "2026-11-17 09:37:50",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Финальный CTA — пульсирующая анимация кнопки при появлении в viewport",
+ "knob": "В секции `.final` (см. SITE_REQUEST «final») добавить к основной ссылке‑кнопке класс `pulse-cta`; в CSS добавить `@keyframes pulse {0%{transform:scale(1);}50%{transform:scale(1.07);}100%{transform:scale(1);}}` и правило `.pulse-cta {animation: pulse 2s infinite;}` + `:focus-visible` стили для доступности.",
+ "skill": "",
+ "effect": "Привлекает внимание к последнему призыву к действию, повышая кликабельность.",
+ "risk": "Может восприниматься как навязчивое, если анимация слишком яркая; необходимо подобрать умеренную длительность.",
+ "rollback": "Удалить класс `pulse-cta` и соответствующие CSS‑правила; `git checkout -- index.html`.",
+ "verify": "Прокрутить страницу к финальному блоку, убедиться, что кнопка пульсирует; проверить, что анимация останавливается при фокусе/клике (можно добавить `animation-play-state: paused;`).",
+ "priority_claim": "1 – последний шанс конвертировать посетителя.",
+ "source_hint": "",
+ "site_request": "final",
+ "category": "lever",
+ "variants": [
+  "В секции `.final` (см. SITE_REQUEST «final») добавить к основной ссылке‑кнопке класс `pulse-cta`; в CSS добавить `@keyframes pulse {0%{transform:scale(1);}50%{transform:scale(1.07);}100%{transform:scale(1);}}` и правило `.pulse-cta {animation: pulse 2s infinite;}` + `:focus-visible` стили для доступности."
+ ],
+ "flags": []
+}

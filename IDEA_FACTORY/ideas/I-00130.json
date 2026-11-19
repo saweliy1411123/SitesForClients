@@ -1,0 +1,26 @@
+{
+ "id": "I-00130",
+ "round": 19,
+ "time": "2026-11-17 02:36:36",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "content-visibility для секций ниже первого экрана",
+ "knob": "в CSS добавить `section:not(.hero){content-visibility:auto;contain-intrinsic-size:auto 800px;}` — браузер не рендерит офскрин-секции до прокрутки.",
+ "skill": "",
+ "effect": "быстрее первичный рендер на мобильных (7 секций, из них 6 ниже фолда), лучше LCP/INP на слабых телефонах.",
+ "risk": "при резком скролле возможен микросдвиг, если `contain-intrinsic-size` сильно не совпадает с реальной высотой секции.",
+ "rollback": "`git checkout index.html` (правка только в CSS-блоке `<style>`).",
+ "verify": "DevTools → Performance → Record со скроллом до/после; сравнить Scripting/Rendering время первых 2 секунд.",
+ "priority_claim": "2 — заметный прирост скорости без изменения контента.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "в CSS добавить `section:not(.hero){content-visibility:auto;contain-intrinsic-size:auto 800px;}` — браузер не рендерит офскрин-секции до прокрутки."
+ ],
+ "flags": []
+}

@@ -1,0 +1,29 @@
+{
+ "id": "I-00086",
+ "round": 12,
+ "time": "2026-11-17 02:16:25",
+ "source": "lareper/glm-5.3-prime",
+ "sources": [
+  "lareper/glm-5.3-prime",
+  "lareper/glm-5.2",
+  "lareper/glm-5.3",
+  "lareper/glm-5.2-fast-preview"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "Проверка контраста фиолетового CTA и градиентного текста (WCAG AA)",
+ "knob": "METHOD: Взять из CSS значения цветов `.btn-primary` (фон/текст) и `.grad-text` (L386, градиент на прозрачном тексте), прогнать пары через контрастный чекер (webaim.org/resources/contrastchecker или DevTools → Color picker показывает ratio). Целевой порог: 4.5:1 для текста, 3:1 для крупного. Если `.grad-text` на тёмном фоне даёт <4.5:1 — добавить в CSS дубль правила с однотонным цветом внутри `@media (prefers-contrast: more){.grad-text{background:none;color:#c4b5fd}}`.",
+ "skill": "",
+ "effect": "Часть пользователей (низкое зрение, яркий солнечный свет на телефоне) реально читает заголовки и видит CTA — больше доходит до заявки; плюс соответствие WCAG AA как доверие для B2B-клиентов.",
+ "risk": "Почти нулевой — изменение",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: Взять из CSS значения цветов `.btn-primary` (фон/текст) и `.grad-text` (L386, градиент на прозрачном тексте), прогнать пары через контрастный чекер (webaim.org/resources/contrastchecker или DevTools → Color picker показывает ratio). Целевой порог: 4.5:1 для текста, 3:1 для крупного. Если `.grad-text` на тёмном фоне даёт <4.5:1 — добавить в CSS дубль правила с однотонным цветом внутри `@media (prefers-contrast: more){.grad-text{background:none;color:#c4b5fd}}`."
+ ],
+ "flags": []
+}

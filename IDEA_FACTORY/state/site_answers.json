@@ -1,0 +1,406 @@
+{
+ "h1": {
+  "time": "2026-11-17 07:41:28",
+  "result": "L47: h1,h2,h3{font-weight:600;letter-spacing:-.03em;line-height:1.08}\nL114: h1{font-size:clamp(40px,6.4vw,76px);font-weight:700;letter-spacing:-.035em;max-width:840px;line-height:1.04}\nL115: h1 .grad-text{\nL459: <h1 class=\"reveal\" style=\"--d:.1s\">Сайт для вашего бизнеса <span class=\"grad-text\">за 2 дня</span> — клиенты находят вас в&nbsp;Яндексе</h1>\nL520: <div class=\"bicon\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"4\" width=\"18\" height=\nL542: <div class=\"bicon\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M13 2 4.5 13.5H12L11 22l8.5\nL725: <svg viewBox=\"0 0 24 24\"><path d=\"M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.391 0 15.684 0zm3.6\nL728: <svg viewBox=\"0 0 24 24\"><path d=\"M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z\"/></svg>"
+ },
+ "демо": {
+  "time": "2026-11-17 03:33:51",
+  "result": "L7: <meta name=\"description\" content=\"Лендинг для вашего бизнеса за 2 дня. Услуги, цены и онлайн-запись в одном месте — клиенты находят вас в Яндексе. Демо бесплатно.\">\nL9: <meta property=\"og:description\" content=\"Лендинг с вашими услугами и ценами, который приводит клиентов из поиска. Демо — бесплатно, без обязательств.\">\nL462: <a class=\"btn-primary magnetic\" href=\"#contact\">Написать в Telegram — демо бесплатно <span class=\"arr\">→</span></a>\nL465: <p class=\"hero-note reveal\" style=\"--d:.46s\">Бесплатно сделаю <b>демо-макет с вашими услугами и ценами</b> — посмотрите, как будет выглядеть ваш сайт, и только потом решайте.</p>\nL472: <div class=\"proof-item reveal\"><div class=\"num\"><em data-count=\"6\">0</em></div><div class=\"lbl\">готовых демо-концептов</div></div>\nL474: <div class=\"proof-item reveal\" style=\"--d:.2s\"><div class=\"num\"><em data-count=\"0\">0</em> ₽</div><div class=\"lbl\">демо под ваш проект</div></div>\nL568: <h3>Смотрите демо</h3>\nL569: <p>Я собираю демо-лендинг с вашими услугами и ценами. Бесплатно и без каких-либо обязательств.</p>\nL589: <h2 class=\"reveal\" style=\"--d:.08s\">Демо-концепты<br>под реальные проекты</h2>\nL590: <p class=\"lead reveal\" style=\"--d:.16s\">Каждое демо сделано под конкретный бизнес и его услуги — разные стили под разное позиционирование. Открывайте, смотрите вживую.</p>\nL635: <p class=\"works-note reveal\">Хотите так же, но под свой сайт? <a href=\"#contact\">Напишите</a> — демо под вас сделаю бесплатно.</p>\nL657: <a class=\"btn-primary magnetic\" href=\"#contact\">Получить бесплатное демо <span class=\"arr\">→</span></a>"
+ },
+ "цена": {
+  "time": "2026-11-17 07:02:18",
+  "result": "L9: <meta property=\"og:description\" content=\"Лендинг с вашими услугами и ценами, который приводит клиентов из поиска. Демо — бесплатно, без обязательств.\">\nL441: <a href=\"#price\">Цена</a>\nL460: <p class=\"sub reveal\" style=\"--d:.22s\">Соберу лендинг с вашими услугами, ценами и работами. Вашу онлайн-запись не трогаю — сайт просто приводит на неё новых клиентов из поиска.</p>\nL465: <p class=\"hero-note reveal\" style=\"--d:.46s\">Бесплатно сделаю <b>демо-макет с вашими услугами и ценами</b> — посмотрите, как будет выглядеть ваш сайт, и только потом решайте.</p>\nL569: <p>Я собираю демо-лендинг с вашими услугами и ценами. Бесплатно и без каких-либо обязательств.</p>\nL642: <div class=\"kicker center reveal\">Цена</div>\nL643: <h2 class=\"reveal word-reveal\" style=\"text-align:center;--d:.08s\">Одна понятная цена, без&nbsp;сюрпризов</h2>\nL717: <a href=\"#price\">Цена</a>"
+ },
+ "время загрузки": {
+  "time": "2026-11-17 01:46:23",
+  "result": "совпадений нет"
+ },
+ "мобильная версия": {
+  "time": "2026-11-17 09:00:21",
+  "result": "совпадений нет"
+ },
+ "доступность": {
+  "time": "2026-11-17 02:08:36",
+  "result": "совпадений нет"
+ },
+ "focus": {
+  "time": "2026-11-17 05:24:07",
+  "result": "совпадений нет"
+ },
+ "hero-note": {
+  "time": "2026-11-17 07:34:05",
+  "result": "L141: .hero-note{margin-top:18px;font-size:13.5px;color:var(--muted)}\nL142: .hero-note b{color:var(--blue);font-weight:600}\nL389: .final .hero-note{margin-top:20px;text-align:center}\nL390: .final .hero-note b{color:var(--blue)}\nL465: <p class=\"hero-note reveal\" style=\"--d:.46s\">Бесплатно сделаю <b>демо-макет с вашими услугами и ценами</b> — посмотрите, как будет выглядеть ваш сайт, и только потом решайте.</p>\nL707: <p class=\"hero-note reveal\" style=\"--d:.36s\">Или пишите в ВК: <b><a href=\"https://vk.ru/trainersdontplays\" target=\"_blank\">@trainersdontplays</a></b> · отвечаю обычно в течение час"
+ },
+ "bicon": {
+  "time": "2026-11-17 01:52:07",
+  "result": "L233: .b-cell .bicon{\nL239: .b-cell .bicon svg{width:21px;height:21px}\nL520: <div class=\"bicon\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"4\" width=\"18\" height=\nL532: <div class=\"bicon\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"11\" cy=\"11\" r=\"7\"/><path\nL537: <div class=\"bicon\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"7\" y=\"2\" width=\"10\" height=\nL542: <div class=\"bicon\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M13 2 4.5 13.5H12L11 22l8.5\nL547: <div class=\"bicon\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 20h9M16.5 3.5a2.1 2.1 0\nL552: <div class=\"bicon\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 2 15 8.5 22 9.3l-5 4.9 "
+ },
+ "сюрпризов": {
+  "time": "2026-11-17 01:52:07",
+  "result": "L643: <h2 class=\"reveal word-reveal\" style=\"text-align:center;--d:.08s\">Одна понятная цена, без&nbsp;сюрпризов</h2>"
+ },
+ "боль": {
+  "time": "2026-11-17 07:52:37",
+  "result": "L539: <p>Большинство клиентов заходит с мобильного — поэтому сайт спроектирован сначала под телефон, потом под экран побольше. Кнопка записи всегда под большим пальцем.</p>"
+ },
+ "шага": {
+  "time": "2026-11-17 01:52:07",
+  "result": "L564: <h2 class=\"reveal\" style=\"--d:.08s\">Три шага — от&nbsp;идеи<br>до&nbsp;сайта в&nbsp;интернете</h2>"
+ },
+ "FAQ": {
+  "time": "2026-11-17 05:09:35",
+  "result": "L358: /* ================= faq ================= */\nL359: .faq{max-width:700px;margin:60px auto 0}\nL442: <a href=\"#faq\">Вопросы</a>\nL663: <!-- ============ FAQ ============ -->\nL664: <section id=\"faq\">\nL668: <div class=\"faq\">"
+ },
+ "img": {
+  "time": "2026-11-17 02:16:57",
+  "result": "совпадений нет"
+ },
+ "sub": {
+  "time": "2026-11-17 07:22:04",
+  "result": "L122: .hero p.sub{color:#c3cad9;font-size:clamp(16.5px,2vw,20px);max-width:560px;margin:28px 0 38px}\nL460: <p class=\"sub reveal\" style=\"--d:.22s\">Соберу лендинг с вашими услугами, ценами и работами. Вашу онлайн-запись не трогаю — сайт просто приводит на неё новых клиентов из поиска.</p>"
+ },
+ "aria-label": {
+  "time": "2026-11-17 02:45:33",
+  "result": "совпадений нет"
+ },
+ "lang": {
+  "time": "2026-11-17 03:36:37",
+  "result": "L2: <html lang=\"ru\">"
+ },
+ "final": {
+  "time": "2026-11-17 09:39:17",
+  "result": "L380: /* ================= final ================= */\nL381: .final{text-align:center;position:relative;overflow:hidden;padding:150px 0}\nL382: .final-bg{position:absolute;inset:0;opacity:.2;background:radial-gradient(circle at 30% 50%,rgba(139,92,246,.15),transparent 60%),radial-gradient(circle at 70% 50%,rgba(76,201,240,\nL383: .final-veil{position:absolute;inset:0;background:linear-gradient(180deg,var(--bg),rgba(10,10,15,.5),var(--bg))}\nL384: .final .wrap{position:relative;z-index:2}\nL385: .final h2{margin:0 auto 20px;max-width:780px;font-size:clamp(34px,5vw,58px)}\nL386: .final h2 .grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}\nL387: .final .lead{margin:0 auto 38px}\nL388: .final .cta-row{justify-content:center}\nL389: .final .hero-note{margin-top:20px;text-align:center}\nL390: .final .hero-note b{color:var(--blue)}\nL697: <!-- ============ FINAL CTA ============ -->"
+ },
+ "Три шага": {
+  "time": "2026-11-17 02:05:15",
+  "result": "L564: <h2 class=\"reveal\" style=\"--d:.08s\">Три шага — от&nbsp;идеи<br>до&nbsp;сайта в&nbsp;интернете</h2>"
+ },
+ "Сделаю демо": {
+  "time": "2026-11-17 04:27:30",
+  "result": "L702: <h2 class=\"word-reveal\">Сделаю демо под ваш сайт — <span class=\"grad-text\">бесплатно</span></h2>"
+ },
+ "btn-primary": {
+  "time": "2026-11-17 07:25:14",
+  "result": "L124: .btn-primary{\nL129: .btn-primary:hover{\nL132: .btn-primary .arr{transition:transform .2s}\nL133: .btn-primary:hover .arr{transform:translateX(4px)}\nL355: .price-card .btn-primary{width:100%;justify-content:center}\nL418: .sticky-cta .btn-primary{width:100%;justify-content:center;font-size:16px;padding:15px;min-height:52px}\nL462: <a class=\"btn-primary magnetic\" href=\"#contact\">Написать в Telegram — демо бесплатно <span class=\"arr\">→</span></a>\nL657: <a class=\"btn-primary magnetic\" href=\"#contact\">Получить бесплатное демо <span class=\"arr\">→</span></a>\nL705: <a class=\"btn-primary magnetic\" href=\"https://t.me/TrainersDontPlays\" target=\"_blank\">Написать в Telegram <span class=\"arr\">→</span></a>\nL736: <a class=\"btn-primary\" href=\"#contact\">Получить демо бесплатно</a>"
+ },
+ "Нет": {
+  "time": "2026-11-17 02:37:03",
+  "result": "L483: <h2 class=\"reveal\" style=\"--d:.08s\">Запись есть — клиентов<br>из&nbsp;поиска нет</h2>\nL498: <p>Сообщество тонет в постах, репостах и рекламе. Услуги, цены, отзывы и адрес разбросаны по разным местам. Новому клиенту нужно 10 минут, чтобы всё собрать — обычно он просто уход\nL564: <h2 class=\"reveal\" style=\"--d:.08s\">Три шага — от&nbsp;идеи<br>до&nbsp;сайта в&nbsp;интернете</h2>\nL578: <h3>Сайт в интернете</h3>\nL654: <li>Публикация в интернете + помощь с доменом</li>\nL671: <div class=\"ans\"><p>Нет — наоборот. Запись остаётся как есть, а сайт приводит на неё новых людей из поиска. Это дополнение, а не замена.</p></div>\nL675: <div class=\"ans\"><p>Подвоха нет. Мне проще показать результат, чем описывать его словами. Если демо не зайдёт — просто спасибо за просмотр, никаких обязательств.</p></div>\nL682: <summary>А если у нас нет фото и текстов?<span class=\"plus\"></span></summary>"
+ },
+ "btn-magnetic": {
+  "time": "2026-11-17 02:19:42",
+  "result": "совпадений нет"
+ },
+ "reveal": {
+  "time": "2026-11-17 03:28:18",
+  "result": "L143: /* ================= reveal-анимации ================= */\nL144: .reveal{opacity:0;transform:translateY(44px);transition:opacity .9s cubic-bezier(.2,.65,.3,1),transform .9s cubic-bezier(.2,.65,.3,1);transition-delay:var(--d,0s)}\nL145: .reveal.fly{transform:translateY(90px) perspective(900px) rotateX(14deg) scale(.95)}\nL146: .reveal.zoom{transform:scale(.9)}\nL147: .reveal.visible{opacity:1;transform:none}\nL149: .word-reveal .w{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.12em;margin-bottom:-.12em}\nL150: .word-reveal .w > span{display:inline-block;transform:translateY(112%);transition:transform .8s cubic-bezier(.2,.65,.3,1);transition-delay:var(--wd,0s)}\nL151: .word-reveal.visible .w > span{transform:translateY(0)}\nL425: .reveal,.word-reveal .w > span{opacity:1;transform:none}\nL458: <span class=\"badge reveal\"><span class=\"pulse\"></span>Свободен для 1 заказа на этой неделе</span>\nL459: <h1 class=\"reveal\" style=\"--d:.1s\">Сайт для вашего бизнеса <span class=\"grad-text\">за 2 дня</span> — клиенты находят вас в&nbsp;Яндексе</h1>\nL460: <p class=\"sub reveal\" style=\"--d:.22s\">Соберу лендинг с вашими услугами, ценами и работами. Вашу онлайн-запись не трогаю — сайт просто приводит на неё новых клиентов из поиска.</p>"
+ },
+ "градиентный текст": {
+  "time": "2026-11-17 02:19:42",
+  "result": "совпадений нет"
+ },
+ "демо-концепты": {
+  "time": "2026-11-17 06:12:07",
+  "result": "L589: <h2 class=\"reveal\" style=\"--d:.08s\">Демо-концепты<br>под реальные проекты</h2>"
+ },
+ "микро-CTA": {
+  "time": "2026-11-17 02:28:10",
+  "result": "совпадений нет"
+ },
+ "hero": {
+  "time": "2026-11-17 09:47:39",
+  "result": "L92: /* ================= HERO ================= */\nL93: .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:130px 0 100px;overflow:hidden}\nL102: .hero-veil{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(10,10,15,.4) 0%,transparent 40%,var(--bg) 100%)}\nL104: .hero .wrap{position:relative;z-index:3}\nL122: .hero p.sub{color:#c3cad9;font-size:clamp(16.5px,2vw,20px);max-width:560px;margin:28px 0 38px}\nL141: .hero-note{margin-top:18px;font-size:13.5px;color:var(--muted)}\nL142: .hero-note b{color:var(--blue);font-weight:600}\nL389: .final .hero-note{margin-top:20px;text-align:center}\nL390: .final .hero-note b{color:var(--blue)}\nL448: <!-- ============ HERO: градиентный заголовок + живые blobs ============ -->\nL449: <header class=\"hero\" id=\"top\">\nL455: <div class=\"hero-veil\"></div>"
+ },
+ "шаги": {
+  "time": "2026-11-17 02:33:43",
+  "result": "совпадений нет"
+ },
+ "изображения": {
+  "time": "2026-11-17 02:37:03",
+  "result": "совпадений нет"
+ },
+ "demo-card": {
+  "time": "2026-11-17 02:45:33",
+  "result": "совпадений нет"
+ },
+ "proof-item": {
+  "time": "2026-11-17 06:26:44",
+  "result": "L156: .proof-item{flex:1;min-width:150px;padding:0 12px;position:relative}\nL157: .proof-item + .proof-item::before{\nL161: .proof-item .num{font-weight:700;font-size:clamp(30px,4vw,46px);letter-spacing:-.035em;line-height:1.05}\nL162: .proof-item .num em{font-style:normal}\nL163: .proof-item .lbl{font-size:13.5px;color:var(--muted);margin-top:6px}\nL472: <div class=\"proof-item reveal\"><div class=\"num\"><em data-count=\"6\">0</em></div><div class=\"lbl\">готовых демо-концептов</div></div>\nL473: <div class=\"proof-item reveal\" style=\"--d:.1s\"><div class=\"num\"><em data-count=\"2\">0</em> дня</div><div class=\"lbl\">срок готового лендинга</div></div>\nL474: <div class=\"proof-item reveal\" style=\"--d:.2s\"><div class=\"num\"><em data-count=\"0\">0</em> ₽</div><div class=\"lbl\">демо под ваш проект</div></div>\nL475: <div class=\"proof-item reveal\" style=\"--d:.3s\"><div class=\"num\">Вы&nbsp;— первый</div><div class=\"lbl\">стартую с&nbsp;вами</div></div>"
+ },
+ "none": {
+  "time": "2026-11-17 04:33:48",
+  "result": "L50: a{color:inherit;text-decoration:none}\nL58: position:fixed;width:480px;height:480px;border-radius:50%;pointer-events:none;z-index:1;\nL90: @media(max-width:720px){.nav-links{display:none}}\nL103: #particles{position:absolute;inset:0;z-index:2;pointer-events:none}\nL147: .reveal.visible{opacity:1;transform:none}\nL195: -webkit-text-stroke:1px rgba(255,255,255,.12);pointer-events:none;user-select:none;\nL204: top:-220px;right:-180px;pointer-events:none;\nL284: position:absolute;inset:0;z-index:3;pointer-events:none;opacity:0;transition:opacity .3s;\nL332: top:-220px;left:50%;transform:translateX(-50%);pointer-events:none;\nL351: .price-card ul{list-style:none;text-align:left;margin:0 auto 32px;max-width:360px}\nL353: .price-card li:last-child{border-bottom:none}\nL368: cursor:pointer;font-weight:600;font-size:16px;list-style:none;"
+ },
+ "demo-concept": {
+  "time": "2026-11-17 02:54:21",
+  "result": "совпадений нет"
+ },
+ "mobile": {
+  "time": "2026-11-17 09:50:26",
+  "result": "L409: /* ================= sticky mobile cta ================= */"
+ },
+ "particles": {
+  "time": "2026-11-17 02:57:09",
+  "result": "L103: #particles{position:absolute;inset:0;z-index:2;pointer-events:none}\nL456: <canvas id=\"particles\"></canvas>\nL896: /* ---------- hero particles ---------- */\nL897: var canvas = document.getElementById('particles');"
+ },
+ "glass-card": {
+  "time": "2026-11-17 03:22:46",
+  "result": "совпадений нет"
+ },
+ "три шага": {
+  "time": "2026-11-17 06:53:56",
+  "result": "L564: <h2 class=\"reveal\" style=\"--d:.08s\">Три шага — от&nbsp;идеи<br>до&nbsp;сайта в&nbsp;интернете</h2>"
+ },
+ "contact": {
+  "time": "2026-11-17 05:24:07",
+  "result": "L444: <a class=\"nav-cta\" href=\"#contact\">Написать</a>\nL462: <a class=\"btn-primary magnetic\" href=\"#contact\">Написать в Telegram — демо бесплатно <span class=\"arr\">→</span></a>\nL524: <div class=\"visual\" onclick=\"document.getElementById('contact').scrollIntoView({behavior:'smooth'})\"></div>\nL635: <p class=\"works-note reveal\">Хотите так же, но под свой сайт? <a href=\"#contact\">Напишите</a> — демо под вас сделаю бесплатно.</p>\nL657: <a class=\"btn-primary magnetic\" href=\"#contact\">Получить бесплатное демо <span class=\"arr\">→</span></a>\nL698: <section class=\"final\" id=\"contact\">\nL718: <a href=\"#contact\">Контакты</a>\nL736: <a class=\"btn-primary\" href=\"#contact\">Получить демо бесплатно</a>"
+ },
+ "viewport": {
+  "time": "2026-11-17 03:25:31",
+  "result": "L5: <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">"
+ },
+ "шаг": {
+  "time": "2026-11-17 03:14:02",
+  "result": "L564: <h2 class=\"reveal\" style=\"--d:.08s\">Три шага — от&nbsp;идеи<br>до&nbsp;сайта в&nbsp;интернете</h2>"
+ },
+ "robots": {
+  "time": "2026-11-17 03:17:13",
+  "result": "совпадений нет"
+ },
+ "json-ld": {
+  "time": "2026-11-17 03:17:13",
+  "result": "совпадений нет"
+ },
+ "color-scheme": {
+  "time": "2026-11-17 03:17:13",
+  "result": "совпадений нет"
+ },
+ "gradient": {
+  "time": "2026-11-17 03:39:40",
+  "result": "L27: --grad:linear-gradient(135deg,#8b5cf6 0%,#4cc9f0 100%);\nL43: ::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#8b5cf6,#4cc9f0);border-radius:100px;border:2px solid var(--bg)}\nL44: ::-webkit-scrollbar-thumb:hover{background:linear-gradient(180deg,#a78bfa,#67e8f9)}\nL59: background:radial-gradient(circle,rgba(139,92,246,.08),transparent 65%);\nL96: .blob.b1{width:560px;height:560px;background:radial-gradient(circle,rgba(139,92,246,.5),transparent 65%);top:-140px;left:-120px;animation:blob1 22s ease-in-out infinite alternate}\nL97: .blob.b2{width:480px;height:480px;background:radial-gradient(circle,rgba(76,201,240,.35),transparent 65%);top:10%;right:-140px;animation:blob2 26s ease-in-out infinite alternate}\nL98: .blob.b3{width:420px;height:420px;background:radial-gradient(circle,rgba(217,70,239,.28),transparent 65%);bottom:-160px;left:34%;animation:blob3 30s ease-in-out infinite alternate}\nL102: .hero-veil{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(10,10,15,.4) 0%,transparent 40%,var(--bg) 100%)}\nL116: background:linear-gradient(90deg,#a78bfa,#67e8f9,#e879f9,#a78bfa);\nL159: background:linear-gradient(180deg,transparent,rgba(255,255,255,.16),transparent);\nL179: background:linear-gradient(160deg,rgba(255,255,255,.055) 0%,rgba(255,255,255,.02) 100%);\nL188: .stack-card .glowline{position:absolute;top:0;left:8%;right:8%;height:1px;background:linear-gradient(90deg,transparent,rgba(139,92,246,.6),rgba(76,201,240,.6),transparent)}"
+ },
+ "price-card": {
+  "time": "2026-11-17 07:52:37",
+  "result": "L334: .price-card{\nL341: .price-card:hover{transform:translateY(-6px);box-shadow:0 34px 100px rgba(139,92,246,.3)}\nL342: .price-card .flag{\nL348: .price-card h3{font-size:21px;font-weight:700}\nL349: .price-card .price{font-weight:700;font-size:58px;margin:18px 0 6px;letter-spacing:-.04em}\nL350: .price-card .per{color:var(--muted);font-size:14px;margin-bottom:30px}\nL351: .price-card ul{list-style:none;text-align:left;margin:0 auto 32px;max-width:360px}\nL352: .price-card li{padding:11px 0;font-size:15px;display:flex;gap:12px;align-items:flex-start;border-bottom:1px dashed var(--border)}\nL353: .price-card li:last-child{border-bottom:none}\nL354: .price-card li::before{content:'—';color:var(--blue);font-weight:700;flex-shrink:0}\nL355: .price-card .btn-primary{width:100%;justify-content:center}\nL644: <div class=\"price-card reveal zoom\" style=\"--d:.18s\">"
+ },
+ "cta-next": {
+  "time": "2026-11-17 03:25:31",
+  "result": "совпадений нет"
+ },
+ "прокрутка": {
+  "time": "2026-11-17 03:25:31",
+  "result": "совпадений нет"
+ },
+ "price-terms": {
+  "time": "2026-11-17 03:33:51",
+  "result": "совпадений нет"
+ },
+ "steps": {
+  "time": "2026-11-17 09:39:17",
+  "result": "L262: /* ================= steps ================= */\nL263: .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:48px;margin-top:70px}\nL565: <div class=\"steps\">"
+ },
+ "cta": {
+  "time": "2026-11-17 03:33:51",
+  "result": "L84: .nav-cta{\nL89: .nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(255,255,255,.2)}\nL123: .cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}\nL388: .final .cta-row{justify-content:center}\nL409: /* ================= sticky mobile cta ================= */\nL410: .sticky-cta{display:none}\nL413: .sticky-cta{\nL418: .sticky-cta .btn-primary{width:100%;justify-content:center;font-size:16px;padding:15px;min-height:52px}\nL444: <a class=\"nav-cta\" href=\"#contact\">Написать</a>\nL461: <div class=\"cta-row reveal\" style=\"--d:.34s\">\nL697: <!-- ============ FINAL CTA ============ -->\nL704: <div class=\"cta-row reveal\" style=\"--d:.24s\">"
+ },
+ "main": {
+  "time": "2026-11-17 03:33:51",
+  "result": "совпадений нет"
+ },
+ "details": {
+  "time": "2026-11-17 03:36:37",
+  "result": "L360: details{\nL365: details:hover{border-color:rgba(255,255,255,.22)}\nL366: details[open]{border-color:rgba(139,92,246,.5)}\nL367: details summary{\nL372: details summary::-webkit-details-marker{display:none}\nL373: details summary .plus{width:28px;height:28px;border-radius:50%;border:1px solid rgba(255,255,255,.22);flex-shrink:0;display:flex;align-items:center;justify-content:center;transitio\nL374: details summary .plus::before{content:'+';font-size:15px;color:#c9c2ff;font-weight:600}\nL375: details[open] summary .plus{transform:rotate(45deg);border-color:var(--violet)}\nL376: details .ans{padding:0 24px;max-height:0;overflow:hidden;transition:max-height .45s ease,padding .45s ease}\nL377: details[open] .ans{max-height:240px;padding:0 24px 22px}\nL378: details .ans p{font-size:14.5px;color:var(--muted)}\nL669: <details class=\"reveal fly\">"
+ },
+ "link": {
+  "time": "2026-11-17 03:36:37",
+  "result": "L12: <link rel=\"icon\" type=\"image/svg+xml\" href=\"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%238b5cf6'\nL13: <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\nL14: <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\nL15: <link href=\"https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\nL79: .nav-links{display:flex;gap:28px;font-size:14px;color:var(--muted);font-weight:500}\nL80: .nav-links a{position:relative;padding:4px 0;transition:color .2s}\nL81: .nav-links a::after{content:'';position:absolute;left:0;bottom:0;height:1.5px;width:0;border-radius:2px;background:var(--grad);transition:width .25s}\nL82: .nav-links a:hover,.nav-links a.active{color:var(--text)}\nL83: .nav-links a.active::after,.nav-links a:hover::after{width:100%}\nL90: @media(max-width:720px){.nav-links{display:none}}\nL395: .foot-links{display:flex;gap:22px}\nL396: .foot-links a{transition:color .2s}"
+ },
+ "font-size": {
+  "time": "2026-11-17 06:08:41",
+  "result": "L12: <link rel=\"icon\" type=\"image/svg+xml\" href=\"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%238b5cf6'\nL34: font-size:16px;line-height:1.65;\nL76: .logo{font-weight:700;font-size:15.5px;display:flex;align-items:center;gap:9px;color:#e8eaf2}\nL79: .nav-links{display:flex;gap:28px;font-size:14px;color:var(--muted);font-weight:500}\nL85: background:#fff;color:#0a0a0f;font-weight:700;font-size:14px;\nL108: color:#c9c2ff;font-size:13px;font-weight:600;letter-spacing:.02em;\nL114: h1{font-size:clamp(40px,6.4vw,76px);font-weight:700;letter-spacing:-.035em;max-width:840px;line-height:1.04}\nL122: .hero p.sub{color:#c3cad9;font-size:clamp(16.5px,2vw,20px);max-width:560px;margin:28px 0 38px}\nL125: background:var(--grad);color:#fff;font-weight:700;font-size:16.5px;\nL135: border:1px solid rgba(255,255,255,.18);color:var(--text);font-weight:600;font-size:16px;\nL141: .hero-note{margin-top:18px;font-size:13.5px;color:var(--muted)}\nL161: .proof-item .num{font-weight:700;font-size:clamp(30px,4vw,46px);letter-spacing:-.035em;line-height:1.05}"
+ },
+ "видео-превью": {
+  "time": "2026-11-17 03:53:44",
+  "result": "совпадений нет"
+ },
+ "faq": {
+  "time": "2026-11-17 09:50:26",
+  "result": "L358: /* ================= faq ================= */\nL359: .faq{max-width:700px;margin:60px auto 0}\nL442: <a href=\"#faq\">Вопросы</a>\nL663: <!-- ============ FAQ ============ -->\nL664: <section id=\"faq\">\nL668: <div class=\"faq\">"
+ },
+ "None": {
+  "time": "2026-11-17 09:25:23",
+  "result": "L50: a{color:inherit;text-decoration:none}\nL58: position:fixed;width:480px;height:480px;border-radius:50%;pointer-events:none;z-index:1;\nL90: @media(max-width:720px){.nav-links{display:none}}\nL103: #particles{position:absolute;inset:0;z-index:2;pointer-events:none}\nL147: .reveal.visible{opacity:1;transform:none}\nL195: -webkit-text-stroke:1px rgba(255,255,255,.12);pointer-events:none;user-select:none;\nL204: top:-220px;right:-180px;pointer-events:none;\nL284: position:absolute;inset:0;z-index:3;pointer-events:none;opacity:0;transition:opacity .3s;\nL332: top:-220px;left:50%;transform:translateX(-50%);pointer-events:none;\nL351: .price-card ul{list-style:none;text-align:left;margin:0 auto 32px;max-width:360px}\nL353: .price-card li:last-child{border-bottom:none}\nL368: cursor:pointer;font-weight:600;font-size:16px;list-style:none;"
+ },
+ "pain": {
+  "time": "2026-11-17 07:41:28",
+  "result": "совпадений нет"
+ },
+ "card-3d-tilt-hover": {
+  "time": "2026-11-17 04:21:58",
+  "result": "совпадений нет"
+ },
+ "glass-card-premium": {
+  "time": "2026-11-17 04:24:43",
+  "result": "совпадений нет"
+ },
+ "blob": {
+  "time": "2026-11-17 05:26:53",
+  "result": "L94: .blobs{position:absolute;inset:0;z-index:0;filter:blur(90px);opacity:.55}\nL95: .blob{position:absolute;border-radius:50%;will-change:transform}\nL96: .blob.b1{width:560px;height:560px;background:radial-gradient(circle,rgba(139,92,246,.5),transparent 65%);top:-140px;left:-120px;animation:blob1 22s ease-in-out infinite alternate}\nL97: .blob.b2{width:480px;height:480px;background:radial-gradient(circle,rgba(76,201,240,.35),transparent 65%);top:10%;right:-140px;animation:blob2 26s ease-in-out infinite alternate}\nL98: .blob.b3{width:420px;height:420px;background:radial-gradient(circle,rgba(217,70,239,.28),transparent 65%);bottom:-160px;left:34%;animation:blob3 30s ease-in-out infinite alternate}\nL99: @keyframes blob1{to{transform:translate(90px,70px) scale(1.15)}}\nL100: @keyframes blob2{to{transform:translate(-80px,90px) scale(1.2)}}\nL101: @keyframes blob3{to{transform:translate(70px,-60px) scale(1.1)}}\nL448: <!-- ============ HERO: градиентный заголовок + живые blobs ============ -->\nL450: <div class=\"blobs\">\nL451: <div class=\"blob b1\"></div>\nL452: <div class=\"blob b2\"></div>"
+ },
+ "btn-secondary": {
+  "time": "2026-11-17 04:27:30",
+  "result": "совпадений нет"
+ },
+ "scroll": {
+  "time": "2026-11-17 04:31:01",
+  "result": "L30: html{scroll-behavior:smooth}\nL41: ::-webkit-scrollbar{width:9px}\nL42: ::-webkit-scrollbar-track{background:var(--bg)}\nL43: ::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#8b5cf6,#4cc9f0);border-radius:100px;border:2px solid var(--bg)}\nL44: ::-webkit-scrollbar-thumb:hover{background:linear-gradient(180deg,#a78bfa,#67e8f9)}\nL45: html{scrollbar-width:thin;scrollbar-color:#8b5cf6 var(--bg)}\nL71: nav.scrolled{\nL426: html{scroll-behavior:auto}\nL479: <!-- ============ 3D SCROLL CARDS: sticky stack ============ -->\nL524: <div class=\"visual\" onclick=\"document.getElementById('contact').scrollIntoView({behavior:'smooth'})\"></div>\nL744: /* ---------- scroll: прогресс + nav + sticky stack (3D) ---------- */\nL749: function onScroll(){"
+ },
+ "scroll-snap-carousel": {
+  "time": "2026-11-17 04:45:12",
+  "result": "совпадений нет"
+ },
+ "footer": {
+  "time": "2026-11-17 04:48:38",
+  "result": "L392: /* ================= footer ================= */\nL393: footer{border-top:1px solid var(--border);padding:40px 0;color:var(--muted);font-size:14px;position:relative;z-index:2;background:var(--bg)}\nL711: <!-- ============ FOOTER ============ -->\nL712: <footer class=\"reveal\">\nL733: </footer>"
+ },
+ "scroll-heatmap": {
+  "time": "2026-11-17 04:51:25",
+  "result": "совпадений нет"
+ },
+ "три-шага": {
+  "time": "2026-11-17 05:40:52",
+  "result": "совпадений нет"
+ },
+ "sticky-cta": {
+  "time": "2026-11-17 06:39:54",
+  "result": "L410: .sticky-cta{display:none}\nL413: .sticky-cta{\nL418: .sticky-cta .btn-primary{width:100%;justify-content:center;font-size:16px;padding:15px;min-height:52px}\nL735: <div class=\"sticky-cta\">"
+ },
+ "contact-duo": {
+  "time": "2026-11-17 04:54:50",
+  "result": "совпадений нет"
+ },
+ "нет": {
+  "time": "2026-11-17 06:48:05",
+  "result": "L483: <h2 class=\"reveal\" style=\"--d:.08s\">Запись есть — клиентов<br>из&nbsp;поиска нет</h2>\nL498: <p>Сообщество тонет в постах, репостах и рекламе. Услуги, цены, отзывы и адрес разбросаны по разным местам. Новому клиенту нужно 10 минут, чтобы всё собрать — обычно он просто уход\nL564: <h2 class=\"reveal\" style=\"--d:.08s\">Три шага — от&nbsp;идеи<br>до&nbsp;сайта в&nbsp;интернете</h2>\nL578: <h3>Сайт в интернете</h3>\nL654: <li>Публикация в интернете + помощь с доменом</li>\nL671: <div class=\"ans\"><p>Нет — наоборот. Запись остаётся как есть, а сайт приводит на неё новых людей из поиска. Это дополнение, а не замена.</p></div>\nL675: <div class=\"ans\"><p>Подвоха нет. Мне проще показать результат, чем описывать его словами. Если демо не зайдёт — просто спасибо за просмотр, никаких обязательств.</p></div>\nL682: <summary>А если у нас нет фото и текстов?<span class=\"plus\"></span></summary>"
+ },
+ "button-primary": {
+  "time": "2026-11-17 05:06:19",
+  "result": "совпадений нет"
+ },
+ "cta-row": {
+  "time": "2026-11-17 05:13:00",
+  "result": "L123: .cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}\nL388: .final .cta-row{justify-content:center}\nL461: <div class=\"cta-row reveal\" style=\"--d:.34s\">\nL704: <div class=\"cta-row reveal\" style=\"--d:.24s\">"
+ },
+ "скрипт": {
+  "time": "2026-11-17 05:13:00",
+  "result": "совпадений нет"
+ },
+ "кнопка": {
+  "time": "2026-11-17 05:26:53",
+  "result": "L522: <p>Кнопка «Записаться» ведёт на ваш yclients, DIKIDI или ВК. Ничего менять и переучиваться не нужно — сайт просто приводит на неё людей из поиска.</p>\nL539: <p>Большинство клиентов заходит с мобильного — поэтому сайт спроектирован сначала под телефон, потом под экран побольше. Кнопка записи всегда под большим пальцем.</p>\nL652: <li>Кнопка записи на вашу систему</li>"
+ },
+ "hero-benefits": {
+  "time": "2026-11-17 05:29:39",
+  "result": "совпадений нет"
+ },
+ "отзывы": {
+  "time": "2026-11-17 05:56:53",
+  "result": "L498: <p>Сообщество тонет в постах, репостах и рекламе. Услуги, цены, отзывы и адрес разбросаны по разным местам. Новому клиенту нужно 10 минут, чтобы всё собрать — обычно он просто уход\nL553: <h3>Отзывы и работы</h3>"
+ },
+ "reviews": {
+  "time": "2026-11-17 05:35:12",
+  "result": "совпадений нет"
+ },
+ "скролл-анимация": {
+  "time": "2026-11-17 05:44:28",
+  "result": "совпадений нет"
+ },
+ "parallax": {
+  "time": "2026-11-17 05:47:14",
+  "result": "совпадений нет"
+ },
+ "nav": {
+  "time": "2026-11-17 05:50:40",
+  "result": "L64: /* ================= nav ================= */\nL65: nav{\nL71: nav.scrolled{\nL75: .nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}\nL79: .nav-links{display:flex;gap:28px;font-size:14px;color:var(--muted);font-weight:500}\nL80: .nav-links a{position:relative;padding:4px 0;transition:color .2s}\nL81: .nav-links a::after{content:'';position:absolute;left:0;bottom:0;height:1.5px;width:0;border-radius:2px;background:var(--grad);transition:width .25s}\nL82: .nav-links a:hover,.nav-links a.active{color:var(--text)}\nL83: .nav-links a.active::after,.nav-links a:hover::after{width:100%}\nL84: .nav-cta{\nL89: .nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(255,255,255,.2)}\nL90: @media(max-width:720px){.nav-links{display:none}}"
+ },
+ "Playfair": {
+  "time": "2026-11-17 06:08:41",
+  "result": "совпадений нет"
+ },
+ "отзывы и работы": {
+  "time": "2026-11-17 06:17:58",
+  "result": "L553: <h3>Отзывы и работы</h3>"
+ },
+ "hero-veil": {
+  "time": "2026-11-17 06:23:18",
+  "result": "L102: .hero-veil{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(10,10,15,.4) 0%,transparent 40%,var(--bg) 100%)}\nL455: <div class=\"hero-veil\"></div>"
+ },
+ "price": {
+  "time": "2026-11-17 09:39:17",
+  "result": "L334: .price-card{\nL341: .price-card:hover{transform:translateY(-6px);box-shadow:0 34px 100px rgba(139,92,246,.3)}\nL342: .price-card .flag{\nL348: .price-card h3{font-size:21px;font-weight:700}\nL349: .price-card .price{font-weight:700;font-size:58px;margin:18px 0 6px;letter-spacing:-.04em}\nL350: .price-card .per{color:var(--muted);font-size:14px;margin-bottom:30px}\nL351: .price-card ul{list-style:none;text-align:left;margin:0 auto 32px;max-width:360px}\nL352: .price-card li{padding:11px 0;font-size:15px;display:flex;gap:12px;align-items:flex-start;border-bottom:1px dashed var(--border)}\nL353: .price-card li:last-child{border-bottom:none}\nL354: .price-card li::before{content:'—';color:var(--blue);font-weight:700;flex-shrink:0}\nL355: .price-card .btn-primary{width:100%;justify-content:center}\nL356: .price-fine{margin-top:18px;font-size:13px;color:var(--muted)}"
+ },
+ "btn-ghost": {
+  "time": "2026-11-17 07:41:28",
+  "result": "L134: .btn-ghost{\nL140: .btn-ghost:hover{border-color:rgba(255,255,255,.42);background:var(--glass-strong)}\nL463: <a class=\"btn-ghost magnetic\" href=\"#works\">Посмотреть работы</a>"
+ },
+ "cta-reassure": {
+  "time": "2026-11-17 06:42:41",
+  "result": "совпадений нет"
+ },
+ "IntersectionObserver": {
+  "time": "2026-11-17 07:08:00",
+  "result": "L815: var wio = new IntersectionObserver(function(entries){\nL823: var io = new IntersectionObserver(function(entries){\nL831: var cio = new IntersectionObserver(function(entries){\nL886: var spyIo = new IntersectionObserver(function(entries){"
+ },
+ "nav-links": {
+  "time": "2026-11-17 07:58:14",
+  "result": "L79: .nav-links{display:flex;gap:28px;font-size:14px;color:var(--muted);font-weight:500}\nL80: .nav-links a{position:relative;padding:4px 0;transition:color .2s}\nL81: .nav-links a::after{content:'';position:absolute;left:0;bottom:0;height:1.5px;width:0;border-radius:2px;background:var(--grad);transition:width .25s}\nL82: .nav-links a:hover,.nav-links a.active{color:var(--text)}\nL83: .nav-links a.active::after,.nav-links a:hover::after{width:100%}\nL90: @media(max-width:720px){.nav-links{display:none}}\nL438: <div class=\"nav-links\">\nL880: var spyLinks = document.querySelectorAll('.nav-links a');"
+ },
+ "nav-toggle": {
+  "time": "2026-11-17 07:13:33",
+  "result": "совпадений нет"
+ },
+ "faq-item": {
+  "time": "2026-11-17 07:25:14",
+  "result": "совпадений нет"
+ },
+ "step": {
+  "time": "2026-11-17 07:25:14",
+  "result": "L262: /* ================= steps ================= */\nL263: .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:48px;margin-top:70px}\nL264: .step{position:relative}\nL265: .step .snum{\nL270: .step:hover .snum{color:var(--violet);-webkit-text-stroke-color:transparent}\nL271: .step h3{font-size:19px;font-weight:700;margin-bottom:10px}\nL272: .step p{font-size:15px;color:var(--muted)}\nL565: <div class=\"steps\">\nL566: <div class=\"step reveal fly\" style=\"--d:.1s\">\nL571: <div class=\"step reveal fly\" style=\"--d:.24s\">\nL576: <div class=\"step reveal fly\" style=\"--d:.38s\">"
+ },
+ "faq-outro": {
+  "time": "2026-11-17 07:34:05",
+  "result": "совпадений нет"
+ },
+ "offers": {
+  "time": "2026-11-17 07:44:15",
+  "result": "совпадений нет"
+ },
+ "progress-bar": {
+  "time": "2026-11-17 07:47:02",
+  "result": "совпадений нет"
+ },
+ "одна цена": {
+  "time": "2026-11-17 07:52:37",
+  "result": "совпадений нет"
+ },
+ "html": {
+  "time": "2026-11-17 08:43:40",
+  "result": "L1: <!DOCTYPE html>\nL2: <html lang=\"ru\">\nL30: html{scroll-behavior:smooth}\nL45: html{scrollbar-width:thin;scrollbar-color:#8b5cf6 var(--bg)}\nL426: html{scroll-behavior:auto}\nL803: el.innerHTML = '';\nL936: </html>"
+ },
+ "section": {
+  "time": "2026-11-17 08:49:13",
+  "result": "L49: section{padding:110px 0}\nL412: section{padding:72px 0}\nL480: <section id=\"problem\" style=\"padding-bottom:0\">\nL509: </section>\nL512: <section class=\"solution\" id=\"solution\">\nL558: </section>\nL561: <section id=\"how\">\nL583: </section>\nL586: <section id=\"works\" style=\"padding-top:0\">\nL637: </section>\nL640: <section class=\"pricing\" id=\"price\">\nL661: </section>"
+ },
+ "problem": {
+  "time": "2026-11-17 09:39:17",
+  "result": "L480: <section id=\"problem\" style=\"padding-bottom:0\">"
+ },
+ "demo": {
+  "time": "2026-11-17 09:39:17",
+  "result": "совпадений нет"
+ },
+ "schema": {
+  "time": "2026-11-17 09:50:26",
+  "result": "совпадений нет"
+ }
+}

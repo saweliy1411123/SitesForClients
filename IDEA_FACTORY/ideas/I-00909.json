@@ -1,0 +1,26 @@
+{
+ "id": "I-00909",
+ "round": 142,
+ "time": "2026-11-17 08:33:35",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Time‑to‑CTA‑Visible (TTV) Measurement",
+ "knob": "METHOD: in console create an `IntersectionObserver` targeting the primary CTA element (e.g., `document.querySelector('.final .btn-primary')`); on first intersection record `performance.now() - performance.timing.navigationStart` and log the elapsed milliseconds; optionally store in `sessionStorage` for later review.",
+ "skill": "",
+ "effect": "Measures how quickly the CTA appears in the viewport after page load, indicating layout efficiency and potential friction points.",
+ "risk": "Results depend on initial scroll position; user‑initiated scrolling before the CTA appears can inflate the metric.",
+ "rollback": "Call `observer.disconnect()` and clear the stored value (`sessionStorage.removeItem('ttv')`); no changes to source files needed.",
+ "verify": "Reload the page at the top, run the script, wait for the CTA to become visible, and check the console for a timestamp (aim for < 2000 ms) within 2 minutes.",
+ "priority_claim": "3 – valuable UX metric, slightly more complex but still executable quickly without code deployment.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: in console create an `IntersectionObserver` targeting the primary CTA element (e.g., `document.querySelector('.final .btn-primary')`); on first intersection record `performance.now() - performance.timing.navigationStart` and log the elapsed milliseconds; optionally store in `sessionStorage` for later review."
+ ],
+ "flags": []
+}

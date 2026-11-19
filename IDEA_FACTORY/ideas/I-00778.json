@@ -1,0 +1,26 @@
+{
+ "id": "I-00778",
+ "round": 119,
+ "time": "2026-11-17 07:29:22",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Parallax hero background layers",
+ "knob": "Внутри `<header class=\"hero\">` добавить две абсолютные обёртки: `<div class=\"hero-bg hero-bg‑far\"></div>` и `<div class=\"hero-bg hero-bg‑near\"></div>`. В CSS задать `position:absolute; inset:0; background-image:url(...); background-size:cover; transform:translateZ(0);` и `will-change:transform;`. Добавить скрипт‑listener `window.addEventListener('scroll',()=>{ const y=window.scrollY; document.querySelector('.hero-bg-far').style.transform=\\`translateY(\\${y*0.3}px)\\`; document.querySelector('.hero-bg-near').style.transform=\\`translateY(\\${y*0.6}px)\\`; });` (SAFE JS, без throttling).",
+ "skill": "",
+ "effect": "Создаёт ощущение глубины, усиливает премиальный имидж и удерживает пользователя в зоне hero‑экран.",
+ "risk": "На слабых устройствах может появиться небольшая задержка скролла (падение FPS).",
+ "rollback": "Удалить только вставленные `<div>` и JS‑блок; `git checkout -- index.html`.",
+ "verify": "Прокрутить страницу, убедиться в плавном смещении слоёв; в Chrome DevTools → Performance проверить, что FPS ≥ 55.",
+ "priority_claim": "2 — повышает восприятие бренда, но требует проверки производительности.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Внутри `<header class=\"hero\">` добавить две абсолютные обёртки: `<div class=\"hero-bg hero-bg‑far\"></div>` и `<div class=\"hero-bg hero-bg‑near\"></div>`. В CSS задать `position:absolute; inset:0; background-image:url(...); background-size:cover; transform:translateZ(0);` и `will-change:transform;`. Добавить скрипт‑listener `window.addEventListener('scroll',()=>{ const y=window.scrollY; document.querySelector('.hero-bg-far').style.transform=\\`translateY(\\${y*0.3}px)\\`; document.querySelector('.hero-bg-near').style.transform=\\`translateY(\\${y*0.6}px)\\`; });` (SAFE JS, без throttling)."
+ ],
+ "flags": []
+}

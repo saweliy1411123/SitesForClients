@@ -1,0 +1,26 @@
+{
+ "id": "I-00132",
+ "round": 19,
+ "time": "2026-11-17 02:36:36",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "meta color-scheme + og:locale/og:url",
+ "knob": "в `<head>` добавить `<meta name=\"color-scheme\" content=\"dark\">` (сайт тёмный: bg `#0a0a0f`), `<meta property=\"og:locale\" content=\"ru_RU\">` и `<meta property=\"og:url\" content=\"https://<домен>/\">`.",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "в `<head>` добавить `<meta name=\"color-scheme\" content=\"dark\">` (сайт тёмный: bg `#0a0a0f`), `<meta property=\"og:locale\" content=\"ru_RU\">` и `<meta property=\"og:url\" content=\"https://<домен>/\">`."
+ ],
+ "flags": []
+}

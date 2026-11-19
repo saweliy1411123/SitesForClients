@@ -1,0 +1,26 @@
+{
+ "id": "I-00278",
+ "round": 42,
+ "time": "2026-11-17 03:40:40",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "hero-clarity-boost",
+ "knob": "\n### Название\nhero-clarity-boost\n### Когда применять\nНа лендингах с первым экраном (hero), где оффер и CTA не сразу понятны.\n### Шаги\n1. Добавить под h1 список益 «что вы получите» (ul/li).\n2. Улучшить контраст и читаемость текста hero.\n3. Добавить атрибут aria-label к кнопке CTA.\nSAFE CSS:\n```css\n.hero {\ndisplay: flex;\nflex-direction: column;\nalign-items: center;\npadding: 40px 0;\n}\n.hero h1 {\nfont-size: 36px;\nfont-weight: 600;\nmargin-bottom: 20px;\n}\n.hero ul {\nlist-style: none;\npadding: 0;\nmargin: 0;\ndisplay: flex;\nflex-wrap: wrap;\njustify-content: center;\n}\n.hero li {\nmargin: 10px;\nfont-size: 18px;\n}\n.hero li::before {\ncontent: \"\\2713\";\nmargin-right: 10px;\nfont-weight: bold;\ncolor: #8b5cf6;\n}\n.btn-primary {\ntransition: filter 0.3s ease;\n}\n.btn-primary:hover {\nfilter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));\n}\n```\nSAFE JS:\n```javascript\n// нет\n```",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "открыть index.html в браузере и проверить видимость и читаемость hero.",
+ "priority_claim": "2",
+ "source_hint": "",
+ "site_request": "hero",
+ "category": "skill",
+ "variants": [
+  "\n### Название\nhero-clarity-boost\n### Когда применять\nНа лендингах с первым экраном (hero), где оффер и CTA не сразу понятны.\n### Шаги\n1. Добавить под h1 список益 «что вы получите» (ul/li).\n2. Улучшить контраст и читаемость текста hero.\n3. Добавить атрибут aria-label к кнопке CTA.\nSAFE CSS:\n```css\n.hero {\ndisplay: flex;\nflex-direction: column;\nalign-items: center;\npadding: 40px 0;\n}\n.hero h1 {\nfont-size: 36px;\nfont-weight: 600;\nmargin-bottom: 20px;\n}\n.hero ul {\nlist-style: none;\npadding: 0;\nmargin: 0;\ndisplay: flex;\nflex-wrap: wrap;\njustify-content: center;\n}\n.hero li {\nmargin: 10px;\nfont-size: 18px;\n}\n.hero li::before {\ncontent: \"\\2713\";\nmargin-right: 10px;\nfont-weight: bold;\ncolor: #8b5cf6;\n}\n.btn-primary {\ntransition: filter 0.3s ease;\n}\n.btn-primary:hover {\nfilter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));\n}\n```\nSAFE JS:\n```javascript\n// нет\n```"
+ ],
+ "flags": []
+}

@@ -1,0 +1,29 @@
+{
+ "id": "I-00834",
+ "round": 126,
+ "time": "2026-11-17 07:48:26",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "SKILL — tilt-3d-cards (3D-наклон карточек за курсором с глубиной)",
+ "knob": "SKILL — `tilt-3d-cards`\n**When to apply:** на любом лендинге с карточками (цена, шаги, боль, демо), где нужен «дорогой» эффект глубины без библиотек.\n**Steps:**\n1. Добавить CSS (ниже) в `<style>`.\n2. Добавить SAFE JS (ниже) перед `</body>` — он вешает perspective-наклон на элементы с классом `.tilt`.\n3. На странице добавить класс `tilt` к карточкам: `.price-card` (L334), карточкам боли (L520, L542), шагам в `.steps` (L565+), демо-концептам (~L589).\n4. На мобильных (≤720px) эффект отключается автоматически через media query — остаётся плоский hover-lift.\n**SAFE CSS:**\n```css\n.tilt{transform-style:preserve-3d;transition:transform .18s ease-out,box-shadow .3s ease;will-change:transform}\n.tilt:hover{box-shadow:0 30px 80px rgba(139,92,246,.25)}\n.tilt .tilt-inner{transform:translateZ(24px)}\n@media(max-width:720px){.tilt{transform:none!important}}\n@media(prefers-reduced-motion:reduce){.tilt{transform:none!important;transition:none}}\n```\n**SAFE JS:**\n```js\n(function(){\nif(matchMedia('(max-width:720px)').matches||matchMedia('(prefers-reduced-motion:reduce)').matches)return;\ndocument.querySelectorAll('.tilt').forEach(function(c){\nc.addEventListener('mousemove',function(e){\nvar r=c.getBoundingClientRect();\nvar x=(e.clientX-r.left)/r.width-.5;\nvar y=(e.clientY-r.top)/r.height-.5;\nc.style.transform='perspective(900px) rotateY('+(x*8)+'deg) rotateX('+(-y*8)+'deg)';\n});\nc.addEventListener('mouseleave',function(){c.style.transform='';});\n});\n})();\n```",
+ "skill": "",
+ "effect": "премиальное ощущение «дорогого» продукта — карточки реагируют на курсор объёмом; усиливает доверие к цене и демо-концептам без единой внешней библиотеки.",
+ "risk": "при большом числе tilt-элементов возможны микроподлагивания на слабых устройствах — mitigировано отключением на мобильных и reduced-motion.",
+ "rollback": "`git checkout -- index.improved.html` (CSS/JS попадают только в улучшенную копию; оригинал не трогается).",
+ "verify": "открыть index.improved.html, навести курсор на карточку цены и шаг — карточка плавно наклоняется к курсору; сузить окно до ≤720px — наклон исчезает; Tab-навигация не ломается (эффект только на hover мыши).",
+ "priority_claim": "2 — заметный визуальный апгрейд под тему «дорогой сайт», нулевой риск для контента и SEO, но вторичен по отношению к кон",
+ "source_hint": "",
+ "site_request": "price-card",
+ "category": "skill",
+ "variants": [
+  "SKILL — `tilt-3d-cards`\n**When to apply:** на любом лендинге с карточками (цена, шаги, боль, демо), где нужен «дорогой» эффект глубины без библиотек.\n**Steps:**\n1. Добавить CSS (ниже) в `<style>`.\n2. Добавить SAFE JS (ниже) перед `</body>` — он вешает perspective-наклон на элементы с классом `.tilt`.\n3. На странице добавить класс `tilt` к карточкам: `.price-card` (L334), карточкам боли (L520, L542), шагам в `.steps` (L565+), демо-концептам (~L589).\n4. На мобильных (≤720px) эффект отключается автоматически через media query — остаётся плоский hover-lift.\n**SAFE CSS:**\n```css\n.tilt{transform-style:preserve-3d;transition:transform .18s ease-out,box-shadow .3s ease;will-change:transform}\n.tilt:hover{box-shadow:0 30px 80px rgba(139,92,246,.25)}\n.tilt .tilt-inner{transform:translateZ(24px)}\n@media(max-width:720px){.tilt{transform:none!important}}\n@media(prefers-reduced-motion:reduce){.tilt{transform:none!important;transition:none}}\n```\n**SAFE JS:**\n```js\n(function(){\nif(matchMedia('(max-width:720px)').matches||matchMedia('(prefers-reduced-motion:reduce)').matches)return;\ndocument.querySelectorAll('.tilt').forEach(function(c){\nc.addEventListener('mousemove',function(e){\nvar r=c.getBoundingClientRect();\nvar x=(e.clientX-r.left)/r.width-.5;\nvar y=(e.clientY-r.top)/r.height-.5;\nc.style.transform='perspective(900px) rotateY('+(x*8)+'deg) rotateX('+(-y*8)+'deg)';\n});\nc.addEventListener('mouseleave',function(){c.style.transform='';});\n});\n})();\n```"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00503",
+ "round": 76,
+ "time": "2026-11-17 05:22:41",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — sticky-thumb-cta (мобильная закреплённая CTA с safe-area и авто-скрытием у финального блока)",
+ "knob": "Название: `sticky-thumb-cta`. Когда применять: на любом статическом лендинге, где главный CTA — якорная ссылка, а конверсия теряется на мобильных (CTA только вверху и в конце длинной страницы). Шаги: (1) В конец `<body>` добавить `<a class=\"sticky-cta\" href=\"#contact\">Получить демо бесплатно</a>` (якорь заменить на реальный id финальной секции). (2) Вставить SAFE CSS. (3) По желанию — SAFE JS, чтобы кнопка скрывалась, когда финальный CTA уже виден. (4) Проверить на 360px, что кнопка не перекрывает контент.\nSAFE CSS:\n.sticky-cta{position:fixed;left:16px;right:16px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:999;display:flex;justify-content:center;align-items:center;padding:15px 20px;border-radius:14px;background:linear-gradient(135deg,#8b5cf6,#6d4aff);color:#fff;font-weight:700;font-size:16px;text-decoration:none;box-shadow:0 10px 30px rgba(139,92,246,.45);transform:translateY(0);transition:transform .3s ease,opacity .3s ease}\n.sticky-cta:hover,.sticky-cta:focus-visible{transform:translateY(-2px);box-shadow:0 14px 40px rgba(139,92,246,.6)}\n.sticky-cta.is-hidden{transform:translateY(120%);opacity:0;pointer-events:none}\n@media (min-width:900px){.sticky-cta{left:auto;right:24px;bottom:24px;padding:13px 22px;border-radius:999px}}\n@media (prefers-reduced-motion: reduce){.sticky-cta{transition:none}}\nSAFE JS:\n(function(){var cta=document.querySelector('.sticky-cta');var final=document.querySelector('#contact');if(!cta||!final)return;if(!('IntersectionObserver' in window))return;new IntersectionObserver(function(e){cta.classList.toggle('is-hidden',e[0].isIntersecting)},{threshold:0.2}).observe(final);})();",
+ "skill": "",
+ "effect": "CTA всегда под большим пальцем на мобильных — меньше потери пользователей на длинном скролле, рост переходов к заявке; на десктопе — компактная круглая кнопка, не мешает.",
+ "risk": "Может перекрыть нижний контент/футер на маленьких экранах — нужен отступ и проверка на 360px.",
+ "rollback": "git checkout -- index.improved.html (или удалить блок `.sticky-cta` и CSS).",
+ "verify": "(1) Скопировать файл, вставить блок, открыть в Chrome. (2) Toggle device toolbar → 360px: кнопка видна, скролл до финального CTA — кнопка исчезает (JS) или перекрытие отсутствует. (3) Tab: фокус-кольцо на кнопке видно. (4) Вернуться: git checkout.",
+ "priority_claim": "1 — прямой эффект на конверсию мобильного трафика (а он основной, судя по тексту сайта), минимальный риск.",
+ "source_hint": "",
+ "site_request": "contact",
+ "category": "skill",
+ "variants": [
+  "Название: `sticky-thumb-cta`. Когда применять: на любом статическом лендинге, где главный CTA — якорная ссылка, а конверсия теряется на мобильных (CTA только вверху и в конце длинной страницы). Шаги: (1) В конец `<body>` добавить `<a class=\"sticky-cta\" href=\"#contact\">Получить демо бесплатно</a>` (якорь заменить на реальный id финальной секции). (2) Вставить SAFE CSS. (3) По желанию — SAFE JS, чтобы кнопка скрывалась, когда финальный CTA уже виден. (4) Проверить на 360px, что кнопка не перекрывает контент.\nSAFE CSS:\n.sticky-cta{position:fixed;left:16px;right:16px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:999;display:flex;justify-content:center;align-items:center;padding:15px 20px;border-radius:14px;background:linear-gradient(135deg,#8b5cf6,#6d4aff);color:#fff;font-weight:700;font-size:16px;text-decoration:none;box-shadow:0 10px 30px rgba(139,92,246,.45);transform:translateY(0);transition:transform .3s ease,opacity .3s ease}\n.sticky-cta:hover,.sticky-cta:focus-visible{transform:translateY(-2px);box-shadow:0 14px 40px rgba(139,92,246,.6)}\n.sticky-cta.is-hidden{transform:translateY(120%);opacity:0;pointer-events:none}\n@media (min-width:900px){.sticky-cta{left:auto;right:24px;bottom:24px;padding:13px 22px;border-radius:999px}}\n@media (prefers-reduced-motion: reduce){.sticky-cta{transition:none}}\nSAFE JS:\n(function(){var cta=document.querySelector('.sticky-cta');var final=document.querySelector('#contact');if(!cta||!final)return;if(!('IntersectionObserver' in window))return;new IntersectionObserver(function(e){cta.classList.toggle('is-hidden',e[0].isIntersecting)},{threshold:0.2}).observe(final);})();"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00784",
+ "round": 119,
+ "time": "2026-11-17 07:29:29",
+ "source": "localhost:8080/zhipu/glm-4.7-flash",
+ "sources": [
+  "localhost:8080/zhipu/glm-4.7-flash"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Subtle Film Grain Texture Overlay",
+ "knob": "Add `body::before` with `position: fixed`, `inset: 0`, `pointer-events: none`, `z-index: 9999`, and a radial gradient background (e.g., `radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%)`).",
+ "skill": "",
+ "effect": "Removes digital flatness, adds depth and \"studio\" feel.",
+ "risk": "Visual noise may be perceived as distracting by some users.",
+ "rollback": "Remove the `::before` pseudo-element and its background.",
+ "verify": "View the page on a high-DPI screen.",
+ "priority_claim": "2",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Add `body::before` with `position: fixed`, `inset: 0`, `pointer-events: none`, `z-index: 9999`, and a radial gradient background (e.g., `radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%)`)."
+ ],
+ "flags": []
+}

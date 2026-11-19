@@ -1,0 +1,26 @@
+{
+ "id": "I-00416",
+ "round": 62,
+ "time": "2026-11-17 04:40:54",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — Low‑Quality Image Placeholder (LQIP) для фоновых изображений",
+ "knob": "METHOD:\n**Name:** lqip-bg-image\n**When to apply:** На секциях с крупными фоновыми изображениями (hero, демо‑карточки), где важна первая визуальная реакция.\n**Steps:**\n1. Сгенерировать небольшую (≈10 × 10 px) версию фонового изображения, закодировать её в base64.\n2. В HTML заменить `style=\"background-image:url('hero.jpg')\"` на атрибут `data-bg=\"hero.jpg\"` и добавить класс `bg-lqip`.\n3. Добавить в CSS псевдо‑элемент `::before`, который будет показывать base64‑placeholder с `filter: blur(12px)` и `scale(1.05)`.\n4. Добавить небольшой скрипт, который создаёт `Image()`, загружает оригинал из `data-bg` и после `load` заменяет `background-image` у элемента, убирая `::before`.\nSAFE CSS:\n```css\n.bg-lqip{\nposition:relative;\noverflow:hidden;\n}\n.bg-lqip::before{\ncontent:\"\";\nposition:absolute;\ninset:0;\nbackground-image:url(\"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD…\"); /* tiny placeholder */\nbackground-size:cover;\nbackground-position:center;\nfilter:blur(12px);\ntransform:scale(1.05);\ntransition:opacity .3s ease;\n}\n.bg-lqip.loaded::before{opacity:0;pointer-events:none;}\n```\nSAFE JS:\n```js\ndocument.querySelectorAll('.bg-lqip').forEach(el=>{\nconst img = new Image();\nimg.src = el.dataset.bg;\nimg.onload = ()=>{\nel.style.backgroundImage = `url(${el.dataset.bg})`;\nel.classList.add('loaded');\n};\n});\n```",
+ "skill": "lqip-bg-image",
+ "effect": "Пользователь видит быстро загружающийся размазанный плейсхолдер, затем плавно появляется чёткое изображение → улучшение FCP/CLS, повышается восприятие скорости.",
+ "risk": "Требует генерации base64‑placeholder; если забыть добавить класс `bg-lqip`, изображение может не загрузиться.",
+ "rollback": "Удалить добавленные атрибуты `data-bg`, класс `bg-lqip`, CSS‑правила и JS‑блок; вернуть оригинальный `background-image`.",
+ "verify": "Включить DevTools → Network → Throttle → Slow 3G, открыть страницу и убедиться, что сначала появляется размытый placeholder, затем заменяется на оригинал без «мигания»; измерить FCP (должен снизиться).",
+ "priority_claim": "1 – критичный фактор первой визуальной реакции, особенно на мобильных, и почти без кода.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "METHOD:\n**Name:** lqip-bg-image\n**When to apply:** На секциях с крупными фоновыми изображениями (hero, демо‑карточки), где важна первая визуальная реакция.\n**Steps:**\n1. Сгенерировать небольшую (≈10 × 10 px) версию фонового изображения, закодировать её в base64.\n2. В HTML заменить `style=\"background-image:url('hero.jpg')\"` на атрибут `data-bg=\"hero.jpg\"` и добавить класс `bg-lqip`.\n3. Добавить в CSS псевдо‑элемент `::before`, который будет показывать base64‑placeholder с `filter: blur(12px)` и `scale(1.05)`.\n4. Добавить небольшой скрипт, который создаёт `Image()`, загружает оригинал из `data-bg` и после `load` заменяет `background-image` у элемента, убирая `::before`.\nSAFE CSS:\n```css\n.bg-lqip{\nposition:relative;\noverflow:hidden;\n}\n.bg-lqip::before{\ncontent:\"\";\nposition:absolute;\ninset:0;\nbackground-image:url(\"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD…\"); /* tiny placeholder */\nbackground-size:cover;\nbackground-position:center;\nfilter:blur(12px);\ntransform:scale(1.05);\ntransition:opacity .3s ease;\n}\n.bg-lqip.loaded::before{opacity:0;pointer-events:none;}\n```\nSAFE JS:\n```js\ndocument.querySelectorAll('.bg-lqip').forEach(el=>{\nconst img = new Image();\nimg.src = el.dataset.bg;\nimg.onload = ()=>{\nel.style.backgroundImage = `url(${el.dataset.bg})`;\nel.classList.add('loaded');\n};\n});\n```"
+ ],
+ "flags": []
+}

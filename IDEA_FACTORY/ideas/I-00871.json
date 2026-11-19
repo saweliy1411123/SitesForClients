@@ -1,0 +1,26 @@
+{
+ "id": "I-00871",
+ "round": 132,
+ "time": "2026-11-17 08:05:21",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — critical-css-inline",
+ "knob": "**Name:** critical-css-inline\n**When to apply:** На любой статический лендинг, где важен быстрый первый рендер (например, hero‑секция и верхний блок контента).\n**Steps:**\n1. Определить набор CSS‑прав, отвечающих только за стили выше‑скролла (`.hero`, `.nav`, `.hero h1`, `.hero p.sub`, `.nav-links`, `.btn-primary` и т.п.).\n2. Скопировать эти правила в отдельный блок `<style data-critical>` сразу после `<meta charset=\"utf-8\">`.\n3. Оставить оригинальный `<link rel=\"stylesheet\" href=\"styles.css\">` но добавить атрибут `media=\"print\"` и `onload=\"this.media='all'\"` для отложенной загрузки.\n4. При необходимости добавить небольшую JS‑прошивку, которая после `load` удалит атрибут `media` у линка, чтобы стили применились без повторного рендера.\n**SAFE CSS:**\n```css\n/* Critical CSS – above‑the‑fold */\n.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:130px 0 100px;overflow:hidden}\n.hero .wrap{position:relative;z-index:3}\n.hero h1{font-size:clamp(32px,6vw,58px);font-weight:700;line-height:1.2}\n.hero p.sub{color:#c3cad9;font-size:clamp(16.5px,2vw,20px);max-width:560px;margin:28px 0 38px}\n.nav{display:flex;justify-content:space-between;align-items:center;padding:20px}\n.nav-links{display:flex;gap:28px;font-size:14px;color:var(--muted);font-weight:500}\n.btn-primary{display:inline-flex;align-items:center;justify-content:center;padding:12px 24px;background:var(--grad);color:#fff;border-radius:6px;text-decoration:none}\n```\n**SAFE JS:**\n```js\ndocument.addEventListener('load',function(){\nconst ss=document.querySelector('link[rel=\"stylesheet\"][media=\"print\"]');\nif(ss) ss.media='all';\n});\n```",
+ "skill": "",
+ "effect": "Сокращение LCP — критический CSS будет применён сразу, без дополнительного сетевого запроса, что ускорит отрисовку первого экрана и повысит конверсию.",
+ "risk": "При ошибочном выборе правил может возникнуть FOUC (мигание без стилей) либо конфликт с остальными стилями при загрузке полной таблицы.",
+ "rollback": "Удалить блок `<style data-critical>` и вернуть оригинальный `<link rel=\"stylesheet\" href=\"styles.css\">` (git checkout index.html).",
+ "verify": "Открыть страницу в DevTools → Network, отключить кэш, убедиться, что запрос к `styles.css` происходит только после `load`, а первые стили уже применены (видно в вкладке Elements → <style data-critical>).",
+ "priority_claim": "1 – быстрый LCP ≈ 1 секунда → значительный рост Core Web Vitals и SEO‑рейтинга.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** critical-css-inline\n**When to apply:** На любой статический лендинг, где важен быстрый первый рендер (например, hero‑секция и верхний блок контента).\n**Steps:**\n1. Определить набор CSS‑прав, отвечающих только за стили выше‑скролла (`.hero`, `.nav`, `.hero h1`, `.hero p.sub`, `.nav-links`, `.btn-primary` и т.п.).\n2. Скопировать эти правила в отдельный блок `<style data-critical>` сразу после `<meta charset=\"utf-8\">`.\n3. Оставить оригинальный `<link rel=\"stylesheet\" href=\"styles.css\">` но добавить атрибут `media=\"print\"` и `onload=\"this.media='all'\"` для отложенной загрузки.\n4. При необходимости добавить небольшую JS‑прошивку, которая после `load` удалит атрибут `media` у линка, чтобы стили применились без повторного рендера.\n**SAFE CSS:**\n```css\n/* Critical CSS – above‑the‑fold */\n.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:130px 0 100px;overflow:hidden}\n.hero .wrap{position:relative;z-index:3}\n.hero h1{font-size:clamp(32px,6vw,58px);font-weight:700;line-height:1.2}\n.hero p.sub{color:#c3cad9;font-size:clamp(16.5px,2vw,20px);max-width:560px;margin:28px 0 38px}\n.nav{display:flex;justify-content:space-between;align-items:center;padding:20px}\n.nav-links{display:flex;gap:28px;font-size:14px;color:var(--muted);font-weight:500}\n.btn-primary{display:inline-flex;align-items:center;justify-content:center;padding:12px 24px;background:var(--grad);color:#fff;border-radius:6px;text-decoration:none}\n```\n**SAFE JS:**\n```js\ndocument.addEventListener('load',function(){\nconst ss=document.querySelector('link[rel=\"stylesheet\"][media=\"print\"]');\nif(ss) ss.media='all';\n});\n```"
+ ],
+ "flags": []
+}

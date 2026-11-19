@@ -1,0 +1,27 @@
+{
+ "id": "I-00664",
+ "round": 101,
+ "time": "2026-11-17 06:39:07",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3",
+  "lareper/glm-5.2"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Единый preconnect + сокращённый Manrope одним коммитом (слияние трёх дублей шрифтов)",
+ "knob": "METHOD",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD"
+ ],
+ "flags": []
+}

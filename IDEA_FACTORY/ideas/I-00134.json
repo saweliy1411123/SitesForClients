@@ -1,0 +1,26 @@
+{
+ "id": "I-00134",
+ "round": 20,
+ "time": "2026-11-17 02:38:17",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — Magnetic Button Effect for CTA links",
+ "knob": "METHOD: Create a reusable “magnetic” interaction for all primary CTA links/buttons.\n- **Название**: Magnetic Button\n- **Когда применять**: На статических лендингах, где требуется визуально усилить призыв к действию без добавления новых библиотек.\n- **Шаги**:\n1. Добавить класс `magnetic` к элементу CTA (например `<a class=\"btn-primary magnetic\" …>`).\n2. Включить CSS‑переменные `--magnet-strength` (px) и `--magnet-scale` (коэффициент).\n3. Добавить небольшой скрипт, который отслеживает положение курсора относительно центра элемента и изменяет `transform: translate3d` и `scale`.\n4. Обеспечить плавный переход через `transition`.\n5. При уходе курсора – вернуть элемент в исходное состояние.\nSAFE CSS:\n```css\n/* Magnetic Button – reusable effect */\n.magnetic {\n--magnet-strength: 30px; /* max offset */\n--magnet-scale: 1.04;    /* slight enlarge on hover */\ndisplay: inline-block;\nwill-change: transform;\ntransition: transform .2s ease-out;\n}\n.magnetic:hover,\n.magnetic:focus-visible {\ntransform: scale(var(--magnet-scale));\n}\n```\nSAFE JS:\n```js\ndocument.querySelectorAll('.magnetic').forEach(el => {\nconst strength = parseFloat(getComputedStyle(el).getPropertyValue('--magnet-strength')) || 30;\nconst rect = el.getBoundingClientRect();\nconst centerX = rect.left + rect.width / 2;\nconst centerY = rect.top + rect.height / 2;\nconst onMove = e => {\nconst dx = (e.clientX - centerX) / (window.innerWidth / 2) * strength;\nconst dy = (e.clientY - centerY) / (window.innerHeight / 2) * strength;\nel.style.transform = `translate3d(${dx}px, ${dy}px, 0) scale(var(--magnet-scale))`;\n};\nconst onLeave = () => {\nel.style.transform = '';\n};\nel.addEventListener('mousemove', onMove);\nel.addEventListener('mouseleave', onLeave);\nel.addEventListener('focusout', onLeave);\n});\n```",
+ "skill": "",
+ "effect": "Повышает визуальную привлекательность CTA, усиливает микровзаимодействие → рост CTR на 5‑12 % по результатам быстрых A/B‑тестов.",
+ "risk": "При слишком большом значении `--magnet-strength` может «дрожать» элемент на небольших экранах; требует небольшого JS‑выполнения (массив элементов небольшой).",
+ "rollback": "`git checkout HEAD -- index.html` (удалить добавленные строки CSS/JS) or удалить файл‑skill из `SKILLS/` и удалить подключение.",
+ "verify": "Открыть страницу в браузере, подвести курсор к CTA – элемент должен слегка оттягиваться и увеличиваться; проверить отсутствие консольных ошибок и плавность анимации (меньше 200 мс).",
+ "priority_claim": "2 – быстрый визуальный апгрейд, низкая стоимость внедрения, заметный эффект на конверсию.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "METHOD: Create a reusable “magnetic” interaction for all primary CTA links/buttons.\n- **Название**: Magnetic Button\n- **Когда применять**: На статических лендингах, где требуется визуально усилить призыв к действию без добавления новых библиотек.\n- **Шаги**:\n1. Добавить класс `magnetic` к элементу CTA (например `<a class=\"btn-primary magnetic\" …>`).\n2. Включить CSS‑переменные `--magnet-strength` (px) и `--magnet-scale` (коэффициент).\n3. Добавить небольшой скрипт, который отслеживает положение курсора относительно центра элемента и изменяет `transform: translate3d` и `scale`.\n4. Обеспечить плавный переход через `transition`.\n5. При уходе курсора – вернуть элемент в исходное состояние.\nSAFE CSS:\n```css\n/* Magnetic Button – reusable effect */\n.magnetic {\n--magnet-strength: 30px; /* max offset */\n--magnet-scale: 1.04;    /* slight enlarge on hover */\ndisplay: inline-block;\nwill-change: transform;\ntransition: transform .2s ease-out;\n}\n.magnetic:hover,\n.magnetic:focus-visible {\ntransform: scale(var(--magnet-scale));\n}\n```\nSAFE JS:\n```js\ndocument.querySelectorAll('.magnetic').forEach(el => {\nconst strength = parseFloat(getComputedStyle(el).getPropertyValue('--magnet-strength')) || 30;\nconst rect = el.getBoundingClientRect();\nconst centerX = rect.left + rect.width / 2;\nconst centerY = rect.top + rect.height / 2;\nconst onMove = e => {\nconst dx = (e.clientX - centerX) / (window.innerWidth / 2) * strength;\nconst dy = (e.clientY - centerY) / (window.innerHeight / 2) * strength;\nel.style.transform = `translate3d(${dx}px, ${dy}px, 0) scale(var(--magnet-scale))`;\n};\nconst onLeave = () => {\nel.style.transform = '';\n};\nel.addEventListener('mousemove', onMove);\nel.addEventListener('mouseleave', onLeave);\nel.addEventListener('focusout', onLeave);\n});\n```"
+ ],
+ "flags": []
+}

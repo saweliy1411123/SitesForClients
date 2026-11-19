@@ -1,0 +1,27 @@
+{
+ "id": "I-00769",
+ "round": 117,
+ "time": "2026-11-17 07:24:27",
+ "source": "lareper/glm-5.2-fast-preview",
+ "sources": [
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.2"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "FAQ как details/summary — нативная доступность без JS и SEO-текст в DOM",
+ "knob": "Секция FAQ (перед финальным CTA, ~L690+): заменить JS-раскрытие (если div+клик) на `<details class=\"faq-item\"><summary>Вопрос</summary><p>Ответ</p></details>`; summary стилизовать как текущий элемент (cursor:pointer, list-style кастомный маркер, min-height 48px)",
+ "skill": "",
+ "effect": "Ответы FAQ всегда в DOM и доступны поисковикам и скринридерам, работает без JS, клавиатурная навигация из коробки — плюс к SEO и a11y",
+ "risk": "Внешний вид маркера details отличается от текущего дизайна — нужен CSS для ::marker/summary::-webkit-details-marker",
+ "rollback": "git checkout -- index.html (правки в index.improved.html, оригинал не трогаем)",
+ "verify": "Открыть файл, Tab до FAQ — пробел раскрывает вопрос; в консоли `document.querySelectorAll('details').length` и Ctrl+F по тексту ответа при закрытом состоянии; Lighthouse a11y ≥ до",
+ "priority_claim": "1 — FAQ сейчас либо невидим для SEO, либо требует JS; правка дешёвая и безопасная",
+ "source_hint": "",
+ "site_request": "faq",
+ "category": "lever",
+ "variants": [
+  "Секция FAQ (перед финальным CTA, ~L690+): заменить JS-раскрытие (если div+клик) на `<details class=\"faq-item\"><summary>Вопрос</summary><p>Ответ</p></details>`; summary стилизовать как текущий элемент (cursor:pointer, list-style кастомный маркер, min-height 48px)"
+ ],
+ "flags": []
+}

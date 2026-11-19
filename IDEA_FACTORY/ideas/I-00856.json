@@ -1,0 +1,26 @@
+{
+ "id": "I-00856",
+ "round": 128,
+ "time": "2026-11-17 07:55:16",
+ "source": "lareper/glm-5.3-prime",
+ "sources": [
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Метод «проверка якорных переходов с сохранением позиции хедера» (anchor-offset audit)",
+ "knob": "METHOD: (1) В консоли выполнить: `document.querySelectorAll('a[href^=\"#\"]').forEach(a=>{a.addEventListener('click',()=>setTimeout(()=>{const t=document.querySelector(a.hash);console.log(a.hash, t.getBoundingClientRect().top)},300))})`. (2) Пройти по всем якорям в `.nav-links` (L438) и CTA. (3) Если `top` у целевой секции < 0 или перекрыт фиксированным хедером — гипотеза «якоря прыгают под шапку» подтверждена, кандидат — `scroll-margin-top` на секциях. (4) Повторить на ширине 375px.",
+ "skill": "",
+ "effect": "Навигация ведёт точно к заголовкам секций, а не прячет их под хедером — меньше фрустрации, выше доверие к «дорогому» продукту.",
+ "risk": "На коротких секциях (цена) scroll-margin может оставить много пустоты сверху — подобрать значение 60–80px.",
+ "rollback": "Метод не меняет файл; при последующем добавлении `scroll-margin-top` откат — `git checkout index.html`.",
+ "verify": "Метод сам является проверкой; дополнительно Tab-ом пройтись по якорям с клавиатуры за 2 минуты.",
+ "priority_claim": "2 — влияет на все переходы к цене/демо, но частично пересекается с уже накопленными scroll-скиллами.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: (1) В консоли выполнить: `document.querySelectorAll('a[href^=\"#\"]').forEach(a=>{a.addEventListener('click',()=>setTimeout(()=>{const t=document.querySelector(a.hash);console.log(a.hash, t.getBoundingClientRect().top)},300))})`. (2) Пройти по всем якорям в `.nav-links` (L438) и CTA. (3) Если `top` у целевой секции < 0 или перекрыт фиксированным хедером — гипотеза «якоря прыгают под шапку» подтверждена, кандидат — `scroll-margin-top` на секциях. (4) Повторить на ширине 375px."
+ ],
+ "flags": []
+}

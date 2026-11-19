@@ -1,0 +1,27 @@
+{
+ "id": "I-00267",
+ "round": 40,
+ "time": "2026-11-17 03:35:35",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить `font-display: swap` в @font-face для Manrope",
+ "knob": "Внутри `<style>` или отдельного CSS‑файла объявить:\n```css\n@font-face{\nfont-family:'Manrope';\nsrc:url('https://fonts.gstatic.com/s/manrope/v13/... .woff2') format('woff2');\nfont-weight:400 500 600 700;\nfont-display:swap;\n}\n```\n(заменить URL на тот, который уже используется)",
+ "skill": "",
+ "effect": "Уменьшит FOIT (flash of invisible text), ускорит визуальное отображение текста",
+ "risk": "Нужно точно скопировать URL‑адреса шрифтов; ошибочный URL → шрифт не загрузится",
+ "rollback": "Удалить объявление @font-face или вернуть оригинальный `<link>` к Google Fonts",
+ "verify": "Открыть страницу, включить “Disable cache” и посмотреть, что текст появляется сразу (нет пустого пространства); проверить в Lighthouse → Performance → “Avoid invisible text”",
+ "priority_claim": "2 – улучшает восприятие без риска, но требует точного копирования URL",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Внутри `<style>` или отдельного CSS‑файла объявить:\n```css\n@font-face{\nfont-family:'Manrope';\nsrc:url('https://fonts.gstatic.com/s/manrope/v13/... .woff2') format('woff2');\nfont-weight:400 500 600 700;\nfont-display:swap;\n}\n```\n(заменить URL на тот, который уже используется)",
+  "В `<style>` (или отдельный CSS‑файл) добавить перед импортом шрифтов:\n```css\n@font-face {\nfont-family: 'Manrope';\nsrc: url('https://fonts.gstatic.com/s/manrope/v13/...') format('woff2');\nfont-weight: 400 700;\nfont-display: swap;\n}\n```\n(использовать тот же URL, который генерирует Google Fonts). Затем заменить оригинальный `<link href=\"https://fonts.googleapis.com/css2?family=Manrope...\">` на `<style>`‑блок выше и оставить `<link rel=\"preload\" as=\"style\" href=\"...\">` если нужно."
+ ],
+ "flags": []
+}

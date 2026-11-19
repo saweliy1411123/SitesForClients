@@ -1,0 +1,26 @@
+{
+ "id": "I-00942",
+ "round": 154,
+ "time": "2026-11-17 09:07:24",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Сжимающийся фиксированный хедер при скролле",
+ "knob": "Добавить класс `.sticky-header` к `<header class=\"hero\">`; в CSS задать `position:fixed; top:0; width:100%; transition:transform .3s;` и `transform:translateY(-100%);` по умолчанию, а при скролле `transform:translateY(0);` через небольшую JS‑функцию, меняющую класс `scrolled`.",
+ "skill": "",
+ "effect": "Пользователь всегда видит навигацию, но она не занимает много места; повышает удобство мобильных пользователей и время на странице.",
+ "risk": "Требует небольшого JS; может конфликтовать с текущим скролл‑поведением, если уже есть обработчики.",
+ "rollback": "`git checkout -- index.html` (удалить добавленные блоки CSS/JS).",
+ "verify": "На мобильном и десктопе открыть страницу, прокрутить вниз — хедер должен появиться/исчезнуть плавно; проверить отсутствие «jump» в layout (CLS).",
+ "priority_claim": "2 — улучшает UX, но не критично для SEO.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Добавить класс `.sticky-header` к `<header class=\"hero\">`; в CSS задать `position:fixed; top:0; width:100%; transition:transform .3s;` и `transform:translateY(-100%);` по умолчанию, а при скролле `transform:translateY(0);` через небольшую JS‑функцию, меняющую класс `scrolled`."
+ ],
+ "flags": []
+}

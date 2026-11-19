@@ -1,0 +1,40 @@
+{
+ "id": "I-00166",
+ "round": 25,
+ "time": "2026-11-17 02:53:22",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b",
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+  "localhost:8081/big_only"
+ ],
+ "mentions": 3,
+ "status": "NEW",
+ "title": "JSON‑LD разметка FAQPage",
+ "knob": "В конец `<body>` добавить скрипт:\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"FAQPage\",\n\"mainEntity\":[\n{\"@type\":\"Question\",\"name\":\"Как быстро запускается сайт?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"За 2 дня после предоставления материалов.\"}},\n{\"@type\":\"Question\",\"name\":\"Сколько стоит демо‑лендинг?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Бесплатно, без обязательств.\"}}\n/* добавить остальные вопросы */\n]\n}\n</script>\n```",
+ "skill": "",
+ "effect": "Поисковые системы могут вывести блоки вопросов‑ответов прямо в результатах, увеличивая видимость и кликабельность.",
+ "risk": "Нужно поддерживать актуальность вопросов; если текст изменится, JSON‑LD может стать несоответствующим.",
+ "rollback": "Удалить весь `<script type=\"application/ld+json\">…</script>` из тела.",
+ "verify": "В Google Search Console → Rich Results Test ввести URL, убедиться, что разметка проходит без ошибок.",
+ "priority_claim": "2 – SEO‑выгода, небольшая нагрузка.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В конец `<body>` добавить скрипт:\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"FAQPage\",\n\"mainEntity\":[\n{\"@type\":\"Question\",\"name\":\"Как быстро запускается сайт?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"За 2 дня после предоставления материалов.\"}},\n{\"@type\":\"Question\",\"name\":\"Сколько стоит демо‑лендинг?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Бесплатно, без обязательств.\"}}\n/* добавить остальные вопросы */\n]\n}\n</script>\n```",
+  "В конец `<body>` добавить скрипт с JSON-LD",
+  "В конец `<body>` добавить `<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Как быстро будет готов сайт?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Сайт будет готов за 2 дня после подтверждения ТЗ.\"}},{\"@type\":\"Question\",\"name\":\"Какая стоимость?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Один фиксированный тариф – 15 000 ₽, без скрытых платежей.\"}}]}</script>`. Список вопросов берётся из текущих `<h2>`/`<h3>` в секции FAQ.",
+  "В конец `<body>` вставить `<script type=\"application/ld+json\">` с массивом вопросов‑ответов из секции FAQ, используя структуру `{\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"…\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"…\"}}]}`.",
+  "В конец `<body>` после текущей секции FAQ вставить `<script type=\"application/ld+json\">` с `@type\":\"FAQPage\"` и массивом `mainEntity` — каждый объект `{ \"@type\":\"Question\", \"name\":\"...\", \"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"...\"}}`, где `name` и `text` берутся из текущих вопросов/ответов.",
+  "В конец `<body>` вставить скрипт\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\": \"https://schema.org\",\n\"@type\": \"FAQPage\",\n\"mainEntity\": [\n{\n\"@type\": \"Question\",\n\"name\": \"Сколько времени занимает создание сайта?\",\n\"acceptedAnswer\": {\"@type\": \"Answer\",\"text\":\"Сайт готов за 2 дня – от идеи до публикации.\"}\n},\n{\n\"@type\": \"Question\",\n\"name\": \"Нужен ли мне технический специалист для поддержки?\",\n\"acceptedAnswer\": {\"@type\": \"Answer\",\"text\":\"После запуска вы получаете инструкцию и возможность вносить правки самостоятельно.\"}\n},\n{\n\"@type\": \"Question\",\n\"name\": \"Какие гарантии вы даете?\",\n\"acceptedAnswer\": {\"@type\": \"Answer\",\"text\":\"Если сайт не будет виден в Яндексе после 30 дней, делаем правки бесплатно.\"}\n}\n]\n}\n</script>\n```",
+  "Добавить JSON‑LD разметку `FAQPage` в конец `<body>` для всех вопросов в секции FAQ, используя структуру:\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"FAQPage\",\n\"mainEntity\":[\n{\"@type\":\"Question\",\"name\":\"<вопрос 1>\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"<ответ 1>\"}},\n{\"@type\":\"Question\",\"name\":\"<вопрос 2>\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"<ответ 2>\"}},\n{\"@type\":\"Question\",\"name\":\"<вопрос 3>\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"<ответ 3>\"}}\n]\n}\n</script>\n```",
+  "в `<head>` вставить `<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"<вопрос 1>\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"<ответ 1>\"}},…]}` (сгенерировать из текущих вопросов/ответов).",
+  "Перед закрывающим `</head>` вставить\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\": \"https://schema.org\",\n\"@type\": \"FAQPage\",\n\"mainEntity\": [\n{\n\"@type\": \"Question\",\n\"name\": \"Как быстро будет готов сайт?\",\n\"acceptedAnswer\": {\n\"@type\": \"Answer\",\n\"text\": \"Сайт будет готов в течение 2‑ух рабочих дней после уточнения требований.\"\n}\n},\n{\n\"@type\": \"Question\",\n\"name\": \"Сколько стоит разработка?\",\n\"acceptedAnswer\": {\n\"@type\": \"Answer\",\n\"text\": \"Стоимость фиксирована – 12 000 ₽, без скрытых доплат.\"\n}\n}\n/* добавить остальные вопросы из секции FAQ -->\n]\n}\n</script>\n```\n(скопировать реальные вопросы/ответы из текущей разметки FAQ)",
+  "В `<head>` перед закрывающим `</head>` вставить скрипт:\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"FAQPage\",\n\"mainEntity\":[\n{\"@type\":\"Question\",\"name\":\"Сколько времени занимает запуск?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"2 дня — полностью готовый сайт.\"}},\n{\"@type\":\"Question\",\"name\":\"Какая гарантия качества?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"30‑дневная поддержка и правки без доплаты.\"}},\n{\"@type\":\"Question\",\"name\":\"Можно ли подключить свой домен?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Да, подключаем любой домен в течение 24 ч.\"}}\n]\n}\n</script>\n```\nи превратить текущий список вопросов в секцию FAQ с `<details><summary>…</summary><p>…</p></details>` (плюс стили `details {cursor:pointer;}`).",
+  "В `<head>` вставить `<script type=\"application/ld+json\">` со структурой FAQ, где каждый вопрос‑ответ берётся из текущей секции FAQ (ид `faq`). Пример:\n```json\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"FAQPage\",\n\"mainEntity\":[\n{\"@type\":\"Question\",\"name\":\"Как быстро запускается сайт?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"За 2 дня после согласования.\"}},\n{\"@type\":\"Question\",\"name\":\"Сколько стоит?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Одна фиксированная цена – 9 900 ₽.\"}}\n]\n}\n```",
+  "В `<head>` перед закрывающим `</head>` вставить скрипт\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"FAQPage\",\n\"mainEntity\":[\n{\"@type\":\"Question\",\"name\":\"Как быстро будет готов сайт?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"За 2 дня после согласования ТЗ.\"}},\n{\"@type\":\"Question\",\"name\":\"Сколько стоит лендинг?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Одна фиксированная цена — {{price}} руб.\"}},\n{\"@type\":\"Question\",\"name\":\"Где будет размещён сайт?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"На надёжном хостинге в России, с поддержкой Яндекс‑поиска.\"}}\n]\n}\n</script>\n```\n(заменить `{{price}}` на реальное значение).",
+  "После секции FAQ (см. SITE_REQUEST «faq») добавить скрипт `<script type=\"application/ld+json\">` с массивом объектов `{ \"@type\":\"Question\",\"name\":\"...\", \"acceptedAnswer\":{ \"@type\":\"Answer\",\"text\":\"...\" } }`, основываясь на текущих `<h3>`/параграфах FAQ"
+ ],
+ "flags": []
+}

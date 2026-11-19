@@ -1,0 +1,26 @@
+{
+ "id": "I-00066",
+ "round": 10,
+ "time": "2026-11-17 02:10:56",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "I‑00066 — «Хлебные крошки + schema.org BreadcrumbList»",
+ "knob": "Вставить перед основным контентом `<nav aria-label=\"Навигация по сайту\" class=\"breadcrumbs\"><ul itemscope itemtype=\"https://schema.org/BreadcrumbList\">…</ul></nav>` с элементами:\n```html\n<li itemprop=\"itemListElement\" itemscope\nitemtype=\"https://schema.org/ListItem\">\n<a itemprop=\"item\" href=\"/\"><span itemprop=\"name\">Главная</span></a>\n<meta itemprop=\"position\" content=\"1\"/>\n</li>\n```\n(и аналогично для текущей секции «Лендинг за 2 дня»). Добавить базовый CSS для компактного отображения.",
+ "skill": "",
+ "effect": "Улучшит навигацию для пользователей и поисковых систем, повысит шанс появления в поисковой выдаче с «хлебными крошками», улучшит показатель SEO‑структуры без изменения контента.",
+ "risk": "Требует небольших правок HTML; если разместить внутри уже существующего `<section>`, может нарушить вёрстку, но проверка в локальном билде устраняет риск.",
+ "rollback": "`git checkout -- index.html` (удалить вставленный `<nav>` и связанные стили).",
+ "verify": "Включить в Chrome DevTools → Rich Results Test URL `file://…/index.html`; убедиться, что BreadcrumbList распознан без ошибок. Проверить визуально, что крошки не «вываливаются» за пределы контейнера.",
+ "priority_claim": "**2** – умеренный эффект (SEO + UX), простая реализация, но менее критична, чем тёмный режим, поэтому ставим второй прио",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Вставить перед основным контентом `<nav aria-label=\"Навигация по сайту\" class=\"breadcrumbs\"><ul itemscope itemtype=\"https://schema.org/BreadcrumbList\">…</ul></nav>` с элементами:\n```html\n<li itemprop=\"itemListElement\" itemscope\nitemtype=\"https://schema.org/ListItem\">\n<a itemprop=\"item\" href=\"/\"><span itemprop=\"name\">Главная</span></a>\n<meta itemprop=\"position\" content=\"1\"/>\n</li>\n```\n(и аналогично для текущей секции «Лендинг за 2 дня»). Добавить базовый CSS для компактного отображения."
+ ],
+ "flags": []
+}

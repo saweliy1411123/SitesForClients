@@ -1,0 +1,26 @@
+{
+ "id": "I-00242",
+ "round": 37,
+ "time": "2026-11-17 03:26:42",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "48 px tap‑target overlay for fast mobile accessibility audit",
+ "knob": "Inject a temporary `<style>` block (or add to existing CSS) that draws a semi‑transparent 48 px circle around every interactive element:\n```css\n/* DEBUG: tap‑target overlay – remove before launch */\na, button, [role=\"button\"], .magnetic {\nposition:relative;\n}\na::after, button::after, [role=\"button\"]::after, .magnetic::after{\ncontent:\"\";\nposition:absolute;\ninset:-12px;               /* 48 px total (12 px each side) */\nborder:2px dashed rgba(255,0,0,.4);\nborder-radius:50%;\npointer-events:none;\n}\n```",
+ "skill": "",
+ "effect": "Provides an immediate visual cue of whether clickable elements meet the recommended 48 px minimum touch area on mobile, catching spacing issues without manual measurement.",
+ "risk": "Purely visual; does not affect functionality, but must be removed before production to avoid UI clutter.",
+ "rollback": "Delete the added CSS block (single git revert or file edit).",
+ "verify": "Open the page on a mobile device or emulator, look for any red circles clipped by the viewport or overlapping other elements; adjust padding/margins accordingly.",
+ "priority_claim": "3 – improves mobile usability, a key conversion factor, but less urgent than funnel integrity.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Inject a temporary `<style>` block (or add to existing CSS) that draws a semi‑transparent 48 px circle around every interactive element:\n```css\n/* DEBUG: tap‑target overlay – remove before launch */\na, button, [role=\"button\"], .magnetic {\nposition:relative;\n}\na::after, button::after, [role=\"button\"]::after, .magnetic::after{\ncontent:\"\";\nposition:absolute;\ninset:-12px;               /* 48 px total (12 px each side) */\nborder:2px dashed rgba(255,0,0,.4);\nborder-radius:50%;\npointer-events:none;\n}\n```"
+ ],
+ "flags": []
+}

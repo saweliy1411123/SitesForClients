@@ -1,0 +1,26 @@
+{
+ "id": "I-00975",
+ "round": 163,
+ "time": "2026-11-17 09:32:05",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "I-01002 — Визуальный Contrast‑Ratio Audit",
+ "knob": "METHOD: (1) Открыть страницу в Chrome, включить DevTools → Console. (2) Вставить скрипт, который перебирает все видимые текстовые элементы и вычисляет контраст с фоном через Canvas API:\n```js\n(() => {\nconst toRGB = c => getComputedStyle(c).color;\nconst contrast = (fg,bg)=> {\nconst lum = c=>{c = c.slice(4,-1).split(',').map(v=>+v/255); c = c.map(v=>v<=0.03928?v/12.92:Math.pow((v+0.055)/1.055,2.4));\nreturn 0.2126*c[0]+0.7152*c[1]+0.0722*c[2];};\nconst L1 = lum(fg)+0.05, L2 = lum(bg)+0.05;\nreturn L1>L2?L1/L2:L2/L1;\n};\nconst bad = [];\ndocument.querySelectorAll('p, h1, h2, h3, li, a').forEach(el=>{\nconst style = getComputedStyle(el);\nif (style.display==='none' || style.visibility==='hidden') return;\nconst fg = style.color, bg = style.backgroundColor;\nif (bg==='transparent' || bg==='rgba(0, 0, 0, 0)') return;\nconst ratio = contrast(fg,bg);\nif (ratio < 4.5) bad.push({el,ratio:ratio.toFixed(2),fg,bg});\n});\nconsole.table(bad.map(b=>({Text:b.el.textContent.trim().slice(0,30)+'…',Ratio:b.ratio,FG:b.fg,BG:b.bg})));\n})();\n```",
+ "skill": "",
+ "effect": "Мгновенно выявляет элементы с низким контрастом (< 4.5 : 1), улучшая доступность и соответствие WCAG 2.1, что положительно сказывается на SEO и пользовательском опыте.",
+ "risk": "Скрипт только читает стили; возможны ложные срабатывания для элементов с полупрозрачным фоном.",
+ "rollback": "Перезагрузить страницу — скрипт исчезнет.",
+ "verify": "В консоли должна появиться таблица с элементами, у которых контраст ниже порога; отсутствие записей — все ок.",
+ "priority_claim": "2 — Доступность важна, но без визуальных проблем текущий сайт может уже работать; проверка занимает ~3 минуты.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: (1) Открыть страницу в Chrome, включить DevTools → Console. (2) Вставить скрипт, который перебирает все видимые текстовые элементы и вычисляет контраст с фоном через Canvas API:\n```js\n(() => {\nconst toRGB = c => getComputedStyle(c).color;\nconst contrast = (fg,bg)=> {\nconst lum = c=>{c = c.slice(4,-1).split(',').map(v=>+v/255); c = c.map(v=>v<=0.03928?v/12.92:Math.pow((v+0.055)/1.055,2.4));\nreturn 0.2126*c[0]+0.7152*c[1]+0.0722*c[2];};\nconst L1 = lum(fg)+0.05, L2 = lum(bg)+0.05;\nreturn L1>L2?L1/L2:L2/L1;\n};\nconst bad = [];\ndocument.querySelectorAll('p, h1, h2, h3, li, a').forEach(el=>{\nconst style = getComputedStyle(el);\nif (style.display==='none' || style.visibility==='hidden') return;\nconst fg = style.color, bg = style.backgroundColor;\nif (bg==='transparent' || bg==='rgba(0, 0, 0, 0)') return;\nconst ratio = contrast(fg,bg);\nif (ratio < 4.5) bad.push({el,ratio:ratio.toFixed(2),fg,bg});\n});\nconsole.table(bad.map(b=>({Text:b.el.textContent.trim().slice(0,30)+'…',Ratio:b.ratio,FG:b.fg,BG:b.bg})));\n})();\n```"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00144",
+ "round": 22,
+ "time": "2026-11-17 02:43:51",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "CSS‑only rotating testimonial carousel «Доверяют нам»",
+ "knob": "После секции FAQ (≈L660) вставить новый `<section id=\"testimonials\" class=\"testimonials reveal\">` со списком 3‑5 отзывов в `<ul class=\"carousel\">` и добавить в `<style>` CSS‑анимацию `@keyframes slide` + `overflow:hidden; white-space:nowrap;` для бесконечного скролла.",
+ "skill": "",
+ "effect": "Укрепит доверие за счёт живых отзывов, повышая коэффициент конверсии + не требует JS‑загрузки.",
+ "risk": "При медленном соединении анимация может увеличить CLS; необходимо задать фиксированную высоту.",
+ "rollback": "`git checkout -- index.html` (или удалить вставленные строки и CSS‑правила).",
+ "verify": "Открыть страницу, убедиться, что блок «Доверяют нам» появляется под FAQ, отзывы плавно скользят, а в DevTools → Elements → #testimonials видно ожидаемую структуру; проверить отсутствие ошибок в консоли.",
+ "priority_claim": "1 – социальное доказательство напрямую влияет на доверие и конверсию, а реализация лёгкая и без‑бэкенда.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "После секции FAQ (≈L660) вставить новый `<section id=\"testimonials\" class=\"testimonials reveal\">` со списком 3‑5 отзывов в `<ul class=\"carousel\">` и добавить в `<style>` CSS‑анимацию `@keyframes slide` + `overflow:hidden; white-space:nowrap;` для бесконечного скролла."
+ ],
+ "flags": []
+}

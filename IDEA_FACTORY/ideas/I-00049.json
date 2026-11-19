@@ -1,0 +1,32 @@
+{
+ "id": "I-00049",
+ "round": 6,
+ "time": "2026-11-17 01:56:52",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+  "lareper/glm-5.3-prime",
+  "lareper/glm-5.2",
+  "lareper/glm-5.3",
+  "lareper/glm-5.2-fast-preview"
+ ],
+ "mentions": 5,
+ "status": "NEW",
+ "title": "SKILL — Быстрая доступность",
+ "knob": "\n### Название\nБыстрая доступность\n### Когда применять\nПри необходимости улучшения доступности сайта\n### Конкретные шаги\n1. Добавить атрибут `aria-label` к ссылкам, не имеющим описательного текста.\n2. Обернуть основной контент в семантический `<main id=\"main\">`.\n3. Добавить `font-display: swap` и предзагрузку шрифтов Google Fonts.\n### SAFE CSS:\n```css\n@media (prefers-reduced-motion: reduce) {\nanimation: none !important;\n}\nmain {\ndisplay: block;\n}\n.skip-link {\nposition: absolute;\ntop: -40px;\nleft: 0;\nbackground-color: #fff;\ncolor: #000;\npadding: 10px;\nz-index: 100;\n}\n.skip-link:focus {\ntop: 0;\n}\n```\n### SAFE JS:\n```javascript\n// добавить обработчик события focus на кнопку \"Перейти к содержимому\"\ndocument.addEventListener('DOMContentLoaded', function() {\nconst skipLink = document.querySelector('.skip-link');\nskipLink.addEventListener('click', function() {\nconst main = document.getElementById('main');\nmain.focus();\n});\n});\n```",
+ "skill": "Быстрая доступность",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "1",
+ "source_hint": "",
+ "site_request": "доступность",
+ "category": "skill",
+ "variants": [
+  "\n### Название\nБыстрая доступность\n### Когда применять\nПри необходимости улучшения доступности сайта\n### Конкретные шаги\n1. Добавить атрибут `aria-label` к ссылкам, не имеющим описательного текста.\n2. Обернуть основной контент в семантический `<main id=\"main\">`.\n3. Добавить `font-display: swap` и предзагрузку шрифтов Google Fonts.\n### SAFE CSS:\n```css\n@media (prefers-reduced-motion: reduce) {\nanimation: none !important;\n}\nmain {\ndisplay: block;\n}\n.skip-link {\nposition: absolute;\ntop: -40px;\nleft: 0;\nbackground-color: #fff;\ncolor: #000;\npadding: 10px;\nz-index: 100;\n}\n.skip-link:focus {\ntop: 0;\n}\n```\n### SAFE JS:\n```javascript\n// добавить обработчик события focus на кнопку \"Перейти к содержимому\"\ndocument.addEventListener('DOMContentLoaded', function() {\nconst skipLink = document.querySelector('.skip-link');\nskipLink.addEventListener('click', function() {\nconst main = document.getElementById('main');\nmain.focus();\n});\n});\n```",
+  "SKILL — **premium-typography-pair**\n### Название\npremium-typography-pair\n### Когда применять\nЛюбой лендинг на одном шрифте (Manrope), где заголовки выглядят «плоско». Даёт дорогой вид за счёт иерархии, а не нового шрифта.\n### Шаги\n1. Заголовкам h1/h2 — отрицательный letter-spacing (-0.02…-0.03em) и font-weight 700→800 контраст.\n2. Основному",
+  ""
+ ],
+ "flags": []
+}

@@ -1,0 +1,28 @@
+{
+ "id": "I-00710",
+ "round": 109,
+ "time": "2026-11-17 07:01:10",
+ "source": "lareper/deepseek-v4-pro",
+ "sources": [
+  "lareper/deepseek-v4-pro",
+  "lareper/deepseek-v4.1-flash",
+  "lareper/deepseek-v4-pro-0813"
+ ],
+ "mentions": 3,
+ "status": "NEW",
+ "title": "Динамическая цена с выбором опций в карточке (интерактивный прайс)",
+ "knob": "В `.price-card` (L644) заменить статичную строку цены (`<div class=\"price\">12 000 ₽</div>` и т.п.) на интерактивный блок: `<div class=\"price-options\" role=\"radiogroup\" aria-label=\"Выбор тарифа\"><label><input type=\"radio\" name=\"price-opt\" value=\"base\" checked> <span>База — 12 000 ₽</span></label><label><input type=\"radio\" name=\"price-opt\" value=\"plus\"> <span>Плюс — 18 000 ₽</span></label><label><input type=\"radio\" name=\"price-opt\" value=\"max\"> <span>Макс — 25 000 ₽</span></label></div>`. Названия опций и цены — примерные, уточнить у владельца.",
+ "skill": "",
+ "effect": "Посетитель сам выбирает подходящий объём работ, видит честную вилку цен, меньше боится «сюрпризов» и охотнее оставляет заявку; повышает воспринимаемую прозрачность.",
+ "risk": "Может перегрузить карточку, если опций больше 3; требует уточнения реальных тарифов у владельца (иначе вымысел).",
+ "rollback": "`git checkout index.html` или удалить добавленный блок `.price-options`.",
+ "verify": "Открыть страницу, проверить, что радиокнопки переключаются и цена/описание меняются без перезагрузки; визуально не ломают карточку.",
+ "priority_claim": "2 — усиливает ключевую секцию «Цена», но требует контентного решения владельца.",
+ "source_hint": "",
+ "site_request": "price-card",
+ "category": "lever",
+ "variants": [
+  "В `.price-card` (L644) заменить статичную строку цены (`<div class=\"price\">12 000 ₽</div>` и т.п.) на интерактивный блок: `<div class=\"price-options\" role=\"radiogroup\" aria-label=\"Выбор тарифа\"><label><input type=\"radio\" name=\"price-opt\" value=\"base\" checked> <span>База — 12 000 ₽</span></label><label><input type=\"radio\" name=\"price-opt\" value=\"plus\"> <span>Плюс — 18 000 ₽</span></label><label><input type=\"radio\" name=\"price-opt\" value=\"max\"> <span>Макс — 25 000 ₽</span></label></div>`. Названия опций и цены — примерные, уточнить у владельца."
+ ],
+ "flags": []
+}

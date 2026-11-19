@@ -1,0 +1,37 @@
+{
+ "id": "I-00129",
+ "round": 19,
+ "time": "2026-11-17 02:36:36",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime",
+  "lareper/glm-5.2-fast-preview"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "robots.txt + sitemap.xml для индексации",
+ "knob": "создать в корне репозитория `robots.txt` (`User-agent: * / Allow: / / Sitemap: https://<домен>/sitemap.xml`) и `sitemap.xml` с одним URL `/`. Домен уточнить у владельца — в снапшоте его нет.",
+ "skill": "",
+ "effect": "поисковики быстрее и корректнее индексируют лендинг; sitemap — базовый сигнал для Яндекса/Google.",
+ "risk": "без реального домена sitemap будет указывать на несуществующий URL — требует решения владельца (какой домен).",
+ "rollback": "удалить два новых файла (`del robots.txt sitemap.xml`) — index.html не затрагивается.",
+ "verify": "открыть `robots.txt` в валидаторе Яндекса Вебмастер (или просто прочитать за 2 минуты); проверить, что URL в sitemap отвечает 200.",
+ "priority_claim": "2 — база SEO, но нужен домен от владельца.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "создать в корне репозитория `robots.txt` (`User-agent: * / Allow: / / Sitemap: https://<домен>/sitemap.xml`) и `sitemap.xml` с одним URL `/`. Домен уточнить у владельца — в снапшоте его нет.",
+  "Создать в корне репозитория `robots.txt` (`User-agent: * / Allow: / / Sitemap: https://<домен>/sitemap.xml`) и `sitemap.xml` с одним URL `<loc>https://<домен>/</loc>` + `<lastmod>` = дата коммита. Домен подставить реальный (требует решения владельца, если сайт ещё не задеплоен).",
+  "Рядом с index.html создать два файла: `robots.txt` с `User-agent: *\\nAllow: /\\nSitemap: https://<домен>/sitemap.xml` и `sitemap.xml` с единственным `<url>` (loc = домен, changefreq weekly, приоритет 1.0). Домен подставить после деплоя",
+  "Создать рядом с index.html два файла: `robots.txt` с `User-agent: *\\nAllow: /\\nSitemap: https://<домен>/sitemap.xml` и `sitemap.xml` с единственным URL `<loc>https://<домен>/</loc>` (домен уточнить у владельца). Сам index.html не меняется.",
+  "создать рядом с index.html файл `robots.txt` (`User-agent: *\\nAllow: /\\nSitemap: https://<домен>/sitemap.xml`) и `sitemap.xml` с одним URL — после публикации на домен",
+  "создать в корне репозитория `robots.txt` (`User-agent: *\\nAllow: /\\nSitemap: https://<домен>/sitemap.xml`) и `sitemap.xml` с одним URL `<loc>https://<домен>/</loc>` и `<lastmod>` по дате коммита; домен подставить реальный после деплоя",
+  "Создать рядом с index.html два файла: `robots.txt` (`User-agent: *\\nAllow: /\\nSitemap: https://<домен>/sitemap.xml`) и `sitemap.xml` с единственным URL главной. Домен подставить после размещения — пометить в комментарии.",
+  "METHOD: создать рядом с index.html два файла: `robots.txt` (`User-agent: *\\nAllow: /\\nSitemap: https://<домен>/sitemap.xml`) и `sitemap.xml` с одним URL `<loc>https://<домен>/</loc>`. Домен подставить после размещения — требует решения владельца (хостинг).",
+  "создать в корне репозитория `robots.txt` (Allow all, `Sitemap: <URL>/sitemap.xml`) и `sitemap.xml` с одним `<url>` для `/index.html` (loc, lastmod, priority 1.0). Файл index.html не трогаем."
+ ],
+ "flags": []
+}

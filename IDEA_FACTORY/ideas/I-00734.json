@@ -1,0 +1,26 @@
+{
+ "id": "I-00734",
+ "round": 113,
+ "time": "2026-11-17 07:12:11",
+ "source": "lareper/glm-5.3-prime",
+ "sources": [
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Мобильная навигация по якорям (сейчас .nav-links скрыты на ≤720px)",
+ "knob": "В `@media(max-width:720px)` (L90) вместо `display:none` — горизонтальная прокручиваемая полоса: `.nav-links{display:flex;overflow-x:auto;gap:18px;padding:8px 16px;-webkit-overflow-scrolling:touch}` + уменьшить `gap`/`font-size:13px`; опционально скрыть пункт «Вопросы» на узких экранах, чтобы влезли «Демо», «Цена», CTA.",
+ "skill": "",
+ "effect": "Мобильные посетители (основной трафик локального бизнеса) получают путь к секциям «Цена» и «Демо» без долгого скролла — больше переходов к заявке.",
+ "risk": "Навигация может конфликтовать с фиксированным хедером по высоте — нужно проверить scroll-margin (см. I-00716).",
+ "rollback": "`git checkout -- index.html` (правка только в CSS-блоке media query).",
+ "verify": "DevTools → Toggle device toolbar (iPhone SE, 375px): хедер, проверить что ссылки видны, тапаются (≥44px) и ведут на нужные секции за 3 минуты.",
+ "priority_claim": "1 — прямая потеря конверсии на мобильных, правка в 3 строки CSS.",
+ "source_hint": "",
+ "site_request": "hero",
+ "category": "lever",
+ "variants": [
+  "В `@media(max-width:720px)` (L90) вместо `display:none` — горизонтальная прокручиваемая полоса: `.nav-links{display:flex;overflow-x:auto;gap:18px;padding:8px 16px;-webkit-overflow-scrolling:touch}` + уменьшить `gap`/`font-size:13px`; опционально скрыть пункт «Вопросы» на узких экранах, чтобы влезли «Демо», «Цена», CTA."
+ ],
+ "flags": []
+}

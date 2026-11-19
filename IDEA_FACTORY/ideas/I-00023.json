@@ -1,0 +1,26 @@
+{
+ "id": "I-00023",
+ "round": 4,
+ "time": "2026-11-17 01:50:26",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить «skip‑to‑content» ссылку и aria‑метки для лучшей доступности",
+ "knob": "В начале `<body>` вставить `<a href=\"#main\" class=\"skip-link\">Перейти к содержимому</a>`; у главного контейнера добавить `id=\"main\"` и `role=\"main\"`. У CTA‑ссылок добавить `aria-label=\"Получить демо‑макет в Telegram\"` и `role=\"button\"` при необходимости.",
+ "skill": "",
+ "effect": "Улучшит навигацию клавиатурой для пользователей скрин‑ридеров, повысит показатель WCAG‑AA.",
+ "risk": "Неправильный `href` может привести к «потерянному» фокусу; проверка обязательна.",
+ "rollback": "Удалить вставленную ссылку и атрибуты (git checkout -- index.html).",
+ "verify": "Нажать Tab в браузере, убедиться, что первая ссылка видна и переводит в основной контент; проверить в Lighthouse “Accessibility”.",
+ "priority_claim": "2 — важный для инклюзивности, но не критичен к конверсии.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В начале `<body>` вставить `<a href=\"#main\" class=\"skip-link\">Перейти к содержимому</a>`; у главного контейнера добавить `id=\"main\"` и `role=\"main\"`. У CTA‑ссылок добавить `aria-label=\"Получить демо‑макет в Telegram\"` и `role=\"button\"` при необходимости."
+ ],
+ "flags": []
+}

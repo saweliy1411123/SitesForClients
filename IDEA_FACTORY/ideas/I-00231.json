@@ -1,0 +1,31 @@
+{
+ "id": "I-00231",
+ "round": 35,
+ "time": "2026-11-17 03:21:39",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.3-prime",
+  "lareper/glm-5.3",
+  "lareper/glm-5.2-fast-preview",
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 5,
+ "status": "NEW",
+ "title": "SKILL — «Премиальный заголовок-градиент с анимацией текста» (gradient-heading-premium)",
+ "knob": "SKILL — gradient-heading-premium\n### Название\ngradient-heading-premium\n### Когда применять\nЛюбой тёмный лендинг, где h1/h2 должны выглядеть «дорого»: премиальные услуги, портфолио, агентства. Применять к 1–2 ключевым заголовкам (h1 hero и один h2), не ко всем — иначе эффект дешевеет.\n### Шаги\n1. В `<head>`/`<style>` добавить блок SAFE CSS.\n2. На целевой заголовок навесить класс `grad-heading` (например, h1 в hero).\n3. Опционально: градиентный текст + подчёркивающая линия с медленной анимацией (уже есть базовый вариант на L116 — этот скилл даёт более тонкий, текстовый вариант с shimmer).\n4. Проверить контраст: градиентные цвета должны давать ≥4.5:1 к фону `#0a0a0f`.\n5. Обернуть в `@media (prefers-reduced-motion: reduce)` отключение анимации.\nSAFE CSS:\n```\n.grad-heading{\nbackground:linear-gradient(120deg,#f5f3ff 0%,#a78bfa 35%,#67e8f9 70%,#f5f3ff 100%);\nbackground-size:200% 100%;\n-webkit-background-clip:text;\nbackground-clip:text;\n-webkit-text-fill-color:transparent;\ncolor:#a78bfa;\nanimation:grad-shimmer 6s linear infinite;\n}\n@keyframes grad-shimmer{0%{background-position:0% 50%}100%{background-position:200% 50%}}\n@media (prefers-reduced-motion: reduce){.grad-heading{animation:none}}\n.grad-heading:focus-visible{outline:3px solid #67e8f9;outline-offset:4px;-webkit-text-fill-color:#f5f3ff}\n```",
+ "skill": "",
+ "effect": "h1 выглядит премиально без картинок и шрифтов-загрузок; усиливает восприятие «дорогого» оффера; нулевой вес (чистый CSS).",
+ "risk": "прозрачный текст на градиенте может потерять контраст на светлых/декоративных фонах — применять только на тёмном hero с проверкой контраста.",
+ "rollback": "удалить класс `grad-heading` и блок CSS; либо `git checkout -- index.html`.",
+ "verify": "(1) открыть копию index.improved.html, убедиться что h1 читается целиком за 3 сек; (2) DevTools → Rendering → Emulate vision deficiencies → blurred vision — текст остаётся читаемым; (3) Lighthouse accessibility ≥95.",
+ "priority_claim": "2 — чисто визуальный «премиум»-эффект с нулевой ценой по производительности, но не влияет на конверсию напрямую.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "SKILL — gradient-heading-premium\n### Название\ngradient-heading-premium\n### Когда применять\nЛюбой тёмный лендинг, где h1/h2 должны выглядеть «дорого»: премиальные услуги, портфолио, агентства. Применять к 1–2 ключевым заголовкам (h1 hero и один h2), не ко всем — иначе эффект дешевеет.\n### Шаги\n1. В `<head>`/`<style>` добавить блок SAFE CSS.\n2. На целевой заголовок навесить класс `grad-heading` (например, h1 в hero).\n3. Опционально: градиентный текст + подчёркивающая линия с медленной анимацией (уже есть базовый вариант на L116 — этот скилл даёт более тонкий, текстовый вариант с shimmer).\n4. Проверить контраст: градиентные цвета должны давать ≥4.5:1 к фону `#0a0a0f`.\n5. Обернуть в `@media (prefers-reduced-motion: reduce)` отключение анимации.\nSAFE CSS:\n```\n.grad-heading{\nbackground:linear-gradient(120deg,#f5f3ff 0%,#a78bfa 35%,#67e8f9 70%,#f5f3ff 100%);\nbackground-size:200% 100%;\n-webkit-background-clip:text;\nbackground-clip:text;\n-webkit-text-fill-color:transparent;\ncolor:#a78bfa;\nanimation:grad-shimmer 6s linear infinite;\n}\n@keyframes grad-shimmer{0%{background-position:0% 50%}100%{background-position:200% 50%}}\n@media (prefers-reduced-motion: reduce){.grad-heading{animation:none}}\n.grad-heading:focus-visible{outline:3px solid #67e8f9;outline-offset:4px;-webkit-text-fill-color:#f5f3ff}\n```",
+  "\n### Название\ngradient-heading-premium\n### Когда применять\nЛюбой тёмный лендинг с декорированным hero-экраном.\n### Шаги\n1. Определить селектор для hero-заголовка.\n2. Добавить в CSS свойства для градиентной анимации текста.\n3. Обеспечить доступность и читаемость текста.\nSAFE CSS:\n```css\n.gradient-heading-premium {\nbackground: linear-gradient(to right, #ff69b4, #ffe68c);\nbackground-clip: text;\n-webkit-background-clip: text;\n-webkit-text-fill-color: transparent;\nanimation: gradient-animation 10s ease infinite;\n}\n@keyframes gradient-animation {\n0% {\nbackground-position: 0% 0%;\n}\n100% {\nbackground-position: 100% 100%;\n}\n}\n```\nSAFE JS:\n```javascript\n// нет необходимости в дополнительном JS-коде\n```"
+ ],
+ "flags": []
+}

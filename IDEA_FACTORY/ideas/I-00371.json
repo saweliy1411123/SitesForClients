@@ -1,0 +1,30 @@
+{
+ "id": "I-00371",
+ "round": 55,
+ "time": "2026-11-17 04:21:46",
+ "source": "lareper/glm-5.3-prime",
+ "sources": [
+  "lareper/glm-5.3-prime",
+  "lareper/glm-5.2",
+  "lareper/glm-5.3"
+ ],
+ "mentions": 3,
+ "status": "NEW",
+ "title": "SKILL — section-eyebrow-kicker",
+ "knob": "",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  ""
+ ],
+ "flags": [
+  "NO_KNOB"
+ ]
+}

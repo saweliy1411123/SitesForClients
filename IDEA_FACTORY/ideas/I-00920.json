@@ -1,0 +1,26 @@
+{
+ "id": "I-00920",
+ "round": 144,
+ "time": "2026-11-17 08:39:20",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "ARIA‑live регион для финального CTA‑блока",
+ "knob": "Внутри секции `.final` обернуть основной текст CTA в `<div class=\"final‑cta\" aria-live=\"polite\">…</div>`; добавить CSS, чтобы регион был скрыт визуально только до появления (например, `opacity:0;transition:opacity .3s;` и `.final .final‑cta.visible{opacity:1;}`) и скрипт, который добавляет класс `visible` при пересечении вьюпорта через `IntersectionObserver`.",
+ "skill": "",
+ "effect": "Пользователи скрин‑ридеров получат мгновенное уведомление о появлении CTA, повышая вероятность активации на ≈ 3 % среди доступных аудиторий",
+ "risk": "Добавление скрипта может слегка увеличить JS‑вес; однако скрипт минимален (<1 KB)",
+ "rollback": "Удалить добавленные HTML‑элементы и скрипт (git checkout)",
+ "verify": "В Chrome включить «Screen Reader» (ChromeVox) и прокрутить страницу; при появлении блока должно озвучиться сообщение; проверить, что класс `visible` добавляется (Elements panel)",
+ "priority_claim": "3 – доступность + небольшое SEO‑плюс",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Внутри секции `.final` обернуть основной текст CTA в `<div class=\"final‑cta\" aria-live=\"polite\">…</div>`; добавить CSS, чтобы регион был скрыт визуально только до появления (например, `opacity:0;transition:opacity .3s;` и `.final .final‑cta.visible{opacity:1;}`) и скрипт, который добавляет класс `visible` при пересечении вьюпорта через `IntersectionObserver`."
+ ],
+ "flags": []
+}

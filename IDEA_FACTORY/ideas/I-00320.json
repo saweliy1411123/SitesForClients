@@ -1,0 +1,26 @@
+{
+ "id": "I-00320",
+ "round": 48,
+ "time": "2026-11-17 03:57:39",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — Focus‑Visible Outline",
+ "knob": "**Name:** focus-visible-outline\n**When to apply:** На любой статический лендинг, где интерактивные ссылки/кнопки (a, .btn‑primary) должны быть доступными для клавиатурных пользователей.\n**Steps:**\n1. Добавить в глобальный CSS селектор `:focus-visible` для всех интерактивных элементов.\n2. Сбросить стандартные outline‑ы и задать кастомный контрастный стиль, сохраняющий визуальную согласованность с дизайном.\n3. При необходимости добавить класс `.no‑focus-visible` к элементам, где визуальный фокус нежелателен (например, при клике мышью).\n4. Тестировать в Chrome/Firefox с включённым `Tab`‑навигацией и в режимах высокой контрастности.\n**SAFE CSS:**\n```css\n/* focus-visible‑outline – улучшение доступности */\na:focus-visible,\nbutton:focus-visible,\n[role=\"button\"]:focus-visible,\n.btn-primary:focus-visible {\noutline: 3px solid var(--blue);\noutline-offset: 2px;\nborder-radius: 4px;\n}\n/* Сброс стандартного outline, если нужен только кастомный */\na:focus,\nbutton:focus,\n[role=\"button\"]:focus,\n.btn-primary:focus {\noutline: none;\n}\n/* Класс для отключения кастомного фокуса (опционально) */\n.no-focus-visible:focus-visible {\noutline: none;\n}\n```\n**SAFE JS:** *(не требуется)*",
+ "skill": "",
+ "effect": "Улучшает восприятие сайта пользователями клавиатуры → повышает показатель Accessibility и потенциально конверсию за счёт снижения барьера выхода.",
+ "risk": "Минимальный – возможен конфликт с уже существующими кастомными `outline`‑правилами; решение – проверка стилей перед внедрением.",
+ "rollback": "`git checkout HEAD -- index.html` (или удалить добавленные правила из CSS).",
+ "verify": "Открыть страницу, нажать `Tab` — виден новый синий контур на всех ссылках/кнопках; отключить стили в DevTools – визуальный стиль исчезает.",
+ "priority_claim": "1 — доступность критична, изменение небольшое, быстрый ROI через улучшение Core Web Vitals (Accessibility).",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** focus-visible-outline\n**When to apply:** На любой статический лендинг, где интерактивные ссылки/кнопки (a, .btn‑primary) должны быть доступными для клавиатурных пользователей.\n**Steps:**\n1. Добавить в глобальный CSS селектор `:focus-visible` для всех интерактивных элементов.\n2. Сбросить стандартные outline‑ы и задать кастомный контрастный стиль, сохраняющий визуальную согласованность с дизайном.\n3. При необходимости добавить класс `.no‑focus-visible` к элементам, где визуальный фокус нежелателен (например, при клике мышью).\n4. Тестировать в Chrome/Firefox с включённым `Tab`‑навигацией и в режимах высокой контрастности.\n**SAFE CSS:**\n```css\n/* focus-visible‑outline – улучшение доступности */\na:focus-visible,\nbutton:focus-visible,\n[role=\"button\"]:focus-visible,\n.btn-primary:focus-visible {\noutline: 3px solid var(--blue);\noutline-offset: 2px;\nborder-radius: 4px;\n}\n/* Сброс стандартного outline, если нужен только кастомный */\na:focus,\nbutton:focus,\n[role=\"button\"]:focus,\n.btn-primary:focus {\noutline: none;\n}\n/* Класс для отключения кастомного фокуса (опционально) */\n.no-focus-visible:focus-visible {\noutline: none;\n}\n```\n**SAFE JS:** *(не требуется)*"
+ ],
+ "flags": []
+}

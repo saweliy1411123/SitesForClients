@@ -1,0 +1,26 @@
+{
+ "id": "I-00270",
+ "round": 40,
+ "time": "2026-11-17 03:35:35",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Увеличить минимальный размер тап‑цели для мобильного CTA до 48 px",
+ "knob": "В CSS для `.btn-primary` (и `.sticky-cta .btn-primary`) добавить `min-height:48px; min-width:48px; line-height:1.2;`",
+ "skill": "",
+ "effect": "Соответствует рекомендациям WCAG 2.1 (минимальный размер интерактивного элемента), улучшает конверсию на мобильных",
+ "risk": "Может слегка изменить визуальный дизайн; потребуется проверить, что кнопка не выглядит «растянутой»",
+ "rollback": "Удалить добавленные `min-height/min-width` свойства",
+ "verify": "В Chrome DevTools → Device Toolbar, включить “Emulate touch screen”, навести курсор – должно быть минимум 48 px по обеим осям",
+ "priority_claim": "2 – важный аспект мобильной доступности, простая правка.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В CSS для `.btn-primary` (и `.sticky-cta .btn-primary`) добавить `min-height:48px; min-width:48px; line-height:1.2;`"
+ ],
+ "flags": []
+}

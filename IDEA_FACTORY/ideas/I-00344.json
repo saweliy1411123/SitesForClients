@@ -1,0 +1,26 @@
+{
+ "id": "I-00344",
+ "round": 52,
+ "time": "2026-11-17 04:09:50",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Preconnect + font‑display swap for Google Fonts",
+ "knob": "В <head> добавить `<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">` и `<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>` перед текущей ссылкой на шрифты; изменить существующий `<link href=\"https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap\"` → `...&display=swap&text=АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯabcdefghijklmnopqrstuvwxyz0123456789\"` (ограничить набор символов); добавить в любой пользовательский @font-face `font-display: swap;` (если используется локальный @font-face).",
+ "skill": "",
+ "effect": "Уменьшает время загрузки шрифтов, устраняет блокировку рендеринга, повышает LCP и CLS → быстрее отображается первый экран, улучшает SEO‑оценку.",
+ "risk": "Необходима проверка, что ограниченный набор символов покрывает весь контент; добавление двух <link> слегка увеличит размер <head>, но без влияния на функциональность.",
+ "rollback": "Удалить новые `<link rel=\"preconnect\">` и вернуть оригинальный URL шрифта (git checkout index.html).",
+ "verify": "Открыть страницу в Chrome DevTools → Network, убедиться, что запросы к fonts.googleapis.com/… происходят после preconnect (статус 200, время < 50 мс); измерить LCP в Performance → должно снизиться минимум ≈200 мс.",
+ "priority_claim": "1 – высокий ROI: небольшие изменения дают заметный рост Core Web Vitals без риска для контента.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В <head> добавить `<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">` и `<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>` перед текущей ссылкой на шрифты; изменить существующий `<link href=\"https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap\"` → `...&display=swap&text=АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯabcdefghijklmnopqrstuvwxyz0123456789\"` (ограничить набор символов); добавить в любой пользовательский @font-face `font-display: swap;` (если используется локальный @font-face)."
+ ],
+ "flags": []
+}

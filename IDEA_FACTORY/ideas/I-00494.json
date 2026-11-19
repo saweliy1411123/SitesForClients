@@ -1,0 +1,26 @@
+{
+ "id": "I-00494",
+ "round": 74,
+ "time": "2026-11-17 05:17:14",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Breadcrumb‑structured data (JSON‑LD)",
+ "knob": "В `<head>` перед закрывающим тегом добавить:\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"BreadcrumbList\",\n\"itemListElement\":[\n{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Главная\",\"item\":\"https://saveliy.ru/\"},\n{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Лендинги за 2 дня\",\"item\":\"https://saveliy.ru/#price\"},\n{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Заказать демо\",\"item\":\"https://saveliy.ru/#contact\"}\n]\n}\n</script>\n```",
+ "skill": "",
+ "effect": "Позволяет поисковикам выводить хлебные крошки в сниппете, повышает CTR и SEO‑видимость.",
+ "risk": "Неправильные URL могут вызвать ошибки в Search Console.",
+ "rollback": "Удалить `<script>`‑блок (git checkout index.html).",
+ "verify": "В Google Rich Results Test убедиться, что BreadcrumbList валиден и без ошибок.",
+ "priority_claim": "2 – умеренный SEO‑бонус без риска для UX.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<head>` перед закрывающим тегом добавить:\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"BreadcrumbList\",\n\"itemListElement\":[\n{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Главная\",\"item\":\"https://saveliy.ru/\"},\n{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Лендинги за 2 дня\",\"item\":\"https://saveliy.ru/#price\"},\n{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Заказать демо\",\"item\":\"https://saveliy.ru/#contact\"}\n]\n}\n</script>\n```"
+ ],
+ "flags": []
+}

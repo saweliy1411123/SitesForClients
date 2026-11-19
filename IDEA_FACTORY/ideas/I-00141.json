@@ -1,0 +1,26 @@
+{
+ "id": "I-00141",
+ "round": 21,
+ "time": "2026-11-17 02:41:14",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Glassmorphism Card для секции «Демо‑концепты»",
+ "knob": "Обернуть каждый блок демо‑концепта в `<div class=\"glass-card\">`; добавить в CSS:\n```css\n.glass-card{\nbackground: rgba(255,255,255,0.08);\nborder-radius:12px;\nborder:1px solid rgba(255,255,255,0.2);\nbackdrop-filter:blur(8px);\ntransition:transform .3s ease,box-shadow .3s ease;\n}\n.glass-card:hover{\ntransform:perspective(600px) rotateY(3deg) rotateX(2deg);\nbox-shadow:0 8px 20px rgba(0,0,0,.2);\n}\n```\nОпционально добавить лёгкий JS‑модуль (≤ 200 Б) для более динамического наклона по `mousemove`.",
+ "skill": "",
+ "effect": "Современный премиальный визуал, выделяющий демо‑концепты, повышает доверие и удерживает внимание.",
+ "risk": "`backdrop-filter` не поддерживается в старых браузерах (IE, старый Edge); может увеличить нагрузку на GPU.",
+ "rollback": "Удалить обёртки `.glass-card` и соответствующий CSS‑блок; `git checkout index.html`.",
+ "verify": "В Chrome/Firefox открыть страницу, проверить, что блоки отображаются с полупрозрачным фоном и лёгким наклоном при наведении; измерить CLS в Lighthouse (< 0.1).",
+ "priority_claim": "1 – визуальная дифференциация критична для конверсии, а стоимость реализации мала.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Обернуть каждый блок демо‑концепта в `<div class=\"glass-card\">`; добавить в CSS:\n```css\n.glass-card{\nbackground: rgba(255,255,255,0.08);\nborder-radius:12px;\nborder:1px solid rgba(255,255,255,0.2);\nbackdrop-filter:blur(8px);\ntransition:transform .3s ease,box-shadow .3s ease;\n}\n.glass-card:hover{\ntransform:perspective(600px) rotateY(3deg) rotateX(2deg);\nbox-shadow:0 8px 20px rgba(0,0,0,.2);\n}\n```\nОпционально добавить лёгкий JS‑модуль (≤ 200 Б) для более динамического наклона по `mousemove`."
+ ],
+ "flags": []
+}

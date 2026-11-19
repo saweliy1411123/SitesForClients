@@ -1,0 +1,26 @@
+{
+ "id": "I-00057",
+ "round": 8,
+ "time": "2026-11-17 02:03:40",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить секцию «Доверяют нам» с логотипами партнёров (Yandex, VK, Google) для повышения доверия",
+ "knob": "Вставить перед секцией FAQ новый `<section class=\"trust\">`\n```html\n<section class=\"trust reveal\" style=\"--d:.4s\">\n<h2 class=\"trust-title\">Клиенты доверяют нам</h2>\n<div class=\"trust-logos\">\n<svg class=\"logo yandex\" ...></svg>\n<svg class=\"logo vk\" ...></svg>\n<svg class=\"logo google\" ...></svg>\n</div>\n</section>\n```\nи CSS:\n```css\n.trust{padding:2rem 0;text-align:center}\n.trust-title{font-size:1.5rem;margin-bottom:1rem;color:#222}\n.trust-logos{display:flex;gap:2rem;justify:center;align-items:center}\n.trust-logos .logo{width:48px;height:auto;filter:grayscale(100%) opacity(.8)}\n.trust-logos .logo:hover{filter:none;opacity:1}\n```",
+ "skill": "",
+ "effect": "визуальные подтверждения (логотипы известных сервисов) усиливают социальное доказательство, снижают скептицизм и повышают доверие к предложению.",
+ "risk": "необходимо убедиться, что использование логотипов разрешено (обычно допускается при указании «работаем с»); иначе может возникнуть нарушение бренда.",
+ "rollback": "удалить секцию и связанные стили.",
+ "verify": "открыть страницу, убедиться, что секция отображается корректно, логотипы видимы, проверить на мобильных размерах, убедиться в отсутствии консольных ошибок.",
+ "priority_claim": "3 – повышает доверие, но требует согласования логотипов; менее критично, чем улучшения первого экрана.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Вставить перед секцией FAQ новый `<section class=\"trust\">`\n```html\n<section class=\"trust reveal\" style=\"--d:.4s\">\n<h2 class=\"trust-title\">Клиенты доверяют нам</h2>\n<div class=\"trust-logos\">\n<svg class=\"logo yandex\" ...></svg>\n<svg class=\"logo vk\" ...></svg>\n<svg class=\"logo google\" ...></svg>\n</div>\n</section>\n```\nи CSS:\n```css\n.trust{padding:2rem 0;text-align:center}\n.trust-title{font-size:1.5rem;margin-bottom:1rem;color:#222}\n.trust-logos{display:flex;gap:2rem;justify:center;align-items:center}\n.trust-logos .logo{width:48px;height:auto;filter:grayscale(100%) opacity(.8)}\n.trust-logos .logo:hover{filter:none;opacity:1}\n```"
+ ],
+ "flags": []
+}

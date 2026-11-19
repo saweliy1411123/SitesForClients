@@ -1,0 +1,26 @@
+{
+ "id": "I-01000",
+ "round": 170,
+ "time": "2026-11-17 17:11:25",
+ "source": "localhost:8080/zhipu/glm-4.7-flash",
+ "sources": [
+  "localhost:8080/zhipu/glm-4.7-flash"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "DOM Semantic Tree Generator",
+ "knob": "Console script to recursively traverse `document.body` and log hierarchy of `<header>`, `<main>`, `<section>`, `<article>`, `<footer>` and headings",
+ "skill": "",
+ "effect": "Instant audit of DOM structure, landmark roles, and heading hierarchy flow",
+ "risk": "Console log flood (unlikely for ~937 lines)",
+ "rollback": "Clear console (`Ctrl+L`)",
+ "verify": "Run script, check if structure matches SEO requirements",
+ "priority_claim": "1 (SEO)",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Console script to recursively traverse `document.body` and log hierarchy of `<header>`, `<main>`, `<section>`, `<article>`, `<footer>` and headings"
+ ],
+ "flags": []
+}

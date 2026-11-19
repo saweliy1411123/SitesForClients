@@ -1,0 +1,28 @@
+{
+ "id": "I-00263",
+ "round": 40,
+ "time": "2026-11-17 03:35:08",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime",
+  "lareper/glm-5.2-fast-preview"
+ ],
+ "mentions": 3,
+ "status": "NEW",
+ "title": "Сжатие и инлайн критического CSS для шрифтов Manrope (font-display + subset)",
+ "knob": "В `<link>` Google Fonts (снимок: `family=Manrope:wght@400;500;600;700&display=swap`) добавить `&text=` параметр нельзя (динамический текст), но можно сократить веса до `400;600;700` (вес 500, вероятно, избыточен — проверить использованием через DevTools → Search «500» в CSS). Также добавить `<link rel=\"preload\" as=\"style\">` перед таблицей стилей шрифтов.",
+ "skill": "",
+ "effect": "Меньше байт шрифта → быстрее LCP первого экрана; на мобильных 3G экономия 100–300 мс.",
+ "risk": "Если вес 500 используется где-то в CSS, текст откатится на 400 и станет чуть тоньше.",
+ "rollback": "git checkout -- index.html",
+ "verify": "DevTools → Network → Font: посмотреть, сколько весов реально загружается и используется (панель Coverage) — 3 минуты.",
+ "priority_claim": "2 — заметный, но умеренный выигрыш в скорости; безопасно при проверке.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<link>` Google Fonts (снимок: `family=Manrope:wght@400;500;600;700&display=swap`) добавить `&text=` параметр нельзя (динамический текст), но можно сократить веса до `400;600;700` (вес 500, вероятно, избыточен — проверить использованием через DevTools → Search «500» в CSS). Также добавить `<link rel=\"preload\" as=\"style\">` перед таблицей стилей шрифтов."
+ ],
+ "flags": []
+}

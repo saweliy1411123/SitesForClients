@@ -1,0 +1,26 @@
+{
+ "id": "I-00891",
+ "round": 137,
+ "time": "2026-11-17 08:19:40",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Фоновое видео‑заставка в hero (muted, loop, fallback)",
+ "knob": "Внутри `<header class=\"hero\">` добавить:\n```html\n<video class=\"hero-bg-video\" autoplay muted loop playsinline poster=\"hero-poster.jpg\">\n<source src=\"hero.mp4\" type=\"video/mp4\">\n</video>\n```\nи в CSS:\n```css\n.hero-bg-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-1;}\n```",
+ "skill": "",
+ "effect": "Делает первый экран более живым, повышает время на странице и восприятие качества.",
+ "risk": "Увеличит размер загрузки (нужен компрессированный mp4 ≈ 200 KB), может замедлить LCP на медленных соединениях.",
+ "rollback": "Удалить `<video>`‑элемент и CSS‑правило, `git checkout -- index.html`.",
+ "verify": "Открыть страницу, убедиться, что видео воспроизводится без звука, проверить в DevTools → Network размер загрузки.",
+ "priority_claim": "3 – визуальная «блеск»‑фича, но потенциально ухудшит скорость; ставим ниже.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Внутри `<header class=\"hero\">` добавить:\n```html\n<video class=\"hero-bg-video\" autoplay muted loop playsinline poster=\"hero-poster.jpg\">\n<source src=\"hero.mp4\" type=\"video/mp4\">\n</video>\n```\nи в CSS:\n```css\n.hero-bg-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-1;}\n```"
+ ],
+ "flags": []
+}

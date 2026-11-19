@@ -1,0 +1,26 @@
+{
+ "id": "I-00874",
+ "round": 133,
+ "time": "2026-11-17 08:08:54",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Glassmorphic CTA button",
+ "knob": "SKILL — glassmorphic-cta-button\nName: glassmorphic-cta-button\nWhen to apply: На всех ссылках‑CTA с классом `.btn-primary` в любом лендинге, где нужен премиальный визуальный акцент без тяжёлых скриптов.\nSAFE CSS:\n```css\n.btn-primary {\nposition: relative;\noverflow: hidden;\nbackground: rgba(255,255,255,0.12);\nbackdrop-filter: blur(8px);\nborder: 1px solid rgba(255,255,255,0.2);\ncolor: var(--text);\ntransition: background .3s ease, box-shadow .3s ease;\n}\n.btn-primary::before {\ncontent: \"\";\nposition: absolute;\ninset: -50%;\nbackground: linear-gradient(135deg, rgba(139,92,246,.2), rgba(76,201,240,.2));\ntransform: rotate(45deg);\ntransition: transform .5s ease;\n}\n.btn-primary:hover::before {\ntransform: rotate(45deg) translateX(200%);\n}\n.btn-primary:hover {\nbackground: rgba(255,255,255,0.18);\nbox-shadow: 0 4px 12px rgba(0,0,0,.15);\n}\n```\nSAFE JS: *(не требуется)*",
+ "skill": "",
+ "effect": "Повышает восприятие ценности CTA, делает кнопку более «премиальной», увеличивает CTR за счёт визуального контраста.",
+ "risk": "Некоторая часть старых браузеров (IE) не поддерживает `backdrop-filter`; в них кнопка будет без эффекта размытия.",
+ "rollback": "`git rm SKILLS/glassmorphic-cta-button.md && git checkout -- index.improved.html`",
+ "verify": "Открыть страницу в Chrome, навести курсор на любую кнопку CTA – должна появиться анимация градиентного сдвига и размытие фона; сравнить CTR в аналитике до/после.",
+ "priority_claim": "1 – быстрый визуальный апгрейд с высокой вероятностью роста конверсии, без изменений кода страницы.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "SKILL — glassmorphic-cta-button\nName: glassmorphic-cta-button\nWhen to apply: На всех ссылках‑CTA с классом `.btn-primary` в любом лендинге, где нужен премиальный визуальный акцент без тяжёлых скриптов.\nSAFE CSS:\n```css\n.btn-primary {\nposition: relative;\noverflow: hidden;\nbackground: rgba(255,255,255,0.12);\nbackdrop-filter: blur(8px);\nborder: 1px solid rgba(255,255,255,0.2);\ncolor: var(--text);\ntransition: background .3s ease, box-shadow .3s ease;\n}\n.btn-primary::before {\ncontent: \"\";\nposition: absolute;\ninset: -50%;\nbackground: linear-gradient(135deg, rgba(139,92,246,.2), rgba(76,201,240,.2));\ntransform: rotate(45deg);\ntransition: transform .5s ease;\n}\n.btn-primary:hover::before {\ntransform: rotate(45deg) translateX(200%);\n}\n.btn-primary:hover {\nbackground: rgba(255,255,255,0.18);\nbox-shadow: 0 4px 12px rgba(0,0,0,.15);\n}\n```\nSAFE JS: *(не требуется)*"
+ ],
+ "flags": []
+}

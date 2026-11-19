@@ -1,0 +1,26 @@
+{
+ "id": "I-00255",
+ "round": 39,
+ "time": "2026-11-17 03:32:27",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Accessible SVG Icons with ARIA‑label для блока боли",
+ "knob": "В секции «Боль» (h2 «Запись есть — клиентов из поиска нет») добавить к каждому `<svg>` атрибут `aria-label=\"Иконка …\"` и `role=\"img\"`; при необходимости обернуть в `<span class=\"sr-only\">…</span>` для описания.",
+ "skill": "",
+ "effect": "Улучшает доступность для скрин‑ридеров, повышает восприятие доверия.",
+ "risk": "Увеличит размер HTML ≈ 30 Б, но незначительно.",
+ "rollback": "Удалить добавленные `aria-label`/`role`/`<span>` элементы.",
+ "verify": "Включить «Screen Reader» в Chrome DevTools → проверка читаемости элементов.",
+ "priority_claim": "2 – низкая сложность, важна для a11y и SEO.",
+ "source_hint": "",
+ "site_request": "боль",
+ "category": "lever",
+ "variants": [
+  "В секции «Боль» (h2 «Запись есть — клиентов из поиска нет») добавить к каждому `<svg>` атрибут `aria-label=\"Иконка …\"` и `role=\"img\"`; при необходимости обернуть в `<span class=\"sr-only\">…</span>` для описания."
+ ],
+ "flags": []
+}

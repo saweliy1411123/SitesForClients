@@ -1,0 +1,26 @@
+{
+ "id": "I-00092",
+ "round": 14,
+ "time": "2026-11-17 02:21:17",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — Parallax Hero Background",
+ "knob": "METHOD: Добавьте переиспользуемый скилл, который создаёт лёгкий вертикальный параллакс‑эффект для секции‑героя с помощью CSS‑переменной `--parallax` и небольшого JS‑скрипта, обновляющего её по `scroll`.\nSAFE CSS:\n```css\n/* Parallax container – apply to <section class=\"hero\"> */\n.parallax-hero {\nposition: relative;\noverflow: hidden;\nperspective: 1px;\n}\n.parallax-hero::before {\ncontent: \"\";\nposition: absolute;\ninset: 0;\nbackground: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\"/>') center/cover;\ntransform: translateY(calc(var(--parallax, 0) * 0.3));\nwill-change: transform;\nz-index: -1;\n}\n```\nSAFE JS:\n```js\ndocument.addEventListener('scroll', () => {\nconst hero = document.querySelector('.parallax-hero');\nif (!hero) return;\nconst rect = hero.getBoundingClientRect();\nconst offset = Math.max(0, -rect.top);\nhero.style.setProperty('--parallax', offset + 'px');\n});\n```",
+ "skill": "",
+ "effect": "Визуальное усиление первого экрана, повышает восприятие премиальности и удерживает внимание посетителя.",
+ "risk": "При отключённом JavaScript эффект исчезнет, но контент останется читаемым.",
+ "rollback": "Удалить строки `<link rel=\"stylesheet\">`/`<script>` с `parallax-hero` и вернуть оригинальный файл из Git (`git checkout index.html`).",
+ "verify": "Открыть страницу в Chrome, прокрутить вниз‑вверх и убедиться, что фон героя плавно смещается; сравнить скриншот до/после.",
+ "priority_claim": "1 – быстрый визуальный апгрейд, не требует бэкенда, сразу повышает конверсию.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "METHOD: Добавьте переиспользуемый скилл, который создаёт лёгкий вертикальный параллакс‑эффект для секции‑героя с помощью CSS‑переменной `--parallax` и небольшого JS‑скрипта, обновляющего её по `scroll`.\nSAFE CSS:\n```css\n/* Parallax container – apply to <section class=\"hero\"> */\n.parallax-hero {\nposition: relative;\noverflow: hidden;\nperspective: 1px;\n}\n.parallax-hero::before {\ncontent: \"\";\nposition: absolute;\ninset: 0;\nbackground: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\"/>') center/cover;\ntransform: translateY(calc(var(--parallax, 0) * 0.3));\nwill-change: transform;\nz-index: -1;\n}\n```\nSAFE JS:\n```js\ndocument.addEventListener('scroll', () => {\nconst hero = document.querySelector('.parallax-hero');\nif (!hero) return;\nconst rect = hero.getBoundingClientRect();\nconst offset = Math.max(0, -rect.top);\nhero.style.setProperty('--parallax', offset + 'px');\n});\n```"
+ ],
+ "flags": []
+}

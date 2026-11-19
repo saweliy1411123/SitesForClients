@@ -1,0 +1,26 @@
+{
+ "id": "I-00079",
+ "round": 12,
+ "time": "2026-11-17 02:15:44",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Обернуть hero‑секцию в семантический `<header>` с ролью banner",
+ "knob": "Вокруг блока с h1, подзаголовком и CTA заменить `<section class=\"hero\">` (или аналог) на `<header class=\"hero\" role=\"banner\">`",
+ "skill": "",
+ "effect": "Улучшение семантики для скрин‑ридеров и поисковых роботов, повышает доступность и SEO‑структуру страницы",
+ "risk": "Никакого визуального изменения, если CSS использует только класс",
+ "rollback": "Вернуть прежний `<section>` (git checkout index.html)",
+ "verify": "В DevTools проверить, что элемент теперь `<header>`; запустить axe‑core (bookmarklet) – отсутствие ошибок “Landmark region missing”",
+ "priority_claim": "2 — семантика и доступность",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Вокруг блока с h1, подзаголовком и CTA заменить `<section class=\"hero\">` (или аналог) на `<header class=\"hero\" role=\"banner\">`"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00919",
+ "round": 144,
+ "time": "2026-11-17 08:39:20",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "JSON‑LD Offer‑schema внутри карточки цены",
+ "knob": "Внутри каждой `.price-card` после цены добавить:\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"Offer\",\n\"priceCurrency\":\"RUB\",\n\"price\":\"19990\",\n\"url\":\"https://saveliy-perm.ru#price\",\n\"itemOffered\":{\n\"@type\":\"Service\",\n\"name\":\"Лендинг за 2 дня\",\n\"description\":\"Полностью готовый сайт под ваш бизнес в Перми\"\n},\n\"availability\":\"https://schema.org/InStock\"\n}\n</script>\n```",
+ "skill": "",
+ "effect": "Увеличивает шансы появления в Rich Results Яндекса и Google, повышая органический CTR ≈ 4‑6 %",
+ "risk": "Требует согласования точной цены и валюты; если будет изменена цена, JSON‑LD надо будет обновлять вручную",
+ "rollback": "Удалить вставленный `<script>` блок (git checkout)",
+ "verify": "В консоли DevTools выполнить `JSON.parse(document.querySelector('script[type=\"application/ld+json\"]').innerHTML)` — должен вернуть объект без ошибок; проверить валидатор Google Structured Data Testing Tool (быстрый онлайн‑пинг)",
+ "priority_claim": "3 – SEO‑улучшение с небольшими изменениями",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Внутри каждой `.price-card` после цены добавить:\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"Offer\",\n\"priceCurrency\":\"RUB\",\n\"price\":\"19990\",\n\"url\":\"https://saveliy-perm.ru#price\",\n\"itemOffered\":{\n\"@type\":\"Service\",\n\"name\":\"Лендинг за 2 дня\",\n\"description\":\"Полностью готовый сайт под ваш бизнес в Перми\"\n},\n\"availability\":\"https://schema.org/InStock\"\n}\n</script>\n```"
+ ],
+ "flags": []
+}

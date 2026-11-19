@@ -1,0 +1,26 @@
+{
+ "id": "I-00450",
+ "round": 67,
+ "time": "2026-11-17 04:56:40",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Цена — «Гарантия возврата» badge с tooltip‑подсказкой",
+ "knob": "Внутри каждого `.price-card` после цены добавить `<span class=\"guarantee-badge\" title=\"Если сайт не будет готов в 2 дня — возвращаем 100 % средств\">Гарантия</span>`; CSS `.guarantee-badge{display:inline-block;background:#34d399;color:#fff;padding:0.2em 0.5em;border-radius:0.3rem;font-size:0.85em;margin-left:0.5rem;cursor:help;}`",
+ "skill": "",
+ "effect": "снижает страх риска у потенциальных клиентов, повышает доверие → рост заявок ≈ 3 %",
+ "risk": "tooltip‑текст виден только при наведении; на мобильных может быть недоступен (можно добавить `aria-label`)",
+ "rollback": "удалить строку badge и CSS‑правило",
+ "verify": "в браузере навести курсор на badge, увидеть подсказку; проверить, что badge отображается в мобильных viewports (при тапе)",
+ "priority_claim": "3 – небольшое улучшение, но требует проверки доступности, поэтому отложить после более приоритетных идей",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Внутри каждого `.price-card` после цены добавить `<span class=\"guarantee-badge\" title=\"Если сайт не будет готов в 2 дня — возвращаем 100 % средств\">Гарантия</span>`; CSS `.guarantee-badge{display:inline-block;background:#34d399;color:#fff;padding:0.2em 0.5em;border-radius:0.3rem;font-size:0.85em;margin-left:0.5rem;cursor:help;}`"
+ ],
+ "flags": []
+}

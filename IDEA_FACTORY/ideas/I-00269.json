@@ -1,0 +1,26 @@
+{
+ "id": "I-00269",
+ "round": 40,
+ "time": "2026-11-17 03:35:35",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить `aria-label` к главной CTA‑кнопке в hero",
+ "knob": "В элемент `<a class=\"btn-primary magnetic\" href=\"#contact\">…</a>` добавить `aria-label=\"Получить бесплатное демо‑макет в Telegram\"`",
+ "skill": "",
+ "effect": "Явно описывает действие для скрин‑ридеров, повышает конверсию у пользователей с ограниченными возможностями",
+ "risk": "Нужно обеспечить, чтобы текст метки точно соответствовал действию",
+ "rollback": "Удалить атрибут `aria-label`",
+ "verify": "В DevTools → Accessibility, убедиться, что у ссылки есть “Accessible name: Получить бесплатное демо‑макет в Telegram”",
+ "priority_claim": "2 – улучшает доступность без визуального изменения",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В элемент `<a class=\"btn-primary magnetic\" href=\"#contact\">…</a>` добавить `aria-label=\"Получить бесплатное демо‑макет в Telegram\"`"
+ ],
+ "flags": []
+}

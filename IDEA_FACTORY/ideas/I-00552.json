@@ -1,0 +1,28 @@
+{
+ "id": "I-00552",
+ "round": 82,
+ "time": "2026-11-17 05:39:48",
+ "source": "lareper/glm-5.3-prime",
+ "sources": [
+  "lareper/glm-5.3-prime",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3"
+ ],
+ "mentions": 3,
+ "status": "NEW",
+ "title": "touch-target ≥44px для всех ссылок-CTA и навигации на мобильных",
+ "knob": "в CSS добавить `@media (max-width:768px){ a, .btn-primary, nav a{min-height:44px; min-width:44px; display:inline-flex; align-items:center} }` и проверить паддинги ссылок в `<nav>` (L441–444)",
+ "skill": "",
+ "effect": "соответствие WCAG 2.5.8 / рекомендациям Apple и Google — меньше промахов по CTA с телефона, рост мобильной конверсии",
+ "risk": "увеличение min-height может «распыхать» навигацию на узких экранах — потребуется подгонка паддингов",
+ "rollback": "git checkout -- index.html",
+ "verify": "DevTools → iPhone SE (375px) → Console: `[...document.querySelectorAll('a')].forEach(a=>{const r=a.getBoundingClientRect(); if(r.height<44) console.log(a.textContent.trim(), r.height)})` (3 мин)",
+ "priority_claim": "1 — дёшево, напрямую влияет на мобильную конверсию и a11y-аудит",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "в CSS добавить `@media (max-width:768px){ a, .btn-primary, nav a{min-height:44px; min-width:44px; display:inline-flex; align-items:center} }` и проверить паддинги ссылок в `<nav>` (L441–444)"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00410",
+ "round": 60,
+ "time": "2026-11-17 04:35:26",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить `hreflang=\"ru\"` в `<head>` для указания языка целевой аудитории",
+ "knob": "В `<head>` вставить `<link rel=\"alternate\" hreflang=\"ru\" href=\"https://saveliy.ru/\">`",
+ "skill": "",
+ "effect": "Помогает поисковикам правильно индексировать страницу для русскоязычных пользователей, потенциально повышает ранжирование в локальном поиске",
+ "risk": "Нужен корректный URL; если сайт будет иметь другие локали, потребуется расширить список – сейчас безопасно",
+ "rollback": "Удалить тег `<link rel=\"alternate\"...>`",
+ "verify": "Проверить в инструментах Яндекса/Google Search Console",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<head>` вставить `<link rel=\"alternate\" hreflang=\"ru\" href=\"https://saveliy.ru/\">`"
+ ],
+ "flags": []
+}

@@ -1,0 +1,28 @@
+{
+ "id": "I-00653",
+ "round": 99,
+ "time": "2026-11-17 06:31:28",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b",
+  "localhost:8081/big_only"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "JSON‑LD BreadcrumbList для локального SEO и доверия",
+ "knob": "В `<head>` перед закрывающим `</head>` вставить скрипт‑блок:\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"BreadcrumbList\",\n\"itemListElement\":[\n{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Главная\",\"item\":\"https://example.com/\"},\n{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Лендинги в Перми\",\"item\":\"https://example.com/landing-perm\"}\n]\n}\n</script>\n```\n(заменить `example.com` на реальный домен).",
+ "skill": "",
+ "effect": "Поисковые системы отображают «хлебные крошки» в результатах, повышая кликабельность и воспринимаемую надёжность.",
+ "risk": "Требует корректного URL; если домен меняется, понадобится обновление.",
+ "rollback": "Удалить скрипт‑блок из `<head>`; `git checkout -- index.html`.",
+ "verify": "В Chrome DevTools → Console выполнить `JSON.parse(document.querySelector('script[type=\"application/ld+json\"]').innerHTML)`; убедиться в корректной структуре; проверить в Google Rich Results Test.",
+ "priority_claim": "3 — низкий приоритет, но полезен для SEO и доверия.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<head>` перед закрывающим `</head>` вставить скрипт‑блок:\n```html\n<script type=\"application/ld+json\">\n{\n\"@context\":\"https://schema.org\",\n\"@type\":\"BreadcrumbList\",\n\"itemListElement\":[\n{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Главная\",\"item\":\"https://example.com/\"},\n{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Лендинги в Перми\",\"item\":\"https://example.com/landing-perm\"}\n]\n}\n</script>\n```\n(заменить `example.com` на реальный домен).",
+  "вставить в `<head>` перед закрывающим `</head>` скрипт типа `application/ld+json` с объектом `{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Главная\",\"item\":\"https://example.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Услуги\",\"item\":\"https://example.com/#price\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"FAQ\",\"item\":\"https://example.com/#faq\"}]}`."
+ ],
+ "flags": []
+}

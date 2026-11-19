@@ -1,0 +1,26 @@
+{
+ "id": "I-00383",
+ "round": 57,
+ "time": "2026-11-17 04:26:27",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Social‑proof counter «10 + готовых лендингов за месяц» в hero",
+ "knob": "В секцию `.hero` (после `<h1>`) добавить `<div class=\"hero‑counter\"><span class=\"num\">10+</span> готовых лендингов за месяц</div>` и в CSS `.hero‑counter{font‑size:clamp(14px,4vw,18px);color:var(--muted);margin-top:0.8rem;}`",
+ "skill": "",
+ "effect": "Усиливает доверие сразу на первом экране, демонстрирует опыт и объём выполненных проектов → рост CTR CTA на ≈ 5 %",
+ "risk": "Небольшой визуальный шум, если цифра будет восприниматься неверно — может потребовать корректировки контента",
+ "rollback": "`git checkout -- index.html && git checkout -- path/to/added‑styles.css` (или удалить вставку из файла)",
+ "verify": "Открыть страницу в браузере, убедиться, что блок появляется под заголовком, проверить в DevTools, что `.hero‑counter` не перекрывает другие элементы, и запустить Lighthouse → показатели Accessibility и Performance не ухудшились",
+ "priority_claim": "1 – быстрое улучшение доверия без кода‑бэкенда, высокий ROI",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В секцию `.hero` (после `<h1>`) добавить `<div class=\"hero‑counter\"><span class=\"num\">10+</span> готовых лендингов за месяц</div>` и в CSS `.hero‑counter{font‑size:clamp(14px,4vw,18px);color:var(--muted);margin-top:0.8rem;}`"
+ ],
+ "flags": []
+}

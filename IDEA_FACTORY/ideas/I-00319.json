@@ -1,0 +1,28 @@
+{
+ "id": "I-00319",
+ "round": 48,
+ "time": "2026-11-17 03:57:29",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — glass-card-premium",
+ "knob": "\n### Название\nglass-card-premium\n### Когда применять\nтёмный лендинг с цветными фоновыми изображениями\n### Шаги\n1. Добавить к каждому элементу `.demo-item` класс `.glass-card`.\n2. Добавить в `<style>` блок:\n```css\n.glass-card {\nbackground: linear-gradient(135deg, rgba(139,92,246,.5), transparent 65%);\nbackdrop-filter: blur(10px);\nborder-radius: 10px;\npadding: 20px;\nbox-shadow: 0 0 10px rgba(139,92,246,.2);\n}\n```",
+ "skill": "glass-card-premium",
+ "effect": "повысить визуальную привлекательность демо-концептов",
+ "risk": "требует проверки читаемости текста на фоне",
+ "rollback": "удалить добавленный класс и стили",
+ "verify": "проверить визуальную привлекательность и читаемость текста на фоне",
+ "priority_claim": "2, улучшение визуальной привлекательности",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "\n### Название\nglass-card-premium\n### Когда применять\nтёмный лендинг с цветными фоновыми изображениями\n### Шаги\n1. Добавить к каждому элементу `.demo-item` класс `.glass-card`.\n2. Добавить в `<style>` блок:\n```css\n.glass-card {\nbackground: linear-gradient(135deg, rgba(139,92,246,.5), transparent 65%);\nbackdrop-filter: blur(10px);\nborder-radius: 10px;\npadding: 20px;\nbox-shadow: 0 0 10px rgba(139,92,246,.2);\n}\n```",
+  "\n### Название\nglass-card-premium\n### Когда применять\nтёмный лендинг с цветными фоновыми изображениями\n### Шаги\n1. Добавить к каждому `.price-card` класс `glass-card`.\n2. Добавить CSS-стили для `.glass-card`.\nSAFE CSS:\n```css\n.glass-card {\nbackdrop-filter: blur(20px);\nbackground: linear-gradient(180deg, rgba(10,10,15,.4) 0%, transparent 40%, var(--bg) 100%);\npadding: 20px;\nborder-radius: 10px;\nbox-shadow: 0 0 10px rgba(0, 0, 0, 0.2);\n}\n```",
+  "\n### Название\nglass-card-premium\n### Когда применять\nтёмный лендинг с цветными фоновыми изображениям\n### SAFE CSS:\n```css\n.glass-card-premium {\nbackdrop-filter: blur(10px);\nbackground: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));\nborder-radius: 10px;\npadding: 20px;\nbox-shadow: 0 0 10px rgba(0, 0, 0, 0.2);\n}\n```"
+ ],
+ "flags": []
+}

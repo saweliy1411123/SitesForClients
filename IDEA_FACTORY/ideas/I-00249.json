@@ -1,0 +1,26 @@
+{
+ "id": "I-00249",
+ "round": 38,
+ "time": "2026-11-17 03:29:27",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "I-00146‑R1 Заменить exit‑intent модальное окно на не‑интрузивный top‑banner CTA",
+ "knob": "Вставить перед основным контентом `<div class=\"top-banner\" role=\"region\" aria-label=\"Бесплатное демо\"><span>Получите бесплатное демо сайта</span><a class=\"btn-primary\" href=\"#contact\">Заказать</a><button class=\"banner-close\" aria-label=\"Закрыть баннер\">✕</button></div>`; добавить CSS `position:sticky;top:0;background:var(--bg);padding:12px;display:flex;justify-content:space-between;align-items:center;z-index:1000;` и скрипт, скрывающий баннер по клику на кнопку закрытия.",
+ "skill": "",
+ "effect": "Повышает конверсию за счёт постоянного, но ненавязчивого призыва к действию, избегая темных паттернов и резких модальных прерываний.",
+ "risk": "Возможен небольшой сдвиг контента при загрузке; резервировать место (margin‑top) чтобы избежать Layout Shift.",
+ "rollback": "Удалить вставленный HTML‑блок и связанные CSS/JS; `git checkout index.html`.",
+ "verify": "Перезагрузить страницу, убедиться, что баннер отображается вверху, закрывается без остатка, и что основной контент не «прыгает» после закрытия.",
+ "priority_claim": "1 – высокий потенциал повышения конверсии при минимальном риске UX.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Вставить перед основным контентом `<div class=\"top-banner\" role=\"region\" aria-label=\"Бесплатное демо\"><span>Получите бесплатное демо сайта</span><a class=\"btn-primary\" href=\"#contact\">Заказать</a><button class=\"banner-close\" aria-label=\"Закрыть баннер\">✕</button></div>`; добавить CSS `position:sticky;top:0;background:var(--bg);padding:12px;display:flex;justify-content:space-between;align-items:center;z-index:1000;` и скрипт, скрывающий баннер по клику на кнопку закрытия."
+ ],
+ "flags": []
+}

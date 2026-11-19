@@ -1,0 +1,26 @@
+{
+ "id": "I-00639",
+ "round": 97,
+ "time": "2026-11-17 06:24:25",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — gradient‑text‑hero",
+ "knob": "**Name:** `gradient-text-hero`\n**When to apply:** На любой статический лендинг с крупным заголовком в hero‑секции, где нужен визуальный акцент без добавления изображений.\n**Steps:**\n1. Добавить класс `gradient-text` к элементу `<h1>` (или другому блоку, требующему акцента).\n2. Включить CSS‑правило из `SAFE CSS` ниже в глобальный `<style>` либо в отдельный файл стилей.\n3. При желании задать индивидуальный градиент через CSS‑переменную `--gradient`.\n4. (Опционально) Добавить небольшую анимацию плавного смещения градиента через `SAFE CSS`.\n**SAFE CSS:**\n```css\n/* gradient‑text‑hero */\n.gradient-text {\n--gradient: linear-gradient(90deg, #8b5cf6, #3b82f6, #10b981, #f59e0b);\nbackground: var(--gradient);\n-webkit-background-clip: text;\nbackground-clip: text;\ncolor: transparent;\ndisplay: inline-block;\nanimation: gradient-slide 8s linear infinite;\n}\n/* плавный сдвиг градиента */\n@keyframes gradient-slide {\n0%   { background-position: 0% 50%; }\n50%  { background-position: 100% 50%; }\n100% { background-position: 0% 50%; }\n}\n/* адаптивность – отключаем анимацию на слабых устройствах */\n@media (prefers-reduced-motion: reduce) {\n.gradient-text { animation: none; }\n}\n```\n**SAFE JS:** *(необязательно – только если нужен контроль над включением/выключением анимации)*\n```js\n// отключить анимацию, если пользователь предпочитает reduced‑motion\nif (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {\ndocument.querySelectorAll('.gradient-text').forEach(el => {\nel.style.animation = 'none';\n});\n}\n```",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `gradient-text-hero`\n**When to apply:** На любой статический лендинг с крупным заголовком в hero‑секции, где нужен визуальный акцент без добавления изображений.\n**Steps:**\n1. Добавить класс `gradient-text` к элементу `<h1>` (или другому блоку, требующему акцента).\n2. Включить CSS‑правило из `SAFE CSS` ниже в глобальный `<style>` либо в отдельный файл стилей.\n3. При желании задать индивидуальный градиент через CSS‑переменную `--gradient`.\n4. (Опционально) Добавить небольшую анимацию плавного смещения градиента через `SAFE CSS`.\n**SAFE CSS:**\n```css\n/* gradient‑text‑hero */\n.gradient-text {\n--gradient: linear-gradient(90deg, #8b5cf6, #3b82f6, #10b981, #f59e0b);\nbackground: var(--gradient);\n-webkit-background-clip: text;\nbackground-clip: text;\ncolor: transparent;\ndisplay: inline-block;\nanimation: gradient-slide 8s linear infinite;\n}\n/* плавный сдвиг градиента */\n@keyframes gradient-slide {\n0%   { background-position: 0% 50%; }\n50%  { background-position: 100% 50%; }\n100% { background-position: 0% 50%; }\n}\n/* адаптивность – отключаем анимацию на слабых устройствах */\n@media (prefers-reduced-motion: reduce) {\n.gradient-text { animation: none; }\n}\n```\n**SAFE JS:** *(необязательно – только если нужен контроль над включением/выключением анимации)*\n```js\n// отключить анимацию, если пользователь предпочитает reduced‑motion\nif (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {\ndocument.querySelectorAll('.gradient-text').forEach(el => {\nel.style.animation = 'none';\n});\n}\n```"
+ ],
+ "flags": []
+}

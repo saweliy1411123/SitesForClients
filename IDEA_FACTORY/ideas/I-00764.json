@@ -1,0 +1,26 @@
+{
+ "id": "I-00764",
+ "round": 117,
+ "time": "2026-11-17 07:23:13",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Улучшить контраст текста для WCAG AA (особенно var(--muted) и фоновые градиенты)",
+ "knob": "В CSS добавить правило `:root { --muted: #6b7280; }` (повысить яркость) и в секциях с низким контрастом (например, .hero-note, .sub) установить `color: var(--text)` или `color: #e5e7eb`. Добавить `@media (prefers-contrast: more)` альтернативные цвета.",
+ "skill": "",
+ "effect": "Повышает доступность, снижает показатель CLS (меньше пере‑рисовки) и улучшает восприятие на мобильных.",
+ "risk": "Изменение визуального стиля может слегка изменить фирменный вид.",
+ "rollback": "Откатить изменения в CSS (git checkout -- index.html) или вернуть прежние значения переменных.",
+ "verify": "В Chrome DevTools → Lighthouse → Accessibility, проверить пункт “Contrast ratio”. Также визуально сравнить скриншоты до/после.",
+ "priority_claim": "2 – важный для соответствия рекомендациям, но менее критичен для SEO, чем структурированные данные.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В CSS добавить правило `:root { --muted: #6b7280; }` (повысить яркость) и в секциях с низким контрастом (например, .hero-note, .sub) установить `color: var(--text)` или `color: #e5e7eb`. Добавить `@media (prefers-contrast: more)` альтернативные цвета."
+ ],
+ "flags": []
+}

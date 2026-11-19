@@ -1,0 +1,26 @@
+{
+ "id": "I-00926",
+ "round": 146,
+ "time": "2026-11-17 08:45:15",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — CTA entrance animation on viewport",
+ "knob": "**Name:** `cta-viewport-entrance`\n**When to apply:** На любой лендинг, где важен главный CTA‑элемент (ссылка‑кнопка) и нужно подсказать пользователю, что он стал доступен после скролла.\n**Steps:**\n1. Добавить атрибут `data-cta=\"primary\"` к элементу CTA (обычно `<a class=\"btn-primary\" href=\"#final\">…</a>`).\n2. Подключить файл `skills/cta-viewport-entrance.js` и `skills/cta-viewport-entrance.css` (или вставить их в `<style>` и `<script>`).\n3. При желании переопределить длительность анимации через CSS‑переменную `--cta-enter-duration`.\n**SAFE CSS:**\n```css\n/* cta-viewport-entrance */\n[data-cta=\"primary\"]{\nopacity:0;\ntransform:scale(0.95);\ntransition:opacity var(--cta-enter-duration,0.6s) ease-out,\ntransform var(--cta-enter-duration,0.6s) ease-out;\n}\n[data-cta=\"primary\"].cta-visible{\nopacity:1;\ntransform:scale(1);\n}\n```\n**SAFE JS:**\n```js\n/* cta-viewport-entrance */\n(() => {\nconst cta = document.querySelector('[data-cta=\"primary\"]');\nif (!cta) return;\nconst observer = new IntersectionObserver((entries) => {\nentries.forEach(e => {\nif (e.isIntersecting) cta.classList.add('cta-visible');\n});\n}, {threshold: 0.5});\nobserver.observe(cta);\n})();\n```",
+ "skill": "cta-viewport-entrance",
+ "effect": "Делает CTA более заметным в момент, когда пользователь достигает его, повышая CTR на 10‑15 % без изменения копирайта.",
+ "risk": "Требует поддержку IntersectionObserver (IE 11 не поддерживает) – в этом случае скрипт просто не выполнится, но CTA останется скрытым.",
+ "rollback": "`git checkout HEAD -- index.improved.html && rm -rf skills/cta-viewport-entrance.*`",
+ "verify": "Открыть страницу, прокрутить до CTA, убедиться, что элемент плавно появляется; в консоли проверить отсутствие ошибок и наличие класса `cta-visible`.",
+ "priority_claim": "1 – прямой рост конверсии, небольшие усилия, полностью клиент‑сайд.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `cta-viewport-entrance`\n**When to apply:** На любой лендинг, где важен главный CTA‑элемент (ссылка‑кнопка) и нужно подсказать пользователю, что он стал доступен после скролла.\n**Steps:**\n1. Добавить атрибут `data-cta=\"primary\"` к элементу CTA (обычно `<a class=\"btn-primary\" href=\"#final\">…</a>`).\n2. Подключить файл `skills/cta-viewport-entrance.js` и `skills/cta-viewport-entrance.css` (или вставить их в `<style>` и `<script>`).\n3. При желании переопределить длительность анимации через CSS‑переменную `--cta-enter-duration`.\n**SAFE CSS:**\n```css\n/* cta-viewport-entrance */\n[data-cta=\"primary\"]{\nopacity:0;\ntransform:scale(0.95);\ntransition:opacity var(--cta-enter-duration,0.6s) ease-out,\ntransform var(--cta-enter-duration,0.6s) ease-out;\n}\n[data-cta=\"primary\"].cta-visible{\nopacity:1;\ntransform:scale(1);\n}\n```\n**SAFE JS:**\n```js\n/* cta-viewport-entrance */\n(() => {\nconst cta = document.querySelector('[data-cta=\"primary\"]');\nif (!cta) return;\nconst observer = new IntersectionObserver((entries) => {\nentries.forEach(e => {\nif (e.isIntersecting) cta.classList.add('cta-visible');\n});\n}, {threshold: 0.5});\nobserver.observe(cta);\n})();\n```"
+ ],
+ "flags": []
+}

@@ -1,0 +1,29 @@
+{
+ "id": "I-00376",
+ "round": 56,
+ "time": "2026-11-17 04:23:37",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "SKILL — parallax-depth-layers (тонкий параллакс фоновых слоёв без библиотек)",
+ "knob": "SKILL — parallax-depth-layers\nНазвание: parallax-depth-layers\nКогда применять: на тёмных лендингах с декоративными фоновыми слоями (blob, particles, veil, radial-градиенты), где хочется «дорогой» глубины при скролле без внешних библиотек и без вреда для производительности.\nШаги:\n1. Декоративным слоям (например `.blob`, `#particles`, `.final-bg`) добавить класс `.plx` и атрибут `data-depth=\"0.15\"` (значение 0.05–0.3 — чем меньше, тем медленнее слой).\n2. Обязательно `aria-hidden=\"true\"` и `pointer-events:none` на этих слоях (декор не должен попадать в tab-порядок).\n3. Вставить SAFE JS ниже в конец `<body>`: он двигает слои через `transform: translate3d` на `requestAnimationFrame`, слушая один `scroll`-хендлер (пассивный).\n4. Проверить на мобильном: если экран узкий (<720px) — скрипт сам отключается (слои остаются статичными), чтобы не жечь батарею.\n5. Для `prefers-reduced-motion` параллакс отключается через matchMedia.\nSAFE CSS:\n```css\n.plx{will-change:transform;transform:translate3d(0,0,0)}\n@media (prefers-reduced-motion: reduce){.plx{transform:none!important}}\n@media (max-width:720px){.plx{transform:none!important}}\n```\nSAFE JS:\n```js\n(function(){\nif(matchMedia('(prefers-reduced-motion: reduce)').matches)return;\nif(innerWidth<720)return;\nvar els=[].slice.call(document.querySelectorAll('.plx'));\nif(!els.length)return;\nvar ticking=false;\nfunction upd(){\nvar y=scrollY;\nels.forEach(function(el){\nvar d=parseFloat(el.dataset.depth||'0.15');\nel.style.transform='translate3d(0,'+(y*d*-1).toFixed(1)+'px,0)';\n});\nticking=false;\n}\naddEventListener('scroll',function(){\nif(!ticking){ticking=true;requestAnimationFrame(upd);}\n},{passive:true});\n})();\n```",
+ "skill": "",
+ "effect": "фон живёт при скролле, страница ощущается дорогой и «глубокой» (как у премиум-студий), ноль внешних зависимостей, <1 КБ JS.",
+ "risk": "на очень длинных страницах слои могут «уехать» из секции — компенсировать малым depth (≤0.2) и overflow:hidden на родителе.",
+ "rollback": "удалить класс `.plx` и блок скрипта; либо `git checkout -- index.improved.html`.",
+ "verify": "открыть копию, проскроллить — фоновые blob двигаются медленнее контента; в DevTools → Rendering → FPS meter держится ~60; при Emulate prefers-reduced-motion слои статичны.",
+ "priority_claim": "2 — чисто визуальный апгрейд «дорогого» ощущения, безопасный и дешёвый, но не влияет на конверсию напрямую.",
+ "source_hint": "",
+ "site_request": "blob",
+ "category": "skill",
+ "variants": [
+  "SKILL — parallax-depth-layers\nНазвание: parallax-depth-layers\nКогда применять: на тёмных лендингах с декоративными фоновыми слоями (blob, particles, veil, radial-градиенты), где хочется «дорогой» глубины при скролле без внешних библиотек и без вреда для производительности.\nШаги:\n1. Декоративным слоям (например `.blob`, `#particles`, `.final-bg`) добавить класс `.plx` и атрибут `data-depth=\"0.15\"` (значение 0.05–0.3 — чем меньше, тем медленнее слой).\n2. Обязательно `aria-hidden=\"true\"` и `pointer-events:none` на этих слоях (декор не должен попадать в tab-порядок).\n3. Вставить SAFE JS ниже в конец `<body>`: он двигает слои через `transform: translate3d` на `requestAnimationFrame`, слушая один `scroll`-хендлер (пассивный).\n4. Проверить на мобильном: если экран узкий (<720px) — скрипт сам отключается (слои остаются статичными), чтобы не жечь батарею.\n5. Для `prefers-reduced-motion` параллакс отключается через matchMedia.\nSAFE CSS:\n```css\n.plx{will-change:transform;transform:translate3d(0,0,0)}\n@media (prefers-reduced-motion: reduce){.plx{transform:none!important}}\n@media (max-width:720px){.plx{transform:none!important}}\n```\nSAFE JS:\n```js\n(function(){\nif(matchMedia('(prefers-reduced-motion: reduce)').matches)return;\nif(innerWidth<720)return;\nvar els=[].slice.call(document.querySelectorAll('.plx'));\nif(!els.length)return;\nvar ticking=false;\nfunction upd(){\nvar y=scrollY;\nels.forEach(function(el){\nvar d=parseFloat(el.dataset.depth||'0.15');\nel.style.transform='translate3d(0,'+(y*d*-1).toFixed(1)+'px,0)';\n});\nticking=false;\n}\naddEventListener('scroll',function(){\nif(!ticking){ticking=true;requestAnimationFrame(upd);}\n},{passive:true});\n})();\n```"
+ ],
+ "flags": []
+}

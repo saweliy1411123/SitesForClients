@@ -1,0 +1,26 @@
+{
+ "id": "I-00272",
+ "round": 40,
+ "time": "2026-11-17 03:35:51",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Мобильный тест «первый экран без скролла = оффер + CTA» на 360px",
+ "knob": "METHOD: (1) Открыть index.html в DevTools → device toolbar → ширина 360px (Galaxy S8/Android Go — самый узкий реальный сценарий). (2) Сделать скриншот viewport (Ctrl+Shift+P → «Capture screenshot»), НЕ скролля. (3) Проверить по чек-листу: виден ли h1 целиком, видна ли кнопка CTA (L462) или sticky-cta (L409), не перекрывает ли sticky-cta контент hero, читается ли `.hero-note` (L465). (4) Повторить на 320px (iPhone SE 1st gen) — минимальная поддерживаемая ширина.",
+ "skill": "",
+ "effect": "Гарантия, что на самых узких устройствах первый экран продаёт без взаимодействия; ловит перекрытия sticky-CTA и обрезку h1, невидимые на 375px.",
+ "risk": "Низкий — только визуальная проверка.",
+ "rollback": "Не требуется.",
+ "verify": "2 скриншота + чек-лист из 5 пунктов, ~4 минуты.",
+ "priority_claim": "1 — мобильный трафик основной для локального бизнеса, а 320–360px часто пропускают при тестах на 375px.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: (1) Открыть index.html в DevTools → device toolbar → ширина 360px (Galaxy S8/Android Go — самый узкий реальный сценарий). (2) Сделать скриншот viewport (Ctrl+Shift+P → «Capture screenshot»), НЕ скролля. (3) Проверить по чек-листу: виден ли h1 целиком, видна ли кнопка CTA (L462) или sticky-cta (L409), не перекрывает ли sticky-cta контент hero, читается ли `.hero-note` (L465). (4) Повторить на 320px (iPhone SE 1st gen) — минимальная поддерживаемая ширина."
+ ],
+ "flags": []
+}

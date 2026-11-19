@@ -1,0 +1,26 @@
+{
+ "id": "I-00223",
+ "round": 34,
+ "time": "2026-11-17 03:18:30",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — Scroll-Triggered Gradient Background",
+ "knob": "\n### Название\nscroll-triggered-gradient\n### Когда применять\nЛюбой лендинг с длинной прокруткой, где нужно улучшить визуальный интерес и выделить определенные секции.\n### Шаги\n1. Определить секции, где будет применяться градиент.\n2. Добавить класс `scroll-gradient` к этим секциям.\n3. В CSS добавить стили для `.scroll-gradient`.\n### SAFE CSS:\n```css\n.scroll-gradient {\nbackground-image: linear-gradient(to bottom, #8b5cf6, #6a44f4);\nbackground-size: 100% 300px;\nbackground-position: 0% 100%;\n}\n.scroll-gradient.show-gradient {\nbackground-position: 0% 0%;\ntransition: background-position 1s ease-out;\n}\n```\n### SAFE JS:\n```javascript\nconst gradientSections = document.querySelectorAll('.scroll-gradient');\nconst observer = new IntersectionObserver((entries) => {\nentries.forEach((entry) => {\nif (entry.isIntersecting) {\nentry.target.classList.add('show-gradient');\n} else {\nentry.target.classList.remove('show-gradient');\n}\n});\n}, { threshold: 0.5 });\ngradientSections.forEach((section) => {\nobserver.observe(section);\n});\n```",
+ "skill": "",
+ "effect": "Добавление градиентного фона к определенным секциям при прокрутке улучшает визуальный интерес и делает контент более привлекательным.",
+ "risk": "Нет значительных рисков, но необходимо проверить совместимость с другими стилями и скриптами.",
+ "rollback": "Удалить добавленные классы и стили.",
+ "verify": "Проверить визуально, что градиент появляется при прокрутке к определенным секциям.",
+ "priority_claim": "2, так как это улучшение визуального интереса и не влияет напрямую на конверсию или SEO.",
+ "source_hint": "",
+ "site_request": "gradient",
+ "category": "skill",
+ "variants": [
+  "\n### Название\nscroll-triggered-gradient\n### Когда применять\nЛюбой лендинг с длинной прокруткой, где нужно улучшить визуальный интерес и выделить определенные секции.\n### Шаги\n1. Определить секции, где будет применяться градиент.\n2. Добавить класс `scroll-gradient` к этим секциям.\n3. В CSS добавить стили для `.scroll-gradient`.\n### SAFE CSS:\n```css\n.scroll-gradient {\nbackground-image: linear-gradient(to bottom, #8b5cf6, #6a44f4);\nbackground-size: 100% 300px;\nbackground-position: 0% 100%;\n}\n.scroll-gradient.show-gradient {\nbackground-position: 0% 0%;\ntransition: background-position 1s ease-out;\n}\n```\n### SAFE JS:\n```javascript\nconst gradientSections = document.querySelectorAll('.scroll-gradient');\nconst observer = new IntersectionObserver((entries) => {\nentries.forEach((entry) => {\nif (entry.isIntersecting) {\nentry.target.classList.add('show-gradient');\n} else {\nentry.target.classList.remove('show-gradient');\n}\n});\n}, { threshold: 0.5 });\ngradientSections.forEach((section) => {\nobserver.observe(section);\n});\n```"
+ ],
+ "flags": []
+}

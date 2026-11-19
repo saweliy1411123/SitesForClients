@@ -1,0 +1,26 @@
+{
+ "id": "I-00279",
+ "round": 42,
+ "time": "2026-11-17 03:40:49",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "premium‑glass‑card — glassmorphism‑card‑hover",
+ "knob": "добавить CSS‑класс `.glass-card` к каждому блок‑карточке демо‑концептов (пример `.demo-item`) и применить стиль с `backdrop-filter`, `background: rgba(255,255,255,0.08)`, `border: 1px solid rgba(255,255,255,0.12)`, `border-radius: 12px`, `box-shadow: 0 8px 24px rgba(0,0,0,0.12)`; при `:hover`‑и `:focus-visible` добавить `transform: translateY(-6px) scale(1.02); box-shadow: 0 12px 32px rgba(0,0,0,0.18);` и плавный `transition: all .3s ease`.",
+ "skill": "",
+ "effect": "визуально премиальный «стеклянный» эффект повышает доверие и выделяет демо‑карточки, увеличивая время просмотра и вероятность клика по CTA.",
+ "risk": "`backdrop-filter` может не поддерживаться в старых браузерах (IE, старый Edge), в результате карточка будет выглядеть без эффекта.",
+ "rollback": "`git checkout -- index.html` либо удалить/закомментировать строки CSS, относящиеся к `.glass-card`.",
+ "verify": "открыть страницу в Chrome / Safari, убедиться, что карточки имеют полупрозрачный фон и поднимаются при наведении; в DevTools отключить `backdrop-filter` → убедиться, что без него дизайн остаётся приемлемым.",
+ "priority_claim": "1 — мгновенный визуальный апгрейд без кода‑бэкенда, небольшое влияние на производительность, высокий ROI.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "добавить CSS‑класс `.glass-card` к каждому блок‑карточке демо‑концептов (пример `.demo-item`) и применить стиль с `backdrop-filter`, `background: rgba(255,255,255,0.08)`, `border: 1px solid rgba(255,255,255,0.12)`, `border-radius: 12px`, `box-shadow: 0 8px 24px rgba(0,0,0,0.12)`; при `:hover`‑и `:focus-visible` добавить `transform: translateY(-6px) scale(1.02); box-shadow: 0 12px 32px rgba(0,0,0,0.18);` и плавный `transition: all .3s ease`."
+ ],
+ "flags": []
+}

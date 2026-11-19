@@ -1,0 +1,26 @@
+{
+ "id": "I-00933",
+ "round": 149,
+ "time": "2026-11-17 08:53:17",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Keyboard‑navigation order audit",
+ "knob": "METHOD: в консоли выполнить скрипт, который программно имитирует нажатие Tab 10 раз, собирает `document.activeElement` после каждого нажатия и выводит список селекторов в порядке фокусировки:\n```js\n(async()=>{let order=[];for(let i=0;i<15;i++){await new Promise(r=>setTimeout(r,100));document.dispatchEvent(new KeyboardEvent('keydown',{key:'Tab'}));order.push(document.activeElement.outerHTML); }console.table(order);})();\n```",
+ "skill": "",
+ "effect": "быстро выявляет «потерянные» ссылки/кнопки, неправильный порядок фокуса и отсутствие `:focus-visible`‑стилей, что улучшает конверсию с клавиатуры и SEO‑оценку.",
+ "risk": "имитация Tab может не покрыть все интерактивные элементы, если их количество > 15 – требует увеличить цикл вручную.",
+ "rollback": "перезагрузка страницы (сбросит фокус).",
+ "verify": "в консоли появляется таблица `order` со строками‑HTML текущих фокусируемых элементов; проверяем, что первая строка — логотип/навигация, а последняя — CTA.",
+ "priority_claim": "3 – полезно для доступности, но менее ощутимое влияние на конверсию по сравнению с LCP‑CTA; проверка занимает ≈ 5 минут.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: в консоли выполнить скрипт, который программно имитирует нажатие Tab 10 раз, собирает `document.activeElement` после каждого нажатия и выводит список селекторов в порядке фокусировки:\n```js\n(async()=>{let order=[];for(let i=0;i<15;i++){await new Promise(r=>setTimeout(r,100));document.dispatchEvent(new KeyboardEvent('keydown',{key:'Tab'}));order.push(document.activeElement.outerHTML); }console.table(order);})();\n```"
+ ],
+ "flags": []
+}

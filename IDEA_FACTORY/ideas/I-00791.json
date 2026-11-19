@@ -1,0 +1,26 @@
+{
+ "id": "I-00791",
+ "round": 120,
+ "time": "2026-11-17 07:32:26",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Native `<details>`‑FAQ — доступный и SEO‑дружественный аккордеон",
+ "knob": "В секции `#faq` заменить текущие кастомные div‑элементы на `<details class=\"faq-item\"><summary>Вопрос?</summary><p>Ответ.</p></details>`; добавить CSS `.faq-item{margin-bottom:16px;border-bottom:1px solid var(--muted)} .faq-item summary{cursor:pointer;padding:8px;font-weight:600;list-style:none} .faq-item[open] summary{color:var(--violet)}` и `summary::-webkit-details-marker{display:none}`.",
+ "skill": "",
+ "effect": "Улучшает доступность (работа с клавиатурой, ARIA‑live), ускоряет рендеринг без JS, повышает доверие → потенциальный рост конверсии на 5‑7 %",
+ "risk": "Требует небольших правок HTML; если скрипты полагались на старую структуру, они могут сломаться (проверить)",
+ "rollback": "`git checkout -- index.html` (или откатить изменения в файле)",
+ "verify": "В DevTools открыть `#faq`, проверить, что каждый элемент раскрывается без JS; использовать Lighthouse «Accessibility» → минимум 95 %",
+ "priority_claim": "2 — важно для доверия и SEO, но менее критично, чем ясность оффера",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В секции `#faq` заменить текущие кастомные div‑элементы на `<details class=\"faq-item\"><summary>Вопрос?</summary><p>Ответ.</p></details>`; добавить CSS `.faq-item{margin-bottom:16px;border-bottom:1px solid var(--muted)} .faq-item summary{cursor:pointer;padding:8px;font-weight:600;list-style:none} .faq-item[open] summary{color:var(--violet)}` и `summary::-webkit-details-marker{display:none}`."
+ ],
+ "flags": []
+}

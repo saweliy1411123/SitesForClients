@@ -1,0 +1,29 @@
+{
+ "id": "I-00077",
+ "round": 12,
+ "time": "2026-11-17 02:15:44",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b",
+  "localhost:8081/big_only"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Перенести единственный скрипт в defer‑режим",
+ "knob": "В `<script src=\"...\"></script>` добавить атрибут `defer` (или `async` если нет зависимостей)",
+ "skill": "",
+ "effect": "Скрипт будет загружаться параллельно и выполнится после построения DOM, уменьшая время до интерактивности (TTI)",
+ "risk": "Если скрипт зависит от элементов, размещённых после него, может возникнуть ошибка → проверить порядок выполнения",
+ "rollback": "Удалить `defer` (git checkout index.html)",
+ "verify": "В Console отсутствие ошибок; в Lighthouse → показатели “Avoid large layout shifts” и “Reduce JavaScript execution time” улучшатся",
+ "priority_claim": "1 — ускоряет загрузку и повышает Core Web Vitals",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<script src=\"...\"></script>` добавить атрибут `defer` (или `async` если нет зависимостей)",
+  "В конце `<body>` изменить `<script src=\"...\">` (или inline) на `<script defer>/* существующий код */</script>` (если скрипт inline, просто добавить `defer`).",
+  "В `<script src=\"...\">` добавить `async defer`"
+ ],
+ "flags": []
+}

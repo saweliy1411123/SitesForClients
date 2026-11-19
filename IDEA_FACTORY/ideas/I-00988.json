@@ -1,0 +1,26 @@
+{
+ "id": "I-00988",
+ "round": 166,
+ "time": "2026-11-17 09:41:49",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — lazy-section-load",
+ "knob": "**Name:** lazy-section-load\n**When to apply:** На статических лендингах с несколькими ниже‑заглавными секциями (hero, problem, steps, faq, price, final)\n**SAFE CSS:**\n```css\nsection {opacity:0;transform:translateY(20px);transition:opacity .4s ease,transform .4s ease}\nsection.in-view {opacity:1;transform:none}\n```\n**SAFE JS:**\n```js\ndocument.querySelectorAll('section').forEach(s=>{\nconst obs=new IntersectionObserver((e,o)=>{e.forEach(i=>{if(i.isIntersecting){i.target.classList.add('in-view');o.unobserve(i.target)}})},{threshold:.1});\nobs.observe(s);\n});\n```",
+ "skill": "",
+ "effect": "Отложенная отрисовка секций до момента, когда они попадают в viewport, уменьшает количество DOM‑элементов, рендерящихся сразу → сокращает время первой отрисовки и экономит ресурсы на мобильных устройствах",
+ "risk": "Требует поддержку IntersectionObserver (не работает в IE 11 без полифила); в старых браузерах все секции будут сразу видимы, что безопасно",
+ "rollback": "Удалить добавленные стили и скрипт или откатить файл через `git checkout -- index.html`",
+ "verify": "Открыть страницу в мобильном режиме, открыть DevTools → Network → убедиться, что только первая секция загружается сразу; прокрутить вниз и наблюдать плавное появление секций (можно включить `console.log` в скрипте)",
+ "priority_claim": "1 — значительное улучшение LCP и восприятия скорости без изменения контента.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** lazy-section-load\n**When to apply:** На статических лендингах с несколькими ниже‑заглавными секциями (hero, problem, steps, faq, price, final)\n**SAFE CSS:**\n```css\nsection {opacity:0;transform:translateY(20px);transition:opacity .4s ease,transform .4s ease}\nsection.in-view {opacity:1;transform:none}\n```\n**SAFE JS:**\n```js\ndocument.querySelectorAll('section').forEach(s=>{\nconst obs=new IntersectionObserver((e,o)=>{e.forEach(i=>{if(i.isIntersecting){i.target.classList.add('in-view');o.unobserve(i.target)}})},{threshold:.1});\nobs.observe(s);\n});\n```"
+ ],
+ "flags": []
+}

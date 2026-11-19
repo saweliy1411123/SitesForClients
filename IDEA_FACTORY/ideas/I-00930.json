@@ -1,0 +1,26 @@
+{
+ "id": "I-00930",
+ "round": 148,
+ "time": "2026-11-17 08:50:27",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Hero benefit badge – чёткая визуальная формулировка оффера",
+ "knob": "Внутри `<header class=\"hero\">` сразу после `<h1>` добавить\n```html\n<div class=\"hero-badge\" aria-label=\"Ключевое предложение\">\n<svg class=\"icon\" aria-hidden=\"true\">…</svg>\n<span>2 дня → готовый сайт, клиенты из Яндекса</span>\n</div>\n```\nи в CSS (в `<style>` или отдельный файл)\n```css\n.hero-badge{\ndisplay:inline-flex;\nalign-items:center;\ngap:.5rem;\npadding:.4rem .8rem;\nmargin-top:.8rem;\nbackground:var(--bg);\nborder:1px solid var(--border);\nborder-radius:6px;\nfont-size:clamp(14px,2vw,16px);\ncolor:var(--text);\n}\n.hero-badge .icon{\nwidth:1em;height:1em;fill:var(--blue);\n}\n```",
+ "skill": "",
+ "effect": "мгновенно сообщает клиенту «что», «за сколько», «где», повышая понятность оффера и CTR CTA.",
+ "risk": "небольшое увеличение высоты hero‑секции; на мобильных может потребовать небольшую корректировку паддингов.",
+ "rollback": "`git checkout -- index.html` (удалить вставленный блок и CSS).",
+ "verify": "открыть страницу, убедиться, что блок виден под заголовком, высота hero ≤ 120 vh, отсутствие горизонтального скролла.",
+ "priority_claim": "1 – высокий ROI за ≈ 5 минут работы.",
+ "source_hint": "",
+ "site_request": "hero",
+ "category": "lever",
+ "variants": [
+  "Внутри `<header class=\"hero\">` сразу после `<h1>` добавить\n```html\n<div class=\"hero-badge\" aria-label=\"Ключевое предложение\">\n<svg class=\"icon\" aria-hidden=\"true\">…</svg>\n<span>2 дня → готовый сайт, клиенты из Яндекса</span>\n</div>\n```\nи в CSS (в `<style>` или отдельный файл)\n```css\n.hero-badge{\ndisplay:inline-flex;\nalign-items:center;\ngap:.5rem;\npadding:.4rem .8rem;\nmargin-top:.8rem;\nbackground:var(--bg);\nborder:1px solid var(--border);\nborder-radius:6px;\nfont-size:clamp(14px,2vw,16px);\ncolor:var(--text);\n}\n.hero-badge .icon{\nwidth:1em;height:1em;fill:var(--blue);\n}\n```"
+ ],
+ "flags": []
+}

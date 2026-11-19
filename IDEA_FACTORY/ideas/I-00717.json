@@ -1,0 +1,26 @@
+{
+ "id": "I-00717",
+ "round": 111,
+ "time": "2026-11-17 07:06:11",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — faq-accordion-details",
+ "knob": "**Name:** `faq-accordion-details`\n**When to apply:** На любой лендинг‑странице с секцией FAQ, где требуется улучшить семантику, доступность и анимацию раскрытия ответов.\n**Steps:**\n1. В секции `#faq` заменить каждый блок `<div class=\"faq-item\">` на `<details class=\"faq-item\"><summary class=\"faq-question\">…</summary><div class=\"faq-answer\">…</div></details>`.\n2. Добавить стили для плавного раскрытия/сворачивания и визуального маркера.\n3. При желании добавить небольшой скрипт, который закрывает все остальные `<details>` при открытии нового (необязательно, сохраняет чистый HTML).\n**SAFE CSS:**\n```css\n/* faq-accordion-details */\ndetails.faq-item{\nborder-bottom:1px dashed var(--border);\npadding:12px 0;\n}\ndetails.faq-item summary{\ncursor:pointer;\nlist-style:none;\nfont-weight:600;\ndisplay:flex;\nalign-items:center;\ngap:8px;\n}\ndetails.faq-item summary::-webkit-details-marker{\ndisplay:none;\n}\ndetails.faq-item summary::after{\ncontent:\"▸\";\ntransition:transform .2s;\n}\ndetails[open].faq-item summary::after{\ntransform:rotate(90deg);\n}\ndetails.faq-item .faq-answer{\nmargin-top:8px;\nanimation:fadeIn .3s ease-out;\n}\n@keyframes fadeIn{\nfrom{opacity:0;transform:translateY(-4px);}\nto{opacity:1;transform:none;}\n}\n```\n**SAFE JS (optional):**\n```js\n/* faq-accordion-details – закрывать остальные при открытии */\ndocument.querySelectorAll('details.faq-item').forEach(d=>{\nd.addEventListener('toggle',()=>{ if(d.open){\ndocument.querySelectorAll('details.faq-item').forEach(o=>{ if(o!==d) o.open=false; });\n}});\n});\n```",
+ "skill": "",
+ "effect": "Улучшает доступность (поддержка клавиатуры, ARIA‑поведение), повышает доверие поисковиков (semantic HTML) и делает раскрытие ответов визуально приятным, что может увеличить время на странице и CTR к CTA‑блокам.",
+ "risk": "Требует небольших правок в разметке; если в тексте есть вложенные ссылки, они сохранят свою работу без изменений.",
+ "rollback": "Восстановить оригинальный файл из Git (`git checkout -- index.html`) или заменить блоки `<details>` обратно на `<div class=\"faq-item\">`.",
+ "verify": "Открыть страницу, кликнуть по каждому вопросу – ответы должны плавно открываться/закрываться, а клавиша Tab должна фокусировать заголовки вопросов.",
+ "priority_claim": "2 – повышает SEO и a11y без влияния на бизнес‑логика, но требует небольших правок в HTML, поэтому чуть ниже по срочности",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `faq-accordion-details`\n**When to apply:** На любой лендинг‑странице с секцией FAQ, где требуется улучшить семантику, доступность и анимацию раскрытия ответов.\n**Steps:**\n1. В секции `#faq` заменить каждый блок `<div class=\"faq-item\">` на `<details class=\"faq-item\"><summary class=\"faq-question\">…</summary><div class=\"faq-answer\">…</div></details>`.\n2. Добавить стили для плавного раскрытия/сворачивания и визуального маркера.\n3. При желании добавить небольшой скрипт, который закрывает все остальные `<details>` при открытии нового (необязательно, сохраняет чистый HTML).\n**SAFE CSS:**\n```css\n/* faq-accordion-details */\ndetails.faq-item{\nborder-bottom:1px dashed var(--border);\npadding:12px 0;\n}\ndetails.faq-item summary{\ncursor:pointer;\nlist-style:none;\nfont-weight:600;\ndisplay:flex;\nalign-items:center;\ngap:8px;\n}\ndetails.faq-item summary::-webkit-details-marker{\ndisplay:none;\n}\ndetails.faq-item summary::after{\ncontent:\"▸\";\ntransition:transform .2s;\n}\ndetails[open].faq-item summary::after{\ntransform:rotate(90deg);\n}\ndetails.faq-item .faq-answer{\nmargin-top:8px;\nanimation:fadeIn .3s ease-out;\n}\n@keyframes fadeIn{\nfrom{opacity:0;transform:translateY(-4px);}\nto{opacity:1;transform:none;}\n}\n```\n**SAFE JS (optional):**\n```js\n/* faq-accordion-details – закрывать остальные при открытии */\ndocument.querySelectorAll('details.faq-item').forEach(d=>{\nd.addEventListener('toggle',()=>{ if(d.open){\ndocument.querySelectorAll('details.faq-item').forEach(o=>{ if(o!==d) o.open=false; });\n}});\n});\n```"
+ ],
+ "flags": []
+}

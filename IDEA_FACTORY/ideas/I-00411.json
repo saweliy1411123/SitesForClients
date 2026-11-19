@@ -1,0 +1,30 @@
+{
+ "id": "I-00411",
+ "round": 60,
+ "time": "2026-11-17 04:36:09",
+ "source": "lareper/glm-5.2-fast-preview",
+ "sources": [
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Финальный CTA — второй канал связи рядом с Telegram (VK-кнопка-дубль)",
+ "knob": "",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "",
+  "В ф"
+ ],
+ "flags": [
+  "NO_KNOB"
+ ]
+}

@@ -1,0 +1,27 @@
+{
+ "id": "I-00804",
+ "round": 121,
+ "time": "2026-11-17 07:35:42",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Метод «мобильный стресс-тест» — 3 проверки за 2 минуты без эмулятора",
+ "knob": "METHOD: (1) Открыть index.html в Chrome → F12 → Ctrl+Shift+M (device toolbar, iPhone SE). (2) Проверка А: прокрутить до `.nav-links` — на ≤720px они скрыты (L90), значит навигации нет: зафиксировать как подтверждение идей I-00730/00733/00736. (3) Проверка Б: кликнуть все `.btn-primary` — замерить высоту тапа (в Elements посмотреть computed height <48px?). (4) Проверка В: включить throttling Slow 3G в Network и перезагрузить — замерить, когда виден h1 (шрифты Google Fonts — render-blocking?). (5) Записать 3 находки списком.",
+ "skill": "",
+ "effect": "За 2 минуты — подтверждённые факты для приоритизации мобильных правок (навигация, тап-таргеты, шрифты) вместо догадок.",
+ "risk": "Эмуляция не заменяет ре",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: (1) Открыть index.html в Chrome → F12 → Ctrl+Shift+M (device toolbar, iPhone SE). (2) Проверка А: прокрутить до `.nav-links` — на ≤720px они скрыты (L90), значит навигации нет: зафиксировать как подтверждение идей I-00730/00733/00736. (3) Проверка Б: кликнуть все `.btn-primary` — замерить высоту тапа (в Elements посмотреть computed height <48px?). (4) Проверка В: включить throttling Slow 3G в Network и перезагрузить — замерить, когда виден h1 (шрифты Google Fonts — render-blocking?). (5) Записать 3 находки списком."
+ ],
+ "flags": []
+}

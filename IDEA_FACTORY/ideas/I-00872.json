@@ -1,0 +1,26 @@
+{
+ "id": "I-00872",
+ "round": 132,
+ "time": "2026-11-17 08:05:21",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — faq-jsonld-generator",
+ "knob": "**Name:** faq-jsonld-generator\n**When to apply:** На любой лендинг с секцией FAQ, где вопросы/ответы размечены в виде `<div class=\"faq-item\">` (или `<details>`/`<summary>`).\n**Steps:**\n1. Добавить в конец `<body>` скрипт, который собирает все элементы FAQ, извлекает вопрос из `<h3>`/`<summary>` и ответ из последующего `<p>`/`<div>`.\n2. Сформировать массив объектов `{question, answer}` и вставить в `<script type=\"application/ld+json\">` согласно схеме `FAQPage`.\n3. Поместить скрипт в `<head>` перед закрывающим `</head>` для раннего парсинга поисковыми ботами.\n**SAFE CSS:** *(не требуется)*\n**SAFE JS:**\n```js\n(function(){\nconst faqItems = document.querySelectorAll('.faq-item, .faq > div');\nconst faqs = [];\nfaqItems.forEach(item=>{\nconst q = item.querySelector('h3, summary');\nconst a = item.querySelector('p, .answer, div:not(:first-child)');\nif(q && a){\nfaqs.push({question:q.textContent.trim(),answer:a.textContent.trim()});\n}\n});\nif(faqs.length){\nconst script = document.createElement('script');\nscript.type = 'application/ld+json';\nscript.text = JSON.stringify({\n\"@context\":\"https://schema.org\",\n\"@type\":\"FAQPage\",\n\"mainEntity\":faqs.map(f=>({\"@type\":\"Question\",\"name\":f.question,\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":f.answer}}))\n});\ndocument.head.appendChild(script);\n}\n})();\n```",
+ "skill": "",
+ "effect": "Автоматическое добавление структурированных данных FAQPage повышает шансы появления в «People also ask» и улучшает SEO‑видимость без ручного редактирования JSON‑LD.",
+ "risk": "Если разметка FAQ изменится, скрипт может собрать неправильный контент; требуется проверка на корректность JSON‑LD.",
+ "rollback": "Удалить вставленный `<script type=\"application/ld+json\">` (и сам скрипт‑генератор) из `<head>` (git checkout index.html).",
+ "verify": "Запустить Google Rich Results Test (https://search.google.com/test/rich-results) по локальному файлу или через сервер; убедиться, что найдено `FAQPage` со всеми вопросами.",
+ "priority_claim": "2 – быстрый SEO‑буст без влияния на пользовательский опыт; полезно для локального бизнеса, где вопросы часто ищут.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** faq-jsonld-generator\n**When to apply:** На любой лендинг с секцией FAQ, где вопросы/ответы размечены в виде `<div class=\"faq-item\">` (или `<details>`/`<summary>`).\n**Steps:**\n1. Добавить в конец `<body>` скрипт, который собирает все элементы FAQ, извлекает вопрос из `<h3>`/`<summary>` и ответ из последующего `<p>`/`<div>`.\n2. Сформировать массив объектов `{question, answer}` и вставить в `<script type=\"application/ld+json\">` согласно схеме `FAQPage`.\n3. Поместить скрипт в `<head>` перед закрывающим `</head>` для раннего парсинга поисковыми ботами.\n**SAFE CSS:** *(не требуется)*\n**SAFE JS:**\n```js\n(function(){\nconst faqItems = document.querySelectorAll('.faq-item, .faq > div');\nconst faqs = [];\nfaqItems.forEach(item=>{\nconst q = item.querySelector('h3, summary');\nconst a = item.querySelector('p, .answer, div:not(:first-child)');\nif(q && a){\nfaqs.push({question:q.textContent.trim(),answer:a.textContent.trim()});\n}\n});\nif(faqs.length){\nconst script = document.createElement('script');\nscript.type = 'application/ld+json';\nscript.text = JSON.stringify({\n\"@context\":\"https://schema.org\",\n\"@type\":\"FAQPage\",\n\"mainEntity\":faqs.map(f=>({\"@type\":\"Question\",\"name\":f.question,\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":f.answer}}))\n});\ndocument.head.appendChild(script);\n}\n})();\n```"
+ ],
+ "flags": []
+}

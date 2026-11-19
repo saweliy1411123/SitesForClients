@@ -1,0 +1,28 @@
+{
+ "id": "I-00525",
+ "round": 79,
+ "time": "2026-11-17 05:30:51",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b",
+  "localhost:8081/big_only"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "URL‑param A/B‑тест копий текста в hero",
+ "knob": "METHOD: в консоли выполнить скрипт, который читает `location.search` и в зависимости от параметра `variant` меняет `textContent` нужных элементов. Пример:\n```js\nconst v = new URLSearchParams(location.search).get('variant')\nif (v === '2') {\ndocument.querySelector('.hero h1').textContent = 'Новый заголовок: клиенты из Яндекса уже ждут вас'\ndocument.querySelector('.hero p.sub').textContent = 'Запустим сайт за 2 дня и начнём привлекать заявки сразу'\n}\n```",
+ "skill": "",
+ "effect": "мгновенно сравниваются варианты копий без изменения кода и без деплоя, позволяя оценить влияние текста на клики по CTA.",
+ "risk": "изменения видны только в текущей сессии; результаты могут отличаться от поведения реального трафика.",
+ "rollback": "перезагрузить страницу без параметра (`?variant=`) — все возвращается к исходному состоянию.",
+ "verify": "открыть страницу, добавить `?variant=2` к URL, убедиться, что заголовок и подзаголовок изменились; при желании измерить количество кликов по CTA через DevTools → Network → Event Listener в течение 2‑5 минут.",
+ "priority_claim": "1 – быстрый способ проверить гипотезу о копирайтинге, высокий бизнес‑impact.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: в консоли выполнить скрипт, который читает `location.search` и в зависимости от параметра `variant` меняет `textContent` нужных элементов. Пример:\n```js\nconst v = new URLSearchParams(location.search).get('variant')\nif (v === '2') {\ndocument.querySelector('.hero h1').textContent = 'Новый заголовок: клиенты из Яндекса уже ждут вас'\ndocument.querySelector('.hero p.sub').textContent = 'Запустим сайт за 2 дня и начнём привлекать заявки сразу'\n}\n```",
+  "METHOD: В консоли выполнить `const v = new URLSearchParams(location.search).get('hero'); if(v==='alt'){document.querySelector('h1').textContent='Альтернативный заголовок';}`; затем добавить к ссылке тестовый параметр `?hero=alt`."
+ ],
+ "flags": []
+}

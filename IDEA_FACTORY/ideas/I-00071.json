@@ -1,0 +1,26 @@
+{
+ "id": "I-00071",
+ "round": 11,
+ "time": "2026-11-17 02:13:16",
+ "source": "localhost:8080/zhipu/glm-4.7-flash",
+ "sources": [
+  "localhost:8080/zhipu/glm-4.7-flash"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "FAQ Native Accordion",
+ "knob": "Replace existing `<h3>` followed by `<p>` in FAQ section with `<details>` and `<summary>` tags",
+ "skill": "",
+ "effect": "Native interaction, saves space, better mobile UX, no JS needed",
+ "risk": "None (browser native)",
+ "rollback": "Revert HTML tags back to `<h3>` and `<p>`",
+ "verify": "Click to expand/collapse on desktop and mobile",
+ "priority_claim": "1",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Replace existing `<h3>` followed by `<p>` in FAQ section with `<details>` and `<summary>` tags"
+ ],
+ "flags": []
+}

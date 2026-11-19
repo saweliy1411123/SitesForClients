@@ -1,0 +1,27 @@
+{
+ "id": "I-00113",
+ "round": 16,
+ "time": "2026-11-17 02:26:53",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only",
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Добавление микро-CTA в FAQ",
+ "knob": "Добавить в ответы микро-CTA со ссылкой на Telegram",
+ "skill": "",
+ "effect": "Повышение конверсии и вовлечения пользователей",
+ "risk": "Возможное снижение читаемости FAQ",
+ "rollback": "Удалить добавленные микро-CTA",
+ "verify": "Проверить увеличение конверсии и вовлечения пользователей",
+ "priority_claim": "2",
+ "source_hint": "",
+ "site_request": "микро-CTA",
+ "category": "lever",
+ "variants": [
+  "Добавить в ответы микро-CTA со ссылкой на Telegram"
+ ],
+ "flags": []
+}

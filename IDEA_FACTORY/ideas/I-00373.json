@@ -1,0 +1,26 @@
+{
+ "id": "I-00373",
+ "round": 56,
+ "time": "2026-11-17 04:23:22",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — parallax‑scene (CSS‑only scroll‑parallax)",
+ "knob": "METHOD: SKILL\n**Name:** `parallax-scene`\n**When to apply:** На лендингах с крупными визуальными блоками (hero, демо‑концепты), где нужен лёгкий глубинный эффект без JS‑библиотек.\n**SAFE CSS:**\n```css\n.parallax-layer{\nposition:absolute;\ninset:0;\nwill-change:transform;\n}\n.parallax-container{\nposition:relative;\noverflow:hidden;\nperspective:1200px;\n}\n.parallax-container .bg{\ntransform:translateZ(-300px) scale(1.5);\n}\n.parallax-container .mid{\ntransform:translateZ(-150px) scale(1.2);\n}\n.parallax-container .front{\ntransform:translateZ(0);\n}\n```\n**SAFE JS:**\n```js\n(() => {\nconst layers = document.querySelectorAll('.parallax-layer');\nif (!layers.length) return;\nconst onScroll = () => {\nconst scrollY = window.scrollY;\nlayers.forEach(l => {\nconst depth = parseFloat(l.dataset.depth) || 0;\nconst movement = -(scrollY * depth);\nl.style.transform = `translateY(${movement}px)`;\n});\n};\nwindow.addEventListener('scroll', onScroll, {passive:true});\n})();\n```",
+ "skill": "",
+ "effect": "Создаёт ощущение глубины, повышает визуальную привлекательность, увеличивает среднее время на странице.",
+ "risk": "При слишком сильных значениях depth может появиться «рывок» на слабых устройствах; необходимо протестировать на low‑end.",
+ "rollback": "`git checkout index.html` (удалить добавленные блоки и скрипт).",
+ "verify": "Открыть страницу, прокрутить; убедиться, что слои движутся с разной скоростью, без «тряски».",
+ "priority_claim": "2 – умеренный эффект, но легко реализуем, улучшает восприятие премиальности.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "METHOD: SKILL\n**Name:** `parallax-scene`\n**When to apply:** На лендингах с крупными визуальными блоками (hero, демо‑концепты), где нужен лёгкий глубинный эффект без JS‑библиотек.\n**SAFE CSS:**\n```css\n.parallax-layer{\nposition:absolute;\ninset:0;\nwill-change:transform;\n}\n.parallax-container{\nposition:relative;\noverflow:hidden;\nperspective:1200px;\n}\n.parallax-container .bg{\ntransform:translateZ(-300px) scale(1.5);\n}\n.parallax-container .mid{\ntransform:translateZ(-150px) scale(1.2);\n}\n.parallax-container .front{\ntransform:translateZ(0);\n}\n```\n**SAFE JS:**\n```js\n(() => {\nconst layers = document.querySelectorAll('.parallax-layer');\nif (!layers.length) return;\nconst onScroll = () => {\nconst scrollY = window.scrollY;\nlayers.forEach(l => {\nconst depth = parseFloat(l.dataset.depth) || 0;\nconst movement = -(scrollY * depth);\nl.style.transform = `translateY(${movement}px)`;\n});\n};\nwindow.addEventListener('scroll', onScroll, {passive:true});\n})();\n```"
+ ],
+ "flags": []
+}

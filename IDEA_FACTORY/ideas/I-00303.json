@@ -1,0 +1,26 @@
+{
+ "id": "I-00303",
+ "round": 46,
+ "time": "2026-11-17 03:52:26",
+ "source": "lareper/glm-5.2-fast-preview",
+ "sources": [
+  "lareper/glm-5.2-fast-preview"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Секция боли — один абзац-итог с якорем на решение (объединённый «мост»)",
+ "knob": "В секции боли (h2 «Запись есть — клиентов из поиска нет», ~L470–500) после третьего h3-блока добавить один `<p class=\"pain-bridge\">Каждая из этих проблем решается одним лендингом — покажу как за 2 дня. <a href=\"#offer\">Смотреть решение →</a></p>` + CSS `.pain-bridge{max-width:640px;margin:40px auto 0;text-align:center;font-size:17px}`.",
+ "skill": "",
+ "effect": "Переводит эмоцию боли в действие, удерживает скролл-поток, снижает выход между секциями.",
+ "risk": "Дублирует смысл строк-мостов I-00188/I-00204 — применить только один вариант из трёх.",
+ "rollback": "`git checkout -- index.html`.",
+ "verify": "DevTools → Console: `document.querySelector('.pain-bridge a').href` → должен быть валидный id; прокрутить секцию на 375px — абзац не ломает вёрстку.",
+ "priority_claim": "1 — секция боли сейчас заканчивается «висяком», это самый дешёвый фикс пути к заявке.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В секции боли (h2 «Запись есть — клиентов из поиска нет», ~L470–500) после третьего h3-блока добавить один `<p class=\"pain-bridge\">Каждая из этих проблем решается одним лендингом — покажу как за 2 дня. <a href=\"#offer\">Смотреть решение →</a></p>` + CSS `.pain-bridge{max-width:640px;margin:40px auto 0;text-align:center;font-size:17px}`."
+ ],
+ "flags": []
+}

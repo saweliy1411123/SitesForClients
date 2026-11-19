@@ -1,0 +1,28 @@
+{
+ "id": "I-00142",
+ "round": 21,
+ "time": "2026-11-17 02:41:14",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b",
+  "localhost:8081/big_only"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Индикатор прогресса прокрутки страницы (scroll‑progress bar)",
+ "knob": "В начале `<body>` добавить `<div class=\"scroll-progress\" aria-hidden=\"true\"></div>`; CSS:\n```css\n.scroll-progress{\nposition:fixed;top:0;left:0;height:4px;background:#8b5cf6;width:0;\nz-index:9999;\n}\n```\nJS (вставить перед `</body>`):\n```js\ndocument.addEventListener('scroll',()=>{\nconst d=document.documentElement;\nconst scroll=(d.scrollTop||window.pageYOffset)/(d.scrollHeight-d.clientHeight)*100;\ndocument.querySelector('.scroll-progress').style.width=scroll+'%';\n});\n```",
+ "skill": "",
+ "effect": "Пользователь видит, сколько контента уже просмотрел, усиливает чувство завершённости и мотивирует прокрутку дальше.",
+ "risk": "Добавление небольшого скрипта; потенциальный конфликт с другими скролл‑слушателями, небольшое влияние на производительность.",
+ "rollback": "Удалить элемент и скрипт; `git checkout index.html`.",
+ "verify": "Прокрутить страницу, убедиться, что полоска заполняется плавно без рывков; открыть консоль – отсутствие ошибок.",
+ "priority_claim": "3 – улучшает UX, но влияние на конверсию умеренно; лёгкая реализация.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В начале `<body>` добавить `<div class=\"scroll-progress\" aria-hidden=\"true\"></div>`; CSS:\n```css\n.scroll-progress{\nposition:fixed;top:0;left:0;height:4px;background:#8b5cf6;width:0;\nz-index:9999;\n}\n```\nJS (вставить перед `</body>`):\n```js\ndocument.addEventListener('scroll',()=>{\nconst d=document.documentElement;\nconst scroll=(d.scrollTop||window.pageYOffset)/(d.scrollHeight-d.clientHeight)*100;\ndocument.querySelector('.scroll-progress').style.width=scroll+'%';\n});\n```",
+  "В начале `<body>` добавить `<div class=\"scroll-progress\" aria-hidden=\"true\"></div>`; в CSS задать фиксированную высоту 2 px, `background: var(--blue); width: 0; transition: width 0.2s ease;` и `position:fixed; top:0; left:0; z-index:9999;`. В небольшом безопасном JS добавить `window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const scrolled=window.scrollY/docHeight*100;document.querySelector('.scroll-progress').style.width=scrolled+'%'});`."
+ ],
+ "flags": []
+}

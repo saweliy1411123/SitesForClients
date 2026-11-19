@@ -1,0 +1,29 @@
+{
+ "id": "I-00641",
+ "round": 97,
+ "time": "2026-11-17 06:24:47",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "SKILL — glassmorphic-cta-button",
+ "knob": "\n**Name:** `glassmorphic-cta-button`\n**When to apply:** На любом статическом лендинге, где есть CTA-кнопки.\n**SAFE CSS:**\n```css\n.glassmorphic-cta-button {\nbackground: linear-gradient(145deg, #fff 0%, #fff 100%);\nbox-shadow: 6px 9px 20px -5px rgba(0, 0, 0, 0.1),\n-10px -5px 30px 10px rgba(0, 0, 0, 0.2);\nborder-radius: 20px;\npadding: 10px 20px;\nfont-size: 16px;\nfont-weight: 600;\ncolor: #333;\ncursor: pointer;\ntransition: box-shadow 0.3s ease-in-out;\n}\n.glassmorphic-cta-button:hover {\nbox-shadow: 10px 10px 30px 10px rgba(0, 0, 0, 0.3),\n-10px -10px 40px 20px rgba(0, 0, 0, 0.2);\n}\n```",
+ "skill": "",
+ "effect": "Добавление стиля \"glassmorphic\" к CTA-кнопкам для улучшения визуальной привлекательности.",
+ "risk": "Нет",
+ "rollback": "Удаление класса `glassmorphic-cta-button` из CSS.",
+ "verify": "Проверка визуальной привлекательности кнопок после добавления класса.",
+ "priority_claim": "2",
+ "source_hint": "",
+ "site_request": "btn-primary",
+ "category": "skill",
+ "variants": [
+  "\n**Name:** `glassmorphic-cta-button`\n**When to apply:** На любом статическом лендинге, где есть CTA-кнопки.\n**SAFE CSS:**\n```css\n.glassmorphic-cta-button {\nbackground: linear-gradient(145deg, #fff 0%, #fff 100%);\nbox-shadow: 6px 9px 20px -5px rgba(0, 0, 0, 0.1),\n-10px -5px 30px 10px rgba(0, 0, 0, 0.2);\nborder-radius: 20px;\npadding: 10px 20px;\nfont-size: 16px;\nfont-weight: 600;\ncolor: #333;\ncursor: pointer;\ntransition: box-shadow 0.3s ease-in-out;\n}\n.glassmorphic-cta-button:hover {\nbox-shadow: 10px 10px 30px 10px rgba(0, 0, 0, 0.3),\n-10px -10px 40px 20px rgba(0, 0, 0, 0.2);\n}\n```",
+  "\n**Name:** `glassmorphic-cta-button`\n**When to apply:** На любом статическом лендинге, где есть CTA-кнопка.\n**SAFE CSS:**\n```css\n.glassmorphic-cta-button {\nbackground: linear-gradient(180deg, #fff, #fff);\nbox-shadow: 0 0px 1px rgba(0, 0, 0, 0.1), 0 0px 4px rgba(0, 0, 0, 0.1);\nbackdrop-filter: blur(4px);\nborder-radius: 12px;\npadding: 12px 32px;\nfont-size: 16px;\ncolor: var(--blue);\ntransition: background-color 0.2s ease;\n}\n.glassmorphic-cta-button:hover {\nbackground: linear-gradient(180deg, #fff, #fff);\nbox-shadow: 0 0px 2px rgba(0, 0, 0, 0.1), 0 0px 8px rgba(0, 0, 0, 0.1);\n}\n```\n**SAFE JS:**\n```javascript\n// нет\n```",
+  "**Name:** `glassmorphic-cta-button`\n**When to apply:** На любой лендинг с CTA‑ссылками, где нужен премиальный, «прозрачный» вид кнопки.\n**SAFE CSS:**\n```css\n/* glassmorphic CTA button */\n.btn-primary.glass {\nbackground: rgba(255,255,255,0.12);\nbackdrop-filter: blur(12px) saturate(180%);\n-webkit-backdrop-filter: blur(12px) saturate(180%);\nborder: 1px solid rgba(255,255,255,0.3);\ncolor: var(--text);\ntransition: background .3s, border .3s, transform .2s;\n}\n.btn-primary.glass:hover,\n.btn-primary.glass:focus-visible {\nbackground: rgba(255,255,255,0.2);\nborder-color: var(--grad);\ntransform: translateY(-2px);\n}\n```\n**SAFE JS:** *(не требуется)*"
+ ],
+ "flags": []
+}

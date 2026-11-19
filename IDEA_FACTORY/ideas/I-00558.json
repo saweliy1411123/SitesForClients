@@ -1,0 +1,26 @@
+{
+ "id": "I-00558",
+ "round": 83,
+ "time": "2026-11-17 05:42:01",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — fade‑in‑on‑scroll",
+ "knob": "**Name:** `fade-in-on-scroll`\n**When to apply:** На любой одностраничной посадочной странице, где есть секции/элементы, которые появляются ниже «скрола» (например, `.hero`, `.steps`, `.price-card`, `.final`). Позволяет добавить лёгкую анимацию появления, улучшая восприятие динамичности без JavaScript‑библиотек.\n**Steps:**\n1. Добавить файл‑skill `fade-in-on-scroll.css` и `fade-in-on-scroll.js` в `<head>` (CSS) и перед закрывающим `</body>` (JS).\n2. На нужных элементах добавить класс `.fade-in`.\n3. JS автоматически будет наблюдать за элементами и добавлять класс `.visible` при их появлении в viewport.\n**SAFE CSS:**\n```css\n/* fade-in-on-scroll.css */\n.fade-in {\nopacity: 0;\ntransform: translateY(20px);\ntransition: opacity .6s ease-out, transform .6s ease-out;\n}\n.fade-in.visible {\nopacity: 1;\ntransform: translateY(0);\n}\n```\n**SAFE JS:**\n```js\n/* fade-in-on-scroll.js */\ndocument.addEventListener('DOMContentLoaded', () => {\nconst observer = new IntersectionObserver((entries) => {\nentries.forEach(entry => {\nif (entry.isIntersecting) entry.target.classList.add('visible');\n});\n}, {threshold: 0.1});\ndocument.querySelectorAll('.fade-in').forEach(el => observer.observe(el));\n});\n```",
+ "skill": "",
+ "effect": "Элементы плавно «въезжают» в поле зрения, создавая ощущение живой страницы, что удерживает внимание и повышает время на сайте.",
+ "risk": "Небольшой JS‑скрипт (≈ 1 KB) добавляет зависимость от IntersectionObserver; в браузерах без поддержки (IE ≤ 11) анимация не будет работать, но контент будет виден сразу.",
+ "rollback": "`git checkout -- path/to/fade-in-on-scroll.css path/to/fade-in-on-scroll.js && git revert <commit‑adding‑links>` (удалить файлы и их `<link>/<script>`).",
+ "verify": "Открыть страницу, прокрутить вниз; элементы с классом `.fade-in` должны плавно появиться. В консоли нет ошибок. В старом браузере (например, режим «Internet Explorer 11» в Edge) контент отображается без анимации.",
+ "priority_claim": "1 — небольшие изменения, но сильный визуальный эффект, который часто повышает метрику вовлечённости и показатель «time o",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `fade-in-on-scroll`\n**When to apply:** На любой одностраничной посадочной странице, где есть секции/элементы, которые появляются ниже «скрола» (например, `.hero`, `.steps`, `.price-card`, `.final`). Позволяет добавить лёгкую анимацию появления, улучшая восприятие динамичности без JavaScript‑библиотек.\n**Steps:**\n1. Добавить файл‑skill `fade-in-on-scroll.css` и `fade-in-on-scroll.js` в `<head>` (CSS) и перед закрывающим `</body>` (JS).\n2. На нужных элементах добавить класс `.fade-in`.\n3. JS автоматически будет наблюдать за элементами и добавлять класс `.visible` при их появлении в viewport.\n**SAFE CSS:**\n```css\n/* fade-in-on-scroll.css */\n.fade-in {\nopacity: 0;\ntransform: translateY(20px);\ntransition: opacity .6s ease-out, transform .6s ease-out;\n}\n.fade-in.visible {\nopacity: 1;\ntransform: translateY(0);\n}\n```\n**SAFE JS:**\n```js\n/* fade-in-on-scroll.js */\ndocument.addEventListener('DOMContentLoaded', () => {\nconst observer = new IntersectionObserver((entries) => {\nentries.forEach(entry => {\nif (entry.isIntersecting) entry.target.classList.add('visible');\n});\n}, {threshold: 0.1});\ndocument.querySelectorAll('.fade-in').forEach(el => observer.observe(el));\n});\n```"
+ ],
+ "flags": []
+}

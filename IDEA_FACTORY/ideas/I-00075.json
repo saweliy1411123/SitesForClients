@@ -1,0 +1,32 @@
+{
+ "id": "I-00075",
+ "round": 12,
+ "time": "2026-11-17 02:15:10",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+  "localhost:8081/big_only",
+  "localhost:8081/agent",
+  "localhost:8081/auto",
+  "localhost:8081/fast"
+ ],
+ "mentions": 5,
+ "status": "NEW",
+ "title": "Добавление атрибута `loading=\"lazy\"` для изображений",
+ "knob": "добавить `loading=\"lazy\"` к всем `<img>` и `<iframe>` тегам",
+ "skill": "",
+ "effect": "ускорение загрузки страницы",
+ "risk": "возможное снижение скорости загрузки для некоторых пользователей",
+ "rollback": "удалить `loading=\"lazy\"` из всех `<img>` и `<iframe>` тегов",
+ "verify": "проверить время загрузки страницы до и после внесения изменений",
+ "priority_claim": "2",
+ "source_hint": "",
+ "site_request": "img",
+ "category": "lever",
+ "variants": [
+  "добавить `loading=\"lazy\"` к всем `<img>` и `<iframe>` тегам",
+  "Добавить `loading=\"lazy\"` к всем `<img>` и `<iframe>` тегам",
+  "В CSS/HTML-комментарии (не вставляя `<img>`) добавить пометку: «при добавлении изображений использовать `loading=\"lazy\"` для всех, кроме hero-логотипа»"
+ ],
+ "flags": []
+}

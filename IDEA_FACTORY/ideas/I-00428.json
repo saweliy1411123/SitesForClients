@@ -1,0 +1,26 @@
+{
+ "id": "I-00428",
+ "round": 64,
+ "time": "2026-11-17 04:46:25",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "«Sticky CTA bar» внизу экрана после прокрутки > 300 px",
+ "knob": "В конец `<body>` добавить\n```html\n<div class=\"sticky-cta-bar\" role=\"region\" aria-label=\"Быстрый запрос демо\">\n<a class=\"btn-primary\" href=\"#contact\" style=\"margin-right:12px;\">Получить демо бесплатно</a>\n<a class=\"btn-primary\" href=\"tel:+7XXXXXXXXXX\" style=\"background:#4cc9f0;\">Позвонить +7 XXX XXX‑XX‑XX</a>\n</div>\n```\nи в CSS (после существующего стилей) добавить\n```css\n.sticky-cta-bar{\nposition:fixed;bottom:-100px;left:0;right:0;display:flex;justify-content:center;align-items:center;\npadding:12px;background:rgba(139,92,246,.9);backdrop-filter:blur(6px);z-index:1000;transition:bottom .4s;\n}\n.sticky-cta-bar.show{bottom:0;}\n@media(max-width:720px){\n.sticky-cta-bar{flex-direction:column;gap:8px;}\n}\n```\nи в конец `<script>` добавить небольшую логику (без внешних зависимостей):\n```js\n(() => {\nconst bar = document.querySelector('.sticky-cta-bar');\nconst toggle = () => bar.classList.toggle('show', window.scrollY > 300);\nwindow.addEventListener('scroll', toggle);\ntoggle();\n})();\n```",
+ "skill": "",
+ "effect": "Постоянный доступ к главному CTA, повышает вероятность клика у пользователей, которые уже пролистали страницу.",
+ "risk": "Добавление небольшого JS может немного увеличить TTI; если пользователь отключил JavaScript – элемент не появится (не критично).",
+ "rollback": "Удалить добавленный `<div class=\"sticky-cta-bar\">…</div>` и соответствующие CSS/JS‑блоки (git checkout).",
+ "verify": "Открыть страницу, прокрутить ниже 300 px – панель должна плавно выскочить; клик по любой кнопке проверяется в 2 мин.",
+ "priority_claim": "3 — высокий потенциал конверсии, но требует небольших изменений в разметке и скрипте.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В конец `<body>` добавить\n```html\n<div class=\"sticky-cta-bar\" role=\"region\" aria-label=\"Быстрый запрос демо\">\n<a class=\"btn-primary\" href=\"#contact\" style=\"margin-right:12px;\">Получить демо бесплатно</a>\n<a class=\"btn-primary\" href=\"tel:+7XXXXXXXXXX\" style=\"background:#4cc9f0;\">Позвонить +7 XXX XXX‑XX‑XX</a>\n</div>\n```\nи в CSS (после существующего стилей) добавить\n```css\n.sticky-cta-bar{\nposition:fixed;bottom:-100px;left:0;right:0;display:flex;justify-content:center;align-items:center;\npadding:12px;background:rgba(139,92,246,.9);backdrop-filter:blur(6px);z-index:1000;transition:bottom .4s;\n}\n.sticky-cta-bar.show{bottom:0;}\n@media(max-width:720px){\n.sticky-cta-bar{flex-direction:column;gap:8px;}\n}\n```\nи в конец `<script>` добавить небольшую логику (без внешних зависимостей):\n```js\n(() => {\nconst bar = document.querySelector('.sticky-cta-bar');\nconst toggle = () => bar.classList.toggle('show', window.scrollY > 300);\nwindow.addEventListener('scroll', toggle);\ntoggle();\n})();\n```"
+ ],
+ "flags": []
+}

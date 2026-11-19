@@ -1,0 +1,26 @@
+{
+ "id": "I-00405",
+ "round": 60,
+ "time": "2026-11-17 04:35:26",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить Open Graph изображение для соцсетей",
+ "knob": "В `<head>` вставить `<meta property=\"og:image\" content=\"https://saveliy.ru/assets/og-image.jpg\">` (изображение‑превью, 1200×630 px)",
+ "skill": "",
+ "effect": "При шаринге в соцсетях будет отображаться красивый превью‑картинка, повышая кликабельность ссылок",
+ "risk": "Нужно разместить файл изображения на сервер; отсутствие файла приведёт к 404‑ошибке в соцсетях",
+ "rollback": "Удалить мета‑тег или откатить файл",
+ "verify": "С помощью Facebook Sharing Debugger проверить, что изображение подхватывается корректно",
+ "priority_claim": "3 – улучшает соц‑трафик, но не критично для текущих целей",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<head>` вставить `<meta property=\"og:image\" content=\"https://saveliy.ru/assets/og-image.jpg\">` (изображение‑превью, 1200×630 px)"
+ ],
+ "flags": []
+}

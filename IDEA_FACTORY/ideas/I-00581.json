@@ -1,0 +1,29 @@
+{
+ "id": "I-00581",
+ "round": 87,
+ "time": "2026-11-17 05:55:30",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "Единый семантический каркас: lang + main + skip-link одним коммитом",
+ "knob": "Три микроправки одним изменением: (1) `<html lang=\"ru\">`; (2) обернуть секции от hero до final в `<main id=\"main\">`; (3) первым элементом в `<body>` — `<a class=\"skip-link\" href=\"#main\">Перейти к содержимому</a>` с CSS `.skip-link{position:absolute;left:-9999px}.skip-link:focus{left:16px;top:16px;z-index:999;background:var(--bg);padding:12px 20px;border-radius:8px}`. Все три идеи из кучи (I-00495, I-00",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Три микроправки одним изменением: (1) `<html lang=\"ru\">`; (2) обернуть секции от hero до final в `<main id=\"main\">`; (3) первым элементом в `<body>` — `<a class=\"skip-link\" href=\"#main\">Перейти к содержимому</a>` с CSS `.skip-link{position:absolute;left:-9999px}.skip-link:focus{left:16px;top:16px;z-index:999;background:var(--bg);padding:12px 20px;border-radius:8px}`. Все три идеи из кучи (I-00495, I-00"
+ ],
+ "flags": []
+}

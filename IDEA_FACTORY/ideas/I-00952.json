@@ -1,0 +1,26 @@
+{
+ "id": "I-00952",
+ "round": 157,
+ "time": "2026-11-17 09:15:25",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "I-01001 [Accessibility — Skip‑link to main content]",
+ "knob": "В начале `<body>` добавить `<a href=\"#main\" class=\"skip-link\">Перейти к содержимому</a>` и в CSS прописать `position:absolute; left:-9999px; top:auto;` с `:focus { left:0; }`. Добавить `id=\"main\"` к первому контентному `<section>` (например, `<section id=\"main\">`).",
+ "skill": "",
+ "effect": "Позволит пользователям скрин‑ридеров и клавиатурных навигаций сразу перейти к основному контенту, улучшая доступность и удовлетворяя WCAG 2.1 AA.",
+ "risk": "Небольшой рост HTML‑размера; требует небольшого тестирования, но не конфликтует с текущим дизайном.",
+ "rollback": "Удалить только добавленные строки и стили; `git checkout -- index.html` откатит полностью.",
+ "verify": "Открыть страницу, нажать `Tab` сразу после загрузки — ссылка должна появиться в видимой области; кликнуть её и убедиться, что фокус переходит к секции `#main`. Проверить в Axe‑core (bookmarklet) отсутствие ошибок «skip link».",
+ "priority_claim": "1 — критически важно для доступности и SEO (повышает показатель «accessibility» в поиске).",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В начале `<body>` добавить `<a href=\"#main\" class=\"skip-link\">Перейти к содержимому</a>` и в CSS прописать `position:absolute; left:-9999px; top:auto;` с `:focus { left:0; }`. Добавить `id=\"main\"` к первому контентному `<section>` (например, `<section id=\"main\">`)."
+ ],
+ "flags": []
+}

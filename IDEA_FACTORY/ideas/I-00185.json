@@ -1,0 +1,26 @@
+{
+ "id": "I-00185",
+ "round": 28,
+ "time": "2026-11-17 03:01:41",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Цена‑карта – микро‑подъём при наведении",
+ "knob": "Добавить к `.price-card` CSS: `transition: transform .25s ease, box-shadow .25s ease;` и ` .price-card:hover { transform: translateY(-4px); box-shadow: 0 8px 16px rgba(0,0,0,0.15); }`.",
+ "skill": "",
+ "effect": "Создаёт ощущение «плавающей» цены, усиливает доверие и визуальную иерархию.",
+ "risk": "При отсутствии достаточного `margin` может возникнуть небольшое смещение соседних блоков; нужно убедиться, что контейнер имеет `overflow: visible`.",
+ "rollback": "Удалить добавленные свойства из CSS или откатить файл.",
+ "verify": "Навести на карточку цены, проверить отсутствие смещения соседних элементов (DevTools → Elements → layout).",
+ "priority_claim": "2 – добавляет премиальный штрих без риска для конверсии.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Добавить к `.price-card` CSS: `transition: transform .25s ease, box-shadow .25s ease;` и ` .price-card:hover { transform: translateY(-4px); box-shadow: 0 8px 16px rgba(0,0,0,0.15); }`."
+ ],
+ "flags": []
+}

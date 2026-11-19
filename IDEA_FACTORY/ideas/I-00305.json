@@ -1,0 +1,28 @@
+{
+ "id": "I-00305",
+ "round": 46,
+ "time": "2026-11-17 03:52:26",
+ "source": "lareper/glm-5.2-fast-preview",
+ "sources": [
+  "lareper/glm-5.2-fast-preview",
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Демо — интерактивный переключатель «до/после» на CSS-only (без картинок)",
+ "knob": "В секции демо-концеп",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В секции демо-концеп",
+  "**Name:** `subtle-mouse-tilt-card`\n**When to apply:** На интерактивных карточках (цены, демо‑концепты) для создания лёгкого 3D‑эффекта при наведении курсора.\n**Steps:**\n1. Добавить к нужным карточкам класс `tilt-card`.\n2. Включить CSS‑правила ниже (SAFE CSS).\n3. Добавить минимальный JS‑скрипт, который обновляет CSS‑переменные `--tilt-x` и `--tilt-y` на движении мыши (SAFE JS).\nSAFE CSS:\n```css\n.tilt-card {\nperspective: 800px;\ntransform-style: preserve-3d;\ntransition: transform .2s ease-out;\n}\n.tilt-card:hover {\ntransform:\nrotateX(var(--tilt-y, 0deg))\nrotateY(var(--tilt-x, 0deg));\n}\n```\nSAFE JS:\n```js\ndocument.querySelectorAll('.tilt-card').forEach(card=>{\ncard.addEventListener('mousemove',e=>{\nconst rect = card.getBoundingClientRect();\nconst x = ((e.clientX - rect.left)/rect.width - 0.5)*10; // ±5deg\nconst y = ((e.clientY - rect.top)/rect.height - 0.5)*10;\ncard.style.setProperty('--tilt-x', `${x}deg`);\ncard.style.setProperty('--tilt-y', `${-y}deg`);\n});\ncard.addEventListener('mouseleave',()=> {\ncard.style.removeProperty('--tilt-x');\ncard.style.removeProperty('--tilt-y');\n});\n});\n```"
+ ],
+ "flags": []
+}

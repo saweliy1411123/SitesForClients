@@ -1,0 +1,26 @@
+{
+ "id": "I-00931",
+ "round": 149,
+ "time": "2026-11-17 08:53:17",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Instant accessibility audit with axe‑core",
+ "knob": "METHOD: открываем страницу в Chrome DevTools → консоль, вставляем однострочник `let s=document.createElement('script');s.src='https://cdnjs.cloudflare.com/ajax/libs/axe-core/4.9.1/axe.min.js';s.onload=()=>axe.run((err,r)=>console.table(r.violations));document.head.appendChild(s);` – скрипт загружает axe‑core и выводит в консоль таблицу всех найденных нарушений a11y.",
+ "skill": "",
+ "effect": "мгновенно получает список проблем WCAG 2.1 (контраст, отсутствие ARIA‑атрибутов, недоступные элементы), позволяя быстро оценить, какие правки приоритетнее.",
+ "risk": "подключение внешнего CDN‑скрипта (может быть недоступно в офлайн‑среде).",
+ "rollback": "удалить только что добавленный `<script>`‑элемент (`document.querySelector('script[src*=\"axe.min.js\"]').remove();`).",
+ "verify": "после вставки в консоль должна появиться таблица `violations` с `id`, `description`, `impact`; отсутствие ошибок – положительный результат.",
+ "priority_claim": "1 – доступность критична для SEO и конверсии, а проверка занимает ≈ 2 минуты.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: открываем страницу в Chrome DevTools → консоль, вставляем однострочник `let s=document.createElement('script');s.src='https://cdnjs.cloudflare.com/ajax/libs/axe-core/4.9.1/axe.min.js';s.onload=()=>axe.run((err,r)=>console.table(r.violations));document.head.appendChild(s);` – скрипт загружает axe‑core и выводит в консоль таблицу всех найденных нарушений a11y."
+ ],
+ "flags": []
+}

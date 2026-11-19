@@ -1,0 +1,27 @@
+{
+ "id": "I-00317",
+ "round": 47,
+ "time": "2026-11-17 03:56:07",
+ "source": "lareper/deepseek-v4-pro-0813",
+ "sources": [
+  "lareper/deepseek-v4-pro-0813",
+  "lareper/deepseek-v4-pro"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "FAQ — JSON-LD FAQPage с двумя видимыми вопросами и aria-controls",
+ "knob": "В секции FAQ (~L660–705) заменить текущие `<p>`-ответы на `<details class=\"faq-item\"><summary>…</summary><p>…</p></details>` (2–3 вопроса) и в конец `<body>` добавить `<script type=\"application/ld+json\">` с `@type:\"FAQPage\"`, `mainEntity` из этих же вопросов/ответов. У каждого `<details>` добавить `id=\"faq-1\"`, `aria-controls`.",
+ "skill": "",
+ "effect": "Поисковик сможет показать вопросы/ответы прямо в выдаче (расширенный сниппет), а пользователь раскрывает ответ без перезагрузки — выше CTR и доверие.",
+ "risk": "Если разметка не совпадёт с видимым текстом — Google может пометить как спам; проверять в Rich Results Test.",
+ "rollback": "`git checkout -- index.html` (или удалить добавленный `<script>` и вернуть `<p>`-блоки).",
+ "verify": "Открыть в Rich Results Test → проверить «FAQPage», кликнуть `<details>` на мобильной ширине 360px — раскрытие плавное, без сдвига.",
+ "priority_claim": "1 — это и SEO, и UX, и сниппет, и доступность.",
+ "source_hint": "",
+ "site_request": "faq",
+ "category": "lever",
+ "variants": [
+  "В секции FAQ (~L660–705) заменить текущие `<p>`-ответы на `<details class=\"faq-item\"><summary>…</summary><p>…</p></details>` (2–3 вопроса) и в конец `<body>` добавить `<script type=\"application/ld+json\">` с `@type:\"FAQPage\"`, `mainEntity` из этих же вопросов/ответов. У каждого `<details>` добавить `id=\"faq-1\"`, `aria-controls`."
+ ],
+ "flags": []
+}

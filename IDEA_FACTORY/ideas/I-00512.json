@@ -1,0 +1,26 @@
+{
+ "id": "I-00512",
+ "round": 77,
+ "time": "2026-11-17 05:25:12",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Typed‑out подзаголовок в hero‑секции",
+ "knob": "**SKILL — hero-typed-subtitle**\n**Name:** `hero-typed-subtitle`\n**When to apply:** В hero‑блоке после `<p class=\"sub\">`, где хочется добавить динамичность без тяжёлых библиотек.\n**SAFE CSS:**\n```css\n.hero .typed-subtitle {\ndisplay:inline-block;\nborder-right:2px solid currentColor;\nwhite-space:nowrap;\noverflow:hidden;\nfont-family:inherit;\nfont-size:inherit;\nanimation: caret-blink 0.7s steps(1) infinite;\n}\n@keyframes caret-blink {\n0%,100% { border-color:transparent; }\n50% { border-color:currentColor; }\n}\n```\n**SAFE JS:**\n```js\n(() => {\nconst txt = \"Получите первых клиентов из Яндекса за 2 дня\";\nconst el = document.querySelector('.hero .typed-subtitle');\nif (!el) return;\nlet i = 0;\nconst interval = setInterval(() => {\nel.textContent = txt.slice(0, ++i);\nif (i === txt.length) clearInterval(interval);\n}, 60);\n})();\n```",
+ "skill": "hero-typed-subtitle",
+ "effect": "Добавляет живой элемент, удерживает внимание, повышает воспринимаемую динамичность предложения.",
+ "risk": "Если JavaScript отключён, текст останется пустым – необходимо предусмотреть fallback‑текст.",
+ "rollback": "Удалить вставку `<p class=\"typed-subtitle\">` и скрипт; `git checkout HEAD -- index.html`.",
+ "verify": "Отключить JS в браузере → убедиться, что отображается статический fallback‑текст; включить → проверить корректность печати без задержек > 200 ms.",
+ "priority_claim": "3 – умеренный конверсионный эффект, легко реализуется, но требует небольшого JS.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**SKILL — hero-typed-subtitle**\n**Name:** `hero-typed-subtitle`\n**When to apply:** В hero‑блоке после `<p class=\"sub\">`, где хочется добавить динамичность без тяжёлых библиотек.\n**SAFE CSS:**\n```css\n.hero .typed-subtitle {\ndisplay:inline-block;\nborder-right:2px solid currentColor;\nwhite-space:nowrap;\noverflow:hidden;\nfont-family:inherit;\nfont-size:inherit;\nanimation: caret-blink 0.7s steps(1) infinite;\n}\n@keyframes caret-blink {\n0%,100% { border-color:transparent; }\n50% { border-color:currentColor; }\n}\n```\n**SAFE JS:**\n```js\n(() => {\nconst txt = \"Получите первых клиентов из Яндекса за 2 дня\";\nconst el = document.querySelector('.hero .typed-subtitle');\nif (!el) return;\nlet i = 0;\nconst interval = setInterval(() => {\nel.textContent = txt.slice(0, ++i);\nif (i === txt.length) clearInterval(interval);\n}, 60);\n})();\n```"
+ ],
+ "flags": []
+}

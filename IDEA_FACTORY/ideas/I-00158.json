@@ -1,0 +1,26 @@
+{
+ "id": "I-00158",
+ "round": 24,
+ "time": "2026-11-17 02:49:55",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "I-00171 — ARIA‑Live для динамических цифр в блоке «proof‑item»",
+ "knob": "Обернуть каждый `<em data-count=\"…\">` в `<span class=\"proof-number\" aria-live=\"polite\" aria-atomic=\"true\">` и добавить небольшую JS‑функцию, которая при анимации счёта обновляет `textContent` элемента (уже есть `data-count`).",
+ "skill": "",
+ "effect": "Пользователи скрин‑ридеров услышат изменение цифр («6 готовых демо‑концептов», «2 дня», «0 ₽») — повысит доступность и восприятие надёжности предложения.",
+ "risk": "Требует небольшого скрипта (≈ 30 строк) — может слегка увеличить размер JS, но без внешних запросов.",
+ "rollback": "Удалить добавленные `<span>` и скрипт, либо откатить файл (`git checkout HEAD -- index.html`).",
+ "verify": "Включить Chrome Accessibility Panel, фокусировать на элементе, включить TalkBack/VoiceOver и убедиться, что цифры озвучиваются при изменении (можно эмулировать изменение через консоль).",
+ "priority_claim": "2 — улучшает доступность, важный фактор SEO и конверсии, но менее критично для скорости, чем preconnect.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Обернуть каждый `<em data-count=\"…\">` в `<span class=\"proof-number\" aria-live=\"polite\" aria-atomic=\"true\">` и добавить небольшую JS‑функцию, которая при анимации счёта обновляет `textContent` элемента (уже есть `data-count`)."
+ ],
+ "flags": []
+}

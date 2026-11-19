@@ -1,0 +1,32 @@
+{
+ "id": "I-00499",
+ "round": 75,
+ "time": "2026-11-17 05:19:53",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime",
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 5,
+ "status": "NEW",
+ "title": "Skip-link «Перейти к содержимому» для клавиатуры и скринридеров",
+ "knob": "Первым элементом внутри `<body>` добавить `<a class=\"skip-link\" href=\"#main\">Перейти к содержимому</a>`; на `<main>` (или обёртку контента после `<header class=\"hero\">`) повесить `id=\"main\" tabindex=\"-1\"`; CSS: `.skip-link{position:absolute;left:-9999px} .skip-link:focus{left:16px;top:16px;z-index:100;padding:10px 16px;background:var(--blue);color:#fff;border-radius:8px}`.",
+ "skill": "",
+ "effect": "Пользователи клавиатуры (и мобильные с внешней клавиатурой) пропускают навигацию — первый Tab сразу к контенту; плюс WCAG 2.4.1.",
+ "risk": "Минимальный — нужен корректный `id=\"main\"` и видимый фокус, иначе линк «мёртвый».",
+ "rollback": "Удалить добавленную ссылку и CSS-блок.",
+ "verify": "Открыть страницу, нажать Tab — первым фокусом должен стать skip-link; второй Tab/Enter — прокрутка к контенту.",
+ "priority_claim": "2 — стандартный a11y-паттерн, 10 минут работы.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Первым элементом внутри `<body>` добавить `<a class=\"skip-link\" href=\"#main\">Перейти к содержимому</a>`; на `<main>` (или обёртку контента после `<header class=\"hero\">`) повесить `id=\"main\" tabindex=\"-1\"`; CSS: `.skip-link{position:absolute;left:-9999px} .skip-link:focus{left:16px;top:16px;z-index:100;padding:10px 16px;background:var(--blue);color:#fff;border-radius:8px}`.",
+  "в `<body>` сразу после открывающего `<header>` добавить `<a href=\"#main\" class=\"skip-link\">Перейти к содержимому</a>`; в CSS:\n```css\n/* SAFE CSS */\n.skip-link{position:absolute;top:-40px;left:0;background:#fff;color:#000;padding:8px;z-index:100;transition:top .3s}\n.skip-link:focus{top:0}\n```\nи обернуть основной контент (от первой `<section>` до конца) в `<main id=\"main\">…</main>`.",
+  "Сразу после `<body>` добавить\n```html\n<a href=\"#main\" class=\"skip-link\">Перейти к содержимому</a>\n```\nи в CSS добавить (скрыто по‑умолчанию, видно при focus)\n```css\n/* SAFE CSS */\n.skip-link{\nposition:absolute;\ntop:-40px;\nleft:0;\nbackground:#fff;\ncolor:#000;\npadding:8px 12px;\nz-index:1000;\n}\n.skip-link:focus{\ntop:0;\n}\n```"
+ ],
+ "flags": []
+}

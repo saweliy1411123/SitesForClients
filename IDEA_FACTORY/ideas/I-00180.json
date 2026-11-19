@@ -1,0 +1,27 @@
+{
+ "id": "I-00180",
+ "round": 27,
+ "time": "2026-11-17 02:59:45",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — premium-3d-tilt-glow",
+ "knob": "\n### Название\npremium-3d-tilt-glow\n### Когда применять\nЛюбой лендинг, где карточки демо-концептов должны привлекать внимание и выглядеть премиально.\n### Шаги\n1. Обернуть каждый блок демо-концепта в `<div class=\"glass-card\">`.\n2. Добавить в CSS:\n```css\n.glass-card{\nbackground: linear-gradient(to bottom right, #fff, #fff2);\nbackdrop-filter: blur(16px);\nborder-radius: 16px;\nbox-shadow: 0 4px 6px rgba(0,0,0,.1), 0 8px 16px rgba(0,0,0,.1);\ntransition: transform .3s;\n}\n.glass-card:hover{\ntransform: rotateY(5deg) scale(1.05);\n}\n```\nSAFE CSS:\n```css\n.glass-card{\nbackground: linear-gradient(to bottom right, #fff, #fff2);\nbackdrop-filter: blur(16px);\nborder-radius: 16px;\nbox-shadow: 0 4px 6px rgba(0,0,0,.1), 0 8px 16px rgba(0,0,0,.1);\ntransition: transform .3s;\n}\n.glass-card:hover{\ntransform: rotateY(5deg) scale(1.05);\n}\n```",
+ "skill": "",
+ "effect": "Премиальный вид карточек демо-концептов с эффектом глубины и светимости.",
+ "risk": "Может потребовать корректировки под конкретный дизайн.",
+ "rollback": "Удалить добавленный CSS и HTML.",
+ "verify": "Проверить визуально на разных устройствах и браузерах.",
+ "priority_claim": "2, так как улучшает визуальное восприятие, но не является критичным для функциональности.",
+ "source_hint": "",
+ "site_request": "glass-card",
+ "category": "skill",
+ "variants": [
+  "\n### Название\npremium-3d-tilt-glow\n### Когда применять\nЛюбой лендинг, где карточки демо-концептов должны привлекать внимание и выглядеть премиально.\n### Шаги\n1. Обернуть каждый блок демо-концепта в `<div class=\"glass-card\">`.\n2. Добавить в CSS:\n```css\n.glass-card{\nbackground: linear-gradient(to bottom right, #fff, #fff2);\nbackdrop-filter: blur(16px);\nborder-radius: 16px;\nbox-shadow: 0 4px 6px rgba(0,0,0,.1), 0 8px 16px rgba(0,0,0,.1);\ntransition: transform .3s;\n}\n.glass-card:hover{\ntransform: rotateY(5deg) scale(1.05);\n}\n```\nSAFE CSS:\n```css\n.glass-card{\nbackground: linear-gradient(to bottom right, #fff, #fff2);\nbackdrop-filter: blur(16px);\nborder-radius: 16px;\nbox-shadow: 0 4px 6px rgba(0,0,0,.1), 0 8px 16px rgba(0,0,0,.1);\ntransition: transform .3s;\n}\n.glass-card:hover{\ntransform: rotateY(5deg) scale(1.05);\n}\n```",
+  "\n### Название\npremium-3d-tilt-glow\n### Когда применять\nЛюбой лендинг, где карточки демо-концептов до 3 элементов\n### SAFE CSS:\n```css\n.glass-card {\ntransform-style: preserve-3d;\nperspective: 1000px;\nperspective-origin: 50% 50%;\ntransform: rotateY(10deg) translateZ(20px);\ntransition: transform 0.5s ease;\n}\n.glass-card:hover {\ntransform: rotateY(20deg) translateZ(40px);\n}\n```"
+ ],
+ "flags": []
+}

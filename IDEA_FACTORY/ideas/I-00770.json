@@ -1,0 +1,27 @@
+{
+ "id": "I-00770",
+ "round": 117,
+ "time": "2026-11-17 07:24:27",
+ "source": "lareper/glm-5.2-fast-preview",
+ "sources": [
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.2"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Инерционный prefetch якорных секций не нужен — вместо этого content-visibility для отложенных секций",
+ "knob": "В `<style>` добавить `.price, .final, section:not(.hero){content-visibility:auto;contain-intrinsic-size:auto 800px;}` (по одному классу/селектору на секции ниже первого экрана)",
+ "skill": "",
+ "effect": "Браузер пропускает рендер/лейаут невидимых секций — быстрее первый рендер и скролл на слабых мобильных, без изменения визуала",
+ "risk": "Возможен скачок скроллбара (CLS) при неточном contain-intrinsic-size — подобрать высоту по факту",
+ "rollback": "git checkout -- index.improved.html",
+ "verify": "До/после в консоли: `new PerformanceObserver(l=>console.log(l.getEntries()))` на largest-contentful-paint; прокрутить страницу — нет визуальных прыжков",
+ "priority_claim": "2 — заметно на мобильных, но требует подбора intrinsic-size",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<style>` добавить `.price, .final, section:not(.hero){content-visibility:auto;contain-intrinsic-size:auto 800px;}` (по одному классу/селектору на секции ниже первого экрана)"
+ ],
+ "flags": []
+}

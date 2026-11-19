@@ -1,0 +1,35 @@
+{
+ "id": "I-00342",
+ "round": 51,
+ "time": "2026-11-17 04:08:22",
+ "source": "localhost:8081/agent",
+ "sources": [
+  "localhost:8081/agent",
+  "localhost:8081/fast",
+  "localhost:8081/big_only",
+  "localhost:8080/ovh/gpt-oss-120b",
+  "lareper/deepseek-v4-pro",
+  "lareper/deepseek-v4-pro-0813",
+  "lareper/deepseek-v4.1-flash"
+ ],
+ "mentions": 7,
+ "status": "NEW",
+ "title": "Проверка скорости загрузки без Google Fonts (имитация офлайн/блокировки)",
+ "knob": "METHOD: (1) DevTools → Network → Online → Offline (или заблокировать fonts.googleapis.com). (2) Перезагрузить index.html. (3) Замерить время до первого рендера и FCP. (4) Сравнить с обычной загрузкой.",
+ "skill": "",
+ "effect": "Оценка влияния Google Fonts на скорость первого рендера и решение о self-hosting",
+ "risk": "Не учиты",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: (1) DevTools → Network → Online → Offline (или заблокировать fonts.googleapis.com). (2) Перезагрузить index.html. (3) Замерить время до первого рендера и FCP. (4) Сравнить с обычной загрузкой.",
+  "В `<head>` добавить две строки перед загрузкой шрифтов:\n```html\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\" crossorigin>\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n```",
+  "METHOD: (1) Открыть index.html в Chrome, F",
+  "METHOD: (1) Открыть index.html в Chrome, F12 → Network. (2) Заблокировать запросы к fonts.googleapis.com и fonts.gstatic.com (правый клик → Block request domain). (3) Перезагрузить, замерить LCP/CLS в Performance (или через `performance.getEntriesByType('paint')`). (4) Снять блокировку, повторить замер. (5) Сравнить метрики."
+ ],
+ "flags": []
+}

@@ -1,0 +1,30 @@
+{
+ "id": "I-00143",
+ "round": 21,
+ "time": "2026-11-17 02:41:14",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b",
+  "localhost:8080/zhipu/glm-4.7-flash"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Плавающая кнопка «Вернуться к началу» (Back‑to‑Top)",
+ "knob": "В конец `<body>` добавить `<button class=\"back-to-top\" aria-label=\"Вернуться к началу\">↑</button>`; CSS:\n```css\n.back-to-top{\nposition:fixed;bottom:24px;right:24px;\ndisplay:none;align-items:center;justify-content:center;\nwidth:48px;height:48px;border-radius:50%;\nbackground:#8b5cf6;color:#fff;font-size:1.5rem;\nbox-shadow:0 4px 12px rgba(0,0,0,.2);\ncursor:pointer;z-index:1000;\n}\n.back-to-top.show{display:flex;}\n```\nJS (перед `</body>`):\n```js\nconst btn=document.querySelector('.back-to-top');\nwindow.addEventListener('scroll',()=>{ btn.classList.toggle('show',window.scrollY>300); });\nbtn.addEventListener('click',()=>{ window.scrollTo({top:0,behavior:'smooth'}); });\n```",
+ "skill": "",
+ "effect": "Упрощает навигацию на длинных страницах, особенно на мобильных, снижает показатель отказов.",
+ "risk": "Возможный конфликт с уже существующей фиксированной панелью CTA; требует проверки видимости и контраста.",
+ "rollback": "Удалить кнопку и скрипт; `git checkout index.html`.",
+ "verify": "Прокрутить вниз, убедиться, что кнопка появляется после 300 px; кликнуть – страница плавно возвращается наверх; тестировать в мобильном эмуляторе.",
+ "priority_claim": "2 – существенное улучшение юзабилити при небольших затратах.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В конец `<body>` добавить `<button class=\"back-to-top\" aria-label=\"Вернуться к началу\">↑</button>`; CSS:\n```css\n.back-to-top{\nposition:fixed;bottom:24px;right:24px;\ndisplay:none;align-items:center;justify-content:center;\nwidth:48px;height:48px;border-radius:50%;\nbackground:#8b5cf6;color:#fff;font-size:1.5rem;\nbox-shadow:0 4px 12px rgba(0,0,0,.2);\ncursor:pointer;z-index:1000;\n}\n.back-to-top.show{display:flex;}\n```\nJS (перед `</body>`):\n```js\nconst btn=document.querySelector('.back-to-top');\nwindow.addEventListener('scroll',()=>{ btn.classList.toggle('show',window.scrollY>300); });\nbtn.addEventListener('click',()=>{ window.scrollTo({top:0,behavior:'smooth'}); });\n```",
+  "Добавить фиксированный элемент в конец `<body>`: `<button id=\"back-to-top\" aria-label=\"Наверх\">↑</button>`. CSS: `position: fixed; bottom: 20px; right: 20px; opacity: 0; pointer-events: none; transition: opacity 0.3s`. JS: скрипт для показа при прокрутке вниз > 300px.",
+  "В конец `<body>` добавить:\n```html\n<button class=\"back-to-top\" aria-label=\"Наверх\">↑</button>\n```\nCSS:\n```css\n.back-to-top{position:fixed;right:16px;bottom:16px;padding:10px 14px;background:#8b5cf6;color:#fff;border:none;border-radius:4px;opacity:0;visibility:hidden;transition:opacity .3s;}\n.back-to-top.show{opacity:1;visibility:visible;}\n```\nJS: добавить слушатель scroll, который добавляет класс `show` при `window.scrollY>300`; по клику – `window.scrollTo({top:0,behavior:'smooth'});`.",
+  "В <body> добавить `<button class=\"scroll-top\" aria-label=\"Наверх\">↑</button>`; в CSS:\n```css\n.scroll-top{\nposition:fixed;right:1rem;bottom:1rem;\nwidth:2.5rem;height:2.5rem;\nbackground:var(--grad);\ncolor:#fff;border:none;border-radius:50%;\ndisplay:none;align-items:center;justify-content:center;\ncursor:pointer;z-index:1000;\n}\n.scroll-top.show{display:flex;}\n```\nи JS (inline, defer‑compatible):\n```js\nconst btn=document.querySelector('.scroll-top');\nwindow.addEventListener('scroll',()=>{ btn.classList.toggle('show',window.scrollY>300); });\nbtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));\n```"
+ ],
+ "flags": []
+}

@@ -1,0 +1,27 @@
+{
+ "id": "I-00954",
+ "round": 157,
+ "time": "2026-11-17 09:16:27",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only",
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Добавление JSON-LD схемы для бизнеса",
+ "knob": "Добавить в `<head>` скрипт с JSON-LD схемой для бизнеса",
+ "skill": "",
+ "effect": "Улучшение SEO и предоставление дополнительной информации о бизнесе",
+ "risk": "Возможные проблемы с валидацией схемы",
+ "rollback": "Удалить добавленный скрипт",
+ "verify": "Проверить валидацию схемы и ее влияние на SEO",
+ "priority_claim": "3, потому что это улучшение SEO и предоставление дополнительной информации о бизнесе.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Добавить в `<head>` скрипт с JSON-LD схемой для бизнеса"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00407",
+ "round": 60,
+ "time": "2026-11-17 04:35:26",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Lazy‑load фоновые изображения hero‑секции через IntersectionObserver",
+ "knob": "Заменить CSS‑фон hero (`background-image:url(...)`) на атрибут `data-bg=\"url(...)\"`; добавить небольшой inline‑скрипт (deferred) который, при появлении hero в viewport, задаёт `style.backgroundImage = element.dataset.bg`",
+ "skill": "",
+ "effect": "Сократит объём данных, загружаемых при первом рендере, ускорит LCP, особенно на медленных соединениях",
+ "risk": "Требует небольшого JS; если скрипт не выполнится, фон останется пустым – необходимо fallback‑стиль (цвет)",
+ "rollback": "Удалить `data-bg` и скрипт, вернуть прежний CSS‑фон (`git checkout -- index.html`)",
+ "verify": "Открыть страницу в сети «Slow 3G» (DevTools → Network → Throttling) и убедиться, что фон загружается после скроллинга к hero; измерить LCP до/после через Lighthouse",
+ "priority_claim": "2 – ускоряет LCP, важный метрик для SEO и UX",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Заменить CSS‑фон hero (`background-image:url(...)`) на атрибут `data-bg=\"url(...)\"`; добавить небольшой inline‑скрипт (deferred) который, при появлении hero в viewport, задаёт `style.backgroundImage = element.dataset.bg`"
+ ],
+ "flags": []
+}

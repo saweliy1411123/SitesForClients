@@ -1,0 +1,26 @@
+{
+ "id": "I-00308",
+ "round": 46,
+ "time": "2026-11-17 03:52:46",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Вывести модальное окно при выходе (exit‑intent) с предложением бесплатного аудита",
+ "knob": "В конец `<body>` добавить скрипт, который отслеживает `mouseleave` у `document` и вставляет `<div class=\"exit-modal\" role=\"dialog\" aria-modal=\"true\"><div class=\"exit-content\"><p>Не уходите! Получите бесплатный аудит сайта.</p><a href=\"#contact\" class=\"btn-primary\">Записаться</a><button class=\"exit-close\" aria-label=\"Закрыть\">✕</button></div></div>`; CSS: `.exit-modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;} .exit-modal.show{display:flex;} .exit-content{background:#fff;padding:24px;border-radius:8px;text-align:center;}` и JS‑обработчик `document.addEventListener('mouseleave',e=>{if(e.clientY<0){document.querySelector('.exit-modal').classList.add('show');}}); document.querySelector('.exit-close').onclick=()=>{document.querySelector('.exit-modal').classList.remove('show');};`",
+ "skill": "",
+ "effect": "Увеличивает шанс конверсии за счёт повторного привлечения уходящего пользователя",
+ "risk": "Может раздражать пользователей, потенциальный рост показателя bounce; требует согласия владельца на использование модального окна",
+ "rollback": "Удалить вставленный HTML/JS/CSS (git checkout -- index.html)",
+ "verify": "При покидании окна браузера (курсор к верхней границе) появляется модальное окно, закрывается кнопкой ✕",
+ "priority_claim": "2 – потенциальный прирост конверсий, но требует осторожного тестирования",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В конец `<body>` добавить скрипт, который отслеживает `mouseleave` у `document` и вставляет `<div class=\"exit-modal\" role=\"dialog\" aria-modal=\"true\"><div class=\"exit-content\"><p>Не уходите! Получите бесплатный аудит сайта.</p><a href=\"#contact\" class=\"btn-primary\">Записаться</a><button class=\"exit-close\" aria-label=\"Закрыть\">✕</button></div></div>`; CSS: `.exit-modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;} .exit-modal.show{display:flex;} .exit-content{background:#fff;padding:24px;border-radius:8px;text-align:center;}` и JS‑обработчик `document.addEventListener('mouseleave',e=>{if(e.clientY<0){document.querySelector('.exit-modal').classList.add('show');}}); document.querySelector('.exit-close').onclick=()=>{document.querySelector('.exit-modal').classList.remove('show');};`"
+ ],
+ "flags": []
+}

@@ -1,0 +1,26 @@
+{
+ "id": "I-00359",
+ "round": 53,
+ "time": "2026-11-17 04:15:36",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Hero — якорный micro-CTA «смотреть демо-концепты» вторым звеном (для холодных, не готовых писать)",
+ "knob": "В hero после `.btn-primary` (L462) добавить текстовую ссылку: `<a class=\"link-ghost\" href=\"#demo\">Сначала посмотреть демо-концепты ↓</a>` + CSS `.link-ghost{display:inline-block;margin-left:20px;color:var(--muted);border-bottom:1px dashed var(--muted);transition:color .2s}.link-ghost:hover{color:#fff}`.",
+ "skill": "",
+ "effect": "Холодный посетитель получает путь без обязательств вместо ухода со страницы; больше людей доходит до демо и цены.",
+ "risk": "Две ссылки в hero конкурируют за клик — ghost-стиль должен быть заметно слабее primary.",
+ "rollback": "`git checkout -- index.html`.",
+ "verify": "5 минут A/B на копии: одна версия с ghost-ссылкой, другая без; в консоли `document.querySelector('.link-ghost')` клики по секциям через scroll-лог; визуально — primary остаётся доминирующим (squint-тест).",
+ "priority_claim": "1 — даёт второй путь к заявке самым дешёвым способом, у холодного трафика сейчас только один вариант.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В hero после `.btn-primary` (L462) добавить текстовую ссылку: `<a class=\"link-ghost\" href=\"#demo\">Сначала посмотреть демо-концепты ↓</a>` + CSS `.link-ghost{display:inline-block;margin-left:20px;color:var(--muted);border-bottom:1px dashed var(--muted);transition:color .2s}.link-ghost:hover{color:#fff}`."
+ ],
+ "flags": []
+}

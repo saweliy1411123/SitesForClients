@@ -1,0 +1,26 @@
+{
+ "id": "I-00258",
+ "round": 39,
+ "time": "2026-11-17 03:32:27",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Money‑Back Guarantee Badge в ценообразовании",
+ "knob": "Внутри `.price-card` под кнопкой CTA добавить `<div class=\"guarantee-badge\"><svg …></svg> <span>Гарантия возврата денег 30 дней</span></div>` и стилизовать badge (фон #fff, border 1px solid var(--blue), небольшая тень).",
+ "skill": "",
+ "effect": "Снимает страх перед покупкой, повышает доверие и конверсию.",
+ "risk": "Требует реального условия возврата; если не предоставляется – юридический риск.",
+ "rollback": "Удалить добавленный `<div class=\"guarantee-badge\">`.",
+ "verify": "Визуально проверить наличие бейджа и корректность текста.",
+ "priority_claim": "1 – прямой сигнал доверия, быстрый клик‑through.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Внутри `.price-card` под кнопкой CTA добавить `<div class=\"guarantee-badge\"><svg …></svg> <span>Гарантия возврата денег 30 дней</span></div>` и стилизовать badge (фон #fff, border 1px solid var(--blue), небольшая тень)."
+ ],
+ "flags": []
+}

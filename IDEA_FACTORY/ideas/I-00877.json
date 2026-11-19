@@ -1,0 +1,26 @@
+{
+ "id": "I-00877",
+ "round": 133,
+ "time": "2026-11-17 08:08:54",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Mobile navigation chips scroll",
+ "knob": "SKILL — mobile-nav-chips\nName: mobile-nav-chips\nWhen to apply: В медиазапросе `@media(max-width:720px)` заменить скрытие `.nav-links` на горизонтально прокручиваемый набор «чипов»‑якорей, чтобы пользователь мог быстро перейти к секциям.\nSAFE CSS:\n```css\n@media(max-width:720px){\n.nav-links{\ndisplay:flex;\noverflow-x:auto;\n-webkit-overflow-scrolling:touch;\ngap:12px;\npadding:8px;\nscrollbar-width:none;\n}\n.nav-links::-webkit-scrollbar{display:none;}\n.nav-links a{\nflex:0 0 auto;\npadding:6px 12px;\nbackground:rgba(255,255,255,.08);\nborder-radius:9999px;\nfont-size:14px;\nwhite-space:nowrap;\n}\n.nav-links a:focus-visible{\noutline:2px solid var(--blue);\n}\n}\n```\nSAFE JS: *(не требуется)*",
+ "skill": "",
+ "effect": "Улучшает доступность навигации на мобильных, повышает вероятность быстрого перехода к нужному разделу, снижает показатель отказов.",
+ "risk": "При слишком большом количестве пунктов навигации может потребоваться дополнительный отступ, но это редкость для 7‑секций.",
+ "rollback": "`git rm SKILLS/mobile-nav-chips.md && git checkout -- index.improved.html`",
+ "verify": "В мобильном режиме (Chrome DevTools) открыть страницу, убедиться, что меню отображается как горизонтальная прокрутка, ссылки работают, а скролл плавный.",
+ "priority_claim": "1 – критически важный для мобильных пользователей, где большинство трафика, без необходимости писать JS.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "SKILL — mobile-nav-chips\nName: mobile-nav-chips\nWhen to apply: В медиазапросе `@media(max-width:720px)` заменить скрытие `.nav-links` на горизонтально прокручиваемый набор «чипов»‑якорей, чтобы пользователь мог быстро перейти к секциям.\nSAFE CSS:\n```css\n@media(max-width:720px){\n.nav-links{\ndisplay:flex;\noverflow-x:auto;\n-webkit-overflow-scrolling:touch;\ngap:12px;\npadding:8px;\nscrollbar-width:none;\n}\n.nav-links::-webkit-scrollbar{display:none;}\n.nav-links a{\nflex:0 0 auto;\npadding:6px 12px;\nbackground:rgba(255,255,255,.08);\nborder-radius:9999px;\nfont-size:14px;\nwhite-space:nowrap;\n}\n.nav-links a:focus-visible{\noutline:2px solid var(--blue);\n}\n}\n```\nSAFE JS: *(не требуется)*"
+ ],
+ "flags": []
+}

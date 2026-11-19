@@ -1,0 +1,26 @@
+{
+ "id": "I-00691",
+ "round": 106,
+ "time": "2026-11-17 06:52:30",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Плавающая кнопка «Наверх» для удобства навигации и удержания пользователя",
+ "knob": "В `<body>` добавить элемент `<button class=\"scroll-top\" aria-label=\"Наверх\" title=\"Наверх\">↑</button>`; в CSS задать `position:fixed; bottom:24px; right:24px; display:none; background:var(--blue); color:#fff; border:none; border-radius:50%; width:48px; height:48px; font-size:24px; cursor:pointer;` и `:focus-visible`‑outline; в JS (inline, без `defer`) добавить обработчик `window.addEventListener('scroll',()=>{document.querySelector('.scroll-top').style.display = window.scrollY>300?'block':'none'}); document.querySelector('.scroll-top').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'});});`.",
+ "skill": "",
+ "effect": "Улучшает пользовательский опыт на длинных страницах, повышает вероятность возвращения к верхнему CTA, косвенно повышает конверсию.",
+ "risk": "Добавление небольшого скрипта может слегка увеличить время выполнения, но влияние минимально.",
+ "rollback": "Удалить добавленный `<button class=\"scroll-top\">…</button>` и связанные CSS/JS‑блоки (git checkout -- index.html).",
+ "verify": "Прокрутить страницу вниз — кнопка должна появиться; клик — страница плавно поднимается наверх; проверить отсутствие JS‑ошибок в консоли.",
+ "priority_claim": "2 — низкозатратное улучшение UX, позитивно сказывается на удержании и конверсии.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<body>` добавить элемент `<button class=\"scroll-top\" aria-label=\"Наверх\" title=\"Наверх\">↑</button>`; в CSS задать `position:fixed; bottom:24px; right:24px; display:none; background:var(--blue); color:#fff; border:none; border-radius:50%; width:48px; height:48px; font-size:24px; cursor:pointer;` и `:focus-visible`‑outline; в JS (inline, без `defer`) добавить обработчик `window.addEventListener('scroll',()=>{document.querySelector('.scroll-top').style.display = window.scrollY>300?'block':'none'}); document.querySelector('.scroll-top').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'});});`."
+ ],
+ "flags": []
+}

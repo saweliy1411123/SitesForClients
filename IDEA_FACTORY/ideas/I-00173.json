@@ -1,0 +1,26 @@
+{
+ "id": "I-00173",
+ "round": 26,
+ "time": "2026-11-17 02:56:13",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Явные ARIA‑лейтенды (navigation, main, footer)",
+ "knob": "Добавить `role=\"navigation\"` к контейнеру навигации, `role=\"main\"` к основному контенту (`<main>`), `role=\"contentinfo\"` к футеру; при отсутствии `<main>` обернуть основной блок в `<main role=\"main\">`",
+ "skill": "",
+ "effect": "Упрощает скрин‑ридурам структуру страницы, улучшает SEO‑понимание семантики, повышает WCAG 2.1 AA 1.3.1",
+ "risk": "Нет конфликтов, только добавление атрибутов",
+ "rollback": "Удалить добавленные `role`‑атрибуты (git checkout -- index.html)",
+ "verify": "В DevTools → Elements проверить наличие `role` на нужных элементах; в axe‑core отсутствие ошибок 1.3.1",
+ "priority_claim": "2 – низкая стоимость, хороший SEO‑эффект",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Добавить `role=\"navigation\"` к контейнеру навигации, `role=\"main\"` к основному контенту (`<main>`), `role=\"contentinfo\"` к футеру; при отсутствии `<main>` обернуть основной блок в `<main role=\"main\">`"
+ ],
+ "flags": []
+}

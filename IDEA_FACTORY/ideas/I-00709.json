@@ -1,0 +1,29 @@
+{
+ "id": "I-00709",
+ "round": 109,
+ "time": "2026-11-17 07:00:59",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "Демо-концепты — бейдж «концепт, не скриншот готового сайта»",
+ "knob": "В секции демо-концептов (~L589) над сеткой концептов добавить `<p class=\"demo-disclaimer\">Это демо-концепты: показывают стиль и подход, каждый сайт собирается под конкретный бизнес.</p>` + CSS `.demo-disclaimer{font-size:13.5px;color:var(--muted);text-align:center;margin:0 auto 28px;max-width:520px}`.",
+ "skill": "",
+ "effect": "Снимает возражение «а это ваши реальные клиенты?» — честная рамка повышает доверие вместо риска разочарования при вопросе в переписке.",
+ "risk": "Слишком заметный дисклеймер может ослабить вау-эффект концептов — держать мелким и нейтральным.",
+ "rollback": "`git checkout -- index.html`.",
+ "verify": "Открыть секцию демо, задать себе/2 людям вопрос «выглядит ли это как реальные работы?» — если да, дисклеймер нужен; проверить, что строка не перекрывает сетку на 375px.",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В секции демо-концептов (~L589) над сеткой концептов добавить `<p class=\"demo-disclaimer\">Это демо-концепты: показывают стиль и подход, каждый сайт собирается под конкретный бизнес.</p>` + CSS `.demo-disclaimer{font-size:13.5px;color:var(--muted);text-align:center;margin:0 auto 28px;max-width:520px}`."
+ ],
+ "flags": []
+}

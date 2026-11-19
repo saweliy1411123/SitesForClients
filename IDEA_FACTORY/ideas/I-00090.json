@@ -1,0 +1,26 @@
+{
+ "id": "I-00090",
+ "round": 13,
+ "time": "2026-11-17 02:18:39",
+ "source": "localhost:8081/big_only",
+ "sources": [
+  "localhost:8081/big_only"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "WCAG AA Contrast Check",
+ "knob": "METHOD: Взять из CSS значения цветов `.btn-primary` (фон/текст) и `.grad-text` (L386, градиент на пр)",
+ "skill": "I-00085 [WCAG AA Contrast Checker]\nSAFE CSS:\n```css\n:root {\n--bg: #fff;\n--text: #333;\n--accent: #666;\n}\n.grad-text {\nbackground: linear-gradient(90deg, var(--accent), var(--text));\nbackground-clip: te",
+ "effect": "Ожидаемый эффект для клиента/владельца: улучшение доступности и читаемости текста.",
+ "risk": "Риск — неправильная оценка контраста из-за сложности градиентного текста.",
+ "rollback": "Откатить изменения одной командой/действием: git checkout.",
+ "verify": "Проверить за 2–10 минут до внесения: использовать онлайн-инструменты для проверки контраста, такие как Snook или WCAG Contrast Checker.",
+ "priority_claim": "1, потому что улучшение доступности и читаемости текста имеет высокий приоритет для пользовательского опыта.",
+ "source_hint": "",
+ "site_request": "градиентный текст",
+ "category": "method",
+ "variants": [
+  "METHOD: Взять из CSS значения цветов `.btn-primary` (фон/текст) и `.grad-text` (L386, градиент на пр)"
+ ],
+ "flags": []
+}

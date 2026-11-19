@@ -1,0 +1,26 @@
+{
+ "id": "I-00762",
+ "round": 117,
+ "time": "2026-11-17 07:23:01",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "FAQ-секция — добавление aria-labels для screen-readers",
+ "knob": "В каждом элементе `<details>` добавить атрибут `aria-label` с кратким описанием вопроса",
+ "skill": "",
+ "effect": "Улучшение доступности для пользователей с нарушениями зрения",
+ "risk": "Нет значительных рисков, но требует проверки на совместимость со скрин-ридерами",
+ "rollback": "Удалить добавленные `aria-label` атрибуты",
+ "verify": "Проверить с помощью скрин-ридера или инструмента доступности",
+ "priority_claim": "2, улучшение доступности и пользовательского опыта",
+ "source_hint": "",
+ "site_request": "faq-item",
+ "category": "lever",
+ "variants": [
+  "В каждом элементе `<details>` добавить атрибут `aria-label` с кратким описанием вопроса"
+ ],
+ "flags": []
+}

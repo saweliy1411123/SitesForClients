@@ -1,0 +1,26 @@
+{
+ "id": "I-00754",
+ "round": 116,
+ "time": "2026-11-17 07:20:26",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Hero — живой счётчик найденных клиентов (ARIA‑live)",
+ "knob": "после заголовка в `.hero` вставить `<div class=\"lead-counter\" aria-live=\"polite\">0 клиентов уже нашли нас</div>`; добавить скрипт, который при появлении в viewport (IntersectionObserver) анимирует цифры до 123 (пример) за 2 сек.",
+ "skill": "",
+ "effect": "создаёт социальное доказательство, повышает доверие — ожидаемый рост конверсий ≈ 3 %",
+ "risk": "небольшое JS‑нагрузка ≈ 1 KB, возможен конфликт с уже существующим скриптом IntersectionObserver",
+ "rollback": "удалить блок и скрипт, `git checkout -- index.html`",
+ "verify": "в консоли выполнить `document.querySelector('.lead-counter').textContent` после скролла, проверить, что цифра изменилась; измерить изменение CTR (быстрый A/B‑тест)",
+ "priority_claim": "1 — социальное доказательство на первом экране",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "после заголовка в `.hero` вставить `<div class=\"lead-counter\" aria-live=\"polite\">0 клиентов уже нашли нас</div>`; добавить скрипт, который при появлении в viewport (IntersectionObserver) анимирует цифры до 123 (пример) за 2 сек."
+ ],
+ "flags": []
+}

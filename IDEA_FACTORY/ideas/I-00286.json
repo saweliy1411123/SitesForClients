@@ -1,0 +1,32 @@
+{
+ "id": "I-00286",
+ "round": 43,
+ "time": "2026-11-17 03:44:47",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.2",
+  "lareper/glm-5.3-prime",
+  "lareper/deepseek-v4-pro-0813",
+  "lareper/deepseek-v4-pro"
+ ],
+ "mentions": 6,
+ "status": "NEW",
+ "title": "Блок «как проходит демо» — 3 мини-пункта под CTA в hero (снятие страха первого шага)",
+ "knob": "В hero после `.hero-note` (L141/L462–470) добавить `<ul class=\"hero-steps\"><li>Пишете в Telegram</li><li>Получаете демо за 1 день</li><li>Решаете — нужен ли сайт</li></ul>` и CSS: `.hero-steps{display:flex;gap:18px;list-style:none;padding:0;margin:16px 0 0;font-size:13.5px;color:var(--muted)} .hero-steps li::before{content:'→';color:var(--blue);margin-right:6px}` (на мобиль — `flex-wrap:wrap`).",
+ "skill": "",
+ "effect": "Посетитель видит, что «бесплатное демо» не обязывает платить — снижает барьер первого клика, растёт CTR на btn-primary.",
+ "risk": "Перегруз первого экрана на мобильных — нужно проверить, что CTA остаётся в первом вьюпорте на 360px.",
+ "rollback": "`git checkout -- index.html` (или удалить добавленный блок ul + CSS).",
+ "verify": "DevTools → 360px ширина: hero с новым ul + CTA помещаются в первый экран без скролла ≤5 сек; скриншот до/после сравнить.",
+ "priority_claim": "2 — усиливает конверсию в главный CTA без лжи и бэкенда.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В hero после `.hero-note` (L141/L462–470) добавить `<ul class=\"hero-steps\"><li>Пишете в Telegram</li><li>Получаете демо за 1 день</li><li>Решаете — нужен ли сайт</li></ul>` и CSS: `.hero-steps{display:flex;gap:18px;list-style:none;padding:0;margin:16px 0 0;font-size:13.5px;color:var(--muted)} .hero-steps li::before{content:'→';color:var(--blue);margin-right:6px}` (на мобиль — `flex-wrap:wrap`).",
+  "В hero после `.hero-note` (L465) добавить `<ul class=\"hero-checkmarks\"><li>Готовый сайт за 2 дня</li><li>Виден в Яндексе</li><li>Бесплатное демо до оплаты</li></ul>` + CSS `.hero-checkmarks{list-style:none;display:flex;gap:16px;flex-wrap:wrap;margin-top:16px;font-size:14px;color:var(--muted)} .hero-checkmarks li::before{content:'✓';color:var(--blue);margin-right:6px}`."
+ ],
+ "flags": []
+}

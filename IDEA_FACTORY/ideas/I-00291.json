@@ -1,0 +1,26 @@
+{
+ "id": "I-00291",
+ "round": 44,
+ "time": "2026-11-17 03:46:38",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "One‑liner Broken‑Link Scanner for internal anchors & external URLs",
+ "knob": "METHOD: Open DevTools Console on the page and run:\n```js\n(() => {\nconst bad = [...document.querySelectorAll('a[href]')].filter(a=>{\nconst href=a.getAttribute('href');\nreturn href.startsWith('#') ? !document.querySelector(href) : false;\n});\nconsole.table(bad.map(a=>({text:a.textContent.trim(),href:a.href})));\n})();\n```",
+ "skill": "",
+ "effect": "Quickly lists any dead fragment links (e.g., `#contact` missing) so they can be fixed, preventing user frustration and loss of conversions.",
+ "risk": "Only checks fragment IDs; does not verify external URLs reachability.",
+ "rollback": "Refresh the page; no persistent changes.",
+ "verify": "Console outputs an empty table (no broken fragments) → all anchor targets exist.",
+ "priority_claim": "3 – Ensures navigation integrity; lower urgency than accessibility or SEO but still important for user flow.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: Open DevTools Console on the page and run:\n```js\n(() => {\nconst bad = [...document.querySelectorAll('a[href]')].filter(a=>{\nconst href=a.getAttribute('href');\nreturn href.startsWith('#') ? !document.querySelector(href) : false;\n});\nconsole.table(bad.map(a=>({text:a.textContent.trim(),href:a.href})));\n})();\n```"
+ ],
+ "flags": []
+}

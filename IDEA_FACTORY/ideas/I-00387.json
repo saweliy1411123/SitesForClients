@@ -1,0 +1,26 @@
+{
+ "id": "I-00387",
+ "round": 58,
+ "time": "2026-11-17 04:29:01",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Duplicate‑ID & Missing‑ARIA Audit",
+ "knob": "METHOD: Открыть страницу в Chrome → DevTools → Console и выполнить скрипт:\n```js\n(() => {\n// Duplicate IDs\nconst ids = [...document.querySelectorAll('[id]')].map(el=>el.id);\nconst dup = ids.filter((id,i)=>ids.indexOf(id)!==i);\nconsole.group('🔎 Duplicate IDs');\ndup.length ? console.table([...new Set(dup)]) : console.log('Нет дубликатов');\nconsole.groupEnd();\n// Интерактивные элементы без aria-label/aria-labelledby\nconst interactive = [...document.querySelectorAll('a,button,[role=\"button\"],[tabindex]')];\nconst missingAria = interactive.filter(el=>!el.hasAttribute('aria-label') && !el.hasAttribute('aria-labelledby'));\nconsole.group('🔎 Interactive elements missing ARIA label');\nmissingAria.length ? console.table(missingAria.map(el=>({tag:el.tagName, text:el.textContent.trim()}))) : console.log('Все имеют ARIA');\nconsole.groupEnd();\n})();\n```",
+ "skill": "",
+ "effect": "Быстро выявляет две частые проблемы — дублирующие id (нарушают семантику и могут ломать скрипты) и интерактивные ссылки/кнопки без описательных ARIA‑меток, повышая доступность и SEO.",
+ "risk": "Нет (только чтение DOM).",
+ "rollback": "Не меняет файлы — просто закрыть консоль.",
+ "verify": "После вставки скрипта в консоль увидеть две группировки — «Duplicate IDs» и «Interactive elements missing ARIA label»; отсутствие ошибок подтверждает чистый код.",
+ "priority_claim": "2 — важный для доступности и поисковой индексации, но не критичен для первой конверсии.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: Открыть страницу в Chrome → DevTools → Console и выполнить скрипт:\n```js\n(() => {\n// Duplicate IDs\nconst ids = [...document.querySelectorAll('[id]')].map(el=>el.id);\nconst dup = ids.filter((id,i)=>ids.indexOf(id)!==i);\nconsole.group('🔎 Duplicate IDs');\ndup.length ? console.table([...new Set(dup)]) : console.log('Нет дубликатов');\nconsole.groupEnd();\n// Интерактивные элементы без aria-label/aria-labelledby\nconst interactive = [...document.querySelectorAll('a,button,[role=\"button\"],[tabindex]')];\nconst missingAria = interactive.filter(el=>!el.hasAttribute('aria-label') && !el.hasAttribute('aria-labelledby'));\nconsole.group('🔎 Interactive elements missing ARIA label');\nmissingAria.length ? console.table(missingAria.map(el=>({tag:el.tagName, text:el.textContent.trim()}))) : console.log('Все имеют ARIA');\nconsole.groupEnd();\n})();\n```"
+ ],
+ "flags": []
+}

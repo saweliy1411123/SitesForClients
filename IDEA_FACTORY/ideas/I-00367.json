@@ -1,0 +1,27 @@
+{
+ "id": "I-00367",
+ "round": 54,
+ "time": "2026-11-17 04:18:48",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3",
+  "lareper/glm-5.2"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Создать robots.txt и sitemap.xml рядом с index.html",
+ "knob": "Добавить два файла в корень",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Добавить два файла в корень"
+ ],
+ "flags": []
+}

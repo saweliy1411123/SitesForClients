@@ -1,0 +1,26 @@
+{
+ "id": "I-00702",
+ "round": 108,
+ "time": "2026-11-17 06:57:56",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Критика I-00634 – отсутствие alt‑текстов для inline‑SVG‑favicon и декоративных фонов",
+ "knob": "Добавить `role=\"img\"` и `aria-label=\"Логотип Савелий\"` к SVG‑favicon; для декоративных фоновых SVG задать `aria-hidden=\"true\"`.",
+ "skill": "",
+ "effect": "Повысит доступность скрин‑ридеров, улучшит SEO‑оценку.",
+ "risk": "Малый риск конфликтов с текущей стилизацией SVG.",
+ "rollback": "Удалить добавленные атрибуты из HTML.",
+ "verify": "Включить «Accessibility» в Chrome DevTools, убедиться, что SVG‑favicon объявлен как изображение, а фоновые SVG скрыты.",
+ "priority_claim": "2 – важный шаг для a11y без влияния на визуал.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Добавить `role=\"img\"` и `aria-label=\"Логотип Савелий\"` к SVG‑favicon; для декоративных фоновых SVG задать `aria-hidden=\"true\"`."
+ ],
+ "flags": []
+}

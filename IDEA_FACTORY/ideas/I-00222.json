@@ -1,0 +1,26 @@
+{
+ "id": "I-00222",
+ "round": 34,
+ "time": "2026-11-17 03:18:24",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — scroll‑snap sections with navigation dots",
+ "knob": "**Name:** `scroll-snap-nav`\n**When to apply:** На одностраничных лендингах с несколькими вертикальными секциями, где нужен плавный переход между блоками и визуальная подсказка текущего положения (особенно на мобильных устройствах).\n**Steps:**\n1. В `<style>` добавить правила для контейнера `<body>` (или обёртки `<main>`) и секций.\n2. Добавить в конец `<body>` блок навигационных точек (`<nav class=\"snap-nav\" aria-label=\"Навигация по секциям\">…</nav>`).\n3. При желании подключить лёгкий JS‑скрипт, который будет обновлять активную точку при скролле.\n**SAFE CSS:**\n```css\n/* Enable vertical scroll snapping */\nhtml, body {\nheight: 100%;\nscroll-behavior: smooth;\n}\n.main-scroll {\nscroll-snap-type: y mandatory;\noverflow-y: auto;\nheight: 100vh;\n}\n/* Each section snaps */\n.main-scroll > section {\nscroll-snap-align: start;\nmin-height: 100vh;\n}\n/* Navigation dots */\n.snap-nav {\nposition: fixed;\nright: 1rem;\ntop: 50%;\ntransform: translateY(-50%);\ndisplay: flex;\nflex-direction: column;\ngap: 0.75rem;\nz-index: 1000;\n}\n.snap-nav a {\nwidth: 0.75rem;\nheight: 0.75rem;\nbackground: #c3cad9;\nborder-radius: 50%;\ndisplay: block;\ntransition: background 0.3s;\n}\n.snap-nav a.active,\n.snap-nav a:hover {\nbackground: #8b5cf6;\n}\n```\n**SAFE JS:** (необязательно, но рекомендуется для подсветки активной точки)\n```js\ndocument.addEventListener('DOMContentLoaded', () => {\nconst sections = document.querySelectorAll('.main-scroll > section');\nconst navLinks = document.querySelectorAll('.snap-nav a');\nconst setActive = i => {\nnavLinks.forEach((lnk, idx) => lnk.classList.toggle('active', idx === i));\n};\nconst observer = new IntersectionObserver(\nentries => {\nentries.forEach(entry => {\nif (entry.isIntersecting) {\nconst idx = [...sections].indexOf(entry.target);\nsetActive(idx);\n}\n});\n},\n{ root: null, threshold: 0.6 }\n);\nsections.forEach(sec => observer.observe(sec));\n});\n```",
+ "skill": "scroll-snap-nav",
+ "effect": "Улучшает пользовательский опыт (UX) за счёт предсказуемого скроллинга, повышает вовлечённость и время на странице, упрощает навигацию без дополнительных кликов.",
+ "risk": "Требует, чтобы все секции имели достаточную высоту (≥ 100 vh); на очень коротких экранах может возникнуть «залипание» – проверка нужна.",
+ "rollback": "Удалить блок `.main-scroll`‑правил и `<nav class=\"snap-nav\">…</nav>`; вернуть оригинальный CSS (git checkout).",
+ "verify": "Открыть страницу в мобильном режиме, прокручивать – секции должны «прилипать» к верхней границе; точки навигации меняют цвет в соответствии с текущей секцией. Проверить отсутствие горизонтального скролла.",
+ "priority_claim": "2 — повышает UX и конверсию, но не критично для SEO; реализуется быстро.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `scroll-snap-nav`\n**When to apply:** На одностраничных лендингах с несколькими вертикальными секциями, где нужен плавный переход между блоками и визуальная подсказка текущего положения (особенно на мобильных устройствах).\n**Steps:**\n1. В `<style>` добавить правила для контейнера `<body>` (или обёртки `<main>`) и секций.\n2. Добавить в конец `<body>` блок навигационных точек (`<nav class=\"snap-nav\" aria-label=\"Навигация по секциям\">…</nav>`).\n3. При желании подключить лёгкий JS‑скрипт, который будет обновлять активную точку при скролле.\n**SAFE CSS:**\n```css\n/* Enable vertical scroll snapping */\nhtml, body {\nheight: 100%;\nscroll-behavior: smooth;\n}\n.main-scroll {\nscroll-snap-type: y mandatory;\noverflow-y: auto;\nheight: 100vh;\n}\n/* Each section snaps */\n.main-scroll > section {\nscroll-snap-align: start;\nmin-height: 100vh;\n}\n/* Navigation dots */\n.snap-nav {\nposition: fixed;\nright: 1rem;\ntop: 50%;\ntransform: translateY(-50%);\ndisplay: flex;\nflex-direction: column;\ngap: 0.75rem;\nz-index: 1000;\n}\n.snap-nav a {\nwidth: 0.75rem;\nheight: 0.75rem;\nbackground: #c3cad9;\nborder-radius: 50%;\ndisplay: block;\ntransition: background 0.3s;\n}\n.snap-nav a.active,\n.snap-nav a:hover {\nbackground: #8b5cf6;\n}\n```\n**SAFE JS:** (необязательно, но рекомендуется для подсветки активной точки)\n```js\ndocument.addEventListener('DOMContentLoaded', () => {\nconst sections = document.querySelectorAll('.main-scroll > section');\nconst navLinks = document.querySelectorAll('.snap-nav a');\nconst setActive = i => {\nnavLinks.forEach((lnk, idx) => lnk.classList.toggle('active', idx === i));\n};\nconst observer = new IntersectionObserver(\nentries => {\nentries.forEach(entry => {\nif (entry.isIntersecting) {\nconst idx = [...sections].indexOf(entry.target);\nsetActive(idx);\n}\n});\n},\n{ root: null, threshold: 0.6 }\n);\nsections.forEach(sec => observer.observe(sec));\n});\n```"
+ ],
+ "flags": []
+}

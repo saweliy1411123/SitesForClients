@@ -1,0 +1,27 @@
+{
+ "id": "I-00430",
+ "round": 64,
+ "time": "2026-11-17 04:48:14",
+ "source": "lareper/glm-5.3",
+ "sources": [
+  "lareper/glm-5.3",
+  "lareper/glm-5.2"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "Локальный self-host Manrope (woff2 рядом с index.html) — убрать зависимость от Google Fonts",
+ "knob": "Скачать 4 начертания Manrope (400/500/600/700, subset cyrillic+latin) как `fonts/manrope-*.woff2` рядом с index.html; в `<head>` заменить `<link href=\"https://fonts.googleapis.com/css2?family=Manrope...\">` на блок `@font-face` с `font-display:swap` и локальными путями; preconnect к fonts.googleapis.com удалить.",
+ "skill": "",
+ "effect": "Устраняет render-blocking запрос на сторонний домен (~200–400 мс на мобильных), сайт работает офлайн/при блокировке Google (актуально для РФ-аудитории), FCP стабильнее — это же живое доказательство тезиса «быстро грузится».",
+ "risk": "Неверный unicode-range приведёт к загрузке всех 4 файлов вместо нужных; нужно проверить, что шрифт реально подтягивается локально.",
+ "rollback": "`git checkout -- index.html` (файлы шрифтов не мешают).",
+ "verify": "DevTools → Network → фильтр Font: до — 4 запроса к fonts.gstatic.com; после — запросы к ./fonts/. Затем Network → Offline, перезагрузка — заголовок рендерится правильным шрифтом. Итог в консоли: `performance.getEntriesByType('resource').filter(r=>r.name.includes('fonts'))` — должно быть 0 внешних.",
+ "priority_claim": "2 — заметный прирост скорости и надёжности для РФ, но не конверсионный.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Скачать 4 начертания Manrope (400/500/600/700, subset cyrillic+latin) как `fonts/manrope-*.woff2` рядом с index.html; в `<head>` заменить `<link href=\"https://fonts.googleapis.com/css2?family=Manrope...\">` на блок `@font-face` с `font-display:swap` и локальными путями; preconnect к fonts.googleapis.com удалить."
+ ],
+ "flags": []
+}

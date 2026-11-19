@@ -1,0 +1,28 @@
+{
+ "id": "I-00557",
+ "round": 83,
+ "time": "2026-11-17 05:42:01",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b",
+  "localhost:8081/big_only"
+ ],
+ "mentions": 2,
+ "status": "NEW",
+ "title": "SKILL — ripple‑effect‑button",
+ "knob": "**Name:** `ripple-effect-button`\n**When to apply:** На любом статическом лендинге, где CTA‑кнопки реализованы через `<a class=\"btn-primary\">` или `<button>` и требуется визуальная обратная связь при нажатии.\n**Steps:**\n1. Добавить в `<head>` (или в `index.improved.html`) ссылку на файл‑skill `ripple-effect-button.css`.\n2. Убедиться, что все CTA‑кнопки используют класс `.btn-primary` (уже есть в проекте).\n3. При желании добавить класс `.ripple` к отдельным кнопкам, если не хочется распространять эффект на все.\n**SAFE CSS:**\n```css\n/* ripple‑effect‑button.css */\n.btn-primary {\nposition: relative;\noverflow: hidden;\n}\n.btn-primary::after {\ncontent: \"\";\nposition: absolute;\nleft: 50%; top: 50%;\nwidth: 0; height: 0;\nbackground: rgba(255,255,255,0.3);\nborder-radius: 50%;\ntransform: translate(-50%,-50%);\ntransition: width .4s ease-out, height .4s ease-out, opacity .4s;\npointer-events: none;\n}\n.btn-primary:active::after {\nwidth: 200px;\nheight: 200px;\nopacity: 0;\n}\n```",
+ "skill": "",
+ "effect": "Пользователь видит мгновенный «водяной» всплеск при нажатии, что повышает ощущение интерактивности и может увеличить конверсию CTA‑кнопок.",
+ "risk": "Добавление небольшого CSS‑правила может слегка увеличить размер первого экрана; в старых браузерах (IE ≤ 11) анимация не будет работать, но функциональность сохранится.",
+ "rollback": "`git checkout -- path/to/ripple-effect-button.css && git revert <commit‑adding‑link>` (удалить файл и строку `<link>`).",
+ "verify": "Открыть страницу в браузере, кликнуть по любой кнопке `.btn-primary` и убедиться, что появляется круглая вспышка, исчезающая за ≈ 0.4 сек. Проверить, что клик всё равно переходит по ссылке.",
+ "priority_claim": "2 — улучшает UX без влияния на SEO/скорость, но не критично для первой конверсии.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "**Name:** `ripple-effect-button`\n**When to apply:** На любом статическом лендинге, где CTA‑кнопки реализованы через `<a class=\"btn-primary\">` или `<button>` и требуется визуальная обратная связь при нажатии.\n**Steps:**\n1. Добавить в `<head>` (или в `index.improved.html`) ссылку на файл‑skill `ripple-effect-button.css`.\n2. Убедиться, что все CTA‑кнопки используют класс `.btn-primary` (уже есть в проекте).\n3. При желании добавить класс `.ripple` к отдельным кнопкам, если не хочется распространять эффект на все.\n**SAFE CSS:**\n```css\n/* ripple‑effect‑button.css */\n.btn-primary {\nposition: relative;\noverflow: hidden;\n}\n.btn-primary::after {\ncontent: \"\";\nposition: absolute;\nleft: 50%; top: 50%;\nwidth: 0; height: 0;\nbackground: rgba(255,255,255,0.3);\nborder-radius: 50%;\ntransform: translate(-50%,-50%);\ntransition: width .4s ease-out, height .4s ease-out, opacity .4s;\npointer-events: none;\n}\n.btn-primary:active::after {\nwidth: 200px;\nheight: 200px;\nopacity: 0;\n}\n```",
+  "**SKILL — ripple-effect-cta-button**\n**Name:** ripple-effect-cta-button\n**When to apply:** На любом статическом лендинге, где CTA реализованы ссылками `<a class=\"btn-primary\">`.\n**Steps:**\n1. Добавить класс `.btn-ripple` к каждому CTA‑ссылке (например, `<a href=\"#price\" class=\"btn-primary btn-ripple\">`).\n2. Вставить в `<head>` блок `<style>` с SAFE CSS (см. ниже).\n3. При желании добавить лёгкий SAFE JS, который удаляет анимацию после её завершения (см. ниже).\n**SAFE CSS:**\n```css\n/* ripple effect */\n.btn-ripple {\nposition: relative;\noverflow: hidden;\n}\n.btn-ripple::after {\ncontent: \"\";\nposition: absolute;\nleft: 50%;\ntop: 50%;\nwidth: 0;\nheight: 0;\nbackground: rgba(255,255,255,0.3);\nborder-radius: 50%;\ntransform: translate(-50%, -50%);\ntransition: width .4s ease-out, height .4s ease-out, opacity .6s;\npointer-events: none;\n}\n.btn-ripple:active::after {\nwidth: 200px;\nheight: 200px;\nopacity: 0;\n}\n```\n**SAFE JS (optional):**\n```js\n// Убираем оставшийся псевдо‑элемент после анимации (чисто для старых браузеров)\ndocument.querySelectorAll('.btn-ripple').forEach(btn=>{\nbtn.addEventListener('transitionend',e=>{\nif(e.propertyName==='opacity') btn.classList.remove('ripple-running');\n});\n});\n```"
+ ],
+ "flags": []
+}

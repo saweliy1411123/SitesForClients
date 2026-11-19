@@ -1,0 +1,29 @@
+{
+ "id": "I-00776",
+ "round": 118,
+ "time": "2026-11-17 07:26:36",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "SKILL — contact-copy-chip (клик-копирование контакта с подтверждением, без формы)",
+ "knob": "SKILL — contact-copy-chip\nName: `contact-copy-chip`\nWhen to apply: на любом статическом лендинге, где контакт — только внешняя ссылка (Telegram, email, телефон), и часть пользователей уходит, не совершив переход. Даёт «мягкую» альтернативу: скопировать контакт одним кликом.\nSteps:\n1. Рядом с основным CTA (например, под L705 в `.final`) добавить чип: `<button class=\"copy-chip\" data-copy=\"@TrainersDontPlays\" type=\"button\">Скопировать: @TrainersDontPlays</button>`.\n2. Добавить SAFE CSS ниже.\n3. Добавить SAFE JS ниже — он читает `data-copy`, вызывает `navigator.clipboard.writeText` и меняет текст кнопки на «Скопировано ✓» на 2 секунды (без innerHTML — только textContent).\n4. Проверить, что кнопка не перехватывает фокус у основного CTA: она вторична по стилю (outline-чип, не btn-primary).\nSAFE CSS:\n.copy-chip{display:inline-flex;align-items:center;gap:8px;margin-top:14px;padding:10px 16px;border:1px solid rgba(255,255,255,.18);border-radius:999px;background:transparent;color:inherit;font:inherit;font-size:14px;cursor:pointer;transition:border-color .2s,background .2s}\n.copy-chip:hover,.copy-chip:focus-visible{border-color:#8b5cf6;background:rgba(139,92,246,.08)}\n.copy-chip:active{transform:scale(.97)}\n.copy-chip.ok{border-color:#34d399;color:#34d399}\n@media (prefers-reduced-motion: reduce){.copy-chip{transition:none}}\nSAFE JS:\ndocument.querySelectorAll('.copy-chip').forEach(function(chip){\nchip.addEventListener('click', function(){\nvar t = chip.getAttribute('data-copy') || '';\nfunction done(){\nvar old = chip.textContent;\nchip.textContent = 'Скопировано ✓';\nchip.classList.add('ok');\nsetTimeout(function(){ chip.textContent = old; chip.classList.remove('ok'); }, 2000);\n}\nif (navigator.clipboard && navigator.clipboard.writeText) {\nnavigator.clipboard.writeText(t).then(done, done);\n} else { done(); }\n});\n});",
+ "skill": "",
+ "effect": "пользователь, не готовый переходить в Telegram сразу, уносит контакт в буфер — снижается потеря лидов на последнем экране; работает без бэкенда",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "SKILL — contact-copy-chip\nName: `contact-copy-chip`\nWhen to apply: на любом статическом лендинге, где контакт — только внешняя ссылка (Telegram, email, телефон), и часть пользователей уходит, не совершив переход. Даёт «мягкую» альтернативу: скопировать контакт одним кликом.\nSteps:\n1. Рядом с основным CTA (например, под L705 в `.final`) добавить чип: `<button class=\"copy-chip\" data-copy=\"@TrainersDontPlays\" type=\"button\">Скопировать: @TrainersDontPlays</button>`.\n2. Добавить SAFE CSS ниже.\n3. Добавить SAFE JS ниже — он читает `data-copy`, вызывает `navigator.clipboard.writeText` и меняет текст кнопки на «Скопировано ✓» на 2 секунды (без innerHTML — только textContent).\n4. Проверить, что кнопка не перехватывает фокус у основного CTA: она вторична по стилю (outline-чип, не btn-primary).\nSAFE CSS:\n.copy-chip{display:inline-flex;align-items:center;gap:8px;margin-top:14px;padding:10px 16px;border:1px solid rgba(255,255,255,.18);border-radius:999px;background:transparent;color:inherit;font:inherit;font-size:14px;cursor:pointer;transition:border-color .2s,background .2s}\n.copy-chip:hover,.copy-chip:focus-visible{border-color:#8b5cf6;background:rgba(139,92,246,.08)}\n.copy-chip:active{transform:scale(.97)}\n.copy-chip.ok{border-color:#34d399;color:#34d399}\n@media (prefers-reduced-motion: reduce){.copy-chip{transition:none}}\nSAFE JS:\ndocument.querySelectorAll('.copy-chip').forEach(function(chip){\nchip.addEventListener('click', function(){\nvar t = chip.getAttribute('data-copy') || '';\nfunction done(){\nvar old = chip.textContent;\nchip.textContent = 'Скопировано ✓';\nchip.classList.add('ok');\nsetTimeout(function(){ chip.textContent = old; chip.classList.remove('ok'); }, 2000);\n}\nif (navigator.clipboard && navigator.clipboard.writeText) {\nnavigator.clipboard.writeText(t).then(done, done);\n} else { done(); }\n});\n});"
+ ],
+ "flags": []
+}

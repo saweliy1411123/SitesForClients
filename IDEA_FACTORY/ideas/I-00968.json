@@ -1,0 +1,26 @@
+{
+ "id": "I-00968",
+ "round": 161,
+ "time": "2026-11-17 09:26:50",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Variable‑font weight transition on headings (premium typography)",
+ "knob": "В CSS добавить правило `h1, h2, h3 { font-variation-settings: 'wght' 400; transition: font-variation-settings .3s ease; }` и псевдокласс `:hover { font-variation-settings: 'wght' 700; }` (Manrope поддерживает ось `wght`).",
+ "skill": "",
+ "effect": "Делает заголовки визуально «живыми», усиливает ощущение премиальности без JavaScript, повышает время внимания и конверсию.",
+ "risk": "Если браузер не поддерживает variable‑fonts, будет использован обычный шрифт без анимации – без ухудшения.",
+ "rollback": "`git checkout -- index.html && git checkout -- style.css` (или удалить добавленные правила).",
+ "verify": "Открыть страницу в Chrome, навести курсор на любой заголовок – должно плавно измениться толщина; в DevTools → Computed убедиться, что `font-variation-settings` меняется.",
+ "priority_claim": "1 – быстрый визуальный апгрейд, не требует бэкенда, сразу улучшает восприятие бренда.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В CSS добавить правило `h1, h2, h3 { font-variation-settings: 'wght' 400; transition: font-variation-settings .3s ease; }` и псевдокласс `:hover { font-variation-settings: 'wght' 700; }` (Manrope поддерживает ось `wght`)."
+ ],
+ "flags": []
+}

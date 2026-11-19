@@ -1,0 +1,29 @@
+{
+ "id": "I-00232",
+ "round": 35,
+ "time": "2026-11-17 03:21:39",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.3-prime",
+  "lareper/glm-5.3",
+  "lareper/glm-5.2-fast-preview"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "SKILL — «Премиальный параллакс-наклон hero-фона» (parallax-hero-tilt)",
+ "knob": "SKILL — parallax-hero-tilt\n### Название\nparallax-hero-tilt\n### Когда применять\nТёмный лендинг с декоративными фоновыми слоями (blob-градиенты, частицы) в hero. Даёт ощущение глубины и «дорогого» сайта без библиотек.\n### Шаги\n1. Найти декоративные слои hero (`.blob.b1/.b2/.b3`, L96–98).\n2. Добавить SAFE CSS (плавный transform, will-change).\n3. Добавить SAFE JS: на `mousemove` по hero сдвигать слои с разными коэффициентами (parallax), только на устройствах с `matchMedia('(pointer:fine)')` и без `prefers-reduced-motion`.\n4. На мобильных — статичный фон (параллакс отключён), чтобы не ж",
+ "skill": "",
+ "effect": "",
+ "risk": "",
+ "rollback": "",
+ "verify": "",
+ "priority_claim": "",
+ "source_hint": "",
+ "site_request": "",
+ "category": "skill",
+ "variants": [
+  "SKILL — parallax-hero-tilt\n### Название\nparallax-hero-tilt\n### Когда применять\nТёмный лендинг с декоративными фоновыми слоями (blob-градиенты, частицы) в hero. Даёт ощущение глубины и «дорогого» сайта без библиотек.\n### Шаги\n1. Найти декоративные слои hero (`.blob.b1/.b2/.b3`, L96–98).\n2. Добавить SAFE CSS (плавный transform, will-change).\n3. Добавить SAFE JS: на `mousemove` по hero сдвигать слои с разными коэффициентами (parallax), только на устройствах с `matchMedia('(pointer:fine)')` и без `prefers-reduced-motion`.\n4. На мобильных — статичный фон (параллакс отключён), чтобы не ж"
+ ],
+ "flags": []
+}

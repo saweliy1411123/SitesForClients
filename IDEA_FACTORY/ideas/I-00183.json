@@ -1,0 +1,26 @@
+{
+ "id": "I-00183",
+ "round": 28,
+ "time": "2026-11-17 03:01:41",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Variable‑font premium typography for Manrope",
+ "knob": "Replace the Google‑Fonts `<link>` with a locally‑hosted `Manrope‑VF.woff2` via `@font-face`; use `font-variation-settings` and `clamp()` to set weight / optical size responsively (e.g. `font-variation-settings: 'wght' 400;` on mobile, up to 700 on desktop).",
+ "skill": "",
+ "effect": "Более тонкая типографика, плавные переходы веса → премиальный визуал и небольшое сокращение RTT за счёт одного файла шрифта.",
+ "risk": "Требуется добавить файл шрифта в репозиторий (≈150 KB); старые браузеры без поддержки variable‑fonts могут падать на обычный fallback.",
+ "rollback": "`git checkout HEAD -- index.html` или просто удалить добавленный `@font-face`‑блок и вернуть оригинальный `<link>`‑тег.",
+ "verify": "Открыть страницу в Chrome, открыть DevTools → Computed → проверить `font-weight`/`font-variation-settings` на ширине 375 px и 1440 px; сравнить размер загруженного ресурса (`Network` → Manrope‑VF.woff2).",
+ "priority_claim": "2 – значительное улучшение бренда при умеренных усилиях; риск управляемый.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Replace the Google‑Fonts `<link>` with a locally‑hosted `Manrope‑VF.woff2` via `@font-face`; use `font-variation-settings` and `clamp()` to set weight / optical size responsively (e.g. `font-variation-settings: 'wght' 400;` on mobile, up to 700 on desktop)."
+ ],
+ "flags": []
+}

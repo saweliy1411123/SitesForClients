@@ -1,0 +1,26 @@
+{
+ "id": "I-00457",
+ "round": 68,
+ "time": "2026-11-17 05:00:23",
+ "source": "lareper/glm-5.3-prime",
+ "sources": [
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "WCAG-контраст вторичного текста (var(--muted)) на тёмном фоне",
+ "knob": "METHOD: (1) В Console выполнить: `getComputedStyle(document.querySelector('.hero-note')).color` и взять фон секции. (2) Прогнать пару через любой contrast-чекер (DevTools → Elements → цвет в Styles показывает ratio). (3) Если ratio < 4.5 для основного текста (или < 3 для крупного) — поднять светлоту `--muted` в `:root` на 1–2 ступени (например, с #8a8a99 до #a0a0b0), не меняя бренд-цвета.",
+ "skill": "",
+ "effect": "Текст «отвечаю в течение часа», подписи цен и футер становятся читаемы при ярком солнце на телефоне и для слабовидящих — меньше потерянных контактов.",
+ "risk": "Слишком светлый muted потеряет иерархию с основным текстом — двигать по 1 ступени.",
+ "rollback": "git checkout -- index.html.",
+ "verify": "Тот же скрипт + скриншот на 375px при полной яркости экрана.",
+ "priority_claim": "2 — влияет на читаемость ключевых microcopy (сроки, условия), но требует ручной сверки пар цветов.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: (1) В Console выполнить: `getComputedStyle(document.querySelector('.hero-note')).color` и взять фон секции. (2) Прогнать пару через любой contrast-чекер (DevTools → Elements → цвет в Styles показывает ratio). (3) Если ratio < 4.5 для основного текста (или < 3 для крупного) — поднять светлоту `--muted` в `:root` на 1–2 ступени (например, с #8a8a99 до #a0a0b0), не меняя бренд-цвета."
+ ],
+ "flags": []
+}

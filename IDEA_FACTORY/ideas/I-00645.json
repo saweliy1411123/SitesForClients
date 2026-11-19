@@ -1,0 +1,26 @@
+{
+ "id": "I-00645",
+ "round": 97,
+ "time": "2026-11-17 06:26:24",
+ "source": "lareper/glm-5.3-prime",
+ "sources": [
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — count-up-proof-numbers (оживание цифр-доказательств при появлении в вьюпорте)",
+ "knob": "SKILL — `count-up-proof-numbers`\nКогда применять: на любом статическом лендинге, где есть блок цифр-доказательств (`.proof-item .num`, счётчики «2 дня», «N клиентов», цены) — анимированный отсчёт повышает внимание к ключевым числам оффера и работает без внешних библиотек.\nШаги:\n1. Найти элементы с числами (например `.proof-item .num`), убедиться, что число записано как чистый текст с возможным суффиксом («12», «2 дня» → отделить число от текста через `<span data-count=\"12\">12</span> дня`).\n2. Добавить класс `data-countup` на каждый такой span; начальное значение в разметке оставить равным финальному (если JS отключён — цифры уже верные, деградации нет).\n3. Вставить SAFE JS: IntersectionObserver запускает анимацию один раз, длительность ~900ms, easing ease-out, `prefers-reduced-motion` уважается.\n4. Проверить на мобильном: цифры не прыгают по ширине — задать `font-variant-numeric: tabular-nums`.\nSAFE CSS:\n```css\n[data-countup]{font-variant-numeric:tabular-nums;font-feature-settings:\"tnum\"}\n@media (prefers-reduced-motion: reduce){\n[data-countup]{transition:none!important;animation:none!important}\n}\n```\nSAFE JS:\n```js\n(function(){\nvar els=document.querySelectorAll('[data-countup]');\nif(!els.length)return;\nvar reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;\nfunction run(el){\nvar target=parseInt(el.getAttribute('data-countup'),10);\nif(isNaN(target)||reduce){el.textContent=target;return;}\nvar start=null;\nfunction step(ts){\nif(!start)start=ts;\nvar p=Math.min((ts-start)/900,1);\np=1-Math.pow(1-p,3);\nel.textContent=Math.round(target*p);\nif(p<1)requestAnimationFrame(step);\n}\nrequestAnimationFrame(step);\n}\nvar io=new IntersectionObserver(function(entries){\nentries.forEach(function(e){\nif(e.isIntersecting){run(e.target);io.unobserve(e.target);}\n});\n},{threshold:.5});\nels.forEach(function(el){io.observe(el);});\n})();\n```",
+ "skill": "",
+ "effect": "цифры оффера («2 дня», сроки, цена) притягивают взгляд, повышают запоминаемость оффера; нулевой вес (нет библиотек), безопасная деградация без JS.",
+ "risk": "если число содержит нецифровые символы в самом span, анимация не запустится — число нужно выносить в атрибут.",
+ "rollback": "удалить добавленный `<script>` и атрибуты `data-countup`, либо `git checkout -- index.improved.html`.",
+ "verify": "открыть копию index.improved.html, проскроллить к блоку цифр — числа отсчитывают снизу вверх один раз; отключить JS (DevTools → Ctrl+Shift+P → Disable JavaScript) — цифры видны сразу и корректны.",
+ "priority_claim": "2 — заметный визуальный/конверсионный выигрыш при минимальном риске, но не критично для первого экрана.",
+ "source_hint": "",
+ "site_request": "proof-item",
+ "category": "skill",
+ "variants": [
+  "SKILL — `count-up-proof-numbers`\nКогда применять: на любом статическом лендинге, где есть блок цифр-доказательств (`.proof-item .num`, счётчики «2 дня», «N клиентов», цены) — анимированный отсчёт повышает внимание к ключевым числам оффера и работает без внешних библиотек.\nШаги:\n1. Найти элементы с числами (например `.proof-item .num`), убедиться, что число записано как чистый текст с возможным суффиксом («12», «2 дня» → отделить число от текста через `<span data-count=\"12\">12</span> дня`).\n2. Добавить класс `data-countup` на каждый такой span; начальное значение в разметке оставить равным финальному (если JS отключён — цифры уже верные, деградации нет).\n3. Вставить SAFE JS: IntersectionObserver запускает анимацию один раз, длительность ~900ms, easing ease-out, `prefers-reduced-motion` уважается.\n4. Проверить на мобильном: цифры не прыгают по ширине — задать `font-variant-numeric: tabular-nums`.\nSAFE CSS:\n```css\n[data-countup]{font-variant-numeric:tabular-nums;font-feature-settings:\"tnum\"}\n@media (prefers-reduced-motion: reduce){\n[data-countup]{transition:none!important;animation:none!important}\n}\n```\nSAFE JS:\n```js\n(function(){\nvar els=document.querySelectorAll('[data-countup]');\nif(!els.length)return;\nvar reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;\nfunction run(el){\nvar target=parseInt(el.getAttribute('data-countup'),10);\nif(isNaN(target)||reduce){el.textContent=target;return;}\nvar start=null;\nfunction step(ts){\nif(!start)start=ts;\nvar p=Math.min((ts-start)/900,1);\np=1-Math.pow(1-p,3);\nel.textContent=Math.round(target*p);\nif(p<1)requestAnimationFrame(step);\n}\nrequestAnimationFrame(step);\n}\nvar io=new IntersectionObserver(function(entries){\nentries.forEach(function(e){\nif(e.isIntersecting){run(e.target);io.unobserve(e.target);}\n});\n},{threshold:.5});\nels.forEach(function(el){io.observe(el);});\n})();\n```"
+ ],
+ "flags": []
+}

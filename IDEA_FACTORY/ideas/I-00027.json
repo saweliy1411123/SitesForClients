@@ -1,0 +1,29 @@
+{
+ "id": "I-00027",
+ "round": 4,
+ "time": "2026-11-17 01:50:26",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Добавить OG‑image для лучшего отображения в соцсетях",
+ "knob": "В `<head>` добавить `<meta property=\"og:image\" content=\"https://example.com/assets/og-image.jpg\">` и соответствующий `<meta property=\"og:image:alt\" content=\"Савелий – лендинг за 2 дня\">`. Подготовить небольшое (1.2 МБ) изображение с брендингом.",
+ "skill": "",
+ "effect": "При шаринге в соцсетях будет показываться привлекательный превью‑картинка, повышая кликабельность.",
+ "risk": "Требуется загрузить файл на хост; если путь неверный, соцсети покажут пустой превью.",
+ "rollback": "Удалить мета‑теги (git checkout -- index.html).",
+ "verify": "Использовать Facebook Sharing Debugger / Twitter Card Validator, проверить отображение.",
+ "priority_claim": "3 — повышает соц‑трафик, но не критично для текущего конверсионного пути.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "В `<head>` добавить `<meta property=\"og:image\" content=\"https://example.com/assets/og-image.jpg\">` и соответствующий `<meta property=\"og:image:alt\" content=\"Савелий – лендинг за 2 дня\">`. Подготовить небольшое (1.2 МБ) изображение с брендингом.",
+  "В `<head>` добавить `<meta property=\"og:image\" content=\"https://example.com/assets/og-image.jpg\">` (URL к готовому 1200×630 px изображению).",
+  "В `<head>` добавить `<meta property=\"og:image\" content=\"https://example.com/assets/og-image.jpg\">` и `<meta property=\"og:image:width\" content=\"1200\">` `<meta property=\"og:image:height\" content=\"630\">` (изготовить лёгкое изображение‑превью)",
+  "В `<head>` добавить мета‑тег\n```html\n<meta property=\"og:image\" content=\"https://example.com/assets/og-preview.jpg\">\n```\n(изображение ≈ 1200×630 px, оптимизировано, размещено рядом с index.html)."
+ ],
+ "flags": []
+}

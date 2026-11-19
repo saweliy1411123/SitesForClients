@@ -1,0 +1,26 @@
+{
+ "id": "I-00042",
+ "round": 5,
+ "time": "2026-11-17 01:53:40",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Преобразовать CTA‑ссылки в семантические кнопки с ARIA‑метками и стилизовать фокус",
+ "knob": "заменить `<a class=\"btn-primary ...\">` в hero‑секции и в конце страницы на `<button type=\"button\" class=\"btn-primary\" role=\"button\" aria-label=\"Заказать демо\">…</button>`; добавить CSS `.btn-primary:focus-visible{outline:3px solid #8b5cf6;outline-offset:4px;}`.",
+ "skill": "",
+ "effect": "Улучшает доступность (скрин‑ридеры правильно озвучивают кнопку), обеспечивает визуальный индикатор фокуса, повышает конверсию за счёт лучшего UX.",
+ "risk": "Требует небольшого JS‑обработчика, если ссылка была якорем; можно добавить `onclick=\"location.href='#contact'\"` или использовать `<a>` внутри `<button>` (не рекомендуется).",
+ "rollback": "Восстановить оригинальные `<a>`‑теги из коммита (`git checkout -- index.html`).",
+ "verify": "Нажать Tab, убедиться, что фокус виден на кнопке; проверить в Chrome Accessibility Tree, что элемент имеет роль button.",
+ "priority_claim": "1 – критично для доступности и соответствует рекомендациям WCAG 2.1.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "заменить `<a class=\"btn-primary ...\">` в hero‑секции и в конце страницы на `<button type=\"button\" class=\"btn-primary\" role=\"button\" aria-label=\"Заказать демо\">…</button>`; добавить CSS `.btn-primary:focus-visible{outline:3px solid #8b5cf6;outline-offset:4px;}`."
+ ],
+ "flags": []
+}

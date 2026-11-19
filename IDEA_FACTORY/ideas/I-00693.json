@@ -1,0 +1,26 @@
+{
+ "id": "I-00693",
+ "round": 107,
+ "time": "2026-11-17 06:55:02",
+ "source": "localhost:8080/ovh/gpt-oss-120b",
+ "sources": [
+  "localhost:8080/ovh/gpt-oss-120b"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "Quick SEO Meta‑Tag Audit",
+ "knob": "METHOD: открыть DevTools → Console и выполнить скрипт, который собирает все `<meta>` и `<title>`, проверяет наличие обязательных полей (title, description, viewport, theme‑color, og:title, og:description, og:type, og:image) и выводит в консоль список недостающих/дублирующих тегов.",
+ "skill": "",
+ "effect": "мгновенно выявит пробелы в базовой SEO‑разметке, позволяя быстро их исправить и повысить индексируемость.",
+ "risk": "отсутствие риска — скрипт только читает DOM, не меняет файл.",
+ "rollback": "закрыть консоль / перезагрузить страницу (изменения не сохраняются).",
+ "verify": "после вставки скрипта в консоль увидеть вывод «Missing meta tags: []» (пустой массив) — все обязательные теги присутствуют.",
+ "priority_claim": "2 — важный SEO‑фактор, проверка занимает ≤ 2 минуты и не требует кода.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "method",
+ "variants": [
+  "METHOD: открыть DevTools → Console и выполнить скрипт, который собирает все `<meta>` и `<title>`, проверяет наличие обязательных полей (title, description, viewport, theme‑color, og:title, og:description, og:type, og:image) и выводит в консоль список недостающих/дублирующих тегов."
+ ],
+ "flags": []
+}

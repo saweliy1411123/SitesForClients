@@ -1,0 +1,29 @@
+{
+ "id": "I-00824",
+ "round": 124,
+ "time": "2026-11-17 07:42:41",
+ "source": "lareper/glm-5.2",
+ "sources": [
+  "lareper/glm-5.2",
+  "lareper/glm-5.2-fast-preview",
+  "lareper/glm-5.3",
+  "lareper/glm-5.3-prime"
+ ],
+ "mentions": 4,
+ "status": "NEW",
+ "title": "Явные размеры/резерв места для градиентных blobs — устранение CLS",
+ "knob": "Для абсолютных декоративных элементов hero (`.hero-bg`, blobs, `.final-bg`) задать в CSS `contain: layout paint` и `will-change: transform` только на десктопе; на мобильных (`@media(max-width:720px)`) ограничить количество видимых blobs до одного через `display:none` у остальных.",
+ "skill": "",
+ "effect": "Ниже CLS и меньше нагрузка на GPU на слабых телефонах — быстрее ощущение загрузки.",
+ "risk": "Может измениться визуальная насыщенность фона на мобильных.",
+ "rollback": "`git checkout index.html`.",
+ "verify": "Lighthouse → CLS до/после на копии файла, 3 минуты.",
+ "priority_claim": "2 — заметно на мобильных, но эффект умеренный.",
+ "source_hint": "",
+ "site_request": "",
+ "category": "lever",
+ "variants": [
+  "Для абсолютных декоративных элементов hero (`.hero-bg`, blobs, `.final-bg`) задать в CSS `contain: layout paint` и `will-change: transform` только на десктопе; на мобильных (`@media(max-width:720px)`) ограничить количество видимых blobs до одного через `display:none` у остальных."
+ ],
+ "flags": []
+}

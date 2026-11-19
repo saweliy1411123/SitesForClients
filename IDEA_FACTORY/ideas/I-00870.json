@@ -1,0 +1,26 @@
+{
+ "id": "I-00870",
+ "round": 132,
+ "time": "2026-11-17 08:04:58",
+ "source": "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct",
+ "sources": [
+  "localhost:8080/ovh/Meta-Llama-3_3-70B-Instruct"
+ ],
+ "mentions": 1,
+ "status": "NEW",
+ "title": "SKILL — scroll-reveal-fade-in",
+ "knob": "\n**Name:** scroll-reveal-fade-in\n**When to apply:** На любом статическом лендинге, где есть секции с заголовками и текстом.\n**Steps:**\n1. Добавить класс `scroll-reveal` к каждой секции, которую нужно показывать при скролле.\n2. Добавить CSS-правило `.scroll-reveal { opacity: 0; transition: opacity 0.5s; }`.\n3. Добавить JS-код, который будет показывать секции при скролле.\nSAFE CSS:\n```css\n.scroll-reveal {\nopacity: 0;\ntransition: opacity 0.5s;\n}\n.scroll-reveal.visible {\nopacity: 1;\n}\n```\nSAFE JS:\n```javascript\nconst scrollRevealElements = document.querySelectorAll('.scroll-reveal');\nwindow.addEventListener('scroll', () => {\nscrollRevealElements.forEach(element => {\nconst rect = element.getBoundingClientRect();\nif (rect.top < window.innerHeight) {\nelement.classList.add('visible');\n}\n});\n});\n```",
+ "skill": "scroll-reveal-fade-in",
+ "effect": "Секции будут появляться при скролле, создавая эффект постепенного открытия контента.",
+ "risk": "Может потребоваться корректировка CSS-правил и JS-кода для правильной работы на разных устройствах и браузерах.",
+ "rollback": "Удалить класс `scroll-reveal` и соответствующие CSS-правила и JS-код.",
+ "verify": "Проверить, что секции появляются при скролле, и что эффект выглядит плавно и естественно.",
+ "priority_claim": "2, так как это улучшение пользовательского опыта, но не критическое для функциональности сайта.",
+ "source_hint": "",
+ "site_request": "None",
+ "category": "skill",
+ "variants": [
+  "\n**Name:** scroll-reveal-fade-in\n**When to apply:** На любом статическом лендинге, где есть секции с заголовками и текстом.\n**Steps:**\n1. Добавить класс `scroll-reveal` к каждой секции, которую нужно показывать при скролле.\n2. Добавить CSS-правило `.scroll-reveal { opacity: 0; transition: opacity 0.5s; }`.\n3. Добавить JS-код, который будет показывать секции при скролле.\nSAFE CSS:\n```css\n.scroll-reveal {\nopacity: 0;\ntransition: opacity 0.5s;\n}\n.scroll-reveal.visible {\nopacity: 1;\n}\n```\nSAFE JS:\n```javascript\nconst scrollRevealElements = document.querySelectorAll('.scroll-reveal');\nwindow.addEventListener('scroll', () => {\nscrollRevealElements.forEach(element => {\nconst rect = element.getBoundingClientRect();\nif (rect.top < window.innerHeight) {\nelement.classList.add('visible');\n}\n});\n});\n```"
+ ],
+ "flags": []
+}
